@@ -1,0 +1,1107 @@
+{
+  "precision": 25,
+  "results_count": 220,
+  "timestamp": "2025-12-14T10:25:41.570566",
+  "results": [
+    {
+      "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what is the domestic content percentage if a skidded (MVT + SWBD) solution is used?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document table of contents, which appendix contains information regarding the management of vegetation resources for the Easley Renewable Energy Project?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Referring to the figures and maps provided in Appendix A, what type of solar tracker orientation is depicted in Figure 5?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum DC current that a BDM-1200-LV microinverter can handle from its PV inputs?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What communication interfaces are available on the BDM-1200-LV and BDM-1600-LV microinverters?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to Article 400.5(A), what table provides ampacities for flexible cords and flexible cables with not more than three current-carrying conductors?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "When must the ampacity of each conductor be reduced from the three-conductor rating for flexible cords and cables?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the purpose of the 'US' or 'CAN' suffix in the model names PVI-CENTRAL-250-US and PVI-CENTRAL-300.0-CAN-600?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the revision number of this user manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to Bulletin 1400-A, what interrupting application are Quick Break Arcing Horns designed for?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What voltage level are Quick Break Arcing Horns available up to, as stated in Bulletin 1400-A?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the primary function of the DiGi WR21/31, according to this document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document header, what is the website address for ALSOENERGY INC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to NEC 2023, Section 200.6(A), what are the acceptable methods for identifying grounded conductors of size 6 AWG or smaller?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to NEC 2023, Section 200.6(B), how must an insulated grounded conductor of size 4 AWG or larger be identified at the time of installation?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available interrupt ratings for the switchboard at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available feeder Air Circuit Breaker (ACB) ranges for this switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to NEC guidelines, what is the maximum allowable solar back-feed for a 100A service panel, expressed in Amperes?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is one advantage of using the BDM-550 & BDM-650 microinverters in terms of system design?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to 29 CFR 1910.269, what is the defining characteristic of an unvented vault?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to 29 CFR 1910.269, how is the voltage of a circuit not effectively grounded determined?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the revision number and date of this Shark 100 & 100T Installation & Operation Manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the main phone number listed for Electro Industries sales inquiries regarding the Shark 100 & 100T?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "When backing up an Acquisuite, what file extension will the backup file have?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "When restoring an Acquisuite from a backup, which checkbox should NOT be checked?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the serial number of the system shown in the Backup / Restore interface?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Besides backing up the main configuration, what other specific data types can be backed up using the Backup / Restore interface?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the primary physical hazards associated with an arc flash event?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Besides switchgear and transformers, what are three specific pieces of electrical equipment where arc flash is likely to occur?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What NEMA enclosure type is used for the CPS 100/125kW inverters, and what does this rating indicate?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the peak efficiency of the CPS 100/125kW inverters, and what is the CEC efficiency?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the nominal AC voltage of the Balance of System (BoS) described in this document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the total MVA (Mega Volt Ampere) rating of the skid described in this document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum voltage rating range for the Southern States EV-2 aluminum vertical disconnect switch?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What continuous current ratings are available for the Southern States EV-2 disconnect switch?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For whom was the Easley Renewable Energy Project Plan of Development prepared?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the revision date of the Intersect Power Easley Project POD (MAIN) document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum continuous operating temperature for this cable in a wet location?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document, what standard dictates the conductor identification method for this control cable?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document, what conditions, either alone or as the principal factor, do NOT constitute grounds for a claim of Force Majeure?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the definition of IEER according to this document, including the formula used for its calculation?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the document revision number for the PVI-CENTRAL-250/300 user manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What do the suffixes \"US\" and \"CAN\" indicate in the model names PVI-CENTRAL-250-US and PVI-CENTRAL-250.0-CAN-600?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum apparent power output, in kVA, that the Sunny Central series can provide?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the design life expectancy, in years, of the Sunny Central inverter, and what cooling system contributes to this longevity?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For whom was the Easley Renewable Energy Project Plan of Development prepared?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the revision date listed on the document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the revision number of the PVI-5000/6000-OUTD-US Installation and Operator's Manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What Aurora photovoltaic inverter models are covered by this installation and operator's manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available interrupt ratings for the EPEC UL 891 certified SWBD at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available feeder current ranges for Air Circuit Breakers (ACB) within the EPEC 1200-6000A UL 891 SWBD?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available feeder Air Circuit Breaker (ACB) ranges for the EPEC UL 891 switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the interrupt ratings of the switchboard at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the name of the company associated with the logo?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What color is the text in the AlsoEnergy logo?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document, where can information on 'Suggestions for Organized Maintenance' be obtained?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What NFPA standard covers the installation of blower and exhaust systems for dust, stock, and vapor removal?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum voltage rating range supported by the EV-2H Aluminum Vertical Disconnect Switch?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available continuous current ratings for the EV-2H Aluminum Vertical Disconnect Switch?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What physical security features are present on the electrical enclosure bays?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Besides lockable doors, what other physical feature is visible on the electrical enclosure that suggests heat management or ventilation?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to section 200.2(A), what is the minimum voltage rating required for the insulation of a grounded conductor in solidly grounded neutral systems exceeding 1000 volts, as per 250.184(A)?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "As stated in 200.4(B), how should grounded circuit conductors associated with different circuits be identified or grouped within an enclosure containing more than one neutral conductor?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What UL/ANSI/CSA standard does the Noark A32 power circuit breaker comply with?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the possible values for the rated short-circuit current (kA) of the Noark A32 circuit breaker?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available interrupt ratings for the EPEC UL 891 SWBD at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What types of circuit breakers are used in the EPEC SWBD, and what advanced communication protocols are available for metering and diagnostics?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the startup voltage required for the BDM-1200-LV/BDM-1600-LV microinverter?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the dimensions (Width x Height x Depth) of the BDM-1600-LV microinverter?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the NOARK A32 ASD32 datasheet, what is the website address for more information?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What product types are covered by the NOARK A32 ASD32 datasheet?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum continuous operating temperature of the conductor for this cable in normal operation, both in wet and dry locations?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document, what standard is used for the Conductor Identification Method for control cables with 3 conductors?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the main components depicted in the image related to the 2000kVa Transformer?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What type of voltage is associated with the substation shown in the image?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to NEC 2023 Article 600.4(B), what two pieces of information, in addition to the marking that the illumination system has been replaced, must be included on signs with a retrofitted illumination system?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "As per NEC 2023 Article 600.4(C), what are the requirements for marking signs and outline lighting systems with lampholders for incandescent lamps, in terms of content, size, and location?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the amperage range of the EPEC UL 891 SWBD designed for Solar/BESS applications?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the name of the company associated with the logo featured in the document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available feeder ranges for Air Circuit Breakers (ACB) in this switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the short-circuit current ratings (kAIC) of the switchboard at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the recommended maximum DC power input for each of the four PV inputs on the BDM-2000 microinverter?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum output fault current of the BDM-2000 microinverter, including the peak current and duration?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to Recital C, what company was contracted for the design, procurement of equipment, construction, and installation of the Systems?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to Recital F, what is the primary purpose for the Project Company retaining the services of the Contractor?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the two project numbers associated with this single line diagram?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the date of the IFC revision, and who initiated it?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For the \"Main Switchboard (AC Recombiner) / Field AC Combiner\" configuration, what amperage range are the 800VAC rated air circuit breakers (ACB) in the switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "In the \"Main Switchboard / Inverters in Array / Local Disconnect\" configuration, what is the domestic content percentage if a skidded (MVT + SWBD) solution is used?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the revision number and date of this Installation and Operation Manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the two specific CPS SCA Series Grid-tied PV Inverter models covered in this manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available interrupt ratings for this SWBD at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available communication protocols for advanced diagnostics and metering data from the circuit breakers?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the revision number and date of this Shark 100 & 100T Installation & Operation Manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document, what is the primary business of Electro Industries?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What company manufactures the 1200-6000A UL 891 SWBD for Critical Power?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What UL standard does the 1200-6000A SWBD adhere to?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What specific safety rule was violated during inverter troubleshooting, and what action was taken to correct it?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What potential hazard was identified with a harness during a safety check, and what was the corrective action?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available interrupt ratings for the EPEC UL 891 switchboard at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available feeder ranges, in Amperes, for Air Circuit Breakers (ACB) in the EPEC UL 891 switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available interrupting ratings for the EPEC UL 891 certified SWBD at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available feeder ranges using Air Circuit Breakers (ACB) for the EPEC UL 891 certified SWBD?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the default IP address assigned to the AcquiSuite when it is configured to use a cellular modem?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "When the AcquiSuite uses a cellular modem for network connectivity, what is the recommended setting for DHCP+UPnP?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the revision number and date of this CPS SCA Series Grid-tied PV Inverter Installation and Operation Manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the specific model numbers covered by this installation and operation manual?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the date of the 'IFC SO87932' revision?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the primary project number associated with this single line diagram?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what amperage range are the 800VAC rated air circuit breakers (ACB) within the switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what is the domestic content percentage if the solution is skidded (MVT + SWBD)?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What symbol is contained within the leaf of the CPS logo?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What color is the text 'CPS' in the logo?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the startup voltage required for the BDM-1200-LV/BDM-1600-LV microinverter?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What AC short-circuit protection features are included in the BDM-1200-LV/BDM-1600-LV microinverter, and what certifications cover rooftop solutions?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What physical features are present on each bay of the electrical enclosure?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the UL standard to which the EPEC switchboard conforms?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What NOARK series of power circuit breakers and non-automatic switches is this datasheet specifically for?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Where can I find more information about NOARK power circuit breakers and non-automatic switches online?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum fuse size allowed per string in the Shoals 1500V Standard Combiner?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the enclosure rating of the Shoals 1500V Standard Combiner, and what does this rating signify?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the approximate height, depth, and width in millimeters of the base 4000A dual cabinet with an additional MLBD cabinet?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For what applications is the 4000A, 1500VDC Recombiner Cabinet optimized?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the full company address associated with the DiGi WR21/31 Modem Basics document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the version number of the DiGi WR21/31 Modem Basics document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the SPEEDFAX product catalog, on what pages can information about the 3VA64 600A Electronic Trip Circuit Breakers be found?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the voltage rating for the GB and NGB2 frame circuit breakers listed in this section of the SPEEDFAX catalog?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available main breaker current ranges for this UL 891 switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the interrupt ratings for this switchboard at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document, what events are explicitly excluded from constituting grounds for a claim of Force Majeure?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "How is the Insolation-adjusted Expected Energy Ratio (IEER) calculated, according to the document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What text follows the three red squares with white geometric shapes in the NORTHERN ELECTRIC logo?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the primary visual element, aside from the text, in the NORTHERN ELECTRIC logo?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What type of PPE was found to be damaged during a check, rendering it unsuitable for its intended purpose?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What specific safety hazard was identified at a wind site regarding the turbine tower ladder, and what action was taken?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to NEC 2023, Section 200.6(A), what are the acceptable methods for identifying grounded conductors of size 6 AWG or smaller?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For grounded conductors 4 AWG or larger, what methods are permitted by NEC 2023, Section 200.6(B) for identification?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to this document, what is the minimum training requirement for all members of a rescue service related to permit spaces?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is considered a 'restricted' portal size for a permit space, according to the document?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document, what constitutes the \"Contract Documents\"?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Where can the specifications for Major Equipment be found within the Contract Documents?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Based on the image, what are three main components visible within the electrical switchgear cabinet?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Referring to the image, what are two types of enclosures visible on the electrical switchgear cabinet?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are some of the key physical hazards associated with an arc flash event?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Besides switchgear and transformers, what other specific pieces of electrical equipment are listed as locations where arc flash events can occur?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to NEC 2023 Article 200.2(A), what voltage rating is required for the insulation of a grounded conductor in a solidly grounded neutral system operating at over 1000 volts?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Under what condition is a listed interactive inverter permitted to be connected to premises wiring without a grounded conductor, according to Article 200.3?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are three common causes of arc flash incidents related to electrical equipment maintenance or procedures?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document, what should a field technician or engineer do before beginning work on electrical equipment to ensure preparedness?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to section 200.2(A), what is the minimum voltage rating required for the insulation of a grounded conductor in a solidly grounded neutral system operating at over 1000 volts, as referenced by 250.184(A)?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is required by section 200.4(B) when multiple neutral conductors associated with different circuits are present within an enclosure?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What voltage range does the Southern States EV-2 aluminum disconnect switch support?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What continuous current ratings are available for the EV-2 disconnect switch?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available interrupt ratings for the EPEC UL 891 switchboard at 480VAC and 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What are the available feeder Air Circuit Breaker (ACB) ranges for the EPEC UL 891 switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a solar power plant utilizes both EPEC Solutions switchboards and CPS inverters, how would you visually differentiate the equipment from each manufacturer based solely on their logos, and what do the graphical elements of each logo represent?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering a system using the BDM-2000-T microinverter with four 700W PV modules, would a 100A service panel likely require an upgrade, and how do the BDM-550/650 models address this potential issue according to NEP?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering the potential arc flash hazards in switchboards as outlined in the safety guide, what specific components within the EPEC 1200-6000A UL 891 switchboard, such as breakers or busbars, could be potential sources of arc flash incidents, and what are the potential consequences?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a 6000A SWBD manufactured by EPEC Solutions experiences a fault and needs to be restored to a previous configuration, what software interface might be used, and what specific configuration options are available for backup and restore?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If I am using a CPS SCH125KTL-DO/US-600 inverter connected to PowerTrack and need to restore its configuration from a backup, where do I store the '.bak' file created from the Acquisuite backup, and what specific file type must be selected in PowerTrack to upload it?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering a 480VAC, 3P3W, 6000A single-ended EPEC UL 891 certified SWBD with a main breaker, what considerations, as per NEC Article 200, should be made regarding the insulation and continuity of the grounded conductor within the premises wiring system connected to this SWBD?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If an AcquiSuite is used to monitor a Southern States EV-2H disconnect switch operating at 600kV and 3000A, and the AcquiSuite's IP address is set to 192.168.2.50, what network settings would be expected on the AcquiSuite, and what is one mechanical design feature of the EV-2H that enhances its reliability in harsh weather?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Which PVI-CENTRAL series inverters, as documented in the Aurora manual, are potentially sold in countries served by NORTHERN ELECTRIC, based on their country codes?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Can Quick Break Arcing Horns, as described by Southern States for high voltage switches, be used to protect the CPS SCH125KTL-DO/US-600 inverter from line charging currents during grid disconnect, and if so, what voltage rating would be appropriate considering the inverter's grid-tied application?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a technician is performing maintenance on a 480VAC, 6000A single-ended EPEC SWBD with a 5000A main breaker and bottom cable entry, and they need to de-energize a feeder before troubleshooting, what critical safety procedure must be performed *before* touching any components inside the cabinet, and what specific observation from the field service report highlights the importance of this procedure?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum available feeder range using Air Circuit Breakers (ACB) for a 600VAC UL 891 certified switchboard designed for critical power applications, and could a CPS SCH125KTL-DO/US-600 inverter potentially connect to such a feeder?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering the solar power systems owned by WSD Solar Holdings, LLC and maintained by True South Renewables, Inc. under the Operations and Maintenance Agreement, what specific safety hazards related to arc flash should field technicians and engineers be aware of when working on energized busbars or circuit breakers within the system's switchgear and transformers?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a BDM-1200-LV microinverter experiences a fault and requires a system restore, what steps should be taken within the Acquisuite interface, assuming diagnostic log files are not needed during the restoration?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering a Southern States EV-2 vertical break disconnect switch with a maximum voltage rating of 230kV, what documentation included with the operating mechanism would specify the total number of pipes required for assembly, and where would these pipes be marked with the job and operating mechanism numbers?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to NEC 200.3, what is the general requirement for grounded conductors in premises wiring systems, and how does this requirement relate to the use of interactive inverters, such as those used in solar power systems, when connected to premises wiring without a grounded conductor?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the 'Careful Field Service Safety Observations 2024 2025' document, what unsafe behavior related to interlocks was observed at a BESS container? Based on the 'Acquisuite Backup and Restore' document, what steps are involved in backing up the Acquisuite that could potentially be impacted if interlocks are bypassed or compromised during system maintenance?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the safety manual, what is the primary focus of the instructions provided, and how does the Noark A32 circuit breaker's 'Shunt Trip' accessory potentially relate to these safety instructions during inverter maintenance?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For a 4.2MVA power block using a Main Switchboard / Inverters in Array / Local Disconnect configuration with EPEC equipment, what is the maximum number of 350kW inverters that can be connected, and what safety procedures, specifically voltage verification, should be followed before racking or removing breakers in the switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For a 480VAC, 4000A switchboard installed below ground in a vault, what considerations must be made regarding ventilation according to OSHA standards, and what interrupt rating should be expected from the switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the EPC agreement, what constitutes 'Contract Documents', and how does the definition of 'Force Majeure' impact the EPC contractor's obligations under these documents in the event of an extended grid power failure in Connecticut?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For a solar power block of 4.2MVA utilizing EPEC equipment and a skidded solution, what is the expected domestic content percentage if using a Main Switchboard (AC Recombiner) / Field AC Combiner configuration with 275kW inverters and how does this compare to the interrupt rating of an EPEC industrial SWBD operating at 600VAC?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Given the Boyne Mountain Resort solar installation utilizes line voltages up to 600 VRMS, and considering Southwest Electric's transformer offerings, what type of three-phase step-up transformer from Southwest Electric would be suitable for this application, considering both primary and secondary voltage requirements, and what kVA range is available?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If the Acquisuite, connected to a 480VAC EPEC 1200-6000A SWBD, requires a restore, what checkboxes should be selected during the restore process and what is the maximum interrupt rating of the SWBD at that voltage?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering OSHA guidelines for safety practices in welding and cutting (document 1), what specific precautions should be taken regarding the electrical enclosure's ventilation and lockable doors (document 2) to prevent fire hazards during maintenance or modification of the switchboard?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Can a double-ended center break group operated switch be used as a main component within a 600VAC, 6000A UL 891 certified switchboard for industrial applications, and if so, what considerations regarding interrupting ratings should be taken into account?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If the AcquiSuite A8810 is used to monitor the status of a Southern States Group Operated Vertical Break switch, and an alarm condition is triggered, how would the RS485 interface on the AcquiSuite be used to communicate the alarm status to a remote monitoring system, considering the typical applications of group operated switches?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Can the Ethernet port on the EMB AcquiSuite A8810 be used to remotely monitor the operational status of a Southern States Group Operated Double End Break \u201cV\u201d switch, and if so, what network protocols would be applicable?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a CPS SCH125KTL-DO/US-600 inverter is connected to a Shoals 1500V Standard Combiner with 24 input circuits, what is the maximum fuse size allowed per string in the combiner and what Negative Output Wire Size is required?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a BDM-1200-LV microinverter experiences a failure within the Guarantee Period defined in an EPC contract due to an extended grid power failure, would this scenario be covered under Force Majeure, and how would the built-in WiFi of the BDM-1200-LV assist in diagnosing the issue?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If using a single-conductor, sunlight-resistant, outdoor-rated cable as a solidly grounded conductor in a photovoltaic power system connected to a BDM-1200-LV microinverter, how should the grounded conductor be identified at the time of installation, according to NEC 2023, and what is the maximum DC voltage this microinverter can handle?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For the Easley Renewable Energy Project, what are the possible inverter configurations within a 4.2MVA power block utilizing EPEC equipment, and what are the corresponding domestic content percentages if a skidded solution is implemented?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For a critical power application utilizing a 600VAC, 6000A EPEC switchboard with Siemens 3VA6 molded case circuit breakers, what safety instructions outlined in the inverter manual should be prioritized during installation and maintenance, considering the switchboard's interrupt rating?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a solar power block utilizes a 4.2MVA setup with inverters clustered in the field connected to an EPEC switchboard, and you want to monitor the electricity usage, can a Shark 100 meter be used, and if so, what communication protocols are available for remote monitoring according to the provided documents?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a solar power project using a Shark 100 electricity meter is experiencing performance issues due to a severe weather condition considered a Force Majeure event according to the EPC contract, what specific meter readings should be analyzed to determine the Insolation-adjusted Expected Energy Ratio (IEER) to assess the impact of the weather on energy production?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the National Electrical Code and based on EPEC Solutions' product line, what considerations should be made for grounded conductor insulation in a 1200-6000A UL 891 switchboard designed for critical power applications?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the safety manual for PVI Central 250-300 inverters and the EMB AcquiSuite A8810 data acquisition unit specifications, what safety precautions should be considered during the installation and maintenance of the inverter when using the AcquiSuite A8810 for data logging via its RS485 port, and what is the required power supply for the AcquiSuite?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering the lockable doors on the EPEC 1200-6000A UL 891 switchboard enclosures, what type of electricity meter, such as the Shark 100 or 100T, would be suitable for installation inside one of the bays to monitor the power consumption of the equipment within?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If the EPEC 1200-6000A UL 891 switchboard is equipped with ventilation, how could a Shark 100T meter be utilized to monitor potential power quality issues that might arise from overheating or inefficient energy usage inside the enclosure?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What company's logo, featuring a stylized grid, is associated with solutions potentially compatible with the Aurora PVI-6000-OUTD-US inverter, and what is the full company name including trademark symbols as depicted in the logo?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For a 480VAC, 6000A single-ended SWBD designed for critical power applications like data centers, what is the standard Interrupt Rating according to EPEC Solutions and what general insulation requirements does the National Electrical Code Article 200.2(A) specify for the grounded conductor in such a system?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "For the Intersect Power Easley Project, if the site requires a 6000A switchboard certified to UL 891 for critical power applications, what voltage options are available according to EPEC Solutions, and what are the corresponding short-circuit current ratings?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to Careful Field Service observations, what specific PPE failure was observed that could have compromised arc-flash protection, and based on OSHA regulations, what is the employer's responsibility regarding employee-owned PPE?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the EPC agreement, what documents define the specifications for major equipment in the solar photovoltaic system, and how does the National Electrical Code relate to the installation of this equipment, specifically concerning listing and labeling requirements for electric signs using LEDs as part of the Data Acquisition System (DAS)?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the EPC agreement, what documents define the specifications for major equipment in a solar photovoltaic system project, and how might a Southwest Electric Co. transformer be selected based on its compliance with IEEE standards for such a system?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a solar array using NEP BDM-2000-T microinverters is connected to a three-phase pad-mount transformer with a dead-front design, what safety features of the transformer mitigate potential hazards related to the maximum backfeed current from the microinverters, and what other overcurrent protection options are available?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a manufacturing plant with a 480VAC, 1000A electrical service panel is considering installing a solar array with microinverters, what is the maximum allowable solar back-feed current according to NEC guidelines, and would using NEP BDM-550 or BDM-650 microinverters be a viable solution to avoid upgrading the existing service panel assuming the plant needs to add 30A of backfeed?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Based on the 'Careful Field Service Safety Observations,' what unsafe action related to electrical safety was observed at a BESS container, and how could the type of enclosure depicted in the 'EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer' potentially mitigate this risk?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to 'Careful Field Service Safety Observations,' what is an example of compromised electrical safety involving grounding equipment at a substation, and how does the 'EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer' relate to maintaining a safe electrical environment within a substation?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "What is the recommended procedure, according to the safety manual, for maintaining a PVI Central 250-300 inverter when the inverter is part of a 4.2MVA power block utilizing a main switchboard with MCCBs cabled to inverters throughout the array?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "After backing up the Acquisuite data from Boyne Mountain Resort, where should the .bak file be stored, and what special consideration must be taken when uploading it to ensure it is visible for selection?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a solar farm utilizes a Shoals 4000A Recombiner with a 1500VDC rating and requires a 3-phase pad-mounted transformer to step down the voltage for grid connection, what range of primary voltages would be compatible with the transformer according to the provided specification sheet, and what standard does the transformer adhere to?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering the types of group operated disconnect switches listed in the Southern States Group Operated Switch Application Guide, and the power monitoring capabilities of the Shark 100/100T electricity meter described in its user manual, how could the Shark 100/100T be used to monitor the performance and detect potential failures in a double end break group operated switch installation?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a vertical break group operated switch, as detailed in the Southern States guide, is installed in a system also being monitored by a Shark 100 electricity meter, what specific electrical parameters reported by the Shark 100 would be most critical to observe in order to confirm the switch is functioning correctly during both opening and closing operations?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "In the context of a Green-Earth-Energy EPC contract, if an extended grid power failure causes a delay in project completion, and flexible cables used in the solar installation are rated for 90\u00b0C ambient temperature, how would the ampacity of these cables be adjusted according to the National Electrical Code to account for temperatures exceeding 30\u00b0C (86\u00b0F), considering the Force Majeure clause?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a solar installation uses a CPS 125kW inverter and an EPEC SOLUTIONS, INC. 4.2MVA skid, what visual cues could differentiate the equipment from each manufacturer?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "If a solar photovoltaic system is being designed and constructed under an EPC agreement, and the electrical plans within the construction documents specify the use of a Siemens 3VA64 molded case circuit breaker, what is the current rating of that specific breaker?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering the PVI-CENTRAL-250-US inverter model, what Balance of System (BoS) equipment configuration, as offered by EPEC, would support a 4.2MVA power block and what is the maximum number of these inverters that can be connected in such a configuration?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "According to the NEC, what markings are required on a listed electric sign with a retrofitted illumination system, and what type of cable, as specified by Southwire, is suitable for direct burial to power this sign in a wet location?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Can Southern States' quick break arcing horns, used to interrupt line charging current on high voltage switches, be integrated as an accessory within an EPEC Solutions UL 891 certified SWBD operating at 480VAC, and if so, what considerations regarding interrupt ratings would need to be addressed?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    },
+    {
+      "question": "Considering the potential for arc flash hazards in electrical equipment detailed in the 'Arc Flash Safety Guide', and assuming a field technician is using a DiGi WR21/31 modem (as described in 'DiGi WR21/31 Modem Basics') near energized switchgear for remote monitoring, what specific arc flash risks should they be aware of, and how might the modem's proximity exacerbate those risks?",
+      "error": "503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate.",
+      "attempts": 3
+    }
+  ]
+}

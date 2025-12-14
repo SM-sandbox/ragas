@@ -44,9 +44,74 @@ Everything you asked for is done and working.
 
 | Setting | Value |
 |---------|-------|
-| **Top-K Retrieval** | 5 chunks |
 | **Vector Search** | Vertex AI Vector Search |
-| **Index** | `idx_brightfoxai_evalv3_autoscale` |
+| **Index ID** | `idx_brightfoxai_evalv3_autoscale` |
+| **Endpoint ID** | `1807654290668388352` |
+| **Top-K Retrieved** | 5 chunks per query |
+| **Distance Metric** | Cosine similarity |
+| **Reranker** | ❌ **NOT USED** |
+
+> ⚠️ **Note:** The initial evaluation (above) did NOT use Google's Reranker API. Results are based on raw vector search retrieval only.
+
+---
+
+## 🔄 NEW: Orchestrator Integration (In Progress)
+
+The evaluation has been updated to call the **real RAG orchestrator** (`sm-dev-01`) instead of bypassing it with direct vector search.
+
+### New Architecture
+
+```
+Q&A Corpus → Orchestrator API → Full RAG Pipeline → LLM-as-Judge
+                    ↓
+         ┌─────────────────────────┐
+         │  1. RECALL (100 chunks) │
+         │     - Hybrid Search     │
+         │     - 50% Semantic      │
+         │     - 50% Keyword       │
+         │     - RRF Fusion        │
+         ├─────────────────────────┤
+         │  2. PRECISION (rerank)  │
+         │     - Google Ranking API│
+         │     - semantic-ranker   │
+         ├─────────────────────────┤
+         │  3. GENERATION          │
+         │     - Gemini 2.5 Flash  │
+         └─────────────────────────┘
+```
+
+### New Config Settings
+
+| Setting | Value |
+|---------|-------|
+| **Orchestrator API** | `http://localhost:8000` |
+| **Job ID** | `brightfoxai__evaldocs66` |
+| **Recall (candidates)** | 100 |
+| **Precision Levels** | 5, 10, 15, 20, 25 |
+| **Semantic/Keyword Blend** | 50% / 50% |
+| **Reranker Model** | `semantic-ranker-default@latest` |
+
+### Files Created
+
+| File | Purpose |
+|------|---------|
+| `orchestrator_client.py` | Client to call real RAG API |
+| `precision_test.py` | Run tests at different precision levels |
+| `config.py` | Updated with orchestrator settings |
+
+### To Run Precision Tests
+
+```bash
+# Terminal 1: Start the orchestrator
+cd /Users/scottmacon/Documents/GitHub/sm-dev-01
+source .venv/bin/activate
+python -m uvicorn services.api.app:app --host 0.0.0.0 --port 8000
+
+# Terminal 2: Run precision tests
+cd /Users/scottmacon/Documents/GitHub/ragas/brightfox_eval
+source venv/bin/activate
+python precision_test.py
+```
 
 ### Evaluation Criteria (1-5 scale)
 

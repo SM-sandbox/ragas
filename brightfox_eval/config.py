@@ -1,6 +1,7 @@
 """Configuration for BrightFox RAG Evaluation"""
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import List
 
 @dataclass
 class Config:
@@ -10,7 +11,7 @@ class Config:
     GCP_LLM_PROJECT: str = "bf-rag-sandbox-scott"  # For Gemini LLM
     GCP_LLM_LOCATION: str = "us-central1"  # For Gemini LLM
     
-    # Vertex AI Vector Search
+    # Vertex AI Vector Search (legacy - for direct access)
     VECTOR_SEARCH_ENDPOINT_ID: str = "1807654290668388352"
     VECTOR_SEARCH_DEPLOYED_INDEX_ID: str = "idx_brightfoxai_evalv3_autoscale"
     VECTOR_SEARCH_PUBLIC_ENDPOINT: str = "669919480.us-east1-689311309499.vdb.vertexai.goog"
@@ -35,6 +36,32 @@ class Config:
     # Paths
     DATA_DIR: str = "data"
     OUTPUT_DIR: str = "output"
+    
+    # ===========================================
+    # ORCHESTRATOR API SETTINGS (sm-dev-01)
+    # ===========================================
+    
+    # API endpoint for the RAG orchestrator
+    ORCHESTRATOR_API_URL: str = "http://localhost:8000"
+    
+    # Job ID for the evaluation corpus
+    # Available jobs: brightfoxai__evaldocs66 (65 docs), brightfoxai__testv2 (8 docs)
+    ORCHESTRATOR_JOB_ID: str = "brightfoxai__evaldocs66"
+    
+    # Retrieval settings
+    RECALL_TOP_K: int = 100  # Number of candidates in recall phase
+    DEFAULT_PRECISION: int = 12  # Default precision (top_n after reranking)
+    
+    # Hybrid search settings (semantic vs keyword blend)
+    ENABLE_HYBRID: bool = True
+    SEMANTIC_WEIGHT: float = 0.5  # 0.5 = 50% semantic, 50% keyword (RRF alpha)
+    
+    # Reranking settings
+    ENABLE_RERANKING: bool = True
+    RANKING_MODEL: str = "semantic-ranker-default@latest"
+    
+    # Precision levels to test
+    PRECISION_LEVELS: List[int] = field(default_factory=lambda: [5, 10, 15, 20, 25])
 
 
 config = Config()

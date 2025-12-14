@@ -1,0 +1,388 @@
+{
+  "timestamp": "2025-12-14T08:14:18.500607",
+  "config": {
+    "recall": 100,
+    "semantic_weight": 0.5,
+    "enable_reranking": true,
+    "ranking_model": "semantic-ranker-default@latest",
+    "precision_levels": [
+      5,
+      10
+    ]
+  },
+  "comparison": {
+    "by_precision": {
+      "5": {
+        "overall_score": 3.2,
+        "pass_rate": 0.6,
+        "correctness": 3.8,
+        "completeness": 3.0,
+        "faithfulness": 3.8,
+        "relevance": 4.8,
+        "clarity": 4.8,
+        "avg_time_per_question": 13.081,
+        "total_time_seconds": 65.4,
+        "avg_answer_length": 304.0
+      },
+      "10": {
+        "overall_score": 3.2,
+        "pass_rate": 0.6,
+        "correctness": 4.2,
+        "completeness": 4.2,
+        "faithfulness": 3.0,
+        "relevance": 5.0,
+        "clarity": 4.8,
+        "avg_time_per_question": 12.967,
+        "total_time_seconds": 64.84,
+        "avg_answer_length": 262.0
+      }
+    },
+    "best_precision": {
+      "overall_score": {
+        "precision": 5,
+        "value": 3.2
+      },
+      "pass_rate": {
+        "precision": 5,
+        "value": 0.6
+      },
+      "correctness": {
+        "precision": 10,
+        "value": 4.2
+      },
+      "completeness": {
+        "precision": 10,
+        "value": 4.2
+      },
+      "faithfulness": {
+        "precision": 5,
+        "value": 3.8
+      }
+    },
+    "recommendation": "Recommended precision: 5 (best for both overall score and pass rate)"
+  },
+  "detailed_results": {
+    "5": {
+      "precision": 5,
+      "metrics": {
+        "correctness": 3.8,
+        "completeness": 3.0,
+        "faithfulness": 3.8,
+        "relevance": 4.8,
+        "clarity": 4.8,
+        "overall_score": 3.2,
+        "verdict_counts": {
+          "pass": 1,
+          "partial": 2,
+          "fail": 2,
+          "error": 0
+        },
+        "pass_rate": 0.6,
+        "timing": {
+          "avg_retrieval_seconds": 0.616,
+          "avg_generation_seconds": 4.897,
+          "avg_judge_seconds": 7.568,
+          "avg_total_seconds": 13.081,
+          "total_time_seconds": 65.4
+        },
+        "answer_stats": {
+          "avg_answer_length": 304.0,
+          "min_answer_length": 67,
+          "max_answer_length": 605,
+          "avg_ground_truth_length": 169.0
+        },
+        "precision_level": 5,
+        "elapsed_seconds": 65.4,
+        "questions_evaluated": 5
+      },
+      "results": [
+        {
+          "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+          "question_type": "single_hop",
+          "ground_truth": "The peak efficiency is 99.1%.",
+          "rag_answer": "The peak efficiency of the CPS 100/125kW string inverters is 99.1%.",
+          "answer_length": 67,
+          "ground_truth_length": 29,
+          "sources_count": 5,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.498,
+            "generation_seconds": 3.787,
+            "judge_seconds": 3.475,
+            "total_seconds": 8.76
+          }
+        },
+        {
+          "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+          "question_type": "single_hop",
+          "ground_truth": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+          "rag_answer": "The CPS 100/125kW string inverters are compliant with NEC 2014 and NEC 2017.",
+          "answer_length": 76,
+          "ground_truth_length": 81,
+          "sources_count": 5,
+          "judgment": {
+            "correctness": 4,
+            "completeness": 3,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4,
+            "verdict": "partial"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.51,
+            "generation_seconds": 2.962,
+            "judge_seconds": 4.533,
+            "total_seconds": 8.005
+          }
+        },
+        {
+          "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+          "question_type": "single_hop",
+          "ground_truth": "The sign must be marked that the illumination system has been replaced, include the kit providers and installer's name, logo, or unique identifier, and if equipped with tubular light-emitting diode lamps powered by existing sign sockets, include a label alerting service personnel that the sign has been modified, including a warning not to install fluorescent lamps.",
+          "rag_answer": "According to Article 600, specifically Section 600.4(B), signs with a retrofitted illumination system must contain the following information on their label:\n\n1.  A marking indicating that the illumination system has been replaced.\n2.  The kit provider's and installer's name, logo, or unique identifier.\n3.  For signs equipped with tubular light-emitting diode lamps powered by existing sign sockets, a label alerting service personnel that the sign has been modified. This label must meet the requirements of 110.21(B), include a warning not to install fluorescent lamps, and be visible during relamping.",
+          "answer_length": 605,
+          "ground_truth_length": 367,
+          "sources_count": 5,
+          "judgment": {
+            "correctness": 4,
+            "completeness": 5,
+            "faithfulness": 1,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 2,
+            "verdict": "fail"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.357,
+            "generation_seconds": 3.68,
+            "judge_seconds": 13.494,
+            "total_seconds": 17.53
+          }
+        },
+        {
+          "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+          "question_type": "single_hop",
+          "ground_truth": "Signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. The markings shall be permanently installed, in letters at least 6 mm (1/4 in.) high, and shall be located where visible during relamping.",
+          "rag_answer": "The provided context does not contain enough information to answer what markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C). While \"600.4 Markings\" is mentioned as a heading, the specific content of 600.4(C) is not provided.",
+          "answer_length": 304,
+          "ground_truth_length": 292,
+          "sources_count": 5,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 1,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4,
+            "verdict": "partial"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.373,
+            "generation_seconds": 4.084,
+            "judge_seconds": 7.089,
+            "total_seconds": 11.546
+          }
+        },
+        {
+          "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+          "question_type": "single_hop",
+          "ground_truth": "The switchboard utilizes 800VAC rated air circuit breakers ACB (800A \u2013 1200A).",
+          "rag_answer": "The context does not contain enough information to specify the current rating range of all air circuit breakers (ACBs) used in the switchboard.\n\nIt states that the Modular Switchboard (SWBD) is rated for 4000A and includes \"100% rated ACBs\". It also mentions \"EPEC 800A/1000A... AC Combiner\". While a list of \"Current ratings: 4000A, 800A, 400A, 250A\" is provided, it does not explicitly state that the 250A and 400A ratings correspond to ACBs within the switchboard.",
+          "answer_length": 467,
+          "ground_truth_length": 78,
+          "sources_count": 5,
+          "judgment": {
+            "correctness": 1,
+            "completeness": 1,
+            "faithfulness": 3,
+            "relevance": 4,
+            "clarity": 4,
+            "overall_score": 1,
+            "verdict": "fail"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.343,
+            "generation_seconds": 9.972,
+            "judge_seconds": 9.247,
+            "total_seconds": 19.562
+          }
+        }
+      ]
+    },
+    "10": {
+      "precision": 10,
+      "metrics": {
+        "correctness": 4.2,
+        "completeness": 4.2,
+        "faithfulness": 3.0,
+        "relevance": 5.0,
+        "clarity": 4.8,
+        "overall_score": 3.2,
+        "verdict_counts": {
+          "pass": 2,
+          "partial": 1,
+          "fail": 2,
+          "error": 0
+        },
+        "pass_rate": 0.6,
+        "timing": {
+          "avg_retrieval_seconds": 0.348,
+          "avg_generation_seconds": 3.739,
+          "avg_judge_seconds": 8.88,
+          "avg_total_seconds": 12.967,
+          "total_time_seconds": 64.84
+        },
+        "answer_stats": {
+          "avg_answer_length": 262.0,
+          "min_answer_length": 67,
+          "max_answer_length": 601,
+          "avg_ground_truth_length": 169.0
+        },
+        "precision_level": 10,
+        "elapsed_seconds": 64.84,
+        "questions_evaluated": 5
+      },
+      "results": [
+        {
+          "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+          "question_type": "single_hop",
+          "ground_truth": "The peak efficiency is 99.1%.",
+          "rag_answer": "The peak efficiency of the CPS 100/125kW string inverters is 99.1%.",
+          "answer_length": 67,
+          "ground_truth_length": 29,
+          "sources_count": 10,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.348,
+            "generation_seconds": 3.499,
+            "judge_seconds": 3.481,
+            "total_seconds": 7.327
+          }
+        },
+        {
+          "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+          "question_type": "single_hop",
+          "ground_truth": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+          "rag_answer": "The CPS 100/125kW string inverters are compliant with NEC 2014 and 2017.",
+          "answer_length": 72,
+          "ground_truth_length": 81,
+          "sources_count": 10,
+          "judgment": {
+            "correctness": 4,
+            "completeness": 4,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4,
+            "verdict": "pass"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.384,
+            "generation_seconds": 3.202,
+            "judge_seconds": 8.177,
+            "total_seconds": 11.763
+          }
+        },
+        {
+          "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+          "question_type": "single_hop",
+          "ground_truth": "The sign must be marked that the illumination system has been replaced, include the kit providers and installer's name, logo, or unique identifier, and if equipped with tubular light-emitting diode lamps powered by existing sign sockets, include a label alerting service personnel that the sign has been modified, including a warning not to install fluorescent lamps.",
+          "rag_answer": "According to Article 600, specifically Section 600.4(B), a sign with a retrofitted illumination system must include the following information on its marking:\n\n1.  A statement that the illumination system has been replaced.\n2.  The kit provider's and installer's name, logo, or unique identifier.\n3.  For signs equipped with tubular light-emitting diode lamps powered by the existing sign sockets, a label alerting service personnel that the sign has been modified. This label must meet the requirements of 110.21(B), include a warning not to install fluorescent lamps, and be visible during relamping.",
+          "answer_length": 601,
+          "ground_truth_length": 367,
+          "sources_count": 10,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 1,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 3,
+            "verdict": "partial"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.321,
+            "generation_seconds": 4.403,
+            "judge_seconds": 11.361,
+            "total_seconds": 16.085
+          }
+        },
+        {
+          "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+          "question_type": "single_hop",
+          "ground_truth": "Signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. The markings shall be permanently installed, in letters at least 6 mm (1/4 in.) high, and shall be located where visible during relamping.",
+          "rag_answer": "According to 600.4(C), signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. These markings must be permanently installed, in letters at least 6 mm (1/4 in.) high, and located where visible during relamping.",
+          "answer_length": 307,
+          "ground_truth_length": 292,
+          "sources_count": 10,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 1,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 2,
+            "verdict": "fail"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.32,
+            "generation_seconds": 3.602,
+            "judge_seconds": 6.098,
+            "total_seconds": 10.021
+          }
+        },
+        {
+          "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+          "question_type": "single_hop",
+          "ground_truth": "The switchboard utilizes 800VAC rated air circuit breakers ACB (800A \u2013 1200A).",
+          "rag_answer": "Based on the provided context, the current ratings mentioned for the modular switchboard and its ACBs/AC combiners are 4000A, 800A, 400A, and 250A. Therefore, the current rating range of the air circuit breakers (ACB) used in the switchboard includes these values.",
+          "answer_length": 264,
+          "ground_truth_length": 78,
+          "sources_count": 10,
+          "judgment": {
+            "correctness": 2,
+            "completeness": 2,
+            "faithfulness": 3,
+            "relevance": 5,
+            "clarity": 4,
+            "overall_score": 2,
+            "verdict": "fail"
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.366,
+            "generation_seconds": 3.988,
+            "judge_seconds": 15.285,
+            "total_seconds": 19.64
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "timestamp": "2025-12-14T08:24:56.154584",
+  "config": {
+    "recall": 100,
+    "semantic_weight": 0.5,
+    "enable_reranking": true,
+    "ranking_model": "semantic-ranker-default@latest",
+    "precision_levels": [
+      5,
+      10
+    ]
+  },
+  "comparison": {
+    "by_precision": {
+      "5": {
+        "overall_score": 0,
+        "pass_rate": 0,
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "relevance": 0,
+        "clarity": 0,
+        "avg_time_per_question": 0,
+        "total_time_seconds": 0,
+        "avg_answer_length": 0
+      },
+      "10": {
+        "overall_score": 0,
+        "pass_rate": 0,
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "relevance": 0,
+        "clarity": 0,
+        "avg_time_per_question": 0,
+        "total_time_seconds": 0,
+        "avg_answer_length": 0
+      }
+    },
+    "best_precision": {
+      "overall_score": {
+        "precision": 5,
+        "value": 0
+      },
+      "pass_rate": {
+        "precision": 5,
+        "value": 0
+      },
+      "correctness": {
+        "precision": 5,
+        "value": 0
+      },
+      "completeness": {
+        "precision": 5,
+        "value": 0
+      },
+      "faithfulness": {
+        "precision": 5,
+        "value": 0
+      }
+    },
+    "recommendation": "Recommended precision: 5 (best for both overall score and pass rate)"
+  },
+  "detailed_results": {
+    "5": {
+      "precision": 5,
+      "metrics": {
+        "error": "No valid results",
+        "precision_level": 5,
+        "elapsed_seconds": 485.34,
+        "questions_evaluated": 5
+      },
+      "results": [
+        {
+          "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        },
+        {
+          "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        },
+        {
+          "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        },
+        {
+          "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        },
+        {
+          "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        }
+      ]
+    },
+    "10": {
+      "precision": 10,
+      "metrics": {
+        "error": "No valid results",
+        "precision_level": 10,
+        "elapsed_seconds": 483.64,
+        "questions_evaluated": 5
+      },
+      "results": [
+        {
+          "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        },
+        {
+          "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        },
+        {
+          "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        },
+        {
+          "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        },
+        {
+          "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+          "error": "404 Publisher Model `projects/civic-athlete-473921-c0/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-05-20` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions",
+          "attempts": 3
+        }
+      ]
+    }
+  }
+}
