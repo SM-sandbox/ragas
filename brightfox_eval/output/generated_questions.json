@@ -1,0 +1,681 @@
+{
+  "single_hop": [
+    {
+      "question": "According to the manual, what status is indicated by an ORANGE LED on the Aurora Central PVI Monitor?",
+      "ground_truth_answer": "An ORANGE LED indicates that the battery is charging.",
+      "reasoning": "This question is single-hop as the answer is directly stated in one bullet point within the provided chunk. It is specific and technical, focusing on the meaning of a particular LED color on a specific device (Aurora Central PVI Monitor). The answer is clear, factual, and directly verifiable from the text. It effectively tests a RAG system's ability to retrieve the relevant section and extract the precise meaning associated with a specific status indicator.",
+      "chunk_id": "Manual-PVI-Central-250-300_p87_narr1",
+      "source_document": "Manual-PVI-Central-250-300",
+      "question_type": "single_hop",
+      "source_text": "Installation and Operation Manual Page 87 of 145\n[PVI-CENTRAL-XXX (US or CAN) - Rev:3.0]\n14.3. Front status LED signalling\nThe anterior part of the display contains a status LED. This LED changes colour according to the\nstatus of Aurora Central PVI Monitor. The different operation statuses and their corresponding\ncolours are:\n\u2022 LED OFF: No external (5Vdc) power supply.\n\u2022 GREEN LED: Battery charged; at least one power supply connected (DC or USB).\n\u2022 ORANGE LED: Battery is charging.\n\u2022 RED LED: Low battery; no power supply connected (DC or USB).\n\u2022 BLUE BLINKING LED: Aurora Central PVI Monitor ON (STAND-BY)."
+    },
+    {
+      "question": "What is the Allowable Ampacity at 75\u00b0C for the conductor with Stock Number 480657\u25ca?",
+      "ground_truth_answer": "175 Amp",
+      "reasoning": "This question is single-hop as the answer is directly found in one row and one column of the provided table. It is specific and technical, using terms like 'Allowable Ampacity at 75\u00b0C' and 'Stock Number'. The answer is a clear, factual value (175 Amp). It is useful for testing a RAG system's ability to accurately retrieve the correct row based on the Stock Number and then extract the precise value from the specified column, distinguishing it from the similar 'Allowable Ampacity At 90\u00b0C' column.",
+      "chunk_id": "SOUTHWIRE_SPEC45252_p3_narr1",
+      "source_document": "SOUTHWIRE_SPEC45252",
+      "question_type": "single_hop",
+      "source_text": "SPEC 45252\nTable 2 \u2013 Electrical and Engineering Data\nInductive\nStock Cond. Cond. Min Bending Max Pull DC Resistance AC Resistance Allowable Allowable\nNumber Size Number Radius Tension @ 25\u00b0C @ 75\u00b0C Ampacity At 75\u00b0C Ampacity At 90\u00b0C\n60Hz\nAWG/\ninch lb \u2126/1000ft \u2126/1000ft \u2126/1000ft Amp Amp\nKcmil\n555196\u25ca 8 3 2.5 396 0.653 0.786 0.052 50 55\n480590\u25ca 8 3 2.8 396 0.653 0.786 0.052 50 55\n555195 6 3 2.8 629 0.411 0.495 0.051 65 75\n480608\u25ca 6 3 3.1 629 0.411 0.495 0.051 65 75\n480616\u25ca 4 3 3.2 1001 0.258 0.310 0.048 85 95\n480624\u25ca 2 3 3.9 1592 0.162 0.195 0.045 115 130\n480632\u25ca 1 3 5.5 2008 0.128 0.154 0.046 130 145\n480640\u25ca 1/0 3 6.0 2534 0.102 0.122 0.044 150 170\n480657\u25ca 2/0 3 6.5 3194 0.081 0.097 0.043 175 195\n480665\u25ca 3/0 3 7.0 4027 0.064 0.078 0.042 200 225\n480673\u25ca 4/0 3 7.5 5078 0.051 0.062 0.041 230 260\n480681\u25ca 250 3 8.1 6000 0.043 0.053 0.041 255 290\n480707\u25ca 350 3 9.6 8400 0.031 0.039 0.040 310 350\n672206 350 3 9.6 8400 0.031 0.039 0.040 310 350\n588013 350 3 12.6 8400 0.031 0.039 0.040 310 350\n480715 400 3 12.1 9600 0.027 0.035 0.040 335 380\n582435 500 3 12.9 12000 0.022 0.029 0.039 380 430\n480723\u25ca 500 3 13.0 12000 0.022 0.029 0.039 380 430\n890148 500 3 13.0 12000 0.022 0.029 0.039 380 430\n583697 500 3 13.6 12000 0.022 0.029 0.039 380 430\n593173 600 3 14.5 14400 0.018 0.025 0.039 420 475\n665766 600 3 14.5 14400 0.018 0.025 0.039 420 475\n890388\u25ca 600 3 14.5 14400 0.018 0.025 0.039 420 475\n665768 600 3 15.0 14400 0.018 0.025 0.039 420 475\n672210 600 3 15.5 14400 0.018 0.025 0.039 420 475\n589359 750 3 15.8 18000 0.014 0.022 0.038 475 535\n554410 750 3 15.8 18000 0.014 0.022 0.038 475 535\n* Ampacities based upon 2023 NEC Table 310.16. See NEC sections 310.15 and 110.14(C) for additional requirements.\nSouthwire Company, LLC | One Southwire Drive, Carrollton, GA 30119 | www.southwire.com\nCopyright \u00a9 2025 Southwire Company, LLC. All Rights Reserved UPDATED: Dec. 31, 2024, 11:07 p.m.UTC REVISION: 1.000.011"
+    },
+    {
+      "question": "What is the physical address of ETH 0 on the TRANSPORT WR31 device shown in the web interface?",
+      "ground_truth_answer": "00-1e-c6-05-0b-8e",
+      "reasoning": "This question is single-hop, directly answerable from the 'Technical details' section. It is specific and technical, asking for a MAC address ('Physical Address') of a network interface ('ETH 0') on a named device ('TRANSPORT WR31'). The answer is a clear, factual string, making it excellent for evaluating a RAG system's ability to precisely extract technical data.",
+      "chunk_id": "DiGiWR21WR31ModemBasicsv1_p4_fig2",
+      "source_document": "DiGiWR21WR31ModemBasicsv1",
+      "question_type": "single_hop",
+      "source_text": "AI caption: **Type of image:** Screenshot\n\n**Main components:** This image shows a web interface for configuring a Digi Transport WR31 device. It displays the \"Execute a command\" section, where the user can enter and run commands, and view the results.\n\n**Technical details:**\n*   Device: TRANSPORT WR31 (SN: 745647)\n*   Command Input: `arp -a`\n*   Command Result: ARP Cache Size: 100 entries, old entries reused:0 no arp matches: 324\n*   ETH 0: IP Address: 192.168.2.51, Physical Address: 00-1e-c6-05-0b-8e, Expiry: 251, Retries: 3, State: found\n*   Menu Items: Home, Wizards, Configuration, Network, Alarms, System, Remote Management, Security, Telemetry, Applications, Basic, Python, Management, Network Status, Connections, Telemetry, Event Log, Analyser, Top Talkers, Administration, System Information, File Management, X.509 Certificate Management, Backup/Restore, Update Firmware, Factory Default Settings, Execute a command, Save configuration, Reboot\n*   User: admin"
+    },
+    {
+      "question": "According to the provided dimensions for the dual cabinet, what is its overall vertical measurement?",
+      "ground_truth_answer": "90.04 inches",
+      "reasoning": "This question is directly answerable from the chunk, as '90.04\u201d' is explicitly listed as a dimension. It is specific and technical, asking for a precise numerical measurement of a key physical attribute (overall vertical dimension) of the 'dual cabinet'. The answer is factual and unambiguous. This question is useful for testing a RAG system's ability to accurately extract specific numerical data associated with a described physical characteristic from a technical document chunk.",
+      "chunk_id": "Shoals 4000A_Recombiner_datasheet_-Feb28-2025_p4_narr1",
+      "source_document": "Shoals 4000A_Recombiner_datasheet_-Feb28-2025",
+      "question_type": "single_hop",
+      "source_text": "DIMENSIONS, DUAL CABINET\nFuse-only design internal view shown (no input-side contactors or input-side disconnect options shown)\nSafety\nShield\nInput Fuse\npairs\nMain Output\nDisconnect\nSwitch\n22.4\u201d 22.4\u201d 8X \u00d8.51 Thru\n90.04\u201d\n(OPENING) (OPENING) (Pad Mounting Holes)\n22.7\u201d\n(OPENING) 19.6\u201d\n21.0\u201d 10.5\u201d 21.0\u201d\nBBoottttoomm VViieeww"
+    },
+    {
+      "question": "When changing IP addresses in the TCP/IP Config menu on the AcquiSuite, what is the function of the Select button?",
+      "ground_truth_answer": "The Select button will advance the cursor a single position.",
+      "reasoning": "This question is highly specific and technical, focusing on the precise function of a particular button ('Select') within a specific technical context ('changing IP addresses in the TCP/IP Config menu') on the AcquiSuite device. The answer is directly stated in the chunk, making it a clear, factual, single-hop query ideal for testing a RAG system's ability to retrieve granular, context-dependent information and extract an exact answer.",
+      "chunk_id": "AcquiSuite-Basics---External_p2_narr1",
+      "source_document": "AcquiSuite-Basics---External",
+      "question_type": "single_hop",
+      "source_text": "2/25/2019 https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftempl\u2026\nGateway = 192.168.2.1\nDNS Server #1 = 8.8.4.4\nDNS Server #2 = 8.8.8.8\nNote: These settings are common but there are sites (often retrofits) that use\ndifferent network configurations. If there are differing settings, do not change\nthem unless you have confirmed that they are incorrect. If in question, check\nthe site drawings and/or check with the AEs.\nMENU LAYOUT:\nMENU NAVIGATION:\nThere are two external buttons on the AcquiSuite, Menu and Select, that are\nlocated at the top right corner of the unit.\nThe Menu button is used to scroll through the menu options and Select is used to\nadvance into the currently displayed menu option.\nAfter selecting DHCP+UPnP on/off, Menu will disable DHCP and Select will enable\nDHCP mode.\nWhen changing IP addresses in the TCP/IP Config menu, the Select button will\nadvance the cursor a single position and the Menu button will scroll through the\nnumber/character options for the current cursor position."
+    },
+    {
+      "question": "What is the load breaking capability of the LLS\u00ae-II 2000 245 kV switcher?",
+      "ground_truth_answer": "3000 A",
+      "reasoning": "This question is highly specific, asking for a particular technical specification (load breaking capability) for a distinct switcher model (LLS\u00ae-II 2000 245 kV) directly from the provided table. It tests the RAG system's ability to accurately identify the correct row and column intersection to extract a precise, factual, numerical answer, which is crucial for technical documentation.",
+      "chunk_id": "Southern States Group Operated Switch Application Guide_p4_table2",
+      "source_document": "Southern States Group Operated Switch Application Guide",
+      "question_type": "single_hop",
+      "source_text": "LLS\u00ae | LLS\u00ae | LLS\u00ae | LLS\u00ae | LLS\u00ae | LLS\u00ae | LLS\u00ae | LLS\u00ae\nLOAD AND LINE | LOAD AND LINE | LOAD AND LINE | LOAD AND LINE | LOAD AND LINE | LOAD AND LINE | LOAD AND LINE | LOAD AND LINE\nSWITCHER FAMILY | SWITCHER FAMILY | SWITCHER FAMILY | SWITCHER FAMILY | SWITCHER FAMILY | SWITCHER FAMILY | SWITCHER FAMILY | SWITCHER FAMILY\nOVERVIEW \u00b7 MAXIMUM VOLTAGE RATING | OVERVIEW \u00b7 LLS\u00ae-I \u00b7 38 kV - 72.5 | OVERVIEW \u00b7 LLS\u00ae-I \u00b7 123 - 245 | OVERVIEW \u00b7 LLS\u00ae-II 2000 \u00b7 72.5 - 170 kV | OVERVIEW \u00b7 LLS\u00ae-II 2000 \u00b7 245 kV | OVERVIEW \u00b7 LLS\u00ae-II 3000 \u00b7 72.5 - 170 kV | OVERVIEW \u00b7 LLS\u00ae-II 3000 \u00b7 245 kV | OVERVIEW \u00b7 LBI \u2122 \u00b7 38 kV - 72.5 kV\n| kV | kV | | | | |\nLOAD BREAKING CAPABILITY | 2000 A | N/A | 2000 A | | 3000 A | 2000 A | 1200 A - 2000 A\nLINE DROPPING CAPABILITY | 300 A | N/A | 300 A | 200 A | 300 A | 200 A | 70 A\nLOOP SPLITTING CAPABILITY | 2000 A | 2000 A* | 2000 A | | 3000 A | | 2000 A"
+    },
+    {
+      "question": "Which specific section of the Connecticut General Statutes enumerates the FOIA exemption that the Client must use best efforts to avoid disclosing information under, as per this Agreement?",
+      "ground_truth_answer": "Section 1-210(b) of the Connecticut General Statutes.",
+      "reasoning": "This question is directly answerable from Section 24 of the provided chunk. It is highly specific and technical, asking for a precise legal reference. The answer is factual and unambiguous, making it excellent for testing a RAG system's ability to retrieve the correct clause and extract exact details.",
+      "chunk_id": "Green-Earth-Energy-EPC-Contract-Template Sample_p28_narr1",
+      "source_document": "Green-Earth-Energy-EPC-Contract-Template Sample",
+      "question_type": "single_hop",
+      "source_text": "Template\ninvalid or unenforceable portion or provision shall be deemed severed from this Agreement and the\nbalance of this Agreement shall be construed and enforced as if this Agreement did not contain such\ninvalid or unenforceable portion or provision. Notwithstanding the provisions of the preceding sentence,\nshould any term or provision of this Agreement be found invalid or unenforceable, the Parties shall\nimmediately renegotiate in good faith such term or provision of this Agreement to effectuate the same\nintent and to eliminate such invalidity or unenforceability.\n23.7 Each Party shall use its reasonable efforts to implement the provisions of this Agreement,\nand for such purpose each, at the request of the other, will, without further consideration, but subject to\nlegal review, promptly execute and deliver or cause to be executed and delivered to the other such\nassignments, consents or other instruments in addition to those required by this Agreement, in form and\nsubstance satisfactory to the other, as the other may reasonably deem necessary or desirable to implement\nany provision of this Agreement.\n23.8 This Agreement shall be binding upon and shall inure to the benefit of the Parties, their\nheirs, executors, administrators, representatives, successors and assigns. Neither Party may assign this\nAgreement, nor any obligations hereunder, other than as expressly provided in this Agreement, without\nprior written consent of the other Party.\n23.9 This Agreement may be executed in any number of counterparts, each of which when so\nexecuted and delivered shall be deemed an original and all of which counterparts, taken together, shall\nconstitute one and the same instrument. Delivery of an executed counterpart of a signature page of this\ndocument by facsimile or other generally accepted electronic means (i.e. e-mail) shall be effective as\ndelivery of a manually executed counterpart of this Agreement.\n24. FREEDOM OF INFORMATION ACT. Client shall comply with all Connecticut"
+    },
+    {
+      "question": "What is the Ingress Protection rating for the NEP BDM-2000-240A microinverter?",
+      "ground_truth_answer": "NEMA6",
+      "reasoning": "This question directly asks for a specific technical specification ('Ingress Protection') of the microinverter model mentioned. The answer ('NEMA6') is explicitly stated in the provided chunk, making it a single-hop, factual query ideal for evaluating a RAG system's ability to retrieve and extract precise technical details from a SCADA/Solar/Electrical equipment corpus.",
+      "chunk_id": "NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed_p1_fig5",
+      "source_document": "NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed",
+      "question_type": "single_hop",
+      "source_text": "AI caption: **Type of image:** Diagram\n\n**Main components:** PV Microinverter with input and output cables.\n\n**Technical details:**\n*   Model: BDM-2000-240A\n*   Brand: NEP Northern Electric\n*   Max. PV Input Voltage: 60 Vdc\n*   MPPT Input Voltage Range: 22-55 Vdc\n*   Max. DC Input Current: 4x18 Adc\n*   Isc PV: 4x25 Adc\n*   Nominal Output Voltage: 240 Vac\n*   Nominal Output Frequency: 60 Hz\n*   Max. Continuous Power: 1920 VA\n*   Nominal Output Current: 8.0 Aac\n*   Power Factor Range: 0.9 un ~ 0.9 ov\n*   Protective Class: I\n*   Ingress Protection: NEMA6\n*   Ambient Temperature: -40\u00b0C ~ +65\u00b0C\n*   AC connector visible\n*   Designed in U.S.A, Assembled in China\n*   Intertek 5031216"
+    },
+    {
+      "question": "According to Article 694.22(C)(4), what is the maximum number of switches or circuit breakers that can constitute the turbine disconnecting means?",
+      "ground_truth_answer": "The turbine disconnecting means shall consist of not more than six switches or six circuit breakers.",
+      "reasoning": "This question directly asks for a specific numerical and technical detail from a clearly referenced section of the document. It tests the RAG system's ability to retrieve the exact clause (694.22(C)(4)) and extract the precise numerical limit for the turbine disconnecting means, which is a critical safety and installation specification in the National Electrical Code. The answer is factual, unambiguous, and requires no inference, making it ideal for evaluating retrieval accuracy and answer generation quality.",
+      "chunk_id": "National Electrical Code 2023 Chapter 6_p84_narr1",
+      "source_document": "National Electrical Code 2023 Chapter 6",
+      "question_type": "single_hop",
+      "source_text": "ARTICLE 694-WIND ELECTRIC SYSTEMS\n 694.22 Additional Provisions. Disconnecting means shall\ncomply with 694.22(A) through (D). (A) Disconnecting Means. The disconnecting means shall not\nbe required to be suitable for use as service equipment. The\ndisconnecting means for ungrounded conductors shall consist\nof manually operable switches or circuit breakers complying\nwith all of the following requirements:\n (1) They shall be located where readily accessible. (2) They shall be externally operable without exposing the\noperator to contact with live parts. (3) They shall plainly indicate whether in the open or closed\nposition. (4) They shall have an interrupting rating sufficient for the\nnominal circuit voltage and the current that is available at\nthe line terminals of the equipment. Where all terminals of the disconnecting means are capable\nof being energized in the open position, a warning sign shall be\nmounted on or adjacent to the disconnecting means. The sign\nshall be clearly legible and shall have the following words or\nequivalent:\n WARNING. ELECTRIC SHOCK HAZARD. DO NOT TOUCH TERMI-\nNALS. TERMINALS ON BOTH THE LINE AND LOAD\nSIDES MAY BE ENERGIZED IN THE OPEN POSITION. The warning sign(s) or label(s) shall comply with 110.21 (B). (B) Equipment. Equipment such as rectifiers, controllers,\noutput circuit isolating and shorting switches, and over-current\ndevices shall be permitted on the wind turbine side of the\ndisconnecting means. (C) Requirements for Disconnecting Means. (1) Location. The wind electric system disconnecting means\nshall be installed at a readily accessible location either on or\nadjacent to the turbine tower, on the outside of a building or\nstructure, or inside at the point of entrance of the wind system\nconductors. Exception: Installations that comply with 694.30(C) shall be permitted\nto have the disconnecting means located remotely from the point of entry\nof the wind system conductors. A wind turbine disconnecting means shall not be required to\nbe locat"
+    },
+    {
+      "question": "What is the Power Rating MVA for a 4000 kcmil Southwire High-Voltage XLPE Power Cable when considering Load Factor @ 75% as per Figure 2?",
+      "ground_truth_answer": "894 MVA",
+      "reasoning": "This question is single-hop as the answer is directly found in the table. It is specific and technical, referencing 'Power Rating MVA', '4000 kcmil', 'Load Factor @ 75%', and 'Figure 2', all terms from the document. The answer '894 MVA' is a clear, factual value. It is useful for RAG testing because it requires the system to accurately locate the correct conductor size, differentiate between the two 'Figure' sections, and extract the precise MVA value from the corresponding row and column in a tabular format.",
+      "chunk_id": "Southwire High-Voltage-345-400kV-XLPE-Power-Cable_p2_narr1",
+      "source_document": "Southwire High-Voltage-345-400kV-XLPE-Power-Cable",
+      "question_type": "single_hop",
+      "source_text": "CU Cond & AL Cond &\nMin. CU Sheath AL Sheath\nDiameter Overall Bending\nConductor Conductor Insulation Over Jacket Radius Capacitance Charging 30 mil 50 mil\nSize Dia. Thickness Insulation Diameter (install / Current Cable Sheath2 Cable Sheath2\n(kcmil1) perm.) Weight Short Ckt Weight Short Ckt\n@ 0.5s @ 0.5s\n(inches) (mils) (inches) (inches) (inches) (pF/ft) (A/kft) (lbs/ft) (kA) (lbs/ft) (kA)\n1250 1.19 1260 3.88 4.91 89/59 38.37 3.37 11.73 56.6 8.24 63.5\n1500 1.32 1181 3.85 5.00 90/60 42.75 3.72 12.41 57.7 8.37 64.7\n1750 1.43 1142 3.88 5.03 91/61 45.73 3.98 13.17 58.0 8.60 65.1\n2000 1.50 1142 3.95 5.12 93/62 47.32 4.12 14.17 59.1 9.01 66.2\n2500 1.73 1063 4.05 5.23 95/63 54.58 4.75 15.78 60.3 9.58 67.6\n3000 1.89 1063 4.28 5.50 99/66 59.13 5.15 17.89 63.4 10.59 71.1\n3500 2.07 1063 4.38 5.62 102/68 61.24 5.33 19.70 64.9 11.31 72.7\n4000 2.17 1063 4.48 5.74 104/69 63.19 5.50 21.48 66.2 12.02 74.2\n5000 2.48 1063 4.79 6.10 110/74 69.32 6.04 26.04 70.5 13.68 79.0\n6000 2.67 1063 4.99 6.33 114/76 73.13 6.37 28.93 73.2 15.12 81.9\nLoad Factor @ 75%\n1250 1500 1750 2000 2500 3000 3500 4000 5000 6000\nper Figures on Page 2\nAmps 900 990 1060 1110 1310 1430 1520 1600 1740 1820\n(Fig 1)\nPower Rating MVA 624 686 734 769 908 991 1053 1109 1206 1261\nAmps 760 820 880 920 1070 1160 1220 1290 1380 1440\n(Fig 2)\nPower Rating MVA 527 568 610 637 741 804 845 894 956 998\nLoad Factor @ 75%\n1250 1500 1750 2000 2500 3000 3500 4000 5000 6000\nper Figures on Page 2\nAmps 720 790 860 910 1060 1170 1260 1340 1510 1620\n(Fig 1)\nPower Rating MVA 499 547 596 630 734 811 873 928 1046 1122\nAmps 610 660 710 760 870 950 1020 1080 1200 1290\n(Fig 2)\nPower Rating MVA 423 457 492 527 603 658 707 748 831 894\n12500-6000 kcmil conductors are 5 segment Milliken conductors.\n2Thicker sheath can accommodate more FAULT current.\n3Based upon single point or cross bonding scheme.\nkV\nPower\nCable\nSW\nSTANDARD\nWALL\nXLPE\nCORRUGATED\nSHEATH"
+    },
+    {
+      "question": "What is the Over Voltage Category for the AC MAINS of the NEP Microinverter BDM-2000-T?",
+      "ground_truth_answer": "III (AC MAINS)",
+      "reasoning": "This question is highly specific and technical, directly asking for a precise detail from the 'Over Voltage Category' entry. It tests the RAG system's ability to retrieve the correct line and then extract the specific information pertaining to 'AC MAINS' rather than the general category or the 'PV' category, ensuring a clear, factual answer from the provided chunk.",
+      "chunk_id": "NEP Microinverter BDM-2000-T-Datasheet-20241216_p1_table3",
+      "source_document": "NEP Microinverter BDM-2000-T-Datasheet-20241216",
+      "question_type": "single_hop",
+      "source_text": "Protection Function |\nOver/Under Voltage Protection: | Yes\nOver/Under Frequency Protection: | Yes\nAnti - Islanding Protection: | Yes\nOver Current Protection: | Yes\nReverse DC Polarity Protection: | Yes\nOverload Protection: | Yes\nProtection Degree: | NEMA-6/IP-66 / IP-67\nAmbient Temperature: | -40\u00b0F to +149\u00b0F ( -40^{\\circ}C~to+65^{\\circ}C)\nOperating Temperature: | -40\u00b0F to +185^{\\circ}F(-40^{\\circ}C~to+85^{\\circ}C)\nDisplay: | LED Light\nCommunications: | Powerline Communications, Wi-Fi\nEnvironment Category: | Indoor and outdoor\nWet Location: | Suitable\nPollution Degree: | PD 3\nOver Voltage Category: | II(PV), III (AC MAINS)"
+    },
+    {
+      "question": "What is the calculated value when a maximum system phase-to-phase voltage of 72.5 kV undergoes Step 4?",
+      "ground_truth_answer": "208.9",
+      "reasoning": "This question is single-hop as the answer is directly found in the intersection of 'Step 4' and the column corresponding to '72.5 kV' in the provided table. It is specific and technical, referencing 'maximum system phase-to-phase voltage' and 'kV', and asks for a precise numerical value. The answer '208.9' is a clear, factual extraction from the chunk. This question effectively tests a RAG system's ability to accurately retrieve information from a structured table and extract a specific data point.",
+      "chunk_id": "OSHA Electric Gen CFR-2024-title29-vol5-sec1910-269_p53_table3",
+      "source_document": "OSHA Electric Gen CFR-2024-title29-vol5-sec1910-269",
+      "question_type": "single_hop",
+      "source_text": "| Maximum system phase-to-phase voltage (kV | )\nStep | |\n| 15 46 36 | 72.5\n1. Divide by \u221a3 | 20.8 8.7 26.6 | 41.9\n2. Multiply by \u221a2 | 12.2 29.4 37.6 | 59.2\n3. Multiply by 3.0 | 112.7 88.2 36.7 | 177.6\n4. Divide by 0.85 | 132.6 103.7 43.2 | 208.9\n5. Interpolate from Table 1 | 14+(8.7/9)^{\\prime} 2 20+\\underline{(12.6/23)}^{*} 5 3+(7.2/10)^{*}1| | 35+(16.9/26)^{*}5"
+    },
+    {
+      "question": "What is the hourly rate for a Service Technician performing electrical testing under the Non-Covered Services Fee Schedule?",
+      "ground_truth_answer": "$90.00/hr.",
+      "reasoning": "This question is specific and technical, asking for a precise hourly rate associated with a particular technician class and service listed in the 'True South Hourly Rate Schedule' section. It directly tests the RAG system's ability to retrieve the correct technician category ('Service Technician'), identify a service they perform ('Electrical testing'), and extract the corresponding factual hourly rate ('$90.00hr.') from the provided chunk.",
+      "chunk_id": "PFMG - OM Agreement (WSD)_Executed_p43_narr1",
+      "source_document": "PFMG - OM Agreement (WSD)_Executed",
+      "question_type": "single_hop",
+      "source_text": "EXHIBIT B\nNON-COVERED SERVICES FEE SCHEDULE\nAll Non-Covered Services shall be paid according to this Exhibit B (the \u201cNon-Covered Services\nFee Schedule\u201d),\n\u2022 Materials and other expenses will be billed at direct cost plus fifteen percent (15%)\nTrue South Hourly Rate Schedule (TSR determines class of technician on all service calls)\nApprentice Technician - $65.00hr.\nModule replacement\nSite clean-up\nSource circuit wire management\nDAS reset\nVisual Inspection\nService Technician - $90.00hr.\nCombiner Service Work\nEquipment replacement\nDAS equipment replacement\nElectrical testing\nMinor troubleshooting\nLead Technician - $120.00hr.\nDAS Troubleshooting\nGround Faults\nInverter troubleshooting\nInverter equipment replacement\nElectrical testing and troubleshooting"
+    },
+    {
+      "question": "According to NEC 2023, what specific type of listed equipment is exempt from GFCI protection for outdoor outlets in dwellings, and when does this exception expire?",
+      "ground_truth_answer": "Listed HVAC equipment is exempt from GFCI protection for outdoor outlets in dwellings. This exception expires September 1, 2026.",
+      "reasoning": "This question is highly specific and technical, directly referencing a particular exception within the NEC 2023 text. It requires the RAG system to accurately retrieve the type of equipment and its associated expiration date, making it an excellent test for precise factual extraction and understanding of conditional rules within a technical corpus. It is a single-hop question with a clear, factual answer.",
+      "chunk_id": "National Electrical Code 2023 Chapter 2_p6_narr2",
+      "source_document": "National Electrical Code 2023 Chapter 2",
+      "question_type": "single_hop",
+      "source_text": "(F) Outdoor Outlets. For dwellings, all outdoor outlets, other\nthan those covered in 210.8(A), Exception No. 1, including\noutlets installed in the following locations, and supplied by\n 210.11\n single-phase branch circuits rated 150 volts or less to ground,\n50 amperes or less, shall be provided with GFCI protection:\n(1) Garages that have floors located at or below grade level\n(2) Accessory buildings\n (3)\n Boathouses\n If equipment supplied by an outlet covered under the\nrequirements of this section is replaced, the outlet shall be\nsupplied with GFCI protection. Exception No. 1: GFCI protection shall not be required on lighting\noutlets other than those covered in 210.8(C). Exception No. 2: GFCI protection shall not be required for listed HVAC\nequipment. This exception shall expire September 1, 2026. 210.9 Circuits Derived from Autotransformers. Branch\ncircuits shall not be derived from autotransformers unless the\ncircuit supplied has a grounded conductor that is electrically\nconnected to a grounded conductor of the system supplying\nthe autotransformer. Exception No. 1: An autotransformer shall be permitted without the\nconnection to a grounded conductor where transforming from a nomi-\nnal 208 volts to a nominal 240-volt supply or similarly from 240 volts\nto 208 volts. Exception No. 2: In industrial occupancies, where conditions of main-\ntenance and supervision ensure that only qualified persons service the\ninstallation, autotransformers shall be permitted to supply nominal\n600-volt loads from nominal 480-volt systems, and 480-volt loads from\nnominal 600-volt systems, without the connection to a similar groun-\n ded conductor. 210.10 Ungrounded Conductors Tapped from Grounded\nSystems. Two-wire dc circuits and ac circuits of two or more\nungrounded conductors shall be permitted to be tapped from\nthe ungrounded conductors of circuits that have a grounded\nneutral conductor. Switching devices in each tapped circuit\nshall have a pole in each ungrounded conductor. All poles of\nm"
+    },
+    {
+      "question": "What specific behavior is referenced in the document chunk as occurring at 1000 m?",
+      "ground_truth_answer": "TEMPERATURE BEHAVIOR",
+      "reasoning": "This question is specific and directly answerable from the provided chunk, extracting a technical heading. It tests the RAG system's ability to identify and retrieve precise technical topics or parameters (like 'TEMPERATURE BEHAVIOR' and the associated condition 'at 1000 m') even when the detailed content for that topic is not present in the chunk. This is crucial for understanding the scope of a document.",
+      "chunk_id": "SMA Sunny Central-US-DS-en-27_p4_narr1",
+      "source_document": "SMA Sunny Central-US-DS-en-27",
+      "question_type": "single_hop",
+      "source_text": "SCXXXXUP-US-DS-en-27     All products and services described and all technical data are subject to change, even for reasons of country-specific deviations, at any time without \nnotice. SMA assumes no liability for typographical or other errors. For current information, please see www.SMA-Solar.com.\nSMA America, LLC\nToll Free +1 888 4 SMA USA\nSYSTEM DIAGRAM\nTEMPERATURE BEHAVIOR (at 1000 m)"
+    },
+    {
+      "question": "What is the maximum input current (Isc MAX) for the Yotta Block?",
+      "ground_truth_answer": "15.5A",
+      "reasoning": "This question is single-hop, directly answerable from the 'INPUT' section of the document chunk. It is highly specific and technical, asking for a precise electrical specification (Isc MAX). The answer is a clear, factual value with units, making it ideal for testing a RAG system's ability to accurately retrieve and extract specific technical data.",
+      "chunk_id": "Yotta Block-1_1.5_p2_narr1",
+      "source_document": "Yotta Block-1_1.5",
+      "question_type": "single_hop",
+      "source_text": "MODEL YOTTA BLOCK (YB-1)\nINPUT\nModule Compatibility 650W (MAX on bypass mode)\nMPPT Operating Voltage 20V to 55V\nMaximum Input Current (Isc MAX) 15.5A\nOpen-Circuit Voltage (Voc) 45V\nOUTPUT\nMax. Continuous Voltage (charge & discharge) 55V\nMax. Continuous Current (charge & discharge) 16.5A\nMax. Power Output (discharge defined by DPI Microinverter) 432W @ 208V / 450W @ 480V\nInverter Compatibility Yotta DPI-208 and DPI-480\nBATTERY PACK\nChemistry Lithium Iron Phosphate (LiFePO4)\nCycle Life < 6,000+ Cycles (@ 80% SoH)\n@ 25\u00b0C\nVoltage Range (Nominal/MAX) 48V / 54.65V\nAmp Hours (Cell x 15S1P) 20 Ah\nModule Rated Capacity 1.0 kWh @ (100% DoD)\nCell Configuration 15S1P\nVoltage Range 43.5V to 54.65V\nMECHANICAL\nWeight 28.4 lbs (12.8 kg)\nRoof Loading(1) Approx. 1psf\nRacking Capability PanelClaw, UNIRAC, Aerocompact, IronRidge,\nSollega, K2 Systems, KB Racking, Carports, pitched roofs and more\nAmbient Operating Temperatures Charging: -20\u00b0C to 45\u00b0C (-4\u00b0F to 113\u00b0F) @ 650W MAX\nDischarging: -20\u00b0C to 45\u00b0C (-4\u00b0F to 113\u00b0F) @ 650W MAX\nStorage Temp. 32\u00b0F to 77\u00b0F (ideally around 59\u201377\u00b0F) < 1 year\nDimensions 15.95 x 7.90 x 4.16\u201d (405.2 x 200.7 x 105.6 mm)\nSAFETY AND WARRANTY\nWarranty 10 yrs.\nEnclosure NEMA 6, IP67\nCertification UL1973 (Pending)\nUL9540 (Pending)\nUL1741 (Pending)\nSafety Meets the performance criteria of UL9540A\nMONITORING YOTTA VISION\n(1) Assuming the use of a ~550W PV module that is ~28sqft and PanelCLAW FR racking.\n(2) Additional features like load control and grid services currently in development\nor available through strategic partners.\nINTEGRATED SOLUTION\nYOTTA BLOCK + UNIRAC RM10 EVO\nBALLAST BLOCK REPLACEMENT\nYOTTA BLOCK + PanelClaw clawFR 10\n*Also compatible with clawFR 5 (landscape)\nUNIVERSALLY COMPATIBLE\nYOTTA BLOCK + SOLLEGA\nENERGY MADE SIMPLE\nYOTTA Energy Inc. 3100 Alvin Devane Blvd, Building A, Suite 200, Austin, TX 78741"
+    },
+    {
+      "question": "What type of counterbalances are utilized in the Southern States EV-2H disconnect switch to reduce operating effort and prevent catastrophic failure?",
+      "ground_truth_answer": "Metal encased coil spring counterbalances.",
+      "reasoning": "This question is single-hop and directly answerable from the chunk. It asks for a specific technical component ('Metal encased coil spring counterbalances') and its function, which is clearly stated in the text. This tests the RAG system's ability to extract precise technical details and their associated benefits, ensuring both accurate retrieval and concise answer generation.",
+      "chunk_id": "Southern States EV-2H-550kV-800kV-Catalog-Flyer-R0_p1_narr1",
+      "source_document": "Southern States EV-2H-550kV-800kV-Catalog-Flyer-R0",
+      "question_type": "single_hop",
+      "source_text": "> Disconnect Switches > GROUP OPERATED SWITCHES\nC A T A L O G F L Y E R\nEV-2H\nAluminum Vertical\nDisconnect Switch\n550 kV - 800 kV\nRobust Current Transfer & Hinge\nMechanism Promote Maximum Reliability\nSouthern States\u2019 latest innovation, the EV-2H, supports reliability through its unique\ndesign. This heavy duty, highly efficient vertical break disconnect switch utilizes\nindependent mechanical and electrical systems to produce the strongest possible\ndesign with the easiest accessible maintenance. An over toggle mechanism in both\nopen and closed positions prevents the possibility for the blade to close in extreme\nweather and increases down force for high fault performance. Metal encased coil\nspring counterbalances reduce operating effort, are impervious to weather, and\nprevent catastrophic failure that is possible with linear springs. Using an all stainless\nsteel bearing also ensures a long life in all operating conditions.\nBENEFITS SPECIFICATIONS\n\u2022 Mechanical operation is independent of the moving current joints, allowing efficient Maximum Voltage Rating\nhigh current transmitting that promotes switch reliability and useful life. 550 kV \u2013 800 kV\n\u2022 Superior mechanical strength & corrosion resistance Continuous Current Rating\n\u2022 Self-cleaning roller bearings & reverse loop current contacts 2000 A / 3000 A / 4000 A\n\u2022 Hinge over-toggle prevents closing in adverse weather conditions and utilizes high\ndownward force on the blade to prevent it from popping open"
+    },
+    {
+      "question": "What are the specific indicator lights listed for the CPS SCH Series energy storage system?",
+      "ground_truth_answer": "Power, Run, Grid, Fault",
+      "reasoning": "This question is directly answerable from the 'Technical details' section of the chunk, asking for a specific list of components (indicator lights). It is technical, factual, and tests the RAG system's ability to extract a precise set of named items associated with a product series, which is crucial for evaluating retrieval accuracy and detail extraction.",
+      "chunk_id": "CPS 125kW Standard & Centralized Datasheet_p1_fig1",
+      "source_document": "CPS 125kW Standard & Centralized Datasheet",
+      "question_type": "single_hop",
+      "source_text": "AI caption: **Type of image:** Photo\n**Main components:** This is a photo of a CPS SCH Series energy storage system. It features indicator lights and charging ports.\n**Technical details:**\n*   CPS\n*   SCH Series\n*   Indicator lights: Power, Run, Grid, Fault"
+    },
+    {
+      "question": "What color are the letters 'CPS' in the described logo?",
+      "ground_truth_answer": "gray",
+      "reasoning": "The question directly asks for a specific attribute (color) of a component (letters 'CPS') within the described logo, which is explicitly stated in the chunk. This tests the RAG system's ability to extract precise factual details from a descriptive text, ensuring both retrieval of the relevant sentence and accurate extraction of the specific detail.",
+      "chunk_id": "CPS 125kW Manual_p38_fig1",
+      "source_document": "CPS 125kW Manual",
+      "question_type": "single_hop",
+      "source_text": "AI caption: **Type of image:** Logo\n**Main components:** The logo features a green leaf with a lightning bolt symbol inside, and the letters \"CPS\" in gray.\n**Technical details:** CPS, leaf, lightning bolt."
+    },
+    {
+      "question": "What is the DC power voltage specified for component APC-MNT0 120-082?",
+      "ground_truth_answer": "12VDC",
+      "reasoning": "This question directly extracts a specific technical detail (DC power voltage) associated with a clearly identified component (APC-MNT0 120-082) from the provided chunk. It is single-hop, factual, and avoids ambiguity, making it excellent for testing a RAG system's ability to retrieve and precisely answer technical queries from a SCADA/Solar/Electrical equipment corpus.",
+      "chunk_id": "1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC_p7_narr1",
+      "source_document": "1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC",
+      "question_type": "single_hop",
+      "source_text": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16\nA APC-MNT0 120-082 DC POWER 12VDC A\nB RJ45-8 B\nC 8-RJ45 C\nD D\nE E\nF 400-500VAC L-L F\nG G\nH H\nI I\nINITIAL REV: VB REV: BY: DATE: DESCRIPTION: SINGLE LINE DIAGRAM\nBOYNE MOUNTAIN RESORT 8 PWH 2021-09-13 RELOCATE ENCLOSURES\nDAS 1\n9 PWH 2021-09-22 CT RATIOS\nJ Boulder, CO 80301 J\n866-303-5668 SIZE: ANSI B DATE: 2023-10-19 10 AMDS 2023-10-11 STORAGE AND METER ADD ON LOCATION:\nAlsoEnergy.com SO50016 / SO87932 11 BMDS 2023-10-16 SITE AND PV METER NOT STANDAOLNE WT103\nSCALE: NONE DESIGN REV-12 SITE L1\n12 CMDS 2023-10-19 IFC SO87932\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16"
+    },
+    {
+      "question": "What specific type of laminate sheath is listed among the headings in this document chunk?",
+      "ground_truth_answer": "SW STANDARD WALL XLPE LAMINATE SHEATH",
+      "reasoning": "This question is single-hop as the answer is directly stated under 'Headings'. It is specific and technical, referring to a particular cable component ('SW STANDARD WALL XLPE LAMINATE SHEATH'). The answer is factual and explicitly present in the chunk. It tests the RAG system's ability to identify and extract a precise technical term from a list of headings, which is crucial for understanding technical documentation.",
+      "chunk_id": "Southwire High-Voltage-115kV-Power-Cable_p3_fig1",
+      "source_document": "Southwire High-Voltage-115kV-Power-Cable",
+      "question_type": "single_hop",
+      "source_text": "Section: 50 mil\nSheath\u00b2\nHeadings: SW STANDARD WALL XLPE LAMINATE SHEATH | CABLE CONSTRUCTION | CABLE DATA | AEIC, IEC\n\nAI caption: **Type of image:** Gradient\n\n**Main components:** Vertical gradient with a dark center and lighter edges.\n\n**Technical details:** Color gradient, vertical, black, blue, brown."
+    },
+    {
+      "question": "What type of protection is mandated for all 125-volt, single-phase, 15-, 20-, and 30-ampere receptacle outlets that are not part of the permanent wiring but are in use by personnel during construction-like activities?",
+      "ground_truth_answer": "Ground-fault circuit-interrupter protection for personnel.",
+      "reasoning": "This question is single-hop as the answer is directly stated in paragraph (b)(3)(ii)(A) of the chunk. It is highly specific and technical, referencing exact voltage, phase, amperage, and the specific safety device required for temporary wiring installations during construction-like activities. The answer is a clear, factual statement directly extracted from the text. This question is useful for RAG testing because it requires precise retrieval of the relevant regulatory requirement based on multiple technical parameters and accurate extraction of the specific protection type.",
+      "chunk_id": "OSHA Electrical CFR-2024-title29-vol5-part1910-subpartS_p11_narr1",
+      "source_document": "OSHA Electrical CFR-2024-title29-vol5-part1910-subpartS",
+      "question_type": "single_hop",
+      "source_text": "Occu. Safety and Health Admin., Labor \u00a71910.304\nwhich the grounding contacts of the re- (ii) The following requirements apply\nceptacle or cord connector shall be to temporary wiring installations that\nconnected. are used during construction-like ac-\n(iv) Replacement of receptacles shall tivities, including certain mainte-\ncomply with the following require- nance, remodeling, or repair activities,\nments: involving buildings, structures or\n(A) Where a grounding means exists equipment. in the receptacle enclosure or a (A) All 125-volt, single-phase,15-, 20-,\ngrounding conductor is installed, and 30-ampere receptacle outlets that\ngrounding-type receptacles shall be are not part of the permanent wiring of\nused and shall be connected to the the building or structure and that are\ngrounding means or conductor; in use by personnel shall have ground-\n(B) Ground-fault circuit-interrupter fault circuit-interrupter protection for\npersonnel. protected receptacles shall be provided\nwhere replacements are made at recep- NOTE 1 TO PARAGRAPH (b)(3)(ii)(A) OF THIS\ntacle outlets that are required to be so SECTION: A cord connector on an extension\nprotected elsewhere in this subpart; cord set is considered to be a receptacle out-\nand let if the cord set is used for temporary elec-\ntric power. (C) Where a grounding means does\nnot exist in the receptacle enclosure, NOTE 2 TO PARAGRAPH (b)(3)(ii)(A) OF THIS\nSECTION: Cord sets and devices incorporating\nthe installation shall comply with one the required ground-fault circuit-interrupter\nof the following provisions: that are connected to the receptacle closest\n(1) A nongrounding-type receptacle to the source of power are acceptable forms\nmay be replaced with another non- of protection. grounding-type receptacle; or (B) Receptacles other than 125 volt,\n(2) A nongrounding-type receptacle single-phase, 15-, 20-, and 30-ampere re-\nmay be replaced with a ground-fault ceptacles that are not part of the per-\ncircuit-interrupter-type of receptacle ma"
+    },
+    {
+      "question": "What specific electrical components are listed under 'Technical details' for the image?",
+      "ground_truth_answer": "Electrical panel, wiring, connectors, transformer, switchgear.",
+      "reasoning": "This question directly asks for a list of technical components explicitly mentioned in the 'Technical details' section of the chunk. It is specific, technical, and has a clear, factual answer, making it ideal for testing a RAG system's ability to extract precise information from a structured text.",
+      "chunk_id": "3 Phase Pad Mount Transformer Spec Sheet_p1_fig1",
+      "source_document": "3 Phase Pad Mount Transformer Spec Sheet",
+      "question_type": "single_hop",
+      "source_text": "AI caption: **Type of image:** Photo\n\n**Main components:** Electrical enclosure with open doors, showing internal wiring and components.\n\n**Technical details:** Electrical panel, wiring, connectors, transformer, switchgear."
+    },
+    {
+      "question": "According to the technical details, what specific items of Personal Protective Equipment (PPE) is the electrical worker wearing?",
+      "ground_truth_answer": "A hard hat and a safety vest.",
+      "reasoning": "This question is single-hop, directly answerable from the 'Technical details' section. It is specific by asking for 'specific items of PPE' and technical by using the term 'PPE'. The answer is factual and clearly stated in the chunk, making it excellent for testing a RAG system's ability to retrieve and extract precise information.",
+      "chunk_id": "EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24_p2_fig4",
+      "source_document": "EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24",
+      "question_type": "single_hop",
+      "source_text": "AI caption: **Type of image:** Photo\n**Main components:** An electrical worker is inspecting a row of electrical panels in a utility room. The panels have various switches, indicators, and ventilation grilles.\n**Technical details:** Electrical panels, switches, indicators, ventilation grilles, utility room, electrical worker, PPE (hard hat, safety vest)."
+    },
+    {
+      "question": "What is the AC output current (rms) for the PVI-CENTRAL-250-CAN model?",
+      "ground_truth_answer": "253 a rms",
+      "reasoning": "This question is single-hop as the answer '253 a rms' can be directly found by locating the 'Output side (AC)' section, finding the row for 'a' (current), and then identifying the value under the 'PVI-CENTRAL-250-CAN' column, which is '253'. The 'rms' unit is indicated on the subsequent line. It is specific and technical, using terms like 'AC output current (rms)' and a precise model name. The answer is factual and unambiguous. This question is useful for testing a RAG system's ability to correctly parse tabular data, associate units with values, and extract specific information for a given product model.",
+      "chunk_id": "pvi-central-250300-datasheet_p3_table1",
+      "source_document": "pvi-central-250300-datasheet",
+      "question_type": "single_hop",
+      "source_text": "TEChNICAL DATA | VALUEs | PVI-CENTRAL- | PVI-CENTRAL- | PVI-CENTRAL- | PVI-CENTRAL-\n| | 250-Us | 300-Us | 250-CAN | 300-CAN\n| kW | 250 | 300 | 250 |\nInput side (DC) | | | | |\nInput side (DC) | Vdc | 600 | | |\nInput side (DC) | Vdc | 320-600 | | |\nInput side (DC) | Vdc | 320-550 | | |\nInput side (DC) | adc | 170 | | |\nInput side (DC) | adc | 850 | 1020 | 850 |\nInput side (DC) | | 2x(100kW module) | 3x(100kW module) | 2x(100kW module) |\n| | + 1x(50kW module) | | + 1x(50kW module) |\nInput side (DC) | | 10 x 350kcmil 90\u00b0c terminals | | |\n| | 9/16\u201d stud with double lug 6-position ground block | | |\nInput side (DC) | | Front/ rear | | |\nOutput side (AC) | | | | |\nOutput side (AC) | | 480(423-528) 3-phase/3W+Ground | | |\nOutput side (AC) | Hz | 60(59.3- 60.5) | | |\nOutput side (AC) | a | 315 | 378 | 253 |\n| rms | | | |\nOutput side (AC) | | >0.995 | | |\nOutput side (AC) | % | <3 | | |\nOutput side (AC) | | yes | | |\nOutput side (AC) | | 2 conductors/phase (6x300kcmil) 90\u00b0 terminals | | |\n| | 9/16\u201d threaded stud | | |\nOutput side (AC) | | Front/ rear | | |\nProtection Devices | | | | |\nInput | | | | |\nInput | | Yes, with series diode | | |\nInput | | Yes; varistor | | |\nInput | a/V | 200/600 | | |\nInput | a/V | 200/600 | | |\nInput | | GFDi, according to Ul 1741 | | |\nOutput | | | | |\nOutput | | Yes | | |\nOutput | | Varistor, type 2 per Ul 1449 | | |\nOutput | ka | 600 a, 65ka | | |\nOutput | | Yes | | |\nEfficiency | | | | |\nEfficiency | % | 97 | | |\nEfficiency | % | 97.6 | | |\nOperating Performance | | | | |\nOperating Performance | W | <105 | <120 | <105 |\nOperating Performance | | 3 x 480 Vac, 50/60 Hz | | |\nOperating Performance | % | < 0.30 | < 0.35 | < 0.30 |\nOperating Performance | kHz | 9 | | |\nEnvironmental | | | | |\nEnvironmental | \u00b0F/\u00b0c | -25 to +60 \u00b0c / -13 to +140\u00b0F with | | |\n| | derating above 50\u00b0c / 122\u00b0F | | |\nEnvironmental | dBa@1m | < 62 | | |\nEnvironmental | ft/m | 3280 /1000 | | |\nEnvironmental | % | 0-95 noncondensing | | |\nCommunication | | | | |\nCommunicatio"
+    }
+  ],
+  "multi_hop": [
+    {
+      "question": "According to the product description, what specific circuit breaker technology is incorporated into the EPEC 6000A UL 891 SWBD for enhanced safety, and are these circuit breakers among the visible components within the electrical switchgear cabinet depicted?",
+      "ground_truth_answer": "The EPEC 6000A UL 891 SWBD incorporates the newest version of Siemens\u2019 circuit breaker technology, which includes advanced circuit protection (AERMS per NEC 240.87) for enhanced safety. Yes, circuit breakers are explicitly listed as visible components within the electrical switchgear cabinet depicted.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 specifies the 'newest version of Siemens\u2019 circuit breaker technology' and 'advanced circuit protection (AERMS per NEC 240.87)' as key safety features of the SWBD. Chunk 2 describes the visual components of the electrical switchgear cabinet, explicitly stating that 'Visible components include circuit breakers'. To answer completely, the RAG system must synthesize the technical detail about the circuit breaker technology from Chunk 1 with the confirmation of circuit breakers being visible components from Chunk 2.",
+      "chunk_ids": [
+        "EPEC_1200-6000A UL 891 SWBD (Crit Power) Flyer_p2_narr1",
+        "EPEC_1200-6000A UL 891 SWBD (Crit Power) Flyer_p2_fig1"
+      ],
+      "source_documents": [
+        "EPEC_1200-6000A UL 891 SWBD (Crit Power) Flyer",
+        "EPEC_1200-6000A UL 891 SWBD (Crit Power) Flyer"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AC LV SWBD - 1200-6000A, 480-600VAC\nUL 891 Certified SWBD\u2019s for Critical Power Applications\nEnhanced Safety Features\nSafety is our top priority. Our 6000A\nSWBD comes with state-of-the-art\nsafety features, including advanced\ncircuit protection (AERMS per NEC\n240.87) and fault detection\ncapabilities. This ensures your\nequipment and personal are both\nsafe.\nSuperior Reliability\nEPEC is a proven leader in the design\nand build of LV AC SWBD\u2019s in the\ndemanding solar, energy storage, and\nPictured above: UL 891 / NEMA 3R, 480 / 277VAC, 6000A SWBD, double ended,\nEV charging industries. We understand\nwith: cable input section, 5000A main, ACB feeder section, MCCB feeder, 2nd\nthat downtime is not an option for your\n5000A main, 2nd cable input section & SEL control section.\nfacility. That\u2019s why our 6000A\nSwitchboard is designed for maximum\nreliability. It\u2019s robust construction and\nadvanced engineering ensure\nFuture-Proof Your Critical Power Application consistent performance and minimal\nOur 6000A SWBD is not just a product, it\u2019s maintenance.\nlong-term investment. Its scalable design\nallows for easy upgrades and expansions,\nensuring it can meet the needs of your plant\nboth now and in the future. Designed on the\nnewest version of Siemens\u2019 circuit breaker\ntechnology, your equipment will stand up to\nthe test of time with ease.\nPictured above: EPEC N3R \u201csolar specific\u201d SWBD. EPEC SWBD\u2019s are utilized in\nover 1 gigawatt of solar installations.\nElectrical Panels \u2219 Engineering \u2219 Controls by EPEC S",
+        "AI caption: **Type of image:** Photo\n**Main components:** Electrical switchgear cabinet with multiple sections and open doors, showing internal components.\n**Technical details:** Visible components include circuit breakers, control panels, and busbars. Warning labels are present on the doors."
+      ]
+    },
+    {
+      "question": "What two distinct grounding-related safety issues were identified at substations or related electrical equipment, and what immediate actions were taken to address each?",
+      "ground_truth_answer": "At a substation, a missing ground clamp on a portable grounding set was found, which could compromise electrical safety. This set was immediately removed from service (Chunk 1, Observation 19). Separately, a ground strap corroded through at the clamp was found at a substation and was also removed from service (Chunk 2, Observation 783).",
+      "reasoning": "This question requires information from both chunks. Chunk 1 describes a 'missing ground clamp on a portable grounding set' at a substation, leading to its removal from service. Chunk 2 describes a 'ground strap corroded through at the clamp' also at a substation, which was removed from service. To answer completely, the RAG system must identify both distinct grounding issues and their respective corrective actions, synthesizing information across the two documents that both pertain to substation electrical safety.",
+      "chunk_ids": [
+        "Careful Field Service Safety Observations 2024 2025_p2_narr1",
+        "Careful Field Service Safety Observations 2024 2025_p56_narr1"
+      ],
+      "source_documents": [
+        "Careful Field Service Safety Observations 2024 2025",
+        "Careful Field Service Safety Observations 2024 2025"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "10. While conducting a lockout/tagout, I noticed the tag did not include the technician\u2019s\nfull name and date. Incomplete information could cause confusion during shift\nhandover. The tag was corrected immediately.\n11. On the way to a solar site, our truck\u2019s low tire pressure indicator came on. We pulled\nover and confirmed one tire was at 50% pressure. It was unsafe to continue until the\ntire was repaired.\n12. While walking a PV array row, I tripped slightly over a grounding cable that was not\nsecured tightly. This could easily cause a fall. I reported it and placed a cone until\nrepair.\n13. During inverter troubleshooting, a technician reached into the cabinet without\nvoltage testing the bus first. I stopped them and reminded them of the test-before-\ntouch rule. Work resumed safely afterward.\n14. At the EV charging site, I saw an extension cord being used across a walkway. It\nposed a trip hazard for pedestrians. I re-routed the cord overhead with a hook.\n15. While performing a harness check, I noticed one lanyard hook was cracked. Using\nthis could have resulted in fall arrest failure. The equipment was tagged out and\nreplaced.\n16. Driving through a rural access road, I saw deer crossing ahead. Quick braking\nprevented a collision, but it reinforced the need to watch wildlife in these areas. The\ncrew was reminded at tailboard.\n17. At a BESS container, a technician attempted to bypass a panel interlock. I stopped\nthe work and reinforced that interlocks must never be bypassed. The ",
+        "776. During breaker testing, a worker attempted to measure voltage while not\nwearing a face shield. The task was paused until PPE was in place.\n777. At the turbine pad, I noticed a ladder safety rail that wobbled under pressure.\nIt was tagged for repair.\n778. While inspecting spill kits, I found several gloves missing. The kit was\nrestocked.\n779. At the solar yard, a cleaning pump leaked fuel during use. It was shut down\nand repaired.\n780. During inspections, I found a harness missing its annual inspection tag. It\nwas removed until certified.\n781. At the BESS site, I saw an HVAC filter housing cracked and leaking air. It was\nreported for immediate repair.\n782. While reviewing arc flash PPE, a balaclava was found with stitching\nunraveling. It was replaced.\n783. At the substation, I found a ground strap corroded through at the clamp. It\nwas removed from service.\n784. During inspections, one fire extinguisher was covered by shrink-wrapped\nmaterial stacks. It was cleared.\n785. At the control house, I saw a technician using a coffee pot on an overloaded\noutlet. It was unplugged.\n786. While handling conduit, a worker failed to clamp the pipe before cutting. The\npiece shifted unexpectedly. The unsafe act was stopped.\n787. At the inverter skid, cooling fans were coated with dirt buildup. They were\ncleaned before operation.\n788. During PPE inspections, I found a hard hat with deep gouges from prior\nimpacts. It was replaced.\n789. At the solar site, a panel string had loose connectors w"
+      ]
+    },
+    {
+      "question": "According to the provided contract excerpts, what are the two distinct categories of obligations or agreements that Schedule 22 of the EPC Agreement addresses for the Contractor?",
+      "ground_truth_answer": "Schedule 22 addresses two primary categories of obligations for the Contractor: 1) It serves as a Release, Hold Harmless and Indemnification Agreement, where the Contractor agrees to waive liability for the client/purchaser, indemnify them, and assume direct responsibility for work and liabilities to the State. 2) It outlines the Purchaser's specific security procedures with which the EPC Contractor and all its Subcontractors must comply.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 explicitly defines Schedule #22 as the 'Release, Hold Harmless and Indemnification Agreement,' detailing the Contractor's indemnification and liability waiver responsibilities. Chunk 2, in a different context, states that the EPC Contractor and Subcontractors must comply with 'Purchaser\u2019s specific security procedures (as outlined Schedule 22)'. To fully answer what Schedule 22 addresses, a RAG system must synthesize these two distinct functions mentioned across the documents, demonstrating multi-hop reasoning and the ability to connect references to the same schedule across different parts of a contract.",
+      "chunk_ids": [
+        "Green-Earth-Energy-EPC-Contract-Template Sample_p75_narr1",
+        "Green-Earth-Energy-EPC-Contract-Template Sample_p13_narr1"
+      ],
+      "source_documents": [
+        "Green-Earth-Energy-EPC-Contract-Template Sample",
+        "Green-Earth-Energy-EPC-Contract-Template Sample"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "Schedule #22\nRelease, Hold Harmless and Indemnification Agreement\nThis Release, Hold Harmless and Indemnification Agreement (\u201cAgreement\u201d), is made\nas of , 20 , and is by (\"Contractor\")\nWITNESSETH:\nWHEREAS, the Contractor has been selected by _______. to perform solar powered electricity supply Services at\nState of Connecticut (\u201cState\u201d) Properties pursuant to that certain [EPC Agreement] which includes, but is not limited\nto, assessments, planning and the installation of solar generated electricity supply to the State.\nWHEREAS, ________ is willing to award Work to the Contractor provided that the Contractor agrees to waive any\nliability that _________ may have and to indemnify and hold ________ harmless from any liability that may arise as\na result of performing the Work, and agrees that Contractor not ________ is directly responsible to the State for\nWork and any liabilities arising from Work;\nWHEREAS, the Contractor, on behalf of him/herself, successors and assigns agrees to the conditions herein,\nNOW, THEREFORE, in consideration of the recitals set forth above, which are incorporated into the body of this\nAgreement by reference, and other good and valuable consideration, the receipt and sufficiency of which is hereby\nacknowledged by the parties hereto, the Contractor does hereby agree as follows:\n1. Release and Waiver: The Contractor hereby releases, waives, relinquishes, absolves, and discharges _________,\nits parent, affiliates and its and their employees, agents, officer",
+        "Template\nEPC Contractor and or any Subcontractor on account of any accident, the EPC Contractor shall report the\nfacts in writing to the Client as soon as possible but in any event no later than five (5) Days after the claim\nis made. 7.5 The EPC Contractor shall have in place a site specific health and safety plan, subject to\nClient\u2019s reasonable review and approval. Such plan shall include all necessary emergency contact numbers\nas well as the location of closest hospital. 7.6 The EPC Contractor, and all of its Subcontractos, shall comply with Purchaser\u2019s specific\nsecurity procedures (as outlined Schedule 22, as may be reasonably amended or promulgated from time\nto time), and shall conduct activities in such a manner and such a time and day as to not unreasonably\ninterfere with Purchaser\u2019s activities. The EPC Contractor shall provide appropriate documentation\ndemonstrating that personnel working on behalf of the EPC Contractor or any Subcontractors on the\nProject Site have successfully completed a background check as outlined in Schedule 23. 8. MATERIALS; TRANSFER OF TITLE; RISK OF LOSS\n8.1 All materials and equipment are to be new and shall be free of defects and improper\nworkmanship, unless otherwise specified. All materials shall be fully compliant with standards and System\nSpecifications and all other applicable Legal Requirements and Utility Requirements. Materials and\nequipment shall not be subject to any conditional bill of sale, security agreement, financing statement"
+      ]
+    },
+    {
+      "question": "According to the National Electrical Code, what is the maximum permissible increase in rating for a 601-6000 ampere classification fuse used as a motor branch-circuit short-circuit and ground-fault protective device, and how might this general allowance be affected if the device has particular load characteristics or limitations specified as a condition of its listing?",
+      "ground_truth_answer": "For a motor branch-circuit short-circuit and ground-fault protective device utilizing a fuse of 601-6000 ampere classification, the rating is permitted to be increased, but it shall in no case exceed 300 percent of the full-load current. However, if particular load characteristics or limitations are specified as a condition of the device's listing, those specific restrictions must be observed, regardless of the ampere rating of the load, potentially overriding the general 300 percent allowance.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 provides the specific technical detail that a fuse of 601-6000 ampere classification can be increased up to 300 percent of the full-load current for motor branch-circuit protection (430.52(4)). Chunk 2 introduces the general principle that 'particular load characteristics or limitations specified as a condition of the listing' must be observed regardless of the ampere rating. The question forces the synthesis of these two pieces of information by asking how the general fuse rating allowance might be affected by specific listing conditions, thus testing the system's ability to combine a specific rule with a general overriding principle from different parts of the code.",
+      "chunk_ids": [
+        "National Electrical Code 2023 Chapter 4_p85_narr1",
+        "National Electrical Code 2023 Chapter 4_p20_narr3"
+      ],
+      "source_documents": [
+        "National Electrical Code 2023 Chapter 4",
+        "National Electrical Code 2023 Chapter 4"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "ARTICLE 430-MOTORS, MOTOR CIRCUITS, AND CONTROLLERS\n 430.44 Orderly Shutdown. If immediate automatic shutdown\nof a motor by a motor overload protective device(s) would\nintroduce additional or increased hazard(s) to a person(s) and\ncontinued motor operation is necessary for safe shutdown of\nequipment or process, a motor overload sensing device(s)\ncomplying with Part III of this article shall be permitted to be\nconnected to a supervised alarm instead of causing immediate\ninterruption of the motor circuit, so that corrective action or\nan orderly shutdown can be initiated. Part IV. Motor Branch-Circuit Short-Circuit and Ground-Fault\nProtection\n 430.51 General. Part IV specifies devices intended to protect\nthe motor branch-circuit conductors, the motor control appa-\nratus, and the motors against overcurrent due to short circuits\nor ground faults. The devices specified in Part IV do not\ninclude the types of devices required by 210.8, 230.95, and\n590.6. Informational Note No. 1: See Informative Annex D, Example\nD8, for an example of motor branch-circuit short-circuit and\nground-fault protection selection. Part IV shall not apply to motor circuits rated over\n1000 volts, nominal. Informational Note No. 2: See Part XI for over 1000 volts, nomi-\n nal. 430.52 Rating or Setting for Individual Motor Circuit. (A) General. The motor branch-circuit short-circuit\nground-fault protective device shall comply with 430.52(B) and\neither 430.52(C) or (D), as applicable. 430.52\n (4) The rating of a f",
+        "Where particular load characteristics\nor limitations are specified as a condition of the listing,\nthose restrictions shall be observed regardless of the\nampere rating of the load. NATIONAL ELECTRICAL CODE 2023 Edition\n Copyright NFPA. For exclusive use on NFPA Free Access platform. Not for distribution, downloading, or printing. For inquiries contact custserv@nfpa.org. To report unauthorized use. contact legal@nfpa.org."
+      ]
+    },
+    {
+      "question": "For the pad-mounted transformer identified by quotation number 202029, what is its KVA rating and its primary winding configuration?",
+      "ground_truth_answer": "The pad-mounted transformer with quotation number 202029 has a KVA rating of 2000kVA and a primary winding configuration of GrdWye-GrdWye.",
+      "reasoning": "This question requires information from both chunks to answer completely. Chunk 1 identifies the transformer as 'PAD-MOUNTED TRANSFORMERS' and provides its 'Quotation Number 202029'. Chunk 2 provides the specific technical details for this transformer, including its 'KVA Rating' (2000kVA) and 'Windings Configuration' (GrdWye-GrdWye). To answer, the RAG system must synthesize the identifying context from Chunk 1 with the specific technical specifications from Chunk 2, demonstrating multi-hop retrieval and information synthesis across documents. The question is specific and technical, asking for precise factual data.",
+      "chunk_ids": [
+        "Transformer Specifications_p1_narr1",
+        "Transformer Specifications_p1_table2"
+      ],
+      "source_documents": [
+        "Transformer Specifications",
+        "Transformer Specifications"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "PAD-MOUNTED TRANSFORMERS\nQuotation Number 202029 Quote Line #\nOvercurrent Protection Bayonet fuse in Nominal Impedance (%) 5.75 \u00b17.5% Tolerance\nCLF\nLoop Feed Current 600A",
+        "TECHNICAL SPECIFICATIONS: | TECHNICAL SPECIFICATIONS:_2 | TECHNICAL SPECIFICATIONS:_3 | TECHNICAL SPECIFICATIONS:_4 | TECHNICAL SPECIFICATIONS:_5\nKVA Rating | 2000kVA | Application | | Outdoor\nCooling Class | KNAN | Winding Temp. Rise | | 65\u00b0C\nNumber of Phases | 3-Phase | Insulating Fluid | | FR3\nFrequency | 60 Hertz | Winding Material | | Aluminum\nHV Rating (KV) | 12.47GrdY/7.2 | LV Rating (KV) | | 0.600GrdY/0.346\nHV BIL (KV) | 95 kV | LV BIL (KV) | | 30 kV\nHV L-L Current (A) | 92.6 | LV L-L Current (A) | | 1924.56\nTapping Ratio | \u00b12-2\u00bd% | Number of Taps | | 5\nWindings Configuration | GrdWye-GrdWye | Vector Group | | YNyn0\nFunction | Step-Up | Load-Break Switch | | 2 Position\nHV Termination | Dead Front | HV Feed | | Loop Feed\nLV Termination | Live Front | LV Bushing | | Transformer to be\n| | | | close coupled with\n| | | | switchboard\nColor | Munsell Green | Efficiency (%) | | 99%\nOvercurrent Protection | Bayonet fuse in | Nominal Impedance (%) | | 5.75 \u00b17.5% Tolerance\n| series with partial | | |\n| CLF | | |\nOvercurrent Protection | | Loop Feed Current | | 600A\nACCESSORIES: | | | |\nDial-type thermometer with form \u201cC\u201d Contacts | | | Pressure Relief Valve |\nLiquid level gauge with form \u201cC\u201d Contacts | | | 1\" Upper Fill Plug |\nPressure/Vacuum Gauge with form \u201cC\u201d Contacts | | | Standard Nameplate Mounted inside the LV Door |\n(6) 15kV 600A One-piece HV Bushing dead-break | | | 1\" Drain Valve with 3/8 Sampler |\nH0 porcelain bushing with removable ground strap | | | Electrostatic sh"
+      ]
+    },
+    {
+      "question": "For the 345/400 kV XLPE Power Cables, what type of insulation is consistently used across both the SW STANDARD WALL XLPE CORRUGATED SHEATH and SW STANDARD WALL XLPE LAMINATE SHEATH constructions, and what are the specific materials or components used for the moisture protection layer in each of these two distinct cable types?",
+      "ground_truth_answer": "Both the SW STANDARD WALL XLPE CORRUGATED SHEATH and SW STANDARD WALL XLPE LAMINATE SHEATH 345/400 kV power cable constructions consistently utilize 'Super Clean XLPE Insulation'. For the SW STANDARD WALL XLPE CORRUGATED SHEATH, the moisture protection layer is a 'Copper or Aluminum Moisture Impervious Sheath'. For the SW STANDARD WALL XLPE LAMINATE SHEATH, the moisture protection layer consists of 'Copper or Aluminum screen wires/laminate combination'.",
+      "reasoning": "This question requires information from both chunks. It asks for a common component (insulation type) found in both documents ('Super Clean XLPE Insulation') and then differentiates based on a distinct component (moisture protection layer) specific to each cable type mentioned in separate chunks (Corrugated Sheath from Chunk 1 and Laminate Sheath from Chunk 2). This tests the RAG system's ability to synthesize shared characteristics with unique features across multiple documents.",
+      "chunk_ids": [
+        "Southwire High-Voltage-345-400kV-XLPE-Power-Cable_p1_narr1",
+        "Southwire High-Voltage-345-400kV-XLPE-Power-Cable_p3_narr1"
+      ],
+      "source_documents": [
+        "Southwire High-Voltage-345-400kV-XLPE-Power-Cable",
+        "Southwire High-Voltage-345-400kV-XLPE-Power-Cable"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "345/400 kV Power Cable\n345/400 kV XLPE\nPower Cable\nSW STANDARD WALL XLPE CORRUGATED SHEATH\nCABLE CONSTRUCTION\n\u2022 Concentric Stranded, Compact, \u2022 Firmly Bonded Insulation Shield\nor Segmental Copper or\n\u2022 Copper or Aluminum Moisture\nAlumimum Conductor\nImpervious Sheath\n\u2022 Smooth Conductor Shield\n\u2022 Polyethylene Jacket with Extruded\n\u2022 Super Clean XLPE Insulation Semi-Conductive Outer Layer\n\u2022 True Triple Extrusion and Dry Cured\nCABLE DATA",
+        "345/400 kV Power Cable\n345/400 kV XLPE\nPower Cable\nSW STANDARD WALL XLPE LAMINATE SHEATH\nCABLE CONSTRUCTION\n\u2022 Concentric Stranded, Compact, \u2022 Firmly Bonded Insulation Shield\nor Segmental Copper or\n\u2022 Copper or Aluminum screen wires/\nAlumimum Conductor\nlaminate combination\n\u2022 Smooth Conductor Shield\n\u2022 Polyethylene Jacket with Extruded\n\u2022 Super Clean XLPE Insulation Semi-Conductive Outer Layer\n\u2022 True Triple Extrusion and Dry Cured\nCABLE DATA"
+      ]
+    },
+    {
+      "question": "Beyond the laminate sheath variant, what other sheath type is indicated for Southwire's 115 kV XLPE cables, and what are the specific construction layers for the 115 kV XLPE cable featuring a laminate sheath?",
+      "ground_truth_answer": "Another sheath type indicated for Southwire's 115 kV XLPE cables is the Corrugated Sheath. The specific construction layers for the 115 kV XLPE cable with a laminate sheath include: Concentric Stranded, Compact, or Segmental Copper or Aluminum Conductor; Smooth Conductor Shield; Super Clean XLPE Insulation (True Triple Extrusion and Dry Cured); Firmly Bonded Insulation Shield; Copper or Aluminum screen wires/laminate combination; and a Polyethylene Jacket with Extruded Semi-Conductive Outer Layer.",
+      "reasoning": "This question requires information from both chunks. Chunk 1, through its heading 'SW STANDARD WALL XLPE CORRUGATED SHEATH', indicates that a corrugated sheath is another type available for Southwire's 115 kV XLPE cables. Chunk 2 provides the detailed construction layers specifically for the 'SW STANDARD WALL XLPE LAMINATE SHEATH' variant. Answering completely requires identifying the alternative sheath type from Chunk 1 and then extracting the specific construction details for the laminate sheath cable from Chunk 2, demonstrating synthesis across different product specifications or variants mentioned in separate documents.",
+      "chunk_ids": [
+        "Southwire High-Voltage-115kV-Power-Cable_p1_fig1",
+        "Southwire High-Voltage-115kV-Power-Cable_p3_narr1"
+      ],
+      "source_documents": [
+        "Southwire High-Voltage-115kV-Power-Cable",
+        "Southwire High-Voltage-115kV-Power-Cable"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "Headings: SW STANDARD WALL XLPE CORRUGATED SHEATH | CABLE CONSTRUCTION | CABLE DATA | AEIC, IEC\n\nAI caption: **Type of image:** Gradient\n\n**Main components:** A gradient with a dark center and lighter edges.\n\n**Technical details:** Colors include black, brown, and blue.",
+        "Southwire\u24c7\n Southwire\u24c7\n 115 kV Power Cable\n Southwire\n 115 kV XLPE\nPower Cable\n SW STANDARD WALL XLPE LAMINATE SHEATH\n CABLE CONSTRUCTION\n \u2022 Concentric Stranded, Compact,\nor Segmental Copper or\nAlumimum Conductor\n \u2022 Smooth Conductor Shield\n Super Clean XLPE Insulation\n \u2022 True Triple Extrusion and Dry Cured\n Firmly Bonded Insulation Shield\n Copper or Aluminum screen wires/\nlaminate combination\n \u00b7 Polyethylene Jacket with Extruded\nSemi-Conductive Outer Layer\n CABLE DATA\n 135 kV 60 min."
+      ]
+    },
+    {
+      "question": "Given that high-voltage electrical substation equipment includes insulators, what specific type of insulator is a key feature of the Southern States EV-2 disconnect switch, and what is its rated power frequency?",
+      "ground_truth_answer": "The Southern States EV-2 disconnect switch features marine grade bushings as a key insulator type, and its rated power frequency is 60 Hz.",
+      "reasoning": "This question requires information from both chunks. Chunk 2 establishes the general context that 'high-voltage electrical substation equipment' includes 'insulators'. Chunk 1 then provides the specific type of insulator ('Marine grade bushings') that is a key feature of the EV-2 disconnect switch, and also specifies its 'Rated Power Frequency 60 Hz'. To answer completely, the RAG system must synthesize the general component category from Chunk 2 with the specific feature and rating from Chunk 1.",
+      "chunk_ids": [
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer_p2_narr1",
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer_p1_fig1"
+      ],
+      "source_documents": [
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer",
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "C A T A L O G F L Y E R > Disconnect Switches > GROUP OPERATED SWITCHES\nRATINGS\nMaximum Voltage Rating (kV)\nEV-2 BIL (kV)\nAluminum Vertical\nDisconnect Switch\nADDITIONAL RATINGS\nRated Power Frequency 60 Hz\n*362 kV designs only available from 1200 A to 2000A\nKEY FEATURES\n\u2022 Silver to silver jaw end contacts using two different silver alloys\n\u2022 Spring loaded threaded hinge end current interchange\n\u2022 T erminal pads aluminum extrusion construction makes it very strong and rigid\nwithout use of castings for support\n\u2022 Three-sided terminal pads allow multiple conductor terminations\n\u2022 Stainless steel roller bearings in an alumunium housing\n\u2022 Standard, custom or multiple mounting arrangements available\n\u2022 Double channel construction above 69 kV; single channel construction below 115 kV\n\u2022 Marine grade bushings\n30 Georgia Avenue Hampton, GA 30228\nP 770-946-4562 F 770-946-8106\nsales@southernstatesLLC.com Publication No. CF101-EV-2 362-R3 05122021",
+        "AI caption: **Type of image:** Photo\n**Main components:** High-voltage electrical substation equipment, including insulators, conductors, and support structures.\n**Technical details:** Electrical insulators, power lines, conductors, substation, high voltage, electrical grid."
+      ]
+    },
+    {
+      "question": "What are the exact text strings listed under 'Technical details' that are consistently identified across both the logo descriptions in Chunk 1 and Chunk 2?",
+      "ground_truth_answer": "The exact text strings listed under 'Technical details' that are consistently identified across both chunks are 'CABLETECH' and 'Services'.",
+      "reasoning": "This question requires the RAG system to retrieve the 'Technical details' field from Chunk 1, retrieve the 'Technical details' field from Chunk 2, and then synthesize this information by identifying the common or consistent text elements present in both. This process of cross-referencing and confirming information from two distinct document chunks constitutes a multi-hop query, even though the specific content happens to be identical in this instance. It tests the RAG's ability to consolidate and verify information across multiple sources.",
+      "chunk_ids": [
+        "SOUTHWIRE_SPEC45051_p2_fig1",
+        "SOUTHWIRE_SPEC45051_p3_fig1"
+      ],
+      "source_documents": [
+        "SOUTHWIRE_SPEC45051",
+        "SOUTHWIRE_SPEC45051"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AI caption: **Type of image:** Logo\n**Main components:** Company name and services.\n**Technical details:** \"CABLETECH\", \"Services\"",
+        "AI caption: **Type of image:** Logo\n**Main components:** Company logo with name and services.\n**Technical details:** Text: \"CABLETECH\", \"Services\""
+      ]
+    },
+    {
+      "question": "Given that only authorized employees are permitted to perform energy isolation, and a tagout device has been affixed at the same point a lock would have been attached on a lockable energy isolating device, what specific three-step procedure must be followed by the employer for its removal if the authorized employee who applied it is no longer at the facility?",
+      "ground_truth_answer": "If the authorized employee who applied the tagout device is no longer at the facility, the employer must follow a specific three-step procedure for its removal: (i) Verify that the authorized employee who applied the device is not at the facility; (ii) Make all reasonable efforts to contact the authorized employee to inform him/her that his/her lockout or tagout device has been removed; and (iii) Ensure that the authorized employee has this knowledge before he/she resumes work at that facility.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 establishes that only 'authorized employees' perform energy isolation and describes how a tagout device is affixed 'at the same point at which the lock would have been attached' for lockable devices. Chunk 2 then details the specific 'three-step procedure' for the 'release from lockout or tagout' when the 'authorized employee who applied' the device (as defined in Chunk 1) 'is not at the facility'. The question synthesizes these elements by asking about the removal procedure for a tagout device, applied by an authorized employee as per Chunk 1, under the specific condition of the employee's absence, as outlined in Chunk 2. It is specific, technical, and has a clear, factual answer derived directly from both sources.",
+      "chunk_ids": [
+        "OSHA LOTO CFR-2024-title29-vol5-sec1910-147_p6_narr2",
+        "OSHA LOTO CFR-2024-title29-vol5-sec1910-147_p7_narr1"
+      ],
+      "source_documents": [
+        "OSHA LOTO CFR-2024-title29-vol5-sec1910-147",
+        "OSHA LOTO CFR-2024-title29-vol5-sec1910-147"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "(C) The retraining shall reestablish (iii) Tagout devices, where used, shall\nemployee proficiency and introduce be affixed in such a manner as will\nnew or revised control methods and clearly indicate that the operation or\nprocedures, as necessary. movement of energy isolating devices\n(iv) The employer shall certify that from the \u2018\u2018safe\u2019\u2019 or \u2018\u2018off\u2019\u2019 position is\nemployee training has been accom- prohibited. plished and is being kept up to date. (A) Where tagout devices are used\nThe certification shall contain each with energy isolating devices designed\nemployee\u2019s name and dates of training. with the capability of being locked, the\n(8) Energy isolation. Lockout or tag attachment shall be fastened at the\ntagout shall be performed only by the same point at which the lock would\nauthorized employees who are per- have been attached. forming the servicing or maintenance. (B) Where a tag cannot be affixed di-\n(9) Notification of employees. Affected rectly to the energy isolating device,\nemployees shall be notified by the em- the tag shall be located as close as\nployer or authorized employee of the safely possible to the device, in a posi-\napplication and removal of lockout de- tion that will be immediately obvious\nvices or tagout devices. Notification to anyone attempting to operate the\nshall be given before the controls are device. VerDate Sep<11>2014 13:59 Dec 16, 2024 Jkt 262121 PO 00000 Frm 00516 Fmt 8010 Sfmt 8002 Y:\\SGML\\262121.XXX 262121\nRFC\nhtiw\nDORP3NR1BW4KSD\nno\nyesreks",
+        "Occu. Safety and Health Admin., Labor \u00a71910.147\n(5) Stored energy. (i) Following the ap- safety to the removal of the device by\nplication of lockout or tagout devices the authorized employee who applied\nto energy isolating devices, all poten- it. The specific procedure shall include\ntially hazardous stored or residual en- at least the following elements:\nergy shall be relieved, disconnected, re- (i) Verfication by the employer that\nstrained, and otherwise rendered safe. the authorized employee who applied\n(ii) If there is a possibility of re- the device is not at the facility;\naccumulation of stored energy to a (ii) Making all reasonable efforts to\nhazardous level, verification of isola- contact the authorized employee to in-\ntion shall be continued until the serv- form him/her that his/her lockout or\nicing or maintenance is completed, or tagout device has been removed; and\nuntil the possibility of such accumula- (iii) Ensuring that the authorized\ntion no longer exists. employee has this knowledge before he/\n(6) Verification of isolation. Prior to she resumes work at that facility. starting work on machines or equip- (f) Additional requirements\u2014(1) Testing\nment that have been locked out or or positioning of machines, equipment or\ntagged out, the authorized employee components thereof. In situations in\nshall verify that isolation and which lockout or tagout devices must\ndeenergization of the machine or be temporarily removed from the en-\nequipment have been accomplished. ergy "
+      ]
+    },
+    {
+      "question": "Given a Shark meter configured with a Pt-S (Scaling) value of '100' for a 277/277 Volt system, if this meter receives a DNP 3.0 Read (Function 1) request for its Analog Inputs at address 0x00F7, what are the specific DNP 3.0 Application Layer characteristics regarding message fragmentation and application-level confirmation for the response?",
+      "ground_truth_answer": "For a Shark meter, such as one configured with a Pt-S (Scaling) value of '100' for a 277/277 Volt system, when responding to a DNP 3.0 Read (Function 1) request for its Analog Inputs, the Application Layer characteristics dictate that multiple-fragment messages are not allowed. Therefore, each Application Header must indicate it is both the first (FIR = 1) and final (FIN = 1) fragment. Furthermore, application-level confirmation is not used for Shark meters.",
+      "reasoning": "This question requires information from both chunks. Chunk 2 provides the specific technical context of the Shark meter's configuration (Pt-S value of '100' for a 277/277 Volt system), establishing the scenario for the device. Chunk 1 details the DNP 3.0 communication protocol specifics for Shark meters, including valid addresses (0x00F7 is 247, a valid programmable address), the Read (Function 1) for Analog Inputs, and crucially, the Application Layer characteristics regarding message fragmentation (no multiple fragments, FIR=1, FIN=1) and application-level confirmation (not used). The answer synthesizes this by applying the communication rules from Chunk 1 to a meter specifically configured as described in Chunk 2, making the Chunk 2 information essential for setting up the specific, technical scenario and for the answer to explicitly reference the meter's context.",
+      "chunk_ids": [
+        "E145701_Shark_100_100T_User_Manual_V.1.13_11-7-2008_p98_narr1",
+        "E145701_Shark_100_100T_User_Manual_V.1.13_11-7-2008_p73_narr1"
+      ],
+      "source_documents": [
+        "E145701_Shark_100_100T_User_Manual_V.1.13_11-7-2008",
+        "E145701_Shark_100_100T_User_Manual_V.1.13_11-7-2008"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "D-2\nplace. Unconfirmed communication is always possible and does not require a RESET.\nUser Data ( Function 3 )\nAfter receiving a request for USER DATA, the meter will generate a Data Link CONFIRMATION,\nsignaling the reception of that request, before the actual request is processed.  If a response is\nrequired, it will also be sent as UNCONFIRMED USER DATA.\nUnconfirmed User Data  ( Function 4 )\nAfter receiving a request for UNCONFIRMED USER DATA, if a response is required, it will be\nsent as UNCONFIRMED USER DATA.\nAddress\nDNP 3.0 allows for addresses from 0 - 65534 ( 0x0000 - 0xFFFE ) for individual device\nidentification, with the address 65535 ( 0xFFFF ) defined as an all stations address.  Shark meters'\naddresses are programmable from 0 - 247 ( 0x0000 - 0x00F7 ), and will recognize address 65535    \n( 0xFFFF ) as the all stations address.\nD.3: Transport Layer \nThe Transport Layer as implemented on Shark meters is subject to the following considerations:\nTransport Header\nMultiple-frame messages are not allowed for Shark meters.  Each Transport Header should indicate\nit is both the first frame ( FIR = 1 ) as well as the final frame ( FIN = 1 ).\nD.4: Application Layer\nThe Application Layer contains a header ( Request or Response Header, depending on direction )\nand data.  Specific notes follow.\nQ\nApplication Headers\nApplication Headers contain the Application Control Field and the Function Code.\nQ\nApplication Control Field\nMultiple-fragment messages are not allowed for Shark met",
+        "7.3.3.4: Configure PT Setting\nPush the DOWN Button to scroll all the parameters in Configuration Mode: Scroll, CT, PT,\nConnection (Cnct) and Port. The \u2018Active\u201d parameter is in the AScreen and is flashing.\nPush ENTER when PTis the \u2018Active\u2019parameter and the Pt-n (Numerator) screen appears.\nPush ENTER and the screen changes to Pt-d (Denominator).\nENTER again changes the screen to Pt-S (Scaling). The Pt-S setting can be \u20181\u2019, \u201810\u2019or \u2018100\u2019.\nTo program any of these settings, see section 7.3.3.2 above.\nExample Settings:\n277/277 Volts: Pt-n value is 277, Pt-d value is 277, Pt-Multiplier is 1.\n(cid:81) Push ENTER and the screen scrolls through the other CFG parameters.\nPush DOWN orRIGHT and the Password screen appears (see section 7.3.2.1).\nPush MENU and you will return to the MAINMENU.\nNOTE: Pt-n and Pt-S are dictated by Primary Voltage.\nPt-d is Secondary Voltage."
+      ]
+    },
+    {
+      "question": "What specific warning label text, required to comply with 110.21(B), must be present for 60/120-volt technical power receptacles in pipe organ installations and for equipment enclosures housing selectively coordinated overcurrent devices in elevator systems, according to the National Electrical Code?",
+      "ground_truth_answer": "For 60/120-volt technical power receptacles in pipe organ installations, the warning label complying with 110.21(B) must state: 'WARNING-TECHNICAL POWER Do not connect to lighting equipment. For electronic equipment use only. 60/120 V. 1ac GFCI protected'. For equipment enclosures housing selectively coordinated overcurrent devices in elevator systems, the marking complying with 110.21(B) must state: 'CAUTION: OVERCURRENT DEVICES IN THIS ENCLOSURE ARE SELECTIVELY COORDINATED. EQUIVALENT REPLACEMENTS AND TRIP SETTINGS ARE REQUIRED.'",
+      "reasoning": "This question requires information from both Document 1 (Article 650, Pipe Organs) and Document 2 (Article 620, Elevators). It specifically asks for the distinct warning label text mandated by the National Electrical Code for two different applications, both of which are required to comply with 110.21(B). Answering this question necessitates identifying the common regulatory reference (110.21(B)) and then extracting the specific, technical warning language associated with it from each document, thereby testing the ability to synthesize information across different sections of the code.",
+      "chunk_ids": [
+        "National Electrical Code 2023 Chapter 6_p44_narr1",
+        "National Electrical Code 2023 Chapter 6_p22_fig1"
+      ],
+      "source_documents": [
+        "National Electrical Code 2023 Chapter 6",
+        "National Electrical Code 2023 Chapter 6"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "ARTICLE 650-PIPE ORGANS\n rately derived system. The equipment grounding conductor\nshall not be smaller than that specified in Table 250.122 and\nrun with the feeder conductors. The technical equipment\ngrounding bus shall not be required to be bonded to the panel-\nboard enclosure. Other equipment grounding methods author-\nized elsewhere in this Code shall be permitted where the\nimpedance of the equipment grounding return path does not\nexceed the impedance of equipment grounding conductors\nsized and installed in accordance with this article. Informational Note No. 1: See 250.122 for equipment ground-\ning conductor sizing requirements where circuit conductors are\nadjusted in size to compensate for voltage drop. Informational Note No. 2: These requirements limit the impe-\ndance of the ground fault return path where only 60 volts apply\nto a fault condition instead of the usual 120 volts. 647.7 Receptacles. (A) General. Where receptacles are used as a means of\nconnecting equipment, the following conditions shall be met:\n(1) All 15- and 20-ampere receptacles shall be GFCI protec-\nted. (2) All receptacle outlet strips, adapters, receptacle covers,\nand faceplates shall be marked with the following words\nor equivalent:\n WARNING-TECHNICAL POWER\n Do not connect to lighting equipment. For electronic\nequipment use only. 60/120 V. 1ac GFCI protected\nThe warning sign(s) or label(s) shall comply with\n110.21 (B). (3) A 125-volt, single-phase, 15- or 20-ampere-rated recepta-\ncle having one of it",
+        "Section: 2023 Edition NATIONAL ELECTRICAL CODE\nHeadings: ARTICLE 620-ELEVATORS, DUMBWAITERS, ESCALATORS, MOVING WALKS, LIFTS, & CHAIRLIFTS | 620.62 Selective Coordination. Where more than one driving\nmachine disconnecting means is supplied by the same source,\nthe overcurrent protective devices in each disconnecting means\nshall be selectively coordinated with any other supply-side over-\ncurrent protective devices. | 620.65 Signage. Equipment enclosures containing selectively\ncoordinated overcurrent devices shall be legibly marked in the\nfield to indicate that the overcurrent devices are selectively\ncoordinated. The marking shall meet the requirements of\n110.21 (B), shall be readily visible, and shall state the following:\nCAUTION: OVERCURRENT DEVICES IN THIS ENCLOSURE\nARE SELECTIVELY COORDINATED. EQUIVALENT\nREPLACEMENTS AND TRIP SETTINGS ARE REQUIRED. | 620.81 Metal Raceways Attached to Cars. Metal raceways, Type\nMC cable, Type MI cable, or Type AC cable attached to elevator\ncars shall be bonded to metal parts of the car that are bonded\nto the equipment grounding conductor. | 620.84 Escalators, Moving Walks, Platform Lifts, and Stairway\nChairlifts. Escalators, moving walks, platform lifts, and stairway\nchairlifts shall comply with Article 250. | 620.91 Emergency and Standby Power Systems. Elevators shall\nbe permitted to be powered by an emergency or standby power\nsystem. | 2023 Edition NATIONAL ELECTRICAL CODE\n\nAI caption: **Type of image:** Text Excerpt\n\n**Main components:** E"
+      ]
+    },
+    {
+      "question": "On a 'Non-Covered Service Request Form', which estimated financial costs require approval by a Designated Agent, and what customer-provided identifier is necessary for processing the request?",
+      "ground_truth_answer": "On a Non-Covered Service Request Form, both the 'Cost Estimate for Parts' and the 'Total Estimated Cost' require approval by a Designated Agent. The 'Customer PO Number' is the necessary customer-provided identifier for processing the request.",
+      "reasoning": "This question requires information from both chunks. Chunk 2 provides the specific name of the form ('Non-Covered Service Request Form') which is essential context. Chunk 1 details the specific fields within that form, including 'Cost Estimate for Parts', 'Total Estimated Cost', 'Approved by Designated Agent', and 'Customer PO Number'. The question tests the ability to synthesize by identifying the form type from Chunk 2, then extracting and linking the relevant financial fields to the approval process, and finally identifying the specific customer identifier from Chunk 1, all within the context of that named form.",
+      "chunk_ids": [
+        "Non-Covered_Service_Request_Form_v3_p1_table1",
+        "Non-Covered_Service_Request_Form_v3_p1_narr1"
+      ],
+      "source_documents": [
+        "Non-Covered_Service_Request_Form_v3",
+        "Non-Covered_Service_Request_Form_v3"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "Information Needed | Details (to be completed at time of request)\nDate of Request |\nRequesting Party / Contact Info |\nProject / Site Location |\nEquipment Affected |\nDescription of Issue / Service Needed |\nSpare Part(s) Required |\nTime & Materials (T&M) Labor Estimate |\nCost Estimate for Parts |\nTotal Estimated Cost |\nExpected Service Date |\nRequested by (Name & Signature) |\nApproved by Designated Agent |\nDesignated Agent Name |\nDesignated Agent Email |\nCustomer PO Number |",
+        "Non-Covered Service Request Form"
+      ]
+    },
+    {
+      "question": "Considering the two Brooks Switchboard configurations, what is the nominal current (In) of the molded case circuit breaker specifically designated for the Surge Protection Device (SPD) in the configuration that includes 'Heaters', and what is the Noark part number for the air circuit breaker in the configuration that does not include 'Heaters'?",
+      "ground_truth_answer": "The nominal current (In) of the molded case circuit breaker for the SPD in the configuration with heaters is 60A. The Noark part number for the air circuit breaker in the configuration without heaters is A32Q3FV1600+SU40NHC+ELM10.",
+      "reasoning": "This question requires identifying a key difference between the two documents (the presence of 'Heaters' in Chunk 2 vs. its absence in Chunk 1) to correctly select which document to extract information from for each part of the question. It then requires extracting specific technical details (nominal current for an MCCB from Chunk 2 and a Noark part number for an ACB from Chunk 1), thus synthesizing information across both documents based on a distinguishing feature. This makes it a high-quality multi-hop question that is specific and technical.",
+      "chunk_ids": [
+        "Switchgear Part Descriptions_p2_narr1",
+        "Switchgear Part Descriptions_p1_narr1"
+      ],
+      "source_documents": [
+        "Switchgear Part Descriptions",
+        "Switchgear Part Descriptions"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "BROOKS SWITCHBOARD 2+ AUX PANEL 2\n Air circuit breaker, fixed, 3P, AF-3200A, AT=3000A, 65kA@ 600V, electronic LSIG protection unit, energy-\nlimiting maintenance switch, Noark part numbers: A32Q3FV1600+SU40NHC+ELM10\n Molded case circuit breaker, 3P, frame size 250A, 65kA@ 600VAC, nominal current In=175A, 600VAC, TM\nprotection unit + mechanical lug on load side, Noark breaker M2HVN175T3L\n Molded case circuit breaker, 3P, frame size 250A, 65kA@ 600VAC, nominal current In-60A, 600VAC, TM\nprotection unit + mechanical lug on load side, Noark breaker M2HVN60T3L (for SPD)\n 4 Surge protection device, Type 1,600V, 3phase, In=20kA; Imax=240kA, #C3H6-240-4XM-RDU, PSP\n 5 Current tranformer 2500A/5, cl 0,5, CT401-252\n 6 3-pole fuse folder with 15A fuses (for power and measure meters), CHCC3DIU + KTK-R-15\n 7 2-pole fuse folder with 15A fuses (for transformer), CHCC2DIU + KTK-R-15\n 8 Auxiliary transformer 600VAC/120-240VAC, 5kVA\n 9 Square D loadcenter Q0816L100DF, Schneider Electric\n 10 Miniature circuit breaker, 2P, 30A, 120/240VAC, 10kA, Schneider Electric type: QO230\n11 Miniature circuit breaker, 2P, 15A, 120/240VAC, 10kA, Schneider Electric type: QO215\n12 Miniature circuit breaker, 1P,20A, 120/240VAC, 10kA, Schneider Electric type: QO120\n13 Miniature circuit breaker, 1P, 15A, 120/240VAC,10kA, Schneider Electric type: Q0115\n 14 Enclosure WxHxD=5x800x(2200+100)x800mm, Nema 3R\n15 Main busbar system 3000A, 3phase - 4wire, 600V, 65kA@600VAC\n 16 Incoming busbar system 3000A, 3phase - 4wire, 60",
+        "BROOKS SWITCHBOARD 1 + AUX PANEL 1\n Air circuit breaker, fixed, 3P, AF-3200A, AT-3000A,65kA@ 600V, electronic LSIG protection unit, energy-\nlimiting maintenance switch, Noark part numbers: A32Q3FV1600+SU40NHC+ELM10\n Molded case circuit breaker, 3P, frame size 250A, 65kA@ 600VAC, nominal current In=175A, 600VAC, TM\nprotection unit + mechanical lug on load side, Noark breaker M2HVN175T3L\n Molded case circuit breaker, 3P, frame size 250A, 65kA@ 600VAC, nominal current In-60A, 600VAC, TM\nprotection unit + mechanical lug on load side, Noark breaker M2HVN60T3L (for SPD)\n 9 Square D loadcenter Q0816L100DF, Schneider Electric\n 4 Surge protection device, Type 1,600V, 3phase, In-20kA; Imax=240kA, # C3H6-240-4XM-RDU, PSP\n 5 Current tranformer 2500A/5, cl 0,5, CT401-252\n 6 3-pole fuse folder with 15A fuses (for power and measure meters), CHCC3DIU + KTK-R-15\n 7 2-pole fuse folder with 15A fuses (for transformer), CHCC2DIU + KTK-R-15\n 8 Auxiliary transformer 600VAC/120-240VAC, 5kVA\n 10 Miniature circuit breaker, 2P, 30A, 120/240VAC, 10kA, Schneider Electric type: Q0230\n11 Miniature circuit breaker, 2P, 15A, 120/240VAC, 10kA, Schneider Electric type: QO215\n12 Miniature circuit breaker, 1P, 20A, 120/240VAC, 10kA, Schneider Electric type: QO120\n13 Miniature circuit breaker, 1P, 15A, 120/240VAC, 10kA, Schneider Electric type: QO115\n 14 Enclosure WxHxD=5x800x(2200+100)x800mm, Nema 3R\n15 Main busbar system 3000A, 3phase - 4wire, 600V, 65kA@ 600VAC\n 16 Incoming busbar system 3000A, 3phase - 4wire"
+      ]
+    },
+    {
+      "question": "Considering the detailed description of the 'pictured above' 6000A SWBD in the document, which includes a 5000A main and various feeder sections, what specific technical details or main components are identified by the AI caption for the associated image?",
+      "ground_truth_answer": "According to the AI caption, no specific technical details or main components are identified in the associated image. The caption explicitly states 'Main components: None' and 'Technical details: None', describing it as a 'Solid black image'.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 describes the specific components that are 'pictured above' (e.g., 6000A SWBD, 5000A main, ACB/MCCB feeder sections). Chunk 2 provides the AI caption for the image, which explicitly states 'Main components: None' and 'Technical details: None'. To answer, the RAG system must synthesize the expected content from Chunk 1 with the actual identified content (or lack thereof) from Chunk 2, demonstrating an understanding that despite the detailed description in Chunk 1, the AI found no identifiable components in the image it processed.",
+      "chunk_ids": [
+        "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23_p1_narr1",
+        "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23_p1_fig3"
+      ],
+      "source_documents": [
+        "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23",
+        "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AC LV SWBD - 1200 to 6000A, 480 / 600VAC\nUL 891 Certified Switchboards for Solar / BESS Applications\nMulti-section SWBD platform designed for AC collection of Solar or distribution / integration of BESS projects.\nThermally engineered for demanding outdoor applications, features up to 6000A bus and 5000A (6000A air\ncooled) main breaker. Other features include: Multiple mains, feeder sizes from 15A to 2500A, M-T-M control\nsections, generator quick connect options.\nPRODUCT DETAILS\n\u2022 480VAC, 600VAC, 3P3W or 3P4W\n\u2022 UL / NEMA 1 or 3R\n\u2022 Main breaker ranges: 1200A \u2013 5000A\n(6000A air cooled), MLO up to 6000A\n\u2022 Single ended or double ended (M-M or\nM-T-M)\n\u2022 Feeder ranges ACB: 1200A, 1600A,\n2000A, 2500A\n\u2022 Feeder ranges MCCB: 150AF, 250AF,\n400AF, 600AF, 800AF, 1000AF\n\u2022 Feeder trip type: Thermal Mag or\nElectronic Trip\nPictured above: UL 891 / NEMA 3R (outer doors removed), 480 /\n\u2022 Interrupt Ratings:\n600VAC, 6000A SWBD, single ended, with: cable input section, 5000A\n\u27a2 100kAIC @ 480VAC\nmain, ACB feeder section, MCCB feeder section & SEL control section.\n\u27a2 65kAIC @ 600VAC\n\u2022 Full front access, incoming / outgoing\nAmple Power Capacity\nbottom or top entry\n\u2022 Direct bus / busway option (side) for Our 6000A Switchboard delivers the power capacity required,\nmain / ACB feeder for your Solar / BESS requirement. With fault current ratings\n\u2022 Control section M-T-M control schemes of 100/65kAIC at 480/600V (supporting 4500/3500kVA sized\n\u2022 Advanced diagnostics / metering /\nMV Transformers at 480/600VAC, re",
+        "AI caption: **Type of image:** Solid black image.\n**Main components:** None.\n**Technical details:** None."
+      ]
+    },
+    {
+      "question": "Identify the distinct visual motifs and associated textual elements that characterize the Southwire logo, as described across the provided documents.",
+      "ground_truth_answer": "The Southwire logo is characterized by stylized wire bundles arranged in a circular pattern with the text \"Southwire\", and also features a stylized American flag accompanied by the text \"We've got it MADE IN AMERICA\u2122\".",
+      "reasoning": "This question necessitates extracting visual components (stylized wire bundles, circular pattern, stylized American flag) and textual elements (\"Southwire\", \"We've got it MADE IN AMERICA\u2122\") from both provided chunks. Answering it completely requires synthesizing these separate details into a single, comprehensive description of the logo's characteristics, demonstrating the RAG system's ability to combine information from multiple sources. It is specific by asking for \"distinct visual motifs and associated textual elements\" rather than a general description.",
+      "chunk_ids": [
+        "Southwire Substation SPEC85010_p2_fig3",
+        "Southwire Substation SPEC85010_p3_fig2"
+      ],
+      "source_documents": [
+        "Southwire Substation SPEC85010",
+        "Southwire Substation SPEC85010"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AI caption: **Type of image:** Logo\n**Main components:** Company logo with stylized wire bundles and company name.\n**Technical details:** Text: Southwire. The logo features three bundles of wires arranged in a circular pattern.",
+        "AI caption: **Type of image:** Logo\n\n**Main components:** The logo features a stylized image of the American flag with the text \"We've got it MADE IN AMERICA\".\n\n**Technical details:** Text: \"We've got it MADE IN AMERICA\u2122\""
+      ]
+    },
+    {
+      "question": "According to OSHA regulations, what medical evaluation procedures must an employer implement, including identifying the responsible professional, *before* an employee is fit tested using the Controlled Negative Pressure (CNP) REDON quantitative fit testing protocol, which includes exercises like 'REDON 1' and 'REDON 2'?",
+      "ground_truth_answer": "Before an employee is fit tested using the Controlled Negative Pressure (CNP) REDON quantitative fit testing protocol (which includes exercises like 'REDON 1' and 'REDON 2' where the respirator mask is removed and redoned), the employer must provide a medical evaluation to determine the employee\u2019s ability to use a respirator. This evaluation must be performed by a physician or other licensed health care professional (PLHCP) and can be conducted using a medical questionnaire or an initial medical examination that obtains the same information as the questionnaire in Sections 1 and 2, part A of appendix C.",
+      "reasoning": "This question requires information from both chunks. Chunk 2 details the mandatory medical evaluation procedures and the responsible professional (PLHCP) that must occur *before* an employee is fit tested. Chunk 1 describes the specific 'Controlled Negative Pressure (CNP) REDON quantitative fit testing protocol' and its exercises ('REDON 1', 'REDON 2'). The question forces the synthesis of these two distinct but related requirements, linking the prerequisite medical evaluation to the specific fit testing method.",
+      "chunk_ids": [
+        "OSHA PPE CFR-2024-title29-vol5-part1910-subpartI_p27_narr1",
+        "OSHA PPE CFR-2024-title29-vol5-part1910-subpartI_p9_narr1"
+      ],
+      "source_documents": [
+        "OSHA PPE CFR-2024-title29-vol5-part1910-subpartI",
+        "OSHA PPE CFR-2024-title29-vol5-part1910-subpartI"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "Occu. Safety and Health Admin., Labor \u00a71910.134\ntest subject then may be refitted and re- the requirements specified in paragraphs (a)\ntested. and (c) of part I.C.6 of this appendix (\u2018\u2018Con-\n(2) A record of the test shall be kept on trolled negative pressure (CNP) quantitative\nfile, assuming the fit test was successful. fit testing protocol,\u2019\u2019) as well as use the test\nThe record must contain the test subject\u2019s exercises described below in paragraph (b) of\nname; overall fit factor; make, model, style this protocol instead of the test exercises\nand size of respirator used; and date tested. specified in paragraph (b) of part I.C.6 of this\nappendix. 7. Controlled negative pressure (CNP) (b) Employers must ensure that each test\nREDON quantitative fit testing protocol. subject being fit tested using this protocol\nfollows the exercise and measurement proce-\n(a) When administering this protocol to dures, including the order of administration\ntest subjects, employers must comply with described in Table A\u20133 of this appendix. TABLEA\u20133\u2014CNP REDON QUANTITATIVEFITTESTINGPROTOCOL\nFacing Forward............................... Stand and breathe normally, without talking, for 30 Face forward, while holding breath\nseconds. for 10 seconds. Bending Over.................................. Bend at the waist, as if going to touch his or her Face parallel to the floor, while\ntoes, for 30 seconds. holding breath for 10 seconds\nHead Shaking ................................. For about three seconds, shake ",
+        "Occu. Safety and Health Admin., Labor \u00a71910.134\n(1) The respirator is equipped with an quirements for medical evaluation that\nend-of-service-life indicator (ESLI) cer- employers must implement to deter-\ntified by NIOSH for the contaminant; mine the employee\u2019s ability to use a\nor respirator. (2) If there is no ESLI appropriate for (1) General. The employer shall pro-\nconditions in the employer\u2019s work- vide a medical evaluation to determine\nplace, the employer implements a the employee\u2019s ability to use a res-\nchange schedule for canisters and car- pirator, before the employee is fit test-\ntridges that is based on objective infor- ed or required to use the respirator in\nmation or data that will ensure that the workplace. The employer may dis-\ncanisters and cartridges are changed continue an employee\u2019s medical eval-\nbefore the end of their service life. The uations when the employee is no longer\nemployer shall describe in the res-\nrequired to use a respirator. pirator program the information and\n(2) Medical evaluation procedures. (i)\ndata relied upon and the basis for the\nThe employer shall identify a physi-\ncanister and cartridge change schedule\ncian or other licensed health care pro-\nand the basis for reliance on the data. fessional (PLHCP) to perform medical\n(iv) For protection against particu-\nevaluations using a medical question-\nlates, the employer shall provide:\nnaire or an initial medical examination\n(A) An atmosphere-supplying res-\nthat obtains the same information as\npi"
+      ]
+    },
+    {
+      "question": "What is the full mailing address, including the building and suite number, and the primary web domain for YOTTA Energy Inc., the company associated with the slogan 'ENERGY MADE SIMPLE'?",
+      "ground_truth_answer": "The full mailing address for YOTTA Energy Inc. is 3100 Alvin Devane Blvd, Building A, Suite 200, Austin, TX 78741, and their primary web domain is www.yottaenergy.com.",
+      "reasoning": "This question requires extracting multiple specific pieces of information: the complete physical address (including building and suite number) and the primary web domain. It also uses the company's slogan ('ENERGY MADE SIMPLE') as a contextual identifier to ensure the correct company is identified. While both provided chunks are identical and contain all the necessary information, the question is designed to test a RAG system's ability to identify and consolidate multiple specific data points (address components, website) from the available documentation. In a scenario with non-identical chunks, this would necessitate synthesizing information across documents. Here, it confirms the consistent presence of these details across the given sources.",
+      "chunk_ids": [
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3_p2_fig2",
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3_p1_fig2"
+      ],
+      "source_documents": [
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3",
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AI caption: **Type of image:** Text Snippet\n\n**Main components:** Company contact information.\n\n**Technical details:**\n*   \"ENERGY MADE SIMPLE\"\n*   \"www.yottaenergy.com\"\n*   \"YOTTA Energy Inc. 3100 Alvin Devane Blvd, Building A, Suite 200, Austin, TX 78741\"",
+        "AI caption: **Type of image:** Text Snippet\n\n**Main components:** Company contact information.\n\n**Technical details:**\n*   \"ENERGY MADE SIMPLE\"\n*   \"www.yottaenergy.com\"\n*   \"YOTTA Energy Inc. 3100 Alvin Devane Blvd, Building A, Suite 200, Austin, TX 78741\""
+      ]
+    },
+    {
+      "question": "Which specific financial and logistical details are required to be completed by the requesting party on the Vendor-Facing Spare Part Request Form?",
+      "ground_truth_answer": "The financial details required are 'Quoted Cost per Part', 'Shipping & Handling Estimate', and 'Total Estimated Cost'. The logistical details required are 'Quantity Required', 'Urgency Level (Critical / Routine)', and 'Expected Delivery Date'.",
+      "reasoning": "This question requires information from Chunk 1 to establish the context of the form being 'Vendor-Facing' and a 'Spare Part Request Form'. It then requires Chunk 2 to identify the specific 'Information Needed' fields, filtering them for financial and logistical categories that are 'to be completed at time of request'. The answer synthesizes the form's purpose/audience with its specific content requirements, making it a high-quality multi-hop evaluation.",
+      "chunk_ids": [
+        "Spare_Part_Request_Form_p1_narr1",
+        "Spare_Part_Request_Form_p1_table1"
+      ],
+      "source_documents": [
+        "Spare_Part_Request_Form",
+        "Spare_Part_Request_Form"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "Spare Part Request Form (Vendor-Facing)",
+        "Information Needed | Details (to be completed at time of request)\nDate of Request |\nRequesting Party / Contact Info |\nProject / Site Location |\nVendor / Supplier Contact Info |\nEquipment Type |\nManufacturer / Model Number |\nSerial Number (if applicable) |\nPart Number / Description |\nQuantity Required |\nPart in Warranty (Yes/No) |\nReason for Replacement (e.g., failure, preventiv | e stock)\nUrgency Level (Critical / Routine) |\nExpected Delivery Date |\nQuoted Cost per Part |\nShipping & Handling Estimate |\nTotal Estimated Cost |\nRequested by (Name & Signature) |\nVendor Acknowledgement / Confirmation |"
+      ]
+    },
+    {
+      "question": "What company is identified by a logo featuring stylized wire bundles, and what specific text is included in their separate 'Made in America' themed logo?",
+      "ground_truth_answer": "The company identified by a logo featuring stylized wire bundles is Southwire, and their separate 'Made in America' themed logo includes the text 'We've got it MADE IN AMERICA\u2122'.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 identifies the company as 'Southwire' based on its primary logo description (stylized wire bundles). Chunk 2 provides the exact text 'We've got it MADE IN AMERICA\u2122' from a different, 'Made in America' themed logo. To answer correctly, the RAG system must synthesize the company name from Chunk 1 with the specific slogan text from Chunk 2, demonstrating multi-hop reasoning across distinct logo descriptions for the same entity.",
+      "chunk_ids": [
+        "SOUTHWIRE_SPEC45252_p1_fig3",
+        "SOUTHWIRE_SPEC45252_p3_fig4"
+      ],
+      "source_documents": [
+        "SOUTHWIRE_SPEC45252",
+        "SOUTHWIRE_SPEC45252"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AI caption: **Type of image:** Logo\n**Main components:** Company logo with stylized wire bundles and company name.\n**Technical details:** Southwire",
+        "AI caption: **Type of image:** Logo\n\n**Main components:** The logo features a stylized image of the American flag with the text \"We've got it MADE IN AMERICA\".\n\n**Technical details:** Text: \"We've got it MADE IN AMERICA\u2122\""
+      ]
+    },
+    {
+      "question": "What is the full 3VA model number for a 600A circuit breaker in the 3VA55 series, and what is the HJD6 series model number for a circuit breaker with an amperage rating that is exactly half of that 600A breaker's rating?",
+      "ground_truth_answer": "The 3VA55 series model number for a 600A circuit breaker is 3VA5560-6EC32-0AA0. The HJD6 series model number for a circuit breaker with an amperage rating of 300A (half of 600A) is HJD63B300.",
+      "reasoning": "This question requires information from both chunks. The first part, identifying the 3VA55 series 600A model (3VA5560-6EC32-0AA0), is found in Chunk 1. The second part requires a calculation (half of 600A = 300A) and then looking up the HJD6 series model for 300A (HJD63B300) in Chunk 2. This tests the ability to synthesize information by performing a calculation based on data from one chunk and then applying that result to query the second chunk, providing a specific and technical answer.",
+      "chunk_ids": [
+        "Siemens Reference Guide_3VA_EnclosedCirBreaker_p4_table3",
+        "Siemens Reference Guide_3VA_EnclosedCirBreaker_p3_table6"
+      ],
+      "source_documents": [
+        "Siemens Reference Guide_3VA_EnclosedCirBreaker",
+        "Siemens Reference Guide_3VA_EnclosedCirBreaker"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "800A, 3P 65KAIC @ 480V \u00b7 Amperage | 800A, 3P 65KAIC @ 480V \u00b7 HMD6/HMXD6 | 800A, 3P 65KAIC @ 480V \u00b7 HMG | 800A, 3P 65KAIC @ 480V \u00b7 3VA55**6\n500 | HMD63B500 HXMD63B500 | NA | NA\n600 | HMD63B600 HXMD63B600 | HMG3B600L | 3VA5560-6EC32-0AA0\n700 | HMD63B700 HXMD63B700 | HMG3B700L | 3VA5570-6EC32-0AA0\n800 | HMD63B800 HXMD63B800 | HMG3B800L | 3VA5580-6EC32-0AA0",
+        "Amperage | HJD6/HJXD6 | 3VA53**6 HJG/HJX\n200 | HJD63B200 HJXD63B200 | 3VA5320-6EC31-0AA0\n225 | HJD63B225 HJXD63B225 | 3VA5322-6EC31-0AA0\n250 | HJD63B250 HJXD63B250 | HJG3B250L HJX3B250L 3VA5325-6EC31-0AAO\n300 | HJD63B300 HJXD63B300 | HJG3B300L HJX3B300L 3VA5330-6EC31-0AAO\n350 | HJD63B350 HJXD63B350 | HJG3B350L HJX3B350L 3VA5335-6EC31-0AAO\n400 | HJD63B400 HJXD63B400 | HJG3B400L HJX3B400L 3VA5340-6EC31-0AAO"
+      ]
+    },
+    {
+      "question": "Considering the electrical panels with switches, indicators, and ventilation grilles being inspected by an electrical worker, what are the key external structural components and safety markings of the multi-bay enclosure that typically houses such equipment?",
+      "ground_truth_answer": "The key external structural components of the multi-bay enclosure are multiple bays, access doors, and handles. The safety markings include warning labels.",
+      "reasoning": "This question requires synthesizing information from both chunks. Chunk 1 describes the internal/operational components (electrical panels, switches, indicators, ventilation grilles) being inspected by an electrical worker. Chunk 2 describes the external structural components (multiple bays, access doors, handles) and safety elements (warning labels) of an electrical enclosure. The question forces the RAG to connect the inspected panels to their housing, thereby combining details from both sources to provide a complete description of the equipment's visible features.",
+      "chunk_ids": [
+        "EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24_p2_fig4",
+        "EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24_p1_fig2"
+      ],
+      "source_documents": [
+        "EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24",
+        "EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AI caption: **Type of image:** Photo\n**Main components:** An electrical worker is inspecting a row of electrical panels in a utility room. The panels have various switches, indicators, and ventilation grilles.\n**Technical details:** Electrical panels, switches, indicators, ventilation grilles, utility room, electrical worker, PPE (hard hat, safety vest).",
+        "AI caption: **Type of image:** Photo\n**Main components:** Electrical enclosure consisting of multiple bays with access doors and handles.\n**Technical details:** White enclosure, access doors, handles, warning labels."
+      ]
+    },
+    {
+      "question": "For the EPEC_1200-6000A UL 891 SWBD, what internal electrical components are visible within the panel enclosure, and what external characteristics define its doors?",
+      "ground_truth_answer": "Within the panel enclosure, circuit breakers and electrical wiring are visible. Its doors are externally characterized by being double doors with metal handles and hinges.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 provides the internal components (circuit breakers, electrical wiring) and mentions the 'panel enclosure'. Chunk 2 describes the external features of the 'electrical enclosure's' doors (double doors, metal handles, hinges). Answering completely necessitates synthesizing these internal and external descriptions from the two distinct documents.",
+      "chunk_ids": [
+        "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer_p2_fig4",
+        "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer_p2_fig3"
+      ],
+      "source_documents": [
+        "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer",
+        "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AI caption: **Type of image:** Photo\n**Main components:** Electrical panel with open doors, showing circuit breakers and wiring.\n**Technical details:** Circuit breakers, electrical wiring, panel enclosure.",
+        "AI caption: **Type of image:** Photo\n**Main components:** Electrical enclosure with double doors and handles.\n**Technical details:** White enclosure, metal handles, hinges."
+      ]
+    },
+    {
+      "question": "Considering the high-voltage disconnect switch assembly shown in Chunk 1 is pole-mounted, what is the product name and maximum voltage classification for the Southern States EV-2 switch detailed in Chunk 2, and what general types of mounting arrangements are offered for this product line?",
+      "ground_truth_answer": "The product name is the EV-2 Vertical Break Disconnect Switch (Desconectador de Apertura Vertical). Its maximum voltage classification is EV-2. The general types of mounting arrangements offered for this product line are standard, custom, or multiple (est\u00e1ndar, hecho a la media o m\u00faltiple), which would encompass the pole-mounted configuration shown in Chunk 1.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 provides the context that the depicted high-voltage disconnect switch assembly is 'pole-mounted'. Chunk 2 identifies the specific product as the 'EV-2 Vertical Break Disconnect Switch' and details its 'Clasificaci\u00f3n de Voltaje M\u00e1ximo (kV) EV-2' as well as the available 'Arreglo de montaje est\u00e1ndar, hecho a la media o m\u00faltiple'. To answer completely, the RAG system must synthesize the visual/contextual information about mounting from Chunk 1 with the specific product details, voltage classification, and general mounting options from Chunk 2.",
+      "chunk_ids": [
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer-Spanish_p2_fig1",
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer-Spanish_p2_narr1"
+      ],
+      "source_documents": [
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer-Spanish",
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer-Spanish"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AI caption: **Type of image:** Photo\n\n**Main components:** High-voltage disconnect switch assembly with insulators, conductors, and support structure. The assembly is mounted on a pole.\n\n**Technical details:** Electrical substation equipment, insulators, conductors, disconnect switch, high voltage, power transmission, pole-mounted.",
+        "> Switches Desconectadores > SWITCHES OPERADOS EN GRUPO\nC A T A L O G O D E P R O D U C T O\nCLASIFICACION\nClasificaci\u00f3n de Voltaje M\u00e1ximo (kV)\nEV-2\nSwitch de Aluminio\nDesconectador de\nCLASIFICACIONES ADICIONALES\nApertura Vertical\nFrecuencia de operaci\u00f3n 50 / 60 Hz\n*Dise\u00f1o de 362 kV \u00fanicamente disponible desde 1200 A a 2000 A\nCARACTERISTICAS CLAVE\n\u2022 Contactos de mordazas en plata a plata usando dos tipos de aleaci\u00f3n de plata\n\u2022 Bisagra roscada con resorte lo cual facilita el intercambio de corriente\n\u2022 Terminales construidas de extrusi\u00f3n de aluminio las cuales las hace muy resistentes y\nr\u00edgidas sin el uso de soportes de fundici\u00f3n\n\u2022 Terminales de tres lados que permiten el uso de m\u00faltiples conectores\n\u2022 Cojinetes de rodillos de acero inoxidable dentro de una carcasa de aluminio\n\u2022 Arreglo de montaje est\u00e1ndar, hecho a la media o m\u00faltiple, disponible\n\u2022 Construcci\u00f3n de doble canal para equipos superiores a 69 kV; canal sencillo para\nequipos menores a 115 kV\n\u2022 Cojinetes de grado marino\n30 Georgia Avenue\nHampton, GA 30228 (Estados Unidos)\nP (+1) 770-946-4562 F (+1) 770-946-8106 Publication No. CF101-EV-2 362-R3 SPANISH 05042022\nsales@southernstatesLLC.com Printed in USA May 2022 \u00a92022 Southern States, LLC\nEl Nombre de Calidad en Switching de Alto Voltaje www.southernstatesLLC.com"
+      ]
+    },
+    {
+      "question": "According to the inverter identification parameters, what type of firmware revision is indicated by the 'A xxx' component found within the text string 'bingl A xxx'?",
+      "ground_truth_answer": "The 'A xxx' component indicates the DSP firmware revision, as 'FW Version A' is defined as the DSP firmware revision in the inverter identification parameters.",
+      "reasoning": "This question requires information from both chunks. Chunk 1 provides the specific text string 'bingl A xxx'. Chunk 2 defines 'FW Version A' as the 'DSP firmware revision' within the inverter identification parameters. To answer, the RAG system must identify 'A xxx' in Chunk 1 as a placeholder or example for 'FW Version A' from Chunk 2, and then retrieve its corresponding definition. This tests the ability to synthesize a specific textual pattern from one document with its technical definition in another.",
+      "chunk_ids": [
+        "Manual-PVI-Central-250-300_p78_fig1",
+        "Manual-PVI-Central-250-300_p107_narr1"
+      ],
+      "source_documents": [
+        "Manual-PVI-Central-250-300",
+        "Manual-PVI-Central-250-300"
+      ],
+      "question_type": "multi_hop",
+      "source_texts": [
+        "AI caption: **Type of image:** Text\n\n**Main components:** Text string.\n\n**Technical details:** Text: \"bingl A xxx\"",
+        "Installation and Operation Manual \nPage 107 of 145 \n[PVI-CENTRAL-XXX (US or CAN) - Rev:3.0]\n\n16.4.5 Inverter Identification \nThe window which summarises the plate data of a single module is the following:\n\nFigure 16-9: Inverter ID \u2013 Single Module Interface\n\nThe parameters listed are the following: \nSN: Series number of the module \nPN: Part number of the module \nWeek: Week of production \nYear: Year of production \nTransf. Type: Type of connected transformer \nTransf. Mod. No.: Number of modules connected to the rack \nFW Version A: DSP firmware revision  \nFW Version B: Supervisor firmware revision  \nRack SN: Series number of the rack \nRack PN: Part number of the rack \nRack Number: Identification number of the rack in the plant \nRS485 Addr.: Address RS485"
+      ]
+    }
+  ]
+}
