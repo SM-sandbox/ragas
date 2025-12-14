@@ -94,7 +94,7 @@ nav:
               - Cancelling Tasks: howtos/customizations/cancellation.md
           - LLM Adapters: howtos/llm-adapters.md
           - Metrics:
-              - Modify Prompts: howtos/customizations/metrics/_modifying-prompts-metrics.md
+              - Modify Prompts: howtos/customizations/metrics/modifying-prompts-metrics.md
               - Adapt Metrics to Languages: howtos/customizations/metrics/_metrics_language_adaptation.md
               - Train and Align Metrics: howtos/customizations/metrics/train_your_own_metric.md
           - Testset Generation:
@@ -135,6 +135,7 @@ nav:
               - Google Gemini: howtos/integrations/gemini.md
               - OCI Gen AI: howtos/integrations/oci_genai.md
           - Frameworks:
+              - AG-UI: howtos/integrations/ag_ui.md
               - Griptape: howtos/integrations/griptape.md
               - Haystack: howtos/integrations/haystack.md
               - LangChain: howtos/integrations/langchain.md
