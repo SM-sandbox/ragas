@@ -39,14 +39,27 @@ REPORTS_DIR = Path(__file__).parent.parent / "reports"
 # K values to test
 K_VALUES = [5, 10, 15, 20, 25, 50, 100]
 
-# Azure Configuration
-AZURE_SEARCH_ENDPOINT = os.environ.get("AZURE_SEARCH_ENDPOINT", "https://asosearch-stg.search.windows.net")
+# Azure Configuration - load from config file with env var overrides
+AZURE_CONFIG_FILE = Path(__file__).parent.parent / "config" / "azure_config.json"
+
+def _load_azure_config():
+    """Load Azure config from JSON file."""
+    if AZURE_CONFIG_FILE.exists():
+        with open(AZURE_CONFIG_FILE) as f:
+            return json.load(f)
+    return {}
+
+_azure_cfg = _load_azure_config()
+_azure_search = _azure_cfg.get("azure_search", {})
+_azure_openai = _azure_cfg.get("azure_openai", {})
+
+AZURE_SEARCH_ENDPOINT = os.environ.get("AZURE_SEARCH_ENDPOINT", _azure_search.get("endpoint", "https://asosearch-stg.search.windows.net"))
 AZURE_SEARCH_KEY = os.environ.get("AZURE_SEARCH_KEY", "")
-AZURE_SEARCH_INDEX = os.environ.get("AZURE_SEARCH_INDEX", "bf-demo")
-AZURE_OPENAI_ENDPOINT = os.environ.get("AZURE_OPENAI_ENDPOINT", "https://sponsored-eastus-oai.openai.azure.com/")
+AZURE_SEARCH_INDEX = os.environ.get("AZURE_SEARCH_INDEX", _azure_search.get("index_name", "bf-demo"))
+AZURE_OPENAI_ENDPOINT = os.environ.get("AZURE_OPENAI_ENDPOINT", _azure_openai.get("endpoint", "https://sponsored-eastus-oai.openai.azure.com/"))
 AZURE_OPENAI_KEY = os.environ.get("AZURE_OPENAI_KEY", "")
-AZURE_EMBEDDING_DEPLOYMENT = os.environ.get("AZURE_EMBEDDING_DEPLOYMENT", "eastus-text-embedding-3-large")
-AZURE_API_VERSION = "2024-06-01"
+AZURE_EMBEDDING_DEPLOYMENT = os.environ.get("AZURE_EMBEDDING_DEPLOYMENT", _azure_openai.get("deployments", {}).get("embedding", "eastus-text-embedding-3-large"))
+AZURE_API_VERSION = _azure_openai.get("api_version", "2024-06-01")
 
 # GCP Embedding configurations to test (endpoint IDs from working evaluations)
 GCP_CONFIGS = [

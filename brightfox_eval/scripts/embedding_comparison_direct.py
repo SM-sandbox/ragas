@@ -152,12 +152,18 @@ class DirectRetriever:
         # Load embedding model (for non-task-type queries)
         if not task_type:
             self.embedding_model = TextEmbeddingModel.from_pretrained(embedding_model)
+            self.genai_client = None
         else:
             self.embedding_model = None
             # Set up genai environment
             os.environ.setdefault("GOOGLE_CLOUD_PROJECT", project_id)
             os.environ.setdefault("GOOGLE_CLOUD_LOCATION", "us-central1")
             os.environ.setdefault("GOOGLE_GENAI_USE_VERTEXAI", "True")
+            # Cache genai client for reuse (avoid re-init overhead per call)
+            if GENAI_AVAILABLE:
+                self.genai_client = genai.Client()
+            else:
+                self.genai_client = None
         
         # Get Vector Search endpoint
         endpoint_resource = f"projects/689311309499/locations/{location}/indexEndpoints/{endpoint_id}"
@@ -197,10 +203,9 @@ class DirectRetriever:
     
     def _get_embedding(self, text: str) -> List[float]:
         """Generate embedding for query text."""
-        if self.task_type and GENAI_AVAILABLE:
-            # Use google-genai for task_type support
-            client = genai.Client()
-            response = client.models.embed_content(
+        if self.task_type and self.genai_client:
+            # Use cached genai client for task_type support
+            response = self.genai_client.models.embed_content(
                 model=self.embedding_model_name,
                 contents=[text],
                 config=EmbedContentConfig(
@@ -209,10 +214,9 @@ class DirectRetriever:
                 ),
             )
             return list(response.embeddings[0].values)
-        elif self.embedding_model_name.startswith("gemini") and GENAI_AVAILABLE:
+        elif self.embedding_model_name.startswith("gemini") and self.genai_client:
             # Gemini model without task_type - still need to control dimensions
-            client = genai.Client()
-            response = client.models.embed_content(
+            response = self.genai_client.models.embed_content(
                 model=self.embedding_model_name,
                 contents=[text],
                 config=EmbedContentConfig(

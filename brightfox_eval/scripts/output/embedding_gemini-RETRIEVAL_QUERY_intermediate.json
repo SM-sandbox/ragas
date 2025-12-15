@@ -1,0 +1,143 @@
+{
+  "config": {
+    "name": "gemini-RETRIEVAL_QUERY",
+    "description": "gemini-embedding-001, 768 dim, WITH RETRIEVAL_QUERY task type",
+    "embedding_model": "gemini-embedding-001",
+    "task_type": "RETRIEVAL_QUERY",
+    "dimensions": 768,
+    "endpoint_id": "4639292556377587712",
+    "deployed_index_id": "idx_bfai_eval66_g1_768_tt"
+  },
+  "metrics": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0,
+    "overall_score": 2.48,
+    "pass_rate": 0.0,
+    "correctness": 1.0,
+    "completeness": 1.0,
+    "faithfulness": 4.2,
+    "relevance": 2.0,
+    "clarity": 5.0,
+    "avg_time_per_query": 15.58,
+    "avg_answer_chars": 124.0,
+    "total_time": 24.61
+  },
+  "results": [
+    {
+      "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+      "ground_truth": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+      "rag_answer": "The provided context does not contain enough information to answer the question about which National Electrical Code (NEC) versions the CPS 100/125kW string inverters are compliant with.",
+      "answer_length": 186,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 3,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial",
+        "explanation": "The RAG system correctly identified that the provided context (which was empty) did not contain the answer. Therefore, its statement about the context is faithful and clear. However, it completely fails to provide the correct factual answer to the question, which is present in the ground truth. This indicates a failure in the retrieval component, as no relevant information was passed to the LLM."
+      },
+      "attempts": 1,
+      "timing": {
+        "retrieval_seconds": 1.295,
+        "generation_seconds": 2.597,
+        "judge_seconds": 5.772,
+        "total_seconds": 9.664
+      }
+    },
+    {
+      "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+      "ground_truth": "The sign must be marked that the illumination system has been replaced, include the kit providers and installer's name, logo, or unique identifier, and if equipped with tubular light-emitting diode lamps powered by existing sign sockets, include a label alerting service personnel that the sign has been modified, including a warning not to install fluorescent lamps.",
+      "rag_answer": "The provided context does not contain enough information to answer the question.",
+      "answer_length": 80,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 1,
+        "clarity": 5,
+        "overall_score": 2,
+        "verdict": "fail",
+        "explanation": "The RAG system failed to retrieve any relevant context, as indicated by the empty context snippets. Consequently, its answer states that it cannot provide the information. While this statement is faithful to the empty context and clear, it completely fails to answer the question and does not match the ground truth factually or in completeness. The core function of a RAG system is to retrieve and then generate an answer; it failed at the retrieval stage."
+      },
+      "attempts": 1,
+      "timing": {
+        "retrieval_seconds": 1.286,
+        "generation_seconds": 2.465,
+        "judge_seconds": 7.244,
+        "total_seconds": 10.994
+      }
+    },
+    {
+      "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+      "ground_truth": "The switchboard utilizes 800VAC rated air circuit breakers ACB (800A \u2013 1200A).",
+      "rag_answer": "The provided context does not contain enough information to answer the question.",
+      "answer_length": 80,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 1,
+        "clarity": 5,
+        "overall_score": 2.6,
+        "verdict": "fail",
+        "explanation": "The RAG system correctly identified that the provided (empty) context did not contain the information to answer the question, demonstrating faithfulness to its retrieved context. However, it failed to provide the factual information requested by the question, which is present in the ground truth. Therefore, it is incorrect and incomplete relative to the ground truth answer and did not directly answer the question."
+      },
+      "attempts": 1,
+      "timing": {
+        "retrieval_seconds": 1.274,
+        "generation_seconds": 2.447,
+        "judge_seconds": 11.775,
+        "total_seconds": 15.496
+      }
+    },
+    {
+      "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+      "ground_truth": "The peak efficiency is 99.1%.",
+      "rag_answer": "The provided context does not contain enough information to answer the question.",
+      "answer_length": 80,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 4,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial",
+        "explanation": "The RAG system's answer correctly states that the provided context does not contain enough information to answer the question. This is highly faithful to the retrieved context, which is entirely empty. The answer is also clear and relevant in acknowledging its inability to respond. However, since the ground truth provides a specific factual answer (99.1%), the RAG system's response does not match it factually and is incomplete. This indicates a failure in the retrieval component of the RAG system, as it did not provide any relevant context to the generator."
+      },
+      "attempts": 1,
+      "timing": {
+        "retrieval_seconds": 1.292,
+        "generation_seconds": 2.433,
+        "judge_seconds": 13.407,
+        "total_seconds": 17.131
+      }
+    },
+    {
+      "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+      "ground_truth": "Signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. The markings shall be permanently installed, in letters at least 6 mm (1/4 in.) high, and shall be located where visible during relamping.",
+      "rag_answer": "The provided context does not contain any information regarding the markings required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C).",
+      "answer_length": 196,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 1,
+        "clarity": 5,
+        "overall_score": 1.8,
+        "verdict": "fail",
+        "explanation": "The RAG system failed to provide any information to answer the question, stating that the context was empty. While its statement about the context was clear, it did not provide the correct or complete answer, nor was any answer to the question grounded in the (empty) context. From a user's perspective, the system completely failed to fulfill the query."
+      },
+      "attempts": 1,
+      "timing": {
+        "retrieval_seconds": 1.28,
+        "generation_seconds": 2.804,
+        "judge_seconds": 20.513,
+        "total_seconds": 24.598
+      }
+    }
+  ]
+}
