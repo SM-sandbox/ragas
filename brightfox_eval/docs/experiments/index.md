@@ -9,6 +9,7 @@ This section documents all completed evaluation experiments with findings and me
 | [Embedding Model Comparison](embedding_model_comparison.md) | Dec 14, 2024 | gemini-embedding-001 with RETRIEVAL_QUERY wins |
 | [Embedding Dimension Test](embedding_dimension_test.md) | Dec 14, 2024 | 768 dimensions sufficient |
 | [Azure vs GCP](azure_vs_gcp.md) | Dec 14, 2024 | GCP wins by +0.23 score |
+| [Question Relevance](question_relevance.md) | Dec 14, 2024 | 99.1% of questions are high quality |
 
 ## Experiment Structure
 

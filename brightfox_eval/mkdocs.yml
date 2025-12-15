@@ -12,11 +12,13 @@ nav:
       - Embedding Model Comparison: experiments/embedding_model_comparison.md
       - Embedding Dimension Test: experiments/embedding_dimension_test.md
       - Azure vs GCP: experiments/azure_vs_gcp.md
+      - Question Relevance: experiments/question_relevance.md
   - Runbooks:
       - runbooks/index.md
       - Run Evaluation: runbooks/run_evaluation.md
       - Add New Documents: runbooks/add_documents.md
       - Create New Experiment: runbooks/create_experiment.md
+  - Roadmap: roadmap.md
 
 theme:
   name: material
