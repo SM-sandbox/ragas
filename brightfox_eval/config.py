@@ -45,8 +45,8 @@ class Config:
     ORCHESTRATOR_API_URL: str = "http://localhost:8000"
     
     # Job ID for the evaluation corpus
-    # Available jobs: brightfoxai__evaldocs66 (65 docs), brightfoxai__testv2 (8 docs)
-    ORCHESTRATOR_JOB_ID: str = "brightfoxai__evaldocs66"
+    # Available jobs: brightfoxai__evalv3 (66 docs), brightfoxai__testv3, brightfoxai__pages17
+    ORCHESTRATOR_JOB_ID: str = "brightfoxai__evalv3"
     
     # Retrieval settings
     RECALL_TOP_K: int = 100  # Number of candidates in recall phase

@@ -20,7 +20,7 @@ class OrchestratorConfig:
     api_base_url: str = "http://localhost:8000"
     
     # Job configuration
-    job_id: str = "brightfoxai__evaldocs66"
+    job_id: str = "brightfoxai__evalv3"
     
     # Retrieval settings
     recall_top_k: int = 100  # Number of candidates in recall phase
@@ -124,7 +124,7 @@ class OrchestratorClient:
 
 def create_orchestrator_client(
     api_url: str = "http://localhost:8000",
-    job_id: str = "brightfoxai__evaldocs66",
+    job_id: str = "brightfoxai__evalv3",
     recall: int = 100,
     precision: int = 12,
     semantic_weight: float = 0.5,
