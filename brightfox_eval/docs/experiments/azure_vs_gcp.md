@@ -50,4 +50,4 @@ python azure_comparison.py --filter-missing --workers 8
 
 ## Full Report
 
-See [GCP vs Azure RAG Comparison](../../reports/GCP_vs_Azure_RAG_Comparison.md) for the complete analysis.
+See the full report at `reports/GCP_vs_Azure_RAG_Comparison.md` in the repository root.
