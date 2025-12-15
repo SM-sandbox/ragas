@@ -59,3 +59,6 @@ Track and report API costs per evaluation run:
 - [x] Azure vs GCP platform comparison
 - [x] MkDocs documentation site
 - [x] Project reorganization
+- [x] **Retrieval Quality Metrics** - Recall@K, Precision@K, MRR at K=5,10,15,20,25,50,100
+- [x] Question Relevance Filtering (224 questions evaluated)
+- [x] genai.Client() caching fix (3.9x speedup for gemini embeddings)
