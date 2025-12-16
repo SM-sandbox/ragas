@@ -8,6 +8,19 @@ nav:
   - Architecture: architecture.md
   - Cookbook: cookbook.md
   - Metrics: metrics.md
+  - Reports:
+      - Executive Summary: ../reports/executive/RAG_Evaluation_Executive_Summary.md
+      - Foundational:
+          - Orchestrator vs Direct: ../reports/foundational/01_Orchestrator_vs_Direct.md
+          - Embedding Model Comparison: ../reports/foundational/02_Embedding_Model_Comparison.md
+          - Embedding Dimensions: ../reports/foundational/03_Embedding_Dimensions.md
+          - Task Type Comparison: ../reports/foundational/04_Task_Type_Comparison.md
+          - Reranker Impact: ../reports/foundational/05_Reranker_Impact.md
+          - LLM Judge Consistency: ../reports/foundational/06_LLM_Judge_Consistency.md
+      - Experiments:
+          - Temperature Sweep: ../reports/experiments/Temperature_Sweep.md
+          - Context Size Sweep: ../reports/experiments/Context_Size_Sweep.md
+          - Flash vs Pro: ../reports/experiments/Model_Comparison_Flash_vs_Pro.md
   - Experiments:
       - experiments/index.md
       - Embedding Model Comparison: experiments/embedding_model_comparison.md
