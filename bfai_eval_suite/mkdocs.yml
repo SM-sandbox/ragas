@@ -1,0 +1,63 @@
+site_name: BrightFox RAG Evaluation
+site_description: RAG evaluation framework for BrightFox SCADA/Solar document corpus
+repo_name: SM-sandbox/ragas
+repo_url: https://github.com/SM-sandbox/ragas
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Metrics: metrics.md
+  - Experiments:
+      - experiments/index.md
+      - Embedding Model Comparison: experiments/embedding_model_comparison.md
+      - Embedding Dimension Test: experiments/embedding_dimension_test.md
+      - Azure vs GCP: experiments/azure_vs_gcp.md
+      - Question Relevance: experiments/question_relevance.md
+      - LLM Consistency: experiments/llm_consistency.md
+  - Runbooks:
+      - runbooks/index.md
+      - Run Evaluation: runbooks/run_evaluation.md
+      - Add New Documents: runbooks/add_documents.md
+      - Create New Experiment: runbooks/create_experiment.md
+  - Roadmap: roadmap.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+
+plugins:
+  - search

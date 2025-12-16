@@ -1,0 +1,183 @@
+{
+  "timestamp": "2025-12-16T10:55:52.454615",
+  "duration_seconds": 7696.145271062851,
+  "config": {
+    "name": "Context Size 100 Experiment",
+    "model_id": "gemini-2.5-flash",
+    "temperature": 0.0,
+    "context_size": 100,
+    "thinking_effort": null,
+    "thinking_budget": null,
+    "thinking_level": null,
+    "embedding_model": "gemini-1536-RETRIEVAL_QUERY",
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "corpus_name": "qa_corpus_200",
+    "corpus_count": 448,
+    "recall_top_k": 100,
+    "reranker_model": "semantic-ranker-default@latest",
+    "judge_model": "gemini-2.5-flash",
+    "judge_temperature": 0.0
+  },
+  "model_info": {
+    "id": "gemini-2.5-flash",
+    "name": "Gemini 2.5 Flash",
+    "family": "gemini-2.5",
+    "version": "stable",
+    "status": "ga",
+    "cost_tier": "low",
+    "supports_thinking": true,
+    "thinking_config_type": "budget",
+    "can_disable_thinking": true,
+    "min_thinking_budget": 0,
+    "max_thinking_budget": 24576,
+    "default_thinking_budget": 8192,
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 65535,
+    "notes": "Fast, cost-effective with thinking. Recommended for most use cases. Can disable thinking with budget=0."
+  },
+  "preflight": {
+    "timestamp": "2025-12-16T10:55:47.832346",
+    "total_duration_ms": 4618.735313415527,
+    "all_passed": true,
+    "checks": [
+      {
+        "name": "GCP Auth",
+        "status": "pass",
+        "message": "GCP authentication valid",
+        "details": null,
+        "duration_ms": 589.6918773651123
+      },
+      {
+        "name": "Project Access",
+        "status": "pass",
+        "message": "Access to project civic-athlete-473921-c0 confirmed",
+        "details": null,
+        "duration_ms": 793.9989566802979
+      },
+      {
+        "name": "Orchestrator Import",
+        "status": "pass",
+        "message": "All orchestrator modules imported successfully",
+        "details": null,
+        "duration_ms": 2971.9460010528564
+      },
+      {
+        "name": "Model Registry",
+        "status": "pass",
+        "message": "Found 8 approved models",
+        "details": "gemini-3-pro-preview, gemini-2.5-pro, gemini-2.5-flash, gemini-2.5-flash-lite, gemini-2.0-flash...",
+        "duration_ms": 0.010967254638671875
+      },
+      {
+        "name": "Job Config",
+        "status": "pass",
+        "message": "Job 'bfai__eval66a_g1_1536_tt' found",
+        "details": "Index: N/A",
+        "duration_ms": 259.2966556549072
+      },
+      {
+        "name": "Corpus File",
+        "status": "pass",
+        "message": "Corpus loaded: 224 items",
+        "details": "/Users/scottmacon/Documents/GitHub/ragas/bfai_eval_suite/corpus/qa_corpus_200.json",
+        "duration_ms": 2.6481151580810547
+      },
+      {
+        "name": "Model Validation",
+        "status": "pass",
+        "message": "Model 'gemini-2.5-flash' is valid",
+        "details": "Family: gemini-2.5, Status: ga",
+        "duration_ms": 0.03600120544433594
+      },
+      {
+        "name": "Metrics Data",
+        "status": "pass",
+        "message": "All required fields present for metrics",
+        "details": "Corpus fields: question:\u2713, answer:\u2713, question_type:\u2713, source_document_combined:\u2713",
+        "duration_ms": 1.0540485382080078
+      },
+      {
+        "name": "API Connectivity",
+        "status": "skip",
+        "message": "Skipped (skip_api_check=True)",
+        "details": null,
+        "duration_ms": 0.0
+      }
+    ]
+  },
+  "retrieval_metrics": {
+    "recall_at_100": 0.98125,
+    "precision_at_5": 0.485,
+    "precision_at_10": 0.40625,
+    "precision_at_15": 0.36791666666666667,
+    "precision_at_20": 0.3396875,
+    "precision_at_25": 0.32,
+    "mrr_at_10": 0.7152058531746032
+  },
+  "timing": {
+    "retrieval": {
+      "avg": 0.18341020068952016,
+      "min": 0.13223028182983398,
+      "max": 0.5127592086791992,
+      "total": 82.16776990890503,
+      "count": 448
+    },
+    "reranking": {
+      "avg": 2.7873686381748746e-05,
+      "min": 1.4781951904296875e-05,
+      "max": 0.0001819133758544922,
+      "total": 0.012487411499023438,
+      "count": 448
+    },
+    "generation": {
+      "avg": 8.930687999618906,
+      "min": 2.290745735168457,
+      "max": 39.269766092300415,
+      "total": 4000.9482238292694,
+      "count": 448
+    },
+    "judge": {
+      "avg": 8.064769620341915,
+      "min": 2.6969008445739746,
+      "max": 61.341546058654785,
+      "total": 3613.0167899131775,
+      "count": 448
+    },
+    "total": {
+      "avg": 17.17889569433672,
+      "min": 5.499701261520386,
+      "max": 66.17363095283508,
+      "total": 7696.145271062851,
+      "count": 448
+    }
+  },
+  "tokens": null,
+  "answer_length": {
+    "avg_chars": 747.7946428571429,
+    "min_chars": 58,
+    "max_chars": 6308,
+    "total_chars": 335012,
+    "avg_words": 111.22321428571429,
+    "min_words": 9,
+    "max_words": 909
+  },
+  "judge_metrics": {
+    "verdicts": {
+      "pass": 342,
+      "partial": 66,
+      "fail": 40,
+      "error": 0,
+      "total": 448
+    },
+    "pass_rate": 0.7633928571428571,
+    "scores": {
+      "correctness": 4.453125,
+      "completeness": 4.285714285714286,
+      "faithfulness": 4.725446428571429,
+      "relevance": 4.604910714285714,
+      "clarity": 4.935267857142857,
+      "overall_score": 4.438839285714286
+    }
+  },
+  "detailed_results_count": 448
+}
