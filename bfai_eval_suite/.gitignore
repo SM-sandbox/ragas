@@ -9,8 +9,11 @@ __pycache__/
 *.pyo
 .mypy_cache/
 
-# Experiment data (synced to GCS instead)
-experiments/*/data/
+# Large experiment data files (archived to GCS)
+experiments/**/retrieval_cache.json
+experiments/**/*_checkpoint.jsonl
+data/all_chunks.json
+data/chunks/*.jsonl
 
 # IDE
 .idea/
