@@ -24,10 +24,12 @@ This report summarizes a comprehensive evaluation of the BrightFox RAG (Retrieva
 
 ### Bottom Line
 
-**The system achieves 76-77% pass rate** on a challenging technical Q&A corpus with:
-- **93.3% Recall@10** - 9 out of 10 queries find the correct document
-- **4.44/5 Overall Score** - High-quality, faithful answers
-- **~9s average response time** - Acceptable for production use
+**The system achieves 73.7% pass rate (production) / 76.3% (quality-critical)** on a challenging technical Q&A corpus with:
+
+- **93.3% Recall@10** - 9 out of 10 queries find the correct source document (retrieval stage)
+- **73.7% Pass Rate** - Production config with 25 context chunks
+- **4.38/5 Overall Score** - High-quality, faithful answers
+- **~7.4s average response time** - Production config latency
 - **100% reproducibility** - Deterministic outputs at temperature 0.0
 
 ---
@@ -237,16 +239,33 @@ evaluation:
 | Judge | 1.34s | 14.1% |
 | **Total** | **9.53s** | 100% |
 
-### Quality Metrics (Production Config)
+### Retrieval Quality (Before LLM Generation)
+
+These metrics measure how well we find the correct source documents.
+
+| Metric | Value | Description |
+|--------|-------|-------------|
+| Recall@10 | 93.3% | Correct doc found in top 10 retrieval results |
+| MRR@10 | 0.843 | Average rank of correct doc (~1.2) |
+
+### Generation Quality (LLM Answer Quality)
+
+These metrics measure the quality of the final LLM-generated answers.
+
+| Context Size | Pass Rate | Overall Score | Use Case |
+|--------------|-----------|---------------|----------|
+| **25 chunks** | **73.7%** | **4.38/5** | **Production (recommended)** |
+| 100 chunks | 76.3% | 4.44/5 | Quality-critical |
+
+### Detailed Scores (25 chunks - Production Config)
 
 | Metric | Value |
 |--------|-------|
-| Recall@10 | 93.3% |
-| MRR@10 | 0.843 |
-| Pass Rate | 76.3% |
-| Overall Score | 4.44/5 |
-| Faithfulness | 4.73/5 |
-| Correctness | 4.46/5 |
+| Correctness | 4.37/5 |
+| Completeness | 4.23/5 |
+| Faithfulness | 4.72/5 |
+| Relevance | 4.61/5 |
+| Clarity | 4.93/5 |
 
 ---
 
