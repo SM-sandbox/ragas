@@ -6,6 +6,7 @@ repo_url: https://github.com/SM-sandbox/ragas
 nav:
   - Home: index.md
   - Architecture: architecture.md
+  - Cookbook: cookbook.md
   - Metrics: metrics.md
   - Experiments:
       - experiments/index.md
