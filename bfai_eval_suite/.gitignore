@@ -12,6 +12,7 @@ __pycache__/
 # Large experiment data files (archived to GCS)
 experiments/**/retrieval_cache.json
 experiments/**/*_checkpoint.jsonl
+experiments/**/data/
 data/all_chunks.json
 data/chunks/*.jsonl
 
