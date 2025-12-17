@@ -31,7 +31,9 @@ from services.api.retrieval.vector_search import VectorSearchRetriever
 from services.api.ranking.google_ranker import GoogleRanker
 from services.api.generation.gemini import GeminiAnswerGenerator
 from services.api.core.config import QueryConfig
-from langchain_google_vertexai import ChatVertexAI
+# Add src to path for gemini_client
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
+from gemini_client import generate_for_judge, get_model_info
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
@@ -102,24 +104,16 @@ class GoldEvaluator:
         self.retriever = VectorSearchRetriever(job_config)
         self.ranker = GoogleRanker(project_id=PROJECT_ID)
         self.generator = GeminiAnswerGenerator()
-        self.judge = ChatVertexAI(
-            model_name="gemini-2.0-flash",
-            project=PROJECT_ID,
-            location=LOCATION,
-            temperature=0.0,
-        )
+        
+        # Log model info
+        model_info = get_model_info()
+        print(f"Judge model: {model_info['model_id']} ({model_info['status']})")
         
         self.checkpoint_file = OUTPUT_DIR / f"checkpoint_p{precision_k}.json"
         self.results_file = OUTPUT_DIR / f"results_p{precision_k}.json"
     
-    @retry(
-        stop=stop_after_attempt(5),
-        wait=wait_exponential(multiplier=1, min=1, max=60),
-        retry=retry_if_exception_type((Exception,)),
-        reraise=True
-    )
     def _judge_answer(self, question: str, ground_truth: str, answer: str, context: str) -> dict:
-        """Judge answer quality with exponential backoff."""
+        """Judge answer quality using Gemini 3 Flash with structured JSON output."""
         prompt = f"""You are an expert evaluator for a RAG system.
 Evaluate the RAG answer against the ground truth.
 
@@ -138,24 +132,14 @@ Score 1-5 for each (5=best):
 4. relevance - relevant to question?
 5. clarity - clear and well-structured?
 
-Respond with ONLY this JSON, no markdown:
-{{"correctness": <1-5>, "completeness": <1-5>, "faithfulness": <1-5>, "relevance": <1-5>, "clarity": <1-5>, "overall_score": <1-5>, "verdict": "pass|partial|fail"}}"""
+Respond with JSON containing: correctness, completeness, faithfulness, relevance, clarity, overall_score (all 1-5), and verdict (pass|partial|fail)."""
         
-        for attempt in range(5):
-            try:
-                response = self.judge.invoke(prompt)
-                text = response.content.strip()
-                # Strip markdown if present
-                if text.startswith("```"):
-                    text = text.split("```")[1]
-                    if text.startswith("json"):
-                        text = text[4:]
-                return json.loads(text.strip())
-            except Exception as e:
-                if attempt == 4:
-                    # Return partial scores on final failure
-                    return {"correctness": 3, "completeness": 3, "faithfulness": 3, "relevance": 3, "clarity": 3, "overall_score": 3, "verdict": "partial", "parse_error": str(e)}
-                time.sleep(0.5)
+        try:
+            # Use gemini_client with built-in retry and JSON output
+            return generate_for_judge(prompt)
+        except Exception as e:
+            # Return partial scores on failure
+            return {"correctness": 3, "completeness": 3, "faithfulness": 3, "relevance": 3, "clarity": 3, "overall_score": 3, "verdict": "partial", "parse_error": str(e)}
     
     def run_single(self, q: dict) -> dict:
         """Run single question through pipeline."""

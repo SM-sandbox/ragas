@@ -1,66 +1,58 @@
-"""LLM client using Google GenAI SDK with Vertex AI"""
+"""
+LLM client using Google GenAI SDK with Gemini 3 Flash.
+
+Updated: Dec 2025 - Migrated to google-genai SDK with API key auth
+"""
 import json
 from typing import Dict, Any, Optional
-from google import genai
 
-from config import config
+from gemini_client import (
+    generate,
+    generate_json as _generate_json,
+    generate_for_rag,
+    get_model_info,
+    get_client,
+)
 
 
 class LLMClient:
-    """Client for Vertex AI Gemini via google-genai SDK"""
+    """Client for Gemini 3 Flash via google-genai SDK"""
     
     def __init__(self, model_name: Optional[str] = None):
-        # Use Vertex AI backend with ADC
-        self.client = genai.Client(
-            vertexai=True, 
-            project=config.GCP_PROJECT_ID, 
-            location=config.GCP_LLM_LOCATION
-        )
-        self.model_name = model_name or config.LLM_MODEL
+        # Initialize the shared client
+        self.client = get_client()
+        model_info = get_model_info()
+        self.model_name = model_name or model_info["model_id"]
+        print(f"LLMClient initialized with {self.model_name}")
         
     def generate(
         self, 
         prompt: str, 
-        temperature: float = 0.1,
+        temperature: float = 0.0,
         max_tokens: int = 4096
     ) -> str:
         """Generate text from a prompt"""
-        response = self.client.models.generate_content(
+        result = generate(
+            prompt,
             model=self.model_name,
-            contents=prompt,
-            config=genai.types.GenerateContentConfig(
-                temperature=temperature,
-                max_output_tokens=max_tokens,
-            )
+            temperature=temperature,
+            max_output_tokens=max_tokens,
         )
-        
-        return response.text
+        return result["text"]
     
     def generate_json(
         self,
         prompt: str,
-        temperature: float = 0.1,
+        temperature: float = 0.0,
         max_tokens: int = 4096
     ) -> Dict[str, Any]:
         """Generate JSON response from a prompt"""
-        # Add JSON instruction to prompt
-        json_prompt = f"""{prompt}
-
-IMPORTANT: Respond ONLY with valid JSON. No markdown, no code blocks, just raw JSON."""
-        
-        response = self.generate(json_prompt, temperature, max_tokens)
-        
-        # Clean up response
-        response = response.strip()
-        if response.startswith("```json"):
-            response = response[7:]
-        if response.startswith("```"):
-            response = response[3:]
-        if response.endswith("```"):
-            response = response[:-3]
-        response = response.strip()
-        
-        return json.loads(response)
+        return _generate_json(
+            prompt,
+            model=self.model_name,
+            temperature=temperature,
+            max_output_tokens=max_tokens,
+        )
 
 
 if __name__ == "__main__":
@@ -69,3 +61,6 @@ if __name__ == "__main__":
     
     response = client.generate("What is a solar inverter? Answer in one sentence.")
     print(f"Response: {response}")
+    
+    json_response = client.generate_json("Return JSON with name='test' and value=123")
+    print(f"JSON Response: {json_response}")

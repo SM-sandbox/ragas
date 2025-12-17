@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
 LLM-as-Judge evaluation for the Q&A corpus.
-Evaluates answer quality, faithfulness, and relevance using Gemini.
+Evaluates answer quality, faithfulness, and relevance using Gemini 3 Flash.
+
+Updated: Dec 2025 - Migrated to google-genai SDK
 """
 import json
 import asyncio
@@ -9,10 +11,9 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional
 
-from langchain_google_vertexai import ChatVertexAI
-
 from config import config
 from rag_retriever import RAGRetriever
+from gemini_client import generate_for_judge, generate_for_rag, get_model_info
 
 
 class LLMJudge:
@@ -22,21 +23,9 @@ class LLMJudge:
         self.output_dir = Path(__file__).parent / config.OUTPUT_DIR
         self.retriever = RAGRetriever()
         
-        # Initialize judge LLM (using a capable model)
-        self.judge_llm = ChatVertexAI(
-            model_name="gemini-2.0-flash",
-            project=config.GCP_PROJECT_ID,
-            location=config.GCP_LLM_LOCATION,
-            temperature=0.0,  # Deterministic for evaluation
-        )
-        
-        # Initialize RAG LLM (the system being evaluated)
-        self.rag_llm = ChatVertexAI(
-            model_name="gemini-2.0-flash",
-            project=config.GCP_PROJECT_ID,
-            location=config.GCP_LLM_LOCATION,
-            temperature=0.3,
-        )
+        # Model info for logging
+        model_info = get_model_info()
+        print(f"Using model: {model_info['model_id']} ({model_info['status']})")
     
     def load_qa_corpus(self, filename: str = "qa_corpus_200.json") -> list[dict]:
         """Load the Q&A corpus"""
@@ -64,8 +53,8 @@ Question: {question}
 
 Answer:"""
         
-        response = self.rag_llm.invoke(prompt)
-        return response.content, context
+        response = generate_for_rag(prompt)
+        return response, context
     
     def judge_answer(self, question: str, ground_truth: str, rag_answer: str, context: str) -> dict:
         """Use LLM to judge the RAG answer quality"""
@@ -104,16 +93,9 @@ Respond with JSON in this exact format:
 """
         
         try:
-            response = self.judge_llm.invoke(judge_prompt)
-            response_text = response.content.strip()
-            
-            # Parse JSON
-            if response_text.startswith("```"):
-                response_text = response_text.split("```")[1]
-                if response_text.startswith("json"):
-                    response_text = response_text[4:]
-            
-            return json.loads(response_text)
+            # Use gemini_client for structured JSON output
+            result = generate_for_judge(judge_prompt)
+            return result
         except Exception as e:
             return {
                 "correctness": 0,
