@@ -292,12 +292,23 @@ def generate(
     logger.debug(f"Generating with {target_model}, thinking={thinking_level}")
     response = _generate_with_region_failover(client, target_model, prompt, config)
     
-    # Parse response
+    # Parse response with token counts
     result = {
         "text": response.text,
         "model_used": target_model,
         "thoughts": None,
+        "usage": None,
     }
+    
+    # Extract usage metadata (token counts)
+    if hasattr(response, "usage_metadata") and response.usage_metadata:
+        usage = response.usage_metadata
+        result["usage"] = {
+            "prompt_tokens": getattr(usage, "prompt_token_count", 0),
+            "response_tokens": getattr(usage, "candidates_token_count", 0),
+            "total_tokens": getattr(usage, "total_token_count", 0),
+            "thinking_tokens": getattr(usage, "thoughts_token_count", 0) if hasattr(usage, "thoughts_token_count") else 0,
+        }
     
     # Extract thoughts if requested
     if include_thoughts and response.candidates:
@@ -351,7 +362,22 @@ def generate_for_judge(prompt: str, **kwargs) -> dict:
         temperature=config.get("temperature"),
         thinking_level="LOW",  # Fast for judge
     )
-    return json.loads(result["text"])
+    
+    # Parse JSON, handling list responses
+    text = result["text"]
+    if text is None:
+        return {"error": "No response text", "verdict": "error"}
+    
+    try:
+        parsed = json.loads(text)
+        # If response is a list, take first element
+        if isinstance(parsed, list) and len(parsed) > 0:
+            parsed = parsed[0]
+        if not isinstance(parsed, dict):
+            return {"error": f"Unexpected type: {type(parsed)}", "verdict": "error"}
+        return parsed
+    except json.JSONDecodeError as e:
+        return {"error": f"JSON parse error: {e}", "verdict": "error"}
 
 
 def generate_for_rag(prompt: str, **kwargs) -> str:
