@@ -251,16 +251,50 @@ PYTHONUNBUFFERED=1
 4. Set up logging to file
 
 ### 4.2 Running the Eval
+
 ```bash
 # Test run (30 questions, 5 per bucket)
-python scripts/run_gold_eval.py --test --precision 25
+python scripts/eval/run_gold_eval.py --test --precision 25
+
+# Quick test (N questions only)
+python scripts/eval/run_gold_eval.py --quick 20 --workers 5
+
+# Full run with parallel execution (5 workers default)
+python scripts/eval/run_gold_eval.py --precision 25 --workers 5
 
 # Full run with nohup for long-running
-nohup python scripts/run_gold_eval.py --precision 25 > logs/run_p25.log 2>&1 &
+nohup python scripts/eval/run_gold_eval.py --precision 25 --workers 5 > logs/run_p25.log 2>&1 &
 
 # Monitor progress
 watch -n 30 'cat reports/gold_standard_eval/checkpoint_p25.json | python3 -c "import sys,json; d=json.load(sys.stdin); print(len(d))"'
 ```
+
+### 4.3 Parallel Execution
+
+The eval script supports parallel execution via ThreadPoolExecutor:
+
+| Workers | RPM Quota | Use Case |
+|---------|-----------|----------|
+| 1 | Any | Sequential, debugging |
+| 5 | 60 (default) | Safe parallel, ~4x speedup |
+| 15-25 | 1500 | After quota increase, ~10x speedup |
+
+**Command line options:**
+
+```bash
+--workers N    # Number of parallel workers (default: 5)
+--quick N      # Run only N questions (for testing)
+```
+
+**Rate limiting:** The script uses `tenacity` for exponential backoff:
+- 5 retry attempts
+- Wait: 1s → 2s → 4s → 8s → 16s (max 60s)
+- Handles 429 rate limit errors automatically
+
+**Tested performance (20 questions, 5 workers):**
+- Sequential estimate: 48s
+- Parallel actual: 11s
+- **Speedup: 4.4x**
 
 ### 4.3 Checkpointing
 - Checkpoint every N questions (default: 10)

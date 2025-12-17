@@ -1,20 +1,82 @@
 # Speed & Performance Optimization Guide
 
-**Version:** 1.0  
+**Version:** 2.0  
 **Date:** December 17, 2025  
 **Purpose:** Comprehensive analysis of bottlenecks and strategies to maximize evaluation throughput
 
 ---
 
+## ⚠️ CRITICAL: Google GenAI vs Vertex AI Endpoints
+
+> **YOU MUST USE GOOGLE-GENAI, NOT VERTEX AI FOR GEMINI 2.5**
+
+### Why This Matters
+
+| Feature | google-genai | Vertex AI |
+|---------|--------------|-----------|
+| Gemini 2.5 Flash/Pro | ✅ Full support | ⚠️ Limited |
+| Reasoning settings | ✅ `thinking_budget` | ❌ Not available |
+| Token budgets | ✅ Configurable | ❌ Not available |
+| Deprecation | June 2025 | Ongoing |
+
+### The Problem
+
+Vertex AI endpoint (`aiplatform.googleapis.com`) does **NOT** support:
+- `thinking_budget` parameter for reasoning control
+- Token budget configuration for Gemini 2.5 models
+- Full Gemini 2.5 Flash/Pro feature set
+
+### The Solution
+
+Use the **google-genai** SDK (deprecated June 2025, but currently the ONLY way):
+
+```python
+# CORRECT - google-genai SDK
+import google.generativeai as genai
+
+genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+model = genai.GenerativeModel(
+    model_name="gemini-2.5-flash-preview-05-20",
+    generation_config={
+        "temperature": 0.0,
+        "max_output_tokens": 8192,
+        "thinking_config": {"thinking_budget": 1024}  # ONLY available here
+    }
+)
+
+# WRONG - Vertex AI (missing features)
+from vertexai.generative_models import GenerativeModel
+model = GenerativeModel("gemini-2.5-flash")  # No thinking_budget support!
+```
+
+### API Key Setup
+
+```bash
+# Get API key from Google AI Studio (not Cloud Console)
+# https://aistudio.google.com/app/apikey
+
+export GOOGLE_API_KEY="your-api-key-here"
+```
+
+### Migration Plan
+
+Google-genai is deprecated but functional until June 2025. Monitor for:
+1. Vertex AI adding `thinking_budget` support
+2. New unified SDK announcement
+3. Migration path documentation
+
+---
+
 ## Table of Contents
 
-1. [Current Performance Baseline](#1-current-performance-baseline)
-2. [Bottleneck Analysis](#2-bottleneck-analysis)
-3. [Parallelism Strategies](#3-parallelism-strategies)
-4. [Cloud-Based Scaling](#4-cloud-based-scaling)
-5. [Code Optimizations](#5-code-optimizations)
-6. [Quota Management](#6-quota-management)
-7. [Implementation Roadmap](#7-implementation-roadmap)
+1. [Critical: Google GenAI vs Vertex AI](#️-critical-google-genai-vs-vertex-ai-endpoints)
+2. [Current Performance Baseline](#1-current-performance-baseline)
+3. [Bottleneck Analysis](#2-bottleneck-analysis)
+4. [Parallelism Strategies](#3-parallelism-strategies)
+5. [Cloud-Based Scaling](#4-cloud-based-scaling)
+6. [Code Optimizations](#5-code-optimizations)
+7. [Quota Management](#6-quota-management)
+8. [Implementation Roadmap](#7-implementation-roadmap)
 
 ---
 
@@ -539,8 +601,9 @@ def robust_api_call(func, *args, **kwargs):
 ## Quick Reference: Speedup Commands
 
 ### Enable Parallel Execution (Immediate)
+
 ```python
-# In run_gold_eval.py, change:
+# In scripts/eval/run_gold_eval.py, change:
 # OLD:
 for q in questions:
     result = self.run_single(q)
@@ -555,6 +618,7 @@ with ThreadPoolExecutor(max_workers=15) as executor:
 ```
 
 ### Request Quota Increase
+
 ```bash
 # Check current quota
 gcloud alpha services quota list \
@@ -566,6 +630,7 @@ open "https://console.cloud.google.com/iam-admin/quotas?project=$PROJECT_ID"
 ```
 
 ### Monitor Rate Limits
+
 ```bash
 # Watch for 429 errors in logs
 tail -f logs/eval.log | grep -i "429\|rate\|quota"
@@ -583,6 +648,22 @@ tail -f logs/eval.log | grep -i "429\|rate\|quota"
 | **458 questions** | 72 min | 3-5 min | Parallel + rate limit bump |
 
 **Bottom line:** Request the quota increase and add ThreadPoolExecutor. That's 90% of the win with 10% of the effort.
+
+---
+
+## File Locations (Updated Structure)
+
+| Component | Path |
+|-----------|------|
+| Eval scripts | `scripts/eval/` |
+| Generator | `src/generator.py` |
+| Judge | `src/judge.py` |
+| Retriever | `src/retriever.py` |
+| Reranker | `src/reranker.py` |
+| Config | `src/config.py` |
+| Gold corpus | `clients/BFAI/qa/QA_BFAI_gold_v1-0__q458.json` |
+| Test results | `clients/BFAI/tests/TID_XX/data/` |
+| GCS bucket | `gs://bfai-eval-suite/BFAI/` |
 
 ---
 

@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-Gold Standard Evaluation with Checkpointing.
+Gold Standard Evaluation with Checkpointing and Parallel Execution.
 
 Runs full RAG pipeline evaluation on gold corpus.
 Checkpoints every 10 questions to resume on failure.
+Supports parallel execution with ThreadPoolExecutor.
 
 Usage:
-  python scripts/run_gold_eval.py --test        # Run 30 questions (5 per bucket)
-  python scripts/run_gold_eval.py               # Run full 458 questions
-  python scripts/run_gold_eval.py --precision 12  # Use precision@12 instead of @25
+  python scripts/eval/run_gold_eval.py --test           # Run 30 questions (5 per bucket)
+  python scripts/eval/run_gold_eval.py                  # Run full 458 questions
+  python scripts/eval/run_gold_eval.py --precision 12   # Use precision@12 instead of @25
+  python scripts/eval/run_gold_eval.py --workers 5      # Parallel with 5 workers
 """
 
 import sys
@@ -18,6 +20,9 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 sys.path.insert(0, "/Users/scottmacon/Documents/GitHub/sm-dev-01")
 
@@ -30,9 +35,10 @@ from langchain_google_vertexai import ChatVertexAI
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
-CORPUS_PATH = Path(__file__).parent.parent / "corpus" / "qa_corpus_gold_500.json"
-OUTPUT_DIR = Path(__file__).parent.parent / "reports" / "gold_standard_eval"
+CORPUS_PATH = Path(__file__).parent.parent.parent / "clients" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
+OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "gold_standard_eval"
 CHECKPOINT_INTERVAL = 10
+DEFAULT_WORKERS = 5  # Safe for 60 RPM quota, increase to 15-25 with 1500 RPM
 
 
 def load_corpus(test_mode: bool = False):
@@ -81,8 +87,10 @@ def extract_json(text: str) -> dict:
 
 
 class GoldEvaluator:
-    def __init__(self, precision_k: int = 25):
+    def __init__(self, precision_k: int = 25, workers: int = DEFAULT_WORKERS):
         self.precision_k = precision_k
+        self.workers = workers
+        self.lock = Lock()  # Thread-safe checkpoint access
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         
         # Initialize components
@@ -104,8 +112,14 @@ class GoldEvaluator:
         self.checkpoint_file = OUTPUT_DIR / f"checkpoint_p{precision_k}.json"
         self.results_file = OUTPUT_DIR / f"results_p{precision_k}.json"
     
+    @retry(
+        stop=stop_after_attempt(5),
+        wait=wait_exponential(multiplier=1, min=1, max=60),
+        retry=retry_if_exception_type((Exception,)),
+        reraise=True
+    )
     def _judge_answer(self, question: str, ground_truth: str, answer: str, context: str) -> dict:
-        """Judge answer quality."""
+        """Judge answer quality with exponential backoff."""
         prompt = f"""You are an expert evaluator for a RAG system.
 Evaluate the RAG answer against the ground truth.
 
@@ -197,10 +211,11 @@ Respond with ONLY this JSON, no markdown:
         }
     
     def run(self, questions: list):
-        """Run evaluation with checkpointing."""
+        """Run evaluation with checkpointing and optional parallelism."""
         print(f"\n{'='*60}")
         print(f"GOLD STANDARD EVAL - Precision@{self.precision_k}")
         print(f"Questions: {len(questions)}")
+        print(f"Workers: {self.workers}")
         print(f"{'='*60}\n")
         
         # Load checkpoint
@@ -211,33 +226,57 @@ Respond with ONLY this JSON, no markdown:
                     completed[r["question_id"]] = r
             print(f"Resuming from checkpoint: {len(completed)} done")
         
-        results = []
+        # Filter out already completed
+        pending = [q for q in questions if q.get("question_id", "") not in completed]
+        print(f"Pending: {len(pending)} questions")
         
-        for i, q in enumerate(questions):
-            qid = q.get("question_id", f"q_{i}")
-            
-            if qid in completed:
-                results.append(completed[qid])
-                continue
-            
-            try:
-                result = self.run_single(q)
-                results.append(result)
-                completed[qid] = result
-                
-                # Progress
-                verdict = result.get("judgment", {}).get("verdict", "?")
-                print(f"[{i+1}/{len(questions)}] {qid}: {verdict} ({result['time']:.1f}s)")
-                
-                # Checkpoint
-                if (i + 1) % CHECKPOINT_INTERVAL == 0:
-                    with open(self.checkpoint_file, 'w') as f:
-                        json.dump(list(completed.values()), f, indent=2)
-                    print(f"  >> Checkpoint saved ({len(completed)} questions)")
+        results = list(completed.values())
+        processed = len(completed)
+        
+        if self.workers == 1:
+            # Sequential mode
+            for i, q in enumerate(pending):
+                qid = q.get("question_id", f"q_{processed + i}")
+                try:
+                    result = self.run_single(q)
+                    results.append(result)
+                    completed[qid] = result
+                    verdict = result.get("judgment", {}).get("verdict", "?")
+                    print(f"[{processed + i + 1}/{len(questions)}] {qid}: {verdict} ({result['time']:.1f}s)")
                     
-            except Exception as e:
-                print(f"[{i+1}/{len(questions)}] {qid}: ERROR - {e}")
-                results.append({"question_id": qid, "error": str(e)})
+                    if (processed + i + 1) % CHECKPOINT_INTERVAL == 0:
+                        with open(self.checkpoint_file, 'w') as f:
+                            json.dump(list(completed.values()), f, indent=2)
+                        print(f"  >> Checkpoint saved ({len(completed)} questions)")
+                except Exception as e:
+                    print(f"[{processed + i + 1}/{len(questions)}] {qid}: ERROR - {e}")
+                    results.append({"question_id": qid, "error": str(e)})
+        else:
+            # Parallel mode with ThreadPoolExecutor
+            print(f"Starting parallel execution with {self.workers} workers...")
+            with ThreadPoolExecutor(max_workers=self.workers) as executor:
+                futures = {executor.submit(self.run_single, q): q for q in pending}
+                
+                for future in as_completed(futures):
+                    q = futures[future]
+                    qid = q.get("question_id", "unknown")
+                    try:
+                        result = future.result(timeout=120)
+                        with self.lock:
+                            results.append(result)
+                            completed[qid] = result
+                            processed += 1
+                            verdict = result.get("judgment", {}).get("verdict", "?")
+                            print(f"[{processed}/{len(questions)}] {qid}: {verdict} ({result['time']:.1f}s)")
+                            
+                            if processed % CHECKPOINT_INTERVAL == 0:
+                                with open(self.checkpoint_file, 'w') as f:
+                                    json.dump(list(completed.values()), f, indent=2)
+                                print(f"  >> Checkpoint saved ({len(completed)} questions)")
+                    except Exception as e:
+                        print(f"[?/{len(questions)}] {qid}: ERROR - {e}")
+                        with self.lock:
+                            results.append({"question_id": qid, "error": str(e)})
         
         # Final save
         with open(self.checkpoint_file, 'w') as f:
@@ -283,10 +322,19 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--test", action="store_true", help="Test mode: 30 questions")
     parser.add_argument("--precision", type=int, default=25, help="Precision@K (default: 25)")
+    parser.add_argument("--workers", type=int, default=DEFAULT_WORKERS, 
+                        help=f"Number of parallel workers (default: {DEFAULT_WORKERS}, use 1 for sequential)")
+    parser.add_argument("--quick", type=int, default=0, help="Quick test: run N questions only")
     args = parser.parse_args()
     
     questions = load_corpus(test_mode=args.test)
-    evaluator = GoldEvaluator(precision_k=args.precision)
+    
+    # Quick mode for testing parallelism
+    if args.quick > 0:
+        questions = questions[:args.quick]
+        print(f"QUICK MODE: Running {len(questions)} questions only")
+    
+    evaluator = GoldEvaluator(precision_k=args.precision, workers=args.workers)
     evaluator.run(questions)
 
 
