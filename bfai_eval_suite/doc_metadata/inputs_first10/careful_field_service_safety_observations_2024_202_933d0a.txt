@@ -1,0 +1,367 @@
+--- Page 1 ---
+Company Name:  Careful Field Service 
+Report of List of Safety Observations Collected from Field Technicians 
+Date of Report: July 1, 2025 
+ 
+Field Safety Observations (July 1 – December 31 2024): 
+1. During a morning vehicle inspection, I found one of the truck’s rear brake lights was 
+out. This could have led to unsafe driving conditions, especially during long highway 
+runs. The issue was reported and corrected before departure. 
+2. While moving through a substation yard, I spotted a partially buried cable protruding 
+above ground. It created a trip hazard near the walkway. I flagged it with caution 
+tape and reported it to site operations. 
+3. A coworker attempted to lift a junction box without assistance. The weight exceeded 
+safe manual lifting limits. I stopped work and reminded the team to use a two-
+person lift or mechanical aid. 
+4. During PPE checks, a technician had a cracked face shield. This would not have 
+provided proper arc-flash protection during switching. The shield was replaced 
+before work started. 
+5. While driving to site, I observed a tech on our crew using their phone to check 
+directions. This presented a distracted driving hazard. I reminded them to use 
+hands-free navigation before continuing. 
+6. At a wind site, I found the turbine tower ladder fall-arrest system had a frayed 
+section of cable. I locked out the climb and called in maintenance. No climbing was 
+performed until it was corrected. 
+7. While reviewing site access, a truck entered the access road too quickly, kicking up 
+dust and reducing visibility. I reminded the driver about speed control and safe 
+approach on unpaved roads. 
+8. At the battery storage yard, a cooling fan cover was missing on one container unit. 
+This exposed sharp edges and moving parts. Work was stopped until the area was 
+made safe. 
+9. A spilled cup of coffee in the control trailer created a slip hazard near the entrance. I 
+cleaned the area and placed a sign until dry. Such small hazards can lead to injuries 
+if not addressed. 
+
+
+--- Page 2 ---
+10. While conducting a lockout/tagout, I noticed the tag did not include the technician’s 
+full name and date. Incomplete information could cause confusion during shift 
+handover. The tag was corrected immediately. 
+11. On the way to a solar site, our truck’s low tire pressure indicator came on. We pulled 
+over and confirmed one tire was at 50% pressure. It was unsafe to continue until the 
+tire was repaired. 
+12. While walking a PV array row, I tripped slightly over a grounding cable that was not 
+secured tightly. This could easily cause a fall. I reported it and placed a cone until 
+repair. 
+13. During inverter troubleshooting, a technician reached into the cabinet without 
+voltage testing the bus first. I stopped them and reminded them of the test-before-
+touch rule. Work resumed safely afterward. 
+14. At the EV charging site, I saw an extension cord being used across a walkway. It 
+posed a trip hazard for pedestrians. I re-routed the cord overhead with a hook. 
+15. While performing a harness check, I noticed one lanyard hook was cracked. Using 
+this could have resulted in fall arrest failure. The equipment was tagged out and 
+replaced. 
+16. Driving through a rural access road, I saw deer crossing ahead. Quick braking 
+prevented a collision, but it reinforced the need to watch wildlife in these areas. The 
+crew was reminded at tailboard. 
+17. At a BESS container, a technician attempted to bypass a panel interlock. I stopped 
+the work and reinforced that interlocks must never be bypassed. The supervisor was 
+informed. 
+18. While unloading tools from the truck bed, one of the ratchet straps failed. Tools 
+nearly fell onto the ground and could have struck feet. Straps were replaced with 
+new ones. 
+19. At the substation, I found a missing ground clamp on a portable grounding set. This 
+could compromise electrical safety. The set was removed from service immediately. 
+20. A colleague reported dizziness after climbing a turbine tower. We stopped work and 
+escorted them down carefully. Hydration and rest were provided before returning to 
+work. 
+21. While reviewing a fire extinguisher at site, I found the gauge was in the red zone. This 
+unit would not have functioned in an emergency. The extinguisher was replaced. 
+
+
+--- Page 3 ---
+22. While walking across the solar field, uneven ground caused a near ankle twist. I 
+marked the depression and reported it to site management for grading. 
+23. In the control trailer, an overloaded power strip was being used for multiple 
+chargers. This created a fire hazard. I redistributed loads and unplugged 
+nonessential devices. 
+24. During a storm, a technician attempted to continue working outdoors near the array. 
+Lightning was approaching. I stopped all work until conditions were safe. 
+25. While inspecting safety glasses, I found one pair without side shields. These would 
+not protect adequately during grinding work. Correct PPE was issued before the 
+task. 
+26. At a wind farm parking area, I noticed a truck parked blocking the fire lane. This 
+could impede emergency access. The vehicle was moved immediately. 
+27. A site worker was carrying two heavy toolboxes without gloves. One slipped and 
+nearly pinched their hand. Gloves and a two-person carry were required moving 
+forward. 
+28. While testing a disconnect switch, the handle was stiff and did not fully engage. This 
+could leave equipment partially energized. I tagged it and reported it for 
+maintenance. 
+29. A vehicle inspection revealed windshield wipers that were worn out. Rain was 
+forecast that afternoon, making this unsafe. Wipers were replaced before driving. 
+30. During trench work for conduit, a worker stepped too close to the edge of the 
+excavation without shoring. I stopped them and reminded about cave-in risk. 
+Barricades were added. 
+31. At the solar array, a panel junction box was open with exposed wiring. I stopped 
+work in the row and reported it for immediate repair. Area was taped off. 
+32. While transporting a ladder, a technician carried it horizontally without a spotter. It 
+nearly struck another worker passing by. I corrected the method and provided a 
+spotter. 
+33. During tower climbing prep, a tech’s harness D-ring showed signs of rust. This 
+weakened equipment could fail during a fall. Harness was replaced before climbing. 
+
+
+--- Page 4 ---
+34. A truck parked on uneven ground rolled slightly because wheel chocks were not 
+placed. The movement was caught in time. Wheel chocks are now mandated during 
+all stops on slope. 
+35. While using a grinder, a worker did not secure their sleeves. The fabric nearly caught 
+in the tool. I stopped the work and reminded about tight-fitting clothing. 
+36. At a charging site, I saw a chemical spill from a leaking battery pack. I stopped the 
+job and called HAZMAT for proper cleanup. No one was injured. 
+37. A technician was about to enter a confined space container without a gas test. I 
+intervened and ensured proper testing was performed first. The area was safe after 
+clearance. 
+38. During pre-drive, I found the truck’s rearview mirror loose. This could have led to 
+poor visibility. The issue was fixed before heading out. 
+39. While climbing stairs to the substation control house, I noticed ice accumulation. It 
+created a slip hazard. I applied ice melt and posted caution signage. 
+40. A coworker removed gloves to handle energized testing probes. I immediately 
+stopped them and reminded about electrical PPE requirements. Correct gloves 
+were worn thereafter. 
+41. While checking grounding mats, I noticed corrosion around one bond point. This 
+could compromise protection. The mat was replaced before continuing work. 
+42. During a site walk, I found debris and packaging left in the walkway. It created a trip 
+hazard. I cleaned the area and reminded the crew to keep clear paths. 
+43. At the inverter skid, a cooling fan blade guard was missing. This posed a risk of 
+contact with rotating equipment. The unit was tagged until fixed. 
+44. While fueling the truck, a technician left the nozzle unattended. This is unsafe and 
+could result in a spill. I reminded them to remain at the pump. 
+45. On a long drive between sites, a crew member began showing signs of fatigue. We 
+pulled over and switched drivers. Breaks were reinforced for long-distance travel. 
+46. A site visitor attempted to enter without PPE. I stopped them and issued a hard hat, 
+safety glasses, and vest. Orientation was provided before allowing entry. 
+47. While troubleshooting a communication rack, a loose overhead cable fell when 
+moved. It narrowly missed striking the worker. I secured all cables properly. 
+
+
+--- Page 5 ---
+48. At a turbine pad, hydraulic oil was found leaking from a tool. I stopped use and 
+reported it to prevent slip hazards and environmental contamination. 
+49. While conducting an overhead lift, a rigger signaled without eye contact to the 
+operator. This created confusion and nearly caused a dropped load. We reinforced 
+clear communication protocols. 
+50. While inspecting the ladder rack in the inverter station, I noticed the ladder feet 
+were not fully stable on the gravel surface. I secured the base with rubber mats 
+before use. A potential fall hazard was avoided. 
+51. While walking near a BESS container, I found a set of unsecured gas cylinders 
+standing upright without chains. These could easily tip and cause serious injury. I 
+secured them and notified the site lead. 
+52. During a pre-job briefing, one technician admitted to not sleeping well after a long 
+drive. We decided to reassign tasks to avoid fatigue-related mistakes. Rest 
+requirements were reinforced for the team. 
+53. At the solar site, I found a live ant mound directly in front of a combiner box. It could 
+cause technicians to trip or be bitten while servicing. The area was treated before 
+proceeding. 
+54. A worker was using earbuds while driving the site truck. This limited awareness of 
+sirens and alarms. The behavior was corrected immediately. 
+55. While handling a torque wrench, a technician used the wrong setting and nearly 
+over-tightened a bus connection. I intervened and reminded the crew about 
+verifying torque values against the work order. 
+56. At the base of a turbine, I noticed coolant fluid dripping from a hose connection. It 
+was creating a slick surface near the ladder entry. I placed absorbent pads and 
+reported the leak. 
+57. During a tool check, one worker’s insulated screwdriver had a cracked handle. The 
+damage exposed conductive metal. The tool was removed from service. 
+58. While approaching the yard, a semi-truck blocked the only emergency exit gate. I 
+contacted the driver and cleared the access immediately. This highlighted the 
+importance of keeping exits unobstructed. 
+59. A team member almost stepped backward off a loading dock while giving hand 
+signals. I reminded everyone to stay situationally aware during rigging operations. 
+Guard rails were also reinstalled. 
+
+
+--- Page 6 ---
+60. At the control room, a heater was plugged into a frayed extension cord. This 
+presented a major fire hazard. The cord was removed and replaced with a safe one. 
+61. While inspecting harnesses, I found one missing a leg strap. This would have failed 
+during a fall. It was tagged and replaced. 
+62. A technician drove past a stop sign inside the yard without slowing. I reminded the 
+team that site traffic rules are just as critical as public road safety. Reinforcement 
+was given during the next safety talk. 
+63. During cable pulling, a worker placed their hand near the reel without gloves. The 
+spinning reel nearly caught their fingers. Gloves were issued and safe distance was 
+reinforced. 
+64. At the EV charging site, I found a junction box missing its cover plate. The exposed 
+wiring was vulnerable to weather and contact. I stopped work in the area until it was 
+repaired. 
+65. While on a long drive, I saw a coworker nodding off. I immediately offered to switch 
+drivers and reminded them to call out fatigue before it becomes critical. We stopped 
+for coffee and rest. 
+66. A site worker carried a ladder vertically through a narrow walkway. The ladder nearly 
+struck overhead conduit. We stopped and reviewed safe ladder handling. 
+67. During storm prep, I noticed unsecured tarps flapping near electrical gear. They 
+could have blown into energized components. The tarps were tied down or removed. 
+68. At a wind site, I found a missing guardrail on the mezzanine platform. This was an 
+immediate fall hazard. I locked out the platform until corrected. 
+69. While refueling a generator, a tech did not wear safety glasses. A splash hazard was 
+present. PPE compliance was enforced before continuing. 
+70. On a site drive, a crew truck carried an unsecured ladder on the roof rack. The straps 
+were loose, and it could have flown off. We re-secured the load properly. 
+71. During a solar tracker inspection, I found one array moving out of alignment due to a 
+loose drive arm. This created pinch hazards. Work was stopped in that row until 
+maintenance arrived. 
+72. While working in the substation, a worker set a metal water bottle on top of a live 
+panel. I immediately removed it and reminded them about conductive items. 
+
+
+--- Page 7 ---
+73. During a fire drill, one worker did not know the muster point location. We reviewed 
+evacuation routes with the entire crew. 
+74. At the inverter yard, I found a ground rod that had come loose from the bonding 
+strap. This compromised grounding integrity. It was repaired before energization. 
+75. A crew member was seen chewing tobacco inside the turbine tower. This distracted 
+them during ladder climbing. They were reminded of safe climbing practices and no-
+tobacco rules. 
+76. While checking a torque gun, I found the battery pack leaking fluid. The tool was 
+taken out of service, and the spill was cleaned. 
+77. At a PV site, cattle from a nearby ranch entered the perimeter through a broken 
+fence. This created unexpected hazards around the work zone. The area was 
+secured and reported. 
+78. During confined space entry, a worker attempted to enter without a spotter present. 
+I stopped the activity and reinforced buddy system protocols. 
+79. While preparing to hoist tools, a worker placed them loosely in a bucket. Items 
+nearly fell during lifting. We switched to a secured tool bag. 
+80. On a night shift, I noticed insufficient lighting in the inverter yard. Workers could 
+easily trip over cables. Temporary lighting towers were set up. 
+81. At the EV site, I found a charging connector left hanging by its cord. This damaged 
+the insulation and created a hazard. It was reported and taken out of service. 
+82. While removing weeds from under panels, a technician used a lighter to burn dry 
+grass. I stopped the unsafe act immediately and explained the fire hazard. 
+83. A site visitor walked into the laydown yard without steel-toed boots. They were 
+stopped and issued proper PPE. Entry is restricted until compliance is verified. 
+84. During grounding verification, a tech nearly connected a clamp to painted metal 
+instead of bare surface. I intervened to ensure proper bonding. 
+85. While transporting a load on a forklift, the operator drove with the forks raised too 
+high. This created instability. The operator was corrected and retrained. 
+86. At the turbine base, a bucket of hydraulic oil was left without a lid. Dust and dirt 
+could contaminate the fluid. The container was sealed and stored properly. 
+
+
+--- Page 8 ---
+87. While driving at dawn, a worker did not turn on vehicle headlights. This made the 
+truck less visible. We stopped and reviewed driving procedures. 
+88. During equipment inspection, a fire alarm pull station was blocked by stored boxes. 
+I cleared the area and reminded everyone about keeping egress routes open. 
+89. At the battery yard, a bird’s nest was found inside a cooling vent. This blocked 
+airflow and posed fire risks. The unit was powered down for cleaning. 
+90. While carrying conduit, a worker swung it around and nearly struck another 
+technician. I stopped the unsafe behavior and explained safe handling. 
+91. During overhead crane use, a worker walked under a suspended load. I immediately 
+stopped the operation and reinforced the no-walk zone. 
+92. At the control room, a space heater was left on unattended overnight. This created a 
+fire hazard. The heater was unplugged and banned for unattended use. 
+93. While checking the eyewash station, I found the water flow was weak and 
+inconsistent. The unit was tagged out until fixed. 
+94. On the access road, a crew truck followed another vehicle too closely. This left no 
+time to react in case of sudden stops. We reinforced safe following distances. 
+95. While grinding metal, a worker did not use hearing protection. The noise levels 
+exceeded safe limits. Earplugs were issued before continuing. 
+96. At the wind site, I found a technician climbing without chin straps fastened on their 
+helmet. This posed a risk of headgear falling. The issue was corrected before 
+climbing continued. 
+97. During breaker testing, one worker attempted to use a multimeter with a damaged 
+probe. I stopped the work and provided safe test leads. 
+98. While walking near the warehouse, I noticed a forklift operator driving with reduced 
+visibility due to stacked boxes. I flagged them down and asked for a spotter. 
+99. At the PV site, a snake was found under a combiner box. Work was stopped until the 
+animal safely left. The area was flagged for awareness. 
+100. 
+While checking the substation transformer, I noticed oil staining at the base 
+indicating a possible leak. This could worsen into a fire hazard. It was reported for 
+immediate maintenance. 
+
+
+--- Page 9 ---
+101. 
+While unloading conduit, I noticed a worker carrying multiple lengths without 
+watching their footing. They stumbled on uneven ground and nearly fell. I reminded 
+the team to use spotters and carry manageable loads. 
+102. 
+At the solar tracker motor, I found loose bolts on the mounting bracket. The 
+assembly could have dropped unexpectedly. Work was paused until the bracket 
+was tightened. 
+103. 
+During a site walk, I observed a technician climbing a short step ladder 
+without maintaining three points of contact. They almost lost balance while 
+reaching overhead. Safe climbing procedures were reinforced. 
+104. 
+A crew member was about to enter the inverter yard without a hard hat, 
+assuming it was a low-risk zone. I reminded them PPE is required at all times on site. 
+They complied immediately. 
+105. 
+While driving into a remote site, our truck’s check engine light came on. We 
+pulled over and contacted fleet for guidance. Continuing without assessment could 
+have led to breakdown on isolated roads. 
+106. 
+At the wind site, a harness lanyard was stored improperly in the bottom of a 
+tool bag, tangled with sharp tools. This could damage the webbing. I instructed the 
+tech to store fall protection separately. 
+107. 
+During a panel cleaning operation, a worker carried a bucket of water across 
+uneven ground without a lid. They nearly spilled it onto electrical cables. We 
+switched to closed containers. 
+108. 
+In the yard, I found a pallet stacked too high with boxes, leaning dangerously. 
+It posed a collapse hazard. The pallet was restacked properly. 
+109. 
+A worker attempted to lift a transformer cover by themselves, ignoring the 
+team lift policy. The load was awkward and unsafe. I stopped the task until help was 
+secured. 
+110. 
+At the EV site, a charging cable was stretched tightly across a driveway. A 
+vehicle nearly ran over it. We rerouted the cable to eliminate the hazard. 
+111. 
+During fire extinguisher checks, I found one unit blocked by stored ladders. 
+This would have delayed access in an emergency. The ladders were relocated 
+immediately. 
+
+
+--- Page 10 ---
+112. 
+A technician attempted to test live conductors without insulated gloves, 
+relying only on the tool insulation. I stopped the work and reminded them of the 
+layered PPE requirement. 
+113. 
+While reversing the truck at site, the driver did not use a spotter even though 
+pedestrians were present. I stopped the vehicle and ensured a spotter was 
+assigned. 
+114. 
+At a turbine pad, I saw hydraulic hoses routed across a walkway without 
+covers. This created a trip hazard. Protective ramps were installed. 
+115. 
+During inverter cabinet work, I noticed the door’s prop arm was broken. The 
+door could have slammed shut unexpectedly. We tied it back until it could be 
+repaired. 
+116. 
+A crew member climbed a tower without checking the weather. High winds 
+made climbing unsafe. The climb was stopped immediately. 
+117. 
+While handling conduit threading oil, a container was found without a label. 
+This created confusion about contents and hazards. The container was relabeled 
+correctly. 
+118. 
+At the PV array, a wasp nest was found inside a combiner box. I stopped work 
+until the area was treated. 
+119. 
+During tool inventory, I discovered a hammer with a cracked handle. It could 
+have broken during use. The tool was removed from service. 
+120. 
+A truck left idling unattended near fuel storage tanks. This posed a fire 
+hazard. The engine was shut down immediately. 
+121. 
+At the inverter pad, I found an electrical junction box cover missing screws. 
+The loose cover could expose wiring. Screws were replaced before continuing. 
+122. 
+While doing overhead lifting, the load was swung over a work area. I stopped 
+the lift until the exclusion zone was cleared. 
+123. 
+A worker used a step stool on top of a platform to gain extra height. This was 
+highly unstable. I intervened and provided the correct ladder. 
+124. 
+During lockout-tagout, I found a tag written in pencil that was already fading. 
+Permanent markers are required. It was corrected before proceeding. 
+125. 
+A technician entered the site without sunscreen or long sleeves on a high UV 
+index day. Heat and sun hazards were reviewed, and PPE adjusted. 

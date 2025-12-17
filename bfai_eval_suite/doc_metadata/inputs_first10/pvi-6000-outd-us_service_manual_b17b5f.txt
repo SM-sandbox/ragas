@@ -1,0 +1,440 @@
+--- Page 1 ---
+ 
+ 
+AURORA 
+Photovoltaic Inverters 
+ 
+ 
+ 
+ 
+ 
+ 
+INSTALLATION AND OPERATOR'S 
+MANUAL 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Model number: PVI-5000/6000-OUTD-US 
+Rev. 1.1 
+ 
+®
+
+
+--- Page 2 ---
+Installation and Operator’s Manual  
+Page 2 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+ 
+REVISION TABLE 
+ 
+Document 
+Revision 
+Author 
+Date 
+Change Description 
+1.0 
+Monica 
+Falini 
+19/11/07 
+ 
+1.1 
+Federico 
+Mastronardi 
+15/12/2008 
+PVI-5000-OUTD-US added 
+ 
+ 
+SAVE THESE INSTRUCTIONS! 
+ 
+ 
+IMPORTANT SAFETY INSTRUCTIONS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+POWER-ONE: Reproduction and disclosure, even partially, of the contents of this 
+manual are strictly forbidden without prior authorization of Power-
+One. 
+
+
+--- Page 3 ---
+Installation and Operator’s Manual  
+Page 3 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+IMPORTANT SAFETY INSTRUCTIONS  
+ 
+This manual contains important safety and operational instructions that must be 
+accurately understood and followed during the installation and maintenance of the 
+equipment.  
+To reduce the risk of electrical shock hazards, and to make sure the equipment is 
+safely installed and commissioned, special safety symbols are used in this manual to 
+highlight potential safety risks and important safety information. The symbols are:  
+ 
+WARNING: the paragraphs highlighted by this symbol contain processes 
+and instructions that must be absolutely understood and followed to avoid 
+potential danger to people.  
+ 
+NOTE: the paragraphs highlighted by this symbol contain processes and 
+instructions that must be rigorously understood and followed to avoid 
+potential damage to the equipment and negative results.  
+ 
+The equipment is provided with several labels, some of them with a yellow 
+background, which are related to safety issues.  
+Make sure to read the labels and fully understand them before installing the 
+equipment.  
+The labels utilize the following symbols:  
+ 
+ 
+Equipment grounding conductor (Main grounding protective earth, 
+PE) 
+ 
+Alternate Current (AC) value 
+ 
+Direct Current (DC) value 
+ 
+Phase 
+ 
+Grounding (Earth) 
+ 
+
+
+--- Page 4 ---
+Installation and Operator’s Manual  
+Page 4 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+USEFUL INFORMATION AND SAFETY STANDARD 
+ 
+FOREWORD 
+¾ The installation of Aurora must be performed in full compliance with national and 
+local standards and regulations 
+¾ AURORA has no spare parts to replace. 
+For any maintenance or repair please contact the nearest authorized repair center. 
+Please contact your reseller if you need to know the nearest authorized repair 
+center. 
+¾ Read and understand all the instructions contained in this manual and become 
+familiar with the safety symbols in the relevant paragraphs before you install and 
+commission the equipment 
+¾ The connection to the distribution grid must be done only after receiving approval 
+from the distribution utility as required by national and state interconnection 
+regulations, and can be done only by qualified personnel. 
+¾ Cover the photovoltaic panels with dark opaque sheets before they are connected 
+to avoid any chance of high voltages to appear at the connecting cable 
+terminations. 
+ 
+GENERAL 
+During inverter operation, some parts can be powered, some not properly insulated 
+and, in some cases, some parts can move or rotate, or some surfaces be hot. 
+Unauthorized removal of the necessary protections, improper use, wrong installation 
+or wrong operation may lead to serious damage to people and objects.  
+Transport, handling, installation, commissioning and maintenance must be performed 
+by qualified and trained personnel (all accident prevention rules in force in the user's 
+country must be observed ! ! !). 
+According to these basic safety rules, qualified and trained people have skills for the 
+assembling, start-up and operation of the product, as well as the necessary 
+requirements and qualifications to perform such operations. 
+
+
+--- Page 5 ---
+Installation and Operator’s Manual  
+Page 5 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+ASSEMBLY 
+Devices shall be assembled and cooled according to the specifications mentioned in 
+the corresponding documents.  
+In particular, during transport and handling, parts shall not be bent and/or the 
+insulation distances shall not be changed. There should be no contact between 
+electronic parts and connection terminals. 
+Electrical parts must not be mechanically damaged or destroyed (potential health risk). 
+ELECTRICAL CONNECTION 
+With the inverter powered, comply with all prevailing national regulations on 
+accidents prevention. 
+Electrical connections shall be carried out in accordance with the applicable 
+regulations, such as conductor sections, fuses, PE connection.  
+OPERATION 
+Systems with inverters shall be provided with further control and protective devices in 
+compliance with the corresponding prevailing safety rules, such as those relating to the 
+compliance with technical equipment, accident-preventing regulations, etc. Any 
+calibration change shall be made using the operational software. Once the inverter has 
+been disconnected from the power grid, powered parts and electrical connections shall 
+not be touched as some capacitors could be charged. Comply with all corresponding 
+marks and symbols present on each device. During operation, make sure that all covers 
+and doors are closed.  
+MAINTENANCE AND SERVICE 
+Comply with manufacturer’s recommendations. 
+ 
+SAVE ALL DOCUMENTS IN A SAFE PLACE! 
+ 
+
+
+--- Page 6 ---
+Installation and Operator’s Manual  
+Page 6 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+PVI-5000-OUTD-US 
+PVI-6000-OUTD-US 
+ 
+This document applies to the above-mentioned inverters, only. 
+ 
+ 
+ 
+ 
+Fig.1 - Name plate 
+ 
+The name plate affixed to the inverter provides the following information: 
+1) Manufacturing Part Number 
+2) Model Number 
+3) Serial Number 
+4) Week/Year of Manufacture 
+
+
+--- Page 7 ---
+Installation and Operator’s Manual  
+Page 7 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+CONTENTS 
+1 
+FOREWORD ...............................................................................10 
+1.1 
+PHOTOVOLTAIC ENERGY...................................................................10 
+2 
+SYSTEM DESCRIPTION..........................................................11 
+2.1 
+KEY ELEMENTS OF A PHOTOVOLTAIC SYSTEM: “STRINGS” AND 
+“ARRAYS” .............................................................................................................11 
+2.2 
+DATA TRANSMISSION AND CHECK.............................................................14 
+2.3 
+AURORA TECHNICAL DESCRIPTION.........................................................14 
+2.4 
+PROTECTIVE DEVICES................................................................................16 
+2.4.1 
+Anti-Islanding ........................................................................................16 
+2.4.2 
+Panel Ground Fault...............................................................................16 
+2.4.3 
+Further Protective Devices....................................................................16 
+3 
+INSTALLATION.........................................................................17 
+3.1 
+PACKAGE INSPECTION................................................................................17 
+3.1.1 
+Inspecting package contents ..................................................................18 
+3.2 
+SELECTING THE INSTALLATION PLACE .......................................................19 
+3.3 
+BEFORE PERFORMING THE ELECTRICAL CONNECTIONS ..............................23 
+3.3.1 
+Switch Box ELECTRICAL CONNECTING and/or DISCONNECTING 
+procedure............................................................................................................24 
+3.3.2 
+Access to the internal terminal Blok removing the frontal cover...........26 
+3.3.3 
+AURORA Switch Box description..........................................................27 
+3.3.4 
+AURORA typical electrical installations. ..............................................30 
+3.3.5 
+Possible AURORA D.C input configuration..........................................31 
+3.3.5.1 
+AURORA Connection to one single Photovoltaic array
+ 
+32 
+3.3.5.2 
+PARALLEL CONNECTION of the AURORA D.C 
+inputs 
+33 
+3.3.6 
+Connection to the AC GRID ..................................................................36 
+3.4 
+REMUVAL OF THE AURORA INVERTER FROM THE D.C SWITCH................39 
+3.4.1 
+ELECTRICAL DISCONNECTION E OF THE INVERTER FROM THE 
+SWITCH BOX PROCEDURE.............................................................................39 
+3.5 
+LITIUM BATTERY CR2032 SOBSTITUTION..................................................40 
+4 
+START-UP ...................................................................................42 
+
+
+--- Page 8 ---
+Installation and Operator’s Manual  
+Page 8 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+5 
+MONITORING AND DATA TRANSMISSION......................43 
+5.1 
+USER’S INTERFACE MODE.........................................................................43 
+5.2 
+AVAILABLE DATA .....................................................................................45 
+5.2.1 
+Real-time operational data....................................................................45 
+5.2.2 
+Internally logged data ...........................................................................46 
+5.3 
+LED INDICATORS ......................................................................................47 
+5.4 
+MESSAGES AND ERROR CODES..................................................................50 
+5.5 
+LCD DISPLAY ...........................................................................................53 
+5.5.1 
+Connection of system to the grid ...........................................................53 
+5.5.2 
+Error messages......................................................................................54 
+5.5.3 
+First phase - electric parameter check..................................................55 
+5.5.4 
+Main menu.............................................................................................58 
+5.5.5 
+Statistics ................................................................................................59 
+5.5.5.1 
+Lifetime .....................................................................59 
+5.5.5.2 
+Partial.........................................................................60 
+5.5.5.3 
+Today.........................................................................60 
+5.5.5.4 
+Last 7 days.................................................................60 
+5.5.5.5 
+Last Month ................................................................61 
+5.5.5.6 
+Last 30 Days..............................................................61 
+5.5.5.7 
+Last 365 Days............................................................61 
+5.5.5.8 
+User period ................................................................62 
+5.5.6 
+Setting....................................................................................................63 
+5.5.6.1 
+Address......................................................................64 
+5.5.6.2 
+Display Set ................................................................64 
+5.5.6.3 
+Service.......................................................................65 
+5.5.6.4 
+New Password ...........................................................65 
+5.5.6.5 
+Cash...........................................................................65 
+5.5.6.6 
+Time...........................................................................65 
+5.5.6.7 
+Language ...................................................................66 
+5.5.6.8 
+START Voltage.........................................................66 
+5.5.6.9 
+Autotest .....................................................................66 
+5.5.6.10 
+Alarm.....................................................................67 
+5.5.6.11 
+Remote Control .....................................................68 
+5.5.6.12 
+UV Prot.time .........................................................69 
+5.5.6.13 
+MPPT scan ............................................................69 
+
+
+--- Page 9 ---
+Installation and Operator’s Manual  
+Page 9 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+5.5.6.14 
+Scan Interval ..........................................................69 
+5.5.7 
+Info.........................................................................................................70 
+6 
+DATA CHECK AND COMMUNICATION.............................72 
+6.1 
+CONNECTION THROUGH RS-485 SERIAL PORT OR RJ12 CONNECTORS .......72 
+6.1.1 
+RS-485 serial port..................................................................................72 
+6.1.2 
+RJ12 connectors.....................................................................................74 
+6.1.3 
+Daisy chain............................................................................................75 
+6.2 
+SERIAL CONNECTION WITH USB PORT .......................................................77 
+6.3 
+MEASUREMENT ACCURACY.......................................................................78 
+7 
+TROUBLESHOOTING..............................................................79 
+8 
+TECHNICAL FEATURES.........................................................81 
+8.1 
+INPUT VALUES ...........................................................................................81 
+8.2 
+OUTPUT VALUES........................................................................................84 
+8.3 
+GRID PROTECTION CHARACTERISTICS........................................................85 
+8.4 
+GENERAL CHARACTERISTICS .....................................................................86 
+8.5 
+POWER DERATING .....................................................................................87 
+ 
+ 
+
+
+--- Page 10 ---
+Installation and Operator’s Manual  
+Page 10 of 94 
+(PVI-5000/6000-OUTD-US Rev: 1.1) 
+ 
+ 
+ 
+1 
+FOREWORD 
+This document contains a technical description of AURORA photovoltaic inverter so 
+as to provide the installer and user all the necessary information about installation, 
+operation and use of AURORA. 
+1.1 
+PHOTOVOLTAIC ENERGY 
+Industrialized countries (greater energy consumers) have been experimenting energy-
+saving methods and reduced pollutant levels for many years thanks to the energy-
+conversion process. This may be possible through a shrewd and rational consumption 
+of well-known resources, and also by looking for new forms of clean and not 
+exhaustible energy. 
+Regenerating sources of energy are fundamental to solve this problem. Under these 
+circumstances, solar energy exploitation to generate electrical (photovoltaic) energy is 
+becoming more and more important worldwide. 
+Photovoltaic energy, in any case, is of great advantage to the environment because the 
+radiated energy we receive from the sun is transformed directly into electrical energy 
+without any combustion process and without producing any pollution. 
+ 

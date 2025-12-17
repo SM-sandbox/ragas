@@ -1,0 +1,1508 @@
+{
+  "questions": [
+    {
+      "question": "If a Siemens 3VA41 125A Frame circuit breaker, which is rated for 600/347V, is protecting a circuit, what is the maximum voltage rating for a compatible Southwire Type TC-ER power cable, and what specific NEC article allows the cable for exposed runs?",
+      "ground_truth_answer": "For a circuit protected by a Siemens 3VA41 125A Frame circuit breaker (rated 600/347V), a compatible Southwire Type TC-ER power cable can have a maximum voltage rating of 1000V, and it is allowed for exposed runs per NEC 336.10.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving the voltage rating of the Siemens 3VA41 circuit breaker from Document 1 to establish the circuit context. Then, from Document 2, it asks for the maximum voltage rating of the Southwire Type TC-ER power cable and the specific NEC article permitting its use for exposed runs. It involves combining contextual information from one document with specific technical details from another, fitting the 'compare two related items across docs' guideline.",
+      "source_doc_ids": [
+        "siemens_mccb-17-sect-07-all-web_33210d",
+        "southwire_spec45252_8c8088"
+      ],
+      "source_filenames": [
+        "Siemens MCCB-17-Sect-07-ALL-web.pdf",
+        "SOUTHWIRE_SPEC45252.pdf"
+      ],
+      "question_id": "q_0307",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know cable voltage ratings, compatibility with circuit protection, and specific NEC articles for proper and safe installation and troubleshooting of electrical systems."
+    },
+    {
+      "question": "What is the specified insulation thickness for all cable sizes of the Southwire Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable, and what is the maximum conductor temperature this cable can withstand for emergency overload conditions?",
+      "ground_truth_answer": "The specified insulation thickness for all cable sizes is 30 Mils. The maximum conductor temperature this cable can withstand for emergency overload conditions is 130\u00b0C.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question asks for two distinct pieces of information from different sections of the document. The insulation thickness is found in the 'CONSTRUCTION' section, while the emergency overload temperature is located in the 'APPLICATIONS AND FEATURES' section. Combining these two facts requires more than simple recall but doesn't involve complex interpretation or calculation, fitting the medium difficulty.",
+      "source_doc_id": "southwire_substation_spec85045_e93c50",
+      "source_filename": "Southwire Substation SPEC85045.pdf",
+      "question_id": "q_0111",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing specific cable insulation thickness and emergency temperature ratings is critical for safe installation, proper system design, and troubleshooting to prevent overloads and ensure compliance with electrical codes."
+    },
+    {
+      "question": "What is the cooling class specified for the pad-mounted transformer?",
+      "ground_truth_answer": "KNAN",
+      "reasoning": "The 'Cooling Class' is listed as 'KNAN' under the 'TECHNICAL SPECIFICATIONS' section on both Page 1 and Page 2 of the document.",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "source_doc_id": "transformer_specifications_03d165",
+      "source_filename": "transformer_specifications_03d165.pdf",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "",
+      "question_id": "q_0513"
+    },
+    {
+      "question": "If a Shark\u00ae 100T multifunction electricity meter manufactured by Electro Industries/GaugeTech fails within its four-year warranty period due to a defect in material, what specific information would you need to gather to complete a spare part request form for a replacement, and what critical warranty limitations should be noted before initiating the request?",
+      "ground_truth_answer": "To complete a spare part request for a Shark\u00ae 100T meter under warranty due to a material defect, you would need to provide the Manufacturer (Electro Industries/GaugeTech), Model Number (Shark\u00ae 100T), Serial Number (if applicable), Part Number/Description, Quantity Required, confirm 'Part in Warranty' as 'Yes', and state the 'Reason for Replacement' as 'failure' or 'defect'. Additionally, it's critical to note that the warranty does not apply to defects resulting from unauthorized modification, misuse, or use for any reason other than electrical power monitoring. The Shark\u00ae 100T is not a user-serviceable product, and its protection features are not to be used for primary over-current protection, as these conditions would void the warranty. An RMA number is also required for any return, which can be obtained by contacting customer support at 516-334-0870.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires combining the warranty period and limitations from the Shark 100/100T manual (Doc 1) with the specific fields required on the Spare Part Request Form (Doc 2) such as manufacturer, model, serial number, part in warranty status, and reason for replacement. It synthesizes conditions for a warranty claim with the procedural steps of filling out a request.",
+      "source_doc_ids": [
+        "e145701_shark_100_100t_user_manual_v_1_13_11-7-200_3402d2",
+        "spare_part_request_form_337e14"
+      ],
+      "source_filenames": [
+        "E145701_Shark_100_100T_User_Manual_V.1.13_11-7-2008.pdf",
+        "Spare_Part_Request_Form.pdf"
+      ],
+      "question_id": "q_0387",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know how to handle equipment failures under warranty, including what information to gather for a replacement and critical warranty limitations to avoid delays or invalid claims."
+    },
+    {
+      "question": "For the Southern States EV-2 Aluminum Vertical Disconnect Switch, what is the maximum continuous current rating specifically for the 362 kV designs?",
+      "ground_truth_answer": "For the 362 kV designs of the EV-2 Aluminum Vertical Disconnect Switch, the maximum continuous current rating is 2000A.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "The question requires the user to find the general continuous current rating range (1200 A \u2013 3000 A) and then identify a specific condition mentioned in a note ('362 kV designs only available from 1200 A to 2000A') to determine the correct maximum for that specific voltage, thus requiring an extra step of interpretation beyond a direct lookup.",
+      "source_doc_id": "southern_states_ev-2-15_5kv-362kv-catalog-flyer_1220e8",
+      "source_filename": "Southern States EV-2-15.5kV-362kV-Catalog-Flyer.pdf",
+      "question_id": "q_0108",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer absolutely needs to know the continuous current rating for high-voltage disconnect switches to ensure safe operation, proper sizing, and prevent overloading in the electrical system."
+    },
+    {
+      "question": "A commercial facility intends to implement a YOTTA BLOCK energy storage system for demand charge reduction and Time-of-Use (TOU) optimization. If the facility requires a total continuous AC output of 13.5 kW at 480V for peak shaving, how many YOTTA BLOCK modules and Yotta DPI-480 microinverters are required to meet this continuous AC power demand, and what is the total system energy capacity (in kWh) provided by these modules?",
+      "ground_truth_answer": "To meet a total continuous AC output of 13.5 kW at 480V:\n1.  **Max Power Output per YOTTA BLOCK:** According to Document 1, the maximum continuous power output per YOTTA BLOCK module, when defined by the DPI Microinverter, is 450W at 480V.\n2.  **Number of YOTTA BLOCK modules:** 13,500 W (13.5 kW) / 450 W/module = 30 YOTTA BLOCK modules.\n3.  **Yotta DPI Microinverter Channels:** Document 2 states that the Yotta DPI Microinverter is a four-channel device, meaning each DPI can support four YOTTA BLOCK modules.\n4.  **Number of Yotta DPI-480 Microinverters:** 30 modules / 4 modules/DPI = 7.5 DPIs. Since a whole number of inverters is required, 8 Yotta DPI-480 Microinverters are needed (the last DPI would have 2 unused channels).\n5.  **Total System Energy Capacity:** Document 1 specifies that each YOTTA BLOCK module has a rated capacity of 1.0 kWh. Therefore, 30 modules * 1.0 kWh/module = 30 kWh total system energy capacity.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires multi-step calculations and synthesis from both documents. It requires extracting the individual YOTTA BLOCK's AC power output at a specific voltage (450W @ 480V) and its energy capacity (1.0 kWh) from Document 1. From Document 2, it requires understanding that the Yotta DPI Microinverter is a four-channel device, which is crucial for determining the number of inverters needed. The question then demands calculations to determine the total number of modules, the corresponding number of inverters, and the aggregate energy capacity, tying it back to the application of demand charge reduction and TOU optimization mentioned in Document 2.",
+      "source_doc_ids": [
+        "yotta_block-1_1_5_6735ae",
+        "yotta_ess_yotta_block_dpi_design_specification_she_bc943d"
+      ],
+      "source_filenames": [
+        "Yotta Block-1_1.5.pdf",
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf"
+      ],
+      "question_id": "q_0483",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer critically needs to know how to size a battery energy storage system (BESS) and its components (modules, inverters) to meet specific power and energy demands for an installation."
+    },
+    {
+      "question": "Consider a scenario where a large industrial facility uses a Southern States EV-2 Aluminum Vertical Disconnect Switch for isolating its 15.5kV utility incoming line for maintenance, and a NOARK A32 Power Circuit Breaker for protecting a 480V main distribution bus within the facility. Explain the distinct roles of these two devices in a fault condition originating on the 480V bus, specifically detailing which device is responsible for interrupting the fault and which is expected to withstand it, and outline the critical coordination principle that must be observed between their capabilities to ensure system safety and reliable operation.",
+      "ground_truth_answer": "In a fault condition originating on the 480V main distribution bus:\n\n1.  **NOARK A32 Power Circuit Breaker (480V):** This device is primarily responsible for *interrupting* the fault. The A32 Power Circuit Breaker is designed for automatic fault clearing, with interrupting ratings up to 100kA at 635V and fast operating times (open <70ms). It utilizes LI, LSI, or LSIG protection functions to detect and isolate the fault rapidly, protecting the 480V bus and downstream equipment.\n\n2.  **Southern States EV-2 Aluminum Vertical Disconnect Switch (15.5kV):** This device is *not* designed to interrupt fault current. Its role in a fault condition is to *withstand* the fault current that flows through it from the utility side until the fault is cleared by an appropriate protective device (in this case, the downstream NOARK A32 breaker). The EV-2 has a Short-Time Symmetrical Withstand rating of 63 kA RMS for 3 seconds, ensuring it can safely carry the fault current without damage until the A32 clears the fault.\n\n**Critical Coordination Principle:** The NOARK A32 Power Circuit Breaker must be properly coordinated to detect and clear the 480V fault within its specified interrupting time and rating *before* the fault current's magnitude or duration exceeds the withstand capability of any upstream equipment, including the Southern States EV-2 disconnect switch. This ensures that the EV-2, which is an isolating device and not a protective device, is not damaged by attempting to interrupt a fault or by prolonged exposure to fault currents beyond its design limits. The A32 acts as the primary protection for the 480V bus, preventing the fault from propagating or stressing upstream MV components like the EV-2 beyond their withstand capabilities, thereby maintaining system safety and reliable operation.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires a deep understanding of power system protection and coordination. It necessitates differentiating between a circuit breaker's interrupting capability (NOARK A32 from Doc 1) and a disconnect switch's withstand capability (Southern States EV-2 from Doc 2). The 'hard' aspect involves explaining their distinct roles during a fault, identifying which device performs which function, and then articulating the critical principle of coordination, which involves ensuring the protective device operates within the withstand limits of the upstream isolating device. This requires synthesizing information across voltage levels and device types.",
+      "source_doc_ids": [
+        "noark_-_power_circuit_breakers_and_non-automatic_s_cb1019",
+        "southern_states_ev-2-15_5kv-362kv-catalog-flyer_1220e8"
+      ],
+      "source_filenames": [
+        "NOARK - Power Circuit Breakers and Non-Automatic Switches - A32 ASD32 - Datasheet.pdf",
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer.pdf"
+      ],
+      "question_id": "q_0465",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding fault coordination, interrupting vs. withstand ratings, and the specific roles of protective devices like breakers and disconnects is critical core knowledge for any field technician or engineer working with industrial electrical systems."
+    },
+    {
+      "question": "A solar project manager is evaluating the NEP BDM-1600-LV microinverter and the ABB PVI-6000-TL-OUTD string inverter for a large-scale commercial installation in a harsh outdoor environment that requires robust communication and grid interaction capabilities. Compare the environmental protection ratings and communication interfaces of both inverter models. Furthermore, discuss the implications of their respective grid connection types and output voltage options on designing a 480V three-phase commercial system, considering their maximum continuous output power capabilities.",
+      "ground_truth_answer": "For environmental protection and communication:\n-   **NEP BDM-1600-LV (Microinverter):** Its environmental protection is specified as \"Ingress Protection Rating NAME 4X,\" which is understood to be equivalent to NEMA 4X, indicating suitability for harsh outdoor conditions. The communication interface includes WI-FI and Bluetooth, providing user-friendly mobile app monitoring capabilities.\n-   **ABB PVI-6000-TL-OUTD (String Inverter):** It has an \"Enclosure rating NEMA 4X,\" confirming its robust suitability for harsh outdoor conditions. Its communication interface features RS-485 for connection to a laptop or data logger (e.g., VSN700) and offers an optional VSN300 Wifi Logger Card for wireless monitoring, alongside a built-in LCD display. This offers more industrial-grade monitoring options.\n\nFor designing a 480V three-phase commercial system:\n-   **NEP BDM-1600-LV:** This inverter has a Rated AC Voltage of 120V and a Rated AC Output Power of 1600W. Its design is primarily for single-phase, DIY/residential applications. For integration into a 480V three-phase commercial system, multiple NEP microinverters would be required, and a complex and costly step-up transformer system, along with potential phase balancing, would be necessary to interface with the 480V grid. This makes it less suitable for direct and efficient large-scale commercial integration.\n-   **ABB PVI-6000-TL-OUTD:** This inverter offers Rated grid AC voltage options of 208V, 240V, and 277V, with a Nominal output power of 6000W. While its technical data lists \"1\u00d8/2W\" and \"Split-\u00d8/3W\" as grid connection types, its highlights mention \"Single-phase and three-phase output grid connection.\" For a 480Y/277V three-phase commercial system, the 277V output option allows for direct phase-to-neutral connection, or multiple units could be connected via a transformer (e.g., 277V to 480V step-up) to integrate into a 480V delta or wye system. Its higher output voltage options and significantly higher power rating per unit (6000W vs 1600W) make it more adaptable and efficient for large commercial installations, reducing the number of inverters and associated transformation requirements compared to the 120V microinverter.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question is hard and multi-hop because it requires comparing environmental ratings (including interpreting a potential typo in one document), contrasting communication capabilities, and critically analyzing the implications of different output voltages and power levels for a specific, higher-voltage, three-phase commercial system design. This involves synthesizing several technical specifications from both documents and performing complex inferential reasoning about system architecture and suitability for a given application.",
+      "source_doc_ids": [
+        "nep_microinverter_bdm-1200-lv-250723_july_23_2025__8b9497",
+        "pvi-5000-en-rev_e_fimer_abb_4e75ad"
+      ],
+      "source_filenames": [
+        "NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed.pdf",
+        "PVI-5000-EN-Rev E FIMER ABB.pdf"
+      ],
+      "question_id": "q_0437",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question requires a deep technical comparison of critical equipment specifications like environmental ratings, communication protocols, grid connection types, and voltage options, which are essential for a field technician or engineer to design, install, and troubleshoot commercial solar systems."
+    },
+    {
+      "question": "Which inverter, the CPS SCH100/125KTL-DO/US-600 or the ABB PVI-5000/6000-TL-OUTD, offers a higher CEC efficiency?",
+      "ground_truth_answer": "The CPS SCH100/125KTL-DO/US-600 inverter offers a higher CEC efficiency of 98.5%, compared to the ABB PVI-5000/6000-TL-OUTD, which has a CEC efficiency ranging from 96% to 96.5% depending on the model.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving the CEC efficiency from Document 1 for the CPS inverter (98.5%) and from Document 2 for the ABB inverter (96%-96.5%) and then comparing these values. This is a direct comparison of a single specification across two documents, fitting the easy difficulty criteria for multi-hop questions.",
+      "source_doc_ids": [
+        "cps_125kw_standard_centralized_datasheet_723ecc",
+        "pvi-5000-en-rev_e_fimer_abb_4e75ad"
+      ],
+      "source_filenames": [
+        "CPS 125kW Standard & Centralized Datasheet.pdf",
+        "PVI-5000-EN-Rev E FIMER ABB.pdf"
+      ],
+      "question_id": "q_0291",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Comparing the CEC efficiency of specific inverter models is critical for field technicians and engineers involved in system design, equipment selection, performance optimization, and troubleshooting in solar installations."
+    },
+    {
+      "question": "A 100kW solar PV array is being designed for a commercial rooftop installation. Compare the primary overcurrent protection device (OCPD) rating requirements and the specific NEC compliance considerations for this 100kW array if it were to be built using either a single CPS SCH100KTL-DO/US-600 string inverter or an equivalent system composed of NEP BDM-2000 microinverters configured for 480Y/277Vac output. Detail any differences in NEC sections explicitly addressed by each product.",
+      "ground_truth_answer": "For a 100kW array:\n\n1.  **CPS SCH100KTL-DO/US-600 String Inverter System:**\n    *   One CPS SCH100KTL-DO/US-600 unit would be used for a 100kW array. Its Max. AC Output Current @600Vac is 96.2A. The Max. OCPD Rating for this model is 150A (Document 1, Page 2). This would typically be a single OCPD at the inverter's AC output.\n    *   NEC Compliance: The CPS inverter is explicitly compliant with NFPA 70, NEC 2014, and NEC 2017 (Document 1, Page 1).\n\n2.  **NEP BDM-2000 Microinverter System (for 480Y/277Vac output):**\n    *   Each NEP BDM-2000 microinverter has a Max Continuous Output Power of 1920W when configured for 480Y/277Vac (Document 2, Page 1). To achieve 100kW (100,000W), approximately 100,000W / 1920W/unit = 52.08, requiring 53 units.\n    *   The Rated Output Current per unit at 480Y/277Vac is 7.22A. The Max Output Overcurrent Protection per unit is 20A (Document 2, Page 1).\n    *   Maximum Units Per Branch for a 30A OCPD at 480Y/277Vac is 3 units (Document 2, Page 1). Therefore, 53 units / 3 units/branch = 17.67, necessitating 18 branch circuits. Each of these 18 branch circuits would require a 30A OCPD, in addition to a main OCPD for the combined microinverter output.\n    *   NEC Compliance: The NEP microinverter explicitly highlights compliance with specific sections of NEC 2023: Section 690.11 (DC Arc-Fault Circuit Protection), Section 690.12 (Rapid Shutdown of PV Systems on Buildings), and Section 705.12 (Point of Connection - AC Arc-Fault Protection) (Document 2, Page 1).\n\n**Key Differences:**\n*   **OCPD Requirements:** The CPS string inverter requires a single, higher-rated OCPD (150A) for its AC output. In contrast, the NEP microinverter system requires multiple lower-rated OCPDs (30A each) for its numerous branch circuits, reflecting a distributed generation architecture, plus a main OCPD for the aggregated output.\n*   **NEC Compliance:** The CPS inverter specifies compliance with older NEC versions (2014, 2017) and general NFPA 70. The NEP microinverter, however, explicitly details compliance with specific sections of the more recent NEC 2023, particularly focusing on DC Arc-Fault, Rapid Shutdown, and AC Arc-Fault protection, which are critical modern safety requirements often associated with distributed PV systems and building-integrated solar.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires complex multi-step reasoning. It demands calculating the number of microinverters and associated branch circuits for an equivalent power output, identifying the specific OCPD ratings for both inverter types, and then synthesizing their distinct NEC compliance statements (general older versions vs. specific newer sections) to highlight architectural and safety regulation differences. This involves extracting numerical data, performing calculations, and interpreting regulatory information from both documents.",
+      "source_doc_ids": [
+        "cps_125kw_standard_centralized_datasheet_723ecc",
+        "nep_microinverter_bdm-2000-t-datasheet-20241216_990939"
+      ],
+      "source_filenames": [
+        "CPS 125kW Standard & Centralized Datasheet.pdf",
+        "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf"
+      ],
+      "question_id": "q_0478",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding OCPD sizing and NEC compliance for different inverter technologies is absolutely critical for safe and compliant solar PV system design, installation, and troubleshooting in the field."
+    },
+    {
+      "question": "What is the maximum efficiency of the BDM-1200-LV/BDM-1600-LV Micro Inverter?",
+      "ground_truth_answer": "99.9%",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is explicitly stated in the 'Efficiency' section of the specifications table under 'Max. Efficiency'.",
+      "source_doc_id": "nep_microinverter_bdm-1200-lv-250723_july_23_2025__8b9497",
+      "source_filename": "NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed.pdf",
+      "question_id": "q_0009",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the maximum efficiency of a micro inverter is a critical equipment specification for system design, performance evaluation, and troubleshooting energy yield issues."
+    },
+    {
+      "question": "What is the Peak AC Output Power for the BDM-2000 Microinverter?",
+      "ground_truth_answer": "The Peak AC Output Power for the BDM-2000 Microinverter is 2000 W.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is directly stated under the 'Output (AC)' section of the datasheet.",
+      "source_doc_id": "nep_microinverter_bdm-2000-t-datasheet-20241216_990939",
+      "source_filename": "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf",
+      "question_id": "q_0073",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer absolutely needs to know the peak output power of an inverter for system design, performance verification, and troubleshooting."
+    },
+    {
+      "question": "In the 'LEGEND' section of the AURORA PVI-CENTRAL-XXX (US or CAN) user manual, what does the symbol indicating the necessity of 'adequate protection' signify, and what specific examples of protection are provided for operations?",
+      "ground_truth_answer": "The symbol signifies the necessity of using adequate protection prior to operations. Specific examples of protection provided are insulating gloves for work with voltages up to 600 VDC and goggles.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires the user to locate a specific entry within the 'LEGEND' section, understand the core meaning of the symbol's indication ('necessity of using adequate protection prior to operations'), and then extract the concrete examples of such protection (insulating gloves for work with voltages up to 600 VDC, and goggles). It's not a direct, single-sentence recall but requires parsing a descriptive paragraph for its main point and supporting details, thus fitting the medium difficulty.",
+      "source_doc_id": "manual-pvi-central-250-300_dc3888",
+      "source_filename": "Manual-PVI-Central-250-300.pdf",
+      "question_id": "q_0167",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding safety symbols and required PPE, especially for high voltage operations (like 600 VDC), is absolutely critical for a field technician's safety and compliance before performing any work on the equipment."
+    },
+    {
+      "question": "Considering a qualified employee is performing maintenance inside a 'vault' as defined by OSHA 29 CFR \u00a7 1910.269, which is part of a telecommunications center installation, what specific electrical components within that environment are identified as common locations for arc flash incidents according to arc flash safety guidelines, and what critical verification procedure must be executed before applying Lockout/Tagout (LOTO) devices to ensure safety?",
+      "ground_truth_answer": "As defined by OSHA 29 CFR \u00a7 1910.269, a 'vault' is an enclosure personnel may enter for installing, operating, and/or maintaining equipment and/or cable, and a 'telecommunications center' is an installation of communication equipment often located in such vaults. Within this environment, common electrical components identified as locations for arc flash incidents include switchgear, switchboards, MCCs, panelboards, transformers, energized busbars, circuit breakers, contactors, and disconnects. Before applying Lockout/Tagout (LOTO) devices to ensure safety, the critical verification procedure that must be executed is testing for the absence of voltage using the live-dead-live method.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question uses Document 1 to establish the context of the work environment by defining 'vault' and 'telecommunications center' under OSHA regulations. It then leverages Document 2 to identify the specific electrical components prone to arc flash incidents within such an environment (e.g., switchgear, transformers, busbars) and the essential pre-LOTO safety procedure (testing for absence of voltage using live-dead-live method). This synthesis of definitions, hazard identification, and procedural steps from both documents makes it a medium-difficulty multi-hop question.",
+      "source_doc_ids": [
+        "osha_electric_gen_cfr-2024-title29-vol5-sec1910-26_1288a3",
+        "arc_flash_safety_guide_for_field_technicians_and_e_ce30f7"
+      ],
+      "source_filenames": [
+        "OSHA Electric Gen CFR-2024-title29-vol5-sec1910-269.pdf",
+        "Arc Flash Safety Guide for Field Technicians and Engineers.pdf"
+      ],
+      "question_id": "q_0404",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question covers critical safety procedures like LOTO and arc flash identification, which are absolutely essential for any field technician working with industrial electrical equipment, including SCADA, solar, and BESS systems."
+    },
+    {
+      "question": "Given the manual's explicit mention of 'Qualified Person' in Section 1.1 and its listing of 'NFPA 70E' under safety topics, what is the fundamental requirement for individuals performing procedures on the switchboard to mitigate risks associated with 'Hazardous voltage' and 'Dangerous Procedures'?",
+      "ground_truth_answer": "Individuals performing procedures on the switchboard must be designated as a 'Qualified Person' and adhere to the electrical safety requirements outlined in NFPA 70E to mitigate risks associated with 'Hazardous voltage' and 'Dangerous Procedures'.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires synthesizing information from the Table of Contents (Section 1.1 'Qualified Person'), the document's metadata (listing 'NFPA 70E' under safety topics, and 'Hazardous voltage' and 'Dangerous Procedures' as safety concerns). It demands an understanding of how these elements combine to form a fundamental safety requirement, which constitutes technical interpretation and domain knowledge to connect the standard with the personnel qualification and associated hazards.",
+      "source_doc_id": "mps_switchboard_manual_-_v5_f39db1",
+      "source_filename": "MPS Switchboard Manual - V5.pdf",
+      "question_id": "q_0189",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "According to the document, what materials are used for the windings in the Three-Phase Pad-Mount Transformers?",
+      "ground_truth_answer": "The windings are made of Copper and Aluminum.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is explicitly listed on page 1 under 'Windings' as 'Copper, Aluminum'.",
+      "source_doc_id": "3_phase_pad_mount_transformer_spec_sheet_0c89eb",
+      "source_filename": "3 Phase Pad Mount Transformer Spec Sheet.pdf",
+      "question_id": "q_0059",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the winding materials (copper vs. aluminum) is a critical equipment specification that impacts a transformer's performance, cost, weight, and potential failure modes, which is essential for field technicians during installation, maintenance, or troubleshooting."
+    },
+    {
+      "question": "Where can a technician obtain additional information if the instruction manual does not cover a specific scenario?",
+      "ground_truth_answer": "Additional information can be obtained by contacting a factory representative at Meta Power Solutions (MPS), located at 500 S Australian Ave Suite 600, West Palm Beach, FL 33401.",
+      "reasoning": "The answer is directly stated on Page 3 under the 'Introduction' section, which instructs technicians to contact a factory representative for additional information if the manual does not cover every detail or variation.",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "source_doc_id": "mps_switchboard_manual_-_v5_f39db1",
+      "source_filename": "mps_switchboard_manual_-_v5_f39db1.pdf",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "",
+      "question_id": "q_0512"
+    },
+    {
+      "question": "For the 6000A EPEC AC LV SWBD, what are the main breaker amperage ranges, including any special cooling requirements mentioned, and what types of main configurations (e.g., single or double ended) are supported?",
+      "ground_truth_answer": "The main breaker amperage ranges for the 6000A EPEC AC LV SWBD are 1200A \u2013 5000A, with a 6000A option available if air cooled. Main-Lug-Only (MLO) configurations support up to 6000A. The switchboard supports single ended or double ended (M-M or M-T-M) main configurations.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question asks for multiple specific details related to the main breaker: its amperage range, a conditional cooling requirement (6000A air cooled), and the supported system configurations (single or double ended, M-M, M-T-M). It requires careful extraction of interconnected facts from the 'PRODUCT DETAILS' section.",
+      "source_doc_id": "epec_1200-6000a_ul_891_swbd_for_solar_bess_flyer_v_71ac89",
+      "source_filename": "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23.pdf",
+      "question_id": "q_0133",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know main breaker amperage ranges, cooling requirements, and supported configurations for a switchboard to ensure proper installation, safe operation, and effective troubleshooting."
+    },
+    {
+      "question": "What are the available feeder ranges for Molded Case Circuit Breakers (MCCB) in the EPEC AC LV SWBD, and what trip types are offered for feeders?",
+      "ground_truth_answer": "The available MCCB feeder ranges are 150AF, 250AF, 400AF, 600AF, 800AF, and 1000AF. For all feeders, the trip types offered are Thermal Mag or Electronic Trip.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires extracting two specific sets of details: the amperage ranges for MCCB feeders and the types of trip mechanisms available for feeders in general. It's not a single direct factual recall but requires finding and combining related pieces of information from the 'PRODUCT DETAILS' section.",
+      "source_doc_id": "epec_1200-6000a_ul_891_swbd_for_solar_bess_flyer_v_71ac89",
+      "source_filename": "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23.pdf",
+      "question_id": "q_0131",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the available MCCB feeder ranges and trip types is critical for a field technician for proper equipment selection, installation, troubleshooting, and replacement in a switchboard, directly impacting system safety and functionality."
+    },
+    {
+      "question": "In the 'Main Switchboard / Field Inverter Cluster with PICS 1000A' configuration, if a 4.2MVA power block is fully utilized with 275kW inverters and the maximum number of PICS 1000A fusible disconnects are employed, what is the maximum number of 275kW inverters that would be connected to any single PICS unit, assuming an even distribution as much as possible?",
+      "ground_truth_answer": "The document states that up to (4) PICS units can combine up to (15) 275kW inverters for a total power block size of 4.2MVA. To utilize the maximum number of 275kW inverters (15) across the maximum number of PICS units (4), the inverters would be distributed as evenly as possible. Dividing 15 inverters by 4 PICS units yields 3.75 inverters per PICS unit. Since inverters cannot be fractional, this implies that some PICS units would handle 4 inverters, while others handle 3. Therefore, the maximum number of 275kW inverters connected to any single PICS unit would be 4.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires multiple steps: identifying the total number of inverters and PICS units for the specified configuration and power block, performing a division (15 inverters / 4 PICS units = 3.75), and then interpreting the non-integer result to determine the maximum practical integer value for distribution to any single component. This involves calculation and logical interpretation beyond simple recall.",
+      "source_doc_id": "800vac_bos_comprehensive_4_2mva_skid_sales_flyer_v_85a711",
+      "source_filename": "800VAC BoS_Comprehensive_4.2MVA Skid Sales Flyer V2.24.pdf",
+      "question_id": "q_0192",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "What type of electrical equipment is the primary subject of the Meta Power Solutions (MPS) manual, and what is the maximum nominal voltage rating for this equipment as specified by the UL 891 Standard for Safety?",
+      "ground_truth_answer": "The Meta Power Solutions (MPS) manual primarily details 'Switchboards.' The UL 891 Standard for Safety specifies that it covers switchboards nominally rated at 1000 V or less.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires identifying the equipment type from Document 1 (MPS Manual) and then finding a specific technical characteristic (maximum nominal voltage rating) for that equipment type within Document 2. This involves a direct lookup and comparison of a shared equipment type with a specific detail from another document, making it easy.",
+      "source_doc_ids": [
+        "mps_switchboard_manual_-_v5_f39db1",
+        "ul_s0891_12_9d20e2"
+      ],
+      "source_filenames": [
+        "MPS Switchboard Manual - V5.pdf",
+        "UL_s0891_12.pdf"
+      ],
+      "question_id": "q_0256",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the specific equipment type a manual covers is essential for finding the right documentation, and understanding voltage ratings and relevant UL safety standards is critical for safe operation, installation, and troubleshooting in the field."
+    },
+    {
+      "question": "A commercial solar installation requires a 3-phase 208V microinverter system that complies with the latest NEC 2023 rapid shutdown and arc-fault protection requirements. Compare the maximum continuous AC output power achievable per 30A branch circuit using Yotta DPI-208 microinverters versus NEP BDM-2000 microinverters, and identify any differences in stated NEC arc-fault compliance that would impact system design for NEC 2023.",
+      "ground_truth_answer": "For a 3-phase 208V system, the Yotta DPI-208 can achieve a maximum continuous AC output power of 8640VA per 30A branch circuit (5 units * 1728VA/unit). In contrast, the NEP BDM-2000 system can achieve 4992W per 30A 3-phase branch circuit (3 units * 1664W/unit). Regarding NEC 2023 compliance, the NEP BDM-2000 explicitly states compliance with NEC 2023 Sections 690.11 (DC Arc-Fault), 690.12 (Rapid Shutdown), and 705.12 (AC Arc-Fault). The Yotta DPI-208 datasheet only lists compliance up to NEC 2020 for Section 690.12 and NEC 2017 for Section 690.11, and does not mention compliance with NEC 2023 or Section 705.12 (AC Arc-Fault). This difference means that the Yotta system might require additional review or components to meet the latest NEC 2023 arc-fault requirements, particularly for AC arc-fault protection, which is explicitly covered by the NEP system.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting continuous output power and maximum units per branch for specific voltage from both documents, performing calculations for total power per branch, and then comparing the specific NEC compliance versions and sections (690.11, 690.12, 705.12) from both. It necessitates synthesizing these distinct pieces of information to evaluate system capacity and compliance differences for a specific NEC edition, making it a complex multi-step reasoning task.",
+      "source_doc_ids": [
+        "yotta_dpi-208-480_9_0_2_c27296",
+        "nep_microinverter_bdm-2000-t-datasheet-20241216_990939"
+      ],
+      "source_filenames": [
+        "Yotta DPI-208-480_9.0+(2).pdf",
+        "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf"
+      ],
+      "question_id": "q_0456",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question requires comparing critical equipment specifications (output power) and NEC compliance (rapid shutdown, arc-fault) for specific inverters, which directly impacts system design, safety, and legality for a field technician or engineer."
+    },
+    {
+      "question": "What new safety feature is included in the Dual Function Circuit Breaker, as required by UL 943?",
+      "ground_truth_answer": "The Dual Function Circuit Breaker includes the Self-Test & Lockout feature, as required by UL 943.",
+      "reasoning": "The answer is directly stated on page 7-3 under the 'What's new in molded case circuit breakers:' section, which describes the Dual Function Circuit Breaker and explicitly mentions: 'Self Test & Lockout feature as required by UL 943 effective June 2015'.",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "source_doc_id": "siemens_mccb-17-sect-07-all-web_33210d",
+      "source_filename": "siemens_mccb-17-sect-07-all-web_33210d.pdf",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "",
+      "question_id": "q_0517"
+    },
+    {
+      "question": "According to the notes provided for 125A TMTU circuit breakers, what does a substitution of '-ED-' for '-EC-' in digits 9 and 10 of the 3VA model number signify?",
+      "ground_truth_answer": "A substitution of '-ED-' for '-EC-' in digits 9 and 10 of the 3VA model number indicates that the circuit breaker has a non-adjustable instantaneous trip unit.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires the user to find and interpret a specific note (note 3) on page 2, which clarifies the meaning of a particular alphanumeric code within the 3VA model number. This involves understanding context and specific technical details rather than just direct recall of a value from a table.",
+      "source_doc_id": "siemens_reference_guide_3va_enclosedcirbreaker_aae051",
+      "source_filename": "Siemens Reference Guide_3VA_EnclosedCirBreaker.pdf",
+      "question_id": "q_0094",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician must understand the functional characteristics of critical equipment like circuit breakers. Knowing what specific model number codes signify, such as the type of trip unit, is essential for proper selection, installation, and troubleshooting."
+    },
+    {
+      "question": "A 'qualified employee' under 29 CFR \u00a7 1910.269 is performing maintenance on a power room within a 'telecommunications center' which is explicitly defined as being located in an underground 'vault.' This vault's only access is a vertical entry point that is 3 feet deep from grade and has a diameter of 18 inches. Assuming this vault is a permit space, what specific challenges related to portal access and size does this present for a rescue service, and what specialized training and equipment, as outlined in the evaluation criteria for rescue teams, are essential for effective rescue operations from this particular telecommunications facility?",
+      "ground_truth_answer": "1.  **Applicability (29 CFR \u00a7 1910.269):** Maintenance on a power room within a 'telecommunications center' located in an 'underground vault' falls under the scope of 29 CFR \u00a7 1910.269, which covers 'related equipment for the purpose of communication' and operations within 'vaults' (Doc 1, \u00a7 1910.269 (a)(1)(i)(A) and definitions for (37), (42)).\n2.  **Permit Space Challenges (29 CFR \u00a7 1910.147):**\n    *   **Portal Size:** The \"18-inch diameter\" opening classifies the portal as 'Restricted' (Doc 2, (3)(a) \"24 inches or less\"). This poses significant challenges as the portal is \"too small to allow a rescuer to simply enter the space while using SCBA\" and \"too small to allow normal spinal immobilization of an injured employee.\"\n    *   **Space Access:** The \"vertical entry point\" classifies the access as 'Vertical' (Doc 2, (4)(b)). This means \"rescuers must climb down...to enter the space,\" which \"may require knowledge of rope techniques, or special patient p[ackaging].\"\n    *   **Elevation:** The 3-foot deep entry from grade means the portal is 'Non-elevated' (Doc 2, (2)(b) \"less than 4 feet above grade\"). However, the vertical nature still necessitates specific retrieval methods.\n3.  **Essential Rescue Service Training and Equipment (29 CFR \u00a7 1910.147):**\n    *   **Training:** Rescue team members must be thoroughly trained in permit space entry, potential hazards (including those specific to telecommunications power rooms), and proper use of PPE (SCBA, fall arrest equipment). Crucially, given the 'Restricted' and 'Vertical' access, training must include advanced rope techniques, specialized patient packaging methods (e.g., for spinal immobilization in small, vertical spaces), and victim retrieval from limited-size vertical openings. They must also possess necessary first aid and medical skills.\n    *   **Equipment:** Essential equipment includes SCBA, fall arrest systems, and specialized rope systems and patient packaging devices (like narrow backboards or flexible stretchers) designed for vertical and restricted-opening rescues.\n    *   **Critique:** The rescue service's plan must specifically address these combined challenges, and their performance should be critiqued to ensure proficiency in these complex scenarios.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires connecting the specific definition and operational scope of a 'telecommunications center' and 'vault' from Doc 1 to the detailed permit space rescue criteria in Doc 2. It demands identifying multiple permit space characteristics (restricted portal, vertical access) from the scenario and then synthesizing the specific training and equipment requirements for a rescue team based on these combined challenges, thus demonstrating complex multi-step reasoning across both documents.",
+      "source_doc_ids": [
+        "osha_electric_gen_cfr-2024-title29-vol5-sec1910-26_1288a3",
+        "osha_loto_cfr-2024-title29-vol5-sec1910-147_90b667"
+      ],
+      "source_filenames": [
+        "OSHA Electric Gen CFR-2024-title29-vol5-sec1910-269.pdf",
+        "OSHA LOTO CFR-2024-title29-vol5-sec1910-147.pdf"
+      ],
+      "question_id": "q_0461",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Field technicians and engineers in this domain frequently encounter confined spaces like vaults and need critical knowledge"
+    },
+    {
+      "question": "Identify the primary insulation material and the maximum rated voltage for both the Southwire Type TC-ER Power Cable (CU 600/1000V XLPE) and the Southwire Type TC-ER Control Cable (CU 600V PVC-Nylon).",
+      "ground_truth_answer": "The Southwire Type TC-ER Power Cable (CU 600/1000V XLPE) utilizes Cross Linked Polyethylene (XLPE) Type XHHW-2 insulation and has a maximum rated voltage of 1000 Volts (or 600 Volts). The Southwire Type TC-ER Control Cable (CU 600V PVC-Nylon) uses Polyvinyl Chloride (PVC) with a nylon layer (Type THHN or THWN-2 for 14, 12, 10 AWG; Type TFFN/TFN for 18, 16 AWG) for its insulation and is rated for 600 Volts.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question asks for two specific technical details (insulation material and maximum voltage rating) for two different products, each found in a different document. The task involves direct extraction and presentation of these facts for comparison, fitting the easy difficulty criteria.",
+      "source_doc_ids": [
+        "southwire_spec45252_8c8088",
+        "southwire_spec45051_2e9726"
+      ],
+      "source_filenames": [
+        "SOUTHWIRE_SPEC45252.pdf",
+        "SOUTHWIRE_SPEC45051.pdf"
+      ],
+      "question_id": "q_0268",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the insulation material and maximum rated voltage of cables is critical for a field technician to ensure safety, proper installation, and compliance with electrical codes in any industrial or solar application."
+    },
+    {
+      "question": "An engineer is specifying an EV-2 switch for a substation operating at 100 kV. Based on the catalog's description of channel construction, what type of channel design should be expected for this switch, and how does this reconcile with the given voltage thresholds?",
+      "ground_truth_answer": "For an EV-2 switch operating at 100 kV, a double channel construction should be expected. The catalog states \"Construcci\u00f3n de doble canal para equipos superiores a 69 kV\" (double channel construction for equipment above 69 kV). Since 100 kV is superior to 69 kV, the double channel design applies. While the catalog also mentions \"canal sencillo para equipos menores a 115 kV\" (single channel for equipment below 115 kV), the condition for 'superior a 69 kV' dictates the more robust double channel construction for voltages in this range, indicating a design requirement for higher performance at these voltage levels.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires careful interpretation of two potentially overlapping or hierarchical design criteria related to voltage thresholds ('>69 kV' for double channel and '<115 kV' for single channel). The user must logically deduce the correct construction based on the engineering implications of voltage requirements, rather than a direct lookup.",
+      "source_doc_id": "southern_states_ev-2-15_5kv-362kv-catalog-flyer-sp_122cb2",
+      "source_filename": "Southern States EV-2-15.5kV-362kV-Catalog-Flyer-Spanish.pdf",
+      "question_id": "q_0235",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "What is the nominal AC voltage of the SMA Sunny Central 4000 UP-US inverter, and what is the maximum line voltage explicitly warned about on device input terminals in the Boyne Mountain Resort project drawings?",
+      "ground_truth_answer": "The nominal AC voltage for the SMA Sunny Central 4000 UP-US inverter is 600 V. The Boyne Mountain Resort project drawings explicitly warn that line voltages up to 600 VRMS are present on the input terminals of devices.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting the nominal AC voltage for a specific inverter model from Document 1 and the maximum warned line voltage from the general warnings section of Document 2. It compares two related voltage specifications across both documents, fitting the 'easy' difficulty guideline.",
+      "source_doc_ids": [
+        "sma_sunny_central-us-ds-en-27_10576f",
+        "1-so50016-boyne-mountain-resort_sld_0_12c_add-on_s_0f1b33"
+      ],
+      "source_filenames": [
+        "SMA Sunny Central-US-DS-en-27.pdf",
+        "1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC.pdf"
+      ],
+      "question_id": "q_0283",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the nominal voltage of an inverter is crucial for installation and operation, and understanding"
+    },
+    {
+      "question": "A residential customer with a 100A service panel is evaluating options for a new PV system, aiming to maximize their continuous AC output power without triggering a main panel upgrade. Per NEC guidelines, their 100A service panel has a maximum allowable solar back-feed of 20A. They are considering installing either NEP BDM-2000 microinverters or NEP BDM-650 microinverters. Given that BDM-2000 units are designed for 30A branch circuits and BDM-650 units for 20A branch circuits (both operating at 1-phase 240Vac), determine: 1. The maximum number of BDM-2000 microinverters that can be installed while respecting both the 30A branch circuit limit and the 20A total back-feed limit. 2. The maximum number of BDM-650 microinverters that can be installed while respecting both the 20A branch circuit limit and the 20A total back-feed limit. 3. The total continuous AC output power for each configuration. 4. Which microinverter model allows for a higher total continuous AC output power given these constraints?",
+      "ground_truth_answer": "To determine the maximum number of units and total continuous AC output for each model:\n\n**For NEP BDM-2000 Microinverters (from Document 1):**\n*   Rated Output Current (1-phase 240Vac): 8.0A\n*   Max Continuous Output Power (1-phase 240Vac): 1920W\n*   Max Units Per Branch (30A): 3 units. A single branch with 3 units would have a total current of 3 * 8.0A = 24.0A.\n\n*   **Constraint 1: 30A Branch Circuit Limit:** A single 30A branch can accommodate 3 BDM-2000 units.\n*   **Constraint 2: 20A Total Back-feed Limit (for 100A panel):** The total current from all PV branches connected to the main panel cannot exceed 20A.\n    *   To find the maximum number of BDM-2000 units: 20A (total limit) / 8.0A/unit = 2.5 units.\n    *   Since only whole units can be installed, the maximum number of BDM-2000 units is 2.\n    *   This also respects the branch circuit limit, as 2 units (16A) can be placed on a 30A branch.\n*   **Total Continuous AC Output for BDM-2000:** 2 units * 1920W/unit = 3840W.\n\n**For NEP BDM-650 Microinverters (from Document 2):**\n*   Rated Output Current (1-phase): ~2.7A\n*   Max Continuous Output Power (1-phase): 640W\n*   Max Units per 20A Branch (1-phase): 6 units. A single branch with 6 units would have a total current of 6 * 2.7A = 16.2A.\n\n*   **Constraint 1: 20A Branch Circuit Limit:** A single 20A branch can accommodate 6 BDM-650 units, resulting in 16.2A.\n*   **Constraint 2: 20A Total Back-feed Limit (for 100A panel):** The total current from all PV branches connected to the main panel cannot exceed 20A.\n    *   Since one full branch of 6 BDM-650 units draws 16.2A, this configuration fully respects the 20A total back-feed limit. No additional units or branches can be added without exceeding the 20A limit or the 20A branch limit for the next branch.\n    *   Thus, the maximum number of BDM-650 units is 6.\n*   **Total Continuous AC Output for BDM-650:** 6 units * 640W/unit = 3840W.\n\n**Conclusion:**\n1.  Maximum BDM-2000 units: 2\n2.  Maximum BDM-650 units: 6\n3.  Total continuous AC output for BDM-2000: 3840W. Total continuous AC output for BDM-650: 3840W.\n4.  Neither microinverter model allows for a higher total continuous AC output power; both configurations result in the same maximum output of 3840W under the given constraints.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting specific electrical ratings (rated output current, max continuous power, max units per branch) from both document 1 (BDM-2000) and document 2 (BDM-650). It then requires complex multi-step reasoning and calculation to apply two different constraints simultaneously: the per-branch circuit limit and the overall system back-feed limit (20A for a 100A panel, as explained in Doc 2). Finally, it requires comparing the resulting maximum AC output power for each scenario, making it a hard multi-hop question.",
+      "source_doc_ids": [
+        "nep_microinverter_bdm-2000-t-datasheet-20241216_990939",
+        "nep_microinverter_bdm-550_bdm-650_whitepaper_aa_eh_dad885"
+      ],
+      "source_filenames": [
+        "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf",
+        "NEP Microinverter BDM-550, BDM-650 Whitepaper AA, EH.pdf"
+      ],
+      "question_id": "q_0430",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question covers critical NEC compliance, system sizing, and equipment specification knowledge essential for any field technician or engineer designing or installing solar PV systems to ensure safety and functionality."
+    },
+    {
+      "question": "An electrical engineering firm is evaluating the EPEC 6000A AC LV SWBD for two distinct projects: one involving a large-scale solar farm in a remote, high-temperature environment, and another for a mission-critical data center requiring maximum uptime. Both projects prioritize reliability and fault detection. Based on EPEC's product literature, how does the shared Siemens circuit breaker technology contribute to the 'Superior Reliability' claims for both the 'demanding outdoor applications' of solar/BESS and the 'critical power applications' of data centers, specifically detailing how the diagnostic capabilities facilitate fault detection and minimize downtime in each unique operational context?",
+      "ground_truth_answer": "The EPEC 6000A AC LV SWBD's 'Superior Reliability' for both solar/BESS and critical data center applications stems from its utilization of 'Siemens\u2019 state-of-the-art power (3WA) and molded case (3VA6) circuit breakers,' which are part of the 'newest version of Siemens\u2019 circuit breaker technology.' This robust foundation inherently contributes to long-term equipment integrity. For the large-scale solar farm in a remote, high-temperature environment (emphasized in Doc 1 as 'thermally engineered for demanding outdoor applications'), the advanced diagnostics and metering from these Siemens breakers, made available via Modbus TCP or other ethernet/PLC protocol, enable proactive fault detection. This capability ensures 'consistent performance and minimal maintenance' by allowing rapid identification and isolation of issues, thereby reducing downtime for AC collection and enhancing overall reliability in challenging outdoor conditions. For the mission-critical data center requiring maximum uptime (emphasized in Doc 2 for 'optimal power management and availability' in 'critical power applications'), the 'full metering and diagnostics for each circuit' provided by the Siemens breakers are vital. These features, combined with 'advanced circuit protection (AERMS per NEC 240.87) and fault detection capabilities,' enable swift and precise identification of electrical anomalies. This minimizes downtime by allowing operators to quickly diagnose and respond to faults, ensuring continuous operation and safeguarding both equipment and personnel.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires identifying a common technological element (Siemens breakers) from both documents, linking it to the overarching 'Superior Reliability' claim, and then performing a comparative analysis. The difficulty lies in explaining *how* the diagnostic capabilities derived from this shared technology specifically address the unique reliability and fault detection needs of *each* application type (demanding outdoor solar vs. mission-critical data center uptime), drawing out the distinct benefits and contextual emphases from both documents to construct a comprehensive, nuanced answer.",
+      "source_doc_ids": [
+        "epec_1200-6000a_ul_891_swbd_for_solar_bess_flyer_v_71ac89",
+        "epec_1200-6000a_ul_891_swbd_industrial_flyer_dd8947"
+      ],
+      "source_filenames": [
+        "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23.pdf",
+        "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer.pdf"
+      ],
+      "question_id": "q_0453",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question directly addresses how specific equipment features (Siemens circuit breaker technology, diagnostics) contribute to critical operational aspects like reliability, fault detection, and minimizing downtime in relevant industrial applications (solar, data centers). This is core technical knowledge a field technician or engineer needs for understanding, troubleshooting, and maintaining the equipment."
+    },
+    {
+      "question": "What is the maximum bus rating for the EPEC Solutions AC LV SWBD?",
+      "ground_truth_answer": "The AC LV SWBD features up to a 6000A bus.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is directly stated in the first paragraph of the document: 'features up to 6000A bus'.",
+      "source_doc_id": "epec_1200-6000a_ul_891_swbd_for_solar_bess_flyer_v_71ac89",
+      "source_filename": "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23.pdf",
+      "question_id": "q_0076",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know the maximum bus rating of a switchboard to ensure proper sizing, safe operation, and compatibility with the electrical system it's integrated into."
+    },
+    {
+      "question": "Based on the typical components described in an overview for solar electric system design, which of these components are specifically addressed by the 2023 National Electrical Code regarding requirements for grounding and disconnecting means?",
+      "ground_truth_answer": "The 'Solar Electric System Design, Operation and Installation' overview identifies key solar electric system components such as solar modules, inverters, battery banks, charge controllers, combiner boxes, disconnects, and grounding equipment. The 2023 National Electrical Code (NEC), specifically within its chapter on Solar Photovoltaic (PV) Systems (Chapter 6), mandates requirements for grounding and disconnecting means for several of these components. PV modules, inverters, and battery banks typically require specific grounding provisions, and both inverters and the overall PV array necessitate clearly defined and accessible disconnecting means for safe operation and maintenance, as per NEC standards.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving the list of typical PV components from Document 1. It then requires Document 2 (NEC 2023) to specify which of these components are subject to code requirements for grounding and disconnecting means. This synthesis of general component knowledge with specific code application makes it a medium-difficulty multi-hop question.",
+      "source_doc_ids": [
+        "solarpvforbuildersoct2009_8f50b7",
+        "national_electrical_code_2023_chapter_6_5be35c"
+      ],
+      "source_filenames": [
+        "solarpvforbuildersoct2009.pdf",
+        "National Electrical Code 2023 Chapter 6.pdf"
+      ],
+      "question_id": "q_0390",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer critically needs to understand NEC requirements for grounding and disconnecting means for solar components to ensure safe, compliant, and functional installations."
+    },
+    {
+      "question": "Considering the YOTTA BLOCK's fire safety features, what specific UL certifications are relevant to its design, and does it require an external fire protection system according to Yotta Energy's documentation?",
+      "ground_truth_answer": "The YOTTA BLOCK energy storage module is designed with best-in-class fire safety. According to the design specification (Ver. 2.0 March 2025), it is certified to UL 9540 and UL 9540A, and is self-contained and fireproof, explicitly stating it does not need an external fire protection system. The product datasheet (Ver. 1.5 May 2025) clarifies that it meets the performance criteria of UL 9540A, while UL 9540 and UL 1973 certifications are listed as pending.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires synthesizing information about fire safety claims, specific UL standards (UL 9540, UL 9540A, UL 1973), and the requirement for an external fire protection system from both documents. It also requires identifying a subtle difference in the reported certification status ('certified' vs. 'pending'/'meets performance criteria') between the two documents, which increases the difficulty to medium.",
+      "source_doc_ids": [
+        "yotta_ess_yotta_block_dpi_design_specification_she_bc943d",
+        "yotta_block-1_1_5_6735ae"
+      ],
+      "source_filenames": [
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf",
+        "Yotta Block-1_1.5.pdf"
+      ],
+      "question_id": "q_0367",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing UL certifications for fire safety and whether an external fire protection system is required for a BESS is absolutely critical for safe installation, compliance, and site planning for a field technician."
+    },
+    {
+      "question": "What type of meter is the Shark\u00ae100, and what measurement device class is mentioned in the general warnings for the Boyne Mountain Resort project?",
+      "ground_truth_answer": "The Shark\u00ae100 is a Multifunction Electricity Meter. The general warnings for the Boyne Mountain Resort project state that the device is a Class III measurement device.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting the specific type of meter (Multifunction Electricity Meter) from Document 1 and the measurement device class (Class III) from the general warnings in Document 2, then combining these two distinct pieces of information. This is a direct lookup and combination, fitting the easy difficulty level.",
+      "source_doc_ids": [
+        "e145701_shark_100_100t_user_manual_v_1_13_11-7-200_3402d2",
+        "1-so50016-boyne-mountain-resort_sld_0_12c_add-on_s_0f1b33"
+      ],
+      "source_filenames": [
+        "E145701_Shark_100_100T_User_Manual_V.1.13_11-7-2008.pdf",
+        "1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC.pdf"
+      ],
+      "question_id": "q_0269",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician"
+    },
+    {
+      "question": "Considering the compliance standards listed for the NEP BDM-550 and BDM-650 microinverters, which specific protection function listed in the technical specifications ensures compliance with NEC 690.11, and what is the primary hazard this NEC article aims to mitigate in a DC system?",
+      "ground_truth_answer": "The specific protection function that ensures compliance with NEC 690.11 is 'DC Arc-Fault Protection' (Page 3). NEC 690.11 primarily aims to mitigate the hazard of DC arc-faults, which can lead to fires in photovoltaic systems.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question is hard because it requires cross-referencing two distinct sections of the document (compliance standards on Page 3 and protection functions on Page 4) to link a specific NEC article (690.11) to a protection feature ('DC Arc-Fault Protection'). It also requires interpreting the implied purpose of that NEC article and protection feature (mitigating DC arc-faults) which, while directly implied by the term 'Arc-Fault Protection' and the article number, demands a technical understanding beyond simple recall.",
+      "source_doc_id": "nep_microinverter_bdm-550_bdm-650_whitepaper_aa_eh_dad885",
+      "source_filename": "NEP Microinverter BDM-550, BDM-650 Whitepaper AA, EH.pdf",
+      "question_id": "q_0178",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding specific protection functions like arc-fault protection and their direct link to critical safety codes like NEC 690.11 is absolutely essential for safe installation, commissioning, and troubleshooting of solar systems."
+    },
+    {
+      "question": "For the NEP BDM-1600-LV Micro Inverter, what is the maximum recommended total PV module power that can be connected, considering each module's individual maximum power?",
+      "ground_truth_answer": "The maximum recommended total PV module power for the BDM-1600-LV Micro Inverter is 2400W (4 panels \u00d7 600W each).",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires the user to interpret the notation '600W\u00d74' from the specifications table and perform a simple multiplication to calculate the total recommended PV module power, going beyond direct factual recall.",
+      "source_doc_id": "nep_microinverter_bdm-1200-lv-250723_july_23_2025__8b9497",
+      "source_filename": "NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed.pdf",
+      "question_id": "q_0152",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer absolutely needs to know the maximum PV module power for an inverter to ensure proper system design, prevent overloading, and maintain safety and efficiency during installation and commissioning."
+    },
+    {
+      "question": "What is the effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers?",
+      "ground_truth_answer": "June 2015",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is directly stated on page 3 of the document under the 'Dual Function Circuit Breaker' section: 'Self Test & Lockout feature as required by UL 943 effective June 2015'.",
+      "source_doc_id": "siemens_mccb-17-sect-07-all-web_33210d",
+      "source_filename": "Siemens MCCB-17-Sect-07-ALL-web.pdf",
+      "question_id": "q_0010",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Field technicians must understand safety standards like UL 943 and the features they mandate for critical safety devices like GFCIs. Knowing the effective date helps determine compliance for new and existing installations, which is crucial for safety and troubleshooting."
+    },
+    {
+      "question": "According to the Meta Power Solutions (MPS) manual, who is responsible for installing, operating, and maintaining their switchboards, and which specific electrical installation codes does the UL 891 standard indicate should be followed for these activities, including the publication year of the latest UL 891 edition?",
+      "ground_truth_answer": "The Meta Power Solutions (MPS) manual indicates that 'competent technicians' are responsible for installing, operating, and maintaining their switchboards. The UL 891 standard specifies that these activities should be conducted in accordance with the Canadian Electrical Code, Part I (CE Code, Part I), the National Electrical Code (NEC), ANSI/NFPA 70, and the Mexican Standard for Electrical Installations (Utility), NOM-001-SEDE. The latest Twelfth Edition of UL 891 was published on July 19, 2019.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting information from both documents. Document 1 (MPS manual) identifies the personnel responsible for installation, operation, and maintenance ('competent technicians'). Document 2 (UL 891 standard) then lists the specific electrical installation codes (CE Code, NEC, ANSI/NFPA 70, NOM-001-SEDE) that govern these activities under the UL 891 standard, and also provides the precise publication date (July 19, 2019) for its latest edition. Combining the 'who' from the manufacturer with the 'what codes' and 'when' from the standard makes this a medium difficulty multi-hop question.",
+      "source_doc_ids": [
+        "mps_switchboard_manual_-_v5_f39db1",
+        "ul_s0891_12_9d20e2"
+      ],
+      "source_filenames": [
+        "MPS Switchboard Manual - V5.pdf",
+        "UL_s0891_12.pdf"
+      ],
+      "question_id": "q_0366",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know who is qualified to work on equipment, which electrical codes govern their work for safety and compliance, and that they are referencing current standards like UL 891."
+    },
+    {
+      "question": "When an AcquiSuite technician is changing IP addresses within the TCP/IP Config menu, what is the specific role of the Menu button?",
+      "ground_truth_answer": "When changing IP addresses in the TCP/IP Config menu, the Menu button will scroll through the number/character options for the current cursor position.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires differentiating the Menu button's function in a specific configuration context (changing IP addresses) from its general menu navigation role, demanding attention to a particular detail in the instructions.",
+      "source_doc_id": "acquisuite-basics---external_a8f6d0",
+      "source_filename": "AcquiSuite-Basics---External.pdf",
+      "question_id": "q_0150",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Configuring network settings like IP addresses is a critical setup task for energy monitoring equipment, and knowing the specific function of a button to input values is essential for a technician to successfully complete this configuration on-site."
+    },
+    {
+      "question": "Describe the environmental enclosure ratings for the YOTTA BLOCK, its associated DPI Microinverters, and the required communication gateways, and identify the primary platforms used for remote monitoring and asset management of the DC-coupled energy storage system.",
+      "ground_truth_answer": "The YOTTA BLOCK energy storage module has an environmental enclosure rating of NEMA 6 and IP67. Its associated Yotta DPI Microinverters are sealed to NEMA 4X. Both the YOTTA BLOCK and DPI Microinverters are designed for outdoor installation. The required communication gateways (ECU-R and SL-GW) can be mounted inside a building or housed in a NEMA 3R cabinet. For remote monitoring, asset management, and troubleshooting of the system, the YOTTA VISION EMA Platform is utilized, with the gateways showing system status through a web platform.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving and combining distinct environmental enclosure ratings (NEMA 6/IP67, NEMA 4X, NEMA 3R) for different components (YOTTA BLOCK, DPI Microinverters, gateways) from both documents. Additionally, it requires identifying multiple distinct platforms/components for remote monitoring and communication (YOTTA VISION EMA Platform, ECU-R, SL-GW), thus necessitating synthesis across document boundaries for a complete answer.",
+      "source_doc_ids": [
+        "yotta_ess_yotta_block_dpi_design_specification_she_bc943d",
+        "yotta_block-1_1_5_6735ae"
+      ],
+      "source_filenames": [
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf",
+        "Yotta Block-1_1.5.pdf"
+      ],
+      "question_id": "q_0368",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing enclosure ratings is critical for safe and proper installation, especially for outdoor equipment. Understanding the communication gateways and monitoring platforms is essential for commissioning, troubleshooting, and managing the system's operation."
+    },
+    {
+      "question": "For a new control circuit in a Class I, Division 2 hazardous location that requires a 600V cable with superior flame propagation resistance, specifically meeting both the IEEE 1202 FT4 and ICEA T-29-520 flame tests, and must carry 12 Amps at 90\u00b0C for a 12 AWG conductor with at least 7 conductors, which Southwire control cable (Multi-Conductor CU FR-XLPE LCT Shielded LSZH or CU PVC-Nylon THHN/THWN-2) would be the appropriate choice, and what is its insulation thickness?",
+      "ground_truth_answer": "The Southwire Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable is the appropriate choice. This is because Document 1 explicitly states that this cable meets both the IEEE 1202 FT4 and ICEA T-29-520 flame tests, whereas Document 2's cable only lists IEEE 1202 FT4. Furthermore, Document 1's Table 1 shows that a 12 AWG cable with 7 conductors has an allowable ampacity of 14 Amps at 90\u00b0C, which exceeds the required 12 Amps. The insulation thickness for this cable type is 30 Mils, as specified in the 'CONSTRUCTION' section of Document 1.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires comparing the flame retardancy specifications (IEEE 1202 FT4 and ICEA T-29-520) between both documents to identify the correct cable type. Document 1's cable meets both, while Document 2's cable only meets one. Once the correct cable type from Document 1 is identified, the answer then requires retrieving the specific ampacity for a 12 AWG, 7-conductor configuration from Document 1's table to confirm it meets the current requirement, and finally, extracting the insulation thickness from Document 1's construction details. This synthesis of specific technical requirements and data across two documents qualifies it as medium difficulty and multi-hop.",
+      "source_doc_ids": [
+        "southwire_substation_spec85045_e93c50",
+        "southwire_spec45051_2e9726"
+      ],
+      "source_filenames": [
+        "Southwire Substation SPEC85045.pdf",
+        "SOUTHWIRE_SPEC45051.pdf"
+      ],
+      "question_id": "q_0385",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Selecting the correct cable for a hazardous location, meeting specific flame resistance standards, voltage, ampacity, and construction requirements, is critical core technical knowledge for a field technician to ensure safety and compliance."
+    },
+    {
+      "question": "What is the maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC?",
+      "ground_truth_answer": "65KA",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is directly stated on page 3 of the document in the description of 'The Siemens 3VA41 circuit breaker': 'having AC interrupting ratings up to 65KA @ 480VAC'.",
+      "source_doc_id": "siemens_mccb-17-sect-07-all-web_33210d",
+      "source_filename": "Siemens MCCB-17-Sect-07-ALL-web.pdf",
+      "question_id": "q_0011",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "The interrupting rating is a critical safety specification for circuit breakers, essential for proper system design, installation, and ensuring the breaker can safely clear fault currents without catastrophic failure."
+    },
+    {
+      "question": "What specific communication gateways are required for the Yotta DPI Microinverters and YOTTA BLOCK system, and what is the name of the integrated platform for remote monitoring, asset management, and troubleshooting?",
+      "ground_truth_answer": "The design specification sheet (Doc 1) states that ECU-R and SL-GW gateways are required for the Yotta DPI Microinverters and YOTTA BLOCK system. The YOTTA BLOCK datasheet (Doc 2) mentions that the YOTTA BLOCK integrates with the YOTTA VISION EMA Platform for remote monitoring, asset management, and troubleshooting.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question asks for two related pieces of information (specific hardware gateways and the name of the monitoring platform) that are found in different documents. Doc 1 provides the names of the required gateways (ECU-R and SL-GW), while Doc 2 provides the name of the monitoring platform (YOTTA VISION EMA Platform). This involves direct retrieval from both sources, making it easy and multi-hop.",
+      "source_doc_ids": [
+        "yotta_ess_yotta_block_dpi_design_specification_she_bc943d",
+        "yotta_block-1_1_5_6735ae"
+      ],
+      "source_filenames": [
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf",
+        "Yotta Block-1_1.5.pdf"
+      ],
+      "question_id": "q_0274",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician must know the specific communication gateways required for system functionality and the monitoring platform for remote management and troubleshooting."
+    },
+    {
+      "question": "A design requires a 4000A, 1500VDC Recombiner to incorporate the Input-Side Contactor option and accommodate 7 input fuse pairs. Based on the Part Number Configuration, what is the minimum number of cabinets necessary for this setup, and can the Input-Side Disconnect option be simultaneously integrated into this specific configuration?",
+      "ground_truth_answer": "For 7 input fuse pairs with the Input-Side Contactor option, a minimum of 3 cabinets is required. The Input-Side Disconnect option cannot be simultaneously integrated because the documentation explicitly states it is 'Not available if Input-Side Contactor option is selected'.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires combining two distinct sets of conditions and constraints from the 'Key Notes' section. First, it involves determining the correct cabinet count based on the number of fuse pairs when the Input-Side Contactor option is present. Second, it requires identifying and applying the mutual exclusivity rule between the Input-Side Contactor and Input-Side Disconnect options. This multi-step logical inference makes it a hard question.",
+      "source_doc_id": "shoals_4000a_recombiner_datasheet_-feb28-2025_51cb97",
+      "source_filename": "Shoals 4000A_Recombiner_datasheet_-Feb28-2025.pdf",
+      "question_id": "q_0208",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question addresses critical equipment configuration, compatibility, and physical requirements (number of cabinets) essential for a field technician or engineer involved in system design, ordering, and installation of a recombiner."
+    },
+    {
+      "question": "What safety standards and voltage limitations should a competent technician be aware of when installing or operating a Meta Power Solutions (MPS) switchboard, based on the provided manufacturer manual and the UL 891 standard?",
+      "ground_truth_answer": "The Meta Power Solutions (MPS) manual states that competent technicians must follow locally approved practices and safety procedures, specifically referencing UL 891 and NFPA 70. The UL 891 standard itself covers switchboards nominally rated at 1000 V or less and is intended for use in accordance with the National Electrical Code (NEC) and ANSI/NFPA 70.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires synthesizing information from both documents. Document 1 (MPS manual) identifies the target audience (competent technicians) and explicitly states that UL 891 and NFPA 70 are relevant safety standards to follow for installation and operation. Document 2 (UL 891 standard) then provides the specific technical scope of UL 891, including the nominal voltage rating (1000 V or less) and its alignment with NEC/ANSI/NFPA 70, thereby expanding on the general directives from the manufacturer's manual. This synthesis of manufacturer's directive and specific standard details makes it medium difficulty.",
+      "source_doc_ids": [
+        "mps_switchboard_manual_-_v5_f39db1",
+        "ul_s0891_12_9d20e2"
+      ],
+      "source_filenames": [
+        "MPS Switchboard Manual - V5.pdf",
+        "UL_s0891_12.pdf"
+      ],
+      "question_id": "q_0365",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing safety standards and voltage limitations for specific equipment like a switchboard is absolutely critical for a field technician's safety and to ensure correct, compliant installation and operation."
+    },
+    {
+      "question": "A compliance auditor needs to assess an employer's adherence to safety standards for electrical system maintenance. Based on the organizational structure presented in 29 CFR Part 1910, Subpart S, identify the specific range of CFR sections dedicated to 'Safety-related maintenance requirements' and articulate the primary conceptual distinction between these regulations and the 'Design safety standards for electrical systems' outlined in the subpart.",
+      "ground_truth_answer": "The specific range of CFR sections dedicated to 'Safety-related maintenance requirements' is \u00a7\u00a7 1910.361 through 1910.380. The primary conceptual distinction is that 'Design safety standards for electrical systems' (in \u00a7\u00a7 1910.302 through 1910.330) focus on the initial construction, components, and layout of electrical systems, whereas 'Safety-related maintenance requirements' address the ongoing upkeep, inspection, and repair practices necessary to ensure continued safe operation of those systems over time.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires understanding the hierarchical structure of the CFR sections and then providing a technical interpretation of the difference in scope and intent between two distinct categories of regulations (design vs. maintenance). It goes beyond simply locating the section numbers, demanding an understanding of their conceptual roles.",
+      "source_doc_id": "osha_electrical_cfr-2024-title29-vol5-part1910-sub_9b78ad",
+      "source_filename": "OSHA Electrical CFR-2024-title29-vol5-part1910-subpartS.pdf",
+      "question_id": "q_0245",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "For an ION8600 meter with current input order option 'E' that conforms to IEC 62053-22 1A 0.2S, what is its specified accuracy range and starting current?",
+      "ground_truth_answer": "The accuracy range for an ION8600 meter with current input option 'E' conforming to IEC 62053-22 1A 0.2S is 10 mA to 10 A, and its starting current is 1 mA.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires the user to locate specific information within a table by matching two criteria (Current Input Order Option 'E' and a particular IEC standard) and then extract two distinct, specific values (accuracy range and starting current). This is more complex than direct factual recall but does not require interpretation or calculation.",
+      "source_doc_id": "powerlogic_ion_8600_verifying_ion8600_accuracy_032_008492",
+      "source_filename": "PowerLogic ION 8600 Verifying ION8600 Accuracy 032008.pdf",
+      "question_id": "q_0164",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know the accuracy range and starting current of a specific meter model and configuration to properly commission, troubleshoot, and verify its performance in the field."
+    },
+    {
+      "question": "What action should a technician take if the network settings on an AcquiSuite EMB A8810, particularly when using a cellular modem, differ from the common settings listed in the 'AcquiSuite Basics - External' document?",
+      "ground_truth_answer": "If the network settings differ, the technician should not change them unless they have confirmed that they are incorrect. If in question, they should check the site drawings and/or check with the AEs.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires understanding a cautionary instruction and identifying the appropriate steps for verification in a specific conditional scenario, rather than simply recalling a direct fact or value.",
+      "source_doc_id": "acquisuite-basics---external_a8f6d0",
+      "source_filename": "AcquiSuite-Basics---External.pdf",
+      "question_id": "q_0149",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know how to handle discrepancies in critical network settings for data acquisition equipment, as incorrect settings can prevent data transmission and system operation."
+    },
+    {
+      "question": "What is the Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch?",
+      "ground_truth_answer": "The Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch is 60 Hz.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is directly stated in the 'RATINGS' table on page 2 of the document.",
+      "source_doc_id": "southern_states_ev-2h-550kv-800kv-catalog-flyer-r0_db32c8",
+      "source_filename": "Southern States EV-2H-550kV-800kV-Catalog-Flyer-R0.pdf",
+      "question_id": "q_0021",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the power frequency (e.g., 50Hz or 60Hz) is a critical electrical specification for any equipment, including disconnect switches, to ensure compatibility with the grid system and prevent operational issues."
+    },
+    {
+      "question": "For the transformer detailed in Quote Line #1, verify the consistency of the listed 'HV L-L Current (A)' and 'LV L-L Current (A)' by performing a full-load current calculation for both sides, using the specified KVA Rating and the appropriate line-to-line voltages derived from 'HV Rating (KV)' and 'LV Rating (KV)'. State your calculated values and conclude whether they are consistent with the provided specifications.",
+      "ground_truth_answer": "The transformer has a KVA Rating of 2000 kVA (2,000,000 VA).\n\nFor the HV side:\nHV Rating (KV) is 12.47GrdY/7.2, indicating a line-to-line voltage (V_L-L) of 12.47 kV (12,470 V).\nCalculated HV L-L Current = 2,000,000 VA / (sqrt(3) * 12,470 V) = 2,000,000 / (1.73205 * 12,470) = 92.59 A.\nThe listed 'HV L-L Current (A)' is 92.6 A. These values are consistent.\n\nFor the LV side:\nLV Rating (KV) is 0.600GrdY/0.346, indicating a line-to-line voltage (V_L-L) of 0.600 kV (600 V).\nCalculated LV L-L Current = 2,000,000 VA / (sqrt(3) * 600 V) = 2,000,000 / (1.73205 * 600) = 1924.56 A.\nThe listed 'LV L-L Current (A)' is 1924.56 A. These values are consistent.\n\nBoth calculated full-load line-to-line currents are consistent with the provided specifications.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires the user to apply the 3-phase power formula (S = sqrt(3) * V_L-L * I_L-L), correctly identify the line-to-line voltages from the given GrdY notation, perform two separate calculations, and then compare the results against the listed values. This involves technical interpretation and calculation, going beyond direct factual recall.",
+      "source_doc_id": "transformer_specifications_03d165",
+      "source_filename": "Transformer Specifications.pdf",
+      "question_id": "q_0249",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer absolutely needs to understand how to calculate and verify transformer full-load currents to ensure proper operation, sizing, and for troubleshooting purposes."
+    },
+    {
+      "question": "A critical control module within an existing Meta Power Solutions (MPS) switchboard, which has been operational for five years and is now outside its original manufacturer's warranty, experiences an unrecoverable failure. Detail the complete procedure, from identifying the failure to the final delivery of the replacement module, including all necessary communication, documentation, and cost considerations, assuming an urgent need to restore operation.",
+      "ground_truth_answer": "1. **Failure Identification and Documentation (MPS Switchboard Manual):** A qualified technician, as specified in Section 1.1 of the MPS Switchboard Manual, identifies the unrecoverable failure of the critical control module during operation or maintenance. The technician should document the specific symptoms, error codes, and the switchboard's model and serial numbers.\n2. **Information Gathering and Initial Contact (Spare Part Request Form & MPS Switchboard Manual):** The technician gathers essential information about the failed control module, including its specific 'Part Number / Description'. Contact Meta Power Solutions (MPS) directly at their provided address (500 S Australian Ave Suite 600, West Palm Beach, FL 33401) or an authorized vendor/supplier to confirm the correct replacement part number, inquire about its availability, lead time, and obtain a formal quotation.\n3. **Spare Part Request Form Completion (Spare Part Request Form):** With the quotation and part details, complete the 'Spare Part Request Form (Vendor-Facing)' with the following information:\n    *   **Date of Request:** Current date.\n    *   **Requesting Party / Contact Info:** Your organization's and contact person's details.\n    *   **Project / Site Location:** The specific site where the MPS switchboard is installed.\n    *   **Vendor / Supplier Contact Info:** The contact details for MPS or the authorized vendor providing the quotation.\n    *   **Equipment Type:** 'Switchboard'.\n    *   **Manufacturer / Model Number:** 'Meta Power Solutions (MPS)' and the specific model number of the switchboard.\n    *   **Serial Number (if applicable):** The serial number of the affected MPS switchboard.\n    *   **Part Number / Description:** The specific part number and detailed description of the replacement control module.\n    *   **Quantity Required:** '1'.\n    *   **Part in Warranty:** 'No' (as the switchboard is outside its 5-year warranty).\n    *   **Reason for Replacement:** 'Failure'.\n    *   **Urgency Level:** 'Critical' due to the unrecoverable failure of a critical control module and the urgent need to restore operation.\n    *   **Expected Delivery Date:** Specify the agreed-upon expedited delivery date.\n    *   **Quoted Cost per Part, Shipping & Handling Estimate, Total Estimated Cost:** Fill these in accurately based on the received quotation, including any expedited shipping charges.\n4. **Submission and Acknowledgment (Spare Part Request Form):** The requesting party signs the form and submits it to the vendor. The vendor must provide 'Vendor Acknowledgement / Confirmation' to finalize the order.\n5. **Receipt and Installation (MPS Switchboard Manual):** Upon urgent delivery of the replacement control module, a qualified technician will proceed with its installation and commissioning according to the safety and operational guidelines provided in the MPS Switchboard Manual, ensuring the switchboard is returned to full operational status.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires complex multi-step reasoning across both documents. It starts with the technical identification of a critical component failure within an MPS switchboard (implied by the MPS Manual's focus on operation and maintenance by qualified personnel). The core challenge is then to navigate the procurement process for an *out-of-warranty* part under *critical* urgency, utilizing the Spare Part Request Form. This involves correctly identifying the 'Part in Warranty' status (No), 'Reason for Replacement' (Failure), and 'Urgency Level' (Critical), and understanding the need to obtain 'Quoted Cost' and 'Shipping & Handling Estimate' from the vendor, which requires prior communication with the manufacturer (MPS) or their representative as indicated in the manual. The synthesis of technical failure, warranty status, urgent procurement, and financial considerations makes this a hard, multi-hop question.",
+      "source_doc_ids": [
+        "spare_part_request_form_337e14",
+        "mps_switchboard_manual_-_v5_f39db1"
+      ],
+      "source_filenames": [
+        "Spare_Part_Request_Form.pdf",
+        "MPS Switchboard Manual - V5.pdf"
+      ],
+      "question_id": "q_0427",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question describes a critical, real-world scenario that a field technician frequently encounters: a major equipment failure requiring urgent replacement. Understanding the complete end-to-end process, from identifying the failure to coordinating procurement and final installation, is essential for restoring operations efficiently."
+    },
+    {
+      "question": "What are the NEMA enclosure ratings specified for the YOTTA BLOCK module according to the design specification sheet and the YOTTA BLOCK datasheet?",
+      "ground_truth_answer": "According to the design specification sheet (Doc 1), the YOTTA BLOCK module is sealed to NEMA 4X. The YOTTA BLOCK datasheet (Doc 2) specifies its enclosure as NEMA 6, IP67.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving the NEMA enclosure rating for the YOTTA BLOCK from two different documents and comparing them. Doc 1 states NEMA 4X, while Doc 2 states NEMA 6, IP67. This is a direct comparison of a single specification across two sources, fitting the easy difficulty.",
+      "source_doc_ids": [
+        "yotta_ess_yotta_block_dpi_design_specification_she_bc943d",
+        "yotta_block-1_1_5_6735ae"
+      ],
+      "source_filenames": [
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf",
+        "Yotta Block-1_1.5.pdf"
+      ],
+      "question_id": "q_0273",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the NEMA enclosure rating is critical for a field technician to determine where equipment can be safely and appropriately installed, ensuring environmental protection and compliance."
+    },
+    {
+      "question": "What is the nominal output power of the PVI-CENTRAL-250-US inverter?",
+      "ground_truth_answer": "The nominal output power of the PVI-CENTRAL-250-US inverter is 250 kW.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is a direct factual recall from the 'Technical Data' table on page 3, under 'Nominal Output Power' for the PVI-CENTRAL-250-US model.",
+      "source_doc_id": "pvi-central-250300-datasheet_f6e719",
+      "source_filename": "pvi-central-250300-datasheet.pdf",
+      "question_id": "q_0031",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the nominal output power is a critical equipment specification for system design, performance evaluation, and troubleshooting for a field technician or engineer."
+    },
+    {
+      "question": "What cooling mechanism and insulating fluid are specified for the 2000kVA pad-mounted transformer in the Brooks-XFMR project, and are these options available for MPS Three-Phase Pad-Mount Transformers?",
+      "ground_truth_answer": "The 2000kVA pad-mounted transformer in the Brooks-XFMR project (Document 2) specifies KNAN cooling and FR3 insulating fluid. Both KNAN cooling and Envirotemp\u2122 FR3\u2122 fluid are listed as available options for MPS Three-Phase Pad-Mount Transformers (Document 1).",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting the specific cooling class (KNAN) and insulating fluid (FR3) for a 2000kVA transformer from Document 2, and then verifying if these are listed as general options (KNAN cooling mechanism, Envirotemp\u2122 FR3\u2122 fluid) within Document 1. This involves comparing two related items (cooling and fluid type) across documents, fitting the easy difficulty.",
+      "source_doc_ids": [
+        "3_phase_pad_mount_transformer_spec_sheet_0c89eb",
+        "transformer_specifications_03d165"
+      ],
+      "source_filenames": [
+        "3 Phase Pad Mount Transformer Spec Sheet.pdf",
+        "Transformer Specifications.pdf"
+      ],
+      "question_id": "q_0275",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "A Schneider Electric ION8600 meter is planned for revenue metering in a new commercial solar photovoltaic system in the United States. Given its factory verification against specific IEC and ANSI accuracy standards, what are the potential consequences if the system's wiring methods and overcurrent protection, as required by NEC 2023 for PV installations, are not adequately designed to protect this high-accuracy meter, and how would such an inadequate design impact the meter's ability to maintain its specified accuracy range (e.g., 50 mA to 20 A for a 5A current option)?",
+      "ground_truth_answer": "The Schneider Electric ION8600 meter is factory-verified to specific accuracy standards such as IEC 62053-22 0.2S or ANSI C12.20 accuracy class 0.2, depending on the current input option, with specified accuracy ranges like 50 mA to 20 A for a 5A current option. If the wiring methods and overcurrent protection for the commercial solar photovoltaic system are not adequately designed per NEC 2023 (e.g., improper conductor sizing under Article 690.8, inadequate overcurrent protective devices under Article 690.9, or non-compliant wiring methods under Article 690.31), the meter could be exposed to transient overcurrents, sustained overloads, or improper voltage conditions. These conditions could lead to damage to the meter's internal components, degradation of its performance characteristics, or complete failure. Consequently, the meter would be unable to maintain its specified accuracy range, leading to inaccurate revenue metering or unreliable system monitoring data. The NEC requirements are crucial for providing the stable and protected electrical environment necessary for the ION8600 to operate reliably and maintain its certified accuracy over its lifespan, preventing both safety hazards and measurement integrity issues.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question demands complex multi-step reasoning. It requires extracting the ION8600's accuracy standards and ranges from Document 1. From Document 2 (via metadata), it requires knowledge of NEC 2023's requirements for wiring methods and overcurrent protection in PV systems. The 'hard' aspect lies in synthesizing these by inferring the *consequences* of failing to meet NEC requirements on the *performance and accuracy* of the specific meter. This involves understanding how the physical and electrical protection mandated by the NEC directly impacts the meter's ability to operate within its manufacturer-specified accuracy parameters, linking installation compliance to measurement integrity.",
+      "source_doc_ids": [
+        "powerlogic_ion_8600_verifying_ion8600_accuracy_032_008492",
+        "national_electrical_code_2023_chapter_6_5be35c"
+      ],
+      "source_filenames": [
+        "PowerLogic ION 8600 Verifying ION8600 Accuracy 032008.pdf",
+        "National Electrical Code 2023 Chapter 6.pdf"
+      ],
+      "question_id": "q_0473",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question covers critical aspects of equipment protection, NEC compliance for PV systems, and the direct impact of improper design on meter accuracy, which is essential for revenue metering and system reliability."
+    },
+    {
+      "question": "For personnel performing rescue operations in a 'permit space' as described in 29 CFR \u00a7 1910.147, what specific training in PPE and medical skills is required for team members, and how does the definition of a 'vault' in 29 CFR \u00a7 1910.269 relate to the concept of an 'enclosed space' that might necessitate such rescue training?",
+      "ground_truth_answer": "For personnel performing rescue operations in a permit space under 29 CFR \u00a7 1910.147, team members must be trained in the proper use of PPE such as SCBA or fall arrest equipment, and in first aid and medical skills to treat victims encountered in such spaces. A 'vault', as defined in 29 CFR \u00a7 1910.269, is an enclosure that personnel may enter for equipment installation, operation, and maintenance. This means a vault is a type of enclosed space which, depending on its specific characteristics (e.g., internal configuration, portal size, potential hazards), could qualify as a permit space under \u00a7 1910.147, thus necessitating the detailed rescue training described in that regulation.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting specific training requirements for permit space rescue from Document 1 and the definition of a 'vault' (an enclosed space in the electrical context) from Document 2. It then asks to relate these two concepts, which is a straightforward connection: a vault can be a type of permit space, making the rescue training relevant. This direct extraction and logical connection make it an 'easy' multi-hop question.",
+      "source_doc_ids": [
+        "osha_loto_cfr-2024-title29-vol5-sec1910-147_90b667",
+        "osha_electric_gen_cfr-2024-title29-vol5-sec1910-26_1288a3"
+      ],
+      "source_filenames": [
+        "OSHA LOTO CFR-2024-title29-vol5-sec1910-147.pdf",
+        "OSHA Electric Gen CFR-2024-title29-vol5-sec1910-269.pdf"
+      ],
+      "question_id": "q_0272",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Field technicians frequently work in confined or enclosed spaces like vaults or electrical rooms, making knowledge of permit space regulations, rescue procedures, PPE, and medical training absolutely critical for their safety and compliance."
+    },
+    {
+      "question": "What hazardous condition was observed at a solar array involving a panel junction box, and what two immediate safety measures were implemented?",
+      "ground_truth_answer": "An open panel junction box with exposed wiring was observed. The two immediate safety measures implemented were stopping work in the affected row and taping off the area.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires identifying both the specific hazardous condition (open junction box with exposed wiring) and two distinct immediate corrective actions taken in response, necessitating the extraction and synthesis of multiple related details.",
+      "source_doc_id": "careful_field_service_safety_observations_2024_202_933d0a",
+      "source_filename": "Careful Field Service Safety Observations 2024 2025.pdf",
+      "question_id": "q_0136",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Identifying critical safety hazards like exposed wiring and knowing immediate safety protocols (stopping work, cordoning off) are fundamental and absolutely critical for any field technician's safety and operational procedures."
+    },
+    {
+      "question": "Compare the smart-grid features and rapid shutdown compliance of the CPS SCH125KTL-DO/US-600 inverter with the ABB PVI-6000-TL-OUTD, specifically regarding California Rule 21 and NEC 690.12 requirements.",
+      "ground_truth_answer": "The CPS SCH125KTL-DO/US-600 inverter is CA Rule 21 certified and includes advanced smart-grid features such as Volt-RideThru, Freq-RideThru, Ramp-Rate, Specified-PF, Volt-VAr, and Freq-Watt. It also features integrated AC & DC disconnect switches. The ABB PVI-6000-TL-OUTD inverter is also Rule 21 compliant and achieves NEC 690.12 compliance for rapid shutdown when used with an ABB Rapid Shutdown device. It also includes an integrated DC disconnect switch (for the -S Version) and is compliant with NEC 690.11 through its DC Arc Fault Circuit Interrupter (AFCI).",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires synthesizing information from both documents regarding compliance standards (CA Rule 21, NEC 690.12) and specific smart-grid or safety features (Volt-VAr, Freq-Watt, integrated disconnects, rapid shutdown device, AFCI). It compares how two different manufacturers address similar regulatory requirements and implement related features, fitting the medium difficulty of synthesizing requirements across documents.",
+      "source_doc_ids": [
+        "cps_125kw_standard_centralized_datasheet_723ecc",
+        "pvi-5000-en-rev_e_fimer_abb_4e75ad"
+      ],
+      "source_filenames": [
+        "CPS 125kW Standard & Centralized Datasheet.pdf",
+        "PVI-5000-EN-Rev E FIMER ABB.pdf"
+      ],
+      "question_id": "q_0351",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know specific inverter compliance with critical safety codes (NEC 690.12), grid interconnection standards (CA Rule 21), and advanced smart-grid features for proper installation, commissioning, and troubleshooting."
+    },
+    {
+      "question": "An engineer is designing a solar PV system for a remote, high-altitude site in a desert region, characterized by extreme temperature fluctuations, high solar irradiance, and the potential for partial shading due to dust accumulation on panels. The system needs to be highly resilient and maximize energy harvest under these conditions.\n\n1. What is the maximum operating altitude without derating for the ABB PVI-6000-TL-OUTD string inverter, and what is its specified enclosure rating for environmental protection?\n2. What is the operating temperature range for the NEP BDM-1600-LV microinverter, and what is its ingress protection rating? Does the NEP microinverter specify a maximum operating altitude without derating, and if so, what is it?\n3. Considering the concern for partial shading, which inverter architecture (string or micro) is inherently better at mitigating power loss from individual shaded panels? Identify the specific feature from the respective datasheet that supports this advantage for the chosen architecture.\n4. If the ambient air temperature at the site frequently exceeds 122\u00b0F (50\u00b0C), how would this specifically affect the performance of the ABB PVI-6000-TL-OUTD inverter as per its datasheet?",
+      "ground_truth_answer": "1. The maximum operating altitude without derating for the ABB PVI-6000-TL-OUTD string inverter is 6560ft (2000m). Its specified enclosure rating is NEMA 4X.\n2. The operating temperature range for the NEP BDM-1600-LV microinverter is -40~65\u00b0C (-40~149\u00b0F). Its ingress protection rating is NEMA 4X. The NEP microinverter specifies a maximum operating altitude without derating as <2000m.\n3. The microinverter architecture (NEP BDM-1600-LV) is inherently better at mitigating power loss from individual shaded panels. Its datasheet highlights 'Triple PV Inputs for Maximum Energy Harvest' and 'adaptive voltage tracking to optimize output across shading, angles, or mixed panel conditions,' indicating independent MPPT for each connected panel (or group of panels). The ABB string inverter, while having dual independent MPPT channels, would still process larger strings, making it more susceptible to shading impacts across those strings compared to the per-panel MPPT of microinverters.\n4. If the ambient air temperature at the site frequently exceeds 122\u00b0F (50\u00b0C), the ABB PVI-6000-TL-OUTD inverter will operate with derating above this temperature, meaning its output power will be reduced to protect the unit.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question is hard and multi-hop because it requires comparing environmental specifications (altitude, temperature range, enclosure rating) and architectural advantages (shading mitigation) across two different inverter types from two documents. It involves understanding the implications of temperature derating and identifying specific features that address design concerns like energy harvest under partial shading, demanding synthesis of both products' capabilities and limitations in a given scenario.",
+      "source_doc_ids": [
+        "pvi-5000-en-rev_e_fimer_abb_4e75ad",
+        "nep_microinverter_bdm-1200-lv-250723_july_23_2025__8b9497"
+      ],
+      "source_filenames": [
+        "PVI-5000-EN-Rev E FIMER ABB.pdf",
+        "NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed.pdf"
+      ],
+      "question_id": "q_0443",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question covers critical technical specifications like operating limits (altitude, temperature), environmental protection (NEMA/IP ratings), and performance characteristics (shading mitigation, thermal derating) directly from datasheets, which a field technician or engineer absolutely must know for system design, installation, and troubleshooting in challenging environments."
+    },
+    {
+      "question": "A power management system for a new manufacturing plant requires an EPEC AC LV SWBD with advanced diagnostics and communication via Modbus TCP. If the plant's design specifies a double-ended NEMA 3R switchboard and aims for the highest main breaker capacity available for air-cooled units, how does the control section integration depicted in the industrial application flyer compare to that shown for critical power applications, specifically regarding the type of controller and the main breaker size associated with it in the visual examples?",
+      "ground_truth_answer": "Both datasheets indicate a highest main breaker capacity of 6000A for air-cooled units. For the industrial application (from 'epec_1200-6000a_ul_891_swbd_industrial_flyer_dd8947'), the depicted double-ended NEMA 3R switchboard includes an 'SEL control section' associated with a 5000A main breaker. In contrast, the critical power application (from 'epec_1200-6000a_ul_891_swbd_for_critical_power_v10_804cea') depicts an 'ATS controller compartment' located above a 4000A main breaker in its double-ended NEMA 3R configuration.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question demands complex multi-step reasoning. It requires identifying the highest general main breaker capacity (6000A from both documents), then extracting specific details about the control section type and its associated main breaker amperage from the *visual examples' descriptions* in both documents, distinguishing between 'industrial' and 'critical power' contexts. Finally, it requires a comparative synthesis of these specific details (SEL control with 5000A main vs. ATS controller with 4000A main). The Modbus TCP detail confirms the need for advanced communication, which both switchboards support.",
+      "source_doc_ids": [
+        "epec_1200-6000a_ul_891_swbd_for_critical_power_v10_804cea",
+        "epec_1200-6000a_ul_891_swbd_industrial_flyer_dd8947"
+      ],
+      "source_filenames": [
+        "EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24.pdf",
+        "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer.pdf"
+      ],
+      "question_id": "q_0425",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question requires detailed knowledge of specific switchboard configurations, controller types, breaker capacities, and communication protocols (Modbus TCP), all of which are critical for a field technician to correctly specify, install, or troubleshoot industrial electrical equipment and its integration into a SCADA system."
+    },
+    {
+      "question": "What is the material specified for the overall jacket of the Southwire Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable, and which UL standard specifically covers the vertical-tray fire propagation and smoke release test for such cables?",
+      "ground_truth_answer": "The overall jacket material is SOLONON\u00ae Low Smoke Zero Halogen (LSZH) Jacket. UL 1685 FT4 specifically covers the Vertical-Tray Fire Propagation and Smoke Release Test.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires identifying the overall jacket material from the 'CONSTRUCTION' section and then cross-referencing the 'SPECIFICATIONS' list to find the UL standard that matches the description 'Vertical-Tray Fire Propagation and Smoke Release Test'. This involves correlating a specific cable feature with its relevant testing standard, which is more involved than a simple lookup but not overly complex, making it medium difficulty.",
+      "source_doc_id": "southwire_substation_spec85045_e93c50",
+      "source_filename": "Southwire Substation SPEC85045.pdf",
+      "question_id": "q_0112",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician must know cable jacket materials for safety (e.g., LSZH for fire/smoke) and specific UL standards for fire propagation to ensure proper, compliant, and safe installation in industrial environments."
+    },
+    {
+      "question": "Considering the Easley Renewable Energy Project's electrical collection system requirements, if EPEC Solutions' 4.2MVA power block skids were implemented using the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what are the maximum inverter capacities and quantities that could be connected to achieve the 4.2MVA block size, and what specific EPEC component would provide the NEC-required local disconnecting means?",
+      "ground_truth_answer": "For EPEC Solutions' 4.2MVA power block skids using the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, either up to twelve 350kW inverters or up to fifteen 275kW inverters can be connected to achieve the 4.2MVA block size. The NEC-required local disconnecting means would be provided by EPEC\u2019s 800VAC NF disconnect.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires combining information from both documents. Document 1 (Easley Project POD) establishes the context of an 'electrical collection system' for the project and lists NEC as a relevant standard in its metadata. Document 2 (EPEC Solutions Datasheet) details the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration for their 4.2MVA power block skids, specifying the inverter quantities and capacities (up to (12) 350kW or (15) 275kW inverters for 4.2MVA) and identifying the 'EPEC\u2019s 800VAC NF disconnect' as providing the 'required NEC local disconnecting means'. The answer synthesizes these specific technical details from EPEC with the general project context and standard compliance from the Easley POD.",
+      "source_doc_ids": [
+        "intersect_power_easley_project_pod_main_rev_2024-7_e5dc69",
+        "800vac_bos_comprehensive_4_2mva_skid_sales_flyer_v_85a711"
+      ],
+      "source_filenames": [
+        "Intersect Power Easley Project POD (MAIN) Rev 2024-7-30 508.pdf",
+        "800VAC BoS_Comprehensive_4.2MVA Skid Sales Flyer V2.24.pdf"
+      ],
+      "question_id": "q_0414",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know equipment sizing limits, specific system configurations, and critical safety components like NEC-required disconnects for the equipment they are installing or maintaining."
+    },
+    {
+      "question": "Considering the Shark\u00ae 100 multifunction meter is explicitly stated as 'not a user-serviceable product' and requires manufacturer intervention for defects, what logistical considerations and required information from the spare part request form would be relevant if a customer needs to obtain a warranty replacement from Electro Industries/GaugeTech, and what shipping responsibility falls on the customer?",
+      "ground_truth_answer": "When requesting a warranty replacement for a non-user-serviceable Shark\u00ae 100 meter from Electro Industries/GaugeTech, the customer should be prepared to provide information such as the 'Project / Site Location', 'Requesting Party / Contact Info', and specify the 'Urgency Level' and desired 'Expected Delivery Date' on a spare part request form. A critical logistical consideration from the manual is that the customer is responsible for sending the defective instrument to EIG 'transportation prepaid' for repair or replacement, and an RMA number must be obtained prior to shipment by contacting customer support. While the spare part form includes fields for 'Shipping & Handling Estimate' and 'Total Estimated Cost' (typically provided by the vendor for the new part), the initial shipping cost to EIG for the defective unit is explicitly the customer's responsibility per the product warranty terms.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question combines the product's non-user-serviceable nature and customer's shipping responsibility from the Shark 100/100T manual (Doc 1) with the logistical fields and information required on the Spare Part Request Form (Doc 2), such as urgency, delivery date, and contact details. It synthesizes logistical requirements and responsibilities for a warranty replacement procedure.",
+      "source_doc_ids": [
+        "e145701_shark_100_100t_user_manual_v_1_13_11-7-200_3402d2",
+        "spare_part_request_form_337e14"
+      ],
+      "source_filenames": [
+        "E145701_Shark_100_100T_User_Manual_V.1.13_11-7-2008.pdf",
+        "Spare_Part_Request_Form.pdf"
+      ],
+      "question_id": "q_0388",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician critically needs to know the process for warranty replacement of non-serviceable equipment, including required documentation and shipping responsibilities, to efficiently resolve equipment failures."
+    },
+    {
+      "question": "Analyze the efficiency curve for the PVI-5000/6000-OUTD-US on page 3. If the inverter is operating with an MPPT voltage of 345 Vdc and delivering 50% of its rated output power (assuming a 6000W rated inverter), estimate the efficiency from the graph. Then, calculate the DC input power required to achieve this AC output, and compare this graphically estimated efficiency to the CEC efficiency for the PVI-6000-OUTD-US at 240V.",
+      "ground_truth_answer": "From the graph, the estimated efficiency at 345 Vdc and 50% of rated output power is approximately 96.5%. To deliver 3000W AC output (50% of 6000W) at this efficiency, the required DC input power is approximately 3108.81W (3000W / 0.965). This graphically estimated efficiency (96.5%) is the same as the CEC efficiency for the PVI-6000-OUTD-US at 240V (also 96.5%).",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires multi-step data extraction and calculation. It involves interpreting a specific point on an efficiency graph based on MPPT voltage and percentage of rated power, performing a calculation to derive DC input power from AC output and efficiency, and then comparing this graphically derived efficiency to a specific CEC efficiency value found in a separate table for a particular model and grid voltage.",
+      "source_doc_id": "pvi-5000-en-rev_e_fimer_abb_4e75ad",
+      "source_filename": "PVI-5000-EN-Rev E FIMER ABB.pdf",
+      "question_id": "q_0239",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding inverter efficiency curves, calculating power based on efficiency, and comparing to standard metrics like CEC efficiency are critical for commissioning, troubleshooting, and performance analysis of solar inverters."
+    },
+    {
+      "question": "What is the CEC Efficiency for the NEP BDM-550 microinverter?",
+      "ground_truth_answer": "The CEC Efficiency for the NEP BDM-550 microinverter is 95.5%.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is directly provided in the 'Key Benefits of NEP\u2019s BDM-550 & BDM-650 Microinverters' table on page 2 under 'CEC Efficiency' for the BDM-550.",
+      "source_doc_id": "nep_microinverter_bdm-550_bdm-650_whitepaper_aa_eh_dad885",
+      "source_filename": "NEP Microinverter BDM-550, BDM-650 Whitepaper AA, EH.pdf",
+      "question_id": "q_0053",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer critically needs to know the CEC efficiency of a microinverter for system design, performance evaluation, and troubleshooting energy output in solar installations."
+    },
+    {
+      "question": "What are the specific environmental conditions recommended for storing an indoor Meta Power Solutions switchboard?",
+      "ground_truth_answer": "Indoor switchboards should be stored indoors in a clean, dry, and cool location with adequate ventilation. The temperature should be between 32\u00b0F (0\u00b0C) and 104\u00b0F (40\u00b0C), and the relative humidity should not exceed 80%.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires extracting multiple specific details (clean, dry, cool, ventilation, temperature range, humidity limit) related to a particular type of equipment storage (indoor switchboards), which goes beyond simple factual recall.",
+      "source_doc_id": "mps_switchboard_manual_-_v5_f39db1",
+      "source_filename": "MPS Switchboard Manual - V5.pdf",
+      "question_id": "q_0162",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing proper storage conditions is critical for a field technician to ensure equipment integrity before installation, preventing damage, warranty issues, and future operational problems."
+    },
+    {
+      "question": "According to the manual, what is the high fire point of silicone fluid?",
+      "ground_truth_answer": "Silicone's high fire point is 340 \u00b0C.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is explicitly stated on page 4 under 'Types of Insulating Fluids': 'Silicone\u2019s high fire point of 340 oC makes it a less flammable fluid...'",
+      "source_doc_id": "3_phase_2000kva_transformer_manual_8ab9e4",
+      "source_filename": "3 Phase 2000kVa Transformer Manual.pdf",
+      "question_id": "q_0056",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the fire point of fluids used in critical equipment like transformers is essential safety information for a field technician, crucial for risk assessment and emergency response."
+    },
+    {
+      "question": "A residential solar installer is designing a 5kW grid-tied PV system for a home in a US jurisdiction that requires compliance with NEC 690.12 for rapid shutdown and advanced grid support functions as per UL1741SA/SB. The homeowner has a 240V split-phase service.\n\n1. If the installer chooses the ABB PVI-5000-OUTD-US string inverter, what is its maximum AC output current when operating at 240V? What specific external component is necessary for this inverter to comply with NEC 690.12?\n2. Alternatively, if they opt for a microinverter solution using NEP BDM-1200-LV units, how many microinverters would be required to achieve a nominal 5kW output (assuming each operates at its rated power)? What is the maximum AC output current of a single BDM-1200-LV unit? Does the NEP microinverter explicitly state compliance with UL1741SA/SB, and if so, what feature supports rapid shutdown within the microinverter itself?",
+      "ground_truth_answer": "1. For the ABB PVI-5000-OUTD-US string inverter operating at 240V, the maximum AC output current (Iac,max) is 23A. To comply with NEC 690.12, the inverter requires ABB's Rapid Shutdown device.\n2. To achieve a nominal 5kW output with NEP BDM-1200-LV units (rated at 1200W each), 5 units would be required (5000W / 1200W per unit \u2248 4.17, rounded up to 5 units). The maximum AC output current of a single BDM-1200-LV unit is 10A. The NEP microinverter explicitly states compliance with UL1741.SB, and it features integrated Rapid Shutdown (RSD).",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question is hard and multi-hop as it requires the user to extract specific electrical parameters (AC output current, rated power) and identify compliance standards (NEC 690.12, UL1741SA/SB) from both a string inverter and a microinverter datasheet. It involves calculation (number of microinverters) and a comparative analysis of rapid shutdown implementation and advanced grid support compliance across two different product architectures, synthesizing information from both documents to address a specific design scenario.",
+      "source_doc_ids": [
+        "pvi-5000-en-rev_e_fimer_abb_4e75ad",
+        "nep_microinverter_bdm-1200-lv-250723_july_23_2025__8b9497"
+      ],
+      "source_filenames": [
+        "PVI-5000-EN-Rev E FIMER ABB.pdf",
+        "NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed.pdf"
+      ],
+      "question_id": "q_0442",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question covers critical technical specifications, compliance requirements (NEC 690.12, UL1741SA/SB), and system sizing for specific solar equipment, which a field technician or engineer absolutely needs to know for design, installation, and troubleshooting."
+    },
+    {
+      "question": "According to the 'Standard Testing' section, what is the primary purpose of an 'Audible Sound-Level Test' as per NEMA Standards, and how might its results influence the placement or application of a Three-Phase Pad-Mount Transformer in different environments?",
+      "ground_truth_answer": "The primary purpose of an 'Audible Sound-Level Test' is to measure the noise emitted by the transformer during operation, ensuring it complies with NEMA Standards (as indicated by the 'Audible Sound Levels (as per NEMA Standards)' table). The results of this test directly influence the placement or application of the transformer. For instance, a transformer with a higher audible sound level (e.g., 65 dB for 4001-5000 KVA) might be unsuitable for installation in noise-sensitive environments like residential areas or near hospitals, requiring placement in industrial zones or with additional sound attenuation. Conversely, transformers with lower sound levels (e.g., 56 dB for 45-500 KVA) are more appropriate for urban or residential settings where noise pollution is a concern, aligning with the document's mention of safe placement 'where people are present'.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires understanding the purpose of a specific standard test ('Audible Sound-Level Test' and NEMA Standards) and then interpreting how the quantitative results (from the 'Audible Sound Levels' table) would impact real-world application or placement decisions. It demands technical inference and contextual understanding rather than direct factual recall.",
+      "source_doc_id": "3_phase_pad_mount_transformer_spec_sheet_0c89eb",
+      "source_filename": "3 Phase Pad Mount Transformer Spec Sheet.pdf",
+      "question_id": "q_0247",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding transformer sound levels and their impact on placement according to"
+    },
+    {
+      "question": "An employer maintains an electric power generation installation covered by 29 CFR \u00a7 1910.269. The employer's electrical safety-related work practices conform to \u00a7\u00a7 1910.332 through 1910.335, which are part of Subpart S. Based on the provisions of \u00a7 1910.269(a)(1)(ii)(B) and its accompanying Note 1, is the employer considered in compliance with the electrical safety-related work-practice requirements of \u00a7 1910.269 by following Subpart S practices? Explain why.",
+      "ground_truth_answer": "Yes, the employer is considered in compliance. Note 1 to paragraph (a)(1)(ii)(B) explicitly states that the Occupational Safety and Health Administration considers work practices conforming to \u00a7\u00a7 1910.332 through 1910.335 as complying with the electrical safety-related work-practice requirements of \u00a7 1910.269, provided that employers are performing the work on a generation or distribution installation.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires interpreting the interaction between an explicit exclusion and a subsequent clarifying note within the standard. It tests the ability to reconcile seemingly contradictory statements and understand the specific conditions under which compliance is achieved by cross-referencing different sections of the regulation, which involves deep domain knowledge interpretation.",
+      "source_doc_id": "osha_electric_gen_cfr-2024-title29-vol5-sec1910-26_1288a3",
+      "source_filename": "OSHA Electric Gen CFR-2024-title29-vol5-sec1910-269.pdf",
+      "question_id": "q_0203",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Field technicians and engineers working on electrical generation and distribution equipment must understand and adhere to OSHA electrical safety regulations to ensure their safety and legal compliance."
+    },
+    {
+      "question": "When verifying the accuracy of an ION8600 meter, what power factor conditions should the stable power source provide for both general testing and specifically for VARh testing?",
+      "ground_truth_answer": "For general testing, the stable power source should provide unity power factor (1.0). Specifically for VARh testing, it should provide a lagging power factor of 0.0 or 0.5.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires the user to identify and differentiate between two specific power factor conditions and their respective applications (general testing vs. VARh testing) from a paragraph. It demands careful reading and contextual understanding of specific details.",
+      "source_doc_id": "powerlogic_ion_8600_verifying_ion8600_accuracy_032_008492",
+      "source_filename": "PowerLogic ION 8600 Verifying ION8600 Accuracy 032008.pdf",
+      "question_id": "q_0165",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician performing calibration or accuracy verification on an energy meter like the ION8600 absolutely needs to know the correct power factor conditions for testing to ensure accurate results and proper system operation."
+    },
+    {
+      "question": "What is the nominal conductor temperature for the Southwire 345/400 kV XLPE Power Cable?",
+      "ground_truth_answer": "The nominal conductor temperature for the Southwire 345/400 kV XLPE Power Cable is 90 \u00b0C.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is directly stated under 'Temperatures (\u00b0C)' as 'Nominal Conductor 90' on page 1 of the document.",
+      "source_doc_id": "southwire_high-voltage-345-400kv-xlpe-power-cable_ad38d6",
+      "source_filename": "Southwire High-Voltage-345-400kV-XLPE-Power-Cable.pdf",
+      "question_id": "q_0017",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the nominal conductor temperature is critical for a field technician or engineer to correctly size cables, ensure safe operation, calculate ampacity, and troubleshoot thermal issues in high-voltage systems."
+    },
+    {
+      "question": "A newly delivered Meta Power Solutions (MPS) switchboard arrives at the project site with visible shipping damage to its main circuit breaker, a critical component. Per the MPS manual, immediate inspection and claim procedures are initiated. Outline the comprehensive process, including necessary documentation and communication, to address this damage and procure a replacement main circuit breaker for the switchboard, assuming the damage is acknowledged under warranty.",
+      "ground_truth_answer": "1. **Immediate Inspection and Claim Initiation (MPS Switchboard Manual):** Upon receipt, a thorough inspection for shipping damage must be conducted (Section 3.2). Any visible damage, especially to a critical component like the main circuit breaker, must be documented immediately. A shipping damage claim must be filed promptly (Section 3.3).\n2. **Manufacturer Contact (MPS Switchboard Manual):** Contact Meta Power Solutions (MPS) directly at their provided address (500 S Australian Ave Suite 600, West Palm Beach, FL 33401) or a factory representative for additional information regarding the claim process and to secure acknowledgment that the damage is covered under warranty.\n3. **Spare Part Request Form Completion (Spare Part Request Form):** Once the shipping damage claim is acknowledged and the replacement of the main circuit breaker is approved under warranty, complete the 'Spare Part Request Form (Vendor-Facing)'. Fill in the following details:\n    *   **Date of Request:** Current date.\n    *   **Requesting Party / Contact Info:** Your organization's and contact person's details.\n    *   **Project / Site Location:** The specific site where the damaged switchboard is located.\n    *   **Vendor / Supplier Contact Info:** The contact details for MPS or their authorized distributor handling the replacement.\n    *   **Equipment Type:** 'Switchboard'.\n    *   **Manufacturer / Model Number:** 'Meta Power Solutions (MPS)' and the specific model number of the switchboard.\n    *   **Serial Number (if applicable):** The serial number of the damaged MPS switchboard.\n    *   **Part Number / Description:** The specific part number and a detailed description of the main circuit breaker required for replacement.\n    *   **Quantity Required:** '1'.\n    *   **Part in Warranty:** 'Yes' (as the damage is acknowledged under warranty).\n    *   **Reason for Replacement:** 'Shipping Damage'.\n    *   **Urgency Level:** 'Critical' due to the main circuit breaker being a critical component.\n    *   **Expected Delivery Date:** Coordinate this with the vendor based on their lead times.\n    *   **Quoted Cost per Part, Shipping & Handling Estimate, Total Estimated Cost:** These should reflect $0 if fully covered by the warranty claim, or any agreed-upon costs.\n4. **Submission and Acknowledgment (Spare Part Request Form):** The requesting party must sign the form, and it should be submitted to the vendor. The vendor then provides 'Vendor Acknowledgement / Confirmation'.\n5. **Receipt and Installation (MPS Switchboard Manual):** Upon receipt of the replacement main circuit breaker, a qualified technician (Section 1.1) will proceed with its installation following the safety and installation guidelines in the MPS Switchboard Manual.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires multi-step reasoning across both documents. First, it necessitates understanding the initial steps for shipping damage claims from the MPS Switchboard Manual (inspection, contacting MPS). Second, it requires applying the detailed procurement process outlined in the Spare Part Request Form, specifically filling out relevant fields like 'Reason for Replacement' (Shipping Damage), 'Part in Warranty' (Yes), and 'Urgency Level' (Critical), while correlating the equipment details (manufacturer, model, part description) from the context of the MPS manual. A complete answer integrates both the damage reporting/claim process and the subsequent formal part request, making it a complex, multi-hop task.",
+      "source_doc_ids": [
+        "spare_part_request_form_337e14",
+        "mps_switchboard_manual_-_v5_f39db1"
+      ],
+      "source_filenames": [
+        "Spare_Part_Request_Form.pdf",
+        "MPS Switchboard Manual - V5.pdf"
+      ],
+      "question_id": "q_0426",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know the comprehensive process for handling shipping damage to critical equipment like a main circuit breaker, as it directly impacts project timelines, warranty claims, and system commissioning."
+    },
+    {
+      "question": "A Siemens 3VA circuit breaker with the MLFB 3VA5125-4EC31-0AA0 is being considered for an application. If the requirement changes such that a non-adjustable instantaneous trip unit is needed for the same amperage and breaking capacity, what would be the corresponding MLFB code for this breaker?",
+      "ground_truth_answer": "The original MLFB 3VA5125-4EC31-0AA0 indicates a standard trip unit. According to Note 3 on page 2, the digits 9 and 10 (-EC-) can be substituted for -ED- to indicate a non-adjustable instantaneous trip unit. Therefore, the corresponding MLFB code would be 3VA5125-4ED31-0AA0.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires technical interpretation of the MLFB code structure based on a specific note provided in the document. It's not a direct lookup but requires applying a rule to derive a new part number.",
+      "source_doc_id": "siemens_reference_guide_3va_enclosedcirbreaker_aae051",
+      "source_filename": "Siemens Reference Guide_3VA_EnclosedCirBreaker.pdf",
+      "question_id": "q_0204",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer frequently needs to identify specific equipment models, especially circuit"
+    },
+    {
+      "question": "For initial electrical connection procedures involving a Meta Power Solutions (MPS) Switchboard and a Power-One AURORA PVI-CENTRAL-300-US inverter, what personnel qualification is explicitly required by MPS, and what specific personal protective equipment (PPE) is highlighted by Power-One for operations involving voltages up to 600 VDC, considering both manufacturers' general safety instructions?",
+      "ground_truth_answer": "For initial electrical connection procedures, Meta Power Solutions (MPS) explicitly requires a 'Qualified Person' or 'competent technician' who understands the manual's contents and follows all locally approved practices and safety procedures. Power-One, for operations involving voltages up to 600 VDC, highlights the necessity of using adequate protection, specifically mentioning insulating gloves and goggles.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires multi-step reasoning across two documents. From Document 1 (MPS Switchboard Manual), the user must identify the required personnel qualification ('Qualified Person' or 'competent technician'). From Document 2 (Power-One Inverter Manual), the user must identify specific PPE (insulating gloves, goggles) for operations involving up to 600 VDC. The challenge lies in synthesizing these distinct safety requirements from different sources for a common task (electrical connection) on combined equipment, making it a hard multi-hop question.",
+      "source_doc_ids": [
+        "mps_switchboard_manual_-_v5_f39db1",
+        "manual-pvi-central-250-300_dc3888"
+      ],
+      "source_filenames": [
+        "MPS Switchboard Manual - V5.pdf",
+        "Manual-PVI-Central-250-300.pdf"
+      ],
+      "question_id": "q_0494",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician critically needs to know the required personnel qualifications for high-voltage electrical work and the specific PPE mandated by manufacturers for safety when dealing with dangerous DC voltages."
+    },
+    {
+      "question": "A new data center requires a 1500 kVA pad-mounted transformer to be installed inside a building with a stringent fire suppression system, where minimizing initial cost is a secondary concern to fire safety and regulatory compliance. Based on the provided fluid properties, which insulating fluid (Silicone, FR3, or Mineral Oil) would be the most technically appropriate choice, and why, specifically considering its fire point and regulatory approvals mentioned?",
+      "ground_truth_answer": "Silicone fluid would be the most technically appropriate choice. The manual states that 'Silicone\u2019s high fire point of 340 \u00b0C makes it a less flammable fluid that is UL Listed and factory mutual approved for indoor and outdoor applications. It is ideal in locations where fire hazards are present and special fire-suppression systems are in place.' This directly addresses the data center's stringent fire safety and regulatory compliance needs, prioritizing these over initial cost, which is a secondary concern as specified in the question.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires comparative analysis of different insulating fluids based on their fire points, regulatory approvals (UL Listed, FM approved), and application suitability for specific environments (indoor, high fire hazard, with fire suppression), and then making a reasoned technical judgment based on stated priorities.",
+      "source_doc_id": "3_phase_2000kva_transformer_manual_8ab9e4",
+      "source_filename": "3 Phase 2000kVa Transformer Manual.pdf",
+      "question_id": "q_0223",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "What is the Weighted Average Efficiency (CEC) of the NEP BDM-2000 Microinverter?",
+      "ground_truth_answer": "The Weighted Average Efficiency (CEC) of the NEP BDM-2000 Microinverter is 96.5%.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer is explicitly listed under the 'System Efficiency' section of the datasheet.",
+      "source_doc_id": "nep_microinverter_bdm-2000-t-datasheet-20241216_990939",
+      "source_filename": "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf",
+      "question_id": "q_0074",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the CEC efficiency is a critical performance specification for a microinverter, essential for system commissioning, performance validation, and troubleshooting if a solar array is underperforming."
+    },
+    {
+      "question": "An engineer needs to select a 600V cable for a control system in a solar substation, where the cable will be installed in an exposed tray within a Class I, Division 2 hazardous location. Due to strict environmental and safety regulations, the chosen cable must also exhibit low smoke and zero halogen properties in case of fire. Considering the Southwire Type TC-ER Power Cable and the Southwire Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable, which cable is the appropriate choice for this application, and which specific standards listed in each cable's specifications address its suitability for hazardous locations and its flame/smoke performance?",
+      "ground_truth_answer": "The Southwire Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable is the appropriate choice. This cable explicitly features a \"SOLONON\u00ae Low Smoke Zero Halogen (LSZH) Jacket,\" directly addressing the low smoke and zero halogen requirement. Its suitability for Class I, II, and III, Division 2 hazardous locations is supported by NEC Article 501 and 502, and its flame performance is supported by UL 1685 FT4 Vertical-Tray Fire Propagation and Smoke Release Test and IEEE 1202 FT4 Vertical Tray Flame Test. While the Southwire Type TC-ER Power Cable is also suitable for Class I, II, and III, Division 2 hazardous locations per NEC Article 501 and 502 and meets UL 1685 FT4 for fire propagation, it has a PVC Jacket and does not specify low smoke zero halogen properties, making it less suitable for the stated environmental and safety regulations.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires comparing two different cable types from separate documents based on a specific application scenario. It demands the synthesis of information regarding hazardous location suitability (found in both documents under 'Applications and Features' and 'Specifications' citing NEC Article 501 and 502), flame test standards (UL 1685 FT4/IEEE 1202 FT4 in both), and critically, the identification of the 'low smoke zero halogen' property which is unique to the LSZH jacket of the control cable (Document 2). The user must identify which cable meets all criteria and cite relevant standards from both documents for a comprehensive answer, fulfilling the medium difficulty requirement of synthesizing information across documents for a requirement.",
+      "source_doc_ids": [
+        "southwire_spec45252_8c8088",
+        "southwire_substation_spec85045_e93c50"
+      ],
+      "source_filenames": [
+        "SOUTHWIRE_SPEC45252.pdf",
+        "Southwire Substation SPEC85045.pdf"
+      ],
+      "question_id": "q_0381",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Selecting the correct cable for hazardous locations with specific fire safety requirements (LSZH) is a critical design and safety decision that a field engineer or senior technician must master."
+    },
+    {
+      "question": "Compare the standard warranty periods for the Yotta DPI-208/480 microinverters and the YOTTA BLOCK energy storage system.",
+      "ground_truth_answer": "Both the Yotta DPI-208/480 microinverters and the YOTTA BLOCK energy storage system come with a standard warranty of 10 years. The DPI microinverters also offer an optional 25-year warranty.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving the standard 'Warranty' period for the DPI from Document 1 (10 Years Standard) and the 'Warranty' period for the YOTTA BLOCK from Document 2 (10 yrs). It asks for a direct comparison of these two warranty durations, aligning with the easy difficulty level for comparing related items across documents.",
+      "source_doc_ids": [
+        "yotta_dpi-208-480_9_0_2_c27296",
+        "yotta_block-1_1_5_6735ae"
+      ],
+      "source_filenames": [
+        "Yotta DPI-208-480_9.0+(2).pdf",
+        "Yotta Block-1_1.5.pdf"
+      ],
+      "question_id": "q_0332",
+      "domain_relevance_score": 4,
+      "domain_relevance_rationale": "While not critical for daily operation, knowing warranty periods is highly relevant for a field technician when troubleshooting equipment failures to determine if a component is eligible for replacement under warranty."
+    },
+    {
+      "question": "Which Southwire control cable, the Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable or the CU 600V PVC-Nylon Insulation PVC Jacket THHN/THWN-2 Type TC-ER Control Cable, has a higher short circuit temperature rating, and by how much?",
+      "ground_truth_answer": "The Southwire Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable (Doc 1) has a short circuit temperature rating of 250\u00b0C. The Southwire CU 600V PVC-Nylon Insulation PVC Jacket THHN/THWN-2 Type TC-ER Control Cable (Doc 2) has a short circuit temperature rating of 150\u00b0C. Therefore, the FR-XLPE LCT Shielded LSZH cable has a higher short circuit temperature rating by 100\u00b0C.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving the short circuit temperature rating from Document 1 (250\u00b0C) and from Document 2 (150\u00b0C) and then comparing them. This is a direct comparison across two documents, fitting the 'easy' difficulty and multi-hop requirement.",
+      "source_doc_ids": [
+        "southwire_substation_spec85045_e93c50",
+        "southwire_spec45051_2e9726"
+      ],
+      "source_filenames": [
+        "Southwire Substation SPEC85045.pdf",
+        "SOUTHWIRE_SPEC45051.pdf"
+      ],
+      "question_id": "q_0314",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding cable specifications like short circuit temperature rating is critical for selecting the correct cable for safety, compliance, and system reliability in any electrical installation, which is a core task for field technicians and engineers."
+    },
+    {
+      "question": "What is the nominal voltage rating for switchboards covered by the UL 891 Standard for Safety?",
+      "ground_truth_answer": "The UL 891 Standard for Safety covers switchboards nominally rated at 1000 V or less.",
+      "reasoning": "Page 3 states: 'This new edition of ANSI/UL 891 covers switchboards nominally rated at 1 000 V or less...'",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "source_doc_id": "ul_s0891_12_9d20e2",
+      "source_filename": "ul_s0891_12_9d20e2.pdf",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "",
+      "question_id": "q_0514"
+    },
+    {
+      "question": "An electrical installation supplying power to employee workstations is situated within a mobile home. This installation is connected to an external electricity supply via conductors on the property. Based on 29 CFR Part 1910, Subpart S, specifically \u00a7 1910.302(a), determine whether this installation is covered by the design safety standards for electric utilization systems, and cite the specific sub-clause(s) that establish this coverage.",
+      "ground_truth_answer": "Yes, the installation is covered. As per \u00a7 1910.302(a)(1), the provisions cover \"electrical installations and utilization equipment installed or used within or on buildings, structures, and other premises, including: (iv) Mobile homes; (vii) Conductors that connect the installations to a supply of electricity; and (viii) Other outside conductors on the premises.\"",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires synthesizing multiple conditions (mobile home, conductors, premises) from different sub-clauses within the scope definition to confirm coverage, rather than a direct lookup of a single fact. It involves interpreting the application of several specific regulatory points to a complex scenario.",
+      "source_doc_id": "osha_electrical_cfr-2024-title29-vol5-part1910-sub_9b78ad",
+      "source_filename": "OSHA Electrical CFR-2024-title29-vol5-part1910-subpartS.pdf",
+      "question_id": "q_0243",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "What is the general purpose of the Battery Energy Storage System planned for the Easley Renewable Energy Project, according to common solar electric system designs?",
+      "ground_truth_answer": "The Battery Energy Storage System for the Easley Renewable Energy Project is designed to store electricity for use when the photovoltaic array is not producing sufficient power to meet the electrical demand.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires recognizing the Battery Energy Storage System as a component in the Easley project (Doc 1, Section 2.8) and understanding its general function as a battery bank in solar electric systems (Doc 2, page 17). It is an easy question as it asks for a direct functional description in a specific project context.",
+      "source_doc_ids": [
+        "intersect_power_easley_project_pod_main_rev_2024-7_e5dc69",
+        "solarpvforbuildersoct2009_8f50b7"
+      ],
+      "source_filenames": [
+        "Intersect Power Easley Project POD (MAIN) Rev 2024-7-30 508.pdf",
+        "solarpvforbuildersoct2009.pdf"
+      ],
+      "question_id": "q_0280",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding the fundamental purpose and role of a Battery Energy Storage System in a solar project"
+    },
+    {
+      "question": "What is the maximum individual input fuse rating available for the Shoals 4000A, 1500VDC Recombiner compared to the maximum available PV fuse size per input for the SMA Sunny Central inverter?",
+      "ground_truth_answer": "The Shoals 4000A, 1500VDC Recombiner offers individual input overcurrent protection options up to 630A. In contrast, the SMA Sunny Central inverter has a maximum available PV fuse size of 500A per input.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving the maximum input fuse rating from Document 1 (Shoals Recombiner) and the maximum PV fuse size per input from Document 2 (SMA Inverter) and then comparing them. This is a direct comparison of a single technical specification across two different products, fitting the easy difficulty criteria.",
+      "source_doc_ids": [
+        "shoals_4000a_recombiner_datasheet_-feb28-2025_51cb97",
+        "sma_sunny_central-us-ds-en-27_10576f"
+      ],
+      "source_filenames": [
+        "Shoals 4000A_Recombiner_datasheet_-Feb28-2025.pdf",
+        "SMA Sunny Central-US-DS-en-27.pdf"
+      ],
+      "question_id": "q_0309",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the maximum fuse ratings for critical equipment like recombiners and inverters is essential for system design, safety, troubleshooting overcurrent issues, and ensuring proper component compatibility in the field."
+    },
+    {
+      "question": "A residential customer has a 100A service panel and wants to install a new PV system to avoid a main panel upgrade. They are considering using NEP BDM-550 microinverters due to their stated benefit in such scenarios. However, a contractor proposes using Yotta DPI-208 microinverters, citing their UL 1741 SA/SB and IEEE 1547 compliance. Evaluate whether the Yotta DPI-208 microinverter is a suitable alternative for this specific residential application, considering both the grid connection type and the primary benefit NEP highlights for the 100A panel scenario.",
+      "ground_truth_answer": "The Yotta DPI-208 microinverter is not a suitable alternative for this specific residential application. While both the NEP BDM-550 and Yotta DPI-208 microinverters comply with UL 1741 SA/SB and IEEE 1547, their intended grid connection types and application optimizations differ significantly. The NEP BDM-550 is specifically designed for residential single-phase 240 Vac systems, optimizing its low rated output current (~2.3A) to enable more units per branch circuit and stay within the 120% rule for back-feed on 100A panels, thereby avoiding costly main panel upgrades. In contrast, the Yotta DPI-208 microinverter is explicitly designed for commercial three-phase 208V grid connection. Its incompatibility with the residential single-phase 240 Vac service and its focus on commercial (often energy storage integrated) applications means it would not achieve the desired benefit of avoiding a 100A residential main panel upgrade with the same optimized current management as the NEP BDM-550.",
+      "difficulty": "hard",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires information from both documents. From Document 1, it requires understanding the NEP BDM-550's specific benefits for 100A residential panels (1\u03c6 240 Vac, low current for 120% rule compliance) and its grid compliance. From Document 2, it requires identifying the Yotta DPI-208's intended application (commercial, 3\u03c6 208V grid connection) and its grid compliance. The question then asks for a synthesis and evaluation of suitability based on these differing technical specifications and application contexts, making it a complex multi-step reasoning task beyond simple comparison.",
+      "source_doc_ids": [
+        "nep_microinverter_bdm-550_bdm-650_whitepaper_aa_eh_dad885",
+        "yotta_ess_yotta_block_dpi_design_specification_she_bc943d"
+      ],
+      "source_filenames": [
+        "NEP Microinverter BDM-550, BDM-650 Whitepaper AA, EH.pdf",
+        "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf"
+      ],
+      "question_id": "q_0428",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician or engineer absolutely must understand equipment compatibility, grid connection types, and how inverter specifications impact residential service panel limitations (like the 120% rule) for proper system design and installation."
+    },
+    {
+      "question": "What communication protocols are available for retrieving diagnostic and metering information from the EPEC AC LV SWBD, and which specific Siemens circuit breaker model is used for molded case applications within the system?",
+      "ground_truth_answer": "Diagnostic and metering information is available via Modbus TCP or other Ethernet/PLC protocols. The Siemens 3VA6 circuit breaker model is used for molded case applications.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires identifying two distinct pieces of information from the 'Intelligence for Diagnostics, Metering, & Switching' section: the supported communication protocols and the specific Siemens circuit breaker model for molded case applications, which is more involved than a simple factual recall.",
+      "source_doc_id": "epec_1200-6000a_ul_891_swbd_industrial_flyer_dd8947",
+      "source_filename": "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer.pdf",
+      "question_id": "q_0095",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician critically needs to know communication protocols for SCADA integration and specific component models like circuit breakers for maintenance, troubleshooting, and spare parts."
+    },
+    {
+      "question": "Given the Brooks-XFMR transformer (Quote Line #1) utilizes FR3 as its insulating fluid and has a 65\u00b0C winding temperature rise, what is the UL classification status of the FR3 fluid itself, and what industry standards, including UL, does the manufacturer (Meta-Power Solutions) state their transformers comply with for such specifications?",
+      "ground_truth_answer": "The Brooks-XFMR transformer (Quote Line #1) uses FR3 insulating fluid with a 65\u00b0C winding temperature rise. According to the instruction manual, FR3 fluid is \"UL / C-UL Listed / Classified.\" Furthermore, Meta-Power Solutions states that all their transformers, including those with these specifications, are built according to NEMA, ANSI, and UL standards, and are themselves \"UL / C-UL Listed / Classified.\"",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting specific transformer properties (FR3 fluid, 65\u00b0C winding temp rise) from Document 1. It then requires synthesizing this with information from Document 2 regarding the UL classification of FR3 fluid and the general compliance of Meta-Power Solutions' transformers with UL and other industry standards. This involves connecting specific component details to broader regulatory and manufacturing compliance, which fits the medium difficulty level.",
+      "source_doc_ids": [
+        "transformer_specifications_03d165",
+        "3_phase_2000kva_transformer_manual_8ab9e4"
+      ],
+      "source_filenames": [
+        "Transformer Specifications.pdf",
+        "3 Phase 2000kVa Transformer Manual.pdf"
+      ],
+      "question_id": "q_0371",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician critically needs to know the UL classification of insulating fluids and the overall industry standards compliance of transformers for safety, regulatory adherence, and proper installation and maintenance procedures."
+    },
+    {
+      "question": "Considering the general overview of PV system installation requirements, what specific wiring methods or safety provisions does the 2023 National Electrical Code mandate for solar photovoltaic systems to ensure personnel protection?",
+      "ground_truth_answer": "The 'Solar Electric System Design, Operation and Installation' overview highlights the National Electrical Code (NEC) as critical for PV system wiring and installation safety, mentioning 'Special Considerations in Wiring PV Systems' and 'Safety During the Installation'. The 2023 National Electrical Code, within its chapter on Solar Photovoltaic (PV) Systems (Chapter 6), mandates specific provisions related to wiring methods, overcurrent protection, and disconnecting means to ensure personnel protection. These typically include requirements for appropriate conductor sizing, proper insulation, secure connections, clear labeling of circuits, and accessible disconnecting switches for safe maintenance and emergency shutdown.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires information from Document 1 to establish the general importance of the NEC for PV wiring and safety, and then requires Document 2 (NEC 2023) to identify the specific mandated wiring methods or safety provisions. It synthesizes a high-level requirement with concrete code details, fitting the medium difficulty.",
+      "source_doc_ids": [
+        "solarpvforbuildersoct2009_8f50b7",
+        "national_electrical_code_2023_chapter_6_5be35c"
+      ],
+      "source_filenames": [
+        "solarpvforbuildersoct2009.pdf",
+        "National Electrical Code 2023 Chapter 6.pdf"
+      ],
+      "question_id": "q_0389",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know specific NEC wiring methods and safety provisions for PV systems to ensure safe and compliant installations and maintenance."
+    },
+    {
+      "question": "A field technician is performing an external check on an AcquiSuite EMB A8810 at a commercial site that utilizes its cellular modem for connectivity. The technician observes the device's DNS Server #1 is configured as 1.1.1.1. Site drawings are unavailable, and the Asset Engineers (AEs) cannot be immediately consulted. What is the recommended immediate action regarding this observed DNS server configuration for the AcquiSuite EMB A8810, and what specific guideline from the document supports this decision?",
+      "ground_truth_answer": "The recommended immediate action is to *not* change the observed DNS Server #1 setting of 1.1.1.1. The document explicitly states: \"If there are differing settings, do not change them unless you have confirmed that they are incorrect.\" Since the technician cannot confirm if the setting is incorrect without site drawings or AE consultation, it should not be altered, even though it deviates from the common setting of 8.8.4.4.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires technical interpretation of a conditional instruction ('do not change unless confirmed incorrect') in a specific scenario, understanding that 'common' settings are not absolute rules, and applying a principle of caution. It's not a direct recall of a value but a decision based on contextual rules.",
+      "source_doc_id": "acquisuite-basics---external_a8f6d0",
+      "source_filename": "AcquiSuite-Basics---External.pdf",
+      "question_id": "q_0168",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question addresses a critical troubleshooting scenario involving network configuration (DNS) for an energy monitoring device, which directly impacts its ability to communicate. A field technician absolutely needs to know how to handle such situations and when to make or defer changes to avoid disrupting operations."
+    },
+    {
+      "question": "The Washington State University Extension Energy Program's overview for builders identifies grounding equipment as a necessary component for solar PV systems. What general principles and specific requirements for grounding and bonding related to solar photovoltaic (PV) systems are typically mandated by the National Electrical Code (NEC) 2023?",
+      "ground_truth_answer": "The WSU overview highlights the essential role of grounding equipment in solar PV systems. The National Electrical Code (NEC) 2023, particularly within its Chapter 6 on Special Equipment, mandates comprehensive requirements for grounding and bonding to ensure safety. These requirements typically cover the proper sizing of grounding conductors, methods for connecting to grounding electrodes, and the bonding of all non-current-carrying metallic parts of the PV system, such as module frames and mounting racks. The NEC aims to establish effective ground-fault current paths, protect against lightning strikes and surges, and minimize shock hazards to personnel, ensuring the entire PV system operates safely under fault conditions.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires synthesizing information from two documents. Document 2 (WSU) identifies 'Grounding Equipment' as a component of a PV system. Document 1 (NEC 2023) specifies 'Grounding' and 'Bonding' as major safety topics for PV systems. The answer requires combining the conceptual need for grounding from WSU with the types of regulatory requirements (e.g., conductor sizing, electrode connections, bonding metallic parts, fault current paths, protection from hazards) stipulated by the NEC, without requiring specific article numbers, thus fitting a medium difficulty level.",
+      "source_doc_ids": [
+        "national_electrical_code_2023_chapter_6_5be35c",
+        "solarpvforbuildersoct2009_8f50b7"
+      ],
+      "source_filenames": [
+        "National Electrical Code 2023 Chapter 6.pdf",
+        "solarpvforbuildersoct2009.pdf"
+      ],
+      "question_id": "q_0411",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding NEC grounding and bonding requirements for solar PV systems is critical for field technicians to ensure safe and compliant installations and troubleshooting."
+    },
+    {
+      "question": "A commercial solar project plans to integrate YOTTA BLOCK energy storage units with Yotta DPI-208 microinverters. Given the maximum continuous AC output power of a single DPI-208 and the maximum power output of a YOTTA BLOCK at 208V, how many YOTTA BLOCK units can be supported by one DPI-208 microinverter, and what is the combined system's maximum continuous AC output power contribution from the storage units through that DPI?",
+      "ground_truth_answer": "From the DPI-208 datasheet (Doc 1), the Maximum Continuous Output Power is 1728VA. From the YOTTA BLOCK datasheet (Doc 2), the Max Power Output (discharge defined by DPI Microinverter) is 432W @ 208V. To determine the number of YOTTA BLOCK units supported by one DPI-208, divide the DPI's output by the YOTTA BLOCK's output: 1728VA / 432W = 4 YOTTA BLOCK units. Therefore, one DPI-208 microinverter can support 4 YOTTA BLOCK units, and the combined system's maximum continuous AC output power contribution from the storage units through that DPI would be 1728VA.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires extracting the maximum continuous AC output power of the DPI-208 from Document 1 and the maximum power output of a single YOTTA BLOCK at 208V from Document 2. It then requires a calculation (division) to determine the number of YOTTA BLOCK units that can be supported by a single DPI-208 to fully utilize its capacity, and stating the resulting system output. This synthesizes information from both documents to determine a system configuration and its capacity, fitting the medium difficulty criteria.",
+      "source_doc_ids": [
+        "yotta_dpi-208-480_9_0_2_c27296",
+        "yotta_block-1_1_5_6735ae"
+      ],
+      "source_filenames": [
+        "Yotta DPI-208-480_9.0+(2).pdf",
+        "Yotta Block-1_1.5.pdf"
+      ],
+      "question_id": "q_0349",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "This question involves critical system sizing and compatibility calculations for integrating energy storage with microinverters, which is essential knowledge for proper system design, installation, and troubleshooting in the field."
+    },
+    {
+      "question": "For an EPEC AC LV SWBD utilized in demanding applications such as industrial manufacturing and critical power data centers, what specific Siemens circuit breaker models are used, and what advanced safety features are incorporated to meet NEC 240.87?",
+      "ground_truth_answer": "The EPEC AC LV SWBDs utilize Siemens' state-of-the-art power (3WA) and molded case (3VA6) circuit breakers. For enhanced safety, they incorporate advanced circuit protection (AERMS per NEC 240.87) and fault detection capabilities.",
+      "difficulty": "medium",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires synthesizing information from both documents. Both documents mention 'industrial manufacturing plants' and 'critical power data centers' as applications. The question then asks for specific circuit breaker models and advanced safety features, which are detailed identically in both documents. The multi-hop aspect comes from confirming the product's applicability across the combined scope implied by the two document titles (Industrial and Critical Power) and then extracting the specific technical details (breaker models and safety features adhering to NEC 240.87) which are consistently presented in both sources.",
+      "source_doc_ids": [
+        "epec_1200-6000a_ul_891_swbd_industrial_flyer_dd8947",
+        "epec_1200-6000a_ul_891_swbd_crit_power_flyer_7b01cb"
+      ],
+      "source_filenames": [
+        "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer.pdf",
+        "EPEC_1200-6000A UL 891 SWBD (Crit Power) Flyer .pdf"
+      ],
+      "question_id": "q_0373",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "A field technician absolutely needs to know the specific circuit breaker models within a switchboard for maintenance, troubleshooting, and replacement, and understanding critical safety features like those required by NEC 240.87 is paramount for safe operation and compliance."
+    },
+    {
+      "question": "For an ION8600 meter with Current Input Order Option 'E' configured to meet the IEC 62053-22 1A 0.2S standard, what is the maximum current that can be accurately measured, and what is the ratio of this maximum current to the starting current for this specific configuration?",
+      "ground_truth_answer": "For an ION8600 meter with Current Input Order Option 'E' configured to meet the IEC 62053-22 1A 0.2S standard, the maximum current that can be accurately measured is 10 A. The starting current for this configuration is 1 mA. Therefore, the ratio of the maximum current to the starting current is 10 A / 1 mA = 10000.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires navigating a technical table to identify specific values (accuracy range and starting current) for a given meter configuration and standard. It then requires unit conversion (A to mA) and a calculation (ratio), demonstrating a deeper technical interpretation beyond simple recall.",
+      "source_doc_id": "powerlogic_ion_8600_verifying_ion8600_accuracy_032_008492",
+      "source_filename": "PowerLogic ION 8600 Verifying ION8600 Accuracy 032008.pdf",
+      "question_id": "q_0231",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "The UL 489 standard mentions 'Calibration Tests' as a type of testing for circuit breakers. What specific characteristic is noted regarding the trip units in Siemens 3VA Enclosed Circuit Breakers?",
+      "ground_truth_answer": "The UL 489 standard includes 'Calibration Tests' for circuit breakers, which apply to their trip units. For Siemens 3VA Enclosed Circuit Breakers, a specific characteristic of their trip units is that they are non-interchangeable.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires finding the mention of 'Calibration Tests' within the UL 489 standard (Doc 1) and then finding a related characteristic concerning 'trip units' for the Siemens 3VA circuit breakers in their quick reference guide (Doc 2). It links a general testing requirement from the standard to a specific design characteristic of the product's component, fitting the easy difficulty level by comparing related items across documents.",
+      "source_doc_ids": [
+        "ul_s0489_13_f97166",
+        "siemens_reference_guide_3va_enclosedcirbreaker_aae051"
+      ],
+      "source_filenames": [
+        "UL_s0489_13.pdf",
+        "Siemens Reference Guide_3VA_EnclosedCirBreaker.pdf"
+      ],
+      "question_id": "q_0324",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding UL 489 standards, calibration tests, and specific characteristics like non-interchangeable trip units for"
+    },
+    {
+      "question": "If a 1000 kVA Meta-Power Solutions pad-mounted transformer, rated for a 65\u00b0C temperature rise above a 40\u00b0C ambient, is consistently subjected to cyclical loads from welding equipment that cause abnormal impact loading and operate in an environment where the average ambient temperature is 35\u00b0C but can peak at 50\u00b0C during peak load periods, what is the primary risk to the transformer's lifespan, and which specific application limitation from the manual is being violated or severely challenged?",
+      "ground_truth_answer": "The primary risk to the transformer's lifespan is a significant reduction due to accelerated insulation degradation, as 'a higher temperature is the main factor contributing to a shorter transformer life.' The specific application limitation being violated or severely challenged is 'Abnormal impact loading when feeding welding equipment, electric furnaces or motors with cyclical loads.' Additionally, while the transformer is rated for a 65\u00b0C temperature rise, this rating is based on a maximum ambient temperature of 40\u00b0C. The peak ambient temperature of 50\u00b0C, combined with abnormal impact loading, will cause the transformer to operate at temperatures exceeding its design limits, thus exacerbating the risk to its lifespan.",
+      "difficulty": "hard",
+      "question_type": "single_hop",
+      "reasoning": "This question requires synthesizing information from multiple sections: 'Application Limitations' (abnormal impact loading), 'Temperature Guidelines' (temperature rise basis and impact on lifespan), and applying it to a complex scenario involving fluctuating ambient temperatures and demanding load types. It demands diagnostic reasoning to identify the primary risk and link it to specific technical guidelines.",
+      "source_doc_id": "3_phase_2000kva_transformer_manual_8ab9e4",
+      "source_filename": "3 Phase 2000kVa Transformer Manual.pdf",
+      "question_id": "q_0224",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Technical domain question requiring field knowledge."
+    },
+    {
+      "question": "What is the maximum continuous current rating for an EV-2 Vertical Break switch when rated for 145 kV, and what is its corresponding BIL rating?",
+      "ground_truth_answer": "According to the 'Group Operated Switch Application Guide' (Doc 1), the EV-2 model is listed for Vertical Break configurations at 145 kV up to a 3000A current rating. The 'EV-2 Aluminum Vertical Disconnect Switch' datasheet (Doc 2) specifies that the EV-2 has a Continuous Current Rating range of 1200 A \u2013 3000 A, and for a Maximum Voltage Rating of 145 kV, the corresponding BIL is 650 kV. Therefore, the maximum continuous current rating is 3000 A, and its corresponding BIL rating is 650 kV.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires consulting Doc 1 to confirm the EV-2 model's applicability for a 145 kV Vertical Break configuration at various current levels, and then consulting Doc 2 to find the specific continuous current range and the precise BIL rating for 145 kV for the EV-2 model. This fits the 'easy' difficulty as it compares and combines direct facts about a single product across two documents.",
+      "source_doc_ids": [
+        "southern_states_group_operated_switch_application__1edb26",
+        "southern_states_ev-2-15_5kv-362kv-catalog-flyer_1220e8"
+      ],
+      "source_filenames": [
+        "Southern States Group Operated Switch Application Guide.pdf",
+        "Southern States EV-2-15.5kV-362kV-Catalog-Flyer.pdf"
+      ],
+      "question_id": "q_0263",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the maximum current and BIL ratings for high-voltage switches is critical for proper equipment selection, system design, and ensuring safe operation in the field."
+    },
+    {
+      "question": "According to Table 1, what is the approximate outer diameter (OD) in inches for a 12 AWG Type TC-ER control cable with 7 conductors?",
+      "ground_truth_answer": "The approximate outer diameter (OD) for a 12 AWG Type TC-ER control cable with 7 conductors (Stock Number 408641\u25ca) is 0.477 inch.",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires the user to navigate to a specific data table, identify the correct row based on two criteria (AWG size and number of conductors), and then extract the value from the corresponding 'Approx. OD' column. This involves matching multiple details, which is more complex than a direct factual recall but does not require interpretation or calculation.",
+      "source_doc_id": "southwire_spec45051_2e9726",
+      "source_filename": "SOUTHWIRE_SPEC45051.pdf",
+      "question_id": "q_0098",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the outer diameter of a cable is critical for field technicians to properly size conduits, cable glands, and plan cable routing in switchboards or enclosures, ensuring compliance and proper installation."
+    },
+    {
+      "question": "What is the lowest ambient operating temperature supported by the YOTTA BLOCK system, and how does this compare to the lowest ambient operating temperature of the NEP BDM-2000 Microinverter?",
+      "ground_truth_answer": "The YOTTA BLOCK system supports an ambient operating temperature down to -20\u00b0C (-4\u00b0F) for both charging and discharging. In contrast, the NEP BDM-2000 Microinverter can operate in ambient temperatures as low as -40\u00b0C (-40\u00b0F). Therefore, the NEP BDM-2000 Microinverter is rated for operation in colder conditions than the YOTTA BLOCK.",
+      "difficulty": "easy",
+      "question_type": "multi_hop",
+      "reasoning": "This question requires retrieving the lowest ambient operating temperature from the YOTTA BLOCK datasheet (Document 1) and comparing it to the lowest ambient operating temperature from the NEP BDM-2000 Microinverter datasheet (Document 2). It's an easy difficulty as it involves a direct comparison of a single specification across two distinct pieces of equipment.",
+      "source_doc_ids": [
+        "yotta_block-1_1_5_6735ae",
+        "nep_microinverter_bdm-2000-t-datasheet-20241216_990939"
+      ],
+      "source_filenames": [
+        "Yotta Block-1_1.5.pdf",
+        "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf"
+      ],
+      "question_id": "q_0311",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the operating temperature limits of equipment is critical for proper installation, ensuring reliable operation in various environments, and diagnosing performance issues related to extreme weather conditions."
+    },
+    {
+      "question": "According to 29 CFR Part 1910, Subpart S, Section 1910.302(b)(1), what are the specific sections of \u00a7 1910.303 that apply to all electrical installations and utilization equipment, irrespective of their original design or installation date?",
+      "ground_truth_answer": "The specific sections of \u00a7 1910.303 that apply to all electrical installations and utilization equipment, regardless of when they were designed or installed, are: \u00a7 1910.303(b) (Examination, installation, and use of equipment), \u00a7 1910.303(c)(3) (Electrical connections\u2014Splices), \u00a7 1910.303(d) (Arcing parts), \u00a7 1910.303(e) (Marking), \u00a7 1910.303(f) (Disconnecting means and circuits, with the exception of (f)(4) and (f)(5)), and \u00a7 1910.303(g)(2) (600 volts or less\u2014Guarding of live parts).",
+      "difficulty": "medium",
+      "question_type": "single_hop",
+      "reasoning": "This question requires the user to meticulously extract a list of multiple specific regulatory citations and their associated descriptions, including a nuanced exception for one of the sections, which demands careful reading and attention to detail within a bulleted list.",
+      "source_doc_id": "osha_electrical_cfr-2024-title29-vol5-part1910-sub_9b78ad",
+      "source_filename": "OSHA Electrical CFR-2024-title29-vol5-part1910-subpartS.pdf",
+      "question_id": "q_0091",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Understanding and complying with OSHA electrical safety regulations is critical for field technicians working with electrical equipment, as it directly impacts safety, installation practices, and legal compliance."
+    },
+    {
+      "question": "What is the rated voltage for the Southwire Type TC-ER Control Cable?",
+      "ground_truth_answer": "The rated voltage for the Southwire Type TC-ER Control Cable is 600 Volt.",
+      "difficulty": "easy",
+      "question_type": "single_hop",
+      "reasoning": "The answer '600 Volt' is explicitly stated multiple times in the document, including the title and the 'APPLICATIONS AND FEATURES' section. This is a direct factual recall.",
+      "source_doc_id": "southwire_spec45051_2e9726",
+      "source_filename": "SOUTHWIRE_SPEC45051.pdf",
+      "question_id": "q_0034",
+      "domain_relevance_score": 5,
+      "domain_relevance_rationale": "Knowing the rated voltage of a control cable is critical for a field technician to ensure proper cable selection, system compatibility, and electrical safety during installation or troubleshooting."
+    }
+  ],
+  "metadata": {
+    "sampled_from": 458,
+    "sample_size": 100
+  }
+}

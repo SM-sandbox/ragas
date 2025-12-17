@@ -1,0 +1,143 @@
+{
+  "doc_id": "southwire_substation_spec85045_e93c50",
+  "doc_type": "datasheet",
+  "doc_title": "Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable Color Method 1 Table 1",
+  "subtitle": "Control Cable 600 Volt Copper Conductors, Flame Retardant Cross Linked Polyethylene (FR-XLPE) Insulation Shielded SOLONON\u00ae Low Smoke Zero Halogen (LSZH) Jacket, Control Cable Conductor Identi\ufb01cation Method 1 Table 1. Silicone Free",
+  "publisher_or_manufacturer": "Southwire Company, LLC",
+  "canonical_anchor_phrase": "Southwire Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable Datasheet, Rev: 3.0.00C (2021)",
+  "publication": {
+    "revision": "3.0.00C",
+    "edition_year": 2021,
+    "publication_date_text": "02/24/2021 16:47 UTC"
+  },
+  "standards": {
+    "standard_body": [
+      "ASTM",
+      "UL",
+      "ICEA",
+      "IEEE",
+      "NEMA",
+      "NEC"
+    ],
+    "standard_ids": [
+      "ASTM B3",
+      "ASTM B8",
+      "UL 44",
+      "UL 1277",
+      "UL 1685",
+      "ICEA S-58-679",
+      "ICEA S-73-532",
+      "ICEA S-95-658",
+      "NEMA WC70",
+      "IEEE 1202",
+      "ICEA T-29-520",
+      "NEC Article 501",
+      "NEC Article 502",
+      "NEC 336.10",
+      "NEC 2017 Edition"
+    ],
+    "jurisdiction_or_region": [
+      "US"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Control Cable",
+      "Multi-Conductor Cable",
+      "Shielded Cable"
+    ],
+    "models": [
+      "662507",
+      "625554",
+      "662506",
+      "625561",
+      "662504",
+      "625559"
+    ],
+    "product_names": [
+      "SOLONON\u00ae Low Smoke Zero Halogen (LSZH) Jacket",
+      "Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Cable Construction",
+      "Electrical Properties",
+      "Physical Data",
+      "Cable Applications",
+      "Industry Standards",
+      "Flame Retardancy",
+      "Low Smoke Zero Halogen (LSZH)",
+      "Ampacity Ratings",
+      "Conductor Identification",
+      "Shielding",
+      "Insulation",
+      "Jacket Materials"
+    ],
+    "safety_topics": [
+      "Flame Retardant",
+      "Low Smoke Zero Halogen",
+      "Fire Propagation",
+      "Sunlight Resistant",
+      "Hazardous Locations"
+    ],
+    "procedural_domains": [
+      "Installation"
+    ],
+    "keywords": [
+      "Multi-Conductor Cable",
+      "Copper Conductors",
+      "FR-XLPE Insulation",
+      "LSZH Jacket",
+      "Control Cable",
+      "600 Volt",
+      "Shielded Cable",
+      "ASTM B3",
+      "ASTM B8",
+      "UL 44",
+      "UL 1277",
+      "UL 1685",
+      "ICEA S-58-679",
+      "ICEA S-73-532",
+      "ICEA S-95-658",
+      "NEMA WC70",
+      "IEEE 1202",
+      "ICEA T-29-520",
+      "NEC Article 501",
+      "NEC Article 502",
+      "NEC 336.10",
+      "Hazardous Locations",
+      "TC-ER",
+      "90\u00b0C Operation",
+      "130\u00b0C Emergency Overload",
+      "250\u00b0C Short Circuit",
+      "Wet Locations",
+      "Dry Locations",
+      "Direct Burial",
+      "Sunlight Resistant",
+      "Ampacity",
+      "Bending Radius",
+      "Conductor Size",
+      "Jacket Thickness",
+      "Diameter Over Insulation",
+      "Copper Weight",
+      "DC Resistance",
+      "AC Resistance",
+      "SOLONON\u00ae",
+      "Silicone Free"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Southwire Substation SPEC85045.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Southwire Substation SPEC85045.pdf",
+    "page_range_used": "1-3"
+  }
+}

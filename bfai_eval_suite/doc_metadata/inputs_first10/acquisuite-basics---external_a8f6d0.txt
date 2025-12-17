@@ -1,0 +1,70 @@
+--- Page 1 ---
+2/25/2019
+https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftempl…
+https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftemplates%2Fprint…
+1/3
+Support >  C&I Training >  
+AcquiSuite Basics - External
+AcquiSuite Basics - External
+Intended for internal support reference.
+ 
+AcquiSuite EMB A8810
+ 
+WHAT IS IT: 
+ 
+The AcquiSuite is the datalogger that we use on most of our commercial sites. It is able 
+to detect and collect data from a variety of external devices. This document will outline 
+common checks we can perform externally (without logging into the AcquiSuite with a 
+laptop) in order to troubleshoot more efficiently.
+ 
+ 
+SETTINGS CHECK:
+ 
+The AcquiSuite often uses one of our cellular modems (the Digi or Multitech) to 
+connect but can also use a local area network. For local area network connections, 
+we can set the AcquiSuite to DHCP mode but if there are specific network 
+requirements, they will need to obtain those from the IT department for that 
+network.
+Common Network Settings for AcquiSuite using our cell modem:
+DHCP+UPnP = disabled
+IP Address = 192.168.2.50
+Netmask = 255.255.255.0
+
+
+--- Page 2 ---
+2/25/2019
+https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftempl…
+https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftemplates%2Fprint…
+2/3
+Gateway = 192.168.2.1
+DNS Server #1 = 8.8.4.4
+DNS Server #2 = 8.8.8.8
+Note: These settings are common but there are sites (often retrofits) that use 
+different network configurations. If there are differing settings, do not change 
+them unless you have confirmed that they are incorrect. If in question, check 
+the site drawings and/or check with the AEs.
+ 
+ 
+MENU LAYOUT:
+ 
+ 
+MENU NAVIGATION:
+ 
+There are two external buttons on the AcquiSuite, Menu and Select, that are 
+located at the top right corner of the unit.
+The Menu button is used to scroll through the menu options and Select is used to 
+advance into the currently displayed menu option.
+After selecting DHCP+UPnP on/off, Menu will disable DHCP and Select will enable 
+DHCP mode.
+When changing IP addresses in the TCP/IP Config menu, the Select button will 
+advance the cursor a single position and the Menu button will scroll through the 
+number/character options for the current cursor position.
+
+
+--- Page 3 ---
+2/25/2019
+https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftempl…
+https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftemplates%2Fprint…
+3/3
+In order to navigate back to the TCP/IP Config menu, press Select until the 
+cursor has moved to the end of the IP address.

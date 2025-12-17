@@ -1,0 +1,83 @@
+{
+  "doc_id": "acquisuite_backup_and_restore_88522f",
+  "doc_type": "maintenance_manual",
+  "doc_title": "Acquisuite Backup and Restore",
+  "subtitle": null,
+  "publisher_or_manufacturer": "AlsoEnergy",
+  "canonical_anchor_phrase": "AlsoEnergy Acquisuite Maintenance Manual",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": "7/14/25, 5:57 AM"
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Acquisuite"
+    ],
+    "models": [],
+    "product_names": [
+      "Acquisuite",
+      "PowerTrack"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Acquisuite System",
+      "Backup Procedures",
+      "Restore Procedures",
+      "Data Management",
+      "PowerTrack Integration",
+      "Configuration Management"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [
+      "System administration",
+      "Data management"
+    ],
+    "keywords": [
+      "Acquisuite",
+      "Backup",
+      "Restore",
+      ".bak file",
+      "PowerTrack",
+      "System menu",
+      "Configuration",
+      "Upload",
+      "Download",
+      "Reboot",
+      "File types",
+      "Knowledge Base",
+      "Data recovery",
+      "System settings"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "medium",
+    "missing_fields": [
+      "subtitle",
+      "publication.revision",
+      "publication.edition_year",
+      "standards.standard_body",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "equipment.models",
+      "topics.safety_topics",
+      "topics.toc_outline"
+    ],
+    "ambiguities": [
+      "The date '7/14/25' appears to be a future date or a timestamp from a knowledge base system, not a traditional publication date.",
+      "The publisher/manufacturer 'AlsoEnergy' is inferred from the knowledge base URL 'kb.alsoenergy.com' and not explicitly stated in the document body."
+    ]
+  },
+  "source": {
+    "filename": "Acquisuite Backup and Restore.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Acquisuite Backup and Restore.pdf",
+    "page_range_used": "1-2"
+  }
+}

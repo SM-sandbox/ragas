@@ -1,0 +1,271 @@
+--- Page 1 ---
+2
+4000A, 1500VDC RECOMBINER
+FEATURES
+•	 Versatile Design: 4000A, 1500VDC Recombiner Cabinet optimized for standalone Battery Energy 
+Storage and Solar + Storage applications.
+•	 Designed for Compliance: Designed in accordance with UL 1741 and CSA standards but not 
+certified.
+•	 Customizable Protection: Tailored input fuse options to accommodate unique application 
+requirements.
+•	 Enhanced Safety: Optional input-side disconnects provide superior isolation capabilities.
+•	 Integrated Control Options: Optional input-side contactor controls for seamless operational 
+flexibility.
+TECHNICAL INFORMATION
+Electrical
+Rated Voltage
+1500 VDC
+Rated Current
+4000A
+Overcurrent Protection (Input)
+80A - 630A
+Maximum Overcurrent Protection (Main Output)
+4000A
+Main Output Disconnect Switch Type  
+4000A Non-Load Break Rated
+Maximum Number of Input-Side Dual-Fused Circuits (per cabinet)
+8
+SCCR
+200kA
+Input-Side Disconnect Options1
+Six or eight 500A disconnects in a single-sided cabinet
+Input-Side Contactor Maximum Current Option1
+Up to 500A
+Mechanical & Environmental
+Nominal Enclosure Size (H x D x W)2
+2100mm x 800mm x 2000mm ( 82.7” x 31.5”  x 78.7”)
+Enclosure Rating
+NEMA 3R
+Ambient Temperature Range
+-40 to +50 ºC
+Bus Bar Material
+Tin-plated copper
+Enclosure Material
+Coated roll-formed steel
+Cable Entry and Exit
+Bottom feed only
+Pictured: Base dual cabinet Recombiner configuration
+Rev. A - 02/28/2025   |   Proprietary and Confidential
+Specifications subject to change without notice.
+1.	 Special order, contact factory for details
+2.	 Approximate outer dimensions represent the two-cabinet design for the Fuse-only OR Fuse + Input-Side Contactor configurations. 
+Envelope dimensions for the base 4000A dual cabinet with additional MLBD cabinet are: H x D x W= 1234mm x 456mm x 7890 (123” x 456” x 789”)
+
+
+--- Page 2 ---
+PART NUMBER CONFIGURATION
+STG . BSR . 08 . C40 01 N . ZZ R 1 . DF N C
+Input Fuse Conﬁguration
+(Pairs of fuses on both (+) and (-) terminals)
+01 = 1 pairs (2 fuses total)
+02 = 2 pairs (4 fuses total)
+03 = 3 pairs (6 fuses total)
+-
+-
+-
+16 = 16 pairs (32 fuses total)
+Input Fuse Rating & Design
+Consult factory -Available options 80A-630A
+Input-Side Disconnects1
+N =  None 
+S  =   Yes (Special Order Only)
+Main Output Fuse Rating & Design
+Consult factory - Available options 125A-4000A
+ZZ =  No Main Output Fuse
+Number of Cabinets 
+Note: Number of input fuses and options will determine number of cabinets. See Key Notes.
+2  =  Dual Cabinet (not available with Input-Side Disconnects option.)
+3  = Triple  Cabinet (required for Input-Side Disconnect option; available for all other conﬁgurations.)
+Input-Side Contactor  Option2
+Blank =  No Input-Side Contactor Option
+C  =  Batery Contactor Option (Special Order Only)
+Cabinet Rating 
+C40 = 4000A, 1500VDC
+Surge Protector Option
+N =  No Surge Protector Option (consult factory if Surge Protector Option is needed)
+Key Notes:
+Configurations with no Input-Side Disconnect or Input-Side Contactor are limited to 8 fuse pairs per cabinet. Configurations exceeding 8 fuse 
+pairs will need additional cabinets.	
+	
+	
+	
+•	 1-8 fuse pairs = 2 cabinet
+•	 9-16 fuse pairs = 3 cabinets
+1) Input-Side Disconnect Option:
+•	 Requires 3 cabinets 
+•	 Input-Side Disconnects are in a separate cabinet from the fuse pairs
+•	 Limited to a maximum of 8 fuse pairs 
+•	 Available with 6 or 8 disconnects only
+•	 Not available if Input-Side Contactor option is selected
+2) Input-Side Contactor Option:
+•	 Limited to 6 fuse pairs per cabinet. Configurations exceeding 6 fuse pairs will need additional cabinets
+•	 1-6 fuse pairs = 2 cabinet
+•	 7-12 fuse pairs = 3 cabinets	
+•	 Not available if Input-Side Disconnect option is selected
+
+
+--- Page 3 ---
+DIMENSIONS, DUAL CABINET
+External dimensions for units with (1) Fuses-Only or (2) Fuses and Input-Side Contactor option.
+TYPE 3R
+STEEL ENCLOSURE
+POWDER COATED RAL 7035
+70.8”
+31.7”
+63.2”
+86.8”
+82.8”
+
+
+--- Page 4 ---
+DIMENSIONS, DUAL CABINET
+Fuse-only design internal view shown (no input-side contactors or input-side disconnect options shown)
+Safety
+Shield
+04
+Input Fuse 
+pairs
+Main Output 
+Disconnect 
+Switch
+Bottom View
+Bottom View
+21.0”
+8X Ø.51 Thru
+(Pad Mounting Holes)
+22.4”
+(OPENING)
+22.4”
+(OPENING)
+22.7”
+(OPENING)
+9.0”
+19.6”
+21.0”
+10.5”
+
+
+--- Page 5 ---
+DIMENSIONS, TRIPLE CABINET
+TYPE 3R
+STEEL ENCLOSURE
+POWDER COATED RAL 7035
+102.3”
+31.7”
+94.6”
+82.8”
+External dimensions for units with (1) Fuses-Only or (2) Fuses and Input-Side Contactor option.
+
+
+--- Page 6 ---
+Fuse-only design internal view shown (no input-side contactors or input-side disconnect options shown)
+DIMENSIONS, TRIPLE CABINET
+Input Fuse 
+pairs
+Main Output 
+Disconnect 
+Switch
+Bottom View
+Bottom View
+22.4”
+21.0”
+12X Ø.51 Thru
+(Pad Mounting Holes)
+22.4”
+(OPENING)
+22.4”
+(OPENING)
+22.7”
+(OPENING)
+22.4”
+(OPENING)
+9.1”
+9.0”
+19.6”
+21.0”
+21.0”
+Safety Cover 
+Shown
+
+
+--- Page 7 ---
+DIMENSIONS, TRIPLE CABINET
+External dimensions for Fuse-only design with Input-Side Disconnect option shown (no Input-Side Contactors shown) .
+ 86.77 
+ 82.77 
+LIFTINTG BARS
+TYPE 3R
+STEEL ENCLOSURE
+POWDER COATED RAL 7035
+ 31.67 
+ 118.60 
+ 110.86 
+4" PLINTH
+118.6”
+110.9”
+31.7”
+82.8”
+86.8”
+
+
+--- Page 8 ---
+Fuse-only design with Input-Side Disconnect option shown (no Input-Side Contactors shown) 
+DIMENSIONS, TRIPLE CABINET
+SECTION A-A
+1500V, 500A DISCONNECT SWITCH
+1500VDC, 500A FUSE
+EARTH GROUND TERMINALS
+BUS TO ACCEPT NEMA 2 HOLE LUGS
+SAFETY PANEL (SHOWN)
+SAFETY PANELS (NOT SHOWN)
+ 36.72 
+ 20.97 
+ 10.68 
+ 20.97 
+ 10.68 
+14.49
+(OPENING)
+14.49
+(OPENING)
+ 9.13 
+ 9.28 
+22.36
+(OPENING)
+ 9.28 
+22.36
+(OPENING)
+12X 
+.51 THRU
+(PAD MOUNTING HOLES)
+ 19.64 
+ 22.49 
+SECTION B-B
+(VIEW FROM BELOW)
+WIRE ACCESS
+(OPEN TO BELOW)
+WIRE ACCESS  
+(OPEN TO BELOW)
+Bottom View
+Bottom View
+21.0”
+12X Ø.51 Thru
+(Pad Mounting Holes)
+22.4”
+(OPENING)
+22.7”
+(OPENING)
+14.5”
+(OPENING)
+10.7”
+19.6”
+36.7”
+21.0”
+10.7”
+14.5”
+(OPENING)
+9.1”
+9.3”
+22.4”
+(OPENING)
+Shoals-installed 
+wiring not shown

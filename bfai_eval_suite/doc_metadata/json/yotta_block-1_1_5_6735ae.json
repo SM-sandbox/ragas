@@ -1,0 +1,126 @@
+{
+  "doc_id": "yotta_block-1_1_5_6735ae",
+  "doc_type": "datasheet",
+  "doc_title": "YOTTA BLOCK",
+  "subtitle": "Commercial Energy Storage Solution",
+  "publisher_or_manufacturer": "YOTTA Energy Inc.",
+  "canonical_anchor_phrase": "YOTTA Energy Inc. YOTTA BLOCK Datasheet, Ver. 1.5 (2025)",
+  "publication": {
+    "revision": "Ver. 1.5",
+    "edition_year": 2025,
+    "publication_date_text": "May 2025"
+  },
+  "standards": {
+    "standard_body": [
+      "UL"
+    ],
+    "standard_ids": [
+      "UL1973",
+      "UL9540",
+      "UL1741",
+      "UL9540A"
+    ],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Energy Storage System",
+      "Battery",
+      "Microinverter"
+    ],
+    "models": [
+      "YOTTA BLOCK (YB-1)",
+      "Yotta DPI-208",
+      "Yotta DPI-480"
+    ],
+    "product_names": [
+      "YOTTA BLOCK",
+      "YOTTA VISION EMA Platform",
+      "Yotta DPI"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Energy Storage Systems",
+      "Battery Technology",
+      "DC-Coupled Architecture",
+      "Thermal Management",
+      "Scalability",
+      "Racking Systems Compatibility",
+      "Safety Certifications",
+      "Product Specifications",
+      "Remote Monitoring",
+      "Microinverters"
+    ],
+    "safety_topics": [
+      "Fire Safety",
+      "Low-Voltage DC",
+      "Certified Protection",
+      "Real-time Safety",
+      "UL Certifications"
+    ],
+    "procedural_domains": [
+      "Deployment",
+      "Maintenance",
+      "Monitoring",
+      "Asset Management",
+      "Troubleshooting"
+    ],
+    "keywords": [
+      "YOTTA BLOCK",
+      "Energy Storage System",
+      "Lithium Iron Phosphate",
+      "DC-coupled",
+      "Plug-and-play",
+      "Thermal Regulation",
+      "Racking Compatibility",
+      "UL Certifications",
+      "Remote Monitoring",
+      "Microinverter",
+      "1kWh",
+      "Low-Voltage DC",
+      "Fire Safety",
+      "Scalable",
+      "NEMA 6",
+      "IP67",
+      "Cycle Life",
+      "MPPT",
+      "PV Modules",
+      "Commercial ESS",
+      "Yotta DPI",
+      "YOTTA VISION",
+      "Ballasted Racking",
+      "Solid-State Design",
+      "O&M",
+      "Warranty",
+      "Dimensions",
+      "Weight",
+      "Operating Temperatures",
+      "Voltage Range",
+      "Current Output",
+      "Power Output",
+      "PanelClaw",
+      "UNIRAC",
+      "Sollega",
+      "Aerocompact",
+      "IronRidge",
+      "K2 Systems",
+      "KB Racking",
+      "Commercial Savings"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "standards.jurisdiction_or_region",
+      "topics.toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Yotta Block-1_1.5.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Yotta Block-1_1.5.pdf",
+    "page_range_used": "1-2"
+  }
+}

@@ -1,0 +1,534 @@
+--- Page 1 ---
+Template 
+1 
+ 
+ENGINEERING, PROCUREMENT, & CONSTRUCTION (EPC) AGREEMENT 
+ 
+ 
+THIS EPC AGREEMENT ("AGREEMENT") IS MADE EFFECTIVE AS OF [DATE] (THE 
+“EFFECTIVE DATE”) BETWEEN [CEFIA HOLDINGS LLC, A CONNECTICUT LIMITED 
+LIABILITY COMPANY] (“CLIENT”) AND [ COMPANY NAME   ], A [ COMPANY TYPE    ] WITH 
+OFFICES AT [ COMPANY ADDRESS ] (“EPC CONTRACTOR”), (EACH, A “PARTY” AND 
+TOGETHER, THE “PARTIES”) FOR THE DESIGN, CONSTRUCTION AND INSTALLATION OF A 
+SOLAR PHOTOVOLTAIC SYSTEM (THE “SYSTEM”) AT [ PROJECT LOCATION ].   
+1. 
+DEFINITIONS 
+The following terms shall, for all purposes of the Contract Documents comprising this Agreement, have 
+the meanings stated herein, unless the context otherwise specifies or requires, or unless otherwise defined 
+in the Contract Documents:  
+1.1 
+“Claim” has the meaning given it in Section 15.4. 
+1.2 
+“Client’s Agent” has the meaning given it in Section 14.1. 
+1.3 
+“Completion Cost” has the meaning given it in Section 18.5. 
+1.4 
+“Construction Documents” consist of the architectural, mechanical, electrical, and 
+engineering plans, drawings and specifications as specified in Schedule #11 (including the specifications 
+for Major Equipment as set forth in Schedule #1 and for System Specifications as set forth in Schedule 
+#2), together with all approved Project Change Orders, addenda and revisions thereto. 
+1.5 
+“Contract Documents” consist of this Agreement, together with all exhibits, and schedules 
+hereto, the Construction Documents, the Project Schedule, and any mutually executed, written 
+modifications and amendments to any of the aforementioned, including Project Change Orders.  
+1.6 
+“Contract Sum” is the amount set forth in Schedule #6. 
+1.7 
+“DAS” has the meaning given it in Section 12.3. 
+1.8 
+“Day” means a calendar day unless otherwise specifically defined. 
+1.9 
+“Engineering Services Company” means any company that is engaged for services 
+provided by its Professional Engineers.  
+1.10 
+ “Final Completion” means the full completion of all Work, including the satisfaction of 
+all conditions for Substantial Completion, together with those set forth in Schedule #10. 
+1.11 
+“Final Completion Date” means the date that Client makes the Final Completion payment 
+(Payment #6 in Schedule #6) to EPC Contractor, which will be no later than the Required Final 
+Completion Date. 
+1.12 
+“Final Project Size” has the meaning given it in Section 13.1. 
+1.13 
+ 
+
+
+--- Page 2 ---
+Template 
+2 
+ 
+1.14 
+“Force Majeure” means any act or event that directly delays or prevents a Party from 
+timely performing obligations under this Agreement or from complying with conditions required under 
+this Agreement if such act or event, despite the exercise of reasonable efforts, cannot be avoided by, and 
+is beyond the reasonable control of and without the fault or negligence of, the Party relying thereon as 
+justification for such delay, nonperformance, or noncompliance, which includes, without limitation, an 
+act of God or the elements, extreme or severe weather conditions, explosion, fire, epidemic, landslide, 
+mudslide, sabotage, terrorism, lightning, earthquake, flood, volcanic eruption or similar cataclysmic event, 
+an act of the public enemy, war, blockade, civil insurrection, riot, civil disturbance, or strike or other labor 
+difficulty caused or suffered by a Party or any third party beyond the reasonable control of such Party, or 
+an extended grid power failure. However, financial cost or failure to secure adequate labor or any 
+necessary materials or equipment alone or as the principal factor shall not constitute grounds for a claim 
+of Force Majeure.  
+1.15 
+“Governmental Authorities” shall mean each of the United States of America, the State 
+of Connecticut, and local municipal governments, in each case to the extent having jurisdiction over 
+Client, EPC Contractor, the Project Site, the Work, Services, and or the Project. 
+1.16 
+“Guarantee Period” means the time during which the Performance Guarantee is in effect 
+under the terms of this Agreement. 
+1.17 
+“Hazardous Materials” has the meaning given it in Section 17.1. 
+1.18 
+"Holdback Amount” has the meaning given it in Section 13.3. 
+1.19 
+“IEER” means the Insolation-adjusted Expected Energy Ratio, calculated using the DAS 
+as follows: (x) actual kWh divided by expected kWh, divided by (y) actual insolation (as measured by 
+irradiance sensor) divided by expected insolation. 
+1.20 
+“Interconnection Agreement” means that certain Generator Interconnection Agreement to 
+be signed by and between the Utility and Purchaser, as well as Client, if necessary. 
+1.21 
+“Initial Project Size” has the meaning given it in Section 13.1. 
+1.22 
+“Legal Requirements” shall mean all present and future laws, codes, ordinances, statutes, 
+requirements, orders and regulations of a Governmental Authority, ordinary and extraordinary, foreseen 
+and unforeseen, all industry safety standards and all other standards and regulations referred to elsewhere 
+in the Contract Documents and all directions, requirements, orders and notices of violations thereof. 
+1.23 
+ “Liquidated Damages” means damages in the amount the Parties designate herein for the 
+injured Party to collect as compensation upon a specific breach of this Agreement. Any sums payable 
+hereunder in the nature of liquidated damages, and not as a penalty, are fair and reasonable under the 
+circumstances. 
+1.24 
+ “Major Equipment” means equipment set forth on Schedule #1. 
+1.25 
+“Material Supplier” means a person or entity retained by the EPC Contractor to provide, 
+or through which the EPC Contractor or any Subcontractor purchases, material and or equipment for the 
+Work. 
+
+
+--- Page 3 ---
+Template 
+3 
+ 
+1.26 
+“Mechanical Completion” means when the Work is mechanically, electrically and 
+structurally complete, in accordance with the requirements of this Agreement, Prudent Industry Practices 
+and is capable of delivering electricity to the applicable delivery point, in the reasonable discretion of 
+Client such that all requirements of this Agreement have been achieved, including the delivery of an 
+executed Schedule #8.  
+1.27 
+“Mechanical Completion Date” means the date that Client makes the Mechanical 
+Completion payment (Payment #4 in Schedule #6) to EPC Contractor, which will be no later than the date 
+set forth in the Project Schedule provided that Client has approved, or otherwise indicated any required 
+changes and reasonable basis for same, all in accordance with this Agreement. 
+1.28 
+“Notice to Proceed” means the Client’s written acceptance of the Request to Proceed and 
+release by the Client to the EPC Contractor to commence the Work.  
+1.29 
+“Others” means other contractors and or persons at the Project Site who are not employed 
+or retained by the EPC Contractor, its Subcontractor(s) and or Material Suppliers. 
+1.30 
+“Party” or “Parties” has the meaning set forth in the Recitals. 
+1.31 
+“Permit” means all permits, licenses, approvals, consents, orders, registrations, privileges, 
+franchises, memberships, certificates, entitlements and other authorizations issued by Governmental 
+Authorities, including environmental, health and safety permits, site plan approval, building permits, 
+certificates of occupancy, and all amendments, modifications, supplements, general conditions and 
+addenda thereto. 
+1.32 
+“Professional Engineer” means a person who is licensed to practice their respective 
+engineering discipline in a particular state or US territory after meeting all requirements of the law.  
+1.33 
+“Project” means the real property, improvements and the System for which the EPC 
+Contractor, its Subcontractor(s) and or its Material Suppliers are to perform the Scope of Work under this 
+Agreement. 
+1.34 
+“Project Change Order” means a written order signed by the Client and the EPC 
+Contractor after execution of this Agreement, indicating changes in the Scope of Work, date of Substantial 
+Completion, the cost of such changes in Scope of Work, and or date of Final Completion, including 
+substitutions proposed by the EPC Contractor and or its Subcontractor(s) and accepted by the Client in its 
+sole discretion. Project Change Orders shall be effective only if in writing and signed by the Client and 
+the EPC Contractor, notwithstanding any principles of law to the contrary.  
+1.35 
+“Project Completion Documents” means the documents required to be delivered to Client 
+at the time of Final Completion as a condition to final payment, all as set forth in Schedule #4 annexed 
+hereto. 
+1.36 
+“Project Schedule” means the document prepared by the EPC Contractor, subject to Client 
+approval, based on and specifically incorporating all milestone dates set forth in Schedule #3 attached 
+hereto, which specifies the dates on which the EPC Contractor shall begin and complete various parts of 
+the Scope of Work, including without limitation milestones for completion of essential critical 
+components of the Work, dates for Required Substantial Completion, and Required Final Completion, and 
+
+
+--- Page 4 ---
+Template 
+4 
+ 
+dates on which information and approvals are required from the Client based on timely submissions to the 
+Client by the EPC Contractor, all as may be modified by the Client and EPC Contractor in writing with 
+the consent of all Parties, a copy of which will be as appended to Schedule #3 in accordance with Section 
+6.1 of this Agreement. 
+1.37 
+“Project Site” means the location on which the System is located, as more fully set forth 
+in Schedule #2 and Schedule #17. 
+1.38 
+“Prudent Industry Practices” means those practices, methods, standards, and acts 
+(including those engaged in or approved by a significant portion of the solar-generated electric power 
+industry and/or the North American Electric Reliability Corporation) of similarly situated engineering or 
+construction firms, as applicable, on projects similar in size, nature, complexity and geographic region as 
+the Project that at a particular time in the exercise of good judgment, and in light of the facts known at the 
+time the decision was made, would have been expected to accomplish the desired result in compliance 
+with all Legal Requirements and in a manner consistent with economy and expedition.  Prudent Industry 
+Practices are not necessarily defined as the optimal standard practice method or act to the exclusion of 
+others, but rather refer to a range of action reasonable under the circumstances. 
+1.39 
+“Punchlist Work” means all incomplete minor elements of the Work identified in 
+accordance with this Agreement following Substantial Completion, which, in accordance with Prudent 
+Industry Practices, are not required for the commercial operation of the Project or for any approvals from 
+Governmental Authorities. 
+1.40 
+“Purchaser” means [Company name], together with its heirs, successors or assigns, being 
+that same entity defined as “Buyer” in that certain Power Purchase [and License] Agreement entered into 
+between the Buyer and [PPA Seller] dated as of [   ]. 
+1.41 
+ “Request to Proceed” means the Request to Proceed, attached hereto as Schedule #12, 
+requesting Client’s approval to commence the Work. 
+1.42 
+“Required Final Completion Date” means the date set forth in the Project Schedule, as 
+such date may be adjusted by mutual agreement of the Parties in accordance with this Agreement.  
+1.43 
+“Required Substantial Completion Date” means the date set forth in the Project Schedule, 
+as such date may be adjusted by mutual agreement of the Parties in accordance with this Agreement.  
+1.44 
+“Scope of Work” means Services and Work, as detailed in Schedule #17, which shall 
+include such construction and services necessary or incidental to fulfill the EPC Contractor’s obligations 
+for the Project in conformance with this Agreement and the other Contract Documents. 
+1.45 
+“Services” means the pre-construction, architectural, design, engineering, permitting, and 
+other professional services necessary or incidental to fulfill the EPC Contractor’s obligations for the 
+Project in accordance with the Contract Documents. 
+1.46 
+“Solar Array Design” has the meaning given it in Section 11.2.3. 
+1.47 
+“SEF Expected Production” has the meaning given to it in Schedule #2. 
+
+
+--- Page 5 ---
+Template 
+5 
+ 
+1.48 
+ “Subcontractor” means a person or entity retained or engaged by the EPC Contractor as 
+an independent contractor as provided in Schedule 19, which can be amended from time to time with prior 
+approval from the Client For purposes of this Agreement, Subcontractors shall include, but not limited to, 
+architects, designers, electricians, engineers, and or other consultants and or professionals as may be 
+engaged by the EPC Contractor for the Services and or the Work. 
+1.49 
+“Substantial Completion” means when the Work is sufficiently complete, in accordance 
+with Prudent Industry Practices and in the reasonable discretion of Client such that all requirements of 
+this Agreement have been achieved, including the completion and execution of Schedule #9.  
+1.50 
+ “Substantial Completion Date” means the date that Client makes the Substantial 
+Completion payment (Payment #5 in Schedule #6) to EPC Contractor, which will be no later than the 
+Required Substantial Completion Date.  
+1.51 
+“System” has the meaning set forth in the Preamble.  
+1.52 
+ “System Specifications” means the details of the System design and installation, set forth 
+on Schedule #2. 
+1.53 
+“Utility” means [The Connecticut Light and Power Company d/b/a Eversource 
+Energy], the local utility company that provides electricity to the Project Site.  
+1.54 
+“Utility Requirements” means all requirements of the Utility relating to the System and 
+the Project, including those requirements set forth under the Interconnection Agreement, all such 
+requirements to be performed in accordance with Prudent Industry Practices. 
+1.55 
+“Work” means all work, labor, fabrication, materials, equipment, supplies, accessories, 
+hoisting, scaffolding, packaging, truck freight, delivery, disposal, power hookups, installations, 
+protection, shop drawings, supervision, permits, and or all other services and facilities necessary for the 
+proper construction and completion, operation and maintenance of the Project in accordance with, and as 
+are reasonably inferred from, the Contract Documents.  
+1.56 
+Terms not expressly defined in the Contract Documents shall be interpreted in accordance 
+with generally established use of such terms within the architectural, engineering, electrical, and 
+construction industries, assuming first class construction. Whenever the context may require, any pronoun 
+shall include the corresponding masculine, feminine and neuter forms. The words “include,” “includes” 
+and “including” shall be deemed to be followed by the phrase “without limitation”. The words “agree,” 
+“agreement,” “approval” and “consent” shall be deemed to be followed by the phrase “which shall not be 
+unreasonably withheld, conditioned, or unduly delayed,” except as the context may otherwise require. 
+2. 
+SCOPE OF WORK 
+2.1 
+The EPC Contractor’s Services include all planning, programming, design and 
+construction administration for the Project, including without limitation all necessary architectural design, 
+engineering, zoning compliance, code compliance, budgeting and scheduling, as well as design for all 
+temporary structures, rigging, hoists, scaffolding and bracing, all consistent with the Work. Anything in 
+the Contract Documents to the contrary notwithstanding, the EPC Contractor shall ensure that any existing 
+elements of a building on which the Work is to be installed, including the structure of the existing building, 
+
+
+--- Page 6 ---
+Template 
+6 
+ 
+is capable of supporting all of the Work in accordance with Prudent Industry Practice and Legal 
+Requirements, including all Major Equipment. 
+2.2 
+The EPC Contractor shall be responsible for the supervision and coordination of the Scope 
+of Work, including (i) the design, engineering, and necessary engineering detail as required by the Client 
+with respect to the Project, (ii) all construction means, methods, techniques, sequences and procedures 
+utilized, including those specified in the Contract Documents, and (iii) coordination among all 
+Subcontractors, Material Suppliers, the Client, and Others. When Legal Requirements require that 
+Services be performed by licensed professionals, the EPC Contractor shall provide those Services through 
+the performance of qualified persons or entities duly licensed to practice their professions. 
+2.3 
+The EPC Contractor will work with Client to design an installation and work plan 
+consistent with the Scope of Work and reasonably acceptable to Client. Upon written request of the Client, 
+the EPC Contractor shall coordinate the services and necessary demarcations between services of any 
+consultants, contractors, subcontractors or suppliers retained by the Client in connection with the Project 
+with those services provided by the EPC Contractor and or its Subcontractors and consultants. 
+2.4 
+The EPC Contractor shall confine operations at the Project Site to areas permitted by 
+applicable Legal Requirements and the Contract Documents, and shall not unreasonably encumber the 
+Project Site with materials or equipment.   EPC Contractor shall be responsible for the security of the 
+Project Site and all materials and equipment located therein. 
+2.5 
+The EPC Contractor shall be responsible for all cutting, fitting or patching of existing 
+conditions required to complete the Work or to make its parts fit together properly. 
+3. 
+EPC CONTRACTOR’S REPRESENTATIONS, WARRANTIES, COVENANTS AND 
+RESPONSIBILITIES 
+3.1 
+The EPC Contractor has all necessary power and authority to conduct its business and enter 
+into the transactions contemplated hereby.  The EPC Contractor has the right to enter into and perform 
+this Agreement, and the execution, delivery and performance of this Agreement and all other documents 
+executed in connection therewith have been duly authorized and constitute valid and binding obligations 
+of the EPC Contractor, each enforceable in accordance with its respective terms. The most recent copy of 
+the resolutions and authorized agents, in the form of Schedule #21 attached hereto, provided by EPC 
+Contractor to Client is a true, correct and complete copy, authorizing the execution, delivery and 
+performance of this Agreement and any other documents to be executed in connection therewith, and such 
+approvals and authorized agents have not been rescinded or amended as of the Effective Date. 
+3.2 
+The EPC Contractor represents that it and or its Subcontractors shall be duly licensed and 
+registered to perform such portion of the Services and or Work as it or they shall be called upon to perform, 
+as may be required in the jurisdiction where the Project Site is located in accordance with Legal 
+Requirements. The EPC Contractor shall provide the Client, at or prior to the Effective Date or the 
+execution of a Subcontractor agreement, as applicable, evidence of EPC Contractor or any 
+Subcontractor(s) licensing and registration, respectively.  Client will be notified promptly but in any event 
+not later than two (2) Days of any changes, suspensions, or revocations of licenses held by either EPC 
+Contractor or any Subcontractor(s), respectively.   
+
+
+--- Page 7 ---
+Template 
+7 
+ 
+3.3 
+The EPC Contractor covenants and agrees with Client to (i) furnish its commercially 
+reasonable skill and judgment in performing the Services and Work and to cooperate with Client and 
+Others in furthering the interests of Client with respect to the Project; and (ii) to perform the Services and 
+Work in a manner that ensures Client’s rights under any equipment or services warranties provided to or 
+for the benefit of Client under this Agreement (whether by assignment or otherwise) are not impaired as 
+a result of any actions or inactions by EPC Contractor or any Subcontractor hereunder.  
+3.4 
+The EPC Contractor represents and warrants that (i) it has visited the Project Site and has 
+become familiar with all conditions under which the Scope of Work is to be performed, has correlated, 
+and shall continue to correlate, all personal observations with the requirements of the Contract Documents, 
+and shall make any necessary adjustments or corrections resulting therefrom, and (ii) the conditions under 
+which the Scope of Work will be performed will not hinder the EPC Contractor from fulfilling its 
+obligations under this Agreement. 
+3.5 
+The EPC Contractor represents, warrants and confirms, that it is or will be, prior to the start 
+of any Work knowledgeable as to all (i) Legal Requirements, (ii) equipment manufacturer installation 
+guidelines and warranty requirements applicable to the equipment and materials used in the Work and (iii) 
+Utility Requirements. All Services and Work shall be done in accordance with this Agreement, all Legal 
+Requirements and all warranty requirements. The EPC Contractor shall give any and all notices required 
+and comply with all Legal Requirements and Utility Requirements bearing on safety of persons or property 
+or their protection from damage, injury or loss.  EPC Contractor represents and warrants that any 
+Subcontractor(s) will comply with the standards set forth in this section 3.5 and covenants that EPC 
+Contractor shall (i) ensure that any Subcontractors comply with this Section 3.5 and (ii) be liable for the 
+failure of any Subcontractor(s) to comply with any Legal Requirements or warranty requirements. 
+3.6 
+The EPC Contractor represents that the Contract Sum as set forth in this Agreement is 
+based on the Project program requirements and the Contract Documents in existence as of the Effective 
+Date.  
+3.7 
+The EPC Contractor represents, warrants, and covenants that all labor wage payments 
+made in connection with the performance of the Work shall be subject to prevailing wages. EPC 
+Contractor represents and warrants that any Subcontractor(s) will comply with prevailing wage 
+requirements for labor wage payments. The EPC Contractor and any Subcontractor(s) shall comply with 
+the requirements of Conn. Gen. Stat. Sec. 31-53(a), set forth below: 
+The wages paid on an hourly basis to any person performing the work of any mechanic, 
+laborer or worker on the work herein contracted to be done and the amount of payment or 
+contribution paid or payable on behalf of each such person to any employee welfare fund, 
+as defined in subsection (i) of Conn. Gen. Stat. Sec. 31-53(a), shall be at a rate equal to 
+the rate customary or prevailing for the same work in the same trade or occupation in the 
+town in which such public works project is being constructed.   Any Contractor who is not 
+obligated by agreement to make payment or contribution on behalf of such persons to any 
+such employee welfare fund shall pay to each mechanic, laborer or worker as part of such 
+person’s wages the amount of payment or contribution for such person’s classification on 
+each pay day. 
+
+
+--- Page 8 ---
+Template 
+8 
+ 
+3.8 
+EPC Contractor represents and warrants that it will comply with all labor safety, health, 
+and non-discrimination and or harassment Legal Requirements and that it will take all reasonable and 
+practicable care to ensure a safe, healthy, and discrimination-free and or harassment-free environment at 
+the Project Site.  EPC Contractor represents and warrants that any Subcontractor(s) will comply with and 
+covenants that it shall ensure that they do comply with all Legal Requirements for labor safety, health, 
+and non-discrimination and or harassment. EPC Contractor represents and warrants that it, together with 
+any Subcontractor(s), will comply with Purchaser’s specific security procedures (as may be reasonably 
+promulgated from time to time), and shall conduct activities in such a manner and such a time and day as 
+to not unreasonably interfere with Purchaser’s activities. [May include additional Purchaser-specific 
+security requirements and protocols.]  
+3.9 
+EPC Contractor shall at all times during the performance of the Work and the duration of 
+this Agreement maintain insurance from an insurance company reasonably satisfactory to Client as 
+follows: (a) commercial general liability (“CGL”) coverage of not less than One Million Dollars 
+($1,000,000) (per occurrence)/Two Million Dollars ($2,000,000) (aggregate); (b) automobile liability of 
+not less than One Million Dollars ($1,000,000); (c) worker’s compensation of not less than the greater of 
+(i) One Million Dollars ($1,000,000) per accident/disease, and (ii) statutory requirements; (d) umbrella 
+liability of Five Million Dollars ($5,000,000); I professional liability of not less than One Million Dollars 
+($1,000,000) (per occurrence)/One Million Dollars ($1,000,000) (aggregate), and, if subcontracting to an 
+external Professional Engineer, such Subcontractor shall also maintain professional liability of not less 
+than One Million Dollars ($1,000,000) (per occurrence)/One Million Dollars ($1,000,000) (aggregate) 
+with the Client as an additional insured; and (f) property insurance in the form of an installation floater 
+insuring property to be installed while in transit, at off-site storage, and onsite awaiting installation and 
+after installation until job completion (together (a) through (f) is defined as “Insurance”). EPC Contractor 
+shall provide Client with endorsements to the CGL policy, in form and substance satisfactory to Client, 
+that include Client (and such other persons or entities as Client may reasonably designate hereafter) as an 
+“additional insureds”. The Insurance policies required hereunder shall contain a provision that coverages 
+afforded under such policies will not be canceled or allowed to expire until at least 30 days’ prior written 
+notice to the Client.  EPC Contractor shall provide the Client, within ten (10) Days of the Effective Date, 
+evidence of the Insurance required in this section 3.9.  Client will be notified by EPC Contractor within 
+ten (10) Days of any changes, suspensions, or cancelations of any Insurance required in this section 3.9.   
+3.10 
+EPC Contractor Insurance required in this section 3.9 must cover all actions or activities 
+of any Subcontractor(s) for any Work or Services performed by any Subcontractor(s) or any 
+Subcontractor(s) must purchase policies satisfactory to Client and provide evidence of said policies within 
+five (5) Days of the execution of a Subcontractor agreement.  Client must be notified promptly but no later 
+than two (2) Days of any changes, suspensions, or cancelations of any Subcontractor(s) Insurance policies.  
+EPC Contractor represents and warrants that it and all Subcontractors will enter into, and comply with, a 
+Release, Hold Harmless and Indemnification Agreement, substantially in the form of Schedule #22 
+attached hereto, for the benefit of the State of Connecticut associated with the Work at the Project Site. 
+4. 
+SUBCONTRACTOR(S); SUBCONSULTANTS; SUPPLIERS 
+4.1 
+The EPC Contractor shall hire, retain, contract with, and manage such Material Suppliers 
+and Subcontractor(s) as EPC Contractor shall deem necessary to perform and complete the Scope of Work 
+subject to the terms of this Agreement. 
+
+
+--- Page 9 ---
+Template 
+9 
+ 
+4.2 
+The EPC Contractor shall be responsible for providing the Subcontractor(s) with all 
+necessary Project Site direction and supervision. Absent default or the EPC Contractor’s failure to perform 
+as described herein, the Client shall not assume any responsibility for the Subcontractor(s), including 
+completion of the Scope of Work, payment for services, or any other supervisory responsibilities. 
+4.3 
+The EPC Contractor shall be solely responsible for the selection and retention of 
+Subcontractor(s) provided that (i) they are selected from the list of contractors set forth as Schedule #19 
+and (ii) prior to the EPC Contractor engaging any such Subcontractor, and or any Material Supplier for 
+the Major Equipment, the EPC Contractor shall furnish the Client with the name, address, credentials and 
+other relevant information with respect to such party and shall not engage same where the Client has 
+issued written notice of reasonable objection to same within ten (10) Days of such furnishing by the EPC 
+Contractor; provided, that such reasonable objection is based on objective factors suggesting to a 
+reasonable contractor that such subcontractor should not be engaged to perform services on the Project. 
+EPC Contractor shall, furnish the Client with a list of the names and addresses of all such Subcontractor(s) 
+and or Material Suppliers to be used for the Project upon the execution of this Agreement. 
+4.4 
+All agreements with Subcontractors and or Material Suppliers shall reasonably conform to 
+the applicable payment provisions of this Agreement, consistent with Legal Requirements, and Utility 
+Requirements. EPC Contractor shall pay any amounts due to any Subcontractor or supplier, whether for 
+labor performed or materials furnished, not later than thirty days after the date the EPC Contractor receives 
+payment from Client which encompasses labor performed or materials furnished by such Subcontractor 
+or supplier.  EPC Contractor agrees to include in each of its subcontracts a provision requiring each 
+Subcontractor and supplier to pay any amounts due any of its subcontractors or suppliers, whether for 
+labor performed or materials furnished, not later than thirty days after the date such Subcontractor or 
+supplier receives a payment from the EPC Contractor which encompasses labor performed or materials 
+furnished by such Subcontractor or supplier.  The EPC Contractor shall require and cause each 
+Subcontractor to provide lien waivers and releases in favor of the Client prior to receiving progress 
+payments and final payments in the form of Schedule #13. Nothing contained in the Contract Documents 
+shall create any contractual relationship between any Subcontractor and or Material Supplier and the 
+Client, nor create any obligation on the part of the Client to pay or to see to the payment of any sum to 
+any such Subcontractor and or Material Supplier.  
+4.5 
+The EPC Contractor shall perform all of its obligations and agreements with each of its 
+Subcontractors and or Material Suppliers and shall fully pay each such party the agreed price for its 
+equipment, Services and or Work properly completed in a timely manner, but in any event, in accordance 
+with the terms of any agreement with such Subcontractors and Material Suppliers. In the event the EPC 
+Contractor fails to pay any Subcontractor and or Material Supplier as required, the Client shall have the 
+option (but not the obligation), upon written notice to the EPC Contractor, to pay such party directly and 
+deduct the sum so paid from the Contract Sum.  
+5. 
+SUPERVISION; PERFORMANCE OF THE WORK; CONSTRUCTION SERVICES 
+5.1 
+The Services and Work shall be supervised by the individuals (“EPC Contractor’s 
+Supervisors”) identified in Schedule #5 attached hereto. The EPC Contractor’s Supervisors assigned to 
+the Project shall, if required under Legal Requirements, be duly licensed in the city and state of the Project 
+Site. The EPC Contractor’s Supervisors are the only individuals authorized to supervise and direct the 
+performance of the Scope of Work and the EPC Contractor shall not, except upon the request of, or with 
+
+
+--- Page 10 ---
+Template 
+10 
+ 
+the approval of, the Client in each instance, which request or approval shall not be unreasonably withheld, 
+make any substitutions to the EPC Contractor’s Supervisors. The EPC Contractor’s Supervisors shall be 
+authorized to act for the EPC Contractor in all matters relating to the Scope of Work (other than any action, 
+failure to act, or alteration in either that would materially change the agreed upon terms of this Agreement), 
+and all directions given by them shall be as binding as if given to the EPC Contractor. The EPC 
+Contractor’s Supervisors shall be available for consultation with the Client, and Others during normal 
+business hours and shall not accept any other assignment that could materially affect their attention to the 
+performance of the Services or Work, as applicable. 
+5.2 
+The EPC Contractor shall supervise the performance of the Service and Work to achieve 
+timely completion of the Project in accordance with the provisions of this Agreement. The EPC Contractor 
+shall keep the Client (or Client’s Agent) reasonably informed of the progress and quality of the Work. 
+5.3 
+The EPC Contractor will promptly order all equipment, including any Major Equipment, 
+required for the Work after the Client provides (i) written approval of the Construction Documents and 
+Project Schedule and (ii) written acceptance of EPC Contractor’s executed Request to Proceed. If the 
+Construction Documents and Project Schedule are approved by the Client, but Notice to Proceed has not 
+been issued by the date listed in the Project Schedule, then each of the subsequent dates listed in the Project 
+Schedule shall be extended by the number of Days between the later of the dates the Construction 
+Documents or Project Schedule was approved and date on which the Notice to Proceed is issued. 
+5.4 
+The EPC Contractor will give Purchaser prompt and reasonable notice in writing of 
+differences, other than de minimis differences, between the materials and equipment specified in the 
+Contract Documents and any proposed substitutions. 
+5.5 
+The EPC Contractor, Purchaser, and the Client shall, to the extent reasonable and 
+practicable, agree on a date for delivery of Major Equipment and for the installation thereof. If the agreed 
+delivery date is postponed in excess of ten (10) Days at the request of the Client after the Major Equipment 
+has been purchased by EPC Contractor, then EPC Contractor shall put such equipment in safe storage at 
+the Project Site at Client’s expense.  If agreed delivery date is postponed or materials are not permitted to 
+be stored at Project Site, such delay will be considered an excusable delay, and Contractor shall be 
+provided a day for day increase in Required Substantial Completion Date.  
+5.6 
+The EPC Contractor and or its Subcontractor(s) shall install all Major Equipment in 
+accordance with the manufacturer's guidelines and specifications so as to preserve all manufacturer 
+warranties. 
+5.7 
+The EPC Contractor and or its Subcontractor(s) shall install all electrical equipment, 
+conduit and wiring in accordance with current National Electrical Code standards (NEC 2014) as required 
+by the Government Authorities, and such installation shall conform to all Legal Requirements and Utility 
+Requirements. Wiring must be UL-listed, with labeling to show the voltage rating.  
+5.8 
+Upon completion of installation of the Major Equipment, EPC Contractor will 
+“commission” the Major Equipment in accordance with each manufacturer’s installation instructions, 
+conditions, warranties, Legal Requirements and Utility Requirements. Commissioning will verify that the 
+performance of the Major Equipment performance is as specified by the Contract Documents, that all 
+components are in proper working order, and that the Client understands the general operating principles 

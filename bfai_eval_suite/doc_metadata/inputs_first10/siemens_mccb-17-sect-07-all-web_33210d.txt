@@ -1,0 +1,3018 @@
+--- Page 1 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-1
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+7
+c o n t e n t s
+What’s New in Circuit Breakers	
+7-3 – 7-4
+Federal Specifications Classification	
+7-5
+Reference Guides	
+7-6 – 7-16
+Load Center Breakers
+	
+Arc Fault and Ground Fault Breakers	
+7-17
+	
+QP, 1 Inch Breakers	
+7-18
+	
+QT, ½ Inch Breakers	
+7-19
+	
+Special Application Breakers	
+7-20
+	
+QD ¾ Inch Breakers	
+7-21
+	
+Main and Branch Breakers	
+7-22 – 7-23
+	
+Circuit Breaker Dimension Drawings	
+7-24
+	
+Circuit Breaker Lug Data	
+7-25
+	
+Surge Protection	
+7-26
+Panelboard Mounted Circuit Breakers
+	
+BL 240V Breakers	
+7-27
+	
+BL 240V Arc Fault and Ground Fault Breakers 	
+7-28
+	
+Special Application 240V Panelboard Mounted Breakers	
+7-29
+	
+3-Pole GFCI Breakers  
+	
+7-30 – 7-32
+	
+BQD 100A Frame 480/277V Breakers	
+7-33
+	
+GB 125A Frame 600/347V Breakers 	
+7-34
+	
+NGB2 125A Frame 600/347V Breakers	
+7-35
+	
+Internal Accessories for BQD and NGB Breakers	
+7-36
+	
+3VA41 125A Frame 600/347V Breakers	
+7-37 – 7-38
+General Application Circuit Breakers
+	
+BQ 240V Breakers	
+7-39
+	
+BQXD 240V DIN Rail Mounting Breakers	
+7-40
+	
+QR250 Frame 240V Breakers	
+7-41
+	
+CQD 100A Frame 480/277V Breakers	
+7-43
+	
+GG 125A Frame 600/347V Breakers	
+7-44
+	
+Internal Accessories for CQD and NGG Breakers	
+7-45
+3VA Molded Case Circuit Breakers
+	
+Catalog Numbering System	
+7-46
+	
+3VA41 125A Frame 600/347V Breakers	
+7-48 – 7-49
+	
+3VA51 125A Thermal-magnetic Trip Circuit Breakers	
+7-50 – 7-54
+	
+3VA61 150A Electronic Trip Circuit Breakers	
+7-55 – 7-57
+	
+3VA52 250A Thermal-magnetic Trip Circuit Breakers	
+7-58 – 7-61
+	
+3VA62 250A Electronic Trip Circuit Breakers	
+7-62 – 7-65
+	
+3VA53 400A Thermal-magnetic Trip Circuit Breakers	
+7-66 – 7-67
+	
+3VA63 400A Electronic Trip Circuit Breakers	
+7-68 – 7-70
+	
+3VA54 600A Thermal-magnetic Trip Circuit Breakers	
+7-71
+	
+3VA64 600A Electronic Trip Circuit Breakers	
+7-72 – 7-74
+	
+3VA55 800A Thermal-magnetic Trip Circuit Breakers	
+7-75
+	
+3VA65 800A Electronic Trip Circuit Breakers	
+7-76 – 7-77
+	
+3VA66 1000A Electronic Trip Circuit Breakers	
+7-79 – 7-80
+	
+3VA57 1200A  Thermal-magnetic Trip Circuit Breakers	
+7-81, 7-84
+	
+3VA67 1200A  Electronic Trip Circuit Breakers	
+7-82 – 7-83, 7-84
+	
+3VA58 1600A  Thermal-magnetic Trip Circuit Breakers	
+7-85, 7-88
+	
+3VA68 1600A  Electronic Trip Circuit Breakers	
+7-86 – 7-87, 7-88
+	
+3VA59  2000A  Thermal-magnetic Trip Circuit Breakers	
+7-89, 7-91
+	
+3VA69  2000A  Electronic Trip Circuit Breakers	
+7-90, 7-91
+Scan to connect 
+online to the 
+most up-to-
+date version of 
+this Section of 
+SPEEDFAX.
+Dual Function 
+Circuit Breaker
+Molded Case Circuit Breakers 
+SPEEDFAXTM	
+Section
+QR Circuit Breakers
+(Section was last modified on 06/26/25)
+3VA41
+1-pole
+3VA 
+molded 
+case 
+circuit 
+breakers
+	
+	
+(continued on next page)
+
+
+--- Page 2 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-2
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+7
+Molded Case Circuit Breakers 
+SPEEDFAXTM	
+Section
+Sentron
+3VA Molded Case Circuit Breakers (cont.)
+	
+3VA Molded Case Switch and Motor Circuit Protector	
+7-92 – 7-93
+	
+3VA Internal Accessories	
+7-94
+	
+3VA Breaker Operators	
+7-95 – 7-102
+	
+3VA Connection Technology	
+7-103 – 7-112
+	
+3VA Plug-in and Draw-out Technology	
+7-113 – 7-115
+	
+3VA Communication and Testing/Commissioning Devices	
+7-116 – 7-119
+	
+3VA Accessories and Electrical Requirements	
+7-120 – 7-125
+Sentron Thermal Magnetic and Electronic Circuit Breakers
+	
+Catalog Numbering System	
+7-126
+	
+ED 125A Frame 600V Breakers and Internal Accessories	
+7-127 – 7-129
+	
+FD 250A Frame 600V Breakers and Internal Accessories	
+7-130 – 7-132
+	
+JD 400A Frame Breakers and Internal Accessories	
+7-133 – 7-135
+	
+LD 600A Frame Breakers and Internal Accessories	
+7-136 – 7-138
+	
+LMD 800A Frame Breakers and Internal Accessories	
+7-139 – 7-141
+	
+MD 800A Frame Breakers and Internal Accessories	
+7-142 – 7-144
+	
+ND 1200A Frame Breakers and Internal Accessories	
+7-145 – 7-147
+	
+PD 1600A Frame Breakers and Internal Accessories	
+7-148 – 7-150
+	
+RD 2000A Frame Breakers and Internal Accessories	
+7-151
+	
+Magnetic Trip Only – ETI Motor Circuit Protectors	
+7-152 – 7-154
+	
+Adjustable Instantaneous Magnetic Trip Settings	
+7-155 – 7-157
+	
+Molded Case Switch – Circuit Disconnect	
+7-158
+	
+Lug Information	
+7-159 – 7-161
+	
+Breaker Modifications	
+7-162
+	
+Internal Accessories – Feature Combinations	
+7-163
+	
+External Accessories	
+7-166 – 7-171
+	
+Unusual Operating Conditions	
+7-172 – 7-173
+General Technical
+	
+Series-Connected Short Circuit Ratings	
+7-174
+	
+Sentron IEC 94702 AC Interrupting Ratings	
+7-175
+	
+Typical Specifications	
+7-176
+	
+Superseded Circuit Breakers	
+7-177 – 7-178
+
+
+--- Page 3 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-3
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+What’s new 
+in molded case 
+circuit breakers:
+New! 3-Pole GFCI (5mA and 30mA)
+Siemens introduces the new 3-pole GFCI, expanding their 
+commercial GFCI line to enhance safety in demanding 
+applications. The 3-pole GFCI is available in Bolt-on 
+configuration now, with Cable-in/Cable-out coming soon.
+New 3VA Large Frame up to 2000A 
+n	Full suite of external accessories including  
+connection technology, mounting bases, external 
+breaker operators, interlocks and test devices.
+n	UL 100% ratings available in 1200A and 1600A 
+frame sizes – TMTU & ETU
+n	DAS+ Arc Energy Reduction as a standard  
+feature in all ETU versions – US National Electric 
+Code compliant.
+n	Mechanical platform is based on predecessor 
+3VL design with 25 years of installed base and 
+proven best-in-class reliability. As a result,  
+footprint is nearly identical as 3VL7 (NG) and 
+3VL8 (PG) MCCBs allowing for simple upgrade  
+to 3VA in existing electrical apparatus.
+The Dual Function Circuit Breaker combines 
+GFCI and AFCI, protecting against both Arc 
+Faults and Ground Faults. This, along with the 
+new Self-Test & Lockout feature, makes it the 
+first in class in electrical safety for homeowners.
+n	Faster Installation
+n	Cost savings
+n	Smaller Device
+n	Self Test & Lockout feature as required by 
+UL 943 effective June 2015
+Molded Case Circuit Breakers
+  	
+Introduction
+Revised on 05/31/24
+n	Available in 2- and 3-pole (15-100A)
+n	Rated 65kA interrupting rating
+n	NEC 210.8 compliant
+n	UL and cUL listed
+n	Class A 5mA (UL943) and 30mA (UL1053) protection
+n	125A thru 2000A Thermal 
+Magnetic Trip breakers
+n	150A thru 2000A Electronic Trip 
+Circuit Breakers
+n	Extensive and flexible accessories 
+n	Common internal accessories for 
+the entire breaker family
+n	Power metering with the series-8 
+LCD electronic trip 
+n	Illuminated rotary handles show 
+switch position
+n	Smaller footprint than Sentron or 
+VL breakers
+n	Enhanced Tools and Resources
+The new 
+Siemens  
+3VA molded 
+case circuit 
+breakers
+The Siemens 3VA41 circuit breaker is a compact, 
+industrial design thermal magnetic breaker with 
+features which include a design that meets multi-
+national standards (UL, NOM, EAC), available with 
+NAVAL ratings which meet UL489 Supplement 
+SB, and an extensive selection of UL listed, field 
+installable internal accessories (auxillary and alarm 
+switches, shunt and undervoltage trips). The 3VA41 
+is available from 15A to 125A in 1, 1 in 2-pole, 2 or 
+3-pole versions on 1 inch pole centers having AC 
+interrupting ratings up to 65KA @ 480VAC and 25KA 
+@ 600Y347V and DC ratings up to 100KA @ 250VDC.
+1-Pole
+1 in 2-Pole
+2-Pole
+3-Pole
+
+
+--- Page 4 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-4
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+Molded Case Circuit Breakers
+	
+Introduction
+500V DC Wiring Configuration
+Load/Carga/
+Charge
+300 V
+MAX.
+300 V
+MAX.
+Revised on 07/31/21
+Ordering
+The 3VA breakers are shipped complete 
+with non-interchangeable trip units and 
+without lugs.
+The 3VA41 panelboard mounted circuit 
+breakers are shipped with aluminum load 
+side lugs installed as standard.
+3VA51 through 3VA55 thermal-
+magnetic trip breakers as well as 
+3VA61 through 3VA66 electronic trip 
+breakers are shipped as standard 
+without lugs installed. To order factory 
+installed nut keepers, which are 
+required for installation in panelboards 
+or switchboards, the 12th digit of the 
+catalog should be change to "2" when 
+ordering. (For example, a 35KA@480VAC, 
+40A, 3-pole, 3VA51 with lugs would be 
+catalog number 3VA5140-5ED32-0AA0).
+To order factory installed standard line 
+and load lugs, the 12th digit of the 
+catalog number should be changed to 
+"6" (standard lugs are identified in the 
+respective lug tables and footnotes 
+in the SpeedFax). (For example, a 
+35KA@480VAC, 40A, 3-pole, 3VA51  
+with lugs would be catalog number 
+3VA5140-5ED36-0AA0). Alternate 
+connectors can be ordered separately  
+for field installation.
+All 3VA6 circuit breakers are certified 
+to UL 489 Supplement SB, are marked 
+“NAVAL”, and are suitable for use at 
+50C.
+To order NAVAL-rated thermal-magnetic 
+trip circuit breakers, the 13th digit of 
+the catalog number should be changed 
+to the number "1". (For example, a 
+35KA @480VAC, 40A, 3-pole, NAVAL 
+rated 3VA51 would be catalog number 
+3VA5140-5ED31-1AA0).
+All 3VA5 thermal-magnetic trip and 3VA6 
+electronic trip circuit breakers are UL 
+listed for reverse feed applications.
+ 
+Connecting Breakers for DC 
+Application
+Most Siemens thermal magnetic trip 
+MCCBs are applicable on direct current 
+(dc) systems. Generally, for 250 V dc  
+systems a two pole breaker is used,  
+with one pole on each leg of the supply 
+circuit. For three pole breakers applied on 
+500 V undergrounded DC systems, it is 
+important to connect the power supply 
+“zig-zag” through the breaker as shown 
+in the figure below. This assures that the 
+Voltage between phases on the breaker 
+terminals is uniformly distributed.
+See below for an alternative connection 
+diagram. For a list of 3VA5 breakers  
+with the DC ratings, please refer to 
+pages 7-10 to 7-11.
+
+
+--- Page 5 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-5
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+Molded Case Circuit Breakers
+Federal Specification Classification	
+Reference
+W-C-375C/GEN
+Applicable Standards
+UL 489 / CSA C22.2 NO. 5-16 / NMX-J-
+266-ANCE-2016 — Molded Case Circuit 
+Breakers, Molded Case Switches and 
+Circuit Breaker Enclosures.
+UL486A — Wire Connectors and 
+Solderless Lugs for use with copper wire
+UL486B — Wire Connectors and 
+Solderless Lugs for use with  
+aluminum wire
+UL943 — Ground Fault Interrupters (for 
+personnel protectors)
+UL50 — Cabinets and Boxes
+UL869 — Service Equipment
+Note:
+(A) Molded case circuit breakers are designed and tested  
+in accordance to applicable portions of UL489 and meet  
+application requirements of the National Electric Code.  
+Unless marked otherwise, circuit breakers are 80% duty rated.
+(B) Molded case circuit breakers are to be connected with 60 or 
+75°C wire for circuit breakers having a rated ampacity of  
+100 amperes or less. Circuit breakers having a rated ampacity 
+greater than 100 amperes shall only be cabled with 75°C  
+cable unless otherwise indicated on the circuit breaker  
+label. Exceptions to this rule are outlined in the article  
+110-14 C(1)(2) of the 2005 National Electric Code.
+a	Interrupting ratings are not limited to the values or 
+groups of values listed. However, the values listed are 
+minimum values for the class specified.
+b	Single-unit or duplex construction must be specified.
+c	Use minimum frame size for ampere rating.
+d	BT and BTH are only available in 15A and 20A with two 
+1-pole circuits in one inch of unit space. BT and BTH 
+series breakers can be used in any Siemens panelboard 
+in positions that accept BL or BLH series breakers. It 
+is the installers responsibility to ensure that there is 
+adequate neutral connections available in the panel 
+before installing these breakers.
+Class
+Interrupting Rating
+Poles
+Range of Current Tripc
+Breaker Type
+(All Circuit Breakers Meet or Exceed
+the Indicated Class Level)
+Symmetrical 
+Amperesa
+Volts AC 60HZ
+10ab
+5,000
+120/240
+1 or 2
+15–100
+QP, BQ, QT, BL, BTd
+10b
+5,000
+240
+2 or 3
+15–100
+QP, BQ, BQD, CQD, BL
+11a
+7,500
+120
+1
+15–100
+QP, BQ, BQD, CQD, BL
+11b
+7,500
+240
+2 or 3
+15–100
+QP, BQ, BQD, CQD, BL
+12ab
+10,000
+120/240
+1 or 2
+15–100
+QP, BQ, QT, ED2, BL, BTd
+12b
+10,000
+240
+2 or 3
+15–225
+QP, BQ, QJ2, ED2, BQD, CQD, BL
+12c
+10,000
+277
+1
+15–100
+BQD, CQD, NGG, NGB, NEG, NEB
+13a
+14,000
+277
+1
+15–100
+ED4, BQD, CQD, NGG, NGB, NEG, NEB
+13b
+14,000
+277/480
+1, 2, or 3
+15–100
+ED4, BQD, CQD
+14a
+22,000
+120/240
+1 or 2
+15–100
+QPH, BQH, BLH, BTHd
+14b
+22,000
+240
+2 or 3
+70–400
+QJH2, QJ2-H, BQH, BQD, CQD, BLH
+15a
+65,000
+120/240
+1 or 2
+15–100
+HQP, HBQ, ED4, HED4, NGG, NGB
+15b
+65,000
+240
+2 or 3
+15–225
+ED6, ED4, FXD6, FD6, HED4, BQD, CQD, HQJ2H,
+NGG, NGB, NEG, NEB
+16a
+100,000
+480
+2 or 3
+15–225
+CFD6, CED6
+16b
+100,000
+600
+2 or 3
+15–600
+CED6, CFD6, CJD6, SCJD6, CLD6, SCLD6
+17a
+200,000
+600
+2 or 3
+70–2000
+—
+18a
+18,000
+240
+14,000
+480
+2 or 3
+15–125
+ED6, HED6, HHED6
+14,000
+600
+22,000
+240
+19a
+18,000
+480
+2 or 3
+70–225
+FXD6, FD6, CFD6, HFD6
+14,000
+600
+25,000
+240
+20a
+22,000
+480
+2 or 3
+70–225
+FXD6-A, FD6-A, CFD6, HFD6
+22,000
+600
+HFD6, CFD6, JXD6(A), JD6(A), SJD6-B, HJD(A),
+42,000
+240
+HJXD6(A), HHJD6, SHJD6-B, CJD6, SCJD6-B,
+21a
+30,000
+480
+2 or 3
+70–800
+LXD6(A), LD6(A), SLD6-B, HLD6(A), HLXD6(A),
+22,000
+600
+HHLD6, SLD6-B, SHLD6-B, CLD6, SCLD6-B,
+LMD6, LMXD6, HLMD6, HLMXD6, MD6, MXD6,
+SMD6-B, HMD6, HMXD6, SHMD6-B, CMD6, SCMD6-B
+65,000
+240
+22a
+25,000
+480
+2 or 3
+15–125
+CED6, ED6, HED6, HHED6, FXD6-A, FD6-A
+18,000
+600
+HHED6, FXD6-A, FD6-A, HFD6, HHFD6, CFD6,
+JD6(A), JXD6(A), SJD6-B, HJD6(A), HJXD6(A),
+SHJD6-B, HHJD6, HHJXD6, CJD6, SCJD6-B,
+65,000
+240
+LXD6(A), LD6(A), SLD6-B, HLD6(A), HLXD6(A),
+23a
+35,000
+480
+2 or 3
+70–1200
+SHLD6-B, HHLD6, HHLXD6, CLD6, SCLD6-B,
+25,000
+600
+LMD6, LMXD6, HLMD6, HLMXD6, MD6, MXD6,
+SMD6-B, HMD6, HMXD6, SHMD6-B, CMD6, SCMD6-B,
+ND6, NXD6, SND6-B, HND6, HNXD6, SHND6-B,
+CND6, SCND6-B
+65,000
+240
+PD6, PXD6, HPD6, HPXD6, CPD6
+RD6, RXD6, HRD6, HRXD6, SPD6-B, SHPD6-B
+24a
+50,000
+480
+2 or 3
+1200–2000
+42,000
+600
+125,000
+240
+HHLD6, CLD6, CMD6, CND6
+SCLD6-B, SCMD6-B, SCND6-B, CPD6
+25a
+80,000
+480
+2 or 3
+600–4000
+60,000
+600
+Revised on 08/31/22
+
+
+--- Page 6 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-6
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+Molded Case Circuit Breakers
+Reference Guide	
+Selection/Application
+aTypes QPP, QPPH, HQPP and HQPPH are special 2-pole  
+configurations for metering equipment. Amperage range = 
+125–225A, width = 4 in.
+bSingle pole breakers available in ratings 10–70A only.
+c125A, 2-pole 120/240V AC only.
+dNot applicable to types QPP and QPPH.
+e Single pole circuit breakers available in ratings 15-70A only, 
+125A available as a 2-pole only.
+f Not applicable to type HQPP and HQPPH.
+g Fits only Siemens EQIII load centers. Breaker is 2 or 3 
+ poles wide.
+h 10A, 1-pole & 2-pole 120/240V AC only.
+i Applicable for 15-30A breakers only.
+ BT and BTH are only available in 15A and 20A with two 
+1-pole circuits in one inch of unit space. BT and BTH series 
+breakers can be used in any Siemens panelboard in posi-
+tions that accept BL or BLH series breakers. It is the install-
+ers responsibility to ensure that there is adequate neutral 
+connections available in the panel before installing these 
+breakers.
+For inches / millimeters conversion, see Application Data section. 
+For Plug-in Breakers, see Load Centers & Circuit Breakers section.
+Plug-In Breakers
+Panelboard Breakers
+QT
+QP, 
+QPPa
+QPH, 
+QPPHa
+HQP, 
+HQPPa
+HQPPHa
+QPJg
+BL/BTh
+BLH/BTHHBL
+Page
+7-19
+7-20, 7-22
+7-20, 7-22
+7-18, 7-22
+7-18, 7-22
+7-22
+7-27
+7-27
+7-27
+Ratings
+AC
+Poles
+1, 2
+1, 2, 3
+1, 2, 3
+1, 2, 3e
+2
+2, 3
+1,2,3
+1,2,3
+1,2,3
+Amperes
+15-50
+10-125
+10-125
+10-125e
+100-225
+150-200
+10-125
+15-125
+15-100
+Volts (50/60 Hz)
+1 Pole
+120/240
+120/240
+120/240
+120/240
+120/240
+120/240
+120/240
+120/240
+120/240
+2 Pole
+120/240
+120/240
+120/240
+3 Pole
+—
+240
+240
+240
+240
+240
+240
+240
+240
+Interrupt 
+Rating 
+Symmetrical 
+RMS 
+Amperes
+UL
+120V
+10,000
+10,000
+22,000
+65,000
+—
+—
+10,000
+22,000
+65,000
+240V
+10,000
+10,000
+22,000
+65,000
+100,000
+10,000
+10,000
+22,000
+65,000
+277V
+—
+—
+—
+—
+—
+—
+—
+—
+—
+347V
+—
+—
+—
+—
+—
+—
+—
+—
+—
+480/277V
+—
+—
+—
+—
+—
+—
+—
+—
+—
+480V
+—
+—
+—
+—
+—
+—
+—
+—
+—
+600/347V
+—
+—
+—
+—
+—
+—
+—
+—
+—
+600V
+—
+—
+—
+—
+—
+—
+—
+—
+—
+IEC 
+947-2 
+50/
+60Hzi
+220/
+240V
+2-Pole
+lCU
+—
+—
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+—
+—
+2, 3-Pole
+lCU
+—
+—
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+—
+—
+380/
+415V
+2-Pole
+lCU
+—
+—
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+—
+—
+2, 3-Pole
+lCU
+—
+—
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+—
+—
+500V
+2-Pole
+lCU
+—
+—
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+—
+—
+2, 3-Pole
+lCU
+—
+—
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+—
+—
+DC 125/250 V DC Interrupting Rating 2-Pole
+—
+—
+—
+—
+—
+—
+—
+—
+—
+3-Pole
+—
+—
+—
+—
+—
+—
+—
+—
+—
+Dimensions  
+in Inches
+Height
+10-50A
+—
+2.87
+2.87
+—
+—
+—
+3.56
+3.56
+3.75
+10-60A
+3.12
+—
+—
+—
+—
+—
+—
+—
+—
+55-125A
+—
+3.12
+3.12
+3.12
+3.12
+3g
+3.75
+3.75
+3.75
+Width
+1-Pole
+1.00
+1.00
+1.00
+1.00
+—
+—
+1.00
+1.00
+1.00
+2-Pole
+2.00
+2.00
+2.00a
+2.00
+4.00
+g
+2.00
+2.00
+2.00
+3-Pole
+3.00
+3.00
+3.00
+3.00
+—
+3.00g
+3.00
+3.00
+3.00
+Depth
+2.06
+2.37
+2.37
+2.37
+2.37
+2.34
+2.37
+2.37
+2.37
+Overcurrent 
+Devices
+Thermal and Fixed magnetic Trip
+u
+u
+u
+u
+u
+u
+u
+u
+u
+Thermal and Adjustable Magnetic trip
+—
+—
+—
+—
+—
+—
+—
+—
+—
+Adjustable Magnetic trip only
+—
+—
+—
+—
+—
+—
+—
+—
+—
+Motor Circuit Protector
+—
+—
+—
+—
+—
+—
+—
+—
+—
+Molded Case Switch
+—
+ud
+—
+—
+—
+—
+—
+—
+—
+Accessories & 
+Modifications
+Undervoltage Trip
+—
+—
+—
+—
+—
+—
+—
+—
+—
+Shunt Trip
+—
+ud
+ud
+uf
+uf
+—
+u
+u
+u
+Auxilary Switch
+—
+—
+—
+—
+uf
+—
+u
+u
+u
+Alarm Switch
+—
+—
+—
+—
+—
+—
+—
+—
+—
+Mechanical Interlock
+—
+—
+—
+—
+—
+—
+—
+—
+—
+Fungus Proofing (ref. page 7-162)
+—
+—
+—
+—
+—
+—
+u
+u
+u
+Individual 
+Enclosures
+Type 1 - Indoor Surface
+u
+u
+u
+u
+u
+—
+Type 1 - Indoor, Flush
+—
+u
+u
+u
+u
+—
+Type 3R - Outdoor-Rainproof
+—
+u
+u
+u
+u
+—
+B120
+B320HH
+BT
+B220H
+Revised on 04/30/21
+Q3100
+Thermal-Magnetic Trip Breakers
+
+
+--- Page 7 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-7
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+For inches / millimeters conversion, see Application Data section. 
+For Plug-in Breakers, see Load Centers & Circuit Breakers section.
+Panelboard Breakers
+BQD, 
+BQD6a
+NGB
+NGB2b
+HGB
+HGB2b
+LGB
+LGB2b
+3VA41
+SEAB
+3VA41
+MEAB
+3VA41
+HEAB
+Page
+7-33
+7-34
+7-34
+7-34
+7-48, 7-49
+7-48, 7-49
+7-48, 7-49
+Ratings
+AC
+Poles
+1,2,3
+1,2,3
+1,2,3
+1,2,3
+1, 2, 3
+1, 2, 3
+1, 2, 3
+Amperes
+15-100
+15-125
+15-125
+15-125
+15-125
+15-125
+15-125
+Volts (50/60 Hz)
+1 Pole
+277
+347
+347
+347
+347
+347
+347
+2 Pole
+480/277
+600/347
+600/347
+600/347
+600/347
+600/347
+600/347
+3 Pole
+480/277
+600/347
+600/347
+600/347
+600/347
+600/347
+600/347
+Interrupt 
+Rating 
+Symmetrical 
+RMS 
+Amperes
+UL
+120V
+65,000
+—
+—
+—
+—
+—
+—
+240V
+65,000
+100,000
+100,000
+100,000
+65,000
+85,000
+150,000
+277V
+14,000
+25,000
+35,000
+65,000
+25,000
+35,000
+65,000
+347V
+10,000
+14,000
+14,000
+22,000b
+14,000
+65,000b
+14,000
+18,000
+25,000
+480/277V
+14,000
+25,000
+35,000
+65,000
+25,000
+35,000
+65,000
+480V
+—
+—
+25,000b
+—
+35,000b
+—
+65,000b
+25,000
+35,000
+65,000
+600/347V
+10,000
+14,000
+14,000
+22,000b
+14,000
+25,000b
+14,000
+18,000
+25,000
+600V
+—
+—
+—
+—
+—
+—
+—
+IEC 
+947-2 
+50/
+60Hz
+220/
+240V
+2-Pole
+lCU
+18,000
+—
+—
+—
+—
+—
+—
+lCS
+  9,000
+—
+—
+—
+—
+—
+—
+2, 3-Pole lCU
+65,000
+—
+—
+—
+—
+—
+—
+lCS
+33,000
+—
+—
+—
+—
+—
+—
+380/
+415V
+2-Pole
+lCU
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+2, 3-Pole lCU
+18,000
+—
+—
+—
+—
+—
+—
+lCS
+  9,000
+—
+—
+—
+—
+—
+—
+500V
+2-Pole
+lCU
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+2, 3-Pole lCU
+—
+—
+—
+—
+—
+—
+—
+lCS
+—
+—
+—
+—
+—
+—
+—
+DC
+125/250 V DC Interrupting 
+Rating
+2-Pole
+14,000
+14,000
+14,000
+14,000
+—
+—
+—
+3-Pole
+—
+—
+—
+—
+—
+—
+—
+125VDC Interrupting Rating
+1-Pole
+—
+—
+—
+—
+14,000
+25,000
+30,000
+250VDC Interrupting Rating
+2-Pole
+—
+—
+—
+—
+50,000
+85,000
+100,000
+250VDC Interrupting Rating
+3-Pole
+—
+—
+—
+—
+50,000
+85,000
+100,000
+Dimensions  
+in Inches
+Height
+10-50A
+4.50
+5.00
+5.40b
+5.00
+5.40b
+5.00
+5.40b
+—
+—
+—
+10-60A
+—
+—
+—
+—
+—
+—
+—
+55-125A
+4.50
+5.00
+5.40b
+5.00
+5.40b
+5.00
+5.40b
+5.1
+5.1
+5.1
+Width
+1-Pole
+1.00
+1.00
+1.00
+1.00
+1.0
+1.0
+1.0
+2-Pole
+2.00
+2.00
+2.00
+2.00
+2.0
+2.0
+2.0
+3-Pole
+3.00
+3.00
+3.00
+3.00
+3.0
+3.0
+3.0
+Depth
+2.69
+2.71
+2.71
+2.71
+3.6
+3.6
+3.6
+Overcurrent 
+Devices
+Thermal and Fixed magnetic Trip
+u
+u
+u
+u
+u
+u
+u
+Thermal and Adjustable Magnetic trip
+—
+—
+—
+—
+—
+—
+—
+Adjustable Magnetic trip only
+—
+—
+—
+—
+—
+—
+—
+Motor Circuit Protector
+—
+—
+—
+—
+—
+—
+—
+Molded Case Switch
+—
+—
+—
+—
+—
+—
+—
+Accessories & 
+Modifications
+Undervoltage Trip
+—
+—
+—
+—
+√
+√
+√
+Shunt Trip
+u
+u
+u
+u
+√
+√
+√
+Auxilary Switch
+u
+u
+u
+u
+√
+√
+√
+Alarm Switch
+u
+u
+u
+u
+√
+√
+√
+Mechanical Interlock
+—
+—
+—
+—
+√
+√
+√
+Fungus Proofing (ref. page 7-162)
+u
+u
+u
+u
+Individual 
+Enclosures
+Type 1 - Indoor Surface
+Type 1 - Indoor, Flush
+Type 3R - Outdoor-Rainproof
+Molded Case Circuit Breakers
+Reference Guide	
+Selection/Application
+Revised on 07/31/21
+Thermal-Magnetic Trip Breakers
+3VA41 125A 
+1-Pole
+aBQD6 CSA certified 10,000A @ 600Y/347V 15–70A only.
+b When two numbers are shown for the xGB/xGB2 column, 
+the top rating is for xGB and the bottom rating for xGB2.
+
+
+--- Page 8 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-8
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+Molded Case Circuit Breakers
+Reference Guide	
+Selection/Application
+	CQD breakers are rated 14,000 KAIC at 480/277V.
+	Type CQD6—CSA only.
+	3-pole only.
+d	Applicable for 15-30A breakers only.
+Thermal-Magnetic Trip Breakers
+For inches / millimeters conversion, see Application Data section.
+BQ1B020
+BQ1B020H
+HB1B020
+Revised on 11/30/19
+General Purpose Breakers
+BQ
+BQH
+HBQ
+QR2
+QRH2
+HQR2
+HQR2H
+Page
+7-39
+7-39
+7-39
+7-41
+7-41
+7-41
+7-41
+Ratings
+AC
+Poles
+1, 2, 3
+1, 2, 3
+1, 2, 3
+2, 3
+2, 3
+2, 3
+2, 3
+Amperes, Continuous
+1-Pole
+15–70
+15–70
+15–50
+—
+—
+—
+—
+2-Pole
+15–125
+15–100
+15–70
+100–250
+100–250
+100–250
+100–250
+3-Pole
+15–100
+15–100
+15–100
+100–250
+100–250
+100–250
+100–250
+Volts (50/60 Hertz)
+1-Pole
+120/240
+120/240
+120/240
+—
+—
+—
+—
+2-Pole
+240
+240
+240
+240
+240
+240
+240
+3-Pole
+240
+240
+240
+240
+240
+240
+240
+Interrupt Rating Symmetrical RMS Amperes
+UL
+120V
+10,000
+22,000
+65,000
+—
+—
+—
+—
+240V
+10,000
+22,000
+65,000
+10,000
+25,000
+65,000
+100,000
+480V
+—
+—
+—
+—
+—
+—
+—
+600/347V
+—
+—
+—
+—
+—
+—
+—
+IEC 
+947-2 
+50/
+60Hz
+220/
+240V
+1-Pole
+Icu
+—
+—
+—
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+—
+—
+—
+2,3-Pole
+Icu
+—
+—
+—
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+—
+—
+—
+380/
+415V
+1-Pole
+Icu
+—
+—
+—
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+—
+—
+—
+2,3-Pole
+Icu
+—
+—
+—
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+—
+—
+—
+500V
+1-Pole
+Icu
+—
+—
+—
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+—
+—
+—
+2,3-Pole
+Icu
+—
+—
+—
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+—
+—
+—
+DC
+Volts — 2-Pole
+—
+—
+—
+—
+—
+—
+—
+Interrupting Rating — DC Amperes
+—
+—
+—
+—
+—
+—
+—
+Dimensions 
+in inches
+Height
+15–50A
+3.75
+3.75
+4.00
+—
+—
+—
+—
+55–125A
+4.00
+4.00
+4.00
+—
+—
+—
+—
+60–225A
+—
+—
+—
+7.00
+7.00
+7.00
+7.00
+Width
+1-Pole
+1.00
+1.00
+1.00
+—
+—
+—
+—
+2-Pole
+2.00
+2.00
+2.00
+3.00
+3.00
+3.00
+3.00
+3-Pole
+3.00
+3.00
+3.00
+4.50
+4.50
+4.50
+4.50
+Depth
+2.37
+2.37
+2.37
+2.53
+2.53
+2.53
+2.53
+Overcurrent
+Devices
+Thermal and Fixed Magnetic Trip
+u
+u
+u
+u
+u
+u
+u
+Molded Case Switch
+u
+—
+—
+—
+—
+—
+u
+Accessories and
+Modifications
+Undervoltage Trip
+—
+—
+—
+—
+—
+—
+—
+Shunt Trip
+u
+u
+u
+u
+u
+u
+u
+Auxiliary Switch
+u
+u
+u
+u
+u
+u
+u
+Alarm Switch
+—
+—
+—
+—
+—
+—
+—
+Mechanical Interlock
+—
+—
+—
+u
+u
+u
+u
+Fungus Proofing (ref. page 7-162)
+u
+u
+u
+u
+u
+u
+u
+Individual
+Enclosures
+Type 1 — Indoor Surface
+u
+u
+u
+u
+u
+u
+u
+Type 1 — Indoor, Flush
+u
+u
+u
+u
+u
+u
+u
+Type 3R — Outdoor-Rainproof
+u
+u
+u
+u
+u
+u
+u
+Type 5, 12 — Lint, Fine Dust, Oils, Coolants
+—
+—
+—
+—
+—
+—
+—
+
+
+--- Page 9 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-9
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+Molded Case Circuit Breakers
+Reference Guide	
+Selection/Application
+	CQD breakers are rated 14,000 KAIC at 480/277V.
+	Type CQD6—CSA only.
+	3-pole only.
+d	Applicable for 15-30A breakers only.
+Thermal-Magnetic Trip Breakers
+For inches / millimeters conversion, see Application Data section.
+CQD120
+LGG2B020L
+Revised on 11/30/19
+General Purpose Breakers
+CQD
+NGG
+HGG
+LGG
+Page
+7-43
+7-44
+7-44
+7-44
+Ratings
+AC
+Poles
+1, 2, 3
+1, 2, 3
+1, 2, 3
+1, 2, 3
+Amperes, Continuous
+1-Pole
+15–100
+15–125
+15–125
+15–125
+2-Pole
+15–100
+15–125
+15–125
+15–125
+3-Pole
+15–100
+15-125
+15–125
+15–125
+Volts (50/60 Hertz)
+1-Pole
+277
+347
+347
+347
+2-Pole
+480/277
+600/347
+600/347
+600/347
+3-Pole
+480/277
+600/347
+600/347
+600/347
+Interrupt Rating Symmetrical RMS Amperes
+UL
+120V
+65,000
+65,000
+65,000
+65,000
+240V
+65,000
+65,000
+65,000
+65,000
+480V
+14,000
+25,000
+35,000
+65,000
+600/347V
+10,000b
+14,000
+14,000
+14,000
+IEC 
+947-2 
+50/
+60Hz
+220/
+240V
+1-Pole
+Icu
+18,000d
+25,000
+—
+—
+Ics
+  9,000d
+12,500
+—
+—
+2,3-
+Pole
+Icu
+65,000d
+65,000
+—
+—
+Ics
+32,500d
+32,500
+—
+—
+380/
+415V
+1-Pole
+Icu
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+2,3-
+Pole
+Icu
+18,000d
+25,000
+—
+—
+Ics
+  9,000d
+12,500
+—
+—
+500V
+1-Pole
+Icu
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+2,3-
+Pole
+Icu
+—
+—
+—
+—
+Ics
+—
+—
+—
+—
+DC
+Volts — 2-Pole
+125/250
+125/250
+125/250
+125/250
+Interrupting Rating — DC Amperes
+14,000
+14,000
+14,000
+14,000
+Dimensions 
+in inches
+Height
+15–50A
+4.50
+5.40
+5.40
+5.40
+55–125A
+4.50
+5.40
+5.40
+5.40
+60–225A
+—
+—
+—
+—
+Width
+1-Pole
+1.00
+1.00
+1.00
+1.00
+2-Pole
+2.00
+2.00
+2.00
+2.00
+3-Pole
+3.00
+3.00
+3.00
+3.00
+Depth
+2.87
+2.90
+2.90
+2.90
+Overcurrent
+Devices
+Thermal and Fixed Magnetic Trip
+u
+u
+u
+u
+Molded Case Switch
+—
+—
+—
+—
+Accessories and
+Modifications
+Undervoltage Trip
+—
+—
+—
+—
+Shunt Trip
+u
+u
+u
+u
+Auxiliary Switch
+u
+u
+u
+u
+Alarm Switch
+u
+u
+u
+u
+Mechanical Interlock
+—
+—
+—
+—
+Fungus Proofing (ref. page 7-162)
+u
+u
+u
+u
+Individual
+Enclosures
+Type 1 — Indoor Surface
+—
+u
+u
+u
+Type 1 — Indoor, Flush
+—
+u
+u
+u
+Type 3R — Outdoor-Rainproof
+—
+u
+u
+u
+Type 5, 12 — Lint, Fine Dust, Oils, Coolants
+—
+—
+u
+u
+
+
+--- Page 10 ---
+Siemens Industry, Inc. SPEEDFAX™ Product Catalog
+7-10
+7
+MOLDED CASE 
+CIRCUIT BREAKERS
+Revised on 03/31/24
+n	UL489 — Molded Case Circuit Breakers
+n	UL486A-UL486B — Wire connectors
+n	UL 489 / CSA C22.2 NO. 5-16 / NMX-J-266-ANCE-2016 —  
+Molded Case Circuit Breakers, Molded Case Switches and  
+Circuit Breaker Enclosures
+n	EN 60947-1 AMD 2 — Molded case circuit breakers
+n	EN 60947-2 AMD 2 2013
+n	EN 50581 2012 — RoHS compliant
+n	All 3VA breakers are HACR rated per UL
+Applicable Standards:
+Type
+ 
+3VA51 
+3VA51 
+3VA52 
+3VA53 
+3VA54
+3VA55
+Page
+ 
+7-50 
+7-50, 7-51, 7-52 
+7-58, 7-59, 7-60 
+7-66, 7-67 
+7-71
+7-75
+Number of Poles
+ 
+1 
+2, 3, 4 
+2 in 3-pole, 3, 4
+2 in 3-pole, 3, 4 
+2 in 3-pole, 3, 4
+3, 4
+3VA5 molded case circuit breakers
+Size
+ 
+125 A
+125 A
+250 A
+400 A
+600 A
+800 A
+Rated current In
+A 
+15 … 125 
+15 … 125 
+100 … 250 
+200 … 400
+400 … 600
+600 … 800
+Frequency
+Hz 
+0 … 400 
+0 … 400 
+0 … 400 
+0 … 400 
+0 … 400
+0 … 400
+Electrical characteristics according to UL489
+Rated operational voltage 
+50/60 Hz AC 
+V 
+347
+600
+600
+600
+600
+600
+Electrical characteristics according to IEC 60947-2
+Rated operational voltage 
+Ue 50/60 Hz AC 
+V 
+415
+690
+690
+690
+690
+690
+Rated insulation voltage Ui V 
+500 
+800 
+800 
+800 
+800
+800
+Rated impulse withstand 
+voltage Uimp
+kV 
+8
+8
+8
+8
+8
+8
+Short-circuit breaking capacity 
+according to UL 489 
+UL Breaker Type 
+S
+SEAS
+M
+MEAS
+H
+HEAS
+S
+SEAS
+M
+MEAS
+H
+HEAS
+M
+MFAS
+H
+HFAS
+C
+CFAS
+M
+MJAS
+H
+HJAS
+C
+CJAS
+M
+MLAS
+H
+HLAS
+C
+CLAS
+M
+MMAS
+H
+HMAS
+C
+CMAS
+120 V AC / 50/60 Hz 
+kA 
+65 
+85 
+150 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+240 V AC / 50/60 Hz
+kA 
+— 
+— 
+— 
+65 
+85 
+100 
+85 
+100
+200
+85 
+100
+200
+85
+100
+200
+85
+100
+200
+277 V AC / 50/60 Hz
+kA 
+25 
+35
+50
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+347 V AC / 50/60 Hz
+kA 
+14 
+18
+18
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+480 Y/277 V AC / 50/60 Hz
+kA 
+— 
+— 
+— 
+25 
+35
+65
+35
+65
+100
+35
+65
+100
+35 
+65
+100
+35
+65
+100
+480 V AC / 50/60 Hz
+kA 
+— 
+— 
+— 
+25 
+35
+65
+35
+65
+100
+35
+65
+100
+35 
+65
+100
+35
+65
+100
+600 Y/347 V AC / 50/60 Hz
+kA 
+— 
+— 
+— 
+14 
+18
+25
+18
+25
+35
+18
+25
+35
+18 
+25
+35 
+18
+25
+50
+600 V AC / 50/60 Hz
+kA 
+— 
+— 
+— 
+— 
+— 
+— 
+18 
+25
+35
+18 
+25
+35
+18 
+25
+35
+18
+25
+50
+125 V DC
+kA 
+14 
+25
+30 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+250 V DC
+kA 
+— 
+— 
+— 
+50 
+85
+100
+50 
+85
+100
+50 
+85
+100
+50
+85
+100
+50
+85
+100
+500 V DC
+kA 
+— 
+— 
+— 
+50 
+85
+100
+50 
+85
+100
+50 
+85
+100
+50
+85
+100
+50
+85
+100
+600 V DC (3-pole only)
+kA 
+— 
+— 
+— 
+— 
+— 
+— 
+50 
+85
+100
+50 
+85
+100
+50
+85
+100
+50
+85
+100
+750 V DC
+kA 
+— 
+— 
+— 
+— 
+— 
+— 
+50 
+85
+100
+50 
+85
+100
+50
+85
+100
+50
+85
+100
+1000 V DC (4-pole only)
+kA 
+— 
+— 
+— 
+— 
+— 
+— 
+50 
+85
+100
+6 
+6
+10
+6 
+6
+10
+18
+25
+50
+Short-circuit breaking capacity 
+according to IEC 60947-2
+S
+M
+H
+S
+M
+H
+M
+H
+C
+M
+H
+C
+M
+H
+C
+M
+H
+C
+Rated ultimate short-circuit breaking capacity Icu
+Rated service short-circuit breaking capacity Ics
+rms value, according to IEC 60947-2  
+240 V AC / 50/60 Hz 
+kA 
+25/25 
+36/36 
+55/55 
+55/55 85/85
+150/150 85/85
+100/100 200/200 85/85
+100/100 200/200 85/85
+100/100 200/200 85
+100
+200
+415 V AC / 50/60 Hz 
+kA 
+5/5 
+5/5
+5/5
+36/36
+55/55
+70/70
+55/55
+70/70
+110/110 55/55
+70/70
+110/110 55/55
+70/70
+110/110 55
+70
+110
+690 V AC / 50/60 Hz 
+kA 
+— 
+— 
+— 
+5/5 
+7/5 
+10/5 
+7/7 
+10/10
+10/10 
+7/7 
+10/10
+10/10 
+7/7 
+10/10
+10/10 
+25
+35
+35
+125 V DC
+kA 
+14 
+25
+30
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+250 V DC
+kA 
+— 
+— 
+— 
+50
+85
+100
+50
+85
+100
+50
+85
+100
+50
+85
+100
+50
+85
+100
+500 V DC
+kA 
+— 
+— 
+— 
+50
+85
+100
+50
+85
+100
+50
+85
+100
+50
+85
+100
+50
+85
+100
+750 V DC (3-pole only)
+kA 
+— 
+— 
+— 
+— 
+— 
+— 
+50
+85
+100
+50
+85
+100
+50
+85
+100
+50
+85
+100
+— Not available
+Molded Case Circuit Breakers
+3VA UL Breakers	
+Reference Guide

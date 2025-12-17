@@ -1,0 +1,451 @@
+--- Page 1 ---
+Solar inverters 
+ABB string inverters
+PVI-5000/6000-TL-OUTD
+5kW to 6kW
+Designed for residential and small 
+commercial PV installations, this 
+inverter fills a specific niche in the 
+ABB product line to cater for those 
+installations producing between 5kW 
+and 20kW.
+This inverter includes dual input 
+section to process two strings with 
+independent Multiple Power Point 
+Tracker (MPPT).
+The high-speed and precise MPPT 
+algorithm offers real-time power 
+tracking and energy harvesting. 
+Flat efficiency curves ensure high-
+efficiency at all output levels ensuring 
+consistent and stable performance 
+across the entire input voltage and 
+output power range. 
+This outdoor inverter has been 
+designed as a completely sealed unit to 
+withstand the harshest environmental 
+conditions. 
+The wide input voltage range makes 
+the inverter suitable for low-power 
+installations with reduced string size.
+The transformerless operation offers 
+high performance efficiencies of up to 
+97.1 percent. 
+Free remote monitoring capability is 
+available with every installation. This 
+enables homeowners to view their 
+energy production and offers installers 
+a proactive and economic way of 
+maintaining and troubleshooting the 
+system.  
+Highlights
+−
+−Single-phase and three-phase output 
+grid connection
+−
+−Wide input-voltage range for 
+increased stringing flexibility
+−
+−The high-speed and precise MPPT 
+algorithm offers real-time power 
+tracking and improved energy 
+harvesting
+−
+−Outdoor NEMA 4X rated enclosure 
+for unrestricted use under any 
+environmental conditions
+−
+−Integrated DC disconnect switch 
+in compliance with international 
+Standards (-S Version)
+
+
+--- Page 2 ---
+2  ABB solar inverters | Product flyer for PVI-5000/6000-TL-OUTD
+Technical data and types
+Type code
+PVI-5000-OUTD-US
+PVI-6000-OUTD-US
+General Specifications
+Nominal output power
+5000W
+6000W
+Maximum output power
+5000W
+6000W
+Rated grid AC voltage
+208V
+240V
+277V
+208V
+240V
+277V
+Input side (DC)
+Number of independent MPPT channels
+2
+Maximum usable power for each channel
+4000W 
+Absolute maximum voltage (Vmax)
+600V
+Start-up voltage (Vstart)
+200V (adj. 120-350) 
+Full power MPPT voltage range
+145-530V 
+175-530V
+Operating MPPT voltage range
+0.7 x Vstart - 580V (≥90V)
+Maximum current (Idcmax) for both MPPT in parallel 
+36A 
+Maximum usable current per channel 
+18A
+Maximum short circuit current per channel
+22A
+Number of wire landing terminals per channel
+2 Pairs
+Array wiring termination
+Terminal block, pressure clamp, AWG20-AWG6
+Output side (AC)
+Grid connection type
+1Ø/2W
+Split-Ø/3W
+1Ø/2W
+1Ø/2W
+Split-Ø/3W
+1Ø/2W
+Adjustable voltage range (Vmin-Vmax)
+183-228V
+221-264V
+244-304V
+183-228V
+211-264V
+244-304V
+Grid frequency 
+60Hz
+Adjustable grid frequency range
+57-60.5Hz
+Maximum current (Iac,max) ARMS
+27A
+23A
+20A
+30A
+28A
+24A
+Power factor
+> 0.995 (adjustable to ±0.8)
+Total harmonic distortion at rated power
+< 2%
+Contributory fault current1
+36.25 Apk / 
+25.63ARMS
+36.5 Apk / 
+25.81ARMS
+31.75 Apk / 
+22.45ARMS
+36.25 Apk / 
+25.63ARMS
+36.5 Apk / 
+25.81ARMS
+31.75 Apk / 
+22.45ARMS
+Grid wiring termination type
+Terminal block, pressure clamp, AWG20-AWG4
+Input
+Reverse polarity protection
+Yes
+Over-voltage protection type
+Varistor, 2 for each channel
+PV array ground fault detection
+Pre start-up Riso and dynamic GFDI (requires floating arrays)
+Output
+Anti-islanding protection
+Meets UL1741 / IEEE1547 requirements
+Over-voltage protection type
+Varistor, 2 (L1 - L2 / L1 - G)
+Maximum AC OCPD rating
+35A
+30A
+25A
+40A
+35A
+30A
+Efficiency
+Maximum efficiency
+97.1%
+CEC efficiency
+96%
+96.5%
+96.5%
+96%
+96.5%
+96.5%
+User interface
+Graphic display
+Operating performance
+Stand-by consumption 
+<8WRMS
+<8WRMS
+Nighttime consumption
+<0.6WRMS 
+<0.6WRMS
+Communication
+User-interface
+16 characters x 2 lines LCD display
+Remote monitoring (1xRS485 incl.)
+VSN700 Data Logger (opt.), VSN300 Wifi Logger Card (opt.)
+Environmental
+Ambient air operating temperature range
+-13°F to +140°F (-25°C to +60°C)
+-13°F to +140°F (-25°C to +60°C) with 
+derating above 122°F (50°C)
+Ambient air storage temperature range
+-40°F to +176°F (-40°C to +80°C)
+-40°F to +176°F (-40°C to +80°C)
+Relative humidity
+0-100% RH condensing
+0-100% RH condensing
+Acoustic noise emission level
+< 50 db (A) @1m
+< 50 db (A) @1m
+Maximum operating altitude without derating
+6560ft (2000m)
+6560ft (2000m)
+Additional highlights
+−
+−RS-485 communication interface (for 
+connection to laptop or data logger)
+−
+−Available with the optional VSN300 
+Wifi Logger Card for easy and 
+affordable wireless monitoring
+−
+−Compliant with NEC 690.12 when 
+used with ABB‘s Rapid Shutdown 
+device
+−
+−Comes standard with DC Arc Fault 
+Circuit Interruptor (AFCI) to comply 
+with NEC 690.11
+OFF
+ON
+
+
+--- Page 3 ---
+Product flyer for PVI-5000/6000-TL-OUTD | ABB solar inverters  3
+Technical data and types
+Type code
+PVI-5000-OUTD-US
+PVI-6000-OUTD-US
+Mechanical specifications
+Enclosure rating
+NEMA 4X
+Cooling
+Natural convection
+Dimensions H x W x D
+41.4x12.8x8.6 in (1052 x 325 x218 mm)
+Weight
+<59.5lb (27.0kg)
+Shipping weight
+<78lb (35.4kg)
+Mounting system
+Wall bracket
+Conduit connections
+Bottom: (2) pre-drilled opening for ¾ inch conduits and concentric markings for 1 inch 
+(both sides) and 1½ inch conduit (DC side only)
+Sides: (2) pre-drilled opening for ¾ inch conduits with concentric markings for 1 inch 
+(both sides) and 1½ inch conduit (DC side only)
+Back: (2) concentric markings for ¾ inch and 1 inch conduits
+DC switch rating (per contact)
+25A / 600V
+Safety and Compliance
+Isolation level
+Transformerless (floating array)
+Safety and EMC standard
+UL 1741, UL1741SA (draft), IEEE1547, IEEE1547.1, CSA-C22.2 N. 107.1-01, UL1998 UL 
+1699B, FCC Part 15 Class B
+Safety approval
+cCSAus or cTUVus
+Regional Compliance
+Rule 21, HECO, NEC 2014 690.11, NEC 2014 690.12 with ABB Rapid Shutdown device
+Available models
+With DC switch, wiring box and arc fault detector and 
+interruptor
+PVI-5000-OUTD-US-A
+PVI-6000-OUTD-US-A
+All data is subject to change without notice
+Block diagram of PVI-5000/6000-TL-OUTD
+250 
+300 
+345 
+400 
+480 
+10% 
+20% 
+30% 
+50% 
+75% 
+100% 
+MPPT 
+Voltage 
+% of Rated Output Power 
+96,8 
+96,5 
+96,2
+95,9 
+95,6 
+95,3 
+95 
+94,7 
+94,4 
+94,1 
+93,8 
+93,5 
+93,2 
+92,9 
+92,6 
+97 
+97 
+96,8 
+96,5 
+96,2
+95,9 
+96,5 
+96,2
+95 
+90 
+91 
+92 
+93 
+94 
+95 
+96 
+97 
+98 
+99 
+100 
+0 
+10
+20 
+30
+40 
+50 
+60
+70 
+80 
+90 
+100 
+Efﬁciency, % 
+% of Rated Output Power  
+250 Vdc
+345 Vdc
+480 Vdc 
+PVI-5000/6000-OUTD-US
+PVI-5000/6000-OUTD-US
+IN1
++
+-
+IN2
++
+-
+MPPT 2
+(DC/DC)
+MPPT 1
+(DC/DC)
+BULK CAPS
+INVERTER
+(DC/AC)
+LINE
+FILTER
+GRID PARALLEL
+RELAY
+L1
+L2
+PE
+RESIDUAL CURRENT
+DETECTION
+DC/DC
+DSP
+CONTR.
+DC/AC
+DSP
+CONTR.
+µP
+CONTROL CIRCUIT
+RS485
++ T/R
+- T/R
+RTN
+REMOTE CONTROL*
++ R
+- R
+ALARM
+N.C
+N.O
+C
+GROUND
+FAULT
+DETECTION 
+N
+* Remote control function not available on -A version
+IN1
+IN2
++
+-
++
+-
+IN1
+IN2
++
+-
++
+-
+DC
+AFDI
+IN1.1(+)
+IN1.2(+)
+IN1.1(-)
+IN1.2(-)
+IN1
+IN2
++
+-
++
+-
+IN2.1(+)
+IN2.2(+)
+IN2.1(-)
+IN2.2(-)
+IN1
+IN2
++
+-
++
+-
+ WIRING BOX
+IN1
+IN2
++
+-
++
+-
+
+
+--- Page 4 ---
+9AKK106103A4855 REV E EN 09.11.2015 #16634
+Support and service
+ABB supports its customers with a 
+dedicated, global service organization 
+in more than 60 countries, with strong 
+regional and national technical partner 
+networks providing a complete range of 
+life cycle services.
+For more information please contact  
+your local ABB representative or visit:  
+ 
+www.abb.com/solarinverters
+www.abb.com
+© Copyright 2015 ABB. All rights 
+reserved. Specifications subject to 
+change without notice.
+This inverter is marked with one of the 
+two certification marks shown here (TuV 
+or CSA). 

@@ -1,0 +1,76 @@
+{
+  "doc_id": "switchgear_part_descriptions_47ff21",
+  "doc_type": "other",
+  "doc_title": "Switchgear Part Descriptions",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Unknown",
+  "canonical_anchor_phrase": "Unknown Switchgear Part Descriptions, (2024)",
+  "publication": {
+    "revision": null,
+    "edition_year": 2024,
+    "publication_date_text": "April 26, 2024"
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Switchgear"
+    ],
+    "models": [],
+    "product_names": []
+  },
+  "topics": {
+    "major_topics": [
+      "Switchgear",
+      "Part Descriptions",
+      "Quotation Details",
+      "Project Information",
+      "Electrical Components"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [],
+    "keywords": [
+      "Switchgear",
+      "Parts",
+      "Descriptions",
+      "Quotation",
+      "Project",
+      "Electrical",
+      "Equipment",
+      "Components",
+      "Bill of Materials",
+      "Pricing",
+      "Brooks-SWB",
+      "202069"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "low",
+    "missing_fields": [
+      "subtitle",
+      "publisher_or_manufacturer",
+      "publication.revision",
+      "standards.standard_body",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "equipment.models",
+      "equipment.product_names",
+      "topics.safety_topics",
+      "topics.procedural_domains",
+      "topics.toc_outline"
+    ],
+    "ambiguities": [
+      "Interpretation of OCR text for date",
+      "Lack of clear manufacturer/publisher"
+    ]
+  },
+  "source": {
+    "filename": "Switchgear Part Descriptions.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Switchgear Part Descriptions.pdf",
+    "page_range_used": "1-2"
+  }
+}

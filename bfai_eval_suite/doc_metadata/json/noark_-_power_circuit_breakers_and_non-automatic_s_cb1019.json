@@ -1,0 +1,146 @@
+{
+  "doc_id": "noark_-_power_circuit_breakers_and_non-automatic_s_cb1019",
+  "doc_type": "datasheet",
+  "doc_title": "Power Circuit Breakers and Non-Automatic Switches",
+  "subtitle": "A32 and ASD32",
+  "publisher_or_manufacturer": "NOARK Electric",
+  "canonical_anchor_phrase": "NOARK Electric A32 and ASD32 Datasheet",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [
+      "ANSI",
+      "UL",
+      "CSA",
+      "IEEE"
+    ],
+    "standard_ids": [
+      "ANSI C37.13",
+      "ANSI C37.16",
+      "ANSI C37.17",
+      "ANSI C37.50",
+      "UL 1066",
+      "CSA C22.2 No. 31"
+    ],
+    "jurisdiction_or_region": [
+      "US",
+      "Canada"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Power Circuit Breakers",
+      "Non-Automatic Switches"
+    ],
+    "models": [
+      "A32",
+      "ASD32",
+      "A32Q",
+      "A32R",
+      "A32H",
+      "ASD32Q",
+      "ASD32R",
+      "ASD32H",
+      "Model M",
+      "Model A",
+      "Model H"
+    ],
+    "product_names": [
+      "A32 Series Power Circuit Breakers",
+      "ASD32 Non-Automatic Switches"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Power Circuit Breakers",
+      "Non-Automatic Switches",
+      "Trip Units",
+      "Protection Functions",
+      "Electrical Ratings",
+      "Product Selection",
+      "Control Options",
+      "Communication Features",
+      "Dimensions",
+      "Maintenance",
+      "Standards Compliance",
+      "Applications"
+    ],
+    "safety_topics": [
+      "Arc Flash Reduction Maintenance Mode"
+    ],
+    "procedural_domains": [
+      "Product Selection",
+      "Settings"
+    ],
+    "keywords": [
+      "Circuit Breakers",
+      "Non-Automatic Switches",
+      "A32 Series",
+      "ASD32 Series",
+      "NOARK Electric",
+      "UL 1066",
+      "CSA C22.2 No. 31",
+      "ANSI C37.13",
+      "Low-Voltage",
+      "Interrupting Rating",
+      "Short-Time Withstand",
+      "Trip Unit",
+      "LI Protection",
+      "LSI Protection",
+      "LSIG Protection",
+      "Overload Protection",
+      "Short Circuit Protection",
+      "Ground Fault Protection",
+      "Instantaneous Protection",
+      "Long Delay",
+      "Short Delay",
+      "Arc Flash Reduction Mode",
+      "Zone Selective Interlocking",
+      "Modbus Communication",
+      "RS-485",
+      "LCD Display",
+      "LED Display",
+      "Metering",
+      "Total Harmonic Distortion",
+      "Voltage Protection",
+      "Current Unbalance",
+      "Frequency Protection",
+      "Product Selection Guide",
+      "Ratings",
+      "Dimensions",
+      "OEM Solutions",
+      "Switchgear",
+      "Power Distribution",
+      "3 Pole",
+      "4 Pole"
+    ],
+    "toc_outline": [
+      "Product Overview",
+      "Product Selection Guide",
+      "Ratings",
+      "Trip Unit Overview",
+      "Trip Unit Product Selection Guide",
+      "Trip Unit Models Display Options",
+      "Trip Unit Controls and Indicators Overview",
+      "Trip Unit Selection Guide",
+      "Trip Unit Settings"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "publication.revision",
+      "publication.edition_year",
+      "publication.publication_date_text"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "NOARK - Power Circuit Breakers and Non-Automatic Switches - A32 ASD32 - Datasheet.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/NOARK - Power Circuit Breakers and Non-Automatic Switches - A32 ASD32 - Datasheet.pdf",
+    "page_range_used": "1-10"
+  }
+}

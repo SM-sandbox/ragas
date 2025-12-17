@@ -1,0 +1,148 @@
+{
+  "doc_id": "nep_microinverter_bdm-2000-t-datasheet-20241216_990939",
+  "doc_type": "datasheet",
+  "doc_title": "BDM- 2000 MICROINVERTER",
+  "subtitle": null,
+  "publisher_or_manufacturer": "NEP",
+  "canonical_anchor_phrase": "NEP BDM-2000 Datasheet, 20241216 (2024)",
+  "publication": {
+    "revision": "20241216",
+    "edition_year": 2024,
+    "publication_date_text": "20241216"
+  },
+  "standards": {
+    "standard_body": [
+      "UL",
+      "IEEE",
+      "CSA",
+      "IEC",
+      "EN",
+      "VDE",
+      "G",
+      "CEI",
+      "AS",
+      "ABNT NBR",
+      "NEC"
+    ],
+    "standard_ids": [
+      "UL 1741",
+      "IEEE1547",
+      "CSA C22.2",
+      "IEC/EN 62109-1",
+      "IEC/EN 62109-2",
+      "VDE-AR-N 4105",
+      "VDE V 0126-1-1/A1",
+      "G83/2",
+      "CEI 21",
+      "AS 4777.2",
+      "AS 4777.3",
+      "EN50438",
+      "ABNT NBR 16149/16150",
+      "NEC 2023",
+      "NEC 2023 Section 690.11",
+      "NEC 2023 Section 690.12",
+      "NEC 2023 Section 705.12"
+    ],
+    "jurisdiction_or_region": [
+      "US",
+      "Canada",
+      "Europe",
+      "Germany",
+      "UK",
+      "Italy",
+      "Australia",
+      "Brazil"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Microinverter"
+    ],
+    "models": [
+      "BDM-2000"
+    ],
+    "product_names": [
+      "BDM-2000 Microinverter"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Specifications",
+      "AC Output Characteristics",
+      "DC Input Characteristics",
+      "System Efficiency",
+      "Protection Functions",
+      "Certifications & Compliance",
+      "Physical Dimensions & Weight",
+      "Environmental Ratings",
+      "Communications"
+    ],
+    "safety_topics": [
+      "Arc-Fault Circuit Protection",
+      "Rapid Shutdown",
+      "Anti-Islanding Protection",
+      "Over Current Protection",
+      "Reverse DC Polarity Protection",
+      "Overload Protection",
+      "Over/Under Voltage Protection",
+      "Over/Under Frequency Protection"
+    ],
+    "procedural_domains": [],
+    "keywords": [
+      "Microinverter",
+      "BDM-2000",
+      "Datasheet",
+      "AC Output Power",
+      "DC Input Power",
+      "Grid Voltage",
+      "System Efficiency",
+      "Protection Functions",
+      "Certifications",
+      "UL 1741",
+      "IEEE1547",
+      "NEC 2023",
+      "Rapid Shutdown",
+      "Arc-Fault Protection",
+      "Anti-Islanding",
+      "Powerline Communications",
+      "Wi-Fi",
+      "NEMA-6",
+      "IP-66",
+      "IP-67",
+      "MPPT",
+      "PV Power",
+      "Operating Temperature",
+      "THD",
+      "Power Factor",
+      "CEC Listing",
+      "Utility Interactive Grid Support Inverter",
+      "Overcurrent Protection",
+      "Overload Protection",
+      "Environmental Category",
+      "Maximum Units Per Branch",
+      "Rated Output Current",
+      "Nominal Power Grid Voltage",
+      "Peak AC Output Power",
+      "Recommended Max PV Power",
+      "Max DC Open Circuit Voltage",
+      "MPP Input Current",
+      "MPPT Tracking Range",
+      "Weighted Average Efficiency"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "procedural_domains",
+      "toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf",
+    "page_range_used": "1-1"
+  }
+}

@@ -1,0 +1,140 @@
+--- Page 1 ---
+- Scalable in 1kWh increments
+- Applicable to rooftop ballasted, ﬁxed tilt, ﬂush mount 
+and ground mount racking systems
+- Plug-and-play for simpliﬁed deployment
+- Low-Voltage DC architecture (<60V)
+- Slim, light-weight design
+- Best in class ﬁre safety
+- Compatible with high-capacity PV modules
+- High efficiency DC-coupled architecture
+- Compatible with 5 & 10 degree ballast racking systems
+- Solid-State Design means no annual maintenance required.
+- Paired with the Yotta DPI, the YOTTA BLOCK can output either 208V 
+or 480V 3-phase power
+- Integrates with YOTTA VISION EMA Platform which allows remote 
+monitoring, asset management, and trouble shooting.(2) 
+Seamlessly integrate storage behind photovoltaic (PV) modules on commercial rooftops with the 1kWh YOTTA BLOCK 
+(YB-1). We’ve simpliﬁed battery placement - one of the biggest challenges of the commercial ESS landscape. Our 
+proprietary passive thermal regulation technology has enabled the YOTTA BLOCK to be DC coupled, and co-located on 
+rooftops and carports adjacent to the PV modules. Our thermal regulation maximizes the life and performance of the 
+battery and delivers best-in-class safety. 
+ 
+The YOTTA BLOCK modular design is able to scale to ﬁt any project size to the precise kWh needed, eliminating the 
+siting, construction, and O&M headaches of C&I storage! Our plug-and-play design pairs the ESS with Yotta’s native 
+three phase DPI microinverters (208V/480V), creating a one-stop solution for commercial savings.
+Commercial Energy Storage Solution
+YOTTA BLOCK
+REMOTE
+DIAGNOSIS
+PLUG&
+PLAY
+THERMAL
+DESIGN
+ADVANCED
+PASSIVE
+SAFE
+LFP
+TECHNOLOGY
+LOW
+DC
+VOLTAGE
+DESIGN
+SCALABLE
+BLOCK
+REPLACEMENT
+BALLAST
+kWh
+BATTERY CAPACITY
+1
+YOTTA Energy Inc. 3100 Alvin Devane Blvd, Building A, Suite 200, Austin, TX 78741
+ENERGY MADE SIMPLE
+YOTTA Energy Inc. 3100 Alvin Devane Blvd, Building A, Suite 200, Austin, TX 78741
+Ver. 1.5
+May 2025
+TEMPERATURE
+MANAGEMENT
+REAL-TIME
+SAFETY
+CERTIFIED
+PROTECTION
+
+
+--- Page 2 ---
+Module Compatibility
+650W (MAX on bypass mode)
+MPPT Operating Voltage
+20V to 55V
+INPUT
+MODEL
+YOTTA BLOCK (YB-1)
+YOTTA Energy Inc. 3100 Alvin Devane Blvd, Building A, Suite 200, Austin, TX 78741
+ENERGY MADE SIMPLE
+(1) Assuming the use of a ~550W PV module that is ~28sqft and PanelCLAW FR racking.
+(2) Additional features like load control and grid services currently in development
+or available through strategic partners.
+YOTTA BLOCK + PanelClaw clawFR 10
+*Also compatible with clawFR 5 (landscape)
+YOTTA BLOCK + UNIRAC RM10 EVO
+YOTTA BLOCK + SOLLEGA
+UNIVERSALLY COMPATIBLE
+INTEGRATED SOLUTION
+BALLAST BLOCK REPLACEMENT
+Maximum Input Current (Isc MAX)
+15.5A
+Open-Circuit Voltage (Voc)
+45V
+OUTPUT
+Max. Continuous Voltage (charge & discharge)
+55V
+Max. Continuous Current (charge & discharge)
+16.5A
+Max. Power Output (discharge deﬁned by DPI Microinverter)
+432W @ 208V / 450W @ 480V
+Inverter Compatibility
+Yotta DPI-208 and DPI-480
+Voltage Range (Nominal/MAX)
+48V / 54.65V
+Amp Hours (Cell x 15S1P)
+20 Ah
+Module Rated Capacity
+1.0 kWh @ (100% DoD)
+15S1P
+Voltage Range 
+43.5V to 54.65V
+Cell Conﬁguration
+BATTERY PACK
+Chemistry
+Lithium Iron Phosphate (LiFePO4)
+Cycle Life
+< 6,000+ Cycles (@ 80% SoH)
+@ 25°C
+MECHANICAL
+Weight
+28.4 lbs (12.8 kg)
+Roof Loading
+Approx. 1psf
+Racking Capability
+PanelClaw, UNIRAC, Aerocompact, IronRidge, 
+Sollega, K2 Systems, KB Racking, Carports, pitched roofs and more
+Ambient Operating Temperatures
+Charging: -20°C to 45°C (-4°F to 113°F) @ 650W MAX
+Discharging: -20°C to 45°C (-4°F to 113°F) @ 650W MAX
+Storage Temp.
+32°F to 77°F (ideally around 59–77°F) < 1 year
+Dimensions
+15.95 x 7.90 x 4.16” (405.2 x 200.7 x 105.6 mm)
+(1)
+SAFETY AND WARRANTY
+Warranty
+10 yrs.
+Enclosure
+NEMA 6, IP67
+Certiﬁcation
+UL1973 (Pending)
+UL9540 (Pending)
+UL1741 (Pending)
+Meets the performance criteria of UL9540A
+MONITORING
+YOTTA VISION
+Safety

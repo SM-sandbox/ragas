@@ -1,0 +1,161 @@
+--- Page 1 ---
+Technical Data
+100/125kW, 1500Vdc String Inverters for North America
+The 100 & 125kW high power CPS three phase string inverters are designed for ground mount applications.  The units are high 
+performance, advanced and reliable inverters designed specifically for the North American environment and grid.  High efficiency 
+at 99.1% peak and 98.5% CEC, wide operating voltages, broad temperature ranges and a NEMA Type 4X enclosure enable this 
+inverter platform to operate at high performance across many applications.  The CPS 100/125kW products ship with the Standard 
+or Centralized Wire-box, each fully integrated and separable with AC and DC disconnect switches.  The Standard Wire-box inlcudes 
+touch safe fusing for up to 20 strings.  The CPS Flex Gateway enables communication, controls and remote product upgrades.
+  NFPA 70, NEC 2014 and 2017 compliant
+  Touch safe DC Fuse holders adds convenience and safety
+  CPS Flex Gateway enables remote FW upgrades
+  Integrated AC & DC disconnect switches
+  1 MPPT with 20 fused inputs for maximum flexibility
+  Copper and Aluminum compatible AC connections
+Key Features
+Datasheet
+CPS SCH100/125KTL-DO/US-600
+100/125KTL Centralized Wire-box
+CHINT POWER SYSTEMS AMERICA 2020/01-MKT NA                                                                                                                                                                                                              Chint Power Systems America
+6800 Koll Center Parkway, Suite 235 Pleasanton, CA 94566
+Tel: 855-584-7168    Mail: AmericaSales@chintpower.com    Web: www.chintpowersystems.com
+  NEMA Type 4X outdoor rated, tough tested enclosure
+  Advanced Smart-Grid features (CA Rule 21 certified)
+  kVA Headroom yields 100kW @ 0.9PF and 125kW @ 0.95PF
+  Generous 1.87 and 1.5 DC/AC Inverter Load Ratios
+  Separable wire-box design for fast service
+  Standard 5 year warranty with extensions to 20 years
+100/125KTL Standard Wire-box
+
+
+--- Page 2 ---
+Technical Data
+Model Name
+CPS SCH100KTL-DO/US-600
+CPS SCH125KTL-DO/US-600
+Max. PV Power
+Max. DC Input Voltage
+Operating DC Input Voltage Range
+Start-up DC Input Voltage / Power
+Number of MPP Trackers
+MPPT Voltage Range1
+Max. PV Input Current (Isc x1.25)
+Number of DC Inputs
+DC Disconnection Type
+DC Surge Protection
+Rated AC Output Power
+100kW
+125kW
+Max. AC Output Power2
+100kVA (111KVA @ PF>0.9)
+125kVA (132KVA @ PF>0.95)
+Rated Output Voltage
+Output Voltage Range3
+Grid Connection Type4
+Max. AC Output Current @600Vac
+96.2/106.8A
+120.3/127.2A
+Rated Output Frequency
+Output Frequency Range3
+Power Factor
+>0.99 (±0.8 adjustable)
+>0.99 (±0.8 adjustable)
+Current THD
+Max. Fault Current Contribution (1-cycle RMS)
+Max. OCPD Rating
+150A
+175A
+AC Disconnection Type
+AC Surge Protection
+Topology
+Max. Efficiency
+CEC Efficiency
+Stand-by / Night Consumption
+Enclosure Protection Degree
+Cooling Method
+Operating Temperature Range
+Non-Operating Temperature Range5
+Operating Humidity
+Operating Altitude
+Audible Noise
+User Interface and Display
+Inverter Monitoring
+Site Level Monitoring
+Modbus Data Mapping
+Remote Diagnostics / FW Upgrade Functions
+Dimensions (WxHxD)
+Weight
+Mounting / Installation Angle
+AC Termination
+DC Termination
+Fused String Inputs
+Safety and EMC Standard
+Selectable Grid Standard
+Smart-Grid Features
+Standard6
+Extended Terms
+1) See user manual for further information regarding MPPT Voltage Range when operating at non-unity PF
+2) "Max. AC Apparent Power" rating valid within MPPT voltage range and temperature range of -30°C to +40°C (-22°F to +104°F) for 100KW PF >0.9 and 125KW PF >0.95
+3) The "Output Voltage Range" and "Output Frequency Range" may differ according to the specific grid standard.
+4) Wye neutral-grounded, Delta may not be corner-grounded.
+5) See user manual for further requirements regarding non-operating conditions.
+6) 5 year warranty effective for units purchased after October 1st, 2019.
+20 PV source circuits, pos. & neg. fused (Standard Wire-box)
+1 PV output circuit, 1-2 terminations per pole, non-fused (Centralized Wire-box)
+DC Input
+15 - 90 degrees from horizontal (vertical or angled)
+1500V
+860-1450Vdc
+900V / 250W
+1
+LED Indicators, WiFi + APP
+870-1300Vdc
+<65dBA@1m and 25°C
+CPS Flex Gateway (1 per 32 inverters)
+SunSpec/CPS
+Standard / (with Flex Gateway)
+Modbus RS485
+8202ft / 2500m (no derating)
+0-100%
+-22°F to +140°F / -30°C to +60°C (derating from +113°F / +45°C)
+AC Output
+System
+Environment
+<4W
+60Hz
+57-63Hz
+Type II MOV (with indicator/remote signaling), Up=2.5kV, In=20kA (8/20uS)
+600Vac
+528-660Vac
+3Φ / PE / N (Neutral optional)
+98.5%
+NEMA Type 4X
+Variable speed cooling fans
+41.47A
+Load-rated DC switch
+Type II MOV (with indicator/remote signaling), Up=2.5kV, In=20kA (8/20uS)
+10, 15 and 20 years
+5 years
+Safety
+IEEE 1547a-2014, CA Rule 21, ISO-NE
+Volt-RideThru, Freq-RideThru, Ramp-Rate, Specified-PF, Volt-VAr, Freq-Watt, Volt-Watt
+187.5kW
+275A
+UL1741-SA-2016, CSA-C22.2 NO.107.1-01, IEEE1547a-2014; FCC PART15
+Warranty
+45.28x24.25x9.84in (1150x616x250mm) with Standard Wire-box
+39.37x24.25x9.84in (1000x616x250mm) with Centralized Wire-box
+Inverter: 121lbs / 55kg; Wire-box: 55lbs / 25kg (Standard Wire-box); 33lbs / 15kg (Centralized Wire-box)
+Screw Clamp Fuse Holder (Wire range: #12 - #6AWG CU) - Standard Wire-box                             
+Busbar, M8 PEMserts (Wire range: #1AWG - 250kcmil CU/AL, Lugs not supplied) - Centralized Wire-box
+15A or 20A fuses provided (Determined by product SKU)
+Display and Communication
+Mechanical
+M10 Stud Type Terminal Block [3Φ] (Wire range: 1/0AWG - 500kcmil CU/AL, Lugs not supplied)
+Screw Clamp Terminal Block [N] (#12 - 1/0AWG CU/AL)
+-40°F to +158°F / -40°C to +70°C maximum
+<3%
+Load-rated AC switch
+Transformerless
+99.1%

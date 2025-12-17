@@ -1,0 +1,153 @@
+{
+  "doc_id": "3_phase_pad_mount_transformer_spec_sheet_0c89eb",
+  "doc_type": "datasheet",
+  "doc_title": "Three-Phase Pad-Mount Transformers",
+  "subtitle": null,
+  "publisher_or_manufacturer": "MPS",
+  "canonical_anchor_phrase": "MPS Three-Phase Pad-Mount Transformers Datasheet",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [
+      "IEEE",
+      "ANSI",
+      "CSA",
+      "NEMA"
+    ],
+    "standard_ids": [
+      "IEEE/ANSI",
+      "CSA",
+      "ANSI C57.12.90",
+      "NEMA Standards"
+    ],
+    "jurisdiction_or_region": [
+      "North America",
+      "Canada"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Transformers",
+      "Distribution Transformers"
+    ],
+    "models": [],
+    "product_names": [
+      "Three-Phase Pad-Mount Transformers",
+      "Pad-Mount Transformers"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Base KVA Rating",
+      "Primary Voltages",
+      "Secondary Voltages",
+      "Phases",
+      "Frequency",
+      "Standard Compliance",
+      "Tank Type",
+      "Windings",
+      "General Characteristics",
+      "HV Bushings Configuration",
+      "Fluid Options",
+      "Overcurrent Protection",
+      "Construction",
+      "Ancillary Equipment",
+      "Audible Sound Levels",
+      "Accessories",
+      "Standard Testing",
+      "KVA Ratings",
+      "Winding Connection Configurations",
+      "Cooling Mechanism",
+      "Nameplate",
+      "Transformer Dimensions",
+      "Padmount Transformer Outline"
+    ],
+    "safety_topics": [
+      "Tamper-resistant design",
+      "Fire protection (dielectric fluid)",
+      "Grounded metal enclosure",
+      "Dead-front designs",
+      "Overcurrent protection",
+      "Pressure Relief Device (PRD)"
+    ],
+    "procedural_domains": [
+      "Testing"
+    ],
+    "keywords": [
+      "Pad-Mount Transformers",
+      "Three-Phase",
+      "KVA Rating",
+      "Primary Voltage",
+      "Secondary Voltage",
+      "Frequency",
+      "Windings (Copper, Aluminum)",
+      "Dead-Front",
+      "Live-Front",
+      "Loop Feed",
+      "Radial Feed",
+      "Dielectric Fluid (Mineral Oil, Ester)",
+      "Envirotemp FR3",
+      "HV Bushings",
+      "Fusing (Bayonet, Current Sensing)",
+      "Surge Arresters",
+      "Overcurrent Protection",
+      "Tank Construction (Steel)",
+      "Monitoring Equipment (OTI, WTI, MOG)",
+      "Pressure Relief Device",
+      "Audible Sound Levels",
+      "NEMA Standards",
+      "Accessories (Manometer, Filter, Gauge)",
+      "Tapping Switch",
+      "ANSI C57.12.90",
+      "Standard Testing (Heat Run, Impulse, Leak)",
+      "Winding Connection Configurations",
+      "Cooling Mechanism (ONAN, KNAN)",
+      "Dimensions",
+      "Weights"
+    ],
+    "toc_outline": [
+      "Base KVA Rating",
+      "Primary Voltages",
+      "Secondary Voltages",
+      "Phases",
+      "Frequency",
+      "Standard",
+      "Tank Type",
+      "Windings",
+      "General Characteristic",
+      "HV Bushings Configuration",
+      "Fluid Options",
+      "Overcurrent Protection",
+      "Construction",
+      "Design Specifications",
+      "Ancillary Equipment",
+      "Audible Sound Levels (as per NEMA Standards)",
+      "Accessories",
+      "Standard Testing",
+      "KVA Ratings (45-5000 KVA)",
+      "Winding Connection Configurations",
+      "Cooling Mechanism",
+      "Nameplate",
+      "Transformer Dimensions",
+      "Padmount Transformer Outline"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "publication.revision",
+      "publication.edition_year",
+      "publication.publication_date_text"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "3 Phase Pad Mount Transformer Spec Sheet.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/3 Phase Pad Mount Transformer Spec Sheet.pdf",
+    "page_range_used": "1-3"
+  }
+}

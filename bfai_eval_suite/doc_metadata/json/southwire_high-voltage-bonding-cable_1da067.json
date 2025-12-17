@@ -1,0 +1,74 @@
+{
+  "doc_id": "southwire_high-voltage-bonding-cable_1da067",
+  "doc_type": "datasheet",
+  "doc_title": "High-Voltage Bonding Cable",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Southwire",
+  "canonical_anchor_phrase": "Southwire High-Voltage Bonding Cable Datasheet",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Cable",
+      "Bonding Cable"
+    ],
+    "models": [],
+    "product_names": [
+      "High-Voltage Bonding Cable"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "High-Voltage Systems",
+      "Electrical Bonding",
+      "Cable Technology",
+      "Grounding Applications",
+      "Electrical Conductors"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [],
+    "keywords": [
+      "High-Voltage",
+      "Bonding",
+      "Cable",
+      "Electrical",
+      "Conductor",
+      "Grounding",
+      "Southwire",
+      "Power Systems",
+      "Utility",
+      "Infrastructure"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "low",
+    "missing_fields": [
+      "subtitle",
+      "publication.revision",
+      "publication.edition_year",
+      "publication.publication_date_text",
+      "standards.standard_body",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "equipment.models",
+      "topics.safety_topics",
+      "topics.procedural_domains",
+      "topics.toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Southwire High-Voltage-Bonding-Cable.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Southwire High-Voltage-Bonding-Cable.pdf",
+    "page_range_used": "1-1"
+  }
+}

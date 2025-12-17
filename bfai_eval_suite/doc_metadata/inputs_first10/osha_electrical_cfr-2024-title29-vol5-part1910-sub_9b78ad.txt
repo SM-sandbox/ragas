@@ -1,0 +1,1458 @@
+--- Page 1 ---
+865 
+Occu. Safety and Health Admin., Labor 
+§ 1910.301 
+13. Guidelines for Terminal Elevators; Mill 
+Mutual Fire Prevention Bureau, 1 Pierce 
+Place, Suite 1260 West, Itasca, Illinois 60143– 
+1269. 
+14. Standards for Preventing the Horizontal 
+and Vertical Spread of Fires in Grain Handling 
+Properties; Mill Mutual Fire Mutual Fire Pre-
+vention Bureau, 1 Pierce Place, Suite 1260 
+West, Itasca, Illinois 60143–1269. 
+15. Belt Conveyors for Bulk Materials, Part I 
+and Part II, Data Sheet 570, Revision A; Na-
+tional Safety Council, 425 North Michigan 
+Avenue, Chicago, Illinois 60611. 
+16. Suggestions for Precautions and Safety 
+Practices in Welding and Cutting; Mill Mutual 
+Fire Prevention Bureau, 1 Pierce Place, 
+Suite 1260 West, Itasca, Illinois 60143–1269. 
+17. Food Bins and Tanks, Data Sheet 524; 
+National Safety Council, 425 North Michigan 
+Avenue, Chicago, Illinois 60611. 
+18. Pneumatic Dust Control in Grain Ele-
+vators; National Academy of Sciences, Wash-
+ington, DC. (Available from National Tech-
+nical Information Service, Springfield, Vir-
+ginia 22151.) 
+19. Dust Control Analysis and Layout Proce-
+dures for Grain Storage and Processing Plants; 
+Mill Mutual Fire Prevention Bureau, 1 
+Pierce Place, Suite 1260 West, Itasca, Illinois 
+60143–1269. 
+20. Standard for the Installation of Blower 
+and Exhaust Systems for Dust, Stock and Vapor 
+Removal, NFPA 91; National Fire Protection 
+Association, Batterymarch Park, Quincy, 
+Massachusetts 02269. 
+21. Standards for the Installation of Direct 
+Heat Grain Driers in Grain and Milling Prop-
+erties; Mill Mutual Fire Prevention Bureau, 1 
+Pierce Place, Suite 1260 West, Itasca, Illinois 
+60143–1269. 
+22. Guidelines for Lubrication and Bearing 
+Maintenance; Mill Mutual Fire Prevention 
+Bureau, 1 Pierce Place, Suite 1260 West, 
+Itasca, Illinois 60143–1269. 
+23. Organized Maintenance in Grain and Mill-
+ing Properties; Mill Mutual Fire Prevention 
+Bureau, 1 Pierce Place, Suite 1260 West, 
+Itasca, Illinois 60143–1269. 
+24. Safe and Efficient Elevator Legs for Grain 
+and Milling Properties; Mill Mutual Fire Pre-
+vention Bureau, 1 Pierce Place, Suite 1260 
+West, Itasca, Illinois 60143–1269. 
+25. Explosion Venting and Supression of 
+Bucket Elevators; National Grain and Feed 
+Association, P.O. Box 28328, Washington, DC 
+20005. 
+26. Lightning Protection Code, NFPA 78; Na-
+tional 
+Fire 
+Protection 
+Association, 
+Batterymarch Park, Quincy, Massachusetts 
+02269. 
+27. Occupational Safety in Grain Elevators, 
+DHHS (NIOSH) Publication No. 83–126); Na-
+tional Institute for Occupational Safety and 
+Health, Morgantown, West Virginia 26505. 
+28. Retrofitting and Constructing Grain Ele-
+vators; National Grain and Feed Association, 
+P.O. Box 28328, Washington, DC 20005. 
+29. Grain Industry Safety and Health Cen-
+ter—Training Series (Preventing grain dust 
+explosions, operations maintenance safety, 
+transportation safety, occupational safety 
+and health); Grain Elevator and Processing 
+Society, P.O. Box 15026, Commerce Station, 
+Minneapolis, Minnesota 55415–0026. 
+30. Suggestions for Organized Maintenance; 
+The Mill Mutuals Loss Control Department, 
+1 Pierce Place, Suite 1260 West, Itasca, Illi-
+nois 60143–1269. 
+31. Safety—The First Step to Success; The 
+Mill Mutual Loss Control Department, 1 
+Pierce Place, Suite 1260 West, Itasca, Illinois 
+60143–1269. 
+32. Emergency Plan Notebook; Schoeff, Rob-
+ert W. and James L. Balding, Kansas State 
+University, Cooperative Extension Service, 
+Extension 
+Grain 
+Science 
+and 
+Industry, 
+Shellenberger Hall, Manhattan, Kansas 66506. 
+[52 FR 49625, Dec. 31, 1987, as amended at 53 
+FR 17696, May 18, 1988; 54 FR 24334, June 7, 
+1989; 55 FR 25094, June 20, 1990; 61 FR 9242, 
+Mar. 7, 1996; 61 FR 9584, Mar. 8, 1996; 67 FR 
+67965, Nov. 7, 2002; 76 FR 80740, Dec. 27, 2011] 
+Subpart S—Electrical 
+AUTHORITY: 29 U.S.C. 653, 655, 657; Sec-
+retary of Labor’s Order No. 8–76 (41 FR 25059), 
+1–90 (55 FR 9033), 5–2002 (67 FR 65008), 5–2007 
+(72 FR 31160), or 1–2012 (77 FR 3912), as appli-
+cable; and 29 CFR Part 1911. 
+GENERAL 
+§ 1910.301
+Introduction. 
+This 
+subpart 
+addresses 
+electrical 
+safety requirements that are necessary 
+for the practical safeguarding of em-
+ployees in their workplaces and is di-
+vided into four major divisions as fol-
+lows: 
+(a) Design safety standards for elec-
+trical systems. These regulations are 
+contained in §§ 1910.302 through 1910.330. 
+Sections 1910.302 through 1910.308 con-
+tain design safety standards for elec-
+tric utilization systems. Included in 
+this category are all electric equip-
+ment and installations used to provide 
+electric power and light for employee 
+workplaces. Sections 1910.309 through 
+1910.330 are reserved for possible future 
+design safety standards for other elec-
+trical systems. 
+(b) Safety-related work practices. These 
+regulations 
+will 
+be 
+contained 
+in 
+§§ 1910.331 through 1910.360. 
+(c) Safety-related maintenance require-
+ments. These regulations will be con-
+tained in §§ 1910.361 through 1910.380. 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00875
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 2 ---
+866 
+29 CFR Ch. XVII (7–1–24 Edition) 
+§ 1910.302 
+(d) Safety requirements for special 
+equipment. These regulations will be 
+contained in §§ 1910.381 through 1910.398. 
+(e) Definitions. Definitions applicable 
+to each division are contained in 
+§ 1910.399. 
+[46 FR 4056, Jan. 16, 1981; 46 FR 40185, Aug. 7, 
+1981] 
+DESIGN SAFETY STANDARDS FOR 
+ELECTRICAL SYSTEMS 
+SOURCE: Sections 1910.302 through 1910.308 
+appear at 72 FR 7190, Feb. 14, 2007, unless oth-
+erwise noted. 
+§ 1910.302
+Electric utilization systems. 
+Sections 1910.302 through 1910.308 con-
+tain design safety standards for elec-
+tric utilization systems. 
+(a) Scope—(1) Covered. The provisions 
+of §§ 1910.302 through 1910.308 cover elec-
+trical 
+installations 
+and 
+utilization 
+equipment installed or used within or 
+on buildings, structures, and other 
+premises, including: 
+(i) Yards; 
+(ii) Carnivals; 
+(iii) Parking and other lots; 
+(iv) Mobile homes; 
+(v) Recreational vehicles; 
+(vi) Industrial substations; 
+(vii) Conductors that connect the in-
+stallations to a supply of electricity; 
+and 
+(viii) Other outside conductors on the 
+premises. 
+(2) Not covered. The provisions of 
+§§ 1910.302 through 1910.308 do not cover: 
+(i) Installations in ships, watercraft, 
+railway rolling stock, aircraft, or auto-
+motive vehicles other than mobile 
+homes and recreational vehicles; 
+(ii) 
+Installations 
+underground 
+in 
+mines; 
+(iii) Installations of railways for gen-
+eration, transformation, transmission, 
+or distribution of power used exclu-
+sively for operation of rolling stock or 
+installations used exclusively for sig-
+naling and communication purposes; 
+(iv) Installations of communication 
+equipment under the exclusive control 
+of communication utilities, located 
+outdoors or in building spaces used ex-
+clusively for such installations; or 
+(v) Installations under the exclusive 
+control of electric utilities for the pur-
+pose of communication or metering; or 
+for the generation, control, trans-
+formation, transmission, and distribu-
+tion of electric energy located in build-
+ings used exclusively by utilities for 
+such purposes or located outdoors on 
+property owned or leased by the utility 
+or on public highways, streets, roads, 
+etc., or outdoors by established rights 
+on private property. 
+(b) Extent of application—(1) Require-
+ments applicable to all installations. The 
+following requirements apply to all 
+electrical installations and utilization 
+equipment, regardless of when they 
+were designed or installed: 
+§ 1910.303(b)—Examination, installation, 
+and use of equipment 
+§ 1910.303(c)(3)—Electrical 
+connec-
+tions—Splices 
+§ 1910.303(d)—Arcing parts 
+§ 1910.303(e)—Marking 
+§ 1910.303(f), except (f)(4) and (f)(5)—Dis-
+connecting means and circuits 
+§ 1910.303(g)(2)—600 volts or less—Guard-
+ing of live parts 
+§ 1910.304(a)(3)—Use of grounding termi-
+nals and devices 
+§ 1910.304(f)(1)(i), (f)(1)(iv), and (f)(1)(v)— 
+Overcurrent 
+protection—600 
+volts, 
+nominal, or less 
+§ 1910.304(g)(1)(ii), (g)(1)(iii), (g)(1)(iv), 
+and (g)(1)(v)—Grounding—Systems to 
+be grounded 
+§ 1910.304(g)(4)—Grounding—Grounding 
+connections 
+§ 1910.304(g)(5)—Grounding—Grounding 
+path 
+§ 1910.304(g)(6)(iv)(A) 
+through 
+(g)(6)(iv)(D), and (g)(6)(vi)—Ground-
+ing—Supports, enclosures, and equip-
+ment to be grounded 
+§ 1910.304(g)(7)—Grounding—Nonelec-
+trical equipment 
+§ 1910.304(g)(8)(i)—Grounding—Methods 
+of grounding fixed equipment 
+§ 1910.305(g)(1)—Flexible cords and ca-
+bles—Use of flexible cords and cables 
+§ 1910.305(g)(2)(ii) and (g)(2)(iii)—Flexi-
+ble cords and cables—Identification, 
+splices, and terminations 
+§ 1910.307, 
+except 
+as 
+specified 
+in 
+§ 1910.307(b)—Hazardous 
+(classified) 
+locations 
+(2) Requirements applicable to installa-
+tions made after March 15, 1972. Every 
+electrical installation and all utiliza-
+tion equipment installed or overhauled 
+after March 15, 1972, shall comply with 
+the provisions of §§ 1910.302 through 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00876
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 3 ---
+867 
+Occu. Safety and Health Admin., Labor 
+§ 1910.302 
+1910.308, except as noted in paragraphs 
+(b)(3) and (b)(4) of this section. 
+(3) Requirements applicable only to in-
+stallations made after April 16, 1981. The 
+following requirements apply only to 
+electrical installations and utilization 
+equipment installed after April 16, 1981: 
+§ 1910.303(h)(4)—Over 600 volts, nomi-
+nal—Entrance and access to work 
+space 
+§ 1910.304(f)(1)(vii) and (f)(1)(viii)—Over-
+current protection—600 volts, nomi-
+nal, or less 
+§ 1910.304(g)(9)(i)—Grounding—Ground-
+ing of systems and circuits of 1000 
+volts and over (high voltage) 
+§ 1910.305(j)(6)(ii)(D)—Equipment 
+for 
+general use—Capacitors 
+§ 1910.306(c)(9)—Elevators, dumbwaiters, 
+escalators, moving walks, wheelchair 
+lifts, and stairway chair lifts—Inter-
+connection between multicar con-
+trollers 
+§ 1910.306(i)—Electrically driven or con-
+trolled irrigation machines 
+§ 1910.306(j)(5)—Swimming pools, foun-
+tains, 
+and 
+similar 
+installations— 
+Fountains 
+§ 1910.308(a)(1)(ii)—Systems 
+over 
+600 
+volts, nominal—Aboveground wiring 
+methods 
+§ 1910.308(c)(2)—Class 1, Class 2, and 
+Class 3 remote control, signaling, and 
+power-limited circuits—Marking 
+§ 1910.308(d)—Fire alarm systems 
+(4) Requirements applicable only to in-
+stallations made after August 13, 2007. 
+The following requirements apply only 
+to electrical installations and utiliza-
+tion equipment installed after August 
+13, 2007: 
+§ 1910.303(f)(4)—Disconnecting 
+means 
+and circuits—Capable of accepting a 
+lock 
+§ 1910.303(f)(5)—Disconnecting 
+means 
+and circuits—Marking for series com-
+bination ratings 
+§ 1910.303(g)(1)(iv) 
+and 
+(g)(1)(vii)—600 
+Volts, nominal, or less—Space about 
+electric equipment 
+§ 1910.303(h)(5)(vi)—Over 600 volts, nomi-
+nal—Working space and guarding 
+§ 1910.304(b)(1)—Branch circuits—Identi-
+fication of multiwire branch circuits 
+§ 1910.304(b)(3)(i)—Branch 
+circuits— 
+Ground-fault circuit interrupter pro-
+tection for personnel 
+§ 1910.304(f)(2)(i)(A), (f)(2)(i)(B) (but not 
+the 
+introductory 
+text 
+to 
+§ 1910.304(f)(2)(i)), 
+and 
+(f)(2)(iv)(A)— 
+Overcurrent protection—Feeders and 
+branch circuits over 600 volts, nomi-
+nal 
+§ 1910.305(c)(3)(ii)—Switches—Connec-
+tion of switches 
+§ 1910.305(c)(5)—Switches—Grounding 
+§ 1910.306(a)(1)(ii)—Electric 
+signs 
+and 
+outline 
+lighting—Disconnecting 
+means 
+§ 1910.306(c)(4)—Elevators, dumbwaiters, 
+escalators, moving walks, wheelchair 
+lifts, and stairway chair lifts—Oper-
+ation 
+§ 1910.306(c)(5)—Elevators, dumbwaiters, 
+escalators, moving walks, wheelchair 
+lifts, and stairway chair lifts—Loca-
+tion 
+§ 1910.306(c)(6)—Elevators, dumbwaiters, 
+escalators, moving walks, wheelchair 
+lifts, and stairway chair lifts—Identi-
+fication and signs 
+§ 1910.306(c)(7)—Elevators, dumbwaiters, 
+escalators, moving walks, wheelchair 
+lifts, and stairway chair lifts—Sin-
+gle-car and multicar installations 
+§ 1910.306(j)(1)(iii)—Swimming 
+pools, 
+fountains, and similar installations— 
+Receptacles 
+§ 1910.306(k)—Carnivals, circuses, fairs, 
+and similar events 
+§ 1910.308(a)(5)(v) and (a)(5)(vi)(B)—Sys-
+tems over 600 volts, nominal—Inter-
+rupting and isolating devices 
+§ 1910.308(a)(7)(vi)—Systems 
+over 
+600 
+volts, nominal—Tunnel installations 
+§ 1910.308(b)(3)—Emergency power sys-
+tems—Signs 
+§ 1910.308(c)(3)—Class 1, Class 2, and 
+Class 3 remote control, signaling, and 
+power-limited 
+circuits—Separation 
+from conductors of other circuits 
+§ 1910.308(f)—Solar 
+photovoltaic 
+sys-
+tems 
+(c) Applicability of requirements for dis-
+connecting means. The requirement in 
+§ 1910.147(c)(2)(iii) that energy isolating 
+devices be capable of accepting a lock-
+out device whenever replacement or 
+major repair, renovation or modifica-
+tion of a machine or equipment is per-
+formed, and whenever new machines or 
+equipment are installed after January 
+2, 1990, applies in addition to any re-
+quirements 
+in 
+§§ 1910.303 
+through 
+1910.308 that disconnecting means be 
+capable of being locked in the open po-
+sition under certain conditions. 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00877
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 4 ---
+868 
+29 CFR Ch. XVII (7–1–24 Edition) 
+§ 1910.303 
+§ 1910.303
+General. 
+(a) Approval. The conductors and 
+equipment required or permitted by 
+this subpart shall be acceptable only if 
+approved, as defined in § 1910.399. 
+(b) Examination, installation, and use 
+of equipment—(1) Examination. Electric 
+equipment shall be free from recog-
+nized hazards that are likely to cause 
+death or serious physical harm to em-
+ployees. Safety of equipment shall be 
+determined using the following consid-
+erations: 
+(i) Suitability for installation and 
+use in conformity with the provisions 
+of this subpart; 
+NOTE TO PARAGRAPH (b)(1)(i) OF THIS SEC-
+TION: Suitability of equipment for an identi-
+fied purpose may be evidenced by listing or 
+labeling for that identified purpose. 
+(ii) Mechanical strength and dura-
+bility, including, for parts designed to 
+enclose and protect other equipment, 
+the adequacy of the protection thus 
+provided; 
+(iii) Wire-bending and connection 
+space; 
+(iv) Electrical insulation; 
+(v) Heating effects under all condi-
+tions of use; 
+(vi) Arcing effects; 
+(vii) Classification by type, size, volt-
+age, current capacity, and specific use; 
+and 
+(viii) Other factors that contribute to 
+the practical safeguarding of persons 
+using or likely to come in contact with 
+the equipment. 
+(2) Installation and use. Listed or la-
+beled equipment shall be installed and 
+used in accordance with any instruc-
+tions included in the listing or label-
+ing. 
+(3) Insulation integrity. Completed 
+wiring installations shall be free from 
+short circuits and from grounds other 
+than those required or permitted by 
+this subpart. 
+(4) Interrupting rating. Equipment in-
+tended to interrupt current at fault 
+levels shall have an interrupting rating 
+sufficient for the nominal circuit volt-
+age and the current that is available at 
+the line terminals of the equipment. 
+Equipment intended to interrupt cur-
+rent at other than fault levels shall 
+have an interrupting rating at nominal 
+circuit voltage sufficient for the cur-
+rent that must be interrupted. 
+(5) Circuit impedance and other charac-
+teristics. The overcurrent protective de-
+vices, the total impedance, the compo-
+nent short-circuit current ratings, and 
+other characteristics of the circuit to 
+be protected shall be selected and co-
+ordinated to permit the circuit protec-
+tive devices used to clear a fault to do 
+so without the occurrence of extensive 
+damage to the electrical components of 
+the circuit. This fault shall be assumed 
+to be either between two or more of the 
+circuit conductors, or between any cir-
+cuit conductor and the grounding con-
+ductor or enclosing metal raceway. 
+(6) Deteriorating agents. Unless identi-
+fied for use in the operating environ-
+ment, no conductors or equipment 
+shall be located in damp or wet loca-
+tions; where exposed to gases, fumes, 
+vapors, liquids, or other agents that 
+have a deteriorating effect on the con-
+ductors or equipment; or where exposed 
+to excessive temperatures. 
+(7) Mechanical execution of work. Elec-
+tric equipment shall be installed in a 
+neat and workmanlike manner. 
+(i) Unused openings in boxes, race-
+ways, 
+auxiliary 
+gutters, 
+cabinets, 
+equipment cases, or housings shall be 
+effectively closed to afford protection 
+substantially equivalent to the wall of 
+the equipment. 
+(ii) Conductors shall be racked to 
+provide ready and safe access in under-
+ground and subsurface enclosures that 
+persons 
+enter 
+for 
+installation 
+and 
+maintenance. 
+(iii) 
+Internal 
+parts 
+of 
+electrical 
+equipment, including busbars, wiring 
+terminals, insulators, and other sur-
+faces, may not be damaged or contami-
+nated by foreign materials such as 
+paint, plaster, cleaners, abrasives, or 
+corrosive residues. 
+(iv) There shall be no damaged parts 
+that may adversely affect safe oper-
+ation or mechanical strength of the 
+equipment, such as parts that are bro-
+ken, bent, cut, or deteriorated by cor-
+rosion, 
+chemical 
+action, 
+or 
+over-
+heating. 
+(8) Mounting and cooling of equipment. 
+(i) Electric equipment shall be firmly 
+secured to the surface on which it is 
+mounted. 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00878
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 5 ---
+869 
+Occu. Safety and Health Admin., Labor 
+§ 1910.303 
+NOTE TO PARAGRAPH (b)(8)(i) OF THIS SEC-
+TION: Wooden plugs driven into holes in ma-
+sonry, concrete, plaster, or similar materials 
+are not considered secure means of fastening 
+electric equipment. 
+(ii) Electric equipment that depends 
+on the natural circulation of air and 
+convection principles for cooling of ex-
+posed surfaces shall be installed so that 
+room airflow over such surfaces is not 
+prevented by walls or by adjacent in-
+stalled equipment. For equipment de-
+signed for floor mounting, clearance 
+between top surfaces and adjacent sur-
+faces shall be provided to dissipate ris-
+ing warm air. 
+(iii) 
+Electric 
+equipment 
+provided 
+with ventilating openings shall be in-
+stalled so that walls or other obstruc-
+tions do not prevent the free circula-
+tion of air through the equipment. 
+(c) Electrical connections—(1) General. 
+Because of different characteristics of 
+dissimilar metals: 
+(i) Devices such as pressure terminal 
+or pressure splicing connectors and sol-
+dering lugs shall be identified for the 
+material of the conductor and shall be 
+properly installed and used; 
+(ii) Conductors of dissimilar metals 
+may not be intermixed in a terminal or 
+splicing connector where physical con-
+tact occurs between dissimilar conduc-
+tors (such as copper and aluminum, 
+copper and copper-clad aluminum, or 
+aluminum and copper-clad aluminum) 
+unless the device is identified for the 
+purpose and conditions of use; and 
+(iii) Materials such as solder, fluxes, 
+inhibitors, and compounds, where em-
+ployed, shall be suitable for the use and 
+shall be of a type that will not ad-
+versely affect the conductors, installa-
+tion, or equipment. 
+(2) Terminals. (i) Connection of con-
+ductors to terminal parts shall ensure 
+a good connection without damaging 
+the conductors and shall be made by 
+means of pressure connectors (includ-
+ing set-screw type), solder lugs, or 
+splices to flexible leads. However, No. 
+10 or smaller conductors may be con-
+nected by means of wire binding screws 
+or studs and nuts having upturned lugs 
+or equivalent. 
+(ii) Terminals for more than one con-
+ductor and terminals used to connect 
+aluminum shall be so identified. 
+(3) Splices. (i) Conductors shall be 
+spliced or joined with splicing devices 
+identified for the use or by brazing, 
+welding, or soldering with a fusible 
+metal or alloy. Soldered splices shall 
+first be spliced or joined to be mechani-
+cally and electrically secure without 
+solder and then soldered. All splices 
+and joints and the free ends of conduc-
+tors shall be covered with an insulation 
+equivalent to that of the conductors or 
+with an insulating device identified for 
+the purpose. 
+(ii) 
+Wire 
+connectors 
+or 
+splicing 
+means installed on conductors for di-
+rect burial shall be listed for such use. 
+(d) Arcing parts. Parts of electric 
+equipment that in ordinary operation 
+produce arcs, sparks, flames, or molten 
+metal shall be enclosed or separated 
+and isolated from all combustible ma-
+terial. 
+(e) Marking—(1) Identification of man-
+ufacturer and ratings. Electric equip-
+ment may not be used unless the fol-
+lowing markings have been placed on 
+the equipment: 
+(i) The manufacturer’s name, trade-
+mark, or other descriptive marking by 
+which the organization responsible for 
+the product may be identified; and 
+(ii) Other markings giving voltage, 
+current, wattage, or other ratings as 
+necessary. 
+(2) Durability. The marking shall be 
+of sufficient durability to withstand 
+the environment involved. 
+(f) Disconnecting means and circuits— 
+(1) Motors and appliances. Each dis-
+connecting means required by this sub-
+part for motors and appliances shall be 
+legibly marked to indicate its purpose, 
+unless located and arranged so the pur-
+pose is evident. 
+(2) Services, feeders, and branch cir-
+cuits. Each service, feeder, and branch 
+circuit, at its disconnecting means or 
+overcurrent device, shall be legibly 
+marked to indicate its purpose, unless 
+located and arranged so the purpose is 
+evident. 
+(3) Durability of markings. The mark-
+ings required by paragraphs (f)(1) and 
+(f)(2) of this section shall be of suffi-
+cient durability to withstand the envi-
+ronment involved. 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00879
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 6 ---
+870 
+29 CFR Ch. XVII (7–1–24 Edition) 
+§ 1910.303 
+(4) Capable of accepting a lock. Dis-
+connecting means required by this sub-
+part shall be capable of being locked in 
+the open position. 
+(5) Marking for series combination rat-
+ings. (i) Where circuit breakers or fuses 
+are applied in compliance with the se-
+ries combination ratings marked on 
+the equipment by the manufacturer, 
+the equipment enclosures shall be leg-
+ibly marked in the field to indicate 
+that the equipment has been applied 
+with a series combination rating. 
+(ii) The marking required by para-
+graph (f)(5)(i) of this section shall be 
+readily visible and shall state ‘‘Cau-
+tion—Series 
+Combination 
+System 
+Rated __ Amperes. Identified Replace-
+ment Component Required.’’ 
+(g) 600 Volts, nominal, or less. This 
+paragraph applies to electric equip-
+ment operating at 600 volts, nominal, 
+or less to ground. 
+(1) Space about electric equipment. Suf-
+ficient access and working space shall 
+be provided and maintained about all 
+electric equipment to permit ready and 
+safe operation and maintenance of such 
+equipment. 
+(i) Working space for equipment like-
+ly to require examination, adjustment, 
+servicing, or maintenance while ener-
+gized shall comply with the following 
+dimensions, except as required or per-
+mitted elsewhere in this subpart: 
+(A) The depth of the working space in 
+the direction of access to live parts 
+may not be less than indicated in Table 
+S–1. Distances shall be measured from 
+the live parts if they are exposed or 
+from the enclosure front or opening if 
+they are enclosed; 
+(B) The width of working space in 
+front of the electric equipment shall be 
+the width of the equipment or 762 mm 
+(30 in.), whichever is greater. In all 
+cases, the working space shall permit 
+at least a 90-degree opening of equip-
+ment doors or hinged panels; and 
+(C) The work space shall be clear and 
+extend from the grade, floor, or plat-
+form to the height required by para-
+graph (g)(1)(vi) of this section. How-
+ever, other equipment associated with 
+the electrical installation and located 
+above or below the electric equipment 
+may extend not more than 153 mm (6 
+in.) beyond the front of the electric 
+equipment. 
+(ii) Working space required by this 
+standard may not be used for storage. 
+When normally enclosed live parts are 
+exposed for inspection or servicing, the 
+working space, if in a passageway or 
+general open space, shall be suitably 
+guarded. 
+(iii) At least one entrance of suffi-
+cient area shall be provided to give ac-
+cess to the working space about elec-
+tric equipment. 
+(iv) For equipment rated 1200 am-
+peres or more and over 1.83 m (6.0 ft) 
+wide, containing overcurrent devices, 
+switching devices, or control devices, 
+there shall be one entrance not less 
+than 610 mm (24 in.) wide and 1.98 m (6.5 
+ft) high at each end of the working 
+space, except that: 
+(A) Where the location permits a con-
+tinuous and unobstructed way of exit 
+travel, one means of exit is permitted; 
+or 
+(B) Where the working space required 
+by paragraph (g)(1)(i) of this section is 
+doubled, only one entrance to the 
+working space is required; however, the 
+entrance shall be located so that the 
+edge of the entrance nearest the equip-
+ment is the minimum clear distance 
+given in Table S–1 away from such 
+equipment. 
+(v) Illumination shall be provided for 
+all working spaces about service equip-
+ment, switchboards, panelboards, and 
+motor control centers installed in-
+doors. Additional lighting fixtures are 
+not required where the working space 
+is illuminated by an adjacent light 
+source. In electric equipment rooms, 
+the illumination may not be controlled 
+by automatic means only. 
+(vi) The minimum headroom of work-
+ing spaces about service equipment, 
+switchboards, panelboards, or motor 
+control centers shall be as follows: 
+(A) For installations built before Au-
+gust 13, 2007, 1.91 m (6.25 ft); and 
+(B) For installations built on or after 
+August 13, 2007, 1.98 m (6.5 ft), except 
+that where the electrical equipment 
+exceeds 1.98 m (6.5 ft) in height, the 
+minimum headroom may not be less 
+than the height of the equipment. 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00880
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 7 ---
+871 
+Occu. Safety and Health Admin., Labor 
+§ 1910.303 
+TABLE S–1—MINIMUM DEPTH OF CLEAR WORKING SPACE AT ELECTRIC EQUIPMENT, 600 V OR LESS 
+Nominal voltage to ground 
+Minimum clear distance for condition 2 3 
+Condition A 
+Condition B 
+Condition C 
+m 
+ft 
+m 
+ft 
+m 
+ft 
+0–150 ............................................................................
+10.9 
+13.0 
+10.9 
+13.0 
+0.9 
+3.0 
+151–600 ........................................................................
+10.9 
+13.0 
+1.0 
+3.5 
+1.2 
+4.0 
+Notes to Table S–1: 
+1. Minimum clear distances may be 0.7 m (2.5 ft) for installations built before April 16, 1981. 
+2. Conditions A, B, and C are as follows: 
+Condition A—Exposed live parts on one side and no live or grounded parts on the other side of the working space, or ex-
+posed live parts on both sides effectively guarded by suitable wood or other insulating material. Insulated wire or insulated 
+busbars operating at not over 300 volts are not considered live parts. 
+Condition B—Exposed live parts on one side and grounded parts on the other side. 
+Condition C—Exposed live parts on both sides of the work space (not guarded as provided in Condition A) with the operator 
+between. 
+3. Working space is not required in back of assemblies such as dead-front switchboards or motor control centers where there 
+are no renewable or adjustable parts (such as fuses or switches) on the back and where all connections are accessible from lo-
+cations other than the back. Where rear access is required to work on deenergized parts on the back of enclosed equipment, a 
+minimum working space of 762 mm (30 in.) horizontally shall be provided. 
+(vii) Switchboards, panelboards, and 
+distribution boards installed for the 
+control of light and power circuits, and 
+motor control centers shall be located 
+in dedicated spaces and protected from 
+damage. 
+(A) For indoor installation, the dedi-
+cated space shall comply with the fol-
+lowing: 
+(1) The space equal to the width and 
+depth of the equipment and extending 
+from the floor to a height of 1.83 m (6.0 
+ft) above the equipment or to the 
+structural ceiling, whichever is lower, 
+shall be dedicated to the electrical in-
+stallation. Unless isolated from equip-
+ment by height or physical enclosures 
+or covers that will afford adequate me-
+chanical 
+protection 
+from 
+vehicular 
+traffic or accidental contact by unau-
+thorized personnel or that complies 
+with paragraph (g)(1)(vii)(A)(2) of this 
+section, piping, ducts, or equipment 
+foreign to the electrical installation 
+may not be located in this area; 
+(2) The space equal to the width and 
+depth of the equipment shall be kept 
+clear of foreign systems unless protec-
+tion is provided to avoid damage from 
+condensation, leaks, or breaks in such 
+foreign systems. This area shall extend 
+from the top of the electric equipment 
+to the structural ceiling; 
+(3) Sprinkler protection is permitted 
+for the dedicated space where the pip-
+ing complies with this section; and 
+(4) Control equipment that by its 
+very nature or because of other re-
+quirements in this subpart must be ad-
+jacent to or within sight of its oper-
+ating machinery is permitted in the 
+dedicated space. 
+NOTE TO PARAGRAPH (g)(1)(vii)(A) OF THIS 
+SECTION: A dropped, suspended, or similar 
+ceiling that does not add strength to the 
+building structure is not considered a struc-
+tural ceiling. 
+(B) Outdoor electric equipment shall 
+be installed in suitable enclosures and 
+shall be protected from accidental con-
+tact by unauthorized personnel, or by 
+vehicular traffic, or by accidental spill-
+age or leakage from piping systems. No 
+architectural appurtenance or other 
+equipment may be located in the work-
+ing 
+space 
+required 
+by 
+paragraph 
+(g)(1)(i) of this section. 
+(2) Guarding of live parts. (i) Except as 
+elsewhere required or permitted by this 
+standard, live parts of electric equip-
+ment operating at 50 volts or more 
+shall be guarded against accidental 
+contact by use of approved cabinets or 
+other forms of approved enclosures or 
+by any of the following means: 
+(A) By location in a room, vault, or 
+similar enclosure that is accessible 
+only to qualified persons; 
+(B) By suitable permanent, substan-
+tial partitions or screens so arranged 
+so that only qualified persons will have 
+access to the space within reach of the 
+live parts. Any openings in such parti-
+tions or screens shall be so sized and 
+located that persons are not likely to 
+come into accidental contact with the 
+live parts or to bring conducting ob-
+jects into contact with them; 
+(C) By placement on a suitable bal-
+cony, gallery, or platform so elevated 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00881
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 8 ---
+872 
+29 CFR Ch. XVII (7–1–24 Edition) 
+§ 1910.303 
+and otherwise located as to prevent ac-
+cess by unqualified persons; or 
+(D) By elevation of 2.44 m (8.0 ft) or 
+more above the floor or other working 
+surface. 
+(ii) In locations where electric equip-
+ment is likely to be exposed to physical 
+damage, enclosures or guards shall be 
+so arranged and of such strength as to 
+prevent such damage. 
+(iii) Entrances to rooms and other 
+guarded locations containing exposed 
+live parts shall be marked with con-
+spicuous warning signs forbidding un-
+qualified persons to enter. 
+(h) Over 600 volts, nominal—(1) Gen-
+eral. Conductors and equipment used on 
+circuits exceeding 600 volts, nominal, 
+shall comply with all applicable provi-
+sions of the paragraphs (a) through (g) 
+of this section and with the following 
+provisions, which supplement or mod-
+ify the preceding requirements. How-
+ever, paragraphs (h)(2), (h)(3), and (h)(4) 
+of this section do not apply to the 
+equipment on the supply side of the 
+service point. 
+(2) Enclosure for electrical installations. 
+(i) Electrical installations in a vault, 
+room, or closet or in an area sur-
+rounded by a wall, screen, or fence, ac-
+cess to which is controlled by lock and 
+key or other approved means, are con-
+sidered to be accessible to qualified 
+persons only. The type of enclosure 
+used in a given case shall be designed 
+and constructed according to the haz-
+ards associated with the installation. 
+(ii) For installations other than 
+equipment 
+described 
+in 
+paragraph 
+(h)(2)(v) of this section, a wall, screen, 
+or fence shall be used to enclose an 
+outdoor electrical installation to deter 
+access by persons who are not quali-
+fied. A fence may not be less than 2.13 
+m (7.0 ft) in height or a combination of 
+1.80 m (6.0 ft) or more of fence fabric 
+and a 305-mm (1-ft) or more extension 
+utilizing three or more strands of 
+barbed wire or equivalent. 
+(iii) 
+The 
+following 
+requirements 
+apply to indoor installations that are 
+accessible to other than qualified per-
+sons: 
+(A) The installations shall be made 
+with metal-enclosed equipment or shall 
+be enclosed in a vault or in an area to 
+which access is controlled by a lock; 
+(B) Metal-enclosed switchgear, unit 
+substations, transformers, pull boxes, 
+connection boxes, and other similar as-
+sociated equipment shall be marked 
+with appropriate caution signs; and 
+(C) Openings in ventilated dry-type 
+transformers and similar openings in 
+other equipment shall be designed so 
+that foreign objects inserted through 
+these openings will be deflected from 
+energized parts. 
+(iv) Outdoor electrical installations 
+having exposed live parts shall be ac-
+cessible to qualified persons only. 
+(v) The following requirements apply 
+to outdoor enclosed equipment acces-
+sible to unqualified employees: 
+(A) Ventilating or similar openings 
+in equipment shall be so designed that 
+foreign objects inserted through these 
+openings will be deflected from ener-
+gized parts; 
+(B) Where exposed to physical dam-
+age from vehicular traffic, suitable 
+guards shall be provided; 
+(C) Nonmetallic or metal-enclosed 
+equipment located outdoors and acces-
+sible to the general public shall be de-
+signed so that exposed nuts or bolts 
+cannot be readily removed, permitting 
+access to live parts; 
+(D) Where nonmetallic or metal-en-
+closed equipment is accessible to the 
+general public and the bottom of the 
+enclosure is less than 2.44 m (8.0 ft) 
+above the floor or grade level, the en-
+closure door or hinged cover shall be 
+kept locked; and 
+(E) Except for underground box cov-
+ers that weigh over 45.4 kg (100 lb), 
+doors and covers of enclosures used 
+solely as pull boxes, splice boxes, or 
+junction boxes shall be locked, bolted, 
+or screwed on. 
+(3) Work space about equipment. Suffi-
+cient space shall be provided and main-
+tained about electric equipment to per-
+mit ready and safe operation and main-
+tenance of such equipment. Where en-
+ergized parts are exposed, the min-
+imum clear work space may not be less 
+than 1.98 m (6.5 ft) high (measured 
+vertically from the floor or platform) 
+or less than 914 mm (3.0 ft) wide (meas-
+ured parallel to the equipment). The 
+depth shall be as required in paragraph 
+(h)(5)(i) of this section. In all cases, the 
+work space shall be adequate to permit 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00882
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 9 ---
+873 
+Occu. Safety and Health Admin., Labor 
+§ 1910.303 
+at least a 90-degree opening of doors or 
+hinged panels. 
+(4) Entrance and access to work space. 
+(i) At least one entrance not less than 
+610 mm (24 in.) wide and 1.98 m (6.5 ft) 
+high shall be provided to give access to 
+the working space about electric equip-
+ment. 
+(A) On switchboard and control pan-
+els exceeding 1.83 m (6.0 ft) in width, 
+there shall be one entrance at each end 
+of such boards unless the location of 
+the switchboards and control panels 
+permits a continuous and unobstructed 
+way of exit travel, or unless the work 
+space required in paragraph (h)(5)(i) of 
+this section is doubled. 
+(B) Where one entrance to the work-
+ing space is permitted under the condi-
+tions described in paragraph (h)(4)(i)(A) 
+of this section, the entrance shall be 
+located so that the edge of the en-
+trance nearest the switchboards and 
+control panels is at least the minimum 
+clear distance given in Table S–2 away 
+from such equipment. 
+(C) Where bare energized parts at any 
+voltage or insulated energized parts 
+above 600 volts, nominal, to ground are 
+located adjacent to such entrance, they 
+shall be suitably guarded. 
+(ii) Permanent ladders or stairways 
+shall be provided to give safe access to 
+the working space around electric 
+equipment installed on platforms, bal-
+conies, mezzanine floors, or in attic or 
+roof rooms or spaces. 
+(5) Working space and guarding. (i) Ex-
+cept as elsewhere required or permitted 
+in this subpart, the minimum clear 
+working space in the direction of ac-
+cess to live parts of electric equipment 
+may not be less than specified in Table 
+S–2. Distances shall be measured from 
+the live parts, if they are exposed, or 
+from the enclosure front or opening, if 
+they are enclosed. 
+(ii) If switches, cutouts, or other 
+equipment operating at 600 volts, nomi-
+nal, or less, are installed in a room or 
+enclosure where there are exposed live 
+parts or exposed wiring operating at 
+over 600 volts, nominal, the high-volt-
+age equipment shall be effectively sep-
+arated from the space occupied by the 
+low-voltage equipment by a suitable 
+partition, fence, or screen. However, 
+switches or other equipment operating 
+at 600 volts, nominal, or less, and serv-
+ing only equipment within the high- 
+voltage vault, room, or enclosure may 
+be installed in the high-voltage enclo-
+sure, room, or vault if accessible to 
+qualified persons only. 
+(iii) 
+The 
+following 
+requirements 
+apply to the entrances to all buildings, 
+rooms, or enclosures containing ex-
+posed live parts or exposed conductors 
+operating at over 600 volts, nominal: 
+(A) The entrances shall be kept 
+locked unless they are under the obser-
+vation of a qualified person at all 
+times; and 
+(B) 
+Permanent 
+and 
+conspicuous 
+warning signs shall be provided, read-
+ing substantially as follows: 
+‘‘DANGER—HIGH VOLTAGE—KEEP 
+OUT.’’ 
+(iv) Illumination shall be provided 
+for all working spaces about electric 
+equipment. 
+(A) The lighting outlets shall be ar-
+ranged so that persons changing lamps 
+or making repairs on the lighting sys-
+tem will not be endangered by live 
+parts or other equipment. 
+(B) The points of control shall be lo-
+cated so that persons are prevented 
+from contacting any live part or mov-
+ing part of the equipment while turn-
+ing on the lights. 
+(v) Unguarded live parts above work-
+ing space shall be maintained at ele-
+vations not less than specified in Table 
+S–3. 
+(vi) Pipes or ducts that are foreign to 
+the electrical installation and that re-
+quire periodic maintenance or whose 
+malfunction would endanger the oper-
+ation of the electrical system may not 
+be located in the vicinity of service 
+equipment, 
+metal-enclosed 
+power 
+switchgear, or industrial control as-
+semblies. Protection shall be provided 
+where necessary to avoid damage from 
+condensation leaks and breaks in such 
+foreign systems. 
+NOTE TO PARAGRAPH (h)(5)(vi) OF THIS SEC-
+TION: Piping and other facilities are not con-
+sidered foreign if provided for fire protection 
+of the electrical installation. 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00883
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR
+
+
+--- Page 10 ---
+874 
+29 CFR Ch. XVII (7–1–24 Edition) 
+§ 1910.304 
+TABLE S–2—MINIMUM DEPTH OF CLEAR WORKING SPACE AT ELECTRIC EQUIPMENT, OVER 600 V 
+Nominal voltage to ground 
+Minimum clear distance for condition 2 3 
+Condition A 
+Condition B 
+Condition C 
+m 
+ft 
+m 
+ft 
+m 
+ft 
+601–2500 V ...................................................................
+0.9 
+3.0 
+1.2 
+4.0 
+1.5 
+5.0 
+2501–9000 V .................................................................
+1.2 
+4.0 
+1.5 
+5.0 
+1.8 
+6.0 
+9001 V–25 kV ...............................................................
+1.5 
+5.0 
+1.8 
+6.0 
+2.8 
+9.0 
+Over 25–75 kV 1 ............................................................
+1.8 
+6.0 
+2.5 
+8.0 
+3.0 
+10.0 
+Above 75 kV 1 ...............................................................
+2.5 
+8.0 
+3.0 
+10.0 
+3.7 
+12.0 
+Notes to Table S–2: 
+1 Minimum depth of clear working space in front of electric equipment with a nominal voltage to ground above 25,000 volts 
+may be the same as that for 25,000 volts under Conditions A, B, and C for installations built before April 16, 1981. 
+2 Conditions A, B, and C are as follows: 
+Condition A—Exposed live parts on one side and no live or grounded parts on the other side of the working space, or exposed 
+live parts on both sides effectively guarded by suitable wood or other insulating material. Insulated wire or insulated busbars op-
+erating at not over 300 volts are not considered live parts. 
+Condition B—Exposed live parts on one side and grounded parts on the other side. Concrete, brick, and tile walls are consid-
+ered as grounded surfaces. 
+Condition C—Exposed live parts on both sides of the work space (not guarded as provided in Condition A) with the operator 
+between. 
+3 Working space is not required in back of equipment such as dead-front switchboards or control assemblies that has no re-
+newable or adjustable parts (such as fuses or switches) on the back and where all connections are accessible from locations 
+other than the back. Where rear access is required to work on the deenergized parts on the back of enclosed equipment, a min-
+imum working space 762 mm (30 in.) horizontally shall be provided. 
+TABLE S–3—ELEVATION OF UNGUARDED LIVE 
+PARTS ABOVE WORKING SPACE 
+Nominal voltage 
+between phases 
+Elevation 
+m 
+ft 
+601–7500 V ..........
+1 2.8 ......................
+1 9.0. 
+7501 V–35 kV .......
+2.8 ........................
+9.0. 
+Over 35 kV ...........
+2.8 + 9.5 mm/kV 
+over 35 kV.
+9.0 + 0.37 in./kV 
+over 35 kV. 
+1 The minimum elevation may be 2.6 m (8.5 ft) for installa-
+tions built before August 13, 2007. The minimum elevation 
+may be 2.4 m (8.0 ft) for installations built before April 16, 
+1981, if the nominal voltage between phases is in the range 
+of 601–6600 volts. 
+[46 FR 4056, Jan. 16, 1981, as amended at 73 
+FR 64205, Oct. 29, 2008] 
+§ 1910.304
+Wiring design and protec-
+tion. 
+(a) Use and identification of grounded 
+and grounding conductors—(1) Identifica-
+tion of conductors. (i) A conductor used 
+as a grounded conductor shall be iden-
+tifiable and distinguishable from all 
+other conductors. 
+(ii) A conductor used as an equip-
+ment grounding conductor shall be 
+identifiable and distinguishable from 
+all other conductors. 
+(2) Polarity of connections. No ground-
+ed conductor may be attached to any 
+terminal or lead so as to reverse des-
+ignated polarity. 
+(3) Use of grounding terminals and de-
+vices. A grounding terminal or ground-
+ing-type device on a receptacle, cord 
+connector, or attachment plug may not 
+be used for purposes other than ground-
+ing. 
+(b) Branch circuits—(1) Identification 
+of multiwire branch circuits. Where more 
+than one nominal voltage system ex-
+ists in a building containing multiwire 
+branch circuits, each ungrounded con-
+ductor of a multiwire branch circuit, 
+where accessible, shall be identified by 
+phase and system. The means of identi-
+fication shall be permanently posted at 
+each branch-circuit panelboard. 
+(2) Receptacles and cord connectors. (i) 
+Receptacles installed on 15- and 20-am-
+pere branch circuits shall be of the 
+grounding type except as permitted for 
+replacement receptacles in paragraph 
+(b)(2)(iv) of this section. Grounding- 
+type receptacles shall be installed only 
+on circuits of the voltage class and cur-
+rent for which they are rated, except as 
+provided in Table S–4 and Table S–5. 
+(ii) Receptacles and cord connectors 
+having grounding contacts shall have 
+those contacts effectively grounded ex-
+cept for receptacles mounted on port-
+able and vehicle-mounted generators in 
+accordance with paragraph (g)(3) of 
+this section and replacement recep-
+tacles installed in accordance with 
+paragraph (b)(2)(iv) of this section. 
+(iii) The grounding contacts of recep-
+tacles and cord connectors shall be 
+grounded by connection to the equip-
+ment grounding conductor of the cir-
+cuit supplying the receptacle or cord 
+connector. The branch circuit wiring 
+method shall include or provide an 
+equipment 
+grounding 
+conductor 
+to 
+VerDate Sep<11>2014 
+13:59 Dec 16, 2024
+Jkt 262121
+PO 00000
+Frm 00884
+Fmt 8010
+Sfmt 8010
+Y:\SGML\262121.XXX
+262121
+skersey on DSK4WB1RN3PROD with CFR

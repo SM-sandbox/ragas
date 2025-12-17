@@ -1,0 +1,150 @@
+{
+  "doc_id": "southwire_spec45051_2e9726",
+  "doc_type": "datasheet",
+  "doc_title": "CU 600V PVC-Nylon Insulation PVC Jacket THHN/THWN-2. CT Rated - Sunlight Resistant - For Direct Burial - Silicone Free Type TC-ER Control Cable 600 Volt Copper Conductors, Polyvinyl Chloride (PVC) with nylon layer Insulation THHN or TFFN/ TFN Polyvinyl Chloride (PVC) Jacket, Control Cable Conductor Identification Method 1 Table 2. CT Rated - Sunlight Resistant - For Direct Burial - Silicone Free - VW-1 Rated.",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Southwire Company, LLC",
+  "canonical_anchor_phrase": "Southwire Company, LLC Type TC-ER Control Cable Datasheet, 1.000.013 (2025)",
+  "publication": {
+    "revision": "1.000.013",
+    "edition_year": 2025,
+    "publication_date_text": "Dec. 31, 2024, 11:07 p.m.UTC"
+  },
+  "standards": {
+    "standard_body": [
+      "ASTM",
+      "UL",
+      "ICEA",
+      "IEEE",
+      "NEMA",
+      "NEC"
+    ],
+    "standard_ids": [
+      "ASTM B3",
+      "ASTM B8",
+      "UL 66",
+      "UL 83",
+      "UL 1277",
+      "UL 1685",
+      "ICEA S-58-679",
+      "ICEA S-73-532",
+      "ICEA S-95-658",
+      "NEMA WC70",
+      "IEEE 1202 FT4",
+      "NEC Article 501",
+      "NEC Article 502",
+      "NEC 336.10",
+      "NEC Table 310.16",
+      "NEC 240.4(D)",
+      "NEC 310.15",
+      "NEC 110.14(C)"
+    ],
+    "jurisdiction_or_region": [
+      "US"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Control Cable",
+      "Electrical Power Cable",
+      "Fixture Wire",
+      "Thermoplastic Insulated Wires and Cables",
+      "Tray Cables"
+    ],
+    "models": [],
+    "product_names": [
+      "Type TC-ER Control Cable",
+      "CU 600V PVC-Nylon Insulation PVC Jacket THHN/THWN-2"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Cable Construction",
+      "Electrical Properties",
+      "Cable Applications",
+      "Product Specifications",
+      "Conductor Identification",
+      "Ampacity Ratings",
+      "Hazardous Locations",
+      "Fire Propagation Testing",
+      "Direct Burial Cables",
+      "Sunlight Resistance",
+      "Wire Insulation",
+      "Jacket Materials",
+      "Copper Conductors",
+      "Physical Data",
+      "Electrical Data"
+    ],
+    "safety_topics": [
+      "VW-1 Rated",
+      "Fire Propagation",
+      "Hazardous Locations (Class I, II, III, Division 2)",
+      "Emergency Overload",
+      "Short Circuit Conditions"
+    ],
+    "procedural_domains": [
+      "Electrical Installation",
+      "Electrical Design",
+      "Cable Selection"
+    ],
+    "keywords": [
+      "CU",
+      "600V",
+      "PVC",
+      "Nylon Insulation",
+      "THHN",
+      "THWN-2",
+      "CT Rated",
+      "Sunlight Resistant",
+      "Direct Burial",
+      "Silicone Free",
+      "Type TC-ER",
+      "Control Cable",
+      "Copper Conductors",
+      "TFFN",
+      "TFN",
+      "VW-1 Rated",
+      "ASTM B3",
+      "ASTM B8",
+      "UL 66",
+      "UL 83",
+      "UL 1277",
+      "UL 1685",
+      "ICEA S-58-679",
+      "ICEA S-73-532",
+      "ICEA S-95-658",
+      "NEMA WC70",
+      "IEEE 1202 FT4",
+      "NEC",
+      "Conductor",
+      "Insulation",
+      "Jacket",
+      "Applications",
+      "Specifications",
+      "Ampacity",
+      "AWG",
+      "Resistance",
+      "Bending Radius",
+      "Hazardous Locations",
+      "Tray Cables",
+      "Electrical Properties"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "models",
+      "toc_outline"
+    ],
+    "ambiguities": [
+      "The document title is a long descriptive paragraph rather than a concise title."
+    ]
+  },
+  "source": {
+    "filename": "SOUTHWIRE_SPEC45051.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/SOUTHWIRE_SPEC45051.pdf",
+    "page_range_used": "1-5"
+  }
+}

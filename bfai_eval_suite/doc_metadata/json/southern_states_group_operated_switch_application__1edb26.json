@@ -1,0 +1,150 @@
+{
+  "doc_id": "southern_states_group_operated_switch_application__1edb26",
+  "doc_type": "manufacturer_manual",
+  "doc_title": "Group Operated Switch Application Guide",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Southern States, LLC",
+  "canonical_anchor_phrase": "Southern States Group Operated Switches Application Guide, R5 (2024)",
+  "publication": {
+    "revision": "R5",
+    "edition_year": 2024,
+    "publication_date_text": "March 2024"
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": [
+      "USA"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Disconnect Switches",
+      "Group Operated Switches",
+      "Switch Interrupter Attachments",
+      "Ground Switches",
+      "Operators"
+    ],
+    "models": [
+      "LH-6",
+      "EVG-1",
+      "EVG-2",
+      "ESD-63",
+      "TV-70",
+      "HOGO",
+      "VM-1",
+      "VM-1 SE",
+      "CM-4AE",
+      "SSB-T",
+      "SSB-L",
+      "SSB-A",
+      "CBL-T",
+      "EV",
+      "EV-2",
+      "EV-H",
+      "EVB",
+      "TA-OC",
+      "ECB-T",
+      "EV-2H",
+      "CVB-2",
+      "EC-1",
+      "EC-2",
+      "P",
+      "RDA-1",
+      "ES-1",
+      "EC-1V",
+      "EC-2V",
+      "RDA-1V",
+      "WAG-A",
+      "RDA"
+    ],
+    "product_names": [
+      "LLS\u00ae LOAD AND LINE SWITCHER FAMILY",
+      "LLS\u00ae-I",
+      "LLS\u00ae-II 2000",
+      "LLS\u00ae-II 3000",
+      "LBI\u2122",
+      "Standard Arcing Horn",
+      "Quick Break Whip",
+      "High Speed Whip (HSW)"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Group Operated Switches",
+      "Disconnect Switches",
+      "Switch Configurations",
+      "Application Chart",
+      "Ground Switches",
+      "Operators",
+      "Switch Interrupter Attachments",
+      "LLS Load and Line Switcher Family",
+      "Load Breaking Capability",
+      "Line Dropping Capability",
+      "Loop Splitting Capability",
+      "Voltage Ratings",
+      "Current Ratings",
+      "Insulators",
+      "Phase Spacing"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [],
+    "keywords": [
+      "Group Operated Switches",
+      "Disconnect Switches",
+      "Vertical Break",
+      "Center Break",
+      "Double End Break",
+      "Single Side Break",
+      "Max Voltage",
+      "BIL",
+      "Phase Spacing",
+      "Insulators",
+      "Ground Switches",
+      "Operators",
+      "HOGO",
+      "Motor Operators",
+      "Switch Interrupters",
+      "LLS",
+      "LBI",
+      "Load Breaking",
+      "Line Dropping",
+      "Loop Splitting",
+      "Arcing Horn",
+      "Quick Break Whip",
+      "High Speed Whip",
+      "Current Ratings",
+      "Momentary Current Rating",
+      "Continuous Current Ratings",
+      "Aluminum live part construction",
+      "Copper live part construction",
+      "Application Guide",
+      "Switch Selection"
+    ],
+    "toc_outline": [
+      "Group Operated Switch Application Guide",
+      "Application Chart",
+      "Available Ground Switches",
+      "Available Operators",
+      "Switch Interrupter Attachments",
+      "LLS Load and Line Switcher Family Overview",
+      "Switch Interrupter Selection Chart"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "standards.standard_body",
+      "standards.standard_ids",
+      "topics.safety_topics",
+      "topics.procedural_domains"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Southern States Group Operated Switch Application Guide.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Southern States Group Operated Switch Application Guide.pdf",
+    "page_range_used": "1-4"
+  }
+}

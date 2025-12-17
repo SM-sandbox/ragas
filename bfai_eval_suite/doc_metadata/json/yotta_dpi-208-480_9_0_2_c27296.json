@@ -1,0 +1,147 @@
+{
+  "doc_id": "yotta_dpi-208-480_9_0_2_c27296",
+  "doc_type": "datasheet",
+  "doc_title": "3-Phase Microinverters DPI-208/480",
+  "subtitle": null,
+  "publisher_or_manufacturer": "YOTTA Energy Inc.",
+  "canonical_anchor_phrase": "YOTTA Energy Inc. DPI-208/480 Datasheet, Ver. 10.0 (2025)",
+  "publication": {
+    "revision": "Ver. 10.0",
+    "edition_year": 2025,
+    "publication_date_text": "February 2025"
+  },
+  "standards": {
+    "standard_body": [
+      "UL",
+      "CSA",
+      "HECO",
+      "FCC",
+      "ANSI",
+      "IEEE",
+      "NEC"
+    ],
+    "standard_ids": [
+      "UL-1741",
+      "CA Rule 21",
+      "UL 1741 SA",
+      "UL 1741 SB",
+      "CSA C22.2 No. 107.1-16",
+      "HECO RULE 14H",
+      "HECO RULE 22",
+      "FCC Part 15",
+      "ANSI C63.4",
+      "ICES-003",
+      "IEEE1547",
+      "NEC2014 Section 690.11",
+      "NEC2017 Section 690.11",
+      "NEC2014 Section 690.12",
+      "NEC2017 Section 690.12",
+      "NEC2020 Section 690.12"
+    ],
+    "jurisdiction_or_region": [
+      "US",
+      "Canada",
+      "California",
+      "Hawaii"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Dual Power Inverter",
+      "Microinverter"
+    ],
+    "models": [
+      "DPI-208",
+      "DPI-480"
+    ],
+    "product_names": [
+      "DPI",
+      "YOTTA BLOCK"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Dual Power Inverter (DPI)",
+      "3-Phase Microinverters",
+      "Solar Module Input",
+      "AC Output Power",
+      "Rapid Shutdown Compliance",
+      "Adjustable Power Factor",
+      "YOTTA VISION Monitoring",
+      "Electrical Specifications",
+      "Efficiency Ratings",
+      "Mechanical Data",
+      "Certifications and Compliance",
+      "Energy Storage System Integration",
+      "Thermal Management",
+      "Grid Connections",
+      "Safety Features"
+    ],
+    "safety_topics": [
+      "Rapid Shutdown",
+      "Safety Protection Relay",
+      "DC Arc-Fault circuit protection"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Monitoring",
+      "Troubleshooting"
+    ],
+    "keywords": [
+      "DPI",
+      "YOTTA BLOCK",
+      "PV",
+      "3-phase",
+      "208V",
+      "480V",
+      "DC input",
+      "MPPT",
+      "AC output",
+      "Rapid Shutdown",
+      "Power Factor",
+      "YOTTA VISION",
+      "Microinverter",
+      "High-capacity solar modules",
+      "Safety Protection Relay",
+      "Silicone protection",
+      "Heat dissipation",
+      "MLPE",
+      "Remote Access",
+      "Peak Power Tracking",
+      "Operating Voltage Range",
+      "Maximum Input Current",
+      "Continuous Output Power",
+      "Nominal Output Voltage",
+      "Nominal Output Frequency",
+      "CEC Efficiency",
+      "MPPT Efficiency",
+      "Operating Ambient Temperature",
+      "DC Connector Type",
+      "Natural Convection",
+      "Enclosure Environmental Rating",
+      "ZigBee Communication",
+      "Galvanically Isolated",
+      "Yotta EMA",
+      "UL-1741",
+      "CSA C22.2 No. 107.1-16",
+      "IEEE1547",
+      "NEC2014",
+      "NEC2017",
+      "NEC2020"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Yotta DPI-208-480_9.0+(2).pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Yotta DPI-208-480_9.0+(2).pdf",
+    "page_range_used": "1-2"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "doc_id": "powerlogic_ion_8600_verifying_ion8600_accuracy_032_008492",
+  "doc_type": "other",
+  "doc_title": "Verifying ION8600 Meter Accuracy",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Schneider Electric",
+  "canonical_anchor_phrase": "Schneider Electric ION8600 Technical Note, 70072-0119-06 (2008)",
+  "publication": {
+    "revision": "70072-0119-06",
+    "edition_year": 2008,
+    "publication_date_text": "03/2008"
+  },
+  "standards": {
+    "standard_body": [
+      "IEC (International Electrotechnical Commission)",
+      "ANSI (American National Standards Institute)",
+      "IEC",
+      "ANSI"
+    ],
+    "standard_ids": [
+      "IEC 62053-22 5A 0.2S",
+      "IEC 60687 5A 0.2S",
+      "ANSI C12.20 current class 20 accuracy class 0.2",
+      "IEC 62053-22 1A 0.2S",
+      "IEC 60687 1A 0.2S",
+      "ANSI C12.20 current class 2 and 10 accuracy class 0.2"
+    ],
+    "jurisdiction_or_region": [
+      "International",
+      "United States"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "PowerLogic ION meters"
+    ],
+    "models": [
+      "ION8600",
+      "9S",
+      "39S",
+      "5S",
+      "35S"
+    ],
+    "product_names": [
+      "PowerLogic",
+      "ION",
+      "ION Enterprise",
+      "MeterM@il",
+      "WebMeter",
+      "Modbus"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Meter Accuracy Verification",
+      "ION8600 Meter Testing",
+      "Accuracy Standards Compliance",
+      "Test Procedures and Configurations",
+      "Digital Meter Operation",
+      "Test Equipment Requirements",
+      "Grounding and Safety",
+      "Error Sources in Testing",
+      "LED Pulser Settings",
+      "Energy Measurement (kWh, kVARh)",
+      "Power Factor Testing",
+      "Warm-up Time for Meters",
+      "Instrument Transformer Compensation",
+      "Revenue Metering",
+      "Test Mode Functionality",
+      "Reference Meter Usage",
+      "Current Input Options",
+      "Voltage and Current Sources",
+      "Optical Sensor Operation",
+      "Software Configuration (ION Setup, Designer)"
+    ],
+    "safety_topics": [
+      "Hazardous voltages",
+      "Qualified personnel",
+      "Safety ground",
+      "Electric shock"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Operation",
+      "Servicing",
+      "Maintenance",
+      "Testing",
+      "Verification"
+    ],
+    "keywords": [
+      "ION8600",
+      "Meter accuracy",
+      "Verification",
+      "Digital meter",
+      "Revenue meter",
+      "Accuracy standards",
+      "IEC 62053-22",
+      "ANSI C12.20",
+      "Test procedure",
+      "Test mode",
+      "Test configuration",
+      "Single-phase",
+      "Three-phase",
+      "Test errors",
+      "Grounding",
+      "Reference meter",
+      "Energy standard",
+      "Power source",
+      "Test loads",
+      "Optical sensor",
+      "LED pulser",
+      "Pulse rate",
+      "Watt-hour",
+      "VAR-hour",
+      "kWh",
+      "kVARh",
+      "Power factor",
+      "Test socket",
+      "Warm-up time",
+      "Instrument Transformer Compensation (ITC)",
+      "ION Setup",
+      "Schneider Electric",
+      "Hazardous voltages",
+      "Safety ground",
+      "Test points",
+      "Energy error calculation",
+      "Pulse constant (kT)",
+      "Ambient temperature",
+      "Current input",
+      "Voltage input"
+    ],
+    "toc_outline": [
+      "Introduction",
+      "Accuracy Standards and Current Ranges",
+      "Testing Overview",
+      "Using TEST Mode",
+      "Test Procedure",
+      "Single-Phase Test Configuration - 9S, 39S meters - Example",
+      "Three-Phase Test Configuration - 9S, 39S meters - Example",
+      "Three-Phase Test Configuration - 5S, 35S meters - Example",
+      "Typical Sources of Test Errors",
+      "Test Settings",
+      "LED pulser settings",
+      "Test Points",
+      "Additional Information",
+      "ION8600 Installation Guide",
+      "ION8600 User Guide",
+      "ION Reference"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "PowerLogic ION 8600 Verifying ION8600 Accuracy 032008.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/PowerLogic ION 8600 Verifying ION8600 Accuracy 032008.pdf",
+    "page_range_used": "1-10"
+  }
+}

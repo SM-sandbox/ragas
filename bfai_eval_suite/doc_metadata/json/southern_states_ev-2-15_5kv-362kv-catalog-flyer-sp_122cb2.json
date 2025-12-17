@@ -1,0 +1,100 @@
+{
+  "doc_id": "southern_states_ev-2-15_5kv-362kv-catalog-flyer-sp_122cb2",
+  "doc_type": "datasheet",
+  "doc_title": "EV-2 Switch de Aluminio Desconectador de Apertura Vertical",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Southern States, LLC",
+  "canonical_anchor_phrase": "Southern States EV-2 Switch de Aluminio Desconectador de Apertura Vertical Datasheet, R3 (2022)",
+  "publication": {
+    "revision": "R3",
+    "edition_year": 2022,
+    "publication_date_text": "May 2022"
+  },
+  "standards": {
+    "standard_body": [
+      "ANSI"
+    ],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Switch de Aluminio Desconectador de Apertura Vertical",
+      "Switches Desconectadores",
+      "Switches Operados en Grupo"
+    ],
+    "models": [
+      "EV-2"
+    ],
+    "product_names": [
+      "Switch de Aluminio Desconectador de Apertura Vertical"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Switching de Alto Voltaje",
+      "Desconectadores de Apertura Vertical",
+      "Aplicaciones de Switches Desconectadores",
+      "Instalaci\u00f3n de Switches",
+      "Especificaciones El\u00e9ctricas",
+      "Caracter\u00edsticas de Dise\u00f1o",
+      "Clasificaci\u00f3n de Voltaje",
+      "Corriente Continua",
+      "Rendimiento en Corto Circuito",
+      "Dise\u00f1o Robusto"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [
+      "Instalaci\u00f3n",
+      "Ajuste"
+    ],
+    "keywords": [
+      "EV-2",
+      "Switch de Aluminio",
+      "Desconectador de Apertura Vertical",
+      "Alto Voltaje",
+      "Switching",
+      "Conmutaci\u00f3n",
+      "Aislamiento",
+      "Seccionalizamiento",
+      "Bypass",
+      "ANSI",
+      "Rompecargas",
+      "Instalaci\u00f3n",
+      "Mantenimiento",
+      "Terminales",
+      "Aisladores",
+      "Trif\u00e1sica",
+      "Montaje",
+      "Contactos de mordazas",
+      "Bisagra roscada",
+      "Extrusi\u00f3n de aluminio",
+      "Cojinetes de rodillos",
+      "Doble canal",
+      "Grado marino",
+      "Clasificaci\u00f3n de Voltaje M\u00e1ximo",
+      "NBAI",
+      "Frecuencia de operaci\u00f3n",
+      "Corriente Continua",
+      "Aguante sim\u00e9trico en corto tiempo",
+      "Aguante Pico",
+      "Southern States"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "topics.toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Southern States EV-2-15.5kV-362kV-Catalog-Flyer-Spanish.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Southern States EV-2-15.5kV-362kV-Catalog-Flyer-Spanish.pdf",
+    "page_range_used": "1-2"
+  }
+}
