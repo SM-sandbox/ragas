@@ -1,3 +1,0 @@
-doc_id,filename,status,confidence,missing_fields_count,models_found_count,standard_ids_count,output_json_path,error_message
-1-so50016-boyne-mountain-resort_sld_0_12c_add-on_s_0f1b33,"1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC.pdf",skipped,,0,0,0,,
-3_phase_2000kva_transformer_manual_8ab9e4,"3 Phase 2000kVa Transformer Manual.pdf",success,high,6,0,10,doc_metadata/json/3_phase_2000kva_transformer_manual_8ab9e4.json,

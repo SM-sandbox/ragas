@@ -1,1 +1,0 @@
-"""BFAI Eval Suite Tests."""

@@ -1,0 +1,365 @@
+[
+  {
+    "question_id": "q_0009",
+    "question": "What is the maximum efficiency of the BDM-1200-LV/BDM-1600-LV Micro Inverter?",
+    "ground_truth": "99.9%",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0025",
+    "question": "What is the Siemens product number for a 125A TMTU circuit breaker with an amperage of 125A and a 25KAIC @ 480V rating?",
+    "ground_truth": "The Siemens product number is 3VA5112-4EC31-0AA0.",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0085",
+    "question": "For what specific application is the Mechanical Interlock designed, as listed under the 'COMMON OPERATING MECHANISM PARTS'?",
+    "ground_truth": "The Mechanical Interlock is designed for use with main/ground applications.",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 1,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0110",
+    "question": "For the Southwire Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable with Stock Number 662507, which is a 12 AWG cable with 12 conductors, what is its allowable ampacity for continuous operation at 90\u00b0C, and which NEC table and edition are these ampacities based upon?",
+    "ground_truth": "The allowable ampacity for continuous operation at 90\u00b0C for Stock Number 662507 (12 AWG, 12 conductors) is 15 Amp. These ampacities are based on Table 310.15 (B)(16) of the NEC, 2017 Edition.",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0136",
+    "question": "What hazardous condition was observed at a solar array involving a panel junction box, and what two immediate safety measures were implemented?",
+    "ground_truth": "An open panel junction box with exposed wiring was observed. The two immediate safety measures implemented were stopping work in the affected row and taping off the area.",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0141",
+    "question": "What two specific metrics related to the wireless performance of a DiGi WR21/31 modem are covered in the 'Signal Strength/Quality' section?",
+    "ground_truth": "Signal Strength and Signal Quality",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0163",
+    "question": "When making electrical connections during the installation of a Meta Power Solutions switchboard, where in this manual can a technician find the necessary torque specifications?",
+    "ground_truth": "A technician can find the necessary torque specifications by referring to Section 9.0 of this manual.",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0238",
+    "question": "Considering the PVI-6000-TL-OUTD inverter operating on a 277V AC grid, what is the maximum continuous AC power output it can deliver at a power factor of 0.995, and what is the corresponding maximum AC Overcurrent Protection Device (OCPD) rating required for this connection?",
+    "ground_truth": "The maximum continuous AC power output is approximately 6605.16W (277V * 24A * 0.995). The corresponding maximum AC OCPD rating required for this connection is 30A.",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "judgment": {
+      "correctness": 2,
+      "completeness": 1,
+      "faithfulness": 4,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "partial"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0247",
+    "question": "According to the 'Standard Testing' section, what is the primary purpose of an 'Audible Sound-Level Test' as per NEMA Standards, and how might its results influence the placement or application of a Three-Phase Pad-Mount Transformer in different environments?",
+    "ground_truth": "The primary purpose of an 'Audible Sound-Level Test' is to measure the noise emitted by the transformer during operation, ensuring it complies with NEMA Standards (as indicated by the 'Audible Sound L",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 1,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0263",
+    "question": "What is the maximum continuous current rating for an EV-2 Vertical Break switch when rated for 145 kV, and what is its corresponding BIL rating?",
+    "ground_truth": "According to the 'Group Operated Switch Application Guide' (Doc 1), the EV-2 model is listed for Vertical Break configurations at 145 kV up to a 3000A current rating. The 'EV-2 Aluminum Vertical Disco",
+    "source_files": [
+      "Southern States Group Operated Switch Application Guide.pdf",
+      "Southern States EV-2-15.5kV-362kV-Catalog-Flyer.pdf"
+    ],
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "judgment": {
+      "correctness": 2,
+      "completeness": 1,
+      "faithfulness": 2,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0318",
+    "question": "What are the primary equipment families for the PVI-CENTRAL-250-US inverter and the SCH125KTL-DO/US-600 inverter?",
+    "ground_truth": "The PVI-CENTRAL-250-US inverter belongs to the 'Central Inverter' equipment family, while the SCH125KTL-DO/US-600 inverter belongs to the '3-Phase String Inverters' equipment family.",
+    "source_files": [
+      "Manual-PVI-Central-250-300.pdf",
+      "CPS 125kW Manual.pdf"
+    ],
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 1,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 0.1111111111111111
+  },
+  {
+    "question_id": "q_0324",
+    "question": "The UL 489 standard mentions 'Calibration Tests' as a type of testing for circuit breakers. What specific characteristic is noted regarding the trip units in Siemens 3VA Enclosed Circuit Breakers?",
+    "ground_truth": "The UL 489 standard includes 'Calibration Tests' for circuit breakers, which apply to their trip units. For Siemens 3VA Enclosed Circuit Breakers, a specific characteristic of their trip units is that",
+    "source_files": [
+      "UL_s0489_13.pdf",
+      "Siemens Reference Guide_3VA_EnclosedCirBreaker.pdf"
+    ],
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 1,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 0.5
+  },
+  {
+    "question_id": "q_0345",
+    "question": "Considering a Southern States EV-2 Aluminum Vertical Disconnect Switch is deployed in a 362 kV system, what is the required phase spacing and recommended insulator type if the application demands a 2000A continuous current and a BIL of 1050 kV?",
+    "ground_truth": "For a Southern States EV-2 Aluminum Vertical Disconnect Switch operating at 362 kV, Document 1 confirms it can support continuous currents up to 2000A and lists a BIL rating of 1050 kV. According to t",
+    "source_files": [
+      "Southern States EV-2-15.5kV-362kV-Catalog-Flyer.pdf",
+      "Southern States Group Operated Switch Application Guide.pdf"
+    ],
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 0.14285714285714285
+  },
+  {
+    "question_id": "q_0353",
+    "question": "Siemens introduces new 3-pole GFCI circuit breakers in their SPEEDFAX\u2122 catalog. Which safety standard, as identified by Siemens, governs the requirements for these Ground-fault Circuit Interrupters, and what is its most recent revision date mentioned in the standard document itself?",
+    "ground_truth": "According to the Siemens SPEEDFAX\u2122 catalog, their products, including the new 3-pole GFCI circuit breakers, adhere to UL 489. The UL 489 standard document explicitly covers \"Ground-fault Circuit Inter",
+    "source_files": [
+      "Siemens MCCB-17-Sect-07-ALL-web.pdf",
+      "UL_s0489_13.pdf"
+    ],
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 3,
+      "faithfulness": 4,
+      "relevance": 4,
+      "clarity": 4,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 0.3333333333333333
+  },
+  {
+    "question_id": "q_0457",
+    "question": "An industrial solar project is planned for a region experiencing extreme ambient temperatures, occasionally reaching 65\u00b0C, requiring maximum PV power harvesting. Evaluate which microinverter, the Yotta DPI-480 or the NEP BDM-2000, is better suited for maintaining optimal performance under these conditions, considering their cooling mechanisms, maximum input current limits, and any explicit warnings regarding thermal limitations or power derating. Assume a 4-module configuration for both.",
+    "ground_truth": "Both the Yotta DPI-480 and NEP BDM-2000 microinverters have the same maximum operating ambient temperature range of up to +65\u00b0C. The Yotta DPI-480 uses \"Natural Convection - No Fans\" for cooling and h",
+    "source_files": [
+      "Yotta DPI-208-480_9.0+(2).pdf",
+      "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf"
+    ],
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 4,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 0.5
+  },
+  {
+    "question_id": "q_0488",
+    "question": "An industrial facility requires a 480V, 3-phase circuit to be protected for a 100A continuous load, with an expected fault current of 65kA. This protection must utilize a Siemens 3VA TMTU circuit breaker. For the cabling, the facility specifies a 3-conductor Southwire Type TC-ER power cable that is a standard stock item, features a green insulated ground, and has a main conductor size of 1/0 AWG.\n1. Identify the complete Siemens 3VA circuit breaker part number for this application.\n2. What is the stock number and the size of the green insulated ground conductor for the specified Southwire cable?",
+    "ground_truth": "1. Based on the Siemens 3VA Enclosed Circuit Breaker Quick Reference, for a 100A, 3P, 65KAIC @ 480V TMTU breaker, the complete part number is 3VA5110-6EC31-0AA0.\n2. According to the Southwire Type TC-",
+    "source_files": [
+      "Siemens Reference Guide_3VA_EnclosedCirBreaker.pdf",
+      "SOUTHWIRE_SPEC45252.pdf"
+    ],
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0501",
+    "question": "This document does not contain any readable information to formulate a question about SCADA/solar/electrical equipment specifications, safety limits, troubleshooting, or configuration. The content is heavily garbled with (cid:...) characters, making it impossible to extract meaningful text beyond metadata like project name, date, and quotation number, which are explicitly excluded by the requirements.",
+    "ground_truth": "N/A - The document content is unreadable due to garbled characters.",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "relevance": 1,
+      "clarity": 5,
+      "overall_score": 1,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  },
+  {
+    "question_id": "q_0511",
+    "question": "What is the maximum DC voltage rating for the High-Voltage Bonding Cable?",
+    "ground_truth": "1000V DC",
+    "source_files": [],
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "recall_hit": true,
+    "mrr": 1.0
+  }
+]

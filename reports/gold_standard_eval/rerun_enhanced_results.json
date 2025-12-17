@@ -1,0 +1,434 @@
+[
+  {
+    "question_id": "q_0009",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "answer_length": 531,
+    "timing": {
+      "retrieval": 0.65,
+      "reranking": 2.67,
+      "generation": 13.23,
+      "judge": 16.1,
+      "total": 32.65
+    }
+  },
+  {
+    "question_id": "q_0025",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 1169,
+    "timing": {
+      "retrieval": 0.38,
+      "reranking": 0.41,
+      "generation": 23.01,
+      "judge": 31.09,
+      "total": 54.89
+    }
+  },
+  {
+    "question_id": "q_0085",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "answer_length": 983,
+    "timing": {
+      "retrieval": 0.38,
+      "reranking": 0.33,
+      "generation": 14.3,
+      "judge": 22.16,
+      "total": 37.16
+    }
+  },
+  {
+    "question_id": "q_0110",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 1,
+      "completeness": 4,
+      "faithfulness": 2,
+      "relevance": 5,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 1474,
+    "timing": {
+      "retrieval": 0.24,
+      "reranking": 0.32,
+      "generation": 17.36,
+      "judge": 26.72,
+      "total": 44.64
+    }
+  },
+  {
+    "question_id": "q_0136",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "answer_length": 548,
+    "timing": {
+      "retrieval": 0.4,
+      "reranking": 0.42,
+      "generation": 14.34,
+      "judge": 15.17,
+      "total": 30.33
+    }
+  },
+  {
+    "question_id": "q_0141",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 655,
+    "timing": {
+      "retrieval": 0.25,
+      "reranking": 0.35,
+      "generation": 14.54,
+      "judge": 18.17,
+      "total": 33.31
+    }
+  },
+  {
+    "question_id": "q_0163",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "answer_length": 3555,
+    "timing": {
+      "retrieval": 0.36,
+      "reranking": 0.34,
+      "generation": 24.2,
+      "judge": 26.84,
+      "total": 51.74
+    }
+  },
+  {
+    "question_id": "q_0238",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "answer_length": 1253,
+    "timing": {
+      "retrieval": 0.44,
+      "reranking": 0.28,
+      "generation": 17.98,
+      "judge": 23.1,
+      "total": 41.8
+    }
+  },
+  {
+    "question_id": "q_0247",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 1637,
+    "timing": {
+      "retrieval": 0.29,
+      "reranking": 0.4,
+      "generation": 21.36,
+      "judge": 20.96,
+      "total": 43.01
+    }
+  },
+  {
+    "question_id": "q_0263",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 0.14285714285714285,
+    "judgment": {
+      "correctness": 2,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "answer_length": 883,
+    "timing": {
+      "retrieval": 0.28,
+      "reranking": 0.29,
+      "generation": 13.75,
+      "judge": 21.0,
+      "total": 35.33
+    }
+  },
+  {
+    "question_id": "q_0318",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 3026,
+    "timing": {
+      "retrieval": 0.23,
+      "reranking": 0.26,
+      "generation": 21.43,
+      "judge": 23.44,
+      "total": 45.37
+    }
+  },
+  {
+    "question_id": "q_0324",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 1705,
+    "timing": {
+      "retrieval": 0.29,
+      "reranking": 0.34,
+      "generation": 17.08,
+      "judge": 27.95,
+      "total": 45.67
+    }
+  },
+  {
+    "question_id": "q_0345",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 0.08333333333333333,
+    "judgment": {
+      "correctness": 2,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 1372,
+    "timing": {
+      "retrieval": 0.39,
+      "reranking": 0.32,
+      "generation": 16.19,
+      "judge": 18.6,
+      "total": 35.5
+    }
+  },
+  {
+    "question_id": "q_0353",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "answer_length": 1544,
+    "timing": {
+      "retrieval": 0.33,
+      "reranking": 0.34,
+      "generation": 27.77,
+      "judge": 22.69,
+      "total": 51.13
+    }
+  },
+  {
+    "question_id": "q_0457",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 0.25,
+    "judgment": {
+      "correctness": 1,
+      "completeness": 3,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 3580,
+    "timing": {
+      "retrieval": 0.34,
+      "reranking": 0.34,
+      "generation": 22.37,
+      "judge": 28.75,
+      "total": 51.8
+    }
+  },
+  {
+    "question_id": "q_0488",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 2,
+      "completeness": 2,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "answer_length": 2249,
+    "timing": {
+      "retrieval": 0.27,
+      "reranking": 0.38,
+      "generation": 26.71,
+      "judge": 20.24,
+      "total": 47.6
+    }
+  },
+  {
+    "question_id": "q_0501",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "answer_length": 5931,
+    "timing": {
+      "retrieval": 0.28,
+      "reranking": 0.42,
+      "generation": 36.41,
+      "judge": 20.78,
+      "total": 57.89
+    }
+  },
+  {
+    "question_id": "q_0511",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": false,
+    "mrr": 0.0,
+    "judgment": {
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "relevance": 2,
+      "clarity": 5,
+      "overall_score": 2,
+      "verdict": "fail"
+    },
+    "answer_length": 1028,
+    "timing": {
+      "retrieval": 0.31,
+      "reranking": 0.34,
+      "generation": 15.33,
+      "judge": 11.72,
+      "total": 27.7
+    }
+  }
+]

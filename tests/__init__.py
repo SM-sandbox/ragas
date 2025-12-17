@@ -1,1 +1,1 @@
-# Tests package
+"""BFAI Eval Suite Tests."""
