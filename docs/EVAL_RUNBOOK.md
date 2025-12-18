@@ -1,8 +1,11 @@
 # RAG Evaluation Runbook
 
-**Version:** 1.0  
-**Last Updated:** December 17, 2025  
+**Version:** 1.1  
+**Last Updated:** December 18, 2025  
 **Purpose:** Comprehensive guide for running RAG evaluation experiments with complete data capture.
+
+> **Note:** For the quick-start runbook and interactive CLI, see `docs/EVAL_SYSTEM.md` Appendix D.  
+> This document provides detailed reference material (score definitions, failure archetypes, GCS management).
 
 ---
 
@@ -645,15 +648,42 @@ When evaluations fail (score 1-2), classify failures into these archetypes for r
 
 ## Appendix C: Quick Reference Commands
 
+### Using eval_runner.py (Recommended)
+
+```bash
+# Interactive mode - shows defaults, lets you change
+python scripts/eval/eval_runner.py
+
+# Run with defaults (no prompts)
+python scripts/eval/eval_runner.py --run
+
+# Quick test (10 questions)
+python scripts/eval/eval_runner.py --quick 10
+
+# Dry run - see config without running
+python scripts/eval/eval_runner.py --dry-run
+
+# Different model
+python scripts/eval/eval_runner.py --quick 10 --model gemini-3-flash-preview
+
+# Save as new baseline
+python scripts/eval/eval_runner.py --run --update-baseline
+
+# Cloud mode
+python scripts/eval/eval_runner.py --cloud --endpoint https://your-cloud-run.app --quick 10
+```
+
+### Using run_gold_eval.py (Direct)
+
 ```bash
 # Pre-flight check
 python scripts/preflight_check.py
 
 # Test run (30 questions)
-python scripts/run_gold_eval.py --test --precision 25
+python scripts/eval/run_gold_eval.py --test --precision 25
 
 # Full run (background)
-nohup python scripts/run_gold_eval.py --precision 25 > logs/run.log 2>&1 &
+nohup python scripts/eval/run_gold_eval.py --precision 25 > logs/run.log 2>&1 &
 
 # Monitor progress
 cat reports/gold_standard_eval/checkpoint_p25.json | python3 -c "import sys,json; d=json.load(sys.stdin); print(f'{len(d)} done')"

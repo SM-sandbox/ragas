@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-18T01:05:18.360125",
+    "generator_model": "gemini-2.5-flash",
+    "thinking_level": null,
+    "judge_model": "gemini-3-flash-preview",
+    "judge_thinking": "LOW",
+    "precision_k": 25,
+    "questions": 2,
+    "workers": 2
+  },
+  "timing": {
+    "total_seconds": 22.588516235351562,
+    "throughput_per_min": 0,
+    "avg_retrieval": 0,
+    "avg_reranking": 0,
+    "avg_generation": 0,
+    "avg_judge": 0
+  },
+  "retrieval": {
+    "recall_at_100": 0.0,
+    "mrr": 0
+  },
+  "summary": {
+    "successful": 0,
+    "failed": 2,
+    "pass_rate": 0.0,
+    "acceptable_rate": 0.0,
+    "verdicts": {},
+    "scores": {}
+  },
+  "tokens": {
+    "gen_input": 0,
+    "gen_output": 0,
+    "gen_thinking": 0,
+    "judge_input": 0,
+    "judge_output": 0,
+    "judge_thinking": 0,
+    "total_input": 0,
+    "total_output": 0,
+    "total_thinking": 0
+  },
+  "cost": {
+    "input": 0.0,
+    "output": 0.0,
+    "thinking": 0.0,
+    "total": 0.0
+  },
+  "results": [
+    {
+      "question_id": "sh_easy_001",
+      "question": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "expected_source": "",
+      "ground_truth": "failure, preventive stock",
+      "recall_at_100": true,
+      "first_relevant_rank": 1,
+      "mrr": 1.0,
+      "answer": "",
+      "answer_length": 0,
+      "judgment": {},
+      "retrieval_time": 1.0189340114593506,
+      "reranking_time": 1.3968818187713623,
+      "generation_time": 0.0,
+      "judge_time": 0.0,
+      "total_time": 22.24703097343445,
+      "gen_input_tokens": 0,
+      "gen_output_tokens": 0,
+      "gen_thinking_tokens": 0,
+      "judge_input_tokens": 0,
+      "judge_output_tokens": 0,
+      "judge_thinking_tokens": 0,
+      "success": false,
+      "error": "All regions exhausted. Last error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+    },
+    {
+      "question_id": "sh_easy_002",
+      "question": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "expected_source": "",
+      "ground_truth": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+      "recall_at_100": true,
+      "first_relevant_rank": 1,
+      "mrr": 1.0,
+      "answer": "",
+      "answer_length": 0,
+      "judgment": {},
+      "retrieval_time": 1.0240497589111328,
+      "reranking_time": 1.4363961219787598,
+      "generation_time": 0.0,
+      "judge_time": 0.0,
+      "total_time": 22.58744502067566,
+      "gen_input_tokens": 0,
+      "gen_output_tokens": 0,
+      "gen_thinking_tokens": 0,
+      "judge_input_tokens": 0,
+      "judge_output_tokens": 0,
+      "judge_thinking_tokens": 0,
+      "success": false,
+      "error": "All regions exhausted. Last error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}"
+    }
+  ]
+}

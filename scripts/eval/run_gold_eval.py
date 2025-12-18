@@ -24,7 +24,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
-sys.path.insert(0, "/Users/scottmacon/Documents/GitHub/sm-dev-01")
+sys.path.insert(0, "/Users/scottmacon/Documents/GitHub/gRAG_v3")
 
 from libs.core.gcp_config import get_jobs_config, PROJECT_ID, LOCATION
 from services.api.retrieval.vector_search import VectorSearchRetriever
@@ -41,6 +41,10 @@ CORPUS_PATH = Path(__file__).parent.parent.parent / "clients" / "BFAI" / "qa" / 
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "gold_standard_eval"
 CHECKPOINT_INTERVAL = 10
 DEFAULT_WORKERS = 5  # Safe for 60 RPM quota, increase to 15-25 with 1500 RPM
+
+# Retry config - no fallback, just retry
+MAX_RETRIES = 5
+RETRY_DELAY_BASE = 2  # seconds, exponential backoff
 
 
 def load_corpus(test_mode: bool = False):
@@ -93,6 +97,7 @@ class GoldEvaluator:
         self.precision_k = precision_k
         self.workers = workers
         self.lock = Lock()  # Thread-safe checkpoint access
+        self.run_start_time = None
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         
         # Initialize components
@@ -101,13 +106,26 @@ class GoldEvaluator:
         job_config = jobs.get(JOB_ID, {})
         job_config["job_id"] = JOB_ID
         
+        # Store index metadata for output
+        self.index_metadata = {
+            "job_id": JOB_ID,
+            "deployed_index_id": job_config.get("deployed_index_id", ""),
+            "last_build": job_config.get("last_build", ""),
+            "chunks_indexed": job_config.get("chunks_indexed", 0),
+            "document_count": job_config.get("document_count", 0),
+            "embedding_model": job_config.get("embedding_model", ""),
+            "embedding_dimension": job_config.get("embedding_dimension", 0),
+        }
+        
         self.retriever = VectorSearchRetriever(job_config)
         self.ranker = GoogleRanker(project_id=PROJECT_ID)
         self.generator = GeminiAnswerGenerator()
         
         # Log model info
         model_info = get_model_info()
+        self.judge_model = model_info['model_id']
         print(f"Judge model: {model_info['model_id']} ({model_info['status']})")
+        print(f"Index: {JOB_ID} (last build: {self.index_metadata['last_build']})")
         
         self.checkpoint_file = OUTPUT_DIR / f"checkpoint_p{precision_k}.json"
         self.results_file = OUTPUT_DIR / f"results_p{precision_k}.json"
@@ -141,8 +159,8 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             # Return partial scores on failure
             return {"correctness": 3, "completeness": 3, "faithfulness": 3, "relevance": 3, "clarity": 3, "overall_score": 3, "verdict": "partial", "parse_error": str(e)}
     
-    def run_single(self, q: dict) -> dict:
-        """Run single question through pipeline."""
+    def run_single_attempt(self, q: dict) -> dict:
+        """Run single question through pipeline (one attempt, no retry)."""
         question = q.get("question", "")
         source_filenames = q.get("source_filenames", [])
         expected_source = source_filenames[0] if source_filenames else q.get("source_document", "")
@@ -159,8 +177,10 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             enable_reranking=True,
             job_id=JOB_ID,
         )
+        retrieval_start = time.time()
         retrieval_result = self.retriever.retrieve(question, config)
         chunks = list(retrieval_result.chunks)
+        retrieval_time = time.time() - retrieval_start
         
         # Check recall@100
         retrieved_docs = [c.doc_name.lower() if c.doc_name else "" for c in chunks]
@@ -174,16 +194,25 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 break
         
         # Rerank
+        rerank_start = time.time()
         reranked = self.ranker.rank(question, chunks, self.precision_k)
+        rerank_time = time.time() - rerank_start
         
         # Generate
         context = "\n\n".join([f"[{i+1}] {c.text}" for i, c in enumerate(reranked)])
+        gen_start = time.time()
         gen_result = self.generator.generate(query=question, context=context, config=config)
         answer = gen_result.answer_text
+        gen_time = time.time() - gen_start
         
         # Judge
+        judge_start = time.time()
         judgment = self._judge_answer(question, ground_truth, answer, context)
+        judge_time = time.time() - judge_start
         
+        total_time = time.time() - start
+        
+        # Extract all GenerationResult fields
         return {
             "question_id": q.get("question_id", ""),
             "question_type": q.get("question_type", ""),
@@ -191,11 +220,93 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             "recall_hit": recall_hit,
             "mrr": mrr,
             "judgment": judgment,
-            "time": time.time() - start,
+            "time": total_time,
+            "timing": {
+                "retrieval": retrieval_time,
+                "rerank": rerank_time,
+                "generation": gen_time,
+                "judge": judge_time,
+                "total": total_time,
+            },
+            "tokens": {
+                "prompt": gen_result.prompt_tokens,
+                "completion": gen_result.completion_tokens,
+                "thinking": gen_result.thinking_tokens,
+                "total": gen_result.total_tokens,
+                "cached": gen_result.cached_content_tokens,
+            },
+            "llm_metadata": {
+                "model": gen_result.model,
+                "model_version": gen_result.model_version,
+                "finish_reason": gen_result.finish_reason,
+                "reasoning_effort": gen_result.reasoning_effort,
+                "used_fallback": gen_result.used_fallback,
+                "avg_logprobs": gen_result.avg_logprobs,
+                "response_id": gen_result.response_id,
+                "temperature": gen_result.temperature,
+                "has_citations": gen_result.has_citations,
+            },
+            "answer_length": len(answer),
+            "retrieval_candidates": len(chunks),
         }
+    
+    def run_single(self, q: dict) -> dict:
+        """Run single question with retry logic (no fallback)."""
+        qid = q.get("question_id", "unknown")
+        last_error = None
+        error_phase = None
+        
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                result = self.run_single_attempt(q)
+                # Success - add retry metadata
+                result["retry_info"] = {
+                    "attempts": attempt,
+                    "recovered": attempt > 1,
+                    "error": None,
+                }
+                return result
+                
+            except Exception as e:
+                last_error = str(e)
+                error_phase = self._detect_error_phase(e)
+                
+                if attempt < MAX_RETRIES:
+                    delay = RETRY_DELAY_BASE * (2 ** (attempt - 1))  # Exponential backoff
+                    time.sleep(delay)
+                    continue
+        
+        # All retries exhausted - return error result
+        return {
+            "question_id": qid,
+            "question_type": q.get("question_type", ""),
+            "difficulty": q.get("difficulty", ""),
+            "error": last_error,
+            "error_phase": error_phase,
+            "retry_info": {
+                "attempts": MAX_RETRIES,
+                "recovered": False,
+                "error": last_error,
+            },
+        }
+    
+    def _detect_error_phase(self, error: Exception) -> str:
+        """Detect which phase caused the error based on error message."""
+        error_str = str(error).lower()
+        if "retriev" in error_str or "vector" in error_str or "index" in error_str:
+            return "retrieval"
+        elif "rerank" in error_str or "rank" in error_str:
+            return "rerank"
+        elif "generat" in error_str or "gemini" in error_str or "model" in error_str:
+            return "generation"
+        elif "judge" in error_str or "evaluat" in error_str:
+            return "judge"
+        return "unknown"
     
     def run(self, questions: list):
         """Run evaluation with checkpointing and optional parallelism."""
+        self.run_start_time = time.time()
+        
         print(f"\n{'='*60}")
         print(f"GOLD STANDARD EVAL - Precision@{self.precision_k}")
         print(f"Questions: {len(questions)}")
@@ -266,24 +377,174 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         with open(self.checkpoint_file, 'w') as f:
             json.dump(list(completed.values()), f, indent=2)
         
+        # Calculate run duration
+        run_duration = time.time() - self.run_start_time if self.run_start_time else 0
+        
         # Calculate metrics
         valid = [r for r in results if "judgment" in r]
+        
+        # Verdict counts
+        pass_count = sum(1 for r in valid if r.get("judgment", {}).get("verdict") == "pass")
+        partial_count = sum(1 for r in valid if r.get("judgment", {}).get("verdict") == "partial")
+        fail_count = sum(1 for r in valid if r.get("judgment", {}).get("verdict") == "fail")
+        
         metrics = {
             "precision_k": self.precision_k,
             "total": len(questions),
             "completed": len(valid),
-            "recall@100": sum(1 for r in valid if r.get("recall_hit")) / len(valid) if valid else 0,
+            "recall_at_100": sum(1 for r in valid if r.get("recall_hit")) / len(valid) if valid else 0,
             "mrr": sum(r.get("mrr", 0) for r in valid) / len(valid) if valid else 0,
-            "pass_rate": sum(1 for r in valid if r.get("judgment", {}).get("verdict") == "pass") / len(valid) if valid else 0,
+            "pass_rate": pass_count / len(valid) if valid else 0,
+            "partial_rate": partial_count / len(valid) if valid else 0,
+            "fail_rate": fail_count / len(valid) if valid else 0,
+            "acceptable_rate": (pass_count + partial_count) / len(valid) if valid else 0,
         }
         
         # Dimension averages
-        for dim in ["correctness", "completeness", "faithfulness", "relevance", "clarity", "overall"]:
+        for dim in ["correctness", "completeness", "faithfulness", "relevance", "clarity", "overall_score"]:
             scores = [r.get("judgment", {}).get(dim, 0) for r in valid if r.get("judgment", {}).get(dim)]
-            metrics[dim] = sum(scores) / len(scores) if scores else 0
+            metrics[f"{dim}_avg"] = sum(scores) / len(scores) if scores else 0
         
-        # Save results
-        output = {"metrics": metrics, "results": results, "timestamp": datetime.now().isoformat()}
+        # Aggregate tokens
+        token_totals = {
+            "prompt_total": sum(r.get("tokens", {}).get("prompt", 0) for r in valid),
+            "completion_total": sum(r.get("tokens", {}).get("completion", 0) for r in valid),
+            "thinking_total": sum(r.get("tokens", {}).get("thinking", 0) for r in valid),
+            "cached_total": sum(r.get("tokens", {}).get("cached", 0) for r in valid),
+        }
+        token_totals["total"] = token_totals["prompt_total"] + token_totals["completion_total"] + token_totals["thinking_total"]
+        
+        # Aggregate latency
+        latency = {
+            "total_avg_s": sum(r.get("time", 0) for r in valid) / len(valid) if valid else 0,
+            "total_min_s": min((r.get("time", 999) for r in valid), default=0),
+            "total_max_s": max((r.get("time", 0) for r in valid), default=0),
+            "by_phase": {
+                "retrieval_avg_s": sum(r.get("timing", {}).get("retrieval", 0) for r in valid) / len(valid) if valid else 0,
+                "rerank_avg_s": sum(r.get("timing", {}).get("rerank", 0) for r in valid) / len(valid) if valid else 0,
+                "generation_avg_s": sum(r.get("timing", {}).get("generation", 0) for r in valid) / len(valid) if valid else 0,
+                "judge_avg_s": sum(r.get("timing", {}).get("judge", 0) for r in valid) / len(valid) if valid else 0,
+            },
+        }
+        
+        # Aggregate answer stats
+        answer_lengths = [r.get("answer_length", 0) for r in valid if r.get("answer_length")]
+        answer_stats = {
+            "avg_length_chars": sum(answer_lengths) / len(answer_lengths) if answer_lengths else 0,
+            "min_length_chars": min(answer_lengths) if answer_lengths else 0,
+            "max_length_chars": max(answer_lengths) if answer_lengths else 0,
+        }
+        
+        # Finish reason distribution
+        finish_reasons = {}
+        for r in valid:
+            reason = r.get("llm_metadata", {}).get("finish_reason", "UNKNOWN")
+            finish_reasons[reason] = finish_reasons.get(reason, 0) + 1
+        
+        # Get generator model from first result
+        generator_model = valid[0].get("llm_metadata", {}).get("model", "unknown") if valid else "unknown"
+        
+        # Aggregate retry stats
+        retry_stats = {
+            "total_questions": len(questions),
+            "succeeded_first_try": sum(1 for r in results if r.get("retry_info", {}).get("attempts", 1) == 1 and not r.get("error")),
+            "succeeded_after_retry": sum(1 for r in results if r.get("retry_info", {}).get("recovered", False)),
+            "failed_all_retries": sum(1 for r in results if r.get("error") and r.get("retry_info", {}).get("attempts", 0) >= MAX_RETRIES),
+            "total_retry_attempts": sum(r.get("retry_info", {}).get("attempts", 1) for r in results),
+        }
+        retry_stats["avg_attempts"] = retry_stats["total_retry_attempts"] / len(results) if results else 1.0
+        
+        # Aggregate errors by phase
+        error_results = [r for r in results if r.get("error")]
+        errors = {
+            "total_errors": len(error_results),
+            "by_phase": {
+                "retrieval": sum(1 for r in error_results if r.get("error_phase") == "retrieval"),
+                "rerank": sum(1 for r in error_results if r.get("error_phase") == "rerank"),
+                "generation": sum(1 for r in error_results if r.get("error_phase") == "generation"),
+                "judge": sum(1 for r in error_results if r.get("error_phase") == "judge"),
+            },
+            "error_messages": [r.get("error", "") for r in error_results[:10]],  # First 10 errors
+        }
+        
+        # Skipped questions (those with errors that couldn't be recovered)
+        skipped = {
+            "count": len(error_results),
+            "reasons": {
+                "missing_ground_truth": 0,  # Would be caught earlier
+                "invalid_question": 0,
+                "timeout": sum(1 for r in error_results if "timeout" in r.get("error", "").lower()),
+            },
+            "question_ids": [r.get("question_id", "") for r in error_results],
+        }
+        
+        # Breakdown by question type
+        breakdown_by_type = {}
+        for qtype in ["single_hop", "multi_hop"]:
+            type_results = [r for r in valid if r.get("question_type") == qtype]
+            if type_results:
+                type_pass = sum(1 for r in type_results if r.get("judgment", {}).get("verdict") == "pass")
+                type_partial = sum(1 for r in type_results if r.get("judgment", {}).get("verdict") == "partial")
+                type_fail = sum(1 for r in type_results if r.get("judgment", {}).get("verdict") == "fail")
+                breakdown_by_type[qtype] = {
+                    "total": len(type_results),
+                    "pass": type_pass,
+                    "partial": type_partial,
+                    "fail": type_fail,
+                    "pass_rate": type_pass / len(type_results) if type_results else 0,
+                }
+        
+        # Breakdown by difficulty
+        breakdown_by_difficulty = {}
+        for diff in ["easy", "medium", "hard"]:
+            diff_results = [r for r in valid if r.get("difficulty") == diff]
+            if diff_results:
+                diff_pass = sum(1 for r in diff_results if r.get("judgment", {}).get("verdict") == "pass")
+                diff_partial = sum(1 for r in diff_results if r.get("judgment", {}).get("verdict") == "partial")
+                diff_fail = sum(1 for r in diff_results if r.get("judgment", {}).get("verdict") == "fail")
+                breakdown_by_difficulty[diff] = {
+                    "total": len(diff_results),
+                    "pass": diff_pass,
+                    "partial": diff_partial,
+                    "fail": diff_fail,
+                    "pass_rate": diff_pass / len(diff_results) if diff_results else 0,
+                }
+        
+        # Build comprehensive output
+        output = {
+            "schema_version": "1.1",
+            "timestamp": datetime.now().isoformat(),
+            "client": "BFAI",
+            "index": self.index_metadata,
+            "config": {
+                "generator_model": generator_model,
+                "judge_model": self.judge_model,
+                "precision_k": self.precision_k,
+                "recall_k": 100,
+                "workers": self.workers,
+                "temperature": 0.0,
+            },
+            "metrics": metrics,
+            "latency": latency,
+            "tokens": token_totals,
+            "answer_stats": answer_stats,
+            "quality": {
+                "finish_reason_distribution": finish_reasons,
+                "fallback_rate": sum(1 for r in valid if r.get("llm_metadata", {}).get("used_fallback")) / len(valid) if valid else 0,
+            },
+            "execution": {
+                "run_duration_seconds": run_duration,
+                "questions_per_second": len(valid) / run_duration if run_duration > 0 else 0,
+                "workers": self.workers,
+            },
+            "retry_stats": retry_stats,
+            "errors": errors,
+            "skipped": skipped,
+            "breakdown_by_type": breakdown_by_type,
+            "breakdown_by_difficulty": breakdown_by_difficulty,
+            "results": results,
+        }
+        
         with open(self.results_file, 'w') as f:
             json.dump(output, f, indent=2)
         
@@ -292,14 +553,18 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         print(f"RESULTS - Precision@{self.precision_k}")
         print(f"{'='*60}")
         print(f"Completed: {metrics['completed']}/{metrics['total']}")
-        print(f"Recall@100: {metrics['recall@100']:.1%}")
+        print(f"Recall@100: {metrics['recall_at_100']:.1%}")
         print(f"MRR: {metrics['mrr']:.3f}")
         print(f"Pass Rate: {metrics['pass_rate']:.1%}")
-        print(f"Overall Score: {metrics['overall']:.2f}/5")
+        print(f"Partial Rate: {metrics['partial_rate']:.1%}")
+        print(f"Fail Rate: {metrics['fail_rate']:.1%}")
+        print(f"Overall Score: {metrics.get('overall_score_avg', 0):.2f}/5")
+        print(f"\nTokens: {token_totals['total']:,} total ({token_totals['prompt_total']:,} in, {token_totals['completion_total']:,} out)")
+        print(f"Latency: {latency['total_avg_s']:.2f}s avg ({run_duration:.1f}s total)")
         print(f"\nResults saved: {self.results_file}")
         print(f"{'='*60}")
         
-        return metrics
+        return output
 
 
 def main():

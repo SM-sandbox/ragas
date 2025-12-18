@@ -82,9 +82,12 @@ class QueryResult:
 class E2EOrchestatorTest:
     """End-to-end orchestrator test with LLM judging."""
     
-    def __init__(self, job_id: str = JOB_ID):
+    def __init__(self, job_id: str = JOB_ID, model: str = "gemini-2.5-flash", reasoning_effort: str = "low", workers: int = 7):
         self.job_id = job_id
-        self.output_dir = Path(__file__).parent.parent / "experiments" / f"{datetime.now().strftime('%Y-%m-%d')}_e2e_orchestrator"
+        self.model = model
+        self.reasoning_effort = reasoning_effort
+        self.workers = workers
+        self.output_dir = Path(__file__).parent.parent / "reports" / "gemini3_comparison"
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
         # Load job config
@@ -130,6 +133,8 @@ class E2EOrchestatorTest:
             rrf_ranking_alpha=0.5,  # 50/50 dense/sparse
             enable_reranking=True,
             job_id=self.job_id,
+            model=self.model,  # Use configured model
+            reasoning_effort=self.reasoning_effort,  # Use configured reasoning level
         )
     
     def _extract_source_doc(self, chunk: Chunk) -> str:
@@ -301,31 +306,46 @@ Respond with JSON in this exact format:
         
         return result
     
-    def run_full_test(self, run_number: int = 1) -> Dict:
-        """Run full test on all questions."""
+    def run_full_test(self, run_number: int = 1, workers: int = 7) -> Dict:
+        """Run full test on all questions with parallel workers."""
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+        
         print(f"\n{'='*60}")
-        print(f"RUN {run_number} OF {NUM_RUNS}")
+        print(f"RUN {run_number} - {self.model} ({self.reasoning_effort})")
         print(f"{'='*60}")
         print(f"Job: {self.job_id}")
-        print(f"Questions: {len(self.corpus)}")
-        print(f"Config: Hybrid 50/50, Reranking enabled")
+        print(f"Questions: {len(self.corpus)} | Workers: {workers}")
+        print(f"Config: Hybrid 50/50, Reranking enabled, Precision@{PRECISION_K}")
         print(f"{'='*60}\n")
         
         results = []
+        completed = 0
         
-        for qa in tqdm(self.corpus, desc=f"Run {run_number}"):
-            try:
-                result = self.run_single_query(qa)
-                results.append(result)
-            except Exception as e:
-                print(f"\nError on question {qa.get('id', '?')}: {e}")
-                results.append(QueryResult(
-                    question_id=qa.get("id", 0),
-                    question=qa.get("question", ""),
-                    question_type=qa.get("question_type", "unknown"),
-                    expected_source=qa.get("source_document", ""),
-                    ground_truth=qa.get("answer", ""),
-                ))
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            futures = {executor.submit(self.run_single_query, qa): qa for qa in self.corpus}
+            
+            for future in as_completed(futures):
+                qa = futures[future]
+                try:
+                    result = future.result(timeout=180)
+                    results.append(result)
+                except Exception as e:
+                    print(f"\nError on question {qa.get('question_id', '?')}: {e}")
+                    results.append(QueryResult(
+                        question_id=qa.get("question_id", 0),
+                        question=qa.get("question", ""),
+                        question_type=qa.get("question_type", "unknown"),
+                        expected_source=qa.get("source_document", ""),
+                        ground_truth=qa.get("ground_truth_answer", ""),
+                    ))
+                
+                completed += 1
+                if completed % 10 == 0:
+                    # Progress heartbeat
+                    pass_count = sum(1 for r in results if r.judgment.get("verdict") == "pass")
+                    partial_count = sum(1 for r in results if r.judgment.get("verdict") == "partial")
+                    fail_count = sum(1 for r in results if r.judgment.get("verdict") == "fail")
+                    print(f"[{completed:3d}/{len(self.corpus)}] pass:{pass_count} partial:{partial_count} fail:{fail_count}", flush=True)
         
         return self._calculate_run_metrics(results, run_number)
     
@@ -426,7 +446,7 @@ Respond with JSON in this exact format:
         all_runs = []
         
         for run_num in range(1, NUM_RUNS + 1):
-            run_result = self.run_full_test(run_num)
+            run_result = self.run_full_test(run_num, workers=self.workers)
             all_runs.append(run_result)
             
             # Save intermediate results
@@ -642,19 +662,31 @@ Respond with JSON in this exact format:
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="E2E Orchestrator Test")
-    parser.add_argument("--runs", type=int, default=NUM_RUNS, help="Number of runs")
+    parser = argparse.ArgumentParser(description="E2E Orchestrator Test - Gemini 3 Comparison")
+    parser.add_argument("--model", type=str, default="gemini-2.5-flash", 
+                        choices=["gemini-2.5-flash", "gemini-3-flash-preview"],
+                        help="Generator model")
+    parser.add_argument("--reasoning", type=str, default="low",
+                        choices=["low", "high"],
+                        help="Reasoning effort (for gemini-3-flash-preview)")
     parser.add_argument("--max-questions", type=int, default=None, help="Max questions (for testing)")
+    parser.add_argument("--workers", type=int, default=7, help="Number of parallel workers")
     args = parser.parse_args()
     
-    num_runs = args.runs
+    print(f"\n{'='*70}")
+    print(f"GEMINI 3 COMPARISON EVAL")
+    print(f"{'='*70}")
+    print(f"Model: {args.model}")
+    print(f"Reasoning: {args.reasoning}")
+    print(f"Workers: {args.workers}")
+    print(f"{'='*70}\n")
     
-    tester = E2EOrchestatorTest()
+    tester = E2EOrchestatorTest(model=args.model, reasoning_effort=args.reasoning, workers=args.workers)
     
     if args.max_questions:
         tester.corpus = tester.corpus[:args.max_questions]
     
-    report = tester.run_consistency_test()
+    tester.run_consistency_test()
     
     print("\n" + "="*70)
     print("TEST COMPLETE")

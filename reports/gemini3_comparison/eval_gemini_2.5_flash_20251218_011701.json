@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-18T01:17:01.394650",
+    "generator_model": "gemini-2.5-flash",
+    "thinking_level": null,
+    "judge_model": "gemini-3-flash-preview",
+    "judge_thinking": "LOW",
+    "precision_k": 25,
+    "questions": 2,
+    "workers": 2
+  },
+  "timing": {
+    "total_seconds": 10.400238990783691,
+    "throughput_per_min": 11.538196392057873,
+    "avg_retrieval": 1.1318564414978027,
+    "avg_reranking": 1.4726269245147705,
+    "avg_generation": 4.930118441581726,
+    "avg_judge": 1.174241065979004
+  },
+  "retrieval": {
+    "recall_at_100": 1.0,
+    "mrr": 1.0
+  },
+  "summary": {
+    "successful": 2,
+    "failed": 0,
+    "pass_rate": 0.5,
+    "acceptable_rate": 1.0,
+    "verdicts": {
+      "pass": 1,
+      "partial": 1
+    },
+    "scores": {
+      "correctness": 4.5,
+      "completeness": 4.0,
+      "faithfulness": 5.0,
+      "relevance": 5.0,
+      "clarity": 3.5,
+      "overall_score": 4.4
+    }
+  },
+  "tokens": {
+    "gen_input": 24385,
+    "gen_output": 67,
+    "gen_thinking": 1188,
+    "judge_input": 1662,
+    "judge_output": 138,
+    "judge_thinking": 0,
+    "total_input": 26047,
+    "total_output": 205,
+    "total_thinking": 1188
+  },
+  "cost": {
+    "input": 0.001953525,
+    "output": 6.149999999999999e-05,
+    "thinking": 0.0003564,
+    "total": 0.002371425
+  },
+  "results": [
+    {
+      "question_id": "sh_easy_001",
+      "question": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "expected_source": "",
+      "ground_truth": "failure, preventive stock",
+      "recall_at_100": true,
+      "first_relevant_rank": 1,
+      "mrr": 1.0,
+      "answer": "The two examples provided for the 'Reason for Replacement' on the Spare Part Request Form are:\n*   failure\n*   preventive stock",
+      "answer_length": 127,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "retrieval_time": 1.128788948059082,
+      "reranking_time": 1.450502872467041,
+      "generation_time": 3.3163468837738037,
+      "judge_time": 1.123854160308838,
+      "total_time": 7.019601106643677,
+      "gen_input_tokens": 5693,
+      "gen_output_tokens": 29,
+      "gen_thinking_tokens": 206,
+      "judge_input_tokens": 727,
+      "judge_output_tokens": 69,
+      "judge_thinking_tokens": null,
+      "success": true,
+      "error": null
+    },
+    {
+      "question_id": "sh_easy_002",
+      "question": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "expected_source": "",
+      "ground_truth": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+      "recall_at_100": true,
+      "first_relevant_rank": 1,
+      "mrr": 1.0,
+      "answer": "According to the general notes in Doc 2 and Doc 11, the maximum specified length for an RS-485 bus cable is 4000 feet (12",
+      "answer_length": 121,
+      "judgment": {
+        "correctness": 4,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 2,
+        "overall_score": 3.8,
+        "verdict": "partial"
+      },
+      "retrieval_time": 1.1349239349365234,
+      "reranking_time": 1.4947509765625,
+      "generation_time": 6.543889999389648,
+      "judge_time": 1.22462797164917,
+      "total_time": 10.398247957229614,
+      "gen_input_tokens": 18692,
+      "gen_output_tokens": 38,
+      "gen_thinking_tokens": 982,
+      "judge_input_tokens": 935,
+      "judge_output_tokens": 69,
+      "judge_thinking_tokens": null,
+      "success": true,
+      "error": null
+    }
+  ]
+}

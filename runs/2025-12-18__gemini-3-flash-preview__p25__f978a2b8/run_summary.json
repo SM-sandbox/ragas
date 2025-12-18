@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "timestamp": "2025-12-18T10:29:14.776096",
+  "client": "BFAI",
+  "index": {
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+    "last_build": "",
+    "chunks_indexed": 0,
+    "document_count": 64,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimension": 1536
+  },
+  "config": {
+    "generator_model": "gemini-3-flash-preview",
+    "judge_model": "gemini-3-flash-preview",
+    "precision_k": 25,
+    "recall_k": 100,
+    "workers": 1,
+    "temperature": 0.0
+  },
+  "metrics": {
+    "precision_k": 25,
+    "total": 3,
+    "completed": 3,
+    "recall_at_100": 1.0,
+    "mrr": 1.0,
+    "pass_rate": 1.0,
+    "partial_rate": 0.0,
+    "fail_rate": 0.0,
+    "acceptable_rate": 1.0,
+    "correctness_avg": 5.0,
+    "completeness_avg": 5.0,
+    "faithfulness_avg": 5.0,
+    "relevance_avg": 5.0,
+    "clarity_avg": 5.0,
+    "overall_score_avg": 5.0
+  },
+  "latency": {
+    "total_avg_s": 5.239084641138713,
+    "total_min_s": 3.3924458026885986,
+    "total_max_s": 7.826151132583618,
+    "by_phase": {
+      "retrieval_avg_s": 0.7461576461791992,
+      "rerank_avg_s": 0.7064319451649984,
+      "generation_avg_s": 2.074918826421102,
+      "judge_avg_s": 1.7115171750386555
+    }
+  },
+  "tokens": {
+    "prompt_total": 59829,
+    "completion_total": 402,
+    "thinking_total": 0,
+    "cached_total": 0,
+    "total": 60231
+  },
+  "answer_stats": {
+    "avg_length_chars": 533.0,
+    "min_length_chars": 177,
+    "max_length_chars": 863
+  },
+  "quality": {
+    "finish_reason_distribution": {
+      "STOP": 3
+    },
+    "fallback_rate": 0.0
+  },
+  "execution": {
+    "run_duration_seconds": 90.39063119888306,
+    "questions_per_second": 0.1908467105558019,
+    "workers": 1,
+    "hostname": "Scott-MacBook-Pro-M3.local",
+    "python_version": "3.11.14"
+  },
+  "run_id": "run_20251218_102744_f978a2b8",
+  "cost": {
+    "input_cost": 0.005983,
+    "output_cost": 0.000161,
+    "thinking_cost": 0.0,
+    "cached_cost": 0.0,
+    "total_cost": 0.006144,
+    "cost_per_question": 0.002048,
+    "question_count": 3
+  }
+}

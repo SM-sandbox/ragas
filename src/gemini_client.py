@@ -23,7 +23,6 @@ from typing import Optional, Any
 from google import genai
 from google.genai import types
 from google.cloud import secretmanager
-import time as time_module
 
 logger = logging.getLogger(__name__)
 
@@ -36,19 +35,6 @@ SECRET_NAME = "gemini-api-key-eval"
 
 # Model - Gemini 3 Flash Preview ONLY (no fallback)
 DEFAULT_MODEL = "gemini-3-flash-preview"
-
-# US Regions for failover (cycle through on capacity errors)
-US_REGIONS = [
-    "us-central1",
-    "us-east1", 
-    "us-east4",
-    "us-west1",
-    "us-west4",
-    "us-south1",
-]
-
-# Current region index (for round-robin failover)
-_current_region_idx = 0
 
 # Default generation config
 DEFAULT_CONFIG = {
@@ -114,119 +100,50 @@ def reset_client():
 
 
 # =============================================================================
-# RETRY LOGIC WITH EXPONENTIAL BACKOFF
-# =============================================================================
-
-
-class RateLimitError(Exception):
-    """Raised when rate limited (429)."""
-    pass
-
-
-class CapacityError(Exception):
-    """Raised when region is at capacity (503, overloaded)."""
-    pass
-
-
-class APIError(Exception):
-    """Raised for other API errors."""
-    pass
-
-
-def _is_rate_limit_error(exception: Exception) -> bool:
-    """Check if exception is a rate limit error."""
-    error_str = str(exception).lower()
-    return "429" in error_str or "rate" in error_str or "quota" in error_str or "resource_exhausted" in error_str
-
-
-def _is_capacity_error(exception: Exception) -> bool:
-    """Check if exception is a capacity/overload error."""
-    error_str = str(exception).lower()
-    return ("503" in error_str or "capacity" in error_str or 
-            "overload" in error_str or "unavailable" in error_str or
-            "timeout" in error_str)
-
-
-def _get_next_region() -> str:
-    """Get next region in round-robin fashion."""
-    global _current_region_idx
-    region = US_REGIONS[_current_region_idx]
-    _current_region_idx = (_current_region_idx + 1) % len(US_REGIONS)
-    return region
-
-
-def _get_current_region() -> str:
-    """Get current region without advancing."""
-    return US_REGIONS[_current_region_idx]
-
-
-# =============================================================================
 # CORE GENERATION FUNCTION
 # =============================================================================
 
 
-def _generate_with_region_failover(
+class APIError(Exception):
+    """Raised for API errors."""
+    pass
+
+
+def _generate_content(
     client: genai.Client,
     model: str,
     contents: str,
     config: types.GenerateContentConfig,
+    max_retries: int = 5,
 ) -> Any:
     """
-    Generate content with region failover on capacity errors.
+    Generate content using google-genai SDK with retry on rate limits.
     
-    Strategy:
-    - Try current region with 2 retries (exponential backoff)
-    - On capacity error after 2 retries, hop to next region
-    - Cycle through all US regions before giving up
+    The SDK uses a global endpoint (generativelanguage.googleapis.com)
+    and Google handles routing automatically. No region management needed.
     """
-    regions_tried = 0
-    max_regions = len(US_REGIONS)
-    last_error = None
+    import time
     
-    while regions_tried < max_regions:
-        current_region = _get_current_region()
-        retries_in_region = 0
-        max_retries_per_region = 2
-        
-        while retries_in_region < max_retries_per_region:
-            try:
-                logger.debug(f"Attempting generation in region {current_region} (attempt {retries_in_region + 1})")
-                return client.models.generate_content(
-                    model=model,
-                    contents=contents,
-                    config=config,
-                )
-            except Exception as e:
-                last_error = e
-                
-                if _is_rate_limit_error(e):
-                    # Rate limit - exponential backoff within region
-                    wait_time = (2 ** retries_in_region) * 1  # 1s, 2s
-                    logger.warning(f"Rate limited in {current_region}, waiting {wait_time}s (attempt {retries_in_region + 1}/{max_retries_per_region})")
-                    time_module.sleep(wait_time)
-                    retries_in_region += 1
-                    
-                elif _is_capacity_error(e):
-                    # Capacity error - hop to next region immediately
-                    logger.warning(f"Capacity error in {current_region}: {e}. Hopping to next region.")
-                    _get_next_region()  # Advance to next region
-                    regions_tried += 1
-                    break  # Exit inner loop, try next region
-                    
-                else:
-                    # Other error - raise immediately
-                    logger.error(f"API error in {current_region}: {e}")
-                    raise APIError(str(e))
-        
-        # Exhausted retries in this region, move to next
-        if retries_in_region >= max_retries_per_region:
-            logger.warning(f"Exhausted {max_retries_per_region} retries in {current_region}, hopping to next region")
-            _get_next_region()
-            regions_tried += 1
-    
-    # All regions exhausted
-    logger.error(f"All {max_regions} regions exhausted. Last error: {last_error}")
-    raise APIError(f"All regions exhausted. Last error: {last_error}")
+    for attempt in range(max_retries):
+        try:
+            return client.models.generate_content(
+                model=model,
+                contents=contents,
+                config=config,
+            )
+        except Exception as e:
+            error_str = str(e).lower()
+            is_rate_limit = "429" in error_str or "resource_exhausted" in error_str or "quota" in error_str
+            
+            if is_rate_limit and attempt < max_retries - 1:
+                # Exponential backoff: 2, 4, 8, 16, 32 seconds
+                wait_time = 2 ** (attempt + 1)
+                logger.warning(f"Rate limited, waiting {wait_time}s (attempt {attempt + 1}/{max_retries})")
+                time.sleep(wait_time)
+                continue
+            
+            logger.error(f"API error: {e}")
+            raise APIError(str(e))
 
 
 def generate(
@@ -290,7 +207,7 @@ def generate(
     target_model = model or DEFAULT_MODEL
     
     logger.debug(f"Generating with {target_model}, thinking={thinking_level}")
-    response = _generate_with_region_failover(client, target_model, prompt, config)
+    response = _generate_content(client, target_model, prompt, config)
     
     # Parse response with full llm_metadata (matches orchestrator schema)
     result = {

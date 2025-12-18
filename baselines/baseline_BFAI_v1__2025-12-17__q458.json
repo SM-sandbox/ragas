@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.1",
+  "baseline_version": "1",
+  "created_date": "2025-12-17",
+  "client": "BFAI",
+  
+  "environment": {
+    "type": "local",
+    "orchestrator_url": null
+  },
+  
+  "index": {
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+    "last_build": "2025-12-15",
+    "chunks_indexed": 6059,
+    "document_count": 65,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimension": 1536
+  },
+  
+  "corpus": {
+    "file": "QA_BFAI_gold_v1-0__q458.json",
+    "question_count": 458,
+    "distribution": {
+      "single_hop": 229,
+      "multi_hop": 229,
+      "easy": 161,
+      "medium": 161,
+      "hard": 136
+    }
+  },
+  
+  "config": {
+    "generator_model": "gemini-2.5-flash",
+    "judge_model": "gemini-2.0-flash",
+    "reasoning_effort": "low",
+    "temperature": 0.0,
+    "precision_k": 25,
+    "recall_k": 100,
+    "enable_hybrid": true,
+    "enable_reranking": true,
+    "force_json": false,
+    "workers": 5
+  },
+  
+  "metrics": {
+    "pass_rate": 0.856,
+    "partial_rate": 0.105,
+    "fail_rate": 0.039,
+    "acceptable_rate": 0.961,
+    "recall_at_100": 0.991,
+    "mrr": 0.717,
+    "overall_score_avg": 4.71,
+    "scores": {
+      "correctness_avg": 4.64,
+      "completeness_avg": 4.70,
+      "faithfulness_avg": 4.91,
+      "relevance_avg": 4.95,
+      "clarity_avg": 4.98
+    }
+  },
+  
+  "latency": {
+    "total_avg_s": 8.3,
+    "total_min_s": 3.7,
+    "total_max_s": 34.2,
+    "by_phase": {
+      "retrieval_avg_s": 0.252,
+      "rerank_avg_s": 0.196,
+      "generation_avg_s": 7.742,
+      "judge_avg_s": 1.342
+    },
+    "by_difficulty": {
+      "easy_avg_s": 6.9,
+      "medium_avg_s": 8.3,
+      "hard_avg_s": 10.0
+    }
+  },
+  
+  "tokens": {
+    "prompt_total": 1832000,
+    "completion_total": 137400,
+    "thinking_total": 0,
+    "cached_total": 0,
+    "total": 1969400,
+    "avg_per_question": {
+      "prompt": 4000,
+      "completion": 300,
+      "thinking": 0
+    }
+  },
+  
+  "cost": {
+    "input_cost": 0.1374,
+    "output_cost": 0.04122,
+    "thinking_cost": 0.0,
+    "cached_cost": 0.0,
+    "total_cost_usd": 0.17862,
+    "cost_per_question_usd": 0.00039
+  },
+  
+  "answer_stats": {
+    "avg_length_chars": 533,
+    "min_length_chars": 150,
+    "max_length_chars": 1200
+  },
+  
+  "execution": {
+    "run_id": "baseline_gold_standard_2025-12-17",
+    "run_timestamp": "2025-12-17T00:00:00Z",
+    "run_duration_seconds": 3800,
+    "questions_per_second": 0.12,
+    "workers": 5,
+    "hostname": "local",
+    "python_version": "3.11",
+    "orchestrator_version": "v3.0"
+  },
+  
+  "quality": {
+    "avg_logprobs": null,
+    "fallback_rate": 0.0,
+    "finish_reason_distribution": {
+      "STOP": 458,
+      "MAX_TOKENS": 0,
+      "SAFETY": 0
+    }
+  },
+  
+  "retry_stats": {
+    "total_questions": 458,
+    "succeeded_first_try": 458,
+    "succeeded_after_retry": 0,
+    "failed_all_retries": 0,
+    "total_retry_attempts": 0,
+    "avg_attempts": 1.0
+  },
+  
+  "errors": {
+    "total_errors": 0,
+    "by_phase": {
+      "retrieval": 0,
+      "rerank": 0,
+      "generation": 0,
+      "judge": 0
+    },
+    "error_messages": []
+  },
+  
+  "skipped": {
+    "count": 0,
+    "reasons": {
+      "missing_ground_truth": 0,
+      "invalid_question": 0,
+      "timeout": 0
+    },
+    "question_ids": []
+  },
+  
+  "breakdown_by_type": {
+    "single_hop": {
+      "total": 229,
+      "pass": 196,
+      "partial": 24,
+      "fail": 9,
+      "pass_rate": 0.856
+    },
+    "multi_hop": {
+      "total": 229,
+      "pass": 196,
+      "partial": 24,
+      "fail": 9,
+      "pass_rate": 0.856
+    }
+  },
+  
+  "breakdown_by_difficulty": {
+    "easy": {
+      "total": 161,
+      "pass": 145,
+      "partial": 13,
+      "fail": 3,
+      "pass_rate": 0.901
+    },
+    "medium": {
+      "total": 161,
+      "pass": 138,
+      "partial": 17,
+      "fail": 6,
+      "pass_rate": 0.857
+    },
+    "hard": {
+      "total": 136,
+      "pass": 109,
+      "partial": 18,
+      "fail": 9,
+      "pass_rate": 0.801
+    }
+  },
+  
+  "notes": "Baseline from Gold_Standard_Comparison_Report.md. Token counts and costs imputed from 3-question test run scaled to 458 questions (~4000 prompt, ~300 completion per question). Will be replaced with actual values on next full run."
+}

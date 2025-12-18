@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.1",
+  "baseline_version": "2",
+  "created_date": "2025-12-18",
+  "client": "BFAI",
+  "environment": {
+    "type": "local",
+    "orchestrator_url": null
+  },
+  "index": {
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+    "last_build": "",
+    "chunks_indexed": 0,
+    "document_count": 64,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimension": 1536
+  },
+  "corpus": {
+    "file": "QA_BFAI_gold_v1-0__q458.json",
+    "question_count": 458,
+    "distribution": {
+      "single_hop": 229,
+      "multi_hop": 229,
+      "easy": 161,
+      "medium": 161,
+      "hard": 136
+    }
+  },
+  "config": {
+    "generator_model": "gemini-3-flash-preview",
+    "judge_model": "gemini-3-flash-preview",
+    "precision_k": 25,
+    "recall_k": 100,
+    "workers": 5,
+    "temperature": 0.0
+  },
+  "metrics": {
+    "pass_rate": 0.9235807860262009,
+    "partial_rate": 0.06550218340611354,
+    "fail_rate": 0.010917030567685589,
+    "acceptable_rate": 0.9890829694323144,
+    "recall_at_100": 0.9912663755458515,
+    "mrr": 0.7368857360837219,
+    "overall_score_avg": 4.82292576419214,
+    "scores": {
+      "correctness_avg": 4.777292576419214,
+      "completeness_avg": 4.873362445414847,
+      "faithfulness_avg": 4.962882096069869,
+      "relevance_avg": 4.967248908296943,
+      "clarity_avg": 4.995633187772926
+    }
+  },
+  "latency": {
+    "total_avg_s": 10.419265595065454,
+    "total_min_s": 2.137326240539551,
+    "total_max_s": 68.4146728515625,
+    "by_phase": {
+      "retrieval_avg_s": 0.2694444671989008,
+      "rerank_avg_s": 0.17912587588530962,
+      "generation_avg_s": 8.628351621232179,
+      "judge_avg_s": 1.3422865919671205
+    }
+  },
+  "tokens": {
+    "prompt_total": 4930527,
+    "completion_total": 191906,
+    "thinking_total": 231329,
+    "cached_total": 0,
+    "total": 5353762
+  },
+  "answer_stats": {
+    "avg_length_chars": 1599.5589519650655,
+    "min_length_chars": 71,
+    "max_length_chars": 14034
+  },
+  "execution": {
+    "run_id": "baseline_v2_2025-12-18",
+    "run_timestamp": "2025-12-18T12:39:08.779964",
+    "run_duration_seconds": 987.8340411186218,
+    "questions_per_second": 0.463640632875297,
+    "workers": 5,
+    "hostname": "local",
+    "python_version": "3.11",
+    "orchestrator_version": "v3.0"
+  },
+  "quality": {
+    "finish_reason_distribution": {
+      "STOP": 457,
+      "MAX_TOKENS": 1
+    },
+    "fallback_rate": 0.0
+  },
+  "retry_stats": {
+    "total_questions": 458,
+    "succeeded_first_try": 458,
+    "succeeded_after_retry": 0,
+    "failed_all_retries": 0,
+    "total_retry_attempts": 458,
+    "avg_attempts": 1.0
+  },
+  "errors": {
+    "total_errors": 0,
+    "by_phase": {
+      "retrieval": 0,
+      "rerank": 0,
+      "generation": 0,
+      "judge": 0
+    },
+    "error_messages": []
+  },
+  "skipped": {
+    "count": 0,
+    "reasons": {
+      "missing_ground_truth": 0,
+      "invalid_question": 0,
+      "timeout": 0
+    },
+    "question_ids": []
+  },
+  "breakdown_by_type": {
+    "single_hop": {
+      "total": 222,
+      "pass": 210,
+      "partial": 8,
+      "fail": 4,
+      "pass_rate": 0.9459459459459459
+    },
+    "multi_hop": {
+      "total": 236,
+      "pass": 213,
+      "partial": 22,
+      "fail": 1,
+      "pass_rate": 0.902542372881356
+    }
+  },
+  "breakdown_by_difficulty": {
+    "easy": {
+      "total": 161,
+      "pass": 146,
+      "partial": 11,
+      "fail": 4,
+      "pass_rate": 0.906832298136646
+    },
+    "medium": {
+      "total": 161,
+      "pass": 153,
+      "partial": 8,
+      "fail": 0,
+      "pass_rate": 0.9503105590062112
+    },
+    "hard": {
+      "total": 136,
+      "pass": 124,
+      "partial": 11,
+      "fail": 1,
+      "pass_rate": 0.9117647058823529
+    }
+  },
+  "notes": "Baseline v2 from full 458-question run on 2025-12-18. Significant improvement over v1: pass rate 92.4% (was 85.6%), fail rate 1.1% (was 3.9%)."
+}
