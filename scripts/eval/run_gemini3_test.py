@@ -179,6 +179,10 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 "judge_response": judge_usage.get("response_tokens", 0) if judge_usage else 0,
                 "judge_thinking": judge_usage.get("thinking_tokens", 0) if judge_usage else 0,
             },
+            "llm_metadata": {
+                "gen": gen_result.get("llm_metadata"),
+                "judge": judge_result.get("llm_metadata"),
+            },
         }
         
     except Exception as e:

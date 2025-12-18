@@ -292,23 +292,55 @@ def generate(
     logger.debug(f"Generating with {target_model}, thinking={thinking_level}")
     response = _generate_with_region_failover(client, target_model, prompt, config)
     
-    # Parse response with token counts
+    # Parse response with full llm_metadata (matches orchestrator schema)
     result = {
         "text": response.text,
         "model_used": target_model,
         "thoughts": None,
-        "usage": None,
+        "llm_metadata": None,
+    }
+    
+    # Build llm_metadata matching orchestrator schema
+    llm_metadata = {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "thinking_tokens": 0,
+        "total_tokens": 0,
+        "cached_content_tokens": 0,
+        "model_version": getattr(response, "model_version", target_model),
+        "finish_reason": None,
+        "used_fallback": False,  # We don't use fallback in eval suite
+        "reasoning_effort": thinking_level.lower() if thinking_level else "low",
+        "avg_logprobs": None,
+        "response_id": getattr(response, "response_id", None),
     }
     
     # Extract usage metadata (token counts)
     if hasattr(response, "usage_metadata") and response.usage_metadata:
         usage = response.usage_metadata
-        result["usage"] = {
-            "prompt_tokens": getattr(usage, "prompt_token_count", 0),
-            "response_tokens": getattr(usage, "candidates_token_count", 0),
-            "total_tokens": getattr(usage, "total_token_count", 0),
-            "thinking_tokens": getattr(usage, "thoughts_token_count", 0) if hasattr(usage, "thoughts_token_count") else 0,
-        }
+        llm_metadata["prompt_tokens"] = getattr(usage, "prompt_token_count", 0) or 0
+        llm_metadata["completion_tokens"] = getattr(usage, "candidates_token_count", 0) or 0
+        llm_metadata["thinking_tokens"] = getattr(usage, "thoughts_token_count", 0) if hasattr(usage, "thoughts_token_count") else 0
+        llm_metadata["total_tokens"] = getattr(usage, "total_token_count", 0) or 0
+        llm_metadata["cached_content_tokens"] = getattr(usage, "cached_content_token_count", 0) or 0
+    
+    # Extract finish_reason and avg_logprobs from candidate
+    if response.candidates and len(response.candidates) > 0:
+        candidate = response.candidates[0]
+        if hasattr(candidate, "finish_reason"):
+            llm_metadata["finish_reason"] = str(candidate.finish_reason) if candidate.finish_reason else "STOP"
+        if hasattr(candidate, "avg_logprobs"):
+            llm_metadata["avg_logprobs"] = candidate.avg_logprobs
+    
+    result["llm_metadata"] = llm_metadata
+    
+    # Also keep "usage" for backward compatibility
+    result["usage"] = {
+        "prompt_tokens": llm_metadata["prompt_tokens"],
+        "response_tokens": llm_metadata["completion_tokens"],
+        "total_tokens": llm_metadata["total_tokens"],
+        "thinking_tokens": llm_metadata["thinking_tokens"],
+    }
     
     # Extract thoughts if requested
     if include_thoughts and response.candidates:
