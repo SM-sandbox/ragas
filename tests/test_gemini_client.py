@@ -36,6 +36,8 @@ from gemini_client import (
     DEFAULT_MODEL,
     PROJECT_ID,
     SECRET_NAME,
+    JUDGE_CONFIG,
+    GENERATOR_CONFIG,
 )
 
 
@@ -147,6 +149,64 @@ class TestIntegrationBasicGeneration:
         assert "model_used" in result
         assert result["model_used"] == "gemini-3-flash-preview"
         assert "4" in result["text"]
+    
+    def test_llm_metadata_structure(self):
+        """Test llm_metadata matches orchestrator schema."""
+        result = generate("Say hello.")
+        
+        assert "llm_metadata" in result
+        metadata = result["llm_metadata"]
+        
+        # Required fields per orchestrator schema
+        assert "prompt_tokens" in metadata
+        assert "completion_tokens" in metadata
+        assert "thinking_tokens" in metadata
+        assert "total_tokens" in metadata
+        assert "cached_content_tokens" in metadata
+        assert "model_version" in metadata
+        assert "finish_reason" in metadata
+        assert "used_fallback" in metadata
+        assert "reasoning_effort" in metadata
+        assert "avg_logprobs" in metadata
+        assert "response_id" in metadata
+        
+        # Type checks
+        assert isinstance(metadata["prompt_tokens"], int)
+        assert isinstance(metadata["completion_tokens"], int)
+        assert isinstance(metadata["thinking_tokens"], int)
+        assert isinstance(metadata["total_tokens"], int)
+        assert isinstance(metadata["used_fallback"], bool)
+        assert isinstance(metadata["reasoning_effort"], str)
+    
+    def test_llm_metadata_token_counts_positive(self):
+        """Test token counts are positive values."""
+        result = generate("What is the capital of France?")
+        
+        metadata = result["llm_metadata"]
+        assert metadata["prompt_tokens"] > 0
+        assert metadata["completion_tokens"] > 0
+        assert metadata["total_tokens"] > 0
+        assert metadata["total_tokens"] >= metadata["prompt_tokens"] + metadata["completion_tokens"]
+    
+    def test_llm_metadata_finish_reason(self):
+        """Test finish_reason is valid."""
+        result = generate("Say OK.")
+        
+        metadata = result["llm_metadata"]
+        valid_reasons = ["STOP", "MAX_TOKENS", "SAFETY", "RECITATION", "OTHER", 
+                         "FinishReason.STOP", "FinishReason.MAX_TOKENS"]
+        assert any(r in str(metadata["finish_reason"]) for r in valid_reasons)
+    
+    def test_backward_compatible_usage_field(self):
+        """Test backward compatible 'usage' field still exists."""
+        result = generate("Say hello.")
+        
+        assert "usage" in result
+        usage = result["usage"]
+        assert "prompt_tokens" in usage
+        assert "response_tokens" in usage
+        assert "total_tokens" in usage
+        assert "thinking_tokens" in usage
     
     def test_generate_fast(self):
         """Test generate_fast convenience function."""

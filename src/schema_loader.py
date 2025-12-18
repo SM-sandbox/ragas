@@ -102,8 +102,11 @@ def validate_llm_metadata(metadata: Dict[str, Any], schema: Dict[str, Any] = Non
     missing = []
     llm_schema = schema.get("llm_metadata", {})
     
-    for field, spec in llm_schema.items():
-        if spec.get("required", False) and field not in metadata:
+    # Handle nested "fields" structure from orchestrator schema
+    fields = llm_schema.get("fields", llm_schema)
+    
+    for field, spec in fields.items():
+        if isinstance(spec, dict) and spec.get("required", False) and field not in metadata:
             missing.append(field)
     
     if missing:
@@ -116,7 +119,10 @@ def get_schema_fields() -> List[str]:
     """Get list of all fields defined in the orchestrator schema."""
     schema = load_orchestrator_schema()
     if schema:
-        return list(schema.get("llm_metadata", {}).keys())
+        llm_schema = schema.get("llm_metadata", {})
+        # Handle nested "fields" structure
+        fields = llm_schema.get("fields", llm_schema)
+        return list(fields.keys())
     return []
 
 
@@ -131,7 +137,11 @@ def check_schema_compatibility(metadata: Dict[str, Any]) -> Dict[str, Any]:
     if schema is None:
         return {"compatible": True, "missing": [], "extra": [], "error": "No schema available"}
     
-    schema_fields = set(schema.get("llm_metadata", {}).keys())
+    llm_schema = schema.get("llm_metadata", {})
+    # Handle nested "fields" structure
+    fields = llm_schema.get("fields", llm_schema)
+    
+    schema_fields = set(fields.keys())
     metadata_fields = set(metadata.keys())
     
     missing = schema_fields - metadata_fields
@@ -140,7 +150,8 @@ def check_schema_compatibility(metadata: Dict[str, Any]) -> Dict[str, Any]:
     # Check required fields
     required_missing = []
     for field in missing:
-        if schema["llm_metadata"].get(field, {}).get("required", False):
+        spec = fields.get(field, {})
+        if isinstance(spec, dict) and spec.get("required", False):
             required_missing.append(field)
     
     return {
