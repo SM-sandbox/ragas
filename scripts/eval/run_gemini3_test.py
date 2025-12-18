@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Gemini 3 Flash Preview Stress Test
+Gemini 3 Flash Preview Evaluation Test
 
-Tests the gemini_client with high parallelism (50 workers) on 100 questions.
-Uses the gold corpus for real questions but simulates the full pipeline
-since sm-dev-01 has a merge conflict.
+Tests gemini-3-flash-preview with configurable thinking levels (LOW/HIGH).
+Runs against the 458-question gold corpus with 50 parallel workers.
 
 Usage:
-    python scripts/eval/run_gemini3_test.py --questions 100 --workers 50
+    python scripts/eval/run_gemini3_test.py --questions 458 --workers 50 --thinking LOW
+    python scripts/eval/run_gemini3_test.py --questions 458 --workers 50 --thinking HIGH
 """
 
 import sys
@@ -42,11 +42,23 @@ logger = logging.getLogger(__name__)
 
 # Config
 CORPUS_PATH = Path(__file__).parent.parent.parent / "clients" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
-OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "gemini3_test"
+OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "gemini3_eval"
 
 # Default to full corpus (458 questions)
 DEFAULT_QUESTIONS = 458
 DEFAULT_WORKERS = 50
+DEFAULT_THINKING = "LOW"
+
+# Gemini 3 Flash pricing (per 1M tokens) - as of Dec 2024
+# https://ai.google.dev/pricing
+PRICING = {
+    "input": 0.075,      # $0.075 per 1M input tokens
+    "output": 0.30,      # $0.30 per 1M output tokens  
+    "thinking": 0.30,    # Thinking tokens billed as output
+}
+
+# Global thinking level (set by CLI)
+_thinking_level = DEFAULT_THINKING
 
 
 def load_corpus(max_questions: int = DEFAULT_QUESTIONS):
@@ -74,6 +86,7 @@ def load_corpus(max_questions: int = DEFAULT_QUESTIONS):
 
 def run_single_question(q: dict) -> dict:
     """Run a single question through generate + judge pipeline."""
+    global _thinking_level
     start = time.time()
     question_id = q.get("question_id", "unknown")
     question = q.get("question", "")
@@ -105,7 +118,7 @@ Answer:"""
             gen_prompt,
             max_output_tokens=GENERATOR_CONFIG.get("max_output_tokens"),
             temperature=GENERATOR_CONFIG.get("temperature"),
-            thinking_level="LOW",
+            thinking_level=_thinking_level,
         )
         rag_answer = gen_result["text"]
         gen_time = time.time() - gen_start
@@ -142,7 +155,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             response_mime_type="application/json",
             max_output_tokens=JUDGE_CONFIG.get("max_output_tokens"),
             temperature=JUDGE_CONFIG.get("temperature"),
-            thinking_level="LOW",
+            thinking_level=_thinking_level,
         )
         judge_time = time.time() - judge_start
         judge_usage = judge_result.get("usage", {})
@@ -195,10 +208,44 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         }
 
 
-def run_parallel_test(questions: list, workers: int = 50):
+def calculate_cost(results: list) -> dict:
+    """Calculate estimated cost based on token usage."""
+    total_input = 0
+    total_output = 0
+    total_thinking = 0
+    
+    for r in results:
+        if r.get("success") and r.get("tokens"):
+            tokens = r["tokens"]
+            total_input += (tokens.get("gen_prompt", 0) or 0) + (tokens.get("judge_prompt", 0) or 0)
+            total_output += (tokens.get("gen_response", 0) or 0) + (tokens.get("judge_response", 0) or 0)
+            total_thinking += (tokens.get("gen_thinking", 0) or 0) + (tokens.get("judge_thinking", 0) or 0)
+    
+    # Calculate costs (per 1M tokens)
+    input_cost = (total_input / 1_000_000) * PRICING["input"]
+    output_cost = (total_output / 1_000_000) * PRICING["output"]
+    thinking_cost = (total_thinking / 1_000_000) * PRICING["thinking"]
+    total_cost = input_cost + output_cost + thinking_cost
+    
+    return {
+        "input_tokens": total_input,
+        "output_tokens": total_output,
+        "thinking_tokens": total_thinking,
+        "total_tokens": total_input + total_output + total_thinking,
+        "input_cost": input_cost,
+        "output_cost": output_cost,
+        "thinking_cost": thinking_cost,
+        "total_cost": total_cost,
+    }
+
+
+def run_parallel_test(questions: list, workers: int = 50, thinking_level: str = "LOW"):
     """Run parallel test with specified workers."""
+    global _thinking_level
+    _thinking_level = thinking_level
+    
     print(f"\n{'='*70}")
-    print(f"GEMINI 3 FLASH PREVIEW STRESS TEST")
+    print(f"GEMINI 3 FLASH PREVIEW EVALUATION - {thinking_level} REASONING")
     print(f"{'='*70}")
     
     model_info = get_model_info()
@@ -318,18 +365,26 @@ def run_parallel_test(questions: list, workers: int = 50):
         print("\nToken Usage:")
         token_fields = ["gen_prompt", "gen_response", "gen_thinking", "judge_prompt", "judge_response", "judge_thinking"]
         for field in token_fields:
-            values = [r.get("tokens", {}).get(field, 0) for r in successful if r.get("tokens")]
+            values = [r.get("tokens", {}).get(field, 0) or 0 for r in successful if r.get("tokens")]
             if values:
-                total = sum(values)
+                total = sum(v or 0 for v in values)
                 avg = total / len(values)
                 print(f"  {field}: {total:,} total, {avg:.0f} avg")
         
         # Total tokens
         total_all = sum(
-            sum(r.get("tokens", {}).get(f, 0) for f in token_fields)
+            sum((r.get("tokens", {}).get(f, 0) or 0) for f in token_fields)
             for r in successful if r.get("tokens")
         )
         print(f"  TOTAL: {total_all:,} tokens")
+        
+        # Cost estimation
+        cost = calculate_cost(results)
+        print(f"\nCost Estimate (Gemini 3 Flash pricing):")
+        print(f"  Input tokens:    {cost['input_tokens']:,} (${cost['input_cost']:.4f})")
+        print(f"  Output tokens:   {cost['output_tokens']:,} (${cost['output_cost']:.4f})")
+        print(f"  Thinking tokens: {cost['thinking_tokens']:,} (${cost['thinking_cost']:.4f})")
+        print(f"  TOTAL COST:      ${cost['total_cost']:.4f}")
     
     if failed:
         print(f"\nFailed questions:")
@@ -345,10 +400,14 @@ def run_parallel_test(questions: list, workers: int = 50):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_file = OUTPUT_DIR / f"gemini3_test_{timestamp}.json"
     
+    # Calculate cost for output
+    cost = calculate_cost(results) if successful else {}
+    
     output_data = {
         "metadata": {
             "timestamp": datetime.now().isoformat(),
             "model": model_info["model_id"],
+            "thinking_level": thinking_level,
             "questions": len(questions),
             "workers": workers,
             "total_time_seconds": total_time,
@@ -359,6 +418,7 @@ def run_parallel_test(questions: list, workers: int = 50):
             "failed": len(failed),
             "success_rate": len(successful) / len(questions),
         },
+        "tokens": cost,
         "results": results,
     }
     
@@ -371,13 +431,14 @@ def run_parallel_test(questions: list, workers: int = 50):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Gemini 3 Flash Preview Stress Test")
+    parser = argparse.ArgumentParser(description="Gemini 3 Flash Preview Evaluation Test")
     parser.add_argument("--questions", type=int, default=DEFAULT_QUESTIONS, help="Number of questions to run (default: 458)")
     parser.add_argument("--workers", type=int, default=DEFAULT_WORKERS, help="Number of parallel workers (default: 50)")
+    parser.add_argument("--thinking", type=str, default=DEFAULT_THINKING, choices=["LOW", "HIGH"], help="Thinking level (default: LOW)")
     args = parser.parse_args()
     
     questions = load_corpus(args.questions)
-    run_parallel_test(questions, args.workers)
+    run_parallel_test(questions, args.workers, args.thinking)
 
 
 if __name__ == "__main__":

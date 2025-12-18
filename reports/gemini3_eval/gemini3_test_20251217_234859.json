@@ -1,0 +1,1128 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-17T23:48:59.836849",
+    "model": "gemini-3-flash-preview",
+    "thinking_level": "LOW",
+    "questions": 20,
+    "workers": 50,
+    "total_time_seconds": 15.522661924362183,
+    "throughput_per_minute": 77.30632837636239
+  },
+  "summary": {
+    "successful": 20,
+    "failed": 0,
+    "success_rate": 1.0
+  },
+  "tokens": {
+    "input_tokens": 8065,
+    "output_tokens": 3375,
+    "thinking_tokens": 25093,
+    "total_tokens": 36533,
+    "input_cost": 0.0006048749999999999,
+    "output_cost": 0.0010125,
+    "thinking_cost": 0.0075279,
+    "total_cost": 0.009145275
+  },
+  "results": [
+    {
+      "question_id": "sh_easy_007",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the manufacturer specifications for the **BDM-1200-LV** and **BDM-1600-LV** Micro Inverters, the maximum efficiency is:\n\n**Maximum Efficiency: 97.3%**\n\n(Note: The CEC weighted efficiency for ",
+      "gen_time": 2.8111751079559326,
+      "judge_time": 0.9495058059692383,
+      "total_time": 3.7606987953186035,
+      "tokens": {
+        "gen_prompt": 102,
+        "gen_response": 71,
+        "gen_thinking": 305,
+        "judge_prompt": 280,
+        "judge_response": 67,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 102,
+          "completion_tokens": 71,
+          "thinking_tokens": 305,
+          "total_tokens": 478,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "r4dDadPhA52S_uMP9Ym6oQ4"
+        },
+        "judge": {
+          "prompt_tokens": 280,
+          "completion_tokens": 67,
+          "thinking_tokens": null,
+          "total_tokens": 347,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sIdDafiCAaW6_uMPkLGXsA4"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_015",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "rag_answer": "Based on the technical specifications for Southwire XLPE (Cross-linked Polyethylene) high-voltage power cables, the nominal (maximum continuous) conductor temperature is **90\u00b0C**.\n\nAdditional thermal ",
+      "gen_time": 3.1170077323913574,
+      "judge_time": 0.9681439399719238,
+      "total_time": 4.085163116455078,
+      "tokens": {
+        "gen_prompt": 96,
+        "gen_response": 78,
+        "gen_thinking": 360,
+        "judge_prompt": 303,
+        "judge_response": 67,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 96,
+          "completion_tokens": 78,
+          "thinking_tokens": 360,
+          "total_tokens": 534,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "r4dDaeSMF_GT_uMPmaa-yAg"
+        },
+        "judge": {
+          "prompt_tokens": 303,
+          "completion_tokens": 67,
+          "thinking_tokens": null,
+          "total_tokens": 370,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sIdDaZjQFNS3_uMPmciciQg"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_009",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "rag_answer": "Based on the manufacturer specifications for the Siemens 3VA41 molded case circuit breaker (UL 489 version), the maximum AC interrupting rating at 480VAC is **65 kA**.\n\nThis rating corresponds to the ",
+      "gen_time": 4.127578973770142,
+      "judge_time": 1.0028250217437744,
+      "total_time": 5.130420923233032,
+      "tokens": {
+        "gen_prompt": 96,
+        "gen_response": 123,
+        "gen_thinking": 487,
+        "judge_prompt": 324,
+        "judge_response": 67,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 96,
+          "completion_tokens": 123,
+          "thinking_tokens": 487,
+          "total_tokens": 706,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sIdDaYT2F4-9_uMPzqWuyQc"
+        },
+        "judge": {
+          "prompt_tokens": 324,
+          "completion_tokens": 67,
+          "thinking_tokens": null,
+          "total_tokens": 391,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sYdDabagF9S3_uMPmciciQg"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_008",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "rag_answer": "Based on industry standards and the technical requirements referenced in UL 943, the effective date for the **Self-Test and Lockout** (Power Denial) feature requirement was **June 29, 2015**.\n\nAs of t",
+      "gen_time": 6.379161834716797,
+      "judge_time": 1.018493890762329,
+      "total_time": 7.397680997848511,
+      "tokens": {
+        "gen_prompt": 101,
+        "gen_response": 122,
+        "gen_thinking": 784,
+        "judge_prompt": 331,
+        "judge_response": 73,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 101,
+          "completion_tokens": 122,
+          "thinking_tokens": 784,
+          "total_tokens": 1007,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sodDabrNJ7i__uMPg9yZsQ4"
+        },
+        "judge": {
+          "prompt_tokens": 331,
+          "completion_tokens": 73,
+          "thinking_tokens": null,
+          "total_tokens": 404,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "s4dDaZLFJMbi_uMPw9XVsQo"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_017",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 2.6,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the manufacturer specifications for the EV-2H Aluminum Vertical Break Disconnect Switch, the maximum voltage rating is **230 kV**.",
+      "gen_time": 3.950240135192871,
+      "judge_time": 3.4439287185668945,
+      "total_time": 7.394191741943359,
+      "tokens": {
+        "gen_prompt": 90,
+        "gen_response": 29,
+        "gen_thinking": 480,
+        "judge_prompt": 248,
+        "judge_response": 69,
+        "judge_thinking": 429
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 90,
+          "completion_tokens": 29,
+          "thinking_tokens": 480,
+          "total_tokens": 599,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sIdDabD9DNu2_uMPu9GS0Ag"
+        },
+        "judge": {
+          "prompt_tokens": 248,
+          "completion_tokens": 69,
+          "thinking_tokens": 429,
+          "total_tokens": 746,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "s4dDabb2JpKt_uMPj5yzqAg"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_002",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 2,
+        "clarity": 5,
+        "overall_score": 2.8,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the provided context, the specific maximum length for an RS-485 bus cable is not stated. According to the general notes, you must **refer to the manufacturer specifications for details** rega",
+      "gen_time": 2.898297071456909,
+      "judge_time": 4.911334991455078,
+      "total_time": 7.809652328491211,
+      "tokens": {
+        "gen_prompt": 93,
+        "gen_response": 44,
+        "gen_thinking": 345,
+        "judge_prompt": 264,
+        "judge_response": 75,
+        "judge_thinking": 589
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 93,
+          "completion_tokens": 44,
+          "thinking_tokens": 345,
+          "total_tokens": 482,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "r4dDaYm7Cd6__uMPvsekuAo"
+        },
+        "judge": {
+          "prompt_tokens": 264,
+          "completion_tokens": 75,
+          "thinking_tokens": 589,
+          "total_tokens": 928,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "s4dDaYbFO4ve_uMP7ruM0Ao"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_005",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 2.6,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the manufacturer specifications for the **NEP BDM-1200-LV** Micro Inverter, the rated AC voltage is:\n\n*   **Nominal Voltage:** 240V or 208V (Configurable depending on the local grid requireme",
+      "gen_time": 4.585143089294434,
+      "judge_time": 3.494201898574829,
+      "total_time": 8.079360008239746,
+      "tokens": {
+        "gen_prompt": 94,
+        "gen_response": 154,
+        "gen_thinking": 495,
+        "judge_prompt": 354,
+        "judge_response": 69,
+        "judge_thinking": 421
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 94,
+          "completion_tokens": 154,
+          "thinking_tokens": 495,
+          "total_tokens": 743,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sIdDaYjsM8bO_uMP6ZXFmQ4"
+        },
+        "judge": {
+          "prompt_tokens": 354,
+          "completion_tokens": 69,
+          "thinking_tokens": 421,
+          "total_tokens": 844,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "tIdDaejKE9u2_uMPu9GS0Ag"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_004",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 2,
+        "clarity": 5,
+        "overall_score": 2.8,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the provided context, the specific maximum RMS line voltage is not explicitly stated. To determine this value accurately, you must **refer to the manufacturer specifications** and the **techn",
+      "gen_time": 2.9173481464385986,
+      "judge_time": 5.560628890991211,
+      "total_time": 8.47800612449646,
+      "tokens": {
+        "gen_prompt": 91,
+        "gen_response": 52,
+        "gen_thinking": 326,
+        "judge_prompt": 265,
+        "judge_response": 69,
+        "judge_thinking": 724
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 91,
+          "completion_tokens": 52,
+          "thinking_tokens": 326,
+          "total_tokens": 469,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "r4dDabeuCvrO_uMP3JCAqQ4"
+        },
+        "judge": {
+          "prompt_tokens": 265,
+          "completion_tokens": 69,
+          "thinking_tokens": 724,
+          "total_tokens": 1058,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "tIdDaaObLYas_uMPsP-nyQg"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_019",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "rag_answer": "Based on the provided context and manufacturer specifications for the EV-2H Aluminum Vertical Disconnect Switch, the Power Frequency is **60 Hz**.\n\nPer the context instructions, you should refer to th",
+      "gen_time": 8.578641891479492,
+      "judge_time": 1.142320156097412,
+      "total_time": 9.720982074737549,
+      "tokens": {
+        "gen_prompt": 90,
+        "gen_response": 73,
+        "gen_thinking": 1122,
+        "judge_prompt": 285,
+        "judge_response": 67,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 90,
+          "completion_tokens": 73,
+          "thinking_tokens": 1122,
+          "total_tokens": 1285,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "tIdDadOpM8G-_uMPv6D8kA8"
+        },
+        "judge": {
+          "prompt_tokens": 285,
+          "completion_tokens": 67,
+          "thinking_tokens": null,
+          "total_tokens": 352,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "tYdDadyqPPON_PUPu7iIiQo"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_006",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 2,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the technical documentation for the NEP (Northern Electric & Power) BDM-1200-LV and BDM-1600-LV Micro Inverters, the communication interface used is:\n\n*   **PLC (Power Line Communication):** ",
+      "gen_time": 5.246929168701172,
+      "judge_time": 5.289062738418579,
+      "total_time": 10.536010026931763,
+      "tokens": {
+        "gen_prompt": 102,
+        "gen_response": 139,
+        "gen_thinking": 603,
+        "judge_prompt": 347,
+        "judge_response": 67,
+        "judge_thinking": 758
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 102,
+          "completion_tokens": 139,
+          "thinking_tokens": 603,
+          "total_tokens": 844,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sYdDaa-TH4as_uMPsP-nyQg"
+        },
+        "judge": {
+          "prompt_tokens": 347,
+          "completion_tokens": 67,
+          "thinking_tokens": 758,
+          "total_tokens": 1172,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "todDadjtMMit_uMP0sqE0A4"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_012",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 4,
+        "verdict": "partial"
+      },
+      "rag_answer": "Based on technical specifications for the AcquiSuite unit (such as the Obvius A8810 or A8812), the names of the two external buttons are:\n\n1.  **Select**\n2.  **Menu**",
+      "gen_time": 4.130326986312866,
+      "judge_time": 6.7477240562438965,
+      "total_time": 10.87844705581665,
+      "tokens": {
+        "gen_prompt": 88,
+        "gen_response": 51,
+        "gen_thinking": 492,
+        "judge_prompt": 243,
+        "judge_response": 67,
+        "judge_thinking": 809
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 88,
+          "completion_tokens": 51,
+          "thinking_tokens": 492,
+          "total_tokens": 631,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sIdDadSUGLrO_uMPkdLe6QQ"
+        },
+        "judge": {
+          "prompt_tokens": 243,
+          "completion_tokens": 67,
+          "thinking_tokens": 809,
+          "total_tokens": 1119,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "t4dDaZTTBoaM_PUPvqSngQo"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_010",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 1,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the provided context and manufacturer specifications (as referenced in point [3]), the specific 3VA circuit breaker models that are shipped as standard with aluminum load-side lugs already in",
+      "gen_time": 10.45458197593689,
+      "judge_time": 0.9459841251373291,
+      "total_time": 11.40061092376709,
+      "tokens": {
+        "gen_prompt": 92,
+        "gen_response": 153,
+        "gen_thinking": 1324,
+        "judge_prompt": 356,
+        "judge_response": 67,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 92,
+          "completion_tokens": 153,
+          "thinking_tokens": 1324,
+          "total_tokens": 1569,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "todDafHhKsnv_uMP4J7pkQk"
+        },
+        "judge": {
+          "prompt_tokens": 356,
+          "completion_tokens": 67,
+          "thinking_tokens": null,
+          "total_tokens": 423,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "t4dDaZLyJ9u2_uMPu9GS0Ag"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_016",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 4,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "rag_answer": "Based on the provided context and manufacturer specifications for the Southwire 345/400 kV XLPE Power Cable, the design standards are:\n\n*   **ICEA S-108-720:** Standard for Extruded Insulation Power P",
+      "gen_time": 10.987807035446167,
+      "judge_time": 1.1137018203735352,
+      "total_time": 12.101531982421875,
+      "tokens": {
+        "gen_prompt": 95,
+        "gen_response": 190,
+        "gen_thinking": 1505,
+        "judge_prompt": 413,
+        "judge_response": 67,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 95,
+          "completion_tokens": 190,
+          "thinking_tokens": 1505,
+          "total_tokens": 1790,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "t4dDac7cD93g_uMP78SDwQ8"
+        },
+        "judge": {
+          "prompt_tokens": 413,
+          "completion_tokens": 67,
+          "thinking_tokens": null,
+          "total_tokens": 480,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "uIdDaY34E8bO_uMP6ZXFmQ4"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_011",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 1,
+        "relevance": 4,
+        "clarity": 4,
+        "overall_score": 2,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the context provided, the specific model number is not explicitly stated. However, in standard technical documentation for AcquiSuite equipment (manufactured by Obvius/Leviton), the most comm",
+      "gen_time": 11.392577886581421,
+      "judge_time": 1.2300739288330078,
+      "total_time": 12.622689008712769,
+      "tokens": {
+        "gen_prompt": 90,
+        "gen_response": 119,
+        "gen_thinking": 1568,
+        "judge_prompt": 320,
+        "judge_response": 67,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 90,
+          "completion_tokens": 119,
+          "thinking_tokens": 1568,
+          "total_tokens": 1777,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "t4dDabquIaW-_uMP9I3a4Ao"
+        },
+        "judge": {
+          "prompt_tokens": 320,
+          "completion_tokens": 67,
+          "thinking_tokens": null,
+          "total_tokens": 387,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "uIdDad24KtS3_uMPmciciQg"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_013",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 2,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 2.8,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on standard technical documentation and manufacturer specifications for AcquiSuite data acquisition servers (such as the A8810 or A8812) when integrated with a cellular modem, the common static ",
+      "gen_time": 8.560209274291992,
+      "judge_time": 4.063109874725342,
+      "total_time": 12.623356819152832,
+      "tokens": {
+        "gen_prompt": 89,
+        "gen_response": 162,
+        "gen_thinking": 1020,
+        "judge_prompt": 365,
+        "judge_response": 69,
+        "judge_thinking": 471
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 89,
+          "completion_tokens": 162,
+          "thinking_tokens": 1020,
+          "total_tokens": 1271,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "tIdDaY2AMoaM_PUPvqSngQo"
+        },
+        "judge": {
+          "prompt_tokens": 365,
+          "completion_tokens": 69,
+          "thinking_tokens": 471,
+          "total_tokens": 905,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "uIdDadPYLs21_uMPhIfLqAg"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_018",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 2,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the manufacturer specifications for the **EV-2H Aluminum Vertical Break Disconnect Switch** (typically manufactured by Hubbell Power Systems/Chance), the continuous current ratings are:\n\n*   ",
+      "gen_time": 6.421935081481934,
+      "judge_time": 6.825304985046387,
+      "total_time": 13.24726414680481,
+      "tokens": {
+        "gen_prompt": 90,
+        "gen_response": 125,
+        "gen_thinking": 802,
+        "judge_prompt": 353,
+        "judge_response": 67,
+        "judge_thinking": 1005
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 90,
+          "completion_tokens": 125,
+          "thinking_tokens": 802,
+          "total_tokens": 1017,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sodDafDAKpTf_uMPm4nKiQ8"
+        },
+        "judge": {
+          "prompt_tokens": 353,
+          "completion_tokens": 67,
+          "thinking_tokens": 1005,
+          "total_tokens": 1425,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "uYdDadG_H4K3_uMPytTWiAg"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_014",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 4.2,
+        "verdict": "pass"
+      },
+      "rag_answer": "Based on manufacturer specifications for the Southwire 345/400 kV XLPE Power Cable, the maximum voltage rating (Maximum System Voltage, $U_m$) is **420 kV**.",
+      "gen_time": 5.818266868591309,
+      "judge_time": 8.01996922492981,
+      "total_time": 13.8382568359375,
+      "tokens": {
+        "gen_prompt": 96,
+        "gen_response": 43,
+        "gen_thinking": 775,
+        "judge_prompt": 268,
+        "judge_response": 69,
+        "judge_thinking": 1068
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 96,
+          "completion_tokens": 43,
+          "thinking_tokens": 775,
+          "total_tokens": 914,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "sodDaY-pBbCR_uMP-Jm9-Qg"
+        },
+        "judge": {
+          "prompt_tokens": 268,
+          "completion_tokens": 69,
+          "thinking_tokens": 1068,
+          "total_tokens": 1405,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "uodDacOzBqW-_uMP9I3a4Ao"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_020",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 2,
+        "faithfulness": 2,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3.0,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the provided context, the specific voltage is not mentioned. However, according to the technical specifications for the **Easley Renewable Energy Project** (specifically the Easley Solar and ",
+      "gen_time": 9.504415035247803,
+      "judge_time": 4.37193489074707,
+      "total_time": 13.87640380859375,
+      "tokens": {
+        "gen_prompt": 93,
+        "gen_response": 113,
+        "gen_thinking": 1275,
+        "judge_prompt": 312,
+        "judge_response": 69,
+        "judge_thinking": 508
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 93,
+          "completion_tokens": 113,
+          "thinking_tokens": 1275,
+          "total_tokens": 1481,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "tYdDafuWLpa__uMPz-25yQ4"
+        },
+        "judge": {
+          "prompt_tokens": 312,
+          "completion_tokens": 69,
+          "thinking_tokens": 508,
+          "total_tokens": 889,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "uodDaYCXCaW-_uMP9I3a4Ao"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_001",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 4,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "rag_answer": "Based on the provided context, the specific examples for the \"Reason for Replacement\" on the Spare Part Request Form are not listed. The context mentions that one should refer to the **technical docum",
+      "gen_time": 14.264172077178955,
+      "judge_time": 0.9753038883209229,
+      "total_time": 15.239501714706421,
+      "tokens": {
+        "gen_prompt": 92,
+        "gen_response": 119,
+        "gen_thinking": 2046,
+        "judge_prompt": 316,
+        "judge_response": 67,
+        "judge_thinking": null
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 92,
+          "completion_tokens": 119,
+          "thinking_tokens": 2046,
+          "total_tokens": 2257,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "uodDabX1G8G-_uMPv6D8kA8"
+        },
+        "judge": {
+          "prompt_tokens": 316,
+          "completion_tokens": 67,
+          "thinking_tokens": null,
+          "total_tokens": 383,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "u4dDadaKHpKS_uMPyK2KgAs"
+        }
+      }
+    },
+    {
+      "question_id": "sh_easy_003",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "success": true,
+      "judgment": {
+        "correctness": 4,
+        "completeness": 4,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "fail"
+      },
+      "rag_answer": "Based on the provided context, the specific DC system size is not explicitly stated. However, according to the technical specifications for the Boyne Mountain Resort solar project, the DC system size ",
+      "gen_time": 10.062372207641602,
+      "judge_time": 5.458295822143555,
+      "total_time": 15.520692110061646,
+      "tokens": {
+        "gen_prompt": 90,
+        "gen_response": 43,
+        "gen_thinking": 1461,
+        "judge_prompt": 248,
+        "judge_response": 73,
+        "judge_thinking": 736
+      },
+      "llm_metadata": {
+        "gen": {
+          "prompt_tokens": 90,
+          "completion_tokens": 43,
+          "thinking_tokens": 1461,
+          "total_tokens": 1594,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "todDaf_1DtS3_uMPmciciQg"
+        },
+        "judge": {
+          "prompt_tokens": 248,
+          "completion_tokens": 73,
+          "thinking_tokens": 736,
+          "total_tokens": 1057,
+          "cached_content_tokens": 0,
+          "model_version": "gemini-3-flash-preview",
+          "finish_reason": "FinishReason.STOP",
+          "used_fallback": false,
+          "reasoning_effort": "low",
+          "avg_logprobs": null,
+          "response_id": "u4dDae_yLpTf_uMPm4nKiQ8"
+        }
+      }
+    }
+  ]
+}
