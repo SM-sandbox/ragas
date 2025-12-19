@@ -40,13 +40,14 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from lib.clients.gemini_client import generate_for_judge, get_model_info
 from lib.core.config_loader import load_config, get_generator_config, get_judge_config
 from lib.core.pricing import get_model_pricing, calculate_token_cost
+from lib.core.rate_limiter import SmartRateLimiter, get_limiter_for_model
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
 CORPUS_PATH = Path(__file__).parent.parent.parent / "clients_qa_gold" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "core_eval"
 CHECKPOINT_INTERVAL = 10
-DEFAULT_WORKERS = 5  # Safe for 60 RPM quota, increase to 15-25 with 1500 RPM
+DEFAULT_WORKERS = 100  # Rate limiter self-regulates, can set high
 
 # Cloud Run config
 CLOUD_RUN_URL = "https://bfai-api-ppfq5ahfsq-ue.a.run.app"
@@ -143,6 +144,9 @@ class GoldEvaluator:
         # Load pricing once at init (not per-question)
         self.generator_pricing = get_model_pricing(self.model)
         self.judge_pricing = get_model_pricing(self.judge_model_name)
+        
+        # Initialize rate limiter for the judge model (generator uses cloud orchestrator's limiter)
+        self.rate_limiter = get_limiter_for_model(self.judge_model_name)
         
         self.lock = Lock()  # Thread-safe checkpoint access
         self.run_start_time = None
@@ -351,6 +355,10 @@ Score 1-5 for each (5=best):
 Respond with JSON containing: correctness, completeness, faithfulness, relevance, clarity, overall_score (all 1-5), and verdict (pass|partial|fail)."""
         
         try:
+            # Acquire rate limiter capacity before making judge call
+            # Estimate ~1000 tokens per judge call (prompt + response)
+            self.rate_limiter.acquire_sync(estimated_tokens=1000)
+            
             # Use gemini_client with config from loaded config file, return metadata for token tracking
             result = generate_for_judge(
                 prompt,
@@ -940,6 +948,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 "run_duration_seconds": run_duration,
                 "questions_per_second": len(valid) / run_duration if run_duration > 0 else 0,
                 "workers": self.workers,
+                "rate_limiter": self.rate_limiter.get_usage(),
             },
             "retry_stats": retry_stats,
             "errors": errors,
