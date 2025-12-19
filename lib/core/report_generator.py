@@ -22,7 +22,7 @@ from pathlib import Path
 # Paths
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
-BASELINES_DIR = PROJECT_ROOT / "baselines"
+BASELINES_DIR = PROJECT_ROOT / "eval_data" / "gold"
 REPORTS_DIR = PROJECT_ROOT / "reports" / "gold_standard_eval"
 
 # Default files

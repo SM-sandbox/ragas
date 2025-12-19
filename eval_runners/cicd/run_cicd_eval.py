@@ -74,8 +74,8 @@ def check_imports() -> bool:
     
     # Entry point imports
     try:
-        from evaluations.baseline.run_baseline import run_evaluation
-        print("  ✓ evaluations.baseline.run_baseline")
+        from eval_runners.baseline.run_baseline import run_evaluation
+        print("  ✓ eval_runners.baseline.run_baseline")
     except ImportError as e:
         errors.append(f"evaluations.baseline.run_baseline: {e}")
     
@@ -148,7 +148,7 @@ def validate_config() -> bool:
 
 def run_quick_eval(num_questions: int = 30) -> dict:
     """Run quick evaluation and return results."""
-    from evaluations.baseline.run_baseline import run_evaluation
+    from eval_runners.baseline.run_baseline import run_evaluation
     
     print(f"\nRunning quick evaluation ({num_questions} questions)...")
     print("-" * 40)

@@ -179,7 +179,7 @@ def interactive_config() -> dict:
 
 def run_evaluation(config: dict):
     """Run the evaluation with the given config."""
-    from evaluations.baseline.run_baseline import run_evaluation as core_run
+    from eval_runners.baseline.run_baseline import run_evaluation as core_run
     
     print("\n🚀 Starting evaluation...")
     print("-" * 40)

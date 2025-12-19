@@ -2,7 +2,7 @@
 Baseline Manager for Core Eval
 
 Handles loading, saving, and comparing baselines for RAG evaluation.
-Baselines are versioned JSON files stored in the baselines/ directory.
+Baselines are versioned JSON files stored in the eval_data/gold/ directory.
 
 Naming convention: baseline_gold__{CLIENT}__{VERSION}__{DATE}__q{COUNT}.json
 Example: baseline_gold__BFAI__v1__2025-12-17__q458.json
@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 # Default baselines directory
-BASELINES_DIR = Path(__file__).parent.parent.parent / "baselines"
+BASELINES_DIR = Path(__file__).parent.parent.parent / "eval_data" / "gold"
 
 
 def get_baseline_path(client: str, version: str, date: str, question_count: int) -> Path:
