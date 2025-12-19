@@ -1,10 +1,17 @@
 """
-BFAI Eval Suite Core Module.
+DEPRECATED: Use lib/ instead.
 
-Provides model registry integration, pre-flight checks, metrics, and reporting.
+This module re-exports from lib/ for backward compatibility.
 """
+import warnings
+warnings.warn(
+    "Importing from src/ is deprecated. Use lib/ instead.",
+    DeprecationWarning,
+    stacklevel=2
+)
 
-from .models import (
+# Re-export from lib for compatibility
+from lib.utils.models import (
     get_model,
     get_approved_models,
     get_models_with_thinking,
@@ -13,13 +20,13 @@ from .models import (
     ModelInfo,
 )
 
-from .preflight import (
+from lib.utils.preflight import (
     run_preflight_checks,
     PreflightResult,
     PreflightCheck,
 )
 
-from .report import (
+from lib.utils.report import (
     generate_report,
     ReportConfig,
 )
