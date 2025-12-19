@@ -516,12 +516,11 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             # Retrieval config
             "retrieval_config": retrieval_config,
             
-            # Generator config
+            # Generator config (note: seed not passed to gRAG_v3, uses temp=0.0 for reproducibility)
             "generator_config": {
                 "model": self.model,
                 "reasoning_effort": self.generator_reasoning,
                 "temperature": self.generator_config.get("temperature", 0.0),
-                "seed": self.generator_config.get("seed", 42),
                 "max_output_tokens": self.generator_config.get("max_output_tokens", 8192),
             },
             
