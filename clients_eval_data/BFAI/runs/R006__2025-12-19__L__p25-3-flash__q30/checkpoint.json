@@ -1,0 +1,1472 @@
+[
+  {
+    "question_id": "sh_easy_005",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 6.757294178009033,
+    "timing": {
+      "retrieval": 1.1769609451293945,
+      "rerank": 2.7098388671875,
+      "generation": 1.1081881523132324,
+      "judge": 1.7622811794281006,
+      "total": 6.757294178009033
+    },
+    "tokens": {
+      "prompt": 5180,
+      "completion": 54,
+      "thinking": 0,
+      "total": 5234,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hXBFaYTGJ4qYjMcPte-P4Qs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 180,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_004",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 6.913287878036499,
+    "timing": {
+      "retrieval": 1.1674649715423584,
+      "rerank": 2.700705051422119,
+      "generation": 1.9663927555084229,
+      "judge": 1.0786969661712646,
+      "total": 6.913287878036499
+    },
+    "tokens": {
+      "prompt": 9480,
+      "completion": 131,
+      "thinking": 0,
+      "total": 9611,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hnBFaaCqHYTSjMcPu7-ruAE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 565,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_003",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 6.986644983291626,
+    "timing": {
+      "retrieval": 1.1580231189727783,
+      "rerank": 2.6942708492279053,
+      "generation": 2.093143939971924,
+      "judge": 1.0411701202392578,
+      "total": 6.986644983291626
+    },
+    "tokens": {
+      "prompt": 36276,
+      "completion": 47,
+      "thinking": 0,
+      "total": 36323,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hnBFadHMJLbTjMcPk6rTuAE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 177,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_001",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 7.04928994178772,
+    "timing": {
+      "retrieval": 1.192533016204834,
+      "rerank": 2.5982160568237305,
+      "generation": 1.4336698055267334,
+      "judge": 1.8248209953308105,
+      "total": 7.04928994178772
+    },
+    "tokens": {
+      "prompt": 5351,
+      "completion": 122,
+      "thinking": 0,
+      "total": 5473,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hXBFaYefNZ6MjMcP1K-w0Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 559,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_003",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 7.207639217376709,
+    "timing": {
+      "retrieval": 1.166388988494873,
+      "rerank": 2.687699794769287,
+      "generation": 2.259826898574829,
+      "judge": 1.0936822891235352,
+      "total": 7.207639217376709
+    },
+    "tokens": {
+      "prompt": 8218,
+      "completion": 212,
+      "thinking": 0,
+      "total": 8430,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hnBFaayiL9CNjMcP4PCO6QE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 731,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_002",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 7.3617870807647705,
+    "timing": {
+      "retrieval": 1.1574931144714355,
+      "rerank": 2.7409677505493164,
+      "generation": 1.5899548530578613,
+      "judge": 1.8732900619506836,
+      "total": 7.3617870807647705
+    },
+    "tokens": {
+      "prompt": 6760,
+      "completion": 146,
+      "thinking": 0,
+      "total": 6906,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hnBFaYmICdCNjMcP4PCO6QE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 496,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_001",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 7.452270030975342,
+    "timing": {
+      "retrieval": 1.1960461139678955,
+      "rerank": 2.6311428546905518,
+      "generation": 1.7228271961212158,
+      "judge": 1.9022269248962402,
+      "total": 7.452270030975342
+    },
+    "tokens": {
+      "prompt": 6634,
+      "completion": 135,
+      "thinking": 0,
+      "total": 6769,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hnBFaYqjDJzSjMcP-ff0eA",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 733,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_002",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 7.748479127883911,
+    "timing": {
+      "retrieval": 1.1866440773010254,
+      "rerank": 2.6568357944488525,
+      "generation": 2.795151948928833,
+      "judge": 1.1098098754882812,
+      "total": 7.748479127883911
+    },
+    "tokens": {
+      "prompt": 18202,
+      "completion": 233,
+      "thinking": 0,
+      "total": 18435,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "h3BFafn2EcjRjMcPqMDuwQE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 863,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_004",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 8.411220073699951,
+    "timing": {
+      "retrieval": 1.1463680267333984,
+      "rerank": 2.8029727935791016,
+      "generation": 3.4730539321899414,
+      "judge": 0.9887850284576416,
+      "total": 8.411220073699951
+    },
+    "tokens": {
+      "prompt": 13083,
+      "completion": 408,
+      "thinking": 0,
+      "total": 13491,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "iHBFaZHwBJLSjMcPia3A0Ag",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1955,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_002",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 3.546056032180786,
+    "timing": {
+      "retrieval": 0.27936601638793945,
+      "rerank": 0.17284917831420898,
+      "generation": 2.1221351623535156,
+      "judge": 0.9716739654541016,
+      "total": 3.546056032180786
+    },
+    "tokens": {
+      "prompt": 9235,
+      "completion": 128,
+      "thinking": 0,
+      "total": 9363,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "inBFaf-kJ56MjMcP1K-w0Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 369,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_002",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 5.122650146484375,
+    "timing": {
+      "retrieval": 0.29537105560302734,
+      "rerank": 0.1552901268005371,
+      "generation": 3.668349027633667,
+      "judge": 1.0036132335662842,
+      "total": 5.122650146484375
+    },
+    "tokens": {
+      "prompt": 3143,
+      "completion": 554,
+      "thinking": 0,
+      "total": 3697,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "i3BFaaePKoWI-sAPopiV0A8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1915,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_004",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 5.581244230270386,
+    "timing": {
+      "retrieval": 0.2834279537200928,
+      "rerank": 0.15361404418945312,
+      "generation": 4.127522230148315,
+      "judge": 1.016629934310913,
+      "total": 5.581244230270386
+    },
+    "tokens": {
+      "prompt": 9653,
+      "completion": 386,
+      "thinking": 0,
+      "total": 10039,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "jHBFacCxEMaJ-sAPp92p2A8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1290,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_005",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 4,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3.5,
+      "verdict": "partial"
+    },
+    "time": 3.81046724319458,
+    "timing": {
+      "retrieval": 0.2806270122528076,
+      "rerank": 0.17839384078979492,
+      "generation": 2.300258159637451,
+      "judge": 1.0511579513549805,
+      "total": 3.81046724319458
+    },
+    "tokens": {
+      "prompt": 6952,
+      "completion": 272,
+      "thinking": 0,
+      "total": 7224,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "jnBFacCeGayZjMcP8pyT8As",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1018,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_001",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 0.3333333333333333,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 8.025134801864624,
+    "timing": {
+      "retrieval": 0.29044198989868164,
+      "rerank": 0.14448904991149902,
+      "generation": 6.50319504737854,
+      "judge": 1.0869648456573486,
+      "total": 8.025134801864624
+    },
+    "tokens": {
+      "prompt": 6642,
+      "completion": 228,
+      "thinking": 474,
+      "total": 7344,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "jnBFaZOgOsjRjMcPqMDuwQE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 731,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_001",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 9.999866962432861,
+    "timing": {
+      "retrieval": 0.2994418144226074,
+      "rerank": 0.21395206451416016,
+      "generation": 8.419523000717163,
+      "judge": 1.0669069290161133,
+      "total": 9.999866962432861
+    },
+    "tokens": {
+      "prompt": 11089,
+      "completion": 351,
+      "thinking": 551,
+      "total": 11991,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "kHBFacyCFYWI-sAPopiV0A8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1409,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_001",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 5.119603157043457,
+    "timing": {
+      "retrieval": 0.22259306907653809,
+      "rerank": 0.2245478630065918,
+      "generation": 3.592404842376709,
+      "judge": 1.0800251960754395,
+      "total": 5.119603157043457
+    },
+    "tokens": {
+      "prompt": 11546,
+      "completion": 367,
+      "thinking": 0,
+      "total": 11913,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "kHBFabHdLJ2K-sAP1tCd-AE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1230,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_003",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 10.79801321029663,
+    "timing": {
+      "retrieval": 0.31488990783691406,
+      "rerank": 0.17644095420837402,
+      "generation": 9.292436122894287,
+      "judge": 1.014214038848877,
+      "total": 10.79801321029663
+    },
+    "tokens": {
+      "prompt": 10653,
+      "completion": 296,
+      "thinking": 546,
+      "total": 11495,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "kXBFacbsGe7UjMcPyvHQ0A8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1206,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_003",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 0.25,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 10.36152982711792,
+    "timing": {
+      "retrieval": 0.20360612869262695,
+      "rerank": 0.20129919052124023,
+      "generation": 8.758466720581055,
+      "judge": 1.1981220245361328,
+      "total": 10.36152982711792
+    },
+    "tokens": {
+      "prompt": 27314,
+      "completion": 174,
+      "thinking": 673,
+      "total": 28161,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "kXBFabeuIsDdjMcPgd2FmAg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 654,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_005",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 18.243128061294556,
+    "timing": {
+      "retrieval": 1.1752347946166992,
+      "rerank": 2.772047996520996,
+      "generation": 13.361432075500488,
+      "judge": 0.9343791007995605,
+      "total": 18.243128061294556
+    },
+    "tokens": {
+      "prompt": 13641,
+      "completion": 368,
+      "thinking": 946,
+      "total": 14955,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "kXBFaebyOoqYjMcPte-P4Qs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1758,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_005",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 11.459508895874023,
+    "timing": {
+      "retrieval": 0.1944589614868164,
+      "rerank": 0.16039085388183594,
+      "generation": 9.899886846542358,
+      "judge": 1.2047369480133057,
+      "total": 11.459508895874023
+    },
+    "tokens": {
+      "prompt": 8865,
+      "completion": 306,
+      "thinking": 845,
+      "total": 10016,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "knBFaZXCB8jEjMcP0MTE2Ao",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1154,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_003",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 4.829036712646484,
+    "timing": {
+      "retrieval": 0.2016761302947998,
+      "rerank": 0.15749597549438477,
+      "generation": 3.298271417617798,
+      "judge": 1.1715526580810547,
+      "total": 4.829036712646484
+    },
+    "tokens": {
+      "prompt": 6845,
+      "completion": 434,
+      "thinking": 0,
+      "total": 7279,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "lnBFaYbIGYWI-sAPopiV0A8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1551,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_004",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 14.748757123947144,
+    "timing": {
+      "retrieval": 0.26874232292175293,
+      "rerank": 0.18093180656433105,
+      "generation": 13.361881017684937,
+      "judge": 0.9371640682220459,
+      "total": 14.748757123947144
+    },
+    "tokens": {
+      "prompt": 11939,
+      "completion": 506,
+      "thinking": 866,
+      "total": 13311,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "lnBFaYbqNMKVjMcPg9CY-As",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1883,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_002",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 0.25,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 14.204966068267822,
+    "timing": {
+      "retrieval": 0.20704317092895508,
+      "rerank": 0.18430113792419434,
+      "generation": 12.845348119735718,
+      "judge": 0.9682450294494629,
+      "total": 14.204966068267822
+    },
+    "tokens": {
+      "prompt": 10225,
+      "completion": 275,
+      "thinking": 1336,
+      "total": 11836,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "mnBFafqwH5LSjMcPia3A0Ag",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1017,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_005",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 16.93016290664673,
+    "timing": {
+      "retrieval": 0.20964312553405762,
+      "rerank": 0.16126704216003418,
+      "generation": 15.400402784347534,
+      "judge": 1.1588029861450195,
+      "total": 16.93016290664673
+    },
+    "tokens": {
+      "prompt": 9212,
+      "completion": 661,
+      "thinking": 1317,
+      "total": 11190,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oXBFadKKC7HUjMcP7t2ZEA",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 2035,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_004",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 18.76312804222107,
+    "timing": {
+      "retrieval": 0.2550337314605713,
+      "rerank": 0.18902897834777832,
+      "generation": 17.2145893573761,
+      "judge": 1.1044299602508545,
+      "total": 18.76312804222107
+    },
+    "tokens": {
+      "prompt": 10479,
+      "completion": 693,
+      "thinking": 1072,
+      "total": 12244,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oXBFabKTKpyPjMcP9-HW2As",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 3407,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_004",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 0.25,
+    "judgment": {
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 4,
+      "verdict": "pass"
+    },
+    "time": 16.23339295387268,
+    "timing": {
+      "retrieval": 0.4167628288269043,
+      "rerank": 0.18623733520507812,
+      "generation": 14.60526418685913,
+      "judge": 1.025089979171753,
+      "total": 16.23339295387268
+    },
+    "tokens": {
+      "prompt": 8945,
+      "completion": 503,
+      "thinking": 1012,
+      "total": 10460,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "onBFaenbBt7QjMcPzq7j0Qs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 2122,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_005",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 4,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 4.5,
+      "verdict": "pass"
+    },
+    "time": 16.119686126708984,
+    "timing": {
+      "retrieval": 0.237379789352417,
+      "rerank": 0.18770217895507812,
+      "generation": 14.692763328552246,
+      "judge": 1.0018048286437988,
+      "total": 16.119686126708984
+    },
+    "tokens": {
+      "prompt": 10241,
+      "completion": 363,
+      "thinking": 1290,
+      "total": 11894,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "onBFae79GtWYjMcPs7v7uAg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 1224,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_003",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "recall_hit": true,
+    "mrr": 0.3333333333333333,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 20.455180644989014,
+    "timing": {
+      "retrieval": 0.18731379508972168,
+      "rerank": 0.20113396644592285,
+      "generation": 19.03945803642273,
+      "judge": 1.027235746383667,
+      "total": 20.455180644989014
+    },
+    "tokens": {
+      "prompt": 9224,
+      "completion": 946,
+      "thinking": 942,
+      "total": 11112,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "onBFafK8NZ2K-sAP1tCd-AE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 4461,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_001",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 0.2,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 18.905723094940186,
+    "timing": {
+      "retrieval": 0.19837474822998047,
+      "rerank": 0.1945199966430664,
+      "generation": 17.46969699859619,
+      "judge": 1.043100118637085,
+      "total": 18.905723094940186
+    },
+    "tokens": {
+      "prompt": 9903,
+      "completion": 693,
+      "thinking": 1485,
+      "total": 12081,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "o3BFafPuKKPQjMcPhP_ayAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 3231,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_002",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "recall_hit": true,
+    "mrr": 0.14285714285714285,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 20.635172128677368,
+    "timing": {
+      "retrieval": 0.256436824798584,
+      "rerank": 0.21480107307434082,
+      "generation": 19.08117413520813,
+      "judge": 1.082718849182129,
+      "total": 20.635172128677368
+    },
+    "tokens": {
+      "prompt": 10132,
+      "completion": 783,
+      "thinking": 1104,
+      "total": 12019,
+      "cached": 0
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "pXBFaYmMPMjRjMcPqMDuwQE",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "answer_length": 3705,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  }
+]

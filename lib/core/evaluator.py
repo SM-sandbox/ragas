@@ -19,6 +19,7 @@ import time
 import argparse
 from pathlib import Path
 from datetime import datetime
+import uuid
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
@@ -110,9 +111,11 @@ class GoldEvaluator:
         model: str = None,
         config_type: str = "run",
         config_path: Path = None,
+        num_questions: int = None,  # For run directory naming
     ):
         # Load config
         self.config = load_config(config_type=config_type, config_path=config_path)
+        self.config_type = config_type
         
         # Extract generator and judge configs
         self.generator_config = get_generator_config(self.config)
@@ -124,6 +127,7 @@ class GoldEvaluator:
         self.generator_reasoning = generator_reasoning if generator_reasoning is not None else self.generator_config.get("reasoning_effort", "low")
         self.cloud_mode = cloud_mode
         self.model = model if model is not None else self.generator_config.get("model", "gemini-3-flash-preview")
+        self.num_questions = num_questions  # Will be set when run() is called if not provided
         
         # Store judge config for use in _judge_answer
         self.judge_model_name = self.judge_config.get("model", "gemini-3-flash-preview")
@@ -133,7 +137,6 @@ class GoldEvaluator:
         
         self.lock = Lock()  # Thread-safe checkpoint access
         self.run_start_time = None
-        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         
         # Log config being used
         print(f"Config: {config_type}")
@@ -182,12 +185,71 @@ class GoldEvaluator:
         print(f"Judge model: {model_info['model_id']} ({model_info['status']})")
         print(f"Index: {JOB_ID}")
         
-        # Use different checkpoint/results files for cloud mode
-        # Use different checkpoint/results files for cloud mode and non-default models
-        suffix = "_cloud" if cloud_mode else ""
-        model_suffix = "" if self.model == "gemini-3-flash-preview" else f"_{self.model.replace('-', '_')}"
-        self.checkpoint_file = OUTPUT_DIR / f"checkpoint_p{precision_k}{suffix}{model_suffix}.json"
-        self.results_file = OUTPUT_DIR / f"results_p{precision_k}{suffix}{model_suffix}.json"
+        # Run directory will be created when run() is called
+        self.run_dir = None
+        self.checkpoint_file = None
+        self.results_file = None
+    
+    def _create_run_directory(self, num_questions: int) -> Path:
+        """
+        Create a unique run directory for this evaluation.
+        
+        Naming convention:
+        {TYPE}{ID}__{DATE}__{MODE}__p{K}-{MODEL}__q{QUESTIONS}
+        
+        Examples:
+        - R001__2025-12-19__L__p25-flash-3__q458  (full run, local)
+        - R002__2025-12-19__C__p25-flash-3__q30   (test run, cloud)
+        """
+        # Determine run type prefix based on config_type
+        type_prefix = {
+            "checkpoint": "C",
+            "run": "R",
+            "experiment": "E",
+        }.get(self.config_type, "R")
+        
+        # Get base output directory from config
+        client = self.config.get("client", "BFAI")
+        base_dir = Path(__file__).parent.parent.parent / "clients_eval_data" / client
+        
+        # Determine subdirectory based on config type
+        if self.config_type == "checkpoint":
+            runs_dir = base_dir / "checkpoints"
+        elif self.config_type == "experiment":
+            runs_dir = base_dir / "experiments"
+        else:
+            runs_dir = base_dir / "runs"
+        
+        runs_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Find next ID by scanning existing directories
+        existing = list(runs_dir.glob(f"{type_prefix}*"))
+        existing_ids = []
+        for d in existing:
+            try:
+                # Extract ID from folder name like "R001__..."
+                id_part = d.name.split("__")[0]
+                if id_part.startswith(type_prefix):
+                    existing_ids.append(int(id_part[1:]))
+            except (ValueError, IndexError):
+                pass
+        next_id = max(existing_ids, default=0) + 1
+        
+        # Build directory name
+        date_str = datetime.now().strftime("%Y-%m-%d")
+        mode_str = "C" if self.cloud_mode else "L"
+        
+        # Model short name (e.g., "flash-3" from "gemini-3-flash-preview")
+        model_short = self.model.replace("gemini-", "").replace("-preview", "")
+        config_str = f"p{self.precision_k}-{model_short}"
+        
+        dir_name = f"{type_prefix}{next_id:03d}__{date_str}__{mode_str}__{config_str}__q{num_questions}"
+        
+        run_dir = runs_dir / dir_name
+        run_dir.mkdir(parents=True, exist_ok=True)
+        
+        print(f"\nRun directory: {run_dir}")
+        return run_dir
     
     def _refresh_cloud_token(self):
         """Refresh the Cloud Run ID token."""
@@ -476,14 +538,20 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
     def run(self, questions: list):
         """Run evaluation with checkpointing and optional parallelism."""
         self.run_start_time = time.time()
+        num_questions = len(questions)
+        
+        # Create unique run directory for this evaluation
+        self.run_dir = self._create_run_directory(num_questions)
+        self.checkpoint_file = self.run_dir / "checkpoint.json"
+        self.results_file = self.run_dir / "results.json"
         
         print(f"\n{'='*60}")
         print(f"GOLD STANDARD EVAL - Precision@{self.precision_k}")
-        print(f"Questions: {len(questions)}")
+        print(f"Questions: {num_questions}")
         print(f"Workers: {self.workers}")
         print(f"{'='*60}\n")
         
-        # Load checkpoint
+        # Load checkpoint (fresh directory = no checkpoint)
         completed = {}
         if self.checkpoint_file.exists():
             with open(self.checkpoint_file) as f:
