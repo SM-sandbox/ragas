@@ -23,6 +23,9 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+import requests
+from google.oauth2 import id_token
+from google.auth.transport.requests import Request
 
 sys.path.insert(0, "/Users/scottmacon/Documents/GitHub/gRAG_v3")
 
@@ -41,6 +44,10 @@ CORPUS_PATH = Path(__file__).parent.parent.parent / "clients" / "BFAI" / "qa" / 
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "gold_standard_eval"
 CHECKPOINT_INTERVAL = 10
 DEFAULT_WORKERS = 5  # Safe for 60 RPM quota, increase to 15-25 with 1500 RPM
+
+# Cloud Run config
+CLOUD_RUN_URL = "https://bfai-api-ppfq5ahfsq-ue.a.run.app"
+SA_KEY_PATH = Path(__file__).parent.parent.parent / "config" / "ragas-cloud-run-invoker.json"
 
 # Retry config - no fallback, just retry
 MAX_RETRIES = 5
@@ -93,42 +100,116 @@ def extract_json(text: str) -> dict:
 
 
 class GoldEvaluator:
-    def __init__(self, precision_k: int = 25, workers: int = DEFAULT_WORKERS):
+    def __init__(self, precision_k: int = 25, workers: int = DEFAULT_WORKERS, generator_reasoning: str = "low", cloud_mode: bool = False, model: str = "gemini-3-flash-preview"):
         self.precision_k = precision_k
         self.workers = workers
+        self.generator_reasoning = generator_reasoning  # low/high - passed to gRAG_v3 pipeline
+        self.cloud_mode = cloud_mode
+        self.model = model
         self.lock = Lock()  # Thread-safe checkpoint access
         self.run_start_time = None
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         
-        # Initialize components
-        print("Initializing components...")
-        jobs = get_jobs_config()
-        job_config = jobs.get(JOB_ID, {})
-        job_config["job_id"] = JOB_ID
-        
-        # Store index metadata for output
-        self.index_metadata = {
-            "job_id": JOB_ID,
-            "deployed_index_id": job_config.get("deployed_index_id", ""),
-            "last_build": job_config.get("last_build", ""),
-            "chunks_indexed": job_config.get("chunks_indexed", 0),
-            "document_count": job_config.get("document_count", 0),
-            "embedding_model": job_config.get("embedding_model", ""),
-            "embedding_dimension": job_config.get("embedding_dimension", 0),
-        }
-        
-        self.retriever = VectorSearchRetriever(job_config)
-        self.ranker = GoogleRanker(project_id=PROJECT_ID)
-        self.generator = GeminiAnswerGenerator()
+        # Cloud mode setup
+        if cloud_mode:
+            print(f"CLOUD MODE: Using Cloud Run endpoint {CLOUD_RUN_URL}")
+            # Load SA credentials for Cloud Run auth (don't set globally - judge needs default creds)
+            from google.oauth2 import service_account
+            self._cloud_credentials = service_account.IDTokenCredentials.from_service_account_file(
+                str(SA_KEY_PATH), target_audience=CLOUD_RUN_URL
+            )
+            self._refresh_cloud_token()
+            self.index_metadata = {"job_id": JOB_ID, "mode": "cloud", "endpoint": CLOUD_RUN_URL}
+            self.retriever = None
+            self.ranker = None
+            self.generator = None
+        else:
+            # Initialize local components
+            print("LOCAL MODE: Initializing components...")
+            jobs = get_jobs_config()
+            job_config = jobs.get(JOB_ID, {})
+            job_config["job_id"] = JOB_ID
+            
+            # Store index metadata for output
+            self.index_metadata = {
+                "job_id": JOB_ID,
+                "deployed_index_id": job_config.get("deployed_index_id", ""),
+                "last_build": job_config.get("last_build", ""),
+                "chunks_indexed": job_config.get("chunks_indexed", 0),
+                "document_count": job_config.get("document_count", 0),
+                "embedding_model": job_config.get("embedding_model", ""),
+                "embedding_dimension": job_config.get("embedding_dimension", 0),
+                "mode": "local",
+            }
+            
+            self.retriever = VectorSearchRetriever(job_config)
+            self.ranker = GoogleRanker(project_id=PROJECT_ID)
+            self.generator = GeminiAnswerGenerator()
         
         # Log model info
         model_info = get_model_info()
         self.judge_model = model_info['model_id']
         print(f"Judge model: {model_info['model_id']} ({model_info['status']})")
-        print(f"Index: {JOB_ID} (last build: {self.index_metadata['last_build']})")
+        print(f"Index: {JOB_ID}")
         
-        self.checkpoint_file = OUTPUT_DIR / f"checkpoint_p{precision_k}.json"
-        self.results_file = OUTPUT_DIR / f"results_p{precision_k}.json"
+        # Use different checkpoint/results files for cloud mode
+        # Use different checkpoint/results files for cloud mode and non-default models
+        suffix = "_cloud" if cloud_mode else ""
+        model_suffix = "" if model == "gemini-3-flash-preview" else f"_{model.replace('-', '_')}"
+        self.checkpoint_file = OUTPUT_DIR / f"checkpoint_p{precision_k}{suffix}{model_suffix}.json"
+        self.results_file = OUTPUT_DIR / f"results_p{precision_k}{suffix}{model_suffix}.json"
+    
+    def _refresh_cloud_token(self):
+        """Refresh the Cloud Run ID token."""
+        request = Request()
+        self._cloud_credentials.refresh(request)
+        self._cloud_token = self._cloud_credentials.token
+    
+    def _cloud_query(self, question: str) -> dict:
+        """Query the Cloud Run endpoint."""
+        payload = {
+            "query": question,
+            "job_id": JOB_ID,
+            "top_k": self.precision_k,
+            "model": self.model,  # Configurable model
+            "reasoning_effort": self.generator_reasoning,  # Match local reasoning
+        }
+        response = requests.post(
+            f"{CLOUD_RUN_URL}/query",
+            headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
+            json=payload,
+            timeout=120,
+        )
+        if response.status_code == 401:
+            # Token expired, refresh and retry
+            self._refresh_cloud_token()
+            response = requests.post(
+                f"{CLOUD_RUN_URL}/query",
+                headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
+                json=payload,
+                timeout=120,
+            )
+        response.raise_for_status()
+        return response.json()
+    
+    def _cloud_retrieve(self, question: str) -> list:
+        """Get raw recall candidates from Cloud Run /retrieve endpoint."""
+        response = requests.post(
+            f"{CLOUD_RUN_URL}/retrieve",
+            headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
+            json={"query": question, "job_id": JOB_ID, "recall_top_k": 100},
+            timeout=60,
+        )
+        if response.status_code == 401:
+            self._refresh_cloud_token()
+            response = requests.post(
+                f"{CLOUD_RUN_URL}/retrieve",
+                headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
+                json={"query": question, "job_id": JOB_ID, "recall_top_k": 100},
+                timeout=60,
+            )
+        response.raise_for_status()
+        return response.json().get("chunks", [])
     
     def _judge_answer(self, question: str, ground_truth: str, answer: str, context: str) -> dict:
         """Judge answer quality using Gemini 3 Flash with structured JSON output."""
@@ -169,13 +250,66 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         
         start = time.time()
         
-        # Retrieve
+        if self.cloud_mode:
+            # Cloud mode: hit Cloud Run endpoints
+            # 1. Get raw recall candidates for apples-to-apples comparison
+            retrieve_start = time.time()
+            raw_chunks = self._cloud_retrieve(question)
+            retrieve_time = time.time() - retrieve_start
+            
+            # Calculate recall/MRR from raw 100 candidates (same as local)
+            retrieved_docs = [c.get("doc_name", "").lower() for c in raw_chunks]
+            recall_hit = any(expected_source in d for d in retrieved_docs)
+            mrr = 0
+            for rank, d in enumerate(retrieved_docs, 1):
+                if expected_source in d:
+                    mrr = 1.0 / rank
+                    break
+            
+            # 2. Get answer from /query endpoint
+            query_start = time.time()
+            cloud_result = self._cloud_query(question)
+            query_time = time.time() - query_start
+            
+            answer = cloud_result.get("answer", "")
+            sources = cloud_result.get("sources", [])
+            context = "\n\n".join([f"[{i+1}] {s.get('snippet', '')}" for i, s in enumerate(sources)])
+            
+            # Judge
+            judge_start = time.time()
+            judgment = self._judge_answer(question, ground_truth, answer, context)
+            judge_time = time.time() - judge_start
+            
+            total_time = time.time() - start
+            
+            return {
+                "question_id": q.get("question_id", ""),
+                "question_type": q.get("question_type", ""),
+                "difficulty": q.get("difficulty", ""),
+                "recall_hit": recall_hit,
+                "mrr": mrr,
+                "judgment": judgment,
+                "time": total_time,
+                "timing": {
+                    "cloud_retrieve": retrieve_time,
+                    "cloud_query": query_time,
+                    "judge": judge_time,
+                    "total": total_time,
+                },
+                "tokens": {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0},
+                "llm_metadata": {"model": "cloud", "mode": "cloud"},
+                "answer_length": len(answer),
+                "retrieval_candidates": len(raw_chunks),
+            }
+        
+        # Local mode: use gRAG_v3 pipeline directly
         config = QueryConfig(
             recall_top_k=100,
             precision_top_n=self.precision_k,
             enable_hybrid=True,
             enable_reranking=True,
             job_id=JOB_ID,
+            reasoning_effort=self.generator_reasoning,
         )
         retrieval_start = time.time()
         retrieval_result = self.retriever.retrieve(question, config)
@@ -574,6 +708,12 @@ def main():
     parser.add_argument("--workers", type=int, default=DEFAULT_WORKERS, 
                         help=f"Number of parallel workers (default: {DEFAULT_WORKERS}, use 1 for sequential)")
     parser.add_argument("--quick", type=int, default=0, help="Quick test: run N questions only")
+    parser.add_argument("--generator-reasoning", type=str, default="low", choices=["low", "high"],
+                        help="Reasoning effort for generator: low (fast) or high (more thinking)")
+    parser.add_argument("--cloud", action="store_true", 
+                        help="Cloud mode: hit Cloud Run endpoint instead of local gRAG_v3 pipeline")
+    parser.add_argument("--model", type=str, default="gemini-3-flash-preview",
+                        help="Generator model (default: gemini-3-flash-preview)")
     args = parser.parse_args()
     
     questions = load_corpus(test_mode=args.test)
@@ -583,7 +723,13 @@ def main():
         questions = questions[:args.quick]
         print(f"QUICK MODE: Running {len(questions)} questions only")
     
-    evaluator = GoldEvaluator(precision_k=args.precision, workers=args.workers)
+    evaluator = GoldEvaluator(
+        precision_k=args.precision, 
+        workers=args.workers, 
+        generator_reasoning=args.generator_reasoning,
+        cloud_mode=args.cloud,
+        model=args.model
+    )
     evaluator.run(questions)
 
 

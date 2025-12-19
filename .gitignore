@@ -39,3 +39,4 @@ Thumbs.db
 # Jupyter
 .ipynb_checkpoints/
 site/
+config/ragas-cloud-run-invoker.json

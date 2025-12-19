@@ -1,0 +1,239 @@
+{
+  "schema_version": "2.0",
+  "report_id": "R003",
+  "generated_date": "2025-12-19",
+  "generated_timestamp": "2025-12-19T00:34:28.371713",
+  "client": "BFAI",
+  "benchmark": {
+    "version": "1.3",
+    "type": "cloud",
+    "file": "benchmark_BFAI_v1.3__cloud__2025-12-18.json",
+    "date": "2025-12-18"
+  },
+  "test": {
+    "run_id": "R003",
+    "type": "cloud",
+    "file": "results_p25_cloud_gemini_3_pro_preview.json",
+    "timestamp": "2025-12-19T00:34:14.534290"
+  },
+  "config_match": {
+    "all_matched": false,
+    "parameters": {
+      "model": {
+        "benchmark": "gemini-3-flash-preview",
+        "test": "cloud",
+        "match": false
+      },
+      "reasoning_effort": {
+        "benchmark": "low",
+        "test": null,
+        "match": false
+      },
+      "temperature": {
+        "benchmark": 0.0,
+        "test": 0.0,
+        "match": true
+      },
+      "recall_top_k": {
+        "benchmark": 100,
+        "test": 100,
+        "match": true
+      },
+      "precision_top_n": {
+        "benchmark": 25,
+        "test": 25,
+        "match": true
+      }
+    }
+  },
+  "comparison": {
+    "metrics": {
+      "pass_rate": {
+        "benchmark": 0.9258,
+        "test": 0.9103,
+        "delta": -0.0155,
+        "delta_pct": -1.55,
+        "status": "match"
+      },
+      "partial_rate": {
+        "benchmark": 0.0655,
+        "test": 0.0766,
+        "delta": 0.0111,
+        "delta_pct": 1.11,
+        "status": "match"
+      },
+      "fail_rate": {
+        "benchmark": 0.0087,
+        "test": 0.0131,
+        "delta": 0.0044,
+        "delta_pct": 0.44,
+        "status": "match"
+      },
+      "acceptable_rate": {
+        "benchmark": 0.9913,
+        "test": 0.9869,
+        "delta": -0.0044,
+        "delta_pct": -0.44,
+        "status": "match"
+      },
+      "recall_at_100": {
+        "benchmark": 0.9913,
+        "test": 0.9912,
+        "delta": -0.0,
+        "delta_pct": -0.0,
+        "status": "match"
+      },
+      "mrr": {
+        "benchmark": 0.7407,
+        "test": 0.7382,
+        "delta": -0.0026,
+        "delta_pct": -0.26,
+        "status": "match"
+      },
+      "overall_score_avg": {
+        "benchmark": 4.8192,
+        "test": 4.7976,
+        "delta": -0.0216,
+        "delta_pct": -2.16,
+        "status": "match"
+      }
+    },
+    "latency": {
+      "total": {
+        "benchmark": 9.4,
+        "test": 35.01,
+        "delta": 25.61,
+        "speedup": 0.27
+      },
+      "client_experience": {
+        "benchmark": 8.14,
+        "test": 33.65,
+        "delta": 25.51,
+        "speedup": 0.24
+      }
+    },
+    "cost": {
+      "total": {
+        "benchmark": 0.4968,
+        "test": 0.0,
+        "delta": -0.4968
+      },
+      "per_question": {
+        "benchmark": 0.001085,
+        "test": 0.0,
+        "delta": -0.001085
+      }
+    },
+    "breakdown_by_type": {
+      "single_hop": {
+        "benchmark_pass_rate": 0.9414,
+        "test_pass_rate": 0.9367,
+        "delta": -0.0048,
+        "benchmark_counts": {
+          "pass": 209,
+          "partial": 9,
+          "fail": 4
+        },
+        "test_counts": {
+          "pass": 207,
+          "partial": 9,
+          "fail": 5
+        }
+      },
+      "multi_hop": {
+        "benchmark_pass_rate": 0.911,
+        "test_pass_rate": 0.8856,
+        "delta": -0.0254,
+        "benchmark_counts": {
+          "pass": 215,
+          "partial": 21,
+          "fail": 0
+        },
+        "test_counts": {
+          "pass": 209,
+          "partial": 26,
+          "fail": 1
+        }
+      }
+    },
+    "breakdown_by_difficulty": {
+      "easy": {
+        "benchmark_pass_rate": 0.8944,
+        "test_pass_rate": 0.8758,
+        "delta": -0.0186,
+        "benchmark_counts": {
+          "pass": 144,
+          "partial": 14,
+          "fail": 3
+        },
+        "test_counts": {
+          "pass": 141,
+          "partial": 16,
+          "fail": 4
+        }
+      },
+      "medium": {
+        "benchmark_pass_rate": 0.9503,
+        "test_pass_rate": 0.9375,
+        "delta": -0.0128,
+        "benchmark_counts": {
+          "pass": 153,
+          "partial": 8,
+          "fail": 0
+        },
+        "test_counts": {
+          "pass": 150,
+          "partial": 9,
+          "fail": 1
+        }
+      },
+      "hard": {
+        "benchmark_pass_rate": 0.9338,
+        "test_pass_rate": 0.9191,
+        "delta": -0.0147,
+        "benchmark_counts": {
+          "pass": 127,
+          "partial": 8,
+          "fail": 1
+        },
+        "test_counts": {
+          "pass": 125,
+          "partial": 10,
+          "fail": 1
+        }
+      }
+    }
+  },
+  "summary": {
+    "verdict": "WARN",
+    "regressions": [
+      "latency"
+    ],
+    "improvements": [],
+    "key_finding": "Minor regressions detected in: latency",
+    "recommendation": "Review regressions before deploying. May be acceptable."
+  },
+  "failures": {
+    "benchmark_only": [
+      "sh_easy_066"
+    ],
+    "test_only": [
+      "mh_easy_038",
+      "sh_easy_083",
+      "sh_med_034"
+    ],
+    "both": [
+      "sh_easy_021",
+      "sh_easy_079",
+      "sh_hard_020"
+    ],
+    "benchmark_count": 4,
+    "test_count": 6
+  },
+  "files": {
+    "benchmark_json": "/Users/scottmacon/Documents/GitHub/ragas/benchmarks/BFAI/benchmark_BFAI_v1.3__cloud__2025-12-18.json",
+    "test_json": "reports/gold_standard_eval/results_p25_cloud_gemini_3_pro_preview.json",
+    "report_json": "/Users/scottmacon/Documents/GitHub/ragas/reports/gold_standard_eval/report_BFAI__R003__2025-12-19.json",
+    "report_markdown": "/Users/scottmacon/Documents/GitHub/ragas/reports/gold_standard_eval/final_reports/R003_Benchmark_Report_2025-12-19.md"
+  }
+}

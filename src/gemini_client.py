@@ -302,14 +302,18 @@ def generate_json(prompt: str, schema: Any = None, **kwargs) -> dict:
 
 
 def generate_for_judge(prompt: str, **kwargs) -> dict:
-    """Generate with judge-specific config (JSON output, lower tokens)."""
+    """Generate with judge-specific config (JSON output, lower tokens).
+    
+    Judge is HARDCODED to gemini-3-flash-preview with LOW reasoning.
+    This ensures consistent evaluation across all runs.
+    """
     config = {**JUDGE_CONFIG, **kwargs}
     result = generate(
         prompt,
         response_mime_type=config.get("response_mime_type"),
         max_output_tokens=config.get("max_output_tokens"),
         temperature=config.get("temperature"),
-        thinking_level="LOW",  # Fast for judge
+        thinking_level="LOW",  # HARDCODED - judge always uses LOW reasoning
     )
     
     # Parse JSON, handling list responses

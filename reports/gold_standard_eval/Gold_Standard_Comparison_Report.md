@@ -25,13 +25,13 @@ This is a **standard core evaluation** using the full corpus with default config
 
 | Metric | Previous | Current | Δ | Status |
 |--------|----------|---------|---|--------|
-| **Pass Rate** | 92.4% | 92.4% | +0.0% | ✅ |
-| **Partial Rate** | 6.6% | 6.6% | +0.0% | ✅ |
-| **Fail Rate** | 1.1% | 1.1% | +0.0% | ✅ |
-| **Acceptable Rate** | 98.9% | 98.9% | +0.0% | ✅ |
+| **Pass Rate** | 92.4% | 88.9% | -3.5% | ⚠️ |
+| **Partial Rate** | 6.6% | 7.4% | +0.9% | ⚠️ |
+| **Fail Rate** | 1.1% | 3.7% | +2.6% | ⚠️ |
+| **Acceptable Rate** | 98.9% | 96.3% | -2.6% | ⚠️ |
 | **Recall@100** | 99.1% | 99.1% | +0.0% | ✅ |
 | **MRR** | 0.737 | 0.737 | +0.000 | ✅ |
-| **Overall Score** | 4.82/5 | 4.82/5 | +0.00 | ✅ |
+| **Overall Score** | 4.82/5 | 4.72/5 | -0.10 | ⚠️ |
 
 ---
 
@@ -60,10 +60,10 @@ This is a **standard core evaluation** using the full corpus with default config
 |------------|------------|-----------|-----------|
 | **Easy** | 1.000 (n=88) | 0.452 (n=73) | **0.752** (n=161) |
 | **Medium** | 1.000 (n=78) | 0.574 (n=83) | **0.780** (n=161) |
-| **Hard** | 1.000 (n=56) | 0.436 (n=80) | **0.668** (n=136) |
-| **Total** | **1.000** (n=222) | **0.489** (n=236) | **0.737** (n=458) |
+| **Hard** | 1.000 (n=56) | 0.437 (n=80) | **0.669** (n=136) |
+| **Total** | **1.000** (n=222) | **0.490** (n=236) | **0.737** (n=458) |
 
-> **Key Insight:** Single-hop questions achieve perfect MRR (1.000) across all difficulty levels - the correct document is always ranked first. Multi-hop questions average 0.489 because they require multiple documents, making ranking more challenging.
+> **Key Insight:** Single-hop questions achieve perfect MRR (1.000) across all difficulty levels - the correct document is always ranked first. Multi-hop questions average 0.490 because they require multiple documents, making ranking more challenging.
 
 ---
 
@@ -130,68 +130,68 @@ This is a **standard core evaluation** using the full corpus with default config
 ### CORRECTNESS
 | Score | Count | % |
 |-------|-------|---|
-| 5 | 404 | 88.2% |
-| 4 | 21 | 4.6% |
-| 3 | 22 | 4.8% |
-| 2 | 7 | 1.5% |
-| 1 | 4 | 0.9% |
-| **≥3** | **447** | **97.6%** |
-| **Avg** | **4.78** | |
+| 5 | 390 | 85.2% |
+| 4 | 28 | 6.1% |
+| 3 | 18 | 3.9% |
+| 2 | 11 | 2.4% |
+| 1 | 11 | 2.4% |
+| **≥3** | **436** | **95.2%** |
+| **Avg** | **4.69** | |
 
 ### COMPLETENESS
 | Score | Count | % |
 |-------|-------|---|
-| 5 | 424 | 92.6% |
-| 4 | 18 | 3.9% |
-| 3 | 11 | 2.4% |
-| 2 | 2 | 0.4% |
-| 1 | 3 | 0.7% |
-| **≥3** | **453** | **98.9%** |
-| **Avg** | **4.87** | |
+| 5 | 400 | 87.3% |
+| 4 | 22 | 4.8% |
+| 3 | 12 | 2.6% |
+| 2 | 13 | 2.8% |
+| 1 | 11 | 2.4% |
+| **≥3** | **434** | **94.8%** |
+| **Avg** | **4.72** | |
 
 ### FAITHFULNESS
 | Score | Count | % |
 |-------|-------|---|
-| 5 | 446 | 97.4% |
-| 4 | 8 | 1.7% |
-| 3 | 3 | 0.7% |
-| 2 | 1 | 0.2% |
-| 1 | 0 | 0.0% |
-| **≥3** | **457** | **99.8%** |
-| **Avg** | **4.96** | |
+| 5 | 433 | 94.5% |
+| 4 | 10 | 2.2% |
+| 3 | 6 | 1.3% |
+| 2 | 4 | 0.9% |
+| 1 | 5 | 1.1% |
+| **≥3** | **449** | **98.0%** |
+| **Avg** | **4.88** | |
 
 ### RELEVANCE
 | Score | Count | % |
 |-------|-------|---|
-| 5 | 450 | 98.3% |
-| 4 | 4 | 0.9% |
-| 3 | 2 | 0.4% |
-| 2 | 1 | 0.2% |
-| 1 | 1 | 0.2% |
-| **≥3** | **456** | **99.6%** |
-| **Avg** | **4.97** | |
+| 5 | 433 | 94.5% |
+| 4 | 11 | 2.4% |
+| 3 | 4 | 0.9% |
+| 2 | 5 | 1.1% |
+| 1 | 5 | 1.1% |
+| **≥3** | **448** | **97.8%** |
+| **Avg** | **4.88** | |
 
 ### CLARITY
 | Score | Count | % |
 |-------|-------|---|
-| 5 | 456 | 99.6% |
-| 4 | 2 | 0.4% |
-| 3 | 0 | 0.0% |
-| 2 | 0 | 0.0% |
-| 1 | 0 | 0.0% |
-| **≥3** | **458** | **100.0%** |
-| **Avg** | **5.00** | |
+| 5 | 424 | 92.6% |
+| 4 | 22 | 4.8% |
+| 3 | 4 | 0.9% |
+| 2 | 1 | 0.2% |
+| 1 | 7 | 1.5% |
+| **≥3** | **450** | **98.3%** |
+| **Avg** | **4.87** | |
 
 ### OVERALL SCORE
 | Score | Count | % |
 |-------|-------|---|
-| 5 | 403 | 88.0% |
-| 4 | 21 | 4.6% |
-| 3 | 18 | 3.9% |
-| 2 | 2 | 0.4% |
-| 1 | 2 | 0.4% |
-| **≥3** | **442** | **96.5%** |
-| **Avg** | **4.84** | |
+| 5 | 384 | 83.8% |
+| 4 | 22 | 4.8% |
+| 3 | 22 | 4.8% |
+| 2 | 7 | 1.5% |
+| 1 | 9 | 2.0% |
+| **≥3** | **428** | **93.4%** |
+| **Avg** | **4.72** | |
 
 ---
 
@@ -201,27 +201,27 @@ This is a **standard core evaluation** using the full corpus with default config
 
 | Difficulty | Avg | Min | Max | Count |
 |------------|-----|-----|-----|-------|
-| **Easy** | 8.87s | 2.14s | 68.41s | 161 |
-| **Medium** | 10.54s | 2.71s | 31.89s | 161 |
-| **Hard** | 12.11s | 3.04s | 47.76s | 136 |
-| **Overall** | 10.42s | 2.14s | 68.41s | 458 |
+| **Easy** | 19.80s | 5.62s | 66.22s | 161 |
+| **Medium** | 24.79s | 6.27s | 62.99s | 161 |
+| **Hard** | 29.11s | 9.24s | 60.02s | 136 |
+| **Overall** | 24.32s | 5.62s | 66.22s | 458 |
 
 ### Total Latency by Question Type
 
 | Type | Avg | Min | Max | Count |
 |------|-----|-----|-----|-------|
-| **Single-hop** | 8.41s | 2.14s | 68.41s | 222 |
-| **Multi-hop** | 12.31s | 3.03s | 31.89s | 236 |
+| **Single-hop** | 20.40s | 5.62s | 66.22s | 222 |
+| **Multi-hop** | 28.01s | 7.80s | 62.99s | 236 |
 
 ### Phase Breakdown
 
 | Phase | Avg | % of Total |
 |-------|-----|------------|
-| **Retrieval** | 0.269s | 2.6% |
-| **Reranking** | 0.179s | 1.7% |
-| **Generation** | 8.628s | 82.8% |
-| **Judge** | 1.342s | 12.9% |
-| **Total** | 10.42s | 100% |
+| **Retrieval** | 0.386s | 1.6% |
+| **Reranking** | 0.219s | 0.9% |
+| **Generation** | 22.570s | 92.8% |
+| **Judge** | 1.146s | 4.7% |
+| **Total** | 24.32s | 100% |
 
 ---
 
@@ -231,21 +231,21 @@ This is a **standard core evaluation** using the full corpus with default config
 
 | Token Type | Count | Avg per Question |
 |------------|-------|------------------|
-| **Prompt (Input)** | 4,930,527 | 10,765 |
-| **Completion (Output)** | 191,906 | 419 |
-| **Thinking** | 231,329 | 505 |
+| **Prompt (Input)** | 4,946,275 | 10,799 |
+| **Completion (Output)** | 171,176 | 373 |
+| **Thinking** | 1,269,993 | 2,772 |
 | **Cached** | 0 | 0 |
-| **Total** | **5,353,762** | **11,689** |
+| **Total** | **6,387,444** | **13,946** |
 
 ### Cost Breakdown (Gemini 2.5 Flash Pricing)
 
 | Component | Rate | Amount |
 |-----------|------|--------|
-| **Input** | $0.075/1M tokens | $0.3698 |
-| **Output** | $0.30/1M tokens | $0.0576 |
-| **Thinking** | $0.30/1M tokens | $0.0694 |
-| **Total** | | **$0.4968** |
-| **Per Question** | | **$0.001085** |
+| **Input** | $0.075/1M tokens | $0.3710 |
+| **Output** | $0.30/1M tokens | $0.0514 |
+| **Thinking** | $0.30/1M tokens | $0.3810 |
+| **Total** | | **$0.8033** |
+| **Per Question** | | **$0.001754** |
 
 ---
 
@@ -253,16 +253,16 @@ This is a **standard core evaluation** using the full corpus with default config
 
 | Type | Total | Pass | Partial | Fail | Pass Rate |
 |------|-------|------|---------|------|-----------|
-| **Single-hop** | 222 | 210 | 8 | 4 | 94.6% |
-| **Multi-hop** | 236 | 213 | 22 | 1 | 90.3% |
+| **Single-hop** | 222 | 209 | 8 | 5 | 94.1% |
+| **Multi-hop** | 236 | 198 | 26 | 12 | 83.9% |
 
 ## Breakdown by Difficulty
 
 | Difficulty | Total | Pass | Partial | Fail | Pass Rate |
 |------------|-------|------|---------|------|-----------|
-| **Easy** | 161 | 146 | 11 | 4 | 90.7% |
-| **Medium** | 161 | 153 | 8 | 0 | 95.0% |
-| **Hard** | 136 | 124 | 11 | 1 | 91.2% |
+| **Easy** | 161 | 146 | 10 | 5 | 90.7% |
+| **Medium** | 161 | 149 | 10 | 2 | 92.5% |
+| **Hard** | 136 | 112 | 14 | 10 | 82.4% |
 
 ---
 
@@ -292,32 +292,44 @@ This is a **standard core evaluation** using the full corpus with default config
 
 ## Failure Analysis
 
-### Failed Questions (5 total)
+### Failed Questions (17 total)
 
 | Question ID | Type | Difficulty | Overall Score |
 |-------------|------|------------|---------------|
+| sh_med_009 | single_hop | medium | 1 |
+| sh_hard_019 | single_hop | hard | 1 |
 | sh_hard_020 | single_hop | hard | 2 |
-| mh_easy_038 | multi_hop | easy | 2.5 |
-| sh_easy_069 | single_hop | easy | 1 |
+| mh_easy_038 | multi_hop | easy | 2 |
+| mh_easy_042 | multi_hop | easy | 1 |
+| mh_easy_043 | multi_hop | easy | 3 |
+| mh_med_044 | multi_hop | medium | 1 |
+| mh_hard_017 | multi_hop | hard | 1 |
+| mh_hard_022 | multi_hop | hard | 2 |
+| mh_hard_025 | multi_hop | hard | 2 |
+| mh_hard_026 | multi_hop | hard | 1 |
+| mh_hard_027 | multi_hop | hard | 1 |
+| mh_hard_031 | multi_hop | hard | 2 |
+| mh_hard_035 | multi_hop | hard | 2 |
+| mh_hard_068 | multi_hop | hard | 1 |
 | sh_easy_079 | single_hop | easy | 2 |
 | sh_easy_083 | single_hop | easy | 1 |
 
-### Partial Answers (30 total)
+### Partial Answers (34 total)
 
 | Question ID | Type | Difficulty | Overall Score |
 |-------------|------|------------|---------------|
-| sh_easy_007 | single_hop | easy | 4 |
-| sh_med_027 | single_hop | medium | 3.5 |
-| sh_med_044 | single_hop | medium | 3 |
-| sh_med_074 | single_hop | medium | 3 |
+| sh_easy_007 | single_hop | easy | 3 |
+| sh_easy_021 | single_hop | easy | 3 |
+| sh_easy_048 | single_hop | easy | 4 |
 | sh_med_073 | single_hop | medium | 3 |
-| sh_hard_007 | single_hop | hard | 4 |
-| sh_hard_048 | single_hop | hard | 3 |
-| mh_easy_005 | multi_hop | easy | 3.5 |
-| mh_easy_012 | multi_hop | easy | 4 |
-| mh_easy_028 | multi_hop | easy | 4 |
+| sh_med_074 | single_hop | medium | 3 |
+| sh_hard_033 | single_hop | hard | 4 |
+| sh_hard_048 | single_hop | hard | 4 |
+| sh_hard_049 | single_hop | hard | 3 |
+| mh_easy_005 | multi_hop | easy | 4 |
+| mh_easy_012 | multi_hop | easy | 3 |
 | ... | ... | ... | ... |
-| *(20 more)* | | | |
+| *(24 more)* | | | |
 
 ---
 
@@ -326,9 +338,9 @@ This is a **standard core evaluation** using the full corpus with default config
 | Metric | Value |
 |--------|-------|
 | **Run ID** | N/A |
-| **Timestamp** | 2025-12-18T12:39:08.779964 |
-| **Duration** | 988s (16.5 min) |
-| **Questions/Second** | 0.464 |
+| **Timestamp** | 2025-12-18T15:55:32.473177 |
+| **Duration** | 756s (12.6 min) |
+| **Questions/Second** | 0.606 |
 | **Workers** | 5 |
 | **Mode** | local |
 
@@ -343,6 +355,6 @@ This is a **standard core evaluation** using the full corpus with default config
 
 ---
 
-*Report generated: December 18, 2025 at 13:23*  
+*Report generated: December 18, 2025 at 17:11*  
 *Corpus: 458 Gold Standard Questions*  
 *Evaluation Model: gemini-3-flash-preview (LLM-as-Judge)*
