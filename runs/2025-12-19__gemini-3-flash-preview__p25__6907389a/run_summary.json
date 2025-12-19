@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.1",
+  "timestamp": "2025-12-19T00:57:39.451579",
+  "client": "BFAI",
+  "index": {
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+    "last_build": "",
+    "chunks_indexed": 0,
+    "document_count": 64,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimension": 1536,
+    "mode": "local"
+  },
+  "config": {
+    "generator_model": "gemini-3-flash-preview",
+    "judge_model": "gemini-3-flash-preview",
+    "precision_k": 25,
+    "recall_k": 100,
+    "workers": 5,
+    "temperature": 0.0
+  },
+  "metrics": {
+    "precision_k": 25,
+    "total": 30,
+    "completed": 458,
+    "recall_at_100": 0.9912663755458515,
+    "mrr": 0.7370690810685548,
+    "pass_rate": 0.888646288209607,
+    "partial_rate": 0.07423580786026202,
+    "fail_rate": 0.03711790393013101,
+    "acceptable_rate": 0.962882096069869,
+    "correctness_avg": 4.692139737991266,
+    "completeness_avg": 4.718340611353712,
+    "faithfulness_avg": 4.882096069868996,
+    "relevance_avg": 4.882096069868996,
+    "clarity_avg": 4.866812227074236,
+    "overall_score_avg": 4.71943231441048
+  },
+  "latency": {
+    "total_avg_s": 24.32006763006402,
+    "total_min_s": 5.616381883621216,
+    "total_max_s": 66.22425818443298,
+    "by_phase": {
+      "retrieval_avg_s": 0.3860989684100755,
+      "rerank_avg_s": 0.21863361373218387,
+      "generation_avg_s": 22.569608030881422,
+      "judge_avg_s": 1.1456526949936645
+    }
+  },
+  "tokens": {
+    "prompt_total": 4946275,
+    "completion_total": 171176,
+    "thinking_total": 1269993,
+    "cached_total": 0,
+    "total": 6387444
+  },
+  "answer_stats": {
+    "avg_length_chars": 1451.840611353712,
+    "min_length_chars": 80,
+    "max_length_chars": 5338
+  },
+  "quality": {
+    "finish_reason_distribution": {
+      "STOP": 394,
+      "MAX_TOKENS": 64
+    },
+    "fallback_rate": 0.0
+  },
+  "execution": {
+    "run_duration_seconds": 12.217756986618042,
+    "questions_per_second": 26817.875389147157,
+    "workers": 5,
+    "hostname": "Scott-MacBook-Pro-M3.local",
+    "python_version": "3.11.14"
+  },
+  "retry_stats": {
+    "total_questions": 30,
+    "succeeded_first_try": 458,
+    "succeeded_after_retry": 0,
+    "failed_all_retries": 0,
+    "total_retry_attempts": 458,
+    "avg_attempts": 1.0
+  },
+  "errors": {
+    "total_errors": 0,
+    "by_phase": {
+      "retrieval": 0,
+      "rerank": 0,
+      "generation": 0,
+      "judge": 0
+    },
+    "error_messages": []
+  },
+  "skipped": {
+    "count": 0,
+    "reasons": {
+      "missing_ground_truth": 0,
+      "invalid_question": 0,
+      "timeout": 0
+    },
+    "question_ids": []
+  },
+  "breakdown_by_type": {
+    "single_hop": {
+      "total": 222,
+      "pass": 209,
+      "partial": 8,
+      "fail": 5,
+      "pass_rate": 0.9414414414414415
+    },
+    "multi_hop": {
+      "total": 236,
+      "pass": 198,
+      "partial": 26,
+      "fail": 12,
+      "pass_rate": 0.8389830508474576
+    }
+  },
+  "breakdown_by_difficulty": {
+    "easy": {
+      "total": 161,
+      "pass": 146,
+      "partial": 10,
+      "fail": 5,
+      "pass_rate": 0.906832298136646
+    },
+    "medium": {
+      "total": 161,
+      "pass": 149,
+      "partial": 10,
+      "fail": 2,
+      "pass_rate": 0.9254658385093167
+    },
+    "hard": {
+      "total": 136,
+      "pass": 112,
+      "partial": 14,
+      "fail": 10,
+      "pass_rate": 0.8235294117647058
+    }
+  },
+  "run_id": "run_20251219_005727_6907389a",
+  "cost": {
+    "input_cost": 0.494627,
+    "output_cost": 0.06847,
+    "thinking_cost": 0.507997,
+    "cached_cost": 0.0,
+    "total_cost": 1.071095,
+    "cost_per_question": 0.035703,
+    "question_count": 30
+  }
+}
