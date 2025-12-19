@@ -401,11 +401,20 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             }
         
         # Local mode: use gRAG_v3 pipeline directly
+        # Store retrieval config for output
+        retrieval_config = {
+            "recall_top_k": 100,
+            "precision_top_n": self.precision_k,
+            "enable_hybrid": True,
+            "enable_reranking": True,
+            "rrf_alpha": 0.5,  # 50/50 hybrid weighting
+            "ranking_model": "semantic-ranker-512@latest",
+        }
         config = QueryConfig(
-            recall_top_k=100,
-            precision_top_n=self.precision_k,
-            enable_hybrid=True,
-            enable_reranking=True,
+            recall_top_k=retrieval_config["recall_top_k"],
+            precision_top_n=retrieval_config["precision_top_n"],
+            enable_hybrid=retrieval_config["enable_hybrid"],
+            enable_reranking=retrieval_config["enable_reranking"],
             job_id=JOB_ID,
             reasoning_effort=self.generator_reasoning,
         )
@@ -444,14 +453,29 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         
         total_time = time.time() - start
         
-        # Extract all GenerationResult fields
+        # Build comprehensive per-question result with all metadata
         return {
+            # Identity
             "question_id": q.get("question_id", ""),
             "question_type": q.get("question_type", ""),
             "difficulty": q.get("difficulty", ""),
+            
+            # Input (for debugging)
+            "question_text": question,
+            "expected_answer": ground_truth,
+            "source_documents": source_filenames,
+            
+            # Output
+            "generated_answer": answer,
+            "retrieved_doc_names": retrieved_docs[:self.precision_k],  # Top-k after rerank
+            "context_char_count": len(context),
+            
+            # Evaluation
             "recall_hit": recall_hit,
             "mrr": mrr,
             "judgment": judgment,
+            
+            # Performance
             "time": total_time,
             "timing": {
                 "retrieval": retrieval_time,
@@ -467,6 +491,8 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 "total": gen_result.total_tokens,
                 "cached": gen_result.cached_content_tokens,
             },
+            
+            # Generator LLM metadata
             "llm_metadata": {
                 "model": gen_result.model,
                 "model_version": gen_result.model_version,
@@ -478,6 +504,36 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 "temperature": gen_result.temperature,
                 "has_citations": gen_result.has_citations,
             },
+            
+            # Index metadata
+            "index": {
+                "job_id": JOB_ID,
+                "deployed_index_id": self.index_metadata.get("deployed_index_id", ""),
+                "embedding_model": self.index_metadata.get("embedding_model", ""),
+                "embedding_dimension": self.index_metadata.get("embedding_dimension", 0),
+            },
+            
+            # Retrieval config
+            "retrieval_config": retrieval_config,
+            
+            # Generator config
+            "generator_config": {
+                "model": self.model,
+                "reasoning_effort": self.generator_reasoning,
+                "temperature": self.generator_config.get("temperature", 0.0),
+                "seed": self.generator_config.get("seed", 42),
+                "max_output_tokens": self.generator_config.get("max_output_tokens", 8192),
+            },
+            
+            # Judge config
+            "judge_config": {
+                "model": self.judge_model_name,
+                "reasoning_effort": self.judge_reasoning,
+                "temperature": self.judge_temperature,
+                "seed": self.judge_seed,
+            },
+            
+            # Counts
             "answer_length": len(answer),
             "retrieval_candidates": len(chunks),
         }
