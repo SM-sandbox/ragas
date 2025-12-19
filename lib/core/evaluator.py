@@ -47,7 +47,7 @@ JOB_ID = "bfai__eval66a_g1_1536_tt"
 CORPUS_PATH = Path(__file__).parent.parent.parent / "clients_qa_gold" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "core_eval"
 CHECKPOINT_INTERVAL = 10
-DEFAULT_WORKERS = 100  # Rate limiter self-regulates, can set high
+DEFAULT_WORKERS = 50  # Optimal for 1 Cloud Run instance (balances parallelism vs contention)
 
 # Cloud Run config
 CLOUD_RUN_URL = "https://bfai-api-ppfq5ahfsq-ue.a.run.app"
@@ -279,6 +279,104 @@ class GoldEvaluator:
         request = Request()
         self._cloud_credentials.refresh(request)
         self._cloud_token = self._cloud_credentials.token
+    
+    def _warmup_orchestrator(self, num_pings: int = 3, ping_interval: float = 2.0, wait_after: float = 5.0) -> dict:
+        """
+        Warm up the Cloud Run orchestrator before running evaluation.
+        
+        Sends multiple pings to ensure the instance is warm and ready.
+        Returns warmup stats for logging.
+        
+        Args:
+            num_pings: Number of health check pings to send
+            ping_interval: Seconds between pings
+            wait_after: Seconds to wait after pings before starting eval
+            
+        Returns:
+            dict with warmup stats (times, status, etc.)
+        """
+        import time as time_module
+        
+        print("\n" + "="*60)
+        print("CLOUD ORCHESTRATOR WARMUP")
+        print("="*60)
+        
+        warmup_stats = {
+            "pings": [],
+            "total_warmup_time": 0,
+            "orchestrator_ready": False,
+        }
+        
+        warmup_start = time_module.time()
+        
+        # Send health check pings
+        for i in range(num_pings):
+            ping_num = i + 1
+            print(f"  [{ping_num}/{num_pings}] Pinging orchestrator...", end=" ", flush=True)
+            
+            ping_start = time_module.time()
+            try:
+                # Use a lightweight health check endpoint or minimal query
+                response = requests.get(
+                    f"{CLOUD_RUN_URL}/health",
+                    headers={"Authorization": f"Bearer {self._cloud_token}"},
+                    timeout=60,
+                )
+                ping_time = time_module.time() - ping_start
+                
+                if response.status_code == 200:
+                    print(f"OK ({ping_time:.2f}s)")
+                    warmup_stats["pings"].append({"status": "ok", "time": ping_time})
+                elif response.status_code == 404:
+                    # No /health endpoint, try a minimal retrieve
+                    print(f"no /health endpoint, trying /retrieve...", end=" ", flush=True)
+                    ping_start = time_module.time()
+                    response = requests.post(
+                        f"{CLOUD_RUN_URL}/retrieve",
+                        headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
+                        json={"query": "warmup ping", "job_id": JOB_ID, "recall_top_k": 1},
+                        timeout=60,
+                    )
+                    ping_time = time_module.time() - ping_start
+                    print(f"OK ({ping_time:.2f}s)")
+                    warmup_stats["pings"].append({"status": "ok", "time": ping_time})
+                else:
+                    print(f"HTTP {response.status_code} ({ping_time:.2f}s)")
+                    warmup_stats["pings"].append({"status": f"http_{response.status_code}", "time": ping_time})
+                    
+            except requests.exceptions.Timeout:
+                ping_time = time_module.time() - ping_start
+                print(f"TIMEOUT ({ping_time:.2f}s) - instance likely cold starting")
+                warmup_stats["pings"].append({"status": "timeout", "time": ping_time})
+            except Exception as e:
+                ping_time = time_module.time() - ping_start
+                print(f"ERROR: {e} ({ping_time:.2f}s)")
+                warmup_stats["pings"].append({"status": "error", "time": ping_time, "error": str(e)})
+            
+            # Wait between pings (except after last one)
+            if i < num_pings - 1:
+                print(f"  Waiting {ping_interval}s before next ping...")
+                time_module.sleep(ping_interval)
+        
+        # Check if orchestrator is ready (at least one successful ping)
+        successful_pings = [p for p in warmup_stats["pings"] if p["status"] == "ok"]
+        warmup_stats["orchestrator_ready"] = len(successful_pings) > 0
+        
+        if warmup_stats["orchestrator_ready"]:
+            avg_ping = sum(p["time"] for p in successful_pings) / len(successful_pings)
+            print(f"\n  ✓ Orchestrator READY (avg ping: {avg_ping:.2f}s)")
+            
+            # Wait a bit more to ensure instance is fully warm
+            print(f"  Waiting {wait_after}s for full warmup...")
+            time_module.sleep(wait_after)
+        else:
+            print(f"\n  ⚠ Orchestrator may not be ready - proceeding anyway")
+        
+        warmup_stats["total_warmup_time"] = time_module.time() - warmup_start
+        print(f"  Total warmup time: {warmup_stats['total_warmup_time']:.1f}s")
+        print("="*60 + "\n")
+        
+        return warmup_stats
     
     def _cloud_query(self, question: str) -> dict:
         """Query the Cloud Run endpoint."""
@@ -692,10 +790,17 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         self.checkpoint_file = self.run_dir / "checkpoint.json"
         self.results_file = self.run_dir / "results.json"
         
+        # Warm up orchestrator in cloud mode before starting parallel execution
+        warmup_stats = None
+        if self.cloud_mode and self.workers > 1:
+            warmup_stats = self._warmup_orchestrator(num_pings=3, ping_interval=2.0, wait_after=5.0)
+        
         print(f"\n{'='*60}")
         print(f"GOLD STANDARD EVAL - Precision@{self.precision_k}")
         print(f"Questions: {num_questions}")
         print(f"Workers: {self.workers}")
+        if warmup_stats:
+            print(f"Warmup: {warmup_stats['total_warmup_time']:.1f}s ({'ready' if warmup_stats['orchestrator_ready'] else 'not ready'})")
         print(f"{'='*60}\n")
         
         # Load checkpoint (fresh directory = no checkpoint)
