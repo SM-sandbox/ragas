@@ -1,0 +1,55 @@
+# Experiment Configuration (FLEXIBLE)
+# ====================================
+# This file defines the DEFAULT configuration for experiments (E###).
+# 
+# All settings can be freely overridden - experiments are exploratory.
+# Use this for testing new models, parameters, or approaches.
+
+schema_version: "1.0"
+config_type: "experiment"
+
+# Client (can be changed)
+client: "BFAI"
+
+# Corpus (can use subsets)
+corpus:
+  file: "clients_qa_gold/BFAI/qa/QA_BFAI_gold_v1-0__q458.json"
+  sample_size: 0  # 0 = full corpus, N = sample N questions
+
+# Index
+index:
+  job_id: "bfai__eval66a_g1_1536_tt"
+
+# Generator model (experiment with different models)
+generator:
+  model: "gemini-2.5-flash"
+  reasoning_effort: "low"  # low | medium | high
+  temperature: 0.0
+  max_output_tokens: 8192
+
+# Judge model
+judge:
+  model: "gemini-2.0-flash"
+  temperature: 0.0
+
+# Retrieval settings (experiment with different K values)
+retrieval:
+  recall_k: 100
+  precision_k: 25
+  enable_hybrid: true
+  enable_reranking: true
+
+# Execution
+execution:
+  workers: 5
+  timeout_per_question_s: 120
+  max_retries: 3
+
+# Environment
+environment:
+  mode: "local"  # local | cloud
+  cloud_endpoint: "https://bfai-api-ppfq5ahfsq-ue.a.run.app"
+
+# Output
+output:
+  experiments_dir: "clients_eval_data/BFAI/experiments"

@@ -1,0 +1,53 @@
+# Checkpoint Configuration (LOCKED)
+# ==================================
+# This file defines the FIXED configuration for checkpoint (C###) runs.
+# 
+# ⚠️  DO NOT MODIFY without updating the hash in run_cicd_eval.py
+# ⚠️  Changes require PR review and explicit hash update
+#
+# Checkpoints are daily health checks / CICD runs that must use
+# consistent settings to enable meaningful comparisons over time.
+
+schema_version: "1.0"
+config_type: "checkpoint"
+
+# Client (fixed for consistency)
+client: "BFAI"
+
+# Corpus (always use full gold standard)
+corpus:
+  file: "clients_qa_gold/BFAI/qa/QA_BFAI_gold_v1-0__q458.json"
+  sample_size: 30  # Quick checkpoint uses 30 questions
+
+# Index (fixed)
+index:
+  job_id: "bfai__eval66a_g1_1536_tt"
+
+# Generator model (fixed)
+generator:
+  model: "gemini-2.5-flash"
+  reasoning_effort: "low"
+  temperature: 0.0  # MUST be 0.0 for reproducibility
+
+# Judge model (fixed)
+judge:
+  model: "gemini-2.0-flash"
+  temperature: 0.0
+
+# Retrieval settings (fixed)
+retrieval:
+  recall_k: 100
+  precision_k: 25
+  enable_hybrid: true
+  enable_reranking: true
+
+# Execution (fixed)
+execution:
+  workers: 5
+  timeout_per_question_s: 120
+
+# Thresholds for pass/fail
+thresholds:
+  min_pass_rate: 0.85      # Minimum 85% pass rate
+  max_fail_rate: 0.08      # Maximum 8% fail rate
+  max_error_count: 0       # No errors allowed

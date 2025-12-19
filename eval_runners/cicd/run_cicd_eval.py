@@ -1,31 +1,102 @@
 #!/usr/bin/env python3
 """
-CI/CD Evaluation Runner
+CI/CD Evaluation Runner (Checkpoint Mode)
 
 Runs reduced evaluation for CI gating with strict thresholds.
 Exit code 0 = pass, 1 = regression detected.
 
+⚠️  IMPORTANT: This runner uses LOCKED configuration from checkpoint_config.yaml
+⚠️  The config file is hash-validated to prevent accidental changes.
+⚠️  To modify checkpoint settings, update the config AND the hash below.
+
 Usage:
-  python evaluations/cicd/run_cicd_eval.py --quick 30          # Quick regression check
-  python evaluations/cicd/run_cicd_eval.py --validate-config   # Config validation only
-  python evaluations/cicd/run_cicd_eval.py --check-imports     # Import check only
+  python eval_runners/cicd/run_cicd_eval.py                    # Run checkpoint eval
+  python eval_runners/cicd/run_cicd_eval.py --validate-config  # Config validation only
+  python eval_runners/cicd/run_cicd_eval.py --check-imports    # Import check only
+  python eval_runners/cicd/run_cicd_eval.py --force            # Skip hash validation (NOT RECOMMENDED)
 """
 
 import sys
 import json
+import hashlib
 import argparse
 from pathlib import Path
 from datetime import datetime
 
 # Add repo root to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
 
-# Thresholds for CI pass/fail
-THRESHOLDS = {
-    "pass_rate": 0.85,      # Minimum pass rate (85%)
-    "fail_rate": 0.08,      # Maximum fail rate (8%)
-    "error_count": 0,       # Maximum errors allowed
-}
+# =============================================================================
+# CHECKPOINT CONFIG PROTECTION
+# =============================================================================
+# This hash ensures checkpoint_config.yaml hasn't been accidentally modified.
+# To update: 1) Modify checkpoint_config.yaml  2) Run: shasum -a 256 config/checkpoint_config.yaml
+#            3) Update the hash below  4) Commit both changes together
+
+CHECKPOINT_CONFIG_HASH = "8097ea0832ce991dd1a3d3c4b2d7102c46af6680bb715849e443da98d4878f8d"
+CHECKPOINT_CONFIG_PATH = PROJECT_ROOT / "config" / "checkpoint_config.yaml"
+
+
+def validate_checkpoint_config_hash(force: bool = False) -> bool:
+    """
+    Validate that checkpoint_config.yaml hasn't been modified.
+    
+    Returns True if valid, False if modified (unless force=True).
+    """
+    if not CHECKPOINT_CONFIG_PATH.exists():
+        print(f"❌ ERROR: checkpoint_config.yaml not found at {CHECKPOINT_CONFIG_PATH}")
+        return False
+    
+    actual_hash = hashlib.sha256(CHECKPOINT_CONFIG_PATH.read_bytes()).hexdigest()
+    
+    if actual_hash != CHECKPOINT_CONFIG_HASH:
+        print("\n" + "=" * 60)
+        print("⚠️  CHECKPOINT CONFIG MODIFIED")
+        print("=" * 60)
+        print(f"Expected hash: {CHECKPOINT_CONFIG_HASH}")
+        print(f"Actual hash:   {actual_hash}")
+        print("\nThe checkpoint configuration has been modified.")
+        print("This could cause inconsistent checkpoint results.")
+        print("\nTo fix:")
+        print("  1. Revert changes to config/checkpoint_config.yaml, OR")
+        print("  2. Update CHECKPOINT_CONFIG_HASH in this file if change is intentional")
+        print("\nUse --force to bypass this check (NOT RECOMMENDED)")
+        print("=" * 60 + "\n")
+        
+        if force:
+            print("⚠️  --force flag set, continuing despite hash mismatch...\n")
+            return True
+        return False
+    
+    print("  ✓ checkpoint_config.yaml hash validated")
+    return True
+
+
+def load_checkpoint_config() -> dict:
+    """Load the checkpoint configuration."""
+    import yaml
+    with open(CHECKPOINT_CONFIG_PATH) as f:
+        return yaml.safe_load(f)
+
+
+def get_thresholds() -> dict:
+    """Get thresholds from checkpoint config."""
+    try:
+        config = load_checkpoint_config()
+        thresholds = config.get("thresholds", {})
+        return {
+            "pass_rate": thresholds.get("min_pass_rate", 0.85),
+            "fail_rate": thresholds.get("max_fail_rate", 0.08),
+            "error_count": thresholds.get("max_error_count", 0),
+        }
+    except Exception:
+        # Fallback defaults
+        return {
+            "pass_rate": 0.85,
+            "fail_rate": 0.08,
+            "error_count": 0,
+        }
 
 
 def check_imports() -> bool:
@@ -89,31 +160,29 @@ def check_imports() -> bool:
     return True
 
 
-def validate_config() -> bool:
+def validate_config(force: bool = False) -> bool:
     """Validate configuration files load correctly."""
     print("Validating configuration...")
     errors = []
     
-    # Check eval_config.yaml
-    config_path = Path(__file__).parent.parent.parent / "config" / "eval_config.yaml"
-    if config_path.exists():
-        try:
-            import yaml
-            with open(config_path) as f:
-                config = yaml.safe_load(f)
-            if not config:
-                errors.append("eval_config.yaml is empty")
-            elif "generator" not in config:
-                errors.append("eval_config.yaml missing 'generator' section")
-            else:
-                print(f"  ✓ eval_config.yaml (schema_version: {config.get('schema_version', 'unknown')})")
-        except Exception as e:
-            errors.append(f"eval_config.yaml: {e}")
-    else:
-        errors.append(f"eval_config.yaml not found at {config_path}")
+    # Check checkpoint_config.yaml hash (CRITICAL)
+    if not validate_checkpoint_config_hash(force=force):
+        return False
     
-    # Check baselines exist
-    baselines_dir = Path(__file__).parent.parent.parent / "baselines"
+    # Load and validate checkpoint config
+    try:
+        config = load_checkpoint_config()
+        if not config:
+            errors.append("checkpoint_config.yaml is empty")
+        elif config.get("config_type") != "checkpoint":
+            errors.append("checkpoint_config.yaml has wrong config_type")
+        else:
+            print(f"  ✓ checkpoint_config.yaml (schema_version: {config.get('schema_version', 'unknown')})")
+    except Exception as e:
+        errors.append(f"checkpoint_config.yaml: {e}")
+    
+    # Check baselines exist (using new path)
+    baselines_dir = PROJECT_ROOT / "clients_qa_gold" / "BFAI" / "baselines"
     if baselines_dir.exists():
         baselines = list(baselines_dir.glob("baseline_*.json"))
         if baselines:
@@ -123,8 +192,8 @@ def validate_config() -> bool:
     else:
         errors.append(f"Baselines directory not found at {baselines_dir}")
     
-    # Check corpus exists
-    corpus_path = Path(__file__).parent.parent.parent / "clients" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
+    # Check corpus exists (using new path)
+    corpus_path = PROJECT_ROOT / "clients_qa_gold" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
     if corpus_path.exists():
         try:
             with open(corpus_path) as f:
@@ -146,17 +215,38 @@ def validate_config() -> bool:
     return True
 
 
-def run_quick_eval(num_questions: int = 30) -> dict:
-    """Run quick evaluation and return results."""
+def run_checkpoint_eval() -> dict:
+    """
+    Run checkpoint evaluation using LOCKED configuration.
+    
+    All settings come from checkpoint_config.yaml - no overrides allowed.
+    """
     from eval_runners.baseline.run_baseline import run_evaluation
     
-    print(f"\nRunning quick evaluation ({num_questions} questions)...")
+    # Load config (already validated)
+    config = load_checkpoint_config()
+    
+    # Extract settings from config
+    client = config.get("client", "BFAI")
+    corpus_config = config.get("corpus", {})
+    num_questions = corpus_config.get("sample_size", 30)
+    retrieval = config.get("retrieval", {})
+    precision_k = retrieval.get("precision_k", 25)
+    execution = config.get("execution", {})
+    workers = execution.get("workers", 5)
+    
+    print(f"\nRunning CHECKPOINT evaluation...")
+    print(f"  Config: checkpoint_config.yaml (LOCKED)")
+    print(f"  Client: {client}")
+    print(f"  Questions: {num_questions}")
+    print(f"  Precision@K: {precision_k}")
+    print(f"  Workers: {workers}")
     print("-" * 40)
     
     output = run_evaluation(
-        client="BFAI",
-        workers=5,
-        precision_k=25,
+        client=client,
+        workers=workers,
+        precision_k=precision_k,
         quick=num_questions,
         test_mode=False,
         update_baseline=False,
@@ -166,50 +256,57 @@ def run_quick_eval(num_questions: int = 30) -> dict:
 
 
 def check_thresholds(output: dict) -> tuple[bool, list[str]]:
-    """Check if results meet CI thresholds."""
+    """Check if results meet CI thresholds from checkpoint config."""
     metrics = output.get("metrics", {})
     results = output.get("results", [])
+    thresholds = get_thresholds()
     
     failures = []
     
     # Check pass rate
     pass_rate = metrics.get("pass_rate", 0)
-    if pass_rate < THRESHOLDS["pass_rate"]:
-        failures.append(f"pass_rate {pass_rate:.1%} < {THRESHOLDS['pass_rate']:.0%}")
+    if pass_rate < thresholds["pass_rate"]:
+        failures.append(f"pass_rate {pass_rate:.1%} < {thresholds['pass_rate']:.0%}")
     
     # Check fail rate
     fail_rate = metrics.get("fail_rate", 1)
-    if fail_rate > THRESHOLDS["fail_rate"]:
-        failures.append(f"fail_rate {fail_rate:.1%} > {THRESHOLDS['fail_rate']:.0%}")
+    if fail_rate > thresholds["fail_rate"]:
+        failures.append(f"fail_rate {fail_rate:.1%} > {thresholds['fail_rate']:.0%}")
     
     # Check for errors
     error_count = sum(1 for r in results if r.get("error"))
-    if error_count > THRESHOLDS["error_count"]:
-        failures.append(f"error_count {error_count} > {THRESHOLDS['error_count']}")
+    if error_count > thresholds["error_count"]:
+        failures.append(f"error_count {error_count} > {thresholds['error_count']}")
     
     return len(failures) == 0, failures
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="CI/CD Evaluation Runner",
+        description="CI/CD Evaluation Runner (Checkpoint Mode)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+NOTE: This runner uses LOCKED configuration from checkpoint_config.yaml.
+      The config file is hash-validated to prevent accidental changes.
+      Use --force to bypass hash validation (NOT RECOMMENDED).
+        """
     )
     
-    parser.add_argument("--quick", type=int, default=30,
-                        help="Number of questions for quick eval (default: 30)")
     parser.add_argument("--validate-config", action="store_true",
                         help="Only validate configuration")
     parser.add_argument("--check-imports", action="store_true",
                         help="Only check imports")
     parser.add_argument("--skip-eval", action="store_true",
                         help="Skip evaluation, only run checks")
+    parser.add_argument("--force", action="store_true",
+                        help="Bypass config hash validation (NOT RECOMMENDED)")
     
     args = parser.parse_args()
     
     print("=" * 60)
-    print("  CI/CD EVALUATION")
+    print("  CI/CD CHECKPOINT EVALUATION")
     print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("  Config: checkpoint_config.yaml (LOCKED)")
     print("=" * 60)
     
     # Import check only
@@ -219,7 +316,7 @@ def main():
     
     # Config validation only
     if args.validate_config:
-        success = validate_config()
+        success = validate_config(force=args.force)
         sys.exit(0 if success else 1)
     
     # Full CI check
@@ -229,30 +326,34 @@ def main():
     if not check_imports():
         all_passed = False
     
-    # Step 2: Validate config
-    if not validate_config():
+    # Step 2: Validate config (including hash check)
+    if not validate_config(force=args.force):
         all_passed = False
+        if not args.force:
+            print("\n❌ Aborting due to config validation failure.")
+            sys.exit(1)
     
-    # Step 3: Run evaluation (unless skipped)
+    # Step 3: Run checkpoint evaluation (unless skipped)
     if not args.skip_eval and all_passed:
-        output = run_quick_eval(args.quick)
+        output = run_checkpoint_eval()
         
         # Check thresholds
         passed, failures = check_thresholds(output)
         
         print("\n" + "=" * 60)
-        print("CI/CD RESULTS")
+        print("CHECKPOINT RESULTS")
         print("=" * 60)
         
         metrics = output.get("metrics", {})
-        print(f"  Pass Rate: {metrics.get('pass_rate', 0):.1%}")
-        print(f"  Fail Rate: {metrics.get('fail_rate', 0):.1%}")
+        thresholds = get_thresholds()
+        print(f"  Pass Rate: {metrics.get('pass_rate', 0):.1%} (threshold: ≥{thresholds['pass_rate']:.0%})")
+        print(f"  Fail Rate: {metrics.get('fail_rate', 0):.1%} (threshold: ≤{thresholds['fail_rate']:.0%})")
         print(f"  MRR: {metrics.get('mrr', 0):.3f}")
         
         if passed:
-            print("\n✅ CI/CD PASSED - All thresholds met")
+            print("\n✅ CHECKPOINT PASSED - All thresholds met")
         else:
-            print(f"\n❌ CI/CD FAILED - Threshold violations:")
+            print(f"\n❌ CHECKPOINT FAILED - Threshold violations:")
             for f in failures:
                 print(f"  - {f}")
             all_passed = False

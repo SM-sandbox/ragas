@@ -49,7 +49,7 @@ retrieval:
 
 # Corpus configuration
 corpus:
-  file: "clients/BFAI/qa/QA_BFAI_gold_v1-0__q458.json"
+  file: "clients_qa_gold/BFAI/qa/QA_BFAI_gold_v1-0__q458.json"
   client: "BFAI"
 
 # Pricing per 1M tokens (for cost calculation)
