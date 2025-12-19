@@ -1,0 +1,93 @@
+{
+  "report_type": "checkpoint_comparison",
+  "generated_at": "2025-12-19T11:57:17.384419",
+  "baseline": {
+    "id": "C005",
+    "path": "clients_eval_data/BFAI/checkpoints/C005__2025-12-19__L__p25-3-flash__q458/results.json",
+    "timestamp": "2025-12-19T10:50:27.787852"
+  },
+  "checkpoint": {
+    "id": "C006",
+    "path": "clients_eval_data/BFAI/checkpoints/C006__2025-12-19__L__p25-3-flash__q458/results.json",
+    "timestamp": "2025-12-19T11:56:49.049991"
+  },
+  "metrics_comparison": {
+    "pass_rate": {
+      "baseline": 0.9192139737991266,
+      "checkpoint": 0.9126637554585153,
+      "delta": -0.0065502183406113135,
+      "delta_pct": -0.6550218340611313
+    },
+    "partial_rate": {
+      "baseline": 0.06550218340611354,
+      "checkpoint": 0.07205240174672489,
+      "delta": 0.006550218340611355
+    },
+    "fail_rate": {
+      "baseline": 0.015283842794759825,
+      "checkpoint": 0.015283842794759825,
+      "delta": 0.0
+    },
+    "recall_at_100": {
+      "baseline": 0.9912663755458515,
+      "checkpoint": 0.9912663755458515,
+      "delta": 0.0
+    },
+    "mrr": {
+      "baseline": 0.739507556037345,
+      "checkpoint": 0.7367268015373777,
+      "delta": -0.002780754499967286
+    },
+    "overall_score_avg": {
+      "baseline": 4.8128820960698695,
+      "checkpoint": 4.80589519650655,
+      "delta": -0.0069868995633193265
+    }
+  },
+  "config_comparison": {
+    "baseline": {
+      "generator_model": "gemini-3-flash-preview",
+      "judge_model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "recall_k": 100,
+      "workers": 10,
+      "temperature": 0.0
+    },
+    "checkpoint": {
+      "generator_model": "gemini-3-flash-preview",
+      "generator_reasoning_effort": "low",
+      "generator_seed": 42,
+      "judge_model": "gemini-3-flash-preview",
+      "judge_reasoning_effort": "low",
+      "judge_seed": 42,
+      "precision_k": 25,
+      "recall_k": 100,
+      "workers": 10,
+      "temperature": 0.0
+    }
+  },
+  "latency_comparison": {
+    "avg_s": {
+      "baseline": 10.323781448160197,
+      "checkpoint": 9.883187903587475,
+      "delta": -0.4405935445727227
+    }
+  },
+  "tokens_comparison": {
+    "total": {
+      "baseline": 5384252,
+      "checkpoint": 5374501,
+      "delta": -9751
+    }
+  },
+  "thresholds": {
+    "min_pass_rate": 0.85,
+    "max_fail_rate": 0.08
+  },
+  "verdict": {
+    "pass_rate_ok": true,
+    "fail_rate_ok": true,
+    "within_tolerance": true,
+    "overall": "PASS"
+  }
+}
