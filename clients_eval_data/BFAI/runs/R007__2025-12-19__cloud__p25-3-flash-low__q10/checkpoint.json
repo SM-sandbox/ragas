@@ -1,0 +1,662 @@
+[
+  {
+    "question_id": "sh_easy_005",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the rated AC voltage for the NEP BDM-1200-LV Micro Inverter?",
+    "expected_answer": "120V",
+    "source_documents": [],
+    "generated_answer": "The rated AC voltage for the NEP BDM-1200-LV Micro Inverter is 120V [1]. This model is designed for DIY installation by plugging directly into a standard 120V wall outlet [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 19.08699679374695,
+    "timing": {
+      "cloud_retrieve": 14.594781875610352,
+      "cloud_query": 2.323410987854004,
+      "judge": 2.168787956237793,
+      "total": 19.08699679374695
+    },
+    "generator_tokens": {
+      "prompt": 5584,
+      "completion": 54,
+      "thinking": 0,
+      "total": 5638,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 368,
+      "completion": 69,
+      "thinking": null,
+      "total": 437,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.00058,
+      "judge": 6.44e-05,
+      "total": 0.0006444
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 175,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_001",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+    "expected_answer": "failure, preventive stock",
+    "source_documents": [],
+    "generated_answer": "Based on the Spare Part Request Form, the two examples provided for the \"Reason for Replacement\" are:\n\n1.  **Failure** [1]\n2.  **Preventive stock** [1]\nThese examples are listed in the \"Details (to be completed at time of request)\" column for the \"Reason for Replacement\" row on the form [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 19.390561819076538,
+    "timing": {
+      "cloud_retrieve": 14.625782012939453,
+      "cloud_query": 3.6096458435058594,
+      "judge": 1.155121088027954,
+      "total": 19.390561819076538
+    },
+    "generator_tokens": {
+      "prompt": 5934,
+      "completion": 76,
+      "thinking": 0,
+      "total": 6010,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 316,
+      "completion": 69,
+      "thinking": null,
+      "total": 385,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0006238,
+      "judge": 5.92e-05,
+      "total": 0.000683
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 292,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_002",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "According to the Southern States Disconnect Switch Shipment Overview, how are large pieces of loose steel identified when they are included with the pipe bundles?",
+    "expected_answer": "Large pieces of loose steel included with the pipe bundles are marked with a Part #, JO #, op-mech #, Description, and Sub-Item #.",
+    "source_documents": [],
+    "generated_answer": "According to the Southern States Disconnect Switch Shipment Overview, large pieces of loose steel included with the pipe bundles are marked with the following identification information:\n\n*   **Part #** [1]\n*   **JO #** [1]\n*   **Op-mech #** [1]\n*   **Description** [1]\n*   **Sub-Item #** [1]\nThe documentation notes that the sub-item # and description will concur with what is shown on the op-mech drawing [1]. An example of this marking is provided as: \"15114684 JO#: 606676 156169 Sub-Item: 28\" [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 19.4775710105896,
+    "timing": {
+      "cloud_retrieve": 14.600353002548218,
+      "cloud_query": 2.929570198059082,
+      "judge": 1.9476311206817627,
+      "total": 19.4775710105896
+    },
+    "generator_tokens": {
+      "prompt": 7287,
+      "completion": 154,
+      "thinking": 0,
+      "total": 7441,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 433,
+      "completion": 67,
+      "thinking": null,
+      "total": 500,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0007903,
+      "judge": 7.01e-05,
+      "total": 0.0008604
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 502,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_004",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum RMS line voltage that can be present on the input terminals of the device?",
+    "expected_answer": "Line voltages up to 600 VRMS can be present on the input terminals of the device.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the maximum RMS line voltage that can be present on the input terminals of the device is **600 VRMS** [1].\n\nAccording to the warnings provided in the documentation:\n*   Line voltages up to **600 VRMS** are present on the input terminals of the device and throughout the connected line circuits during normal operation [1].\n*   These voltages may cause severe injury or death [1].\n*   Installation and servicing should be performed only by qualified, properly trained personnel [1].\n*   The device is classified as a **CLASS III** measurement device [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 19.525648832321167,
+    "timing": {
+      "cloud_retrieve": 14.488412857055664,
+      "cloud_query": 3.0452651977539062,
+      "judge": 1.9919579029083252,
+      "total": 19.525648832321167
+    },
+    "generator_tokens": {
+      "prompt": 10197,
+      "completion": 130,
+      "thinking": 0,
+      "total": 10327,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 434,
+      "completion": 67,
+      "thinking": null,
+      "total": 501,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0010717,
+      "judge": 7.02e-05,
+      "total": 0.0011419
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 593,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_003",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "For what specific application is the Mechanical Interlock designed, as listed under the 'COMMON OPERATING MECHANISM PARTS'?",
+    "expected_answer": "The Mechanical Interlock is designed for use with main/ground applications.",
+    "source_documents": [],
+    "generated_answer": "Under the \"COMMON OPERATING MECHANISM PARTS\" section, the Mechanical Interlock is specifically designed for use with **main/ground** [4].\n\nAdditional details regarding mechanical interlocks from the provided documents include:\n*   **Function:** A heavy-duty version is described as a safety device that prevents a line switch and its grounding switch from being closed at the same time [5]. It utilizes a simple cam mechanism shielded from ice formation to ensure operation regardless of environmental conditions [5].\n*   **Installation:** It is designed for easy installation after the vertical operating pipe is in place, which facilitates later equipment upgrades [5].\n*   **Regulatory Requirements:** According to the National Electrical Code (NEC) 2023, mechanical interlocks must be provided in the housing to prevent the complete withdrawal of a circuit breaker from the housing when the stored energy mechanism is fully charged, unless a device is provided to block the closing function before withdrawal [3].\n*   **Other Applications:**\n    *   **NOARK A32 Series:** Uses a cable-connected mechanism to prevent two interlocked breakers from closing at the same time [1].\n    *   **Siemens:** Offers mechanical interlocks for various breaker types, including a sliding bar for 2 circuit breakers [7] and specific brackets for Type QP, BL, and BQ breakers [2].\n    *   **UL Standards:** Mechanical interlocks must have the necessary mechanical strength for reliable performance and must be mounted so that removing a door or barrier does not defeat the mechanism [6].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 19.91760802268982,
+    "timing": {
+      "cloud_retrieve": 14.499661922454834,
+      "cloud_query": 4.246381998062134,
+      "judge": 1.1715481281280518,
+      "total": 19.91760802268982
+    },
+    "generator_tokens": {
+      "prompt": 8860,
+      "completion": 320,
+      "thinking": 0,
+      "total": 9180,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1014,
+      "completion": 73,
+      "thinking": null,
+      "total": 1087,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.001014,
+      "judge": 0.0001306,
+      "total": 0.0011446
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 1574,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_001",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "What specific documents and components are typically found inside the cardboard tube located within the operating mechanism box?",
+    "expected_answer": "The cardboard tube located within the operating mechanism box typically contains position indicators for the switch, operating mechanism (op-mech) drawings, and documentation needed to assemble the product.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the cardboard tube located within the operating mechanism box typically contains the following specific documents and components:\n\n*   **Position Indicators:** Indicators used for the switch [1].\n*   **Operating Mechanism (Op-Mech) Drawings:** Technical drawings for the operating mechanism [1].\n*   **Documentation:** Necessary documentation required to assemble the product [1].\n\nThis cardboard tube is specifically identified as being located within the operating mechanism box as part of the shipment for Southern States group-operated disconnect switches [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 20.40186595916748,
+    "timing": {
+      "cloud_retrieve": 14.6218581199646,
+      "cloud_query": 4.698477029800415,
+      "judge": 1.0815167427062988,
+      "total": 20.40186595916748
+    },
+    "generator_tokens": {
+      "prompt": 7203,
+      "completion": 133,
+      "thinking": 0,
+      "total": 7336,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 380,
+      "completion": 67,
+      "thinking": null,
+      "total": 447,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0007735,
+      "judge": 6.48e-05,
+      "total": 0.0008383
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 604,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_003",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the DC system size specified for the BOYNE MOUNTAIN RESORT project?",
+    "expected_answer": "The DC system size is 1,770 KW DC.",
+    "source_documents": [],
+    "generated_answer": "The DC system size specified for the BOYNE MOUNTAIN RESORT project is 1,770 KW DC [1]. This specification is listed under the project description on the cover sheet of the project documentation [1]. The project is further identified by the site name BOYNE MOUNTAIN RESORT [1] and project numbers SO50016 / SO87932 [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 22.141191959381104,
+    "timing": {
+      "cloud_retrieve": 14.626503944396973,
+      "cloud_query": 6.492506980895996,
+      "judge": 1.0221567153930664,
+      "total": 22.141191959381104
+    },
+    "generator_tokens": {
+      "prompt": 37318,
+      "completion": 88,
+      "thinking": 295,
+      "total": 37701,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 444,
+      "completion": 67,
+      "thinking": null,
+      "total": 511,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0039735,
+      "judge": 7.12e-05,
+      "total": 0.0040447
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 318,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_002",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+    "expected_answer": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+    "source_documents": [],
+    "generated_answer": "According to the general notes, the maximum specified length for an RS-485 bus cable is 4000FT (1220M) [2]. The cable used for this bus must meet or exceed Belden 3106A specifications [2].\n\nOther source documents provided specify similar or related maximum lengths for RS-485 connections:\n*   For Shark 100 meters, the maximum length for cable connecting all devices is 4000 feet (1219.20 meters) if an RS485 repeater is not being used [1][3].\n*   For AURORA inverters connected in a daisy chain, the recommended maximum length is 1200 metres [4].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 23.993813037872314,
+    "timing": {
+      "cloud_retrieve": 14.495342016220093,
+      "cloud_query": 8.365540981292725,
+      "judge": 1.132903814315796,
+      "total": 23.993813037872314
+    },
+    "generator_tokens": {
+      "prompt": 18930,
+      "completion": 166,
+      "thinking": 610,
+      "total": 19706,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 818,
+      "completion": 73,
+      "thinking": null,
+      "total": 891,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0023864,
+      "judge": 0.000111,
+      "total": 0.0024974
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 547,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_004",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "Under what specific conditions does OSHA's Lockout/Tagout standard (29 CFR 1910.147) apply to servicing and/or maintenance activities that occur during normal production operations?",
+    "expected_answer": "The standard applies to servicing and/or maintenance during normal production operations only if an employee is required to remove or bypass a guard or other safety device, or if an employee is required to place any part of his or her body into an area on a machine or piece of equipment where work is actually performed upon the material being processed (point of operation) or where an associated danger zone exists during a machine operating cycle.",
+    "source_documents": [],
+    "generated_answer": "According to 29 CFR 1910.147, normal production operations are generally not covered by the lockout/tagout standard [1]. However, servicing and/or maintenance activities that take place during normal production operations are covered by the standard if either of the following specific conditions is met:\n\n*   **Removal or Bypassing of Safeguards:** An employee is required to remove or bypass a guard or other safety device [1].\n*   **Exposure to Danger Zones:** An employee is required to place any part of his or her body into an area on a machine or piece of equipment where work is actually performed upon the material being processed (point of operation) [1].\n*   **Operating Cycle Hazards:** An employee is required to place any part of his or her body into an area where an associated danger zone exists during a machine operating cycle [1].\n\n**Exception for Minor Activities**\nThe standard provides an exception to these requirements for minor tool changes and adjustments, as well as other minor servicing activities, that occur during normal production operations [1]. These specific activities are not covered by the standard if they meet all of the following criteria:\n1.  They are routine, repetitive, and integral to the use of the equipment for production [1].\n2.  The work is performed using alternative measures which provide effective protection (as referenced in subpart O of the part) [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 26.645986080169678,
+    "timing": {
+      "cloud_retrieve": 14.48458218574524,
+      "cloud_query": 11.138157844543457,
+      "judge": 1.023231029510498,
+      "total": 26.645986080169678
+    },
+    "generator_tokens": {
+      "prompt": 13959,
+      "completion": 297,
+      "thinking": 766,
+      "total": 15022,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 634,
+      "completion": 73,
+      "thinking": null,
+      "total": 707,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0020509,
+      "judge": 9.26e-05,
+      "total": 0.0021435
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 1410,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_005",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "For cord and plug connected electric equipment, under what specific circumstances is OSHA's Lockout/Tagout standard (29 CFR 1910.147) considered not to apply?",
+    "expected_answer": "The standard does not apply to work on cord and plug connected electric equipment if exposure to the hazards of unexpected energization or start up of the equipment is controlled by the unplugging of the equipment from the energy source and by the plug being under the exclusive control of the employee performing the servicing or maintenance.",
+    "source_documents": [],
+    "generated_answer": "For cord and plug connected electric equipment, OSHA's Lockout/Tagout standard (29 CFR 1910.147) is considered not to apply under the following specific circumstances:\n\n*   **Control by Unplugging:** The standard does not cover work on this equipment if the exposure to the hazards of unexpected energization or start up is controlled by unplugging the equipment from the energy source [1].\n*   **Exclusive Control:** The plug must be under the exclusive control of the employee who is performing the servicing or maintenance [1].\n\nAdditionally, the standard provides a general exception for minor servicing activities that may involve such equipment. Specifically, minor tool changes and adjustments, as well as other minor servicing activities that occur during normal production operations, are not covered if they are routine, repetitive, and integral to the use of the equipment for production [1]. This exception applies only if the work is performed using alternative measures that provide effective protection [1].\n\nThe standard also does not apply to the following general categories, which may include the use of cord and plug equipment:\n*   Construction and agriculture employment [1].\n*   Employment covered by 29 CFR parts 1915, 1917, and 1918 [1].\n*   Installations under the exclusive control of electric utilities for the purpose of power generation, transmission, and distribution, including related equipment for communication or metering [1].\n*   Exposure to electrical hazards from work on, near, or with conductors or equipment in electric-utilization installations, which is covered by subpart S [1].\n*   Oil and gas well drilling and servicing [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 27.338384866714478,
+    "timing": {
+      "cloud_retrieve": 14.490036010742188,
+      "cloud_query": 11.81619906425476,
+      "judge": 1.0321180820465088,
+      "total": 27.338384866714478
+    },
+    "generator_tokens": {
+      "prompt": 14492,
+      "completion": 347,
+      "thinking": 813,
+      "total": 15652,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 678,
+      "completion": 73,
+      "thinking": null,
+      "total": 751,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0021571,
+      "judge": 9.7e-05,
+      "total": 0.0022541
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 1671,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  }
+]

@@ -35,7 +35,7 @@ class RateLimiterConfig:
     window_seconds: int = 60  # Sliding window size
     min_wait_ms: int = 10  # Minimum wait between checks
     max_wait_ms: int = 5000  # Maximum wait before retry
-    stagger_ms: int = 50  # Stagger between concurrent releases
+    stagger_ms: int = 5  # Stagger between concurrent releases (was 50, reduced for high RPM limits)
 
 
 class SmartRateLimiter:
@@ -268,26 +268,30 @@ class SmartRateLimiter:
                 
                 # Check if we have capacity
                 if current_rpm < self.effective_rpm and current_tpm + estimated_tokens < self.effective_tpm:
-                    # Stagger releases
+                    # Stagger releases - wait only the remaining stagger time
                     stagger_wait = max(0, self._last_acquire_time + (self.config.stagger_ms / 1000.0) - now)
-                    if stagger_wait <= 0:
+                    if stagger_wait > 0:
+                        # Release lock, wait for stagger, then re-acquire
+                        pass  # Will wait below
+                    else:
                         self._record_request(estimated_tokens)
                         self._last_acquire_time = time.time()
                         if total_wait > 0:
                             self._total_waits += 1
                             self._total_wait_time += total_wait
                         return total_wait
-                
-                wait_time = self._calculate_wait_time(current_rpm, current_tpm, estimated_tokens)
+                    wait_time = stagger_wait
+                else:
+                    wait_time = self._calculate_wait_time(current_rpm, current_tpm, estimated_tokens)
             
-            # Wait outside the lock
+            # Wait outside the lock - only wait the calculated time, not a fixed stagger
             if wait_time > 0:
                 time.sleep(wait_time)
                 total_wait += wait_time
             else:
-                stagger = self.config.stagger_ms / 1000.0
-                time.sleep(stagger)
-                total_wait += stagger
+                # Minimal sleep to prevent busy-wait, but very short
+                time.sleep(0.001)  # 1ms, not 50ms
+                total_wait += 0.001
     
     def record_completion(self, actual_tokens: int) -> None:
         """
