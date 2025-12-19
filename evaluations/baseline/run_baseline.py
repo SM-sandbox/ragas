@@ -23,13 +23,13 @@ from pathlib import Path
 
 # Add paths
 sys.path.insert(0, "/Users/scottmacon/Documents/GitHub/gRAG_v3")
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from baseline_manager import get_latest_baseline, save_baseline, compare_to_baseline, format_comparison_report
-from cost_calculator import calculate_run_cost
+from lib.core.baseline_manager import get_latest_baseline, save_baseline, compare_to_baseline, format_comparison_report
+from lib.core.cost_calculator import calculate_run_cost
 
 # Import the evaluator
-from run_gold_eval import GoldEvaluator, load_corpus, OUTPUT_DIR
+from lib.core.evaluator import GoldEvaluator, load_corpus, OUTPUT_DIR
 
 # Directories
 RUNS_DIR = Path(__file__).parent.parent.parent / "runs"

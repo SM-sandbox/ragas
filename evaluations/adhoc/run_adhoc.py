@@ -18,9 +18,9 @@ from datetime import datetime
 
 # Add paths
 sys.path.insert(0, "/Users/scottmacon/Documents/GitHub/gRAG_v3")
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from baseline_manager import get_latest_baseline, list_baselines
+from lib.core.baseline_manager import get_latest_baseline, list_baselines
 
 # =============================================================================
 # DEFAULTS - Edit these to change the default configuration
@@ -179,7 +179,7 @@ def interactive_config() -> dict:
 
 def run_evaluation(config: dict):
     """Run the evaluation with the given config."""
-    from core_eval import run_evaluation as core_run
+    from evaluations.baseline.run_baseline import run_evaluation as core_run
     
     print("\n🚀 Starting evaluation...")
     print("-" * 40)

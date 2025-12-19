@@ -34,14 +34,14 @@ from services.api.retrieval.vector_search import VectorSearchRetriever
 from services.api.ranking.google_ranker import GoogleRanker
 from services.api.generation.gemini import GeminiAnswerGenerator
 from services.api.core.config import QueryConfig
-# Add src to path for gemini_client
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
-from gemini_client import generate_for_judge, get_model_info
+# Import gemini_client from lib
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from lib.clients.gemini_client import generate_for_judge, get_model_info
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
 CORPUS_PATH = Path(__file__).parent.parent.parent / "clients" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
-OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "gold_standard_eval"
+OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "core_eval"
 CHECKPOINT_INTERVAL = 10
 DEFAULT_WORKERS = 5  # Safe for 60 RPM quota, increase to 15-25 with 1500 RPM
 
