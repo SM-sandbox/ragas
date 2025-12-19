@@ -411,8 +411,15 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             
             total_time = time.time() - start
             
-            # Cloud mode: generator tokens not available, only judge tokens
-            generator_tokens = {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0}
+            # Extract generator tokens from cloud response metadata
+            cloud_meta = cloud_result.get("metadata", {})
+            generator_tokens = {
+                "prompt": cloud_meta.get("prompt_tokens", 0) or 0,
+                "completion": cloud_meta.get("completion_tokens", 0) or 0,
+                "thinking": cloud_meta.get("thinking_tokens", 0) or 0,
+                "total": cloud_meta.get("total_tokens", 0) or 0,
+                "cached": cloud_meta.get("cached_content_tokens", 0) or 0,
+            }
             judge_tokens = judge_result.get("tokens", {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0})
             
             # Calculate cost estimate
@@ -445,7 +452,12 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 "generator_tokens": generator_tokens,
                 "judge_tokens": judge_tokens,
                 "cost_estimate_usd": cost_estimate,
-                "llm_metadata": {"model": "cloud", "mode": "cloud"},
+                "llm_metadata": {
+                    "model": cloud_meta.get("model", "cloud"),
+                    "mode": "cloud",
+                    "has_citations": cloud_meta.get("has_citations", False),
+                    "reasoning_effort": cloud_meta.get("reasoning_effort", "low"),
+                },
                 "orchestrator": self.orchestrator,
                 "answer_length": len(answer),
                 "retrieval_candidates": len(raw_chunks),
