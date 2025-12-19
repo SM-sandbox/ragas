@@ -1,0 +1,116 @@
+--- Page 1 ---
+PRODUCT DATASHEET
+www.northernep.com
+BDM-2000-20241216
+Page 1 of 1
+BDM- 2000 MICROINVERTER
+CEC Listing as Utility Interactive Grid Support Inverter 
+(NC0171-US, NC0165-US) 
+STANDARD DIMENSIONS 
+mm 
+Per box: 3 pcs 
+Boxes per layer: 11 
+Layers: 
+Weight: 13 lbs. ( 5.9 kg) 
+Certifications 
+UL 1741, IEEE1547,CSA C22.2, IEC/EN 62109-1, IEC/EN 62109-2, VDE-AR-
+N 4105*, VDE V 0126-1-1/A1, G83/2, CEI 21, AS 4777.2, AS 4777.3, 
+EN50438, ABNT NBR 16149/16150 
+Pallet Qty: 99 pcs 
+Pallet weight: 1440 lbs.
+3 
+SPECIFICATIONS 
+All NEC required adjustment factors have been considered for AC outputs. AC 
+current outputs will not exceed stated values for Rated output AC Current. 
+COMPLIANCE
+NEC 2023 Section 690.11 DC Arc-Fault Circuit Protection
+NEC 2023 Section 690.12 Rapid Shutdown of PV Systems on Buildings 
+NEC 2023 Section 705.12 Point of Connection (AC Arc-Fault Protection)
+Output (AC)
+Peak AC Output Power: 
+2000 W
+Max Continuous Output Power: 
+1920 W 
+1664 W 
+Nominal Power Grid Voltage: 
+240 Vac 
+Allowable Power Grid Voltage: 
+211-264 Vac
+Rated Output Current:
+8.0A
+Maximum Units Per Branch (30A): 3 units
+(All NEC adjustment factors considered) 
+Allowable Power Grid Frequency: 
+59.3 - 60.5 Hz (adjustable)
+THD:
+< 5% (at rated power)
+Power Factor (cos phi, fixed):
+0.9un ~ 0.9ov
+Current (inrush) (Peak and Duration): 
+24 A peak / 15μs
+Nominal Frequency: 
+60 Hz
+Max Output Fault Current: 
+26.0 A peak / 662 ms
+Max Output Overcurrent Protection: 
+20 A
+System Efficiency
+Weighted Average Efficiency (CEC):
+96.5%
+Nighttime Tare Loss: 
+0.4 W
+Protection Function
+Over/Under Voltage Protection: 
+Yes
+Over/Under Frequency Protection:
+Yes
+Anti -Islanding Protection:
+Yes
+Over Current Protection: 
+Yes
+Reverse DC Polarity Protection: 
+Yes
+Overload Protection: 
+Yes
+Protection Degree:  
+NEMA-6 / IP-66 / IP-67
+Ambient Temperature:
+-40°F to +149°F (-40°C to +65°C)
+Operating Temperature:
+-40°F to +185°F (-40°C to +85°C)
+Display: 
+LED Light
+Communications: 
+Powerline Communications , Wi-Fi
+Environment Category: 
+Indoor and outdoor
+Wet Location: 
+Suitable
+Pollution Degree:
+PD 3
+Over Voltage Category:
+II(PV), III (AC MAINS)
+3φ: 208 Vac
+3φ: 8.0 A
+3φ: 3 units/phase
+3φ: 183-228 Vac
+2000 W
+3φ: 480Y/277Vac
+3φ: 7.22 A
+3φ: 3 units/phase
+3φ: 243-305 Vac
+Input (DC)
+Recommended Max PV Power: 
+750 W x 4
+Max DC Open Circuit Voltage:
+60 Vdc
+MPP Input Current:
+18 A x 4
+MPPT Tracking Accuracy: 
+> 99% 
+MPPT Tracking Range: 
+22 – 55 Vdc
+Maximum Backfeed Current to Array: 
+0 A
+Max Isc Current:
+25 A x 4

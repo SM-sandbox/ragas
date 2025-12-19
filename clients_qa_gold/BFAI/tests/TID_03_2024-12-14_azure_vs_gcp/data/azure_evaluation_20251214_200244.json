@@ -1,0 +1,2354 @@
+{
+  "timestamp": "20251214_200244",
+  "config": {
+    "search_index": "bf-demo",
+    "llm_model": "gpt-5.2-chat-2025-12-11",
+    "embedding_model": "eastus-text-embedding-3-large",
+    "top_k": 12,
+    "workers": 15
+  },
+  "metrics": {
+    "total": 194,
+    "successful": 0,
+    "failed": 194,
+    "overall_score": 0,
+    "pass_rate": 0,
+    "correctness": 0,
+    "completeness": 0,
+    "faithfulness": 0,
+    "relevance": 0,
+    "clarity": 0,
+    "avg_time_per_query": 0,
+    "avg_answer_chars": 0
+  },
+  "results": [
+    {
+      "question": "According to NEC 2023, Section 200.6(A), what are the acceptable methods for identifying grounded conductors of size 6 AWG or smaller?",
+      "ground_truth": "The insulation of grounded conductors of 6 AWG or smaller shall be identified by one of the following means: (1) A continuous white outer finish. (2) A continuous gray outer finish. (3) Three continuous white or gray stripes along the conductor's entire length on other than green insulation. (4) Conductors with white or gray insulation and colored tracer threads in the braid identifying the source of manufacture. (5) A single-conductor, sunlight-resistant, outdoor-rated cable used as a solidly grounded conductor in photovoltaic power systems, as permitted by 690.31 (C) (1), shall be identified at the time of installation by markings at terminations in accordance with 200.6 (A) (1) through (A) (4). (6) The grounded conductor of a mineral-insulated, metal-sheathed cable (Type MI) shall be identified at the time of installation by a distinctive white or gray marking at its terminations The marking shall encircle the conductor insulation. (7) Fixture wire shall comply with the requirements for grounded conductor identification in accordance with 402.8. (8) For aerial cable, the identification shall comply with one of the methods in 200.6(A) (1) through (A) (5), or by means of a ridge located on the exterior of the cable so as to identify it.",
+      "timing": {
+        "retrieval_seconds": 1.2366950511932373,
+        "total_seconds": 4.397573947906494
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13863,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+      "ground_truth": "The sign must be marked that the illumination system has been replaced, include the kit providers and installer's name, logo, or unique identifier, and if equipped with tubular light-emitting diode lamps powered by existing sign sockets, include a label alerting service personnel that the sign has been modified, including a warning not to install fluorescent lamps.",
+      "timing": {
+        "retrieval_seconds": 1.2350220680236816,
+        "total_seconds": 4.406282901763916
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13975,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What voltage level are Quick Break Arcing Horns available up to, as stated in Bulletin 1400-A?",
+      "ground_truth": "161 kV",
+      "timing": {
+        "retrieval_seconds": 1.231093168258667,
+        "total_seconds": 4.411324977874756
+      },
+      "chunks_retrieved": 12,
+      "context_length": 10819,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to Article 400.5(A), what table provides ampacities for flexible cords and flexible cables with not more than three current-carrying conductors?",
+      "ground_truth": "Table 400.5(A) (2) provides the ampacities for flexible cords and flexible cables with not more than three current-carrying conductors.",
+      "timing": {
+        "retrieval_seconds": 1.2386791706085205,
+        "total_seconds": 4.419617176055908
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13911,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Referring to the figures and maps provided in Appendix A, what type of solar tracker orientation is depicted in Figure 5?",
+      "ground_truth": "Figure 5 depicts a Typical Single Axis Tracker with Portrait Mode Orientation.",
+      "timing": {
+        "retrieval_seconds": 1.731217861175537,
+        "total_seconds": 4.833570957183838
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14402,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document table of contents, which appendix contains information regarding the management of vegetation resources for the Easley Renewable Energy Project?",
+      "ground_truth": "Appendix L contains the Vegetation Resources Management Plan.",
+      "timing": {
+        "retrieval_seconds": 1.727735996246338,
+        "total_seconds": 4.834877014160156
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14536,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What communication interfaces are available on the BDM-1200-LV and BDM-1600-LV microinverters?",
+      "ground_truth": "Both the BDM-1200-LV and BDM-1600-LV microinverters offer WI-FI and Bluetooth communication interfaces.",
+      "timing": {
+        "retrieval_seconds": 1.7343428134918213,
+        "total_seconds": 4.839218378067017
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14620,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+      "ground_truth": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+      "timing": {
+        "retrieval_seconds": 1.7377781867980957,
+        "total_seconds": 4.848375082015991
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13688,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what is the domestic content percentage if a skidded (MVT + SWBD) solution is used?",
+      "ground_truth": "If a skidded (MVT + SWBD) solution domestic content is 70%.",
+      "timing": {
+        "retrieval_seconds": 1.7415599822998047,
+        "total_seconds": 4.881950855255127
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14317,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "When must the ampacity of each conductor be reduced from the three-conductor rating for flexible cords and cables?",
+      "ground_truth": "Where the number of current-carrying conductors exceeds three, the ampacity of each conductor shall be reduced from the three-conductor rating as shown in Table 400.5 (A) (3).",
+      "timing": {
+        "retrieval_seconds": 1.739055871963501,
+        "total_seconds": 4.89321494102478
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13869,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to Bulletin 1400-A, what interrupting application are Quick Break Arcing Horns designed for?",
+      "ground_truth": "Interrupting transformer magnetizing and line charging currents.",
+      "timing": {
+        "retrieval_seconds": 1.7473738193511963,
+        "total_seconds": 4.900577783584595
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12673,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+      "ground_truth": "The switchboard utilizes 800VAC rated air circuit breakers ACB (800A \u2013 1200A).",
+      "timing": {
+        "retrieval_seconds": 1.8211162090301514,
+        "total_seconds": 4.911530017852783
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13614,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum DC current that a BDM-1200-LV microinverter can handle from its PV inputs?",
+      "ground_truth": "The BDM-1200-LV microinverter can handle a maximum PV current of 25A per input, with 3 inputs totaling 25A\u00d73.",
+      "timing": {
+        "retrieval_seconds": 1.750519037246704,
+        "total_seconds": 4.912585973739624
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14456,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+      "ground_truth": "Signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. The markings shall be permanently installed, in letters at least 6 mm (1/4 in.) high, and shall be located where visible during relamping.",
+      "timing": {
+        "retrieval_seconds": 1.743229866027832,
+        "total_seconds": 4.920099973678589
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14232,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+      "ground_truth": "The peak efficiency is 99.1%.",
+      "timing": {
+        "retrieval_seconds": 1.7456040382385254,
+        "total_seconds": 5.204602956771851
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14162,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to NEC guidelines, what is the maximum allowable solar back-feed for a 100A service panel, expressed in Amperes?",
+      "ground_truth": "20A",
+      "timing": {
+        "retrieval_seconds": 0.6388187408447266,
+        "total_seconds": 3.7596800327301025
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14304,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available interrupt ratings for the switchboard at 480VAC and 600VAC?",
+      "ground_truth": "The interrupt rating is 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.7541298866271973,
+        "total_seconds": 3.82413911819458
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9012,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available feeder Air Circuit Breaker (ACB) ranges for this switchboard?",
+      "ground_truth": "The available feeder ACB ranges are 1200A, 1600A, 2000A, and 2500A.",
+      "timing": {
+        "retrieval_seconds": 0.7558720111846924,
+        "total_seconds": 3.8233482837677
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12751,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to NEC 2023, Section 200.6(B), how must an insulated grounded conductor of size 4 AWG or larger be identified at the time of installation?",
+      "ground_truth": "At the time of installation, an insulated grounded conductor 4 AWG or larger shall be identified by a distinctive white or gray marking at its terminations. This marking shall encircle the conductor insulation.",
+      "timing": {
+        "retrieval_seconds": 0.8330001831054688,
+        "total_seconds": 3.9090631008148193
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14104,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is one advantage of using the BDM-550 & BDM-650 microinverters in terms of system design?",
+      "ground_truth": "Dual input microinverters reduce the number of branch circuits needed, simplifying layout and permitting.",
+      "timing": {
+        "retrieval_seconds": 0.7075920104980469,
+        "total_seconds": 3.807034730911255
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14354,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the primary physical hazards associated with an arc flash event?",
+      "ground_truth": "The primary physical hazards include temperatures hotter than the surface of the sun, molten metal, pressure waves, shrapnel, and blinding light.",
+      "timing": {
+        "retrieval_seconds": 1.1160378456115723,
+        "total_seconds": 4.222973108291626
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13772,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to 29 CFR 1910.269, how is the voltage of a circuit not effectively grounded determined?",
+      "ground_truth": "The voltage of a circuit not effectively grounded is the voltage between any two conductors. If one circuit is directly connected to and supplied from another circuit of higher voltage (as in the case of an autotransformer), both are considered as of the higher voltage, unless the circuit of lower voltage is effectively grounded, in which case its voltage is not determined by the circuit of higher voltage.",
+      "timing": {
+        "retrieval_seconds": 1.1714997291564941,
+        "total_seconds": 4.278074026107788
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13508,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the revision number and date of this Shark 100 & 100T Installation & Operation Manual?",
+      "ground_truth": "Revision 1.13, November 7, 2008",
+      "timing": {
+        "retrieval_seconds": 1.1655151844024658,
+        "total_seconds": 4.276334047317505
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13893,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the nominal AC voltage of the Balance of System (BoS) described in this document?",
+      "ground_truth": "800VAC",
+      "timing": {
+        "retrieval_seconds": 1.095700979232788,
+        "total_seconds": 4.213002920150757
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14521,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the peak efficiency of the CPS 100/125kW inverters, and what is the CEC efficiency?",
+      "ground_truth": "The CPS 100/125kW inverters have a peak efficiency of 99.1% and a CEC efficiency of 98.5%.",
+      "timing": {
+        "retrieval_seconds": 1.0997376441955566,
+        "total_seconds": 4.221083879470825
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14075,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the main phone number listed for Electro Industries sales inquiries regarding the Shark 100 & 100T?",
+      "ground_truth": "516-334-0870",
+      "timing": {
+        "retrieval_seconds": 1.148456335067749,
+        "total_seconds": 4.255007028579712
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14209,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What NEMA enclosure type is used for the CPS 100/125kW inverters, and what does this rating indicate?",
+      "ground_truth": "The CPS 100/125kW inverters utilize a NEMA Type 4X enclosure, indicating they are outdoor rated and tough tested.",
+      "timing": {
+        "retrieval_seconds": 1.1216487884521484,
+        "total_seconds": 4.230765104293823
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14169,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Besides switchgear and transformers, what are three specific pieces of electrical equipment where arc flash is likely to occur?",
+      "ground_truth": "Arc flash is likely to occur at switchboards, MCCs (Motor Control Centers), and panelboards.",
+      "timing": {
+        "retrieval_seconds": 1.1458990573883057,
+        "total_seconds": 4.275758743286133
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14239,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to 29 CFR 1910.269, what is the defining characteristic of an unvented vault?",
+      "ground_truth": "An unvented vault is an enclosed vault in which the only openings are access openings.",
+      "timing": {
+        "retrieval_seconds": 1.3814330101013184,
+        "total_seconds": 4.457916736602783
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14571,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the total MVA (Mega Volt Ampere) rating of the skid described in this document?",
+      "ground_truth": "4.2MVA",
+      "timing": {
+        "retrieval_seconds": 1.0245733261108398,
+        "total_seconds": 4.098063945770264
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12180,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum voltage rating range for the Southern States EV-2 aluminum vertical disconnect switch?",
+      "ground_truth": "The maximum voltage rating range is 15.5 kV \u2013 362 kV.",
+      "timing": {
+        "retrieval_seconds": 0.6140921115875244,
+        "total_seconds": 3.702899932861328
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14923,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What continuous current ratings are available for the Southern States EV-2 disconnect switch?",
+      "ground_truth": "The continuous current ratings available are 1200 A \u2013 3000 A.",
+      "timing": {
+        "retrieval_seconds": 0.653040885925293,
+        "total_seconds": 3.7421629428863525
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13841,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the revision date of the Intersect Power Easley Project POD (MAIN) document?",
+      "ground_truth": "2024-7-30 508",
+      "timing": {
+        "retrieval_seconds": 0.6318562030792236,
+        "total_seconds": 3.705235004425049
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14089,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For whom was the Easley Renewable Energy Project Plan of Development prepared?",
+      "ground_truth": "IP Easley I, LLC, IP Easley II, LLC, & IP Easley III, LLC subsidiaries of Intersect Power, LLC",
+      "timing": {
+        "retrieval_seconds": 0.7729699611663818,
+        "total_seconds": 3.8734898567199707
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14358,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum continuous operating temperature for this cable in a wet location?",
+      "ground_truth": "The cables are capable of operating continuously at the conductor temperature not in excess of 90\u00b0C for normal operation in wet and dry locations.",
+      "timing": {
+        "retrieval_seconds": 0.6244852542877197,
+        "total_seconds": 3.688425064086914
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14127,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document, what conditions, either alone or as the principal factor, do NOT constitute grounds for a claim of Force Majeure?",
+      "ground_truth": "Financial cost or failure to secure adequate labor or any necessary materials or equipment.",
+      "timing": {
+        "retrieval_seconds": 0.6636571884155273,
+        "total_seconds": 3.754768133163452
+      },
+      "chunks_retrieved": 12,
+      "context_length": 15043,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the definition of IEER according to this document, including the formula used for its calculation?",
+      "ground_truth": "IEER means the Insolation-adjusted Expected Energy Ratio, calculated using the DAS as follows: (x) actual kWh divided by expected kWh, divided by (y) actual insolation (as measured by irradiance sensor) divided by expected insolation.",
+      "timing": {
+        "retrieval_seconds": 0.6650500297546387,
+        "total_seconds": 3.7496249675750732
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14380,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available interrupt ratings for the EPEC UL 891 certified SWBD at 480VAC and 600VAC?",
+      "ground_truth": "The interrupt rating is 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.8428118228912354,
+        "total_seconds": 3.922043800354004
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9428,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For whom was the Easley Renewable Energy Project Plan of Development prepared?",
+      "ground_truth": "IP Easley I, LLC, IP Easley II, LLC, & IP Easley III, LLC subsidiaries of Intersect Power, LLC",
+      "timing": {
+        "retrieval_seconds": 0.8894422054290771,
+        "total_seconds": 3.9673960208892822
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14358,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum apparent power output, in kVA, that the Sunny Central series can provide?",
+      "ground_truth": "The Sunny Central series can provide an output of up to 4600 kVA.",
+      "timing": {
+        "retrieval_seconds": 0.8948290348052979,
+        "total_seconds": 3.9944722652435303
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14418,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document, what standard dictates the conductor identification method for this control cable?",
+      "ground_truth": "ICEA S-58-679 Control Cable Conductor Identification Method 3 (1-BLACK, 2-RED, 3-BLUE)",
+      "timing": {
+        "retrieval_seconds": 0.9884569644927979,
+        "total_seconds": 4.0700459480285645
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13814,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the revision date listed on the document?",
+      "ground_truth": "2024-7-30",
+      "timing": {
+        "retrieval_seconds": 0.9842302799224854,
+        "total_seconds": 4.058370113372803
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13788,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the design life expectancy, in years, of the Sunny Central inverter, and what cooling system contributes to this longevity?",
+      "ground_truth": "The Sunny Central inverter has a design life expectancy of 25 years, supported by the intelligent cooling system OptiCool.",
+      "timing": {
+        "retrieval_seconds": 0.9951462745666504,
+        "total_seconds": 4.081827878952026
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14326,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available feeder current ranges for Air Circuit Breakers (ACB) within the EPEC 1200-6000A UL 891 SWBD?",
+      "ground_truth": "The feeder current ranges for ACB are 1200A, 1600A, 2000A, and 2500A.",
+      "timing": {
+        "retrieval_seconds": 0.914618968963623,
+        "total_seconds": 4.006683111190796
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9818,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available feeder Air Circuit Breaker (ACB) ranges for the EPEC UL 891 switchboard?",
+      "ground_truth": "The available feeder ACB ranges are 1200A, 1600A, 2000A, and 2500A.",
+      "timing": {
+        "retrieval_seconds": 1.0393168926239014,
+        "total_seconds": 4.11734414100647
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12547,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the interrupt ratings of the switchboard at 480VAC and 600VAC?",
+      "ground_truth": "The interrupt rating is 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.5983309745788574,
+        "total_seconds": 3.677755832672119
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9006,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document, where can information on 'Suggestions for Organized Maintenance' be obtained?",
+      "ground_truth": "The Mill Mutuals Loss Control Department, 1 Pierce Place, Suite 1260 West, Itasca, Illinois 60143\u20131269.",
+      "timing": {
+        "retrieval_seconds": 0.655698299407959,
+        "total_seconds": 3.7248001098632812
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14073,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What NFPA standard covers the installation of blower and exhaust systems for dust, stock, and vapor removal?",
+      "ground_truth": "NFPA 91.",
+      "timing": {
+        "retrieval_seconds": 0.6629660129547119,
+        "total_seconds": 3.7359812259674072
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13932,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum voltage rating range supported by the EV-2H Aluminum Vertical Disconnect Switch?",
+      "ground_truth": "550 kV \u2013 800 kV",
+      "timing": {
+        "retrieval_seconds": 0.6659138202667236,
+        "total_seconds": 3.73372220993042
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14482,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available continuous current ratings for the EV-2H Aluminum Vertical Disconnect Switch?",
+      "ground_truth": "2000 A / 3000 A / 4000 A",
+      "timing": {
+        "retrieval_seconds": 0.6654140949249268,
+        "total_seconds": 3.739001989364624
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12113,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to section 200.2(A), what is the minimum voltage rating required for the insulation of a grounded conductor in solidly grounded neutral systems exceeding 1000 volts, as per 250.184(A)?",
+      "ground_truth": "The insulation must be rated not less than 600 volts.",
+      "timing": {
+        "retrieval_seconds": 0.6392340660095215,
+        "total_seconds": 3.715390205383301
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13938,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "As stated in 200.4(B), how should grounded circuit conductors associated with different circuits be identified or grouped within an enclosure containing more than one neutral conductor?",
+      "ground_truth": "Grounded circuit conductors of each circuit shall be identified or grouped to correspond with the ungrounded circuit conductor(s) by wire markers, cable ties, or similar means in at least one location within the enclosure.",
+      "timing": {
+        "retrieval_seconds": 0.7062458992004395,
+        "total_seconds": 3.774541139602661
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13809,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the possible values for the rated short-circuit current (kA) of the Noark A32 circuit breaker?",
+      "ground_truth": "50, 100, 150",
+      "timing": {
+        "retrieval_seconds": 0.6826951503753662,
+        "total_seconds": 3.7532601356506348
+      },
+      "chunks_retrieved": 12,
+      "context_length": 11572,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What UL/ANSI/CSA standard does the Noark A32 power circuit breaker comply with?",
+      "ground_truth": "UL 1066/ANSI C37.13/CSA C22.2 No.31",
+      "timing": {
+        "retrieval_seconds": 0.8275148868560791,
+        "total_seconds": 3.898113965988159
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14500,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the dimensions (Width x Height x Depth) of the BDM-1600-LV microinverter?",
+      "ground_truth": "The dimensions of the BDM-1600-LV are 321mm*271mm*42.5mm.",
+      "timing": {
+        "retrieval_seconds": 0.7642359733581543,
+        "total_seconds": 3.8329808712005615
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13640,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the startup voltage required for the BDM-1200-LV/BDM-1600-LV microinverter?",
+      "ground_truth": "The microinverter start-up voltage is 25V.",
+      "timing": {
+        "retrieval_seconds": 0.8221380710601807,
+        "total_seconds": 3.900704860687256
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14411,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What product types are covered by the NOARK A32 ASD32 datasheet?",
+      "ground_truth": "Power Circuit Breakers and Non-Automatic Switches",
+      "timing": {
+        "retrieval_seconds": 0.8501348495483398,
+        "total_seconds": 3.9180102348327637
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14626,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the NOARK A32 ASD32 datasheet, what is the website address for more information?",
+      "ground_truth": "na.noark-electric.com",
+      "timing": {
+        "retrieval_seconds": 0.8747880458831787,
+        "total_seconds": 3.953894853591919
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14624,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum continuous operating temperature of the conductor for this cable in normal operation, both in wet and dry locations?",
+      "ground_truth": "The cables are capable of operating continuously at the conductor temperature not in excess of 90\u00b0C for normal operation in wet and dry locations.",
+      "timing": {
+        "retrieval_seconds": 0.8300440311431885,
+        "total_seconds": 3.900956869125366
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13943,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document, what standard is used for the Conductor Identification Method for control cables with 3 conductors?",
+      "ground_truth": "ICEA S-58-679 Control Cable Conductor Identification Method 3 (1-BLACK, 2-RED, 3-BLUE)",
+      "timing": {
+        "retrieval_seconds": 0.8458001613616943,
+        "total_seconds": 3.913410186767578
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13890,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What type of voltage is associated with the substation shown in the image?",
+      "ground_truth": "The substation is described as a high-voltage substation.",
+      "timing": {
+        "retrieval_seconds": 0.7749049663543701,
+        "total_seconds": 3.8674840927124023
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12728,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to NEC 2023 Article 600.4(B), what two pieces of information, in addition to the marking that the illumination system has been replaced, must be included on signs with a retrofitted illumination system?",
+      "ground_truth": "The kit provider's and installer's name, logo, or unique identifier.",
+      "timing": {
+        "retrieval_seconds": 0.8251988887786865,
+        "total_seconds": 3.900515079498291
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14075,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the main components depicted in the image related to the 2000kVa Transformer?",
+      "ground_truth": "The image shows a power transformer core under construction, a high-voltage substation, and a complete power transformer.",
+      "timing": {
+        "retrieval_seconds": 1.0145158767700195,
+        "total_seconds": 4.1899871826171875
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14495,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "As per NEC 2023 Article 600.4(C), what are the requirements for marking signs and outline lighting systems with lampholders for incandescent lamps, in terms of content, size, and location?",
+      "ground_truth": "The signs and outline lighting systems shall be marked to indicate the maximum allowable lamp wattage per lampholder. The markings shall be permanently installed, in letters at least 6 mm (1/4 in.) high, and shall be located where visible during relamping.",
+      "timing": {
+        "retrieval_seconds": 0.7418482303619385,
+        "total_seconds": 3.9090230464935303
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14042,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the amperage range of the EPEC UL 891 SWBD designed for Solar/BESS applications?",
+      "ground_truth": "The EPEC UL 891 SWBD for Solar/BESS applications is available in the range of 1200-6000A.",
+      "timing": {
+        "retrieval_seconds": 0.6528329849243164,
+        "total_seconds": 3.7257750034332275
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14235,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the name of the company associated with the logo featured in the document?",
+      "ground_truth": "The company name is EPEC SOLUTIONS, INC.",
+      "timing": {
+        "retrieval_seconds": 0.6260960102081299,
+        "total_seconds": 3.6958959102630615
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12960,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available feeder ranges for Air Circuit Breakers (ACB) in this switchboard?",
+      "ground_truth": "The feeder ranges for ACB are 1200A, 1600A, 2000A, and 2500A.",
+      "timing": {
+        "retrieval_seconds": 0.6224911212921143,
+        "total_seconds": 3.7142422199249268
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13193,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the short-circuit current ratings (kAIC) of the switchboard at 480VAC and 600VAC?",
+      "ground_truth": "The short-circuit current rating is 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.6506180763244629,
+        "total_seconds": 3.7281270027160645
+      },
+      "chunks_retrieved": 12,
+      "context_length": 10362,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum output fault current of the BDM-2000 microinverter, including the peak current and duration?",
+      "ground_truth": "26.0 A peak / 662 ms",
+      "timing": {
+        "retrieval_seconds": 0.6490280628204346,
+        "total_seconds": 3.7356510162353516
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14633,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the recommended maximum DC power input for each of the four PV inputs on the BDM-2000 microinverter?",
+      "ground_truth": "750 W",
+      "timing": {
+        "retrieval_seconds": 0.6839609146118164,
+        "total_seconds": 3.7644879817962646
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14635,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For the \"Main Switchboard (AC Recombiner) / Field AC Combiner\" configuration, what amperage range are the 800VAC rated air circuit breakers (ACB) in the switchboard?",
+      "ground_truth": "The switchboard utilizes 800VAC rated air circuit breakers ACB (800A \u2013 1200A).",
+      "timing": {
+        "retrieval_seconds": 0.7222390174865723,
+        "total_seconds": 3.8001511096954346
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14615,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the revision number and date of this Installation and Operation Manual?",
+      "ground_truth": "The revision number is 1.5 and the date is September 2020.",
+      "timing": {
+        "retrieval_seconds": 0.6947579383850098,
+        "total_seconds": 3.7772269248962402
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13744,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "In the \"Main Switchboard / Inverters in Array / Local Disconnect\" configuration, what is the domestic content percentage if a skidded (MVT + SWBD) solution is used?",
+      "ground_truth": "If a skidded (MVT + SWBD) solution domestic content 70%.",
+      "timing": {
+        "retrieval_seconds": 0.7331628799438477,
+        "total_seconds": 3.8233110904693604
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14380,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the two specific CPS SCA Series Grid-tied PV Inverter models covered in this manual?",
+      "ground_truth": "The two models covered are CPS SCH100KTL-DO/US-600 and SCH125KTL-DO/US-600.",
+      "timing": {
+        "retrieval_seconds": 0.7390069961547852,
+        "total_seconds": 3.83089280128479
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13896,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the revision number and date of this Shark 100 & 100T Installation & Operation Manual?",
+      "ground_truth": "Revision 1.13, November 7, 2008",
+      "timing": {
+        "retrieval_seconds": 0.6681039333343506,
+        "total_seconds": 3.7553369998931885
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13893,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document, what is the primary business of Electro Industries?",
+      "ground_truth": "\"The Leader in Power Monitoring and Control\"",
+      "timing": {
+        "retrieval_seconds": 0.655620813369751,
+        "total_seconds": 3.7434701919555664
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13741,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What company manufactures the 1200-6000A UL 891 SWBD for Critical Power?",
+      "ground_truth": "EPEC SOLUTIONS, INC.",
+      "timing": {
+        "retrieval_seconds": 0.6210751533508301,
+        "total_seconds": 3.7159199714660645
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14435,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What UL standard does the 1200-6000A SWBD adhere to?",
+      "ground_truth": "UL 891",
+      "timing": {
+        "retrieval_seconds": 0.683190107345581,
+        "total_seconds": 3.7678489685058594
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13968,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What potential hazard was identified with a harness during a safety check, and what was the corrective action?",
+      "ground_truth": "A cracked lanyard hook was found on a harness, which could have resulted in fall arrest failure. The equipment was tagged out and replaced.",
+      "timing": {
+        "retrieval_seconds": 0.6496851444244385,
+        "total_seconds": 3.730910062789917
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13568,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What specific safety rule was violated during inverter troubleshooting, and what action was taken to correct it?",
+      "ground_truth": "A technician reached into the inverter cabinet without voltage testing the bus first, violating the \"test-before-touch\" rule. The technician was stopped and reminded of the rule, after which work resumed safely.",
+      "timing": {
+        "retrieval_seconds": 0.7430069446563721,
+        "total_seconds": 3.823604106903076
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13749,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available interrupt ratings for the EPEC UL 891 switchboard at 480VAC and 600VAC?",
+      "ground_truth": "The interrupt rating is 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.6408100128173828,
+        "total_seconds": 3.71711802482605
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9015,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available feeder ranges, in Amperes, for Air Circuit Breakers (ACB) in the EPEC UL 891 switchboard?",
+      "ground_truth": "The feeder ranges for ACB are 1200A, 1600A, 2000A, and 2500A.",
+      "timing": {
+        "retrieval_seconds": 0.700045108795166,
+        "total_seconds": 3.7713489532470703
+      },
+      "chunks_retrieved": 12,
+      "context_length": 11316,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available interrupting ratings for the EPEC UL 891 certified SWBD at 480VAC and 600VAC?",
+      "ground_truth": "The interrupting rating is 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.6592309474945068,
+        "total_seconds": 3.738485097885132
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9506,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available feeder ranges using Air Circuit Breakers (ACB) for the EPEC UL 891 certified SWBD?",
+      "ground_truth": "The feeder ranges using ACB are 1200A, 1600A, 2000A, and 2500A.",
+      "timing": {
+        "retrieval_seconds": 0.6547272205352783,
+        "total_seconds": 3.722811222076416
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13470,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the revision number and date of this CPS SCA Series Grid-tied PV Inverter Installation and Operation Manual?",
+      "ground_truth": "The revision number is 1.5 and the date is September 2020.",
+      "timing": {
+        "retrieval_seconds": 0.7487950325012207,
+        "total_seconds": 3.837028980255127
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13651,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the specific model numbers covered by this installation and operation manual?",
+      "ground_truth": "The manual covers the following models: CPS SCH100KTL-DO/US-600 and SCH125KTL-DO/US-600.",
+      "timing": {
+        "retrieval_seconds": 0.6929590702056885,
+        "total_seconds": 3.803614854812622
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13371,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what amperage range are the 800VAC rated air circuit breakers (ACB) within the switchboard?",
+      "ground_truth": "The switchboard utilizes 800VAC rated air circuit breakers ACB (800A \u2013 1200A).",
+      "timing": {
+        "retrieval_seconds": 0.660250186920166,
+        "total_seconds": 3.73468017578125
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14615,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what is the domestic content percentage if the solution is skidded (MVT + SWBD)?",
+      "ground_truth": "If a skidded (MVT + SWBD) solution domestic content 70%.",
+      "timing": {
+        "retrieval_seconds": 0.6731250286102295,
+        "total_seconds": 3.757658004760742
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14489,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What symbol is contained within the leaf of the CPS logo?",
+      "ground_truth": "A lightning bolt.",
+      "timing": {
+        "retrieval_seconds": 0.6654839515686035,
+        "total_seconds": 3.7533812522888184
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13037,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What color is the text 'CPS' in the logo?",
+      "ground_truth": "Gray.",
+      "timing": {
+        "retrieval_seconds": 0.6581199169158936,
+        "total_seconds": 3.735507011413574
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13240,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the startup voltage required for the BDM-1200-LV/BDM-1600-LV microinverter?",
+      "ground_truth": "The micro inverter start-up voltage is 25V.",
+      "timing": {
+        "retrieval_seconds": 0.7142620086669922,
+        "total_seconds": 3.7890431880950928
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14411,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What AC short-circuit protection features are included in the BDM-1200-LV/BDM-1600-LV microinverter, and what certifications cover rooftop solutions?",
+      "ground_truth": "The BDM-1200-LV/BDM-1600-LV microinverter includes AC Short-circuit Protection. Rooftop solution certifications include UL STD.1741,1741SA,1741SB IEEE STD.1547,1547.1,1547a HECO SRD-IEEE-1547.1:2020 Ed.2.0 CSA STD.C22.2 No.107.1 and 330 IEEE 2030.5 E5000,SA17-18; PCS CRD:2019.",
+      "timing": {
+        "retrieval_seconds": 0.7586796283721924,
+        "total_seconds": 3.8264429569244385
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14316,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What physical features are present on each bay of the electrical enclosure?",
+      "ground_truth": "Each bay has a lockable door and ventilation.",
+      "timing": {
+        "retrieval_seconds": 0.6597690582275391,
+        "total_seconds": 3.736783027648926
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13716,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the UL standard to which the EPEC switchboard conforms?",
+      "ground_truth": "UL 891",
+      "timing": {
+        "retrieval_seconds": 0.7034580707550049,
+        "total_seconds": 3.780283212661743
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14122,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What NOARK series of power circuit breakers and non-automatic switches is this datasheet specifically for?",
+      "ground_truth": "A32 and ASD32",
+      "timing": {
+        "retrieval_seconds": 0.7283787727355957,
+        "total_seconds": 3.8283729553222656
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14088,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Where can I find more information about NOARK power circuit breakers and non-automatic switches online?",
+      "ground_truth": "na.noark-electric.com",
+      "timing": {
+        "retrieval_seconds": 0.6515500545501709,
+        "total_seconds": 3.7233049869537354
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14605,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum fuse size allowed per string in the Shoals 1500V Standard Combiner?",
+      "ground_truth": "The maximum fuse size per string is 32A.",
+      "timing": {
+        "retrieval_seconds": 0.6446561813354492,
+        "total_seconds": 3.7233121395111084
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12435,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the enclosure rating of the Shoals 1500V Standard Combiner, and what does this rating signify?",
+      "ground_truth": "The enclosure rating is Type 4X. Type 4X enclosures are designed to provide a degree of protection against corrosion, windblown dust and rain, splashing water, hose-directed water, and damage from external ice formation.",
+      "timing": {
+        "retrieval_seconds": 0.609065055847168,
+        "total_seconds": 3.6964359283447266
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14273,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the approximate height, depth, and width in millimeters of the base 4000A dual cabinet with an additional MLBD cabinet?",
+      "ground_truth": "H x D x W= 1234mm x 456mm x 7890mm",
+      "timing": {
+        "retrieval_seconds": 0.6204431056976318,
+        "total_seconds": 3.708667039871216
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12794,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For what applications is the 4000A, 1500VDC Recombiner Cabinet optimized?",
+      "ground_truth": "Standalone Battery Energy Storage and Solar + Storage applications.",
+      "timing": {
+        "retrieval_seconds": 0.6398460865020752,
+        "total_seconds": 3.7748281955718994
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13554,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the SPEEDFAX product catalog, on what pages can information about the 3VA64 600A Electronic Trip Circuit Breakers be found?",
+      "ground_truth": "Pages 7-72 \u2013 7-74.",
+      "timing": {
+        "retrieval_seconds": 0.6544640064239502,
+        "total_seconds": 3.7428290843963623
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13374,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the voltage rating for the GB and NGB2 frame circuit breakers listed in this section of the SPEEDFAX catalog?",
+      "ground_truth": "600/347V.",
+      "timing": {
+        "retrieval_seconds": 0.7088460922241211,
+        "total_seconds": 3.780139684677124
+      },
+      "chunks_retrieved": 12,
+      "context_length": 10841,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available main breaker current ranges for this UL 891 switchboard?",
+      "ground_truth": "The main breaker ranges are 1200A to 5000A (6000A air cooled).",
+      "timing": {
+        "retrieval_seconds": 0.6962828636169434,
+        "total_seconds": 3.7767632007598877
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12869,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the interrupt ratings for this switchboard at 480VAC and 600VAC?",
+      "ground_truth": "The interrupt rating is 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.6724860668182373,
+        "total_seconds": 3.743135929107666
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9013,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document, what events are explicitly excluded from constituting grounds for a claim of Force Majeure?",
+      "ground_truth": "Financial cost or failure to secure adequate labor or any necessary materials or equipment alone or as the principal factor.",
+      "timing": {
+        "retrieval_seconds": 0.718437910079956,
+        "total_seconds": 3.818274974822998
+      },
+      "chunks_retrieved": 12,
+      "context_length": 15041,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "How is the Insolation-adjusted Expected Energy Ratio (IEER) calculated, according to the document?",
+      "ground_truth": "IEER is calculated using the DAS as follows: (x) actual kWh divided by expected kWh, divided by (y) actual insolation (as measured by irradiance sensor) divided by expected insolation.",
+      "timing": {
+        "retrieval_seconds": 0.6178429126739502,
+        "total_seconds": 3.705570936203003
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14316,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What text follows the three red squares with white geometric shapes in the NORTHERN ELECTRIC logo?",
+      "ground_truth": "NORTHERN ELECTRIC",
+      "timing": {
+        "retrieval_seconds": 0.6400299072265625,
+        "total_seconds": 3.7335658073425293
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13902,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What type of PPE was found to be damaged during a check, rendering it unsuitable for its intended purpose?",
+      "ground_truth": "A technician had a cracked face shield.",
+      "timing": {
+        "retrieval_seconds": 0.6381580829620361,
+        "total_seconds": 3.731208324432373
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14069,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the primary visual element, aside from the text, in the NORTHERN ELECTRIC logo?",
+      "ground_truth": "Three red squares with white geometric shapes inside",
+      "timing": {
+        "retrieval_seconds": 0.7373991012573242,
+        "total_seconds": 3.827627182006836
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13189,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What specific safety hazard was identified at a wind site regarding the turbine tower ladder, and what action was taken?",
+      "ground_truth": "The turbine tower ladder fall-arrest system had a frayed section of cable. The climb was locked out and maintenance was called in, with no climbing performed until it was corrected.",
+      "timing": {
+        "retrieval_seconds": 0.7549669742584229,
+        "total_seconds": 3.852790117263794
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13530,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to NEC 2023, Section 200.6(A), what are the acceptable methods for identifying grounded conductors of size 6 AWG or smaller?",
+      "ground_truth": "Grounded conductors of 6 AWG or smaller can be identified by a continuous white outer finish, a continuous gray outer finish, three continuous white or gray stripes along the conductor's entire length on other than green insulation, conductors with white or gray insulation and colored tracer threads identifying the source of manufacture, or by markings at terminations as permitted by 690.31(C)(1) for single-conductor, sunlight-resistant, outdoor-rated cable used in photovoltaic power systems.",
+      "timing": {
+        "retrieval_seconds": 0.6826670169830322,
+        "total_seconds": 3.7547178268432617
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13863,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For grounded conductors 4 AWG or larger, what methods are permitted by NEC 2023, Section 200.6(B) for identification?",
+      "ground_truth": "For conductors 4 AWG or larger, identification can be achieved by a continuous white or gray outer finish, three continuous white or gray stripes along the entire length on other than green insulation, or by a distinctive white or gray marking at its terminations at the time of installation, which shall encircle the conductor insulation.",
+      "timing": {
+        "retrieval_seconds": 0.6957690715789795,
+        "total_seconds": 3.7687230110168457
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14086,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to this document, what is the minimum training requirement for all members of a rescue service related to permit spaces?",
+      "ground_truth": "All members of the service must be trained as permit space entrants, at a minimum, including training in the potential hazards of all permit spaces, or of representative permit spaces, from which rescue may be needed.",
+      "timing": {
+        "retrieval_seconds": 0.7570319175720215,
+        "total_seconds": 3.8371148109436035
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14760,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is considered a 'restricted' portal size for a permit space, according to the document?",
+      "ground_truth": "A 'restricted' portal is defined as a portal of 24 inches or less in the least dimension.",
+      "timing": {
+        "retrieval_seconds": 0.6662139892578125,
+        "total_seconds": 3.747100830078125
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14205,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document, what constitutes the \"Contract Documents\"?",
+      "ground_truth": "The Contract Documents consist of this Agreement, together with all exhibits and schedules hereto, the Construction Documents, the Project Schedule, and any mutually executed, written modifications and amendments to any of the aforementioned, including Project Change Orders.",
+      "timing": {
+        "retrieval_seconds": 0.6706199645996094,
+        "total_seconds": 3.7491378784179688
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14756,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Where can the specifications for Major Equipment be found within the Contract Documents?",
+      "ground_truth": "The specifications for Major Equipment are set forth in Schedule #1.",
+      "timing": {
+        "retrieval_seconds": 0.7384970188140869,
+        "total_seconds": 3.8102500438690186
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14737,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Based on the image, what are three main components visible within the electrical switchgear cabinet?",
+      "ground_truth": "Circuit breakers, busbars, and other electrical components are visible.",
+      "timing": {
+        "retrieval_seconds": 0.7283291816711426,
+        "total_seconds": 3.792914867401123
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13926,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are some of the key physical hazards associated with an arc flash event?",
+      "ground_truth": "Key risks include severe burns, blast pressure causing blunt trauma or ruptured eardrums, flying molten copper/aluminum shrapnel penetrating PPE, and secondary fires and equipment damage.",
+      "timing": {
+        "retrieval_seconds": 0.7631280422210693,
+        "total_seconds": 3.8491029739379883
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13782,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Referring to the image, what are two types of enclosures visible on the electrical switchgear cabinet?",
+      "ground_truth": "Multiple compartments and doors are visible.",
+      "timing": {
+        "retrieval_seconds": 0.805955171585083,
+        "total_seconds": 3.8892507553100586
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13718,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Besides switchgear and transformers, what other specific pieces of electrical equipment are listed as locations where arc flash events can occur?",
+      "ground_truth": "Arc flash events can occur in switchboards, MCCs, panelboards, energized busbars, circuit breakers, contactors, and disconnects.",
+      "timing": {
+        "retrieval_seconds": 0.7059447765350342,
+        "total_seconds": 3.773447036743164
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14437,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to NEC 2023 Article 200.2(A), what voltage rating is required for the insulation of a grounded conductor in a solidly grounded neutral system operating at over 1000 volts?",
+      "ground_truth": "The insulation must be rated not less than 600 volts for solidly grounded neutral systems of over 1000 volts in accordance with 250.184(A).",
+      "timing": {
+        "retrieval_seconds": 0.6773319244384766,
+        "total_seconds": 3.7702810764312744
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14033,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Under what condition is a listed interactive inverter permitted to be connected to premises wiring without a grounded conductor, according to Article 200.3?",
+      "ground_truth": "A listed interactive inverter identified for use in distributed resource generation systems such as photovoltaic and fuel cell power systems shall be permitted to be connected to premises wiring without a grounded conductor if the connected premises wiring or utility system includes a grounded conductor.",
+      "timing": {
+        "retrieval_seconds": 0.6567339897155762,
+        "total_seconds": 3.7404160499572754
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14634,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the document, what should a field technician or engineer do before beginning work on electrical equipment to ensure preparedness?",
+      "ground_truth": "Review one-line diagrams and protective device coordination studies, consult the Arc Flash Hazard Analysis/Labeling for each piece of gear, understand the incident energy levels and PPE category, and prepare switching orders and lockout/tagout (LOTO) sequences.",
+      "timing": {
+        "retrieval_seconds": 0.6259689331054688,
+        "total_seconds": 3.7051661014556885
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14009,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are three common causes of arc flash incidents related to electrical equipment maintenance or procedures?",
+      "ground_truth": "Incorrect racking or removal of breakers, failure to verify absence of voltage, and defeated or bypassed interlocks.",
+      "timing": {
+        "retrieval_seconds": 0.7386040687561035,
+        "total_seconds": 3.813140869140625
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14230,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to section 200.2(A), what is the minimum voltage rating required for the insulation of a grounded conductor in a solidly grounded neutral system operating at over 1000 volts, as referenced by 250.184(A)?",
+      "ground_truth": "The grounded conductor must have insulation rated not less than 600 volts.",
+      "timing": {
+        "retrieval_seconds": 0.6257739067077637,
+        "total_seconds": 3.69872784614563
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13925,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is required by section 200.4(B) when multiple neutral conductors associated with different circuits are present within an enclosure?",
+      "ground_truth": "Grounded circuit conductors of each circuit must be identified or grouped to correspond with the ungrounded circuit conductor(s) by wire markers, cable ties, or similar means in at least one location within the enclosure.",
+      "timing": {
+        "retrieval_seconds": 0.6651668548583984,
+        "total_seconds": 3.7385547161102295
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14296,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What voltage range does the Southern States EV-2 aluminum disconnect switch support?",
+      "ground_truth": "The Southern States EV-2 aluminum disconnect switch supports a maximum voltage range of 15.5 kV \u2013 362 kV.",
+      "timing": {
+        "retrieval_seconds": 0.6264162063598633,
+        "total_seconds": 3.7015769481658936
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14923,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available interrupt ratings for the EPEC UL 891 switchboard at 480VAC and 600VAC?",
+      "ground_truth": "The interrupt rating is 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.6979930400848389,
+        "total_seconds": 3.7814431190490723
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9015,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What continuous current ratings are available for the EV-2 disconnect switch?",
+      "ground_truth": "The EV-2 disconnect switch is rated for continuous current between 1200 A and 3000 A.",
+      "timing": {
+        "retrieval_seconds": 0.7752509117126465,
+        "total_seconds": 3.8691961765289307
+      },
+      "chunks_retrieved": 12,
+      "context_length": 11636,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What are the available feeder Air Circuit Breaker (ACB) ranges for the EPEC UL 891 switchboard?",
+      "ground_truth": "The feeder ACB ranges are 1200A, 1600A, 2000A, and 2500A.",
+      "timing": {
+        "retrieval_seconds": 0.6092901229858398,
+        "total_seconds": 3.6870341300964355
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12547,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a solar power plant utilizes both EPEC Solutions switchboards and CPS inverters, how would you visually differentiate the equipment from each manufacturer based solely on their logos, and what do the graphical elements of each logo represent?",
+      "ground_truth": "EPEC Solutions switchboards would be identifiable by a logo featuring a stylized grid pattern with yellow and green blocks, along with the text 'EPEC SOLUTIONS, INC.' CPS inverters would be identifiable by a logo featuring a green leaf with a lightning bolt symbol inside, and the text 'CPS' in gray. The EPEC logo uses a grid to likely represent electrical infrastructure, while the CPS logo uses a leaf and lightning bolt to represent renewable energy (solar) and electricity.",
+      "timing": {
+        "retrieval_seconds": 0.7232160568237305,
+        "total_seconds": 3.8208258152008057
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13608,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering a system using the BDM-2000-T microinverter with four 700W PV modules, would a 100A service panel likely require an upgrade, and how do the BDM-550/650 models address this potential issue according to NEP?",
+      "ground_truth": "Based on the BDM-2000-T datasheet, the recommended maximum PV power is 750W x 4, totaling 3000W. While the BDM-2000-T datasheet doesn't directly address panel upgrades, the NEP BDM-550 & BDM-650 whitepaper indicates that 100A service panels often require upgrades due to limited capacity and the 120% rule for solar back-feed. The BDM-550 and BDM-650 microinverters are designed to avoid panel upgrades by optimizing AC output current to stay within the 120% back-feed rule for 100A panels and allowing more units per circuit.",
+      "timing": {
+        "retrieval_seconds": 0.7382938861846924,
+        "total_seconds": 3.8202130794525146
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14451,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering the potential arc flash hazards in switchboards as outlined in the safety guide, what specific components within the EPEC 1200-6000A UL 891 switchboard, such as breakers or busbars, could be potential sources of arc flash incidents, and what are the potential consequences?",
+      "ground_truth": "Based on the Arc Flash Safety Guide, potential arc flash locations within the EPEC switchboard include energized busbars, circuit breakers (specifically Siemens 3WA and 3VA6), and improperly racked breakers or corroded terminations. The consequences could include severe burns, blast pressure causing trauma, molten metal shrapnel, secondary fires, and long-term health effects like PTSD and vision/hearing loss.",
+      "timing": {
+        "retrieval_seconds": 0.6976320743560791,
+        "total_seconds": 3.7785439491271973
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14243,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a 6000A SWBD manufactured by EPEC Solutions experiences a fault and needs to be restored to a previous configuration, what software interface might be used, and what specific configuration options are available for backup and restore?",
+      "ground_truth": "The Acquisuite software interface, as shown in the screenshot, could be used for restoring the configuration. The specific configuration options available for backup and restore include 'Backup / Restore', 'Have Disk (Restore Configuration)', 'Meter Configurations', 'Meter Templates', 'Sensor Devices', 'Logger Configuration', 'Curve Scales', and 'Create Backup'. The option to 'Include Diagnostic Log Files' is also available when creating a backup.",
+      "timing": {
+        "retrieval_seconds": 0.6992371082305908,
+        "total_seconds": 3.785255193710327
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14240,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If I am using a CPS SCH125KTL-DO/US-600 inverter connected to PowerTrack and need to restore its configuration from a backup, where do I store the '.bak' file created from the Acquisuite backup, and what specific file type must be selected in PowerTrack to upload it?",
+      "ground_truth": "The '.bak' file should be stored in a folder labeled 'Acquisuite Backups' under the site in PowerTrack. To upload it, you need to select 'All Files (*.*)' from the dropdown box for file types in PowerTrack because PowerTrack does not display '.bak' files by default.",
+      "timing": {
+        "retrieval_seconds": 0.7168581485748291,
+        "total_seconds": 3.7961442470550537
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13864,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering a 480VAC, 3P3W, 6000A single-ended EPEC UL 891 certified SWBD with a main breaker, what considerations, as per NEC Article 200, should be made regarding the insulation and continuity of the grounded conductor within the premises wiring system connected to this SWBD?",
+      "ground_truth": "According to NEC Article 200, the grounded conductor, if insulated, must be suitably rated for any ungrounded conductor of the same circuit because the system voltage is 1000 volts or less. Additionally, the continuity of the grounded conductor should not depend on a connection to a metal enclosure, raceway, or cable armor. The SWBD is a 480VAC system, which falls under the <1000V requirement.",
+      "timing": {
+        "retrieval_seconds": 0.641308069229126,
+        "total_seconds": 3.710124969482422
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14224,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If an AcquiSuite is used to monitor a Southern States EV-2H disconnect switch operating at 600kV and 3000A, and the AcquiSuite's IP address is set to 192.168.2.50, what network settings would be expected on the AcquiSuite, and what is one mechanical design feature of the EV-2H that enhances its reliability in harsh weather?",
+      "ground_truth": "Given the IP address of 192.168.2.50, it's implied that the AcquiSuite is using a cellular modem. Therefore, DHCP+UPnP would be disabled. One mechanical design feature of the EV-2H that enhances reliability in harsh weather is the hinge over-toggle mechanism, which prevents closing in adverse weather conditions.",
+      "timing": {
+        "retrieval_seconds": 0.6570048332214355,
+        "total_seconds": 3.725200891494751
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14955,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Which PVI-CENTRAL series inverters, as documented in the Aurora manual, are potentially sold in countries served by NORTHERN ELECTRIC, based on their country codes?",
+      "ground_truth": "The PVI-CENTRAL-250-US, PVI-CENTRAL-300-US, PVI-CENTRAL-250.0-CAN-600, and PVI-CENTRAL-300.0-CAN-600 inverters are potentially sold in countries served by NORTHERN ELECTRIC if those countries include the US or Canada.",
+      "timing": {
+        "retrieval_seconds": 0.6290268898010254,
+        "total_seconds": 3.7336599826812744
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14227,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Can Quick Break Arcing Horns, as described by Southern States for high voltage switches, be used to protect the CPS SCH125KTL-DO/US-600 inverter from line charging currents during grid disconnect, and if so, what voltage rating would be appropriate considering the inverter's grid-tied application?",
+      "ground_truth": "The Southern States document describes Quick Break Arcing Horns used to interrupt line charging currents in high voltage switches, with voltage ratings specified. The CPS 125kW Manual identifies the SCH125KTL-DO/US-600 as a grid-tied PV inverter. To determine if the arcing horns are suitable protection, one needs to understand if grid disconnect creates line charging current concerns for the inverter and choose a voltage rating appropriate for the grid voltage the inverter connects to.",
+      "timing": {
+        "retrieval_seconds": 0.6745247840881348,
+        "total_seconds": 3.755246877670288
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14345,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a technician is performing maintenance on a 480VAC, 6000A single-ended EPEC SWBD with a 5000A main breaker and bottom cable entry, and they need to de-energize a feeder before troubleshooting, what critical safety procedure must be performed *before* touching any components inside the cabinet, and what specific observation from the field service report highlights the importance of this procedure?",
+      "ground_truth": "The technician must perform voltage testing on the bus before touching any components. Observation #13 from the field service report describes a technician reaching into an inverter cabinet without voltage testing, emphasizing the importance of the \"test-before-touch\" rule to avoid electrical hazards.",
+      "timing": {
+        "retrieval_seconds": 0.7546172142028809,
+        "total_seconds": 3.9454619884490967
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14224,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering the solar power systems owned by WSD Solar Holdings, LLC and maintained by True South Renewables, Inc. under the Operations and Maintenance Agreement, what specific safety hazards related to arc flash should field technicians and engineers be aware of when working on energized busbars or circuit breakers within the system's switchgear and transformers?",
+      "ground_truth": "Field technicians and engineers working on the solar power systems' energized busbars and circuit breakers should be aware of the risks of arc flash, including severe burns, blast pressure, flying molten metal shrapnel, secondary fires, equipment damage, and long-term health effects such as PTSD, hearing/vision loss, and chronic injury. Common causes to be aware of include dropped tools, loose hardware, improperly racked breakers, corroded terminations, or failed insulation.",
+      "timing": {
+        "retrieval_seconds": 0.6676349639892578,
+        "total_seconds": 3.741921901702881
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14289,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a BDM-1200-LV microinverter experiences a fault and requires a system restore, what steps should be taken within the Acquisuite interface, assuming diagnostic log files are not needed during the restoration?",
+      "ground_truth": "First, log into the Acquisuite. Then, drop down the \u201cSystem\u201d item and choose \u201cBackup / Restore\u201d. Check all checkboxes except for \u201cInclude Diagnostic Log Files\u201d and click \u201cApply\u201d.",
+      "timing": {
+        "retrieval_seconds": 0.7044329643249512,
+        "total_seconds": 3.7787129878997803
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13697,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering a Southern States EV-2 vertical break disconnect switch with a maximum voltage rating of 230kV, what documentation included with the operating mechanism would specify the total number of pipes required for assembly, and where would these pipes be marked with the job and operating mechanism numbers?",
+      "ground_truth": "The total number of pipes required for assembly would be found in the operating mechanism drawing located within the operating mechanism box. The pipes are marked with the Southern States Job number, Item number, and Operating Mechanism number (e.g., 606676-1-156169).",
+      "timing": {
+        "retrieval_seconds": 0.8040850162506104,
+        "total_seconds": 3.882619857788086
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14572,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to NEC 200.3, what is the general requirement for grounded conductors in premises wiring systems, and how does this requirement relate to the use of interactive inverters, such as those used in solar power systems, when connected to premises wiring without a grounded conductor?",
+      "ground_truth": "Grounded conductors of premises wiring systems must be electrically connected to the supply system grounded conductor to ensure a common, continuous grounded system. However, NEC 200.3 provides an exception for listed interactive inverters in distributed resource generation systems like photovoltaic systems. These inverters can be connected to premises wiring without a grounded conductor if the connected premises wiring or utility system includes a grounded conductor.",
+      "timing": {
+        "retrieval_seconds": 0.723743200302124,
+        "total_seconds": 3.8051300048828125
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14383,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the 'Careful Field Service Safety Observations 2024 2025' document, what unsafe behavior related to interlocks was observed at a BESS container? Based on the 'Acquisuite Backup and Restore' document, what steps are involved in backing up the Acquisuite that could potentially be impacted if interlocks are bypassed or compromised during system maintenance?",
+      "ground_truth": "At the BESS container, a technician attempted to bypass a panel interlock, which was stopped and reinforced that interlocks must never be bypassed. The Acquisuite backup process involves accessing the system via the \"System\" menu, creating a backup file, and uploading it to PowerTrack. Bypassing interlocks during maintenance could compromise the Acquisuite system itself, potentially leading to data corruption or system instability, which would affect the backup and restore processes.",
+      "timing": {
+        "retrieval_seconds": 0.7012889385223389,
+        "total_seconds": 3.770315170288086
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13511,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For a 4.2MVA power block using a Main Switchboard / Inverters in Array / Local Disconnect configuration with EPEC equipment, what is the maximum number of 350kW inverters that can be connected, and what safety procedures, specifically voltage verification, should be followed before racking or removing breakers in the switchboard?",
+      "ground_truth": "Up to (12) 350kW inverters can be connected. Before racking or removing breakers, failure to verify absence of voltage is a major cause of arc flash. All gear should be treated as energized until proven otherwise with proper testing.",
+      "timing": {
+        "retrieval_seconds": 0.6648287773132324,
+        "total_seconds": 3.7407920360565186
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14238,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the safety manual, what is the primary focus of the instructions provided, and how does the Noark A32 circuit breaker's 'Shunt Trip' accessory potentially relate to these safety instructions during inverter maintenance?",
+      "ground_truth": "The safety manual primarily focuses on providing important instructions for the installation and maintenance of inverters. The Noark A32 circuit breaker's 'Shunt Trip' accessory could be used as a remote emergency shutdown mechanism during inverter maintenance, potentially enhancing safety by quickly disconnecting power in hazardous situations as outlined in the inverter's safety instructions.",
+      "timing": {
+        "retrieval_seconds": 0.8853192329406738,
+        "total_seconds": 3.959331750869751
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14123,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For a 480VAC, 4000A switchboard installed below ground in a vault, what considerations must be made regarding ventilation according to OSHA standards, and what interrupt rating should be expected from the switchboard?",
+      "ground_truth": "According to OSHA, an underground vault must be either vented or unvented. A vented vault has provisions for air changes using exhaust flue stacks and low-level air intakes. If the vault is unvented, the only openings are access openings. The switchboard, being rated for 480VAC, should have an interrupt rating of 100kAIC.",
+      "timing": {
+        "retrieval_seconds": 0.7821059226989746,
+        "total_seconds": 3.855624198913574
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14057,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the EPC agreement, what constitutes 'Contract Documents', and how does the definition of 'Force Majeure' impact the EPC contractor's obligations under these documents in the event of an extended grid power failure in Connecticut?",
+      "ground_truth": "The 'Contract Documents' consist of the EPC agreement, all exhibits and schedules, the Construction Documents, the Project Schedule, and any mutually executed, written modifications and amendments, including Project Change Orders. An extended grid power failure in Connecticut is explicitly listed as a 'Force Majeure' event. A Force Majeure event directly delays or prevents a Party from timely performing obligations under this Agreement or from complying with conditions required under this Agreement, if such act or event, despite the exercise of reasonable efforts, cannot be avoided.",
+      "timing": {
+        "retrieval_seconds": 0.8000280857086182,
+        "total_seconds": 3.8824968338012695
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14893,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For a solar power block of 4.2MVA utilizing EPEC equipment and a skidded solution, what is the expected domestic content percentage if using a Main Switchboard (AC Recombiner) / Field AC Combiner configuration with 275kW inverters and how does this compare to the interrupt rating of an EPEC industrial SWBD operating at 600VAC?",
+      "ground_truth": "The domestic content is expected to be 70% if skidded (MVT + SWBD) or 80% if an integrated rack (AC combiner + INV) solution. The interrupt rating of an EPEC industrial SWBD operating at 600VAC is 65kAIC.",
+      "timing": {
+        "retrieval_seconds": 0.6459188461303711,
+        "total_seconds": 3.736750841140747
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14206,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Given the Boyne Mountain Resort solar installation utilizes line voltages up to 600 VRMS, and considering Southwest Electric's transformer offerings, what type of three-phase step-up transformer from Southwest Electric would be suitable for this application, considering both primary and secondary voltage requirements, and what kVA range is available?",
+      "ground_truth": "A three-phase step-up transformer from Southwest Electric with a primary voltage range of 380-600V and a secondary voltage range of 600-7043V would be suitable. The available kVA range is 100-1500 kVA.",
+      "timing": {
+        "retrieval_seconds": 0.6464531421661377,
+        "total_seconds": 3.7290916442871094
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12901,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If the Acquisuite, connected to a 480VAC EPEC 1200-6000A SWBD, requires a restore, what checkboxes should be selected during the restore process and what is the maximum interrupt rating of the SWBD at that voltage?",
+      "ground_truth": "During the Acquisuite restore process, all checkboxes except for \"Include Diagnostic Log Files\" should be selected. The EPEC 1200-6000A SWBD has a maximum interrupt rating of 100kAIC at 480VAC.",
+      "timing": {
+        "retrieval_seconds": 0.6588342189788818,
+        "total_seconds": 3.748607873916626
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14652,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering OSHA guidelines for safety practices in welding and cutting (document 1), what specific precautions should be taken regarding the electrical enclosure's ventilation and lockable doors (document 2) to prevent fire hazards during maintenance or modification of the switchboard?",
+      "ground_truth": "Based on OSHA guidelines for welding and cutting, precautions should include ensuring adequate ventilation to prevent the accumulation of flammable gases or dust inside the electrical enclosure. Lockable doors should be used to prevent unauthorized access during welding or cutting operations, and a fire watch should be posted to monitor for any potential fire hazards. Furthermore, all electrical equipment should be de-energized and properly grounded before any welding or cutting is performed near the enclosure.",
+      "timing": {
+        "retrieval_seconds": 0.6617610454559326,
+        "total_seconds": 3.737381935119629
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14157,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Can a double-ended center break group operated switch be used as a main component within a 600VAC, 6000A UL 891 certified switchboard for industrial applications, and if so, what considerations regarding interrupting ratings should be taken into account?",
+      "ground_truth": "The Southern States Group Operated Switch Application Guide identifies double end break center break switches as a type of group operated switch. The EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer describes a 600VAC, 6000A switchboard that can be configured as single ended or double ended (M-M or M-T-M). Therefore, a double end break center break switch *could* potentially be used as a main component. The flyer specifies an interrupting rating of 65kAIC at 600VAC, which would need to be considered when selecting the appropriate group operated switch to ensure it meets or exceeds the required interrupting rating for the application.",
+      "timing": {
+        "retrieval_seconds": 0.6514341831207275,
+        "total_seconds": 3.7387216091156006
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13269,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If the AcquiSuite A8810 is used to monitor the status of a Southern States Group Operated Vertical Break switch, and an alarm condition is triggered, how would the RS485 interface on the AcquiSuite be used to communicate the alarm status to a remote monitoring system, considering the typical applications of group operated switches?",
+      "ground_truth": "The AcquiSuite A8810's RS485 interface, including the TX and RX pins, would be configured to transmit alarm data according to a specific communication protocol (e.g., Modbus RTU) that is compatible with the remote monitoring system. The alarm data would indicate the status of the Vertical Break switch, such as open or closed, as detected by sensors connected to the AcquiSuite. Given the application guide highlights vertical break switches, it's likely the alarm relates to the operational status of this type of switch.",
+      "timing": {
+        "retrieval_seconds": 0.6250801086425781,
+        "total_seconds": 3.7179272174835205
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14104,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Can the Ethernet port on the EMB AcquiSuite A8810 be used to remotely monitor the operational status of a Southern States Group Operated Double End Break \u201cV\u201d switch, and if so, what network protocols would be applicable?",
+      "ground_truth": "Yes, the Ethernet port on the EMB AcquiSuite A8810 can be used to remotely monitor the operational status of a Southern States Group Operated Double End Break \u201cV\u201d switch. Applicable network protocols would likely include Modbus TCP/IP, HTTP, or SNMP, depending on the capabilities of the AcquiSuite's firmware and the remote monitoring system. The AcquiSuite would need to be configured to communicate switch status data, such as open/closed status, voltage, and current, via one of these protocols.",
+      "timing": {
+        "retrieval_seconds": 0.6748619079589844,
+        "total_seconds": 3.76664400100708
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13368,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a BDM-1200-LV microinverter experiences a failure within the Guarantee Period defined in an EPC contract due to an extended grid power failure, would this scenario be covered under Force Majeure, and how would the built-in WiFi of the BDM-1200-LV assist in diagnosing the issue?",
+      "ground_truth": "According to the Green Earth Energy EPC contract template, an extended grid power failure can be considered an event of Force Majeure. Therefore, if the microinverter failure is directly caused by such an event, it may fall under the Force Majeure clause, potentially affecting warranty claims or performance guarantees. The BDM-1200-LV's built-in WiFi, as described in its datasheet, allows for real-time performance monitoring, troubleshooting, and alerts via a smartphone app. This would enable remote diagnosis of the failure, potentially confirming the grid power issue as the root cause and aiding in the Force Majeure claim.",
+      "timing": {
+        "retrieval_seconds": 0.6276979446411133,
+        "total_seconds": 3.71107816696167
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13504,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a CPS SCH125KTL-DO/US-600 inverter is connected to a Shoals 1500V Standard Combiner with 24 input circuits, what is the maximum fuse size allowed per string in the combiner and what Negative Output Wire Size is required?",
+      "ground_truth": "The maximum fuse size allowed per string is 32A and the Negative Output Wire Size is Up to (1) 900 MCM or (2) 750 MCM.",
+      "timing": {
+        "retrieval_seconds": 0.6925702095031738,
+        "total_seconds": 3.761417865753174
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13632,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If using a single-conductor, sunlight-resistant, outdoor-rated cable as a solidly grounded conductor in a photovoltaic power system connected to a BDM-1200-LV microinverter, how should the grounded conductor be identified at the time of installation, according to NEC 2023, and what is the maximum DC voltage this microinverter can handle?",
+      "ground_truth": "According to NEC 2023, the grounded conductor should be identified by markings at terminations in accordance with 200.6 (A) (1) through (A) (4). The BDM-1200-LV microinverter can handle a maximum PV input voltage of 60V.",
+      "timing": {
+        "retrieval_seconds": 0.6391880512237549,
+        "total_seconds": 3.7113170623779297
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14388,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a solar power project using a Shark 100 electricity meter is experiencing performance issues due to a severe weather condition considered a Force Majeure event according to the EPC contract, what specific meter readings should be analyzed to determine the Insolation-adjusted Expected Energy Ratio (IEER) to assess the impact of the weather on energy production?",
+      "ground_truth": "The Shark 100 meter readings needed are actual kWh, which are used in the IEER calculation: (x) actual kWh divided by expected kWh, divided by (y) actual insolation (as measured by irradiance sensor) divided by expected insolation. The EPC contract defines Force Majeure as including severe weather conditions that prevent timely performance. Therefore, both documents are needed to link the performance issue (potentially caused by a Force Majeure event) to the specific meter readings required for IEER calculation.",
+      "timing": {
+        "retrieval_seconds": 0.6894369125366211,
+        "total_seconds": 3.814911127090454
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14409,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For the Easley Renewable Energy Project, what are the possible inverter configurations within a 4.2MVA power block utilizing EPEC equipment, and what are the corresponding domestic content percentages if a skidded solution is implemented?",
+      "ground_truth": "Based on the 800VAC BoS document, a 4.2MVA power block can be configured in a few ways using EPEC equipment: 1) Up to (12) 350kW inverters or up to (15) 275kW inverters connected directly to a switchboard. 2) Field AC combiners, each combining up to (3) 350kW inverters or (4) 275kW inverters, feeding into (4) ACB's. The Easley Renewable Energy Project document indicates the project exists. If a skidded (MVT + SWBD) solution is used, the domestic content is 70% for the first configuration. For the second configuration, the domestic content is 70% if skidded and 80% if an integrated rack (AC combiner + INV) solution is used.",
+      "timing": {
+        "retrieval_seconds": 0.9468421936035156,
+        "total_seconds": 4.034379959106445
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14500,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For a critical power application utilizing a 600VAC, 6000A EPEC switchboard with Siemens 3VA6 molded case circuit breakers, what safety instructions outlined in the inverter manual should be prioritized during installation and maintenance, considering the switchboard's interrupt rating?",
+      "ground_truth": "The inverter manual safety instructions should be followed during installation and maintenance. The switchboard's interrupt rating is 65kAIC @ 600VAC, which should be considered when selecting and installing the inverter.",
+      "timing": {
+        "retrieval_seconds": 0.8376901149749756,
+        "total_seconds": 4.012063980102539
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14319,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a solar power block utilizes a 4.2MVA setup with inverters clustered in the field connected to an EPEC switchboard, and you want to monitor the electricity usage, can a Shark 100 meter be used, and if so, what communication protocols are available for remote monitoring according to the provided documents?",
+      "ground_truth": "The documents do not explicitly state whether a Shark 100 meter *can* be used in this specific configuration. The 800VAC BoS document describes the 4.2MVA setup with clustered inverters and an EPEC switchboard. The Shark 100 manual details the meter's capabilities for electricity monitoring. To fully answer, we would need further information, such as voltage rating of the Shark 100 and compatibility with the EPEC switchboard. However, the Shark 100 manual specifies it is a 'Multifunction Electricity Meter' suitable for 'Power Monitoring and Control'. It does not specify communication protocols. Therefore, although the documents do not confirm compatibility, the Shark 100 *might* be suitable for monitoring in such a system, but further compatibility documentation is required.",
+      "timing": {
+        "retrieval_seconds": 0.9673669338226318,
+        "total_seconds": 4.088475942611694
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14170,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the National Electrical Code and based on EPEC Solutions' product line, what considerations should be made for grounded conductor insulation in a 1200-6000A UL 891 switchboard designed for critical power applications?",
+      "ground_truth": "According to NEC Article 200.2(A), the grounded conductor insulation should either be suitably rated for any ungrounded conductor of the same circuit for systems of 1000 volts or less, or be rated not less than 600 volts for solidly grounded neutral systems of over 1000 volts. When applying this to an EPEC Solutions 1200-6000A UL 891 switchboard for critical power, the voltage rating of the switchboard needs to be considered to select the appropriate insulation rating for the grounded conductors.",
+      "timing": {
+        "retrieval_seconds": 0.7287838459014893,
+        "total_seconds": 3.8445281982421875
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13852,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the safety manual for PVI Central 250-300 inverters and the EMB AcquiSuite A8810 data acquisition unit specifications, what safety precautions should be considered during the installation and maintenance of the inverter when using the AcquiSuite A8810 for data logging via its RS485 port, and what is the required power supply for the AcquiSuite?",
+      "ground_truth": "The safety manual for PVI Central 250-300 inverters contains important safety instructions to be followed during installation and maintenance. When using the EMB AcquiSuite A8810 for data logging, consider safety precautions outlined in the inverter manual during installation and maintenance. The AcquiSuite A8810 requires a 24VDC @ 300mA power supply.",
+      "timing": {
+        "retrieval_seconds": 0.7266712188720703,
+        "total_seconds": 3.8307361602783203
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13803,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering the lockable doors on the EPEC 1200-6000A UL 891 switchboard enclosures, what type of electricity meter, such as the Shark 100 or 100T, would be suitable for installation inside one of the bays to monitor the power consumption of the equipment within?",
+      "ground_truth": "The Shark 100 or 100T electricity meter would be suitable.",
+      "timing": {
+        "retrieval_seconds": 0.7049598693847656,
+        "total_seconds": 3.7843689918518066
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14004,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If the EPEC 1200-6000A UL 891 switchboard is equipped with ventilation, how could a Shark 100T meter be utilized to monitor potential power quality issues that might arise from overheating or inefficient energy usage inside the enclosure?",
+      "ground_truth": "The Shark 100T meter can be used to monitor voltage, current, power factor and other electrical parameters which can indicate power quality issues arising from overheating or inefficient energy usage.",
+      "timing": {
+        "retrieval_seconds": 0.694814920425415,
+        "total_seconds": 3.803257942199707
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13968,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What company's logo, featuring a stylized grid, is associated with solutions potentially compatible with the Aurora PVI-6000-OUTD-US inverter, and what is the full company name including trademark symbols as depicted in the logo?",
+      "ground_truth": "EPEC SOLUTIONS, INC.\u2122",
+      "timing": {
+        "retrieval_seconds": 0.6948490142822266,
+        "total_seconds": 3.762803077697754
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14141,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For a 480VAC, 6000A single-ended SWBD designed for critical power applications like data centers, what is the standard Interrupt Rating according to EPEC Solutions and what general insulation requirements does the National Electrical Code Article 200.2(A) specify for the grounded conductor in such a system?",
+      "ground_truth": "The standard Interrupt Rating for a 480VAC SWBD is 100kAIC. According to the National Electrical Code Article 200.2(A), the grounded conductor, if insulated, should be suitably rated, other than color, for any ungrounded conductor of the same circuit for systems of 1000 volts or less.",
+      "timing": {
+        "retrieval_seconds": 0.6043272018432617,
+        "total_seconds": 3.6722729206085205
+      },
+      "chunks_retrieved": 12,
+      "context_length": 12183,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the EPC agreement, what documents define the specifications for major equipment in the solar photovoltaic system, and how does the National Electrical Code relate to the installation of this equipment, specifically concerning listing and labeling requirements for electric signs using LEDs as part of the Data Acquisition System (DAS)?",
+      "ground_truth": "Schedule #1 of the Construction Documents, as defined in the EPC agreement, specifies the requirements for Major Equipment. The National Electrical Code (specifically Article 600) mandates that electric signs and outline lighting, including those using LEDs, must be listed and labeled, provided with installation instructions, and installed in conformance with that listing, unless otherwise approved by special permission. This would apply to any electric signs used as part of the DAS.",
+      "timing": {
+        "retrieval_seconds": 0.6373801231384277,
+        "total_seconds": 3.712954044342041
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14281,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to Careful Field Service observations, what specific PPE failure was observed that could have compromised arc-flash protection, and based on OSHA regulations, what is the employer's responsibility regarding employee-owned PPE?",
+      "ground_truth": "A technician had a cracked face shield which would not have provided proper arc-flash protection. OSHA regulations state that if employees provide their own PPE, the employer is responsible for ensuring its adequacy, including proper maintenance and sanitation.",
+      "timing": {
+        "retrieval_seconds": 0.5910439491271973,
+        "total_seconds": 3.793794870376587
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14361,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For the Intersect Power Easley Project, if the site requires a 6000A switchboard certified to UL 891 for critical power applications, what voltage options are available according to EPEC Solutions, and what are the corresponding short-circuit current ratings?",
+      "ground_truth": "According to EPEC Solutions, the 6000A UL 891 certified switchboard for critical power applications is available in 480VAC and 600VAC options. The short-circuit current ratings are 100kAIC at 480VAC and 65kAIC at 600VAC.",
+      "timing": {
+        "retrieval_seconds": 0.785693883895874,
+        "total_seconds": 3.8805341720581055
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13821,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the EPC agreement, what documents define the specifications for major equipment in a solar photovoltaic system project, and how might a Southwest Electric Co. transformer be selected based on its compliance with IEEE standards for such a system?",
+      "ground_truth": "Schedule #1 of the Construction Documents, as referenced in the EPC agreement, defines the specifications for Major Equipment. A Southwest Electric Co. transformer could be selected based on its compliance with IEEE C57.12.00, C57.12.90, and C57.12.34 standards, as stated in their flyer, to meet the requirements defined in Schedule #1.",
+      "timing": {
+        "retrieval_seconds": 0.6338176727294922,
+        "total_seconds": 3.711794137954712
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14678,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a manufacturing plant with a 480VAC, 1000A electrical service panel is considering installing a solar array with microinverters, what is the maximum allowable solar back-feed current according to NEC guidelines, and would using NEP BDM-550 or BDM-650 microinverters be a viable solution to avoid upgrading the existing service panel assuming the plant needs to add 30A of backfeed?",
+      "ground_truth": "The maximum allowable solar back-feed for a 1000A panel is 1200A (120% of 1000A). The plant will need to upgrade the electrical service if they add 30A of backfeed to an existing 1000A panel because they will exceed the maximum allowable solar back-feed of 1200A. The NEP microinverters may be a viable solution to avoid upgrading the service panel if the back-feed can be optimized to stay within the 120% rule.",
+      "timing": {
+        "retrieval_seconds": 0.6617171764373779,
+        "total_seconds": 3.7590999603271484
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14436,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a solar array using NEP BDM-2000-T microinverters is connected to a three-phase pad-mount transformer with a dead-front design, what safety features of the transformer mitigate potential hazards related to the maximum backfeed current from the microinverters, and what other overcurrent protection options are available?",
+      "ground_truth": "The three-phase pad-mount transformer with a dead-front design mitigates potential hazards related to backfeed current (which is 0A for the NEP BDM-2000-T) through its grounded metal box enclosure, which protects against tampering and weather, and its live contact points are enclosed. Overcurrent protection options include bayonet fusing (current sensing and high amperage overload) and surge arresters, including elbow arresters specifically for dead-front designs.",
+      "timing": {
+        "retrieval_seconds": 0.7330069541931152,
+        "total_seconds": 3.8175270557403564
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14354,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Based on the 'Careful Field Service Safety Observations,' what unsafe action related to electrical safety was observed at a BESS container, and how could the type of enclosure depicted in the 'EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer' potentially mitigate this risk?",
+      "ground_truth": "A technician attempted to bypass a panel interlock at a BESS container. The lockable door feature of the electrical enclosure shown in the EPEC flyer could potentially mitigate this risk by providing a physical barrier and controlled access, making it more difficult to bypass interlocks.",
+      "timing": {
+        "retrieval_seconds": 0.6796231269836426,
+        "total_seconds": 3.7650680541992188
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13584,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to 'Careful Field Service Safety Observations,' what is an example of compromised electrical safety involving grounding equipment at a substation, and how does the 'EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer' relate to maintaining a safe electrical environment within a substation?",
+      "ground_truth": "A missing ground clamp on a portable grounding set was found at a substation, which could compromise electrical safety. The 'EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer' depicts an electrical enclosure with ventilation, indicating the need to manage heat generated by electrical equipment. This enclosure would house switchboards and related components, and the integrity of the grounding system is critical to ensure the safety of personnel working on or near this equipment.",
+      "timing": {
+        "retrieval_seconds": 0.6592330932617188,
+        "total_seconds": 3.7385499477386475
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14468,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the recommended procedure, according to the safety manual, for maintaining a PVI Central 250-300 inverter when the inverter is part of a 4.2MVA power block utilizing a main switchboard with MCCBs cabled to inverters throughout the array?",
+      "ground_truth": "The manual contains important instructions for models indicated in front of Report that shall be followed during installation and maintenance of the inverter. The 800VAC Balance of System Equipment document describes a configuration where a main switchboard with MCCBs is cabled out to inverters throughout the array, forming a 4.2MVA power block. Therefore, the maintenance procedure for the inverter in this configuration would be found in the PVI Central 250-300 manual.",
+      "timing": {
+        "retrieval_seconds": 0.6361410617828369,
+        "total_seconds": 3.713289976119995
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13705,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "After backing up the Acquisuite data from Boyne Mountain Resort, where should the .bak file be stored, and what special consideration must be taken when uploading it to ensure it is visible for selection?",
+      "ground_truth": "The .bak file should be stored in a folder labeled \"Acquisuite Backups\" under the site in PowerTrack. When uploading, you need to select \"All Files (*.*)\" from the dropdown box for file types in PowerTrack to make the .bak file visible.",
+      "timing": {
+        "retrieval_seconds": 0.6514339447021484,
+        "total_seconds": 3.737484931945801
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14514,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a solar farm utilizes a Shoals 4000A Recombiner with a 1500VDC rating and requires a 3-phase pad-mounted transformer to step down the voltage for grid connection, what range of primary voltages would be compatible with the transformer according to the provided specification sheet, and what standard does the transformer adhere to?",
+      "ground_truth": "The transformer would be compatible with primary voltages in the range of 600-35,000V and adheres to IEEE/ANSI and CSA standards.",
+      "timing": {
+        "retrieval_seconds": 0.6509838104248047,
+        "total_seconds": 3.739319086074829
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14362,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering the types of group operated disconnect switches listed in the Southern States Group Operated Switch Application Guide, and the power monitoring capabilities of the Shark 100/100T electricity meter described in its user manual, how could the Shark 100/100T be used to monitor the performance and detect potential failures in a double end break group operated switch installation?",
+      "ground_truth": "The Shark 100/100T could be used to monitor voltage and current on either side of the double end break switch. By comparing the readings, one can confirm the switch is effectively isolating the circuit when open, or properly conducting when closed. Deviations from expected values, such as voltage leakage when open or significant current imbalance when closed, could indicate switch degradation or failure.",
+      "timing": {
+        "retrieval_seconds": 0.6614010334014893,
+        "total_seconds": 3.7438337802886963
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14131,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a vertical break group operated switch, as detailed in the Southern States guide, is installed in a system also being monitored by a Shark 100 electricity meter, what specific electrical parameters reported by the Shark 100 would be most critical to observe in order to confirm the switch is functioning correctly during both opening and closing operations?",
+      "ground_truth": "The most critical parameters would be voltage, current, and power factor. During opening, a sudden drop in current to near zero and consistent voltage readings on both sides of the open switch would indicate proper isolation. During closing, a smooth and balanced increase in current and a power factor close to the expected system value would confirm proper connection and load sharing.",
+      "timing": {
+        "retrieval_seconds": 0.6372458934783936,
+        "total_seconds": 3.7124431133270264
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14229,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "In the context of a Green-Earth-Energy EPC contract, if an extended grid power failure causes a delay in project completion, and flexible cables used in the solar installation are rated for 90\u00b0C ambient temperature, how would the ampacity of these cables be adjusted according to the National Electrical Code to account for temperatures exceeding 30\u00b0C (86\u00b0F), considering the Force Majeure clause?",
+      "ground_truth": "The EPC contract defines an extended grid power failure as a potential 'Force Majeure' event, which may excuse delays in project completion. According to the National Electrical Code, specifically Article 400.5(A), if flexible cables rated for 90\u00b0C are used in ambient temperatures exceeding 30\u00b0C (86\u00b0F), the temperature correction factors from Table 310.15(B)(1)(1) corresponding to the 90\u00b0C column must be applied to the ampacity in Table 400.5(A)(1) and Table 400.5(A)(2). This adjustment ensures the cables are operated within their safe operating limits, even during a Force Majeure event like a grid power failure that might affect ambient temperatures or cable loading.",
+      "timing": {
+        "retrieval_seconds": 0.646571159362793,
+        "total_seconds": 3.7151880264282227
+      },
+      "chunks_retrieved": 12,
+      "context_length": 11897,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a solar installation uses a CPS 125kW inverter and an EPEC SOLUTIONS, INC. 4.2MVA skid, what visual cues could differentiate the equipment from each manufacturer?",
+      "ground_truth": "The CPS equipment would likely feature a logo with a green leaf containing a lightning bolt and the text 'CPS' in gray. The EPEC SOLUTIONS, INC. equipment would display a logo featuring a stylized grid with yellow and green cells and the company name.",
+      "timing": {
+        "retrieval_seconds": 0.6324419975280762,
+        "total_seconds": 3.727764368057251
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13735,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering the PVI-CENTRAL-250-US inverter model, what Balance of System (BoS) equipment configuration, as offered by EPEC, would support a 4.2MVA power block and what is the maximum number of these inverters that can be connected in such a configuration?",
+      "ground_truth": "EPEC offers several BoS configurations for a 4.2MVA power block. While the document specifies configurations using 275kW and 350kW inverters, it doesn't explicitly mention configurations using PVI-CENTRAL-250-US inverters. A 'Main Switchboard / Inverters in Array / Local Disconnect' configuration connects inverters directly to the switchboard. The document states it supports up to (12) 350kW inverters or (15) 275kW inverters. Assuming similar constraints, one would need to calculate the number of 250kW inverters that would fit within the 4.2MVA limit. Therefore, the answer is that there is no exact number of PVI-CENTRAL-250-US inverters specified for this setup, but the document provides examples for similarly sized inverters.",
+      "timing": {
+        "retrieval_seconds": 0.6256301403045654,
+        "total_seconds": 3.704927921295166
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14568,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the NEC, what markings are required on a listed electric sign with a retrofitted illumination system, and what type of cable, as specified by Southwire, is suitable for direct burial to power this sign in a wet location?",
+      "ground_truth": "According to NEC Article 600.4(B), signs with a retrofitted illumination system must be marked to indicate the system has been replaced and include the kit provider's and installer's name, logo, or unique identifier. Southwire's SPEC 45051 CU 600V PVC-Nylon Insulation PVC Jacket THHN/THWN-2 Type TC-ER control cable is suitable for direct burial in wet locations, operating continuously at a conductor temperature not exceeding 75\u00b0C.",
+      "timing": {
+        "retrieval_seconds": 0.6285130977630615,
+        "total_seconds": 3.7492339611053467
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14011,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "If a solar photovoltaic system is being designed and constructed under an EPC agreement, and the electrical plans within the construction documents specify the use of a Siemens 3VA64 molded case circuit breaker, what is the current rating of that specific breaker?",
+      "ground_truth": "The Siemens 3VA64 molded case circuit breaker has a current rating of 600A.",
+      "timing": {
+        "retrieval_seconds": 0.776256799697876,
+        "total_seconds": 3.8488640785217285
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13994,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Can Southern States' quick break arcing horns, used to interrupt line charging current on high voltage switches, be integrated as an accessory within an EPEC Solutions UL 891 certified SWBD operating at 480VAC, and if so, what considerations regarding interrupt ratings would need to be addressed?",
+      "ground_truth": "Southern States' quick break arcing horns are designed for high voltage switches, as described in Bulletin 1400-A, while the EPEC Solutions SWBD operates at 480VAC or 600VAC according to the flyer. Integrating a high-voltage accessory within a low-voltage SWBD would not be a standard application and would likely require significant engineering modifications and careful consideration of interrupt ratings (100kAIC @ 480VAC and 65kAIC @ 600VAC for the SWBD) to ensure safe and effective operation.",
+      "timing": {
+        "retrieval_seconds": 0.6226491928100586,
+        "total_seconds": 3.7049968242645264
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14666,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "Considering the potential for arc flash hazards in electrical equipment detailed in the 'Arc Flash Safety Guide', and assuming a field technician is using a DiGi WR21/31 modem (as described in 'DiGi WR21/31 Modem Basics') near energized switchgear for remote monitoring, what specific arc flash risks should they be aware of, and how might the modem's proximity exacerbate those risks?",
+      "ground_truth": "The field technician should be aware of risks such as severe burns, blast pressure, molten metal shrapnel, secondary fires, and long-term health effects like PTSD, hearing/vision loss, and chronic injury. The modem's proximity could exacerbate risks if dropped tools or loose hardware related to the modem's setup or maintenance cause an arc flash, or if the modem's operation introduces a fault condition.",
+      "timing": {
+        "retrieval_seconds": 0.6471192836761475,
+        "total_seconds": 3.7182230949401855
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14416,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum available feeder range using Air Circuit Breakers (ACB) for a 600VAC UL 891 certified switchboard designed for critical power applications, and could a CPS SCH125KTL-DO/US-600 inverter potentially connect to such a feeder?",
+      "ground_truth": "The maximum available feeder range using ACB for the described switchboard is 2500A. The CPS SCH125KTL-DO/US-600 is a grid-tied PV inverter, so it could potentially connect to a feeder on this switchboard, depending on the specific system design and voltage requirements. The inverter would need to be compatible with the 600VAC voltage and the feeder's current capacity.",
+      "timing": {
+        "retrieval_seconds": 13.269827842712402,
+        "total_seconds": 16.347593069076538
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14574,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the documents, what is the full address of AlsoEnergy, and what type of visual representation is associated with the company?",
+      "ground_truth": "The full address of AlsoEnergy is 5400 AIRPORT BLVD STE 100 - BOULDER, CO 80301. The company uses a logo with the text \"AlsoEnergy\" in a stylized, blue font.",
+      "timing": {
+        "retrieval_seconds": 0.7289631366729736,
+        "total_seconds": 3.797927141189575
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13909,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "According to the Easley Renewable Energy Project documentation, what appendix details the Integrated Weed Management Plan, and how might a DiGi WR21/31 modem be used to monitor the effectiveness of the herbicide application rates outlined in Table 6 of the same document?",
+      "ground_truth": "Appendix N of the Easley Renewable Energy Project documentation details the Integrated Weed Management Plan. A DiGi WR21/31 modem could be used to transmit data from remote sensors that monitor vegetation health and herbicide application, allowing for real-time analysis and adjustments to ensure the application rates are effective while minimizing environmental impact.",
+      "timing": {
+        "retrieval_seconds": 0.7371518611907959,
+        "total_seconds": 3.811295986175537
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14463,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "What is the maximum DC open circuit voltage of the NEP BDM-2000-T microinverter, and how does it relate to the typical voltage range of a CPS SCH125KTL-DO/US-600 series inverter as a possible upper limit?",
+      "ground_truth": "The maximum DC open circuit voltage of the NEP BDM-2000-T microinverter is 60 Vdc. The CPS 125kW manual does not explicitly state a typical voltage range but specifies it is a grid-tied PV inverter which implies it is designed to handle the DC voltage output of solar panels, and the 60V would be a possible upper limit for the microinverter's DC voltage when considering its compatibility.",
+      "timing": {
+        "retrieval_seconds": 0.6447939872741699,
+        "total_seconds": 3.757598876953125
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14063,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    },
+    {
+      "question": "For a solar + storage application utilizing a 4000A, 1500VDC Recombiner Cabinet, and given that optional input-side disconnects are used for enhanced safety, which Aurora Outdoor Photovoltaic Inverter models from the PVI-CENTRAL series are compatible with this configuration based on country of sale, and what are the implications for installation and maintenance outlined in the inverter's user manual?",
+      "ground_truth": "The question requires knowing the 4000A, 1500VDC Recombiner Cabinet is for solar + storage (Document 1), and then identifying compatible PVI-CENTRAL inverter models based on country of sale (US or CAN) from Document 2. The question also implies the user needs to consult the inverter's user manual (Document 2) for installation and maintenance details, but the specific details are not contained in the document snippet.",
+      "timing": {
+        "retrieval_seconds": 0.6584250926971436,
+        "total_seconds": 3.7421669960021973
+      },
+      "chunks_retrieved": 12,
+      "context_length": 14324,
+      "error": "Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}",
+      "success": false
+    }
+  ]
+}

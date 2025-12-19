@@ -1,0 +1,87 @@
+{
+  "doc_id": "non-covered_service_request_form_v3_8a7fc3",
+  "doc_type": "other",
+  "doc_title": "Non-Covered Service Request Form",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Unknown",
+  "canonical_anchor_phrase": "Non-Covered Service Request Form, other",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [],
+    "models": [],
+    "product_names": []
+  },
+  "topics": {
+    "major_topics": [
+      "Service Request Management",
+      "Cost Estimation",
+      "Approval Procedures",
+      "Project Information",
+      "Equipment Maintenance",
+      "Contact Information",
+      "Form Completion"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [
+      "Service Request",
+      "Cost Estimation",
+      "Approval Process"
+    ],
+    "keywords": [
+      "Non-Covered Service",
+      "Request Form",
+      "Date of Request",
+      "Requesting Party",
+      "Contact Info",
+      "Project Location",
+      "Site Location",
+      "Equipment Affected",
+      "Issue Description",
+      "Service Needed",
+      "Spare Parts",
+      "Time & Materials",
+      "Labor Estimate",
+      "Parts Cost",
+      "Total Cost",
+      "Expected Service Date",
+      "Approval",
+      "Designated Agent",
+      "Customer PO Number",
+      "Service Request"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "medium",
+    "missing_fields": [
+      "subtitle",
+      "publisher_or_manufacturer",
+      "publication.revision",
+      "publication.edition_year",
+      "publication.publication_date_text",
+      "standards.standard_body",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "equipment.equipment_family",
+      "equipment.models",
+      "equipment.product_names",
+      "topics.safety_topics",
+      "topics.toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Non-Covered_Service_Request_Form_v3.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Non-Covered_Service_Request_Form_v3.pdf",
+    "page_range_used": "1-1"
+  }
+}

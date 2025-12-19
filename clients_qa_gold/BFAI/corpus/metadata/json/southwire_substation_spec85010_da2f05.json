@@ -1,0 +1,132 @@
+{
+  "doc_id": "southwire_substation_spec85010_da2f05",
+  "doc_type": "datasheet",
+  "doc_title": "Multi-Conductor CU 600 V FR-XLPE CPE Jacket Control Cable Color Method 1 Table 1",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Southwire Company, LLC",
+  "canonical_anchor_phrase": "Southwire Multi-Conductor CU 600 V FR-XLPE CPE Jacket Control Cable Datasheet, Rev: 3.0.00C (2021)",
+  "publication": {
+    "revision": "3.0.00C",
+    "edition_year": 2021,
+    "publication_date_text": "02/24/2021 16:33 UTC"
+  },
+  "standards": {
+    "standard_body": [
+      "ASTM",
+      "UL",
+      "ICEA",
+      "IEEE",
+      "NEMA",
+      "NEC"
+    ],
+    "standard_ids": [
+      "ASTM B3",
+      "ASTM B8",
+      "UL 1277",
+      "UL 1685",
+      "ICEA S-58-679",
+      "ICEA S-73-532",
+      "ICEA S-95-658",
+      "NEMA WC70",
+      "IEEE 1202",
+      "ICEA T-29-520",
+      "VW-1",
+      "NEC Article 501",
+      "NEC Article 502",
+      "NEC 336.10",
+      "NEC 2017 Edition",
+      "Table 310.15 (B)(16) of the NEC"
+    ],
+    "jurisdiction_or_region": [
+      "US"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Control Cable",
+      "Electrical Cable"
+    ],
+    "models": [
+      "SPEC 85010"
+    ],
+    "product_names": [
+      "Multi-Conductor CU 600 V FR-XLPE CPE Jacket Control Cable"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Cable Construction",
+      "Cable Specifications",
+      "Electrical Properties",
+      "Physical Properties",
+      "Cable Applications",
+      "Safety Ratings",
+      "Conductor Identification",
+      "Ampacity Ratings",
+      "Material Properties",
+      "Testing Standards"
+    ],
+    "safety_topics": [
+      "Flame Retardant",
+      "Fire Propagation",
+      "Smoke Release",
+      "Hazardous Locations",
+      "Sunlight Resistant"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Operation"
+    ],
+    "keywords": [
+      "Multi-Conductor Cable",
+      "Copper Conductors",
+      "600 Volt",
+      "FR-XLPE Insulation",
+      "CPE Jacket",
+      "Control Cable",
+      "Flame Retardant",
+      "Cross Linked Polyethylene",
+      "Chlorinated Polyethylene",
+      "Hazardous Locations",
+      "Tray Cables",
+      "Electrical Specifications",
+      "Physical Data",
+      "Ampacity",
+      "AWG",
+      "Sunlight Resistant",
+      "Direct Burial",
+      "ASTM Standards",
+      "UL Standards",
+      "ICEA Standards",
+      "IEEE Standards",
+      "NEMA Standards",
+      "NEC",
+      "Conductor Identification",
+      "Insulation Thickness",
+      "Jacket Thickness",
+      "Bending Radius",
+      "DC Resistance",
+      "AC Resistance",
+      "Copper Weight",
+      "Approximate Weight",
+      "Stock Number",
+      "Southwire"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "topics.toc_outline"
+    ],
+    "ambiguities": [
+      "The document identifier 'SPEC 85010' also functions as a product/model identifier for this specific cable type."
+    ]
+  },
+  "source": {
+    "filename": "Southwire Substation SPEC85010.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Southwire Substation SPEC85010.pdf",
+    "page_range_used": "1-3"
+  }
+}

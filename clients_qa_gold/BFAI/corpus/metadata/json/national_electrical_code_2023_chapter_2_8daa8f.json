@@ -1,0 +1,100 @@
+{
+  "doc_id": "national_electrical_code_2023_chapter_2_8daa8f",
+  "doc_type": "electrical_code",
+  "doc_title": "National Electrical Code Chapter 2",
+  "subtitle": null,
+  "publisher_or_manufacturer": "National Fire Protection Association",
+  "canonical_anchor_phrase": "NFPA 70 2023 (United States)",
+  "publication": {
+    "revision": null,
+    "edition_year": 2023,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [
+      "National Fire Protection Association"
+    ],
+    "standard_ids": [
+      "NEC",
+      "NFPA 70"
+    ],
+    "jurisdiction_or_region": [
+      "United States"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [],
+    "models": [],
+    "product_names": []
+  },
+  "topics": {
+    "major_topics": [
+      "Wiring Methods",
+      "Overcurrent Protection",
+      "Grounding and Bonding",
+      "Branch Circuits",
+      "Feeders",
+      "Services",
+      "Receptacles",
+      "Conductors",
+      "Enclosures",
+      "Disconnecting Means"
+    ],
+    "safety_topics": [
+      "Electrical Safety",
+      "Shock Hazard",
+      "Fire Hazard",
+      "Overcurrent Protection",
+      "Grounding"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Inspection",
+      "Maintenance",
+      "Design"
+    ],
+    "keywords": [
+      "Wiring",
+      "Protection",
+      "Conductors",
+      "Circuits",
+      "Overcurrent",
+      "Grounding",
+      "Bonding",
+      "Receptacles",
+      "Switches",
+      "Enclosures",
+      "Disconnects",
+      "Services",
+      "Feeders",
+      "Branch circuits",
+      "Arc-fault",
+      "Ground-fault",
+      "Voltage",
+      "Amperage",
+      "Electrical installations",
+      "Safety"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "low",
+    "missing_fields": [
+      "subtitle",
+      "publication.revision",
+      "publication.publication_date_text",
+      "equipment.equipment_family",
+      "equipment.models",
+      "equipment.product_names",
+      "topics.toc_outline"
+    ],
+    "ambiguities": [
+      "Document text was entirely unreadable due to OCR corruption, all extracted information is inferred from filename/doc_id or general knowledge of the document type."
+    ]
+  },
+  "source": {
+    "filename": "National Electrical Code 2023 Chapter 2.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/National Electrical Code 2023 Chapter 2.pdf",
+    "page_range_used": "1-10"
+  }
+}

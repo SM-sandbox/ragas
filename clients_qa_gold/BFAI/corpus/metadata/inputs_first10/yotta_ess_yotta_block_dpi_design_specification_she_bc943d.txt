@@ -1,0 +1,356 @@
+--- Page 1 ---
+ 
+ 
+DESIGN SPECIFICATION SHEET 
+DC COUPLED ENERGY STORAGE SYSTEM 
+ (YOTTA BLOCK + DPI-208 or DPI-480 Microinverters) 
+Ver. 2.0 March 2025 
+ 
+Summary 
+ 
+1)​ The 
+Yotta 
+DC-coupled 
+energy 
+storage 
+is 
+comprised 
+of 
+the 
+following 
+components/features: 
+ 
+a)​ A four (4) channel Microinverter (DPI-208 or DPI-480) designed for commercial 
+three-phase 208V and 480V grid connection (Data sheet available). 
+b)​ The YOTTA BLOCK is a panel-level, modular, self-contained DC-coupled, Lithium 
+Iron Phosphate (LiFePO4) energy storage module for demand charge reduction 
+and 
+Time 
+of 
+Use 
+(TOU) 
+applications 
+in 
+commercial 
+and 
+industrial 
+interconnections (Data sheet available). 
+c)​ The Yotta DPI Microinverters and YOTTA BLOCK both have communication 
+gateways which show system status through a web platform; ECU-R and SL-GW 
+gateways are required (Data sheets available). 
+ 
+Submittals 
+ 
+1)​ Submittal shall be provided including the following items. 
+ 
+a)​ Contractor supplied bill of materials which includes the DPI Microinverter and  
+(YOTTA BLOCK) battery system meeting AC power and energy storage requested. 
+b)​ Product specification sheets indicating general device descriptions, dimensions, 
+electrical specifications, wiring details, and nomenclature. 
+c)​ Installation drawing showing connection points and wiring connection points for 
+power and data connections.  
+d)​ Contractor installation information (must be completed before start-up). 
+e)​ Service options including parts warranties, parts and labor warranties, and 
+preventative maintenance schedule by authorized technicians.  
+ 
+Approvals 
+ 
+1)​ Prior approval from the owner's representative is required for products or systems 
+manufactured by other companies.  
+ 
+2)​ Any alternate product or system that has not received prior approval from the owner’s 
+representative at least 10 days prior to submission of a proposal package shall be 
+rejected. 
+ 
+ 
+ 
+
+
+--- Page 2 ---
+ 
+ 
+3)​ Alternate products or systems require submission of catalog datasheets, system 
+overview documents, and installation manuals to the owner’s representative. (System 
+Integration) 
+ 
+Quality Assurance  
+ 
+1)​ Product Qualifications: 
+ 
+a)​ System electrical components shall be listed or recognized by a nationally 
+recognized testing laboratory (e.g., UL or CSA) and shall be labeled with 
+required markings as applicable: 
+b)​ All work must follow current National Electrical Code requirements: 
+i)​
+NFPA 855, “Standard for the Installation of Stationary Energy Storage 
+Systems” 
+c)​ Battery cell: 
+i)​
+UL 1642 “Standard for Lithium Batteries”  
+d)​ Yotta Energy  YOTTA BLOCK module-level energy storage module: 
+i)​
+The YOTTA BLOCK meets UL 1973 “Batteries for Use in Light Electric Rail 
+Applications and Stationary Applications”. 
+ii)​
+The YOTTA BLOCK is certified to UL 9540 “Energy Storage Systems and 
+Equipment”, and the report is available.  
+iii)​
+The YOTTA BLOCK is certified to UL 9540A “Test Method for Evaluating 
+Thermal Runaway Fire Propagation in Battery Energy Storage Systems 
+and the report is available.  Please note that the YOTTA BLOCK is 
+self-contained, fireproof and does not need a fire protection system.  
+iv)​
+Appendix JA12 – Qualification Requirements for Battery Storage System 
+(2022 version). 
+ 
+2)​ Yotta DPI Microinverters meet all grid interconnection standards, as applicable to the 
+project as a whole: 
+ 
+a)​ Institute of Electrical and Electronics Engineers (IEEE) 1547 
+b)​ UL 1741 SA/SB, “Standard for Static Inverters and Charge, Converters, 
+Controllers and Interconnection System Equipment for Use with Distributed 
+Energy Resources”. 
+ 
+3)​ Other codes and standards that will apply include: 
+ 
+a)​ UN 38.3 “Certification for Lithium Batteries” (Transportation) 
+b)​ NFPA 855 Compliant 
+c)​ American National Standards Institute (ANSI) C12.1 (electricity metering) 
+d)​ American Society of Civil Engineers (ASCE)-7 Minimum Design Loads for 
+Buildings and Other Structures 
+e)​ All components and the facility where the product is manufactured must be 
+RoHS compliant. 
+(1)​ Installation and Startup Qualifications 
+ 
+ 
+
+
+--- Page 3 ---
+ 
+ 
+(2)​ System startup and commissioning shall be performed by the 
+installer. 
+(3)​ Service and Support Requirements 
+(a)​ Phone Support: Toll-free technical support shall be 
+available. 
+(b)​ Remote Troubleshooting (System comms). 
+(c)​ Service Contract: All work to be done by the BESS 
+manufacturer.  
+ 
+4)​ Project Conditions 
+ 
+a)​ The Yotta DPI Microinverters and the YOTTA BLOCK are sealed to NEMA 4X and 
+are designed for outdoor installation. The gateways can be mounted inside the 
+building or housed in a NEMA 3R cabinet(s). 
+b)​ Equipment shall not be subjected to dust, debris, moisture, or temperature and 
+humidity conditions exceeding the requirements indicated above or as marked 
+on the product, at any point before installation. 
+c)​ Only properly rated equipment and enclosures, installed per the manufacturer’s 
+instructions, may be subjected to dust and moisture following installation. 
+ 
+5)​ Warranty 
+ 
+a)​ The YOTTA BLOCK provides a ten-year (10) warranty. Coverage shall begin on the 
+date of commissioning the system. 
+b)​ The hardware warranty shall cover the repair or replacement (RMA) of any 
+defective products within the warranty period. 
+ 
+6)​ Maintenance & Sustainability 
+ 
+a)​ The manufacturer shall make available to the owner upgrades, and/or 
+replacements available for a minimum of ten (10) years following installation. 
+ 
+Equipment 
+ 
+1)​ Manufacturers 
+ 
+a)​ Acceptable Manufacturers 
+i)​
+Yotta Energy Inc. 
+ 
+2)​ System Architecture 
+ 
+a)​ The Yotta Energy BESS shall consist of the following major components. 
+i)​
+Yotta DPI Microinverter (208 or 480V) which converts DC power to AC 
+power to 3-phase, 208V/480V. 
+ii)​
+The YOTTA BLOCK Energy Storage module stores the energy that is 
+supplied from the solar modules and makes it available to the Yotta DPI 
+ 
+ 
+
+
+--- Page 4 ---
+ 
+ 
+Microinverters when called to provide the energy to the user’s system 
+load. 
+iii)​
+Safety – The Yotta Ecosystem is designed from the ground up for safety.  
+Additional documentation can be requested through Yotta Energy’s 
+website (www.yottaenergy.com) and/or a sales representative. 
+ 
+3)​ Yotta DPI Microinverters Microinverter 
+ 
+a)​ Each Yotta DPI Microinverter device is often referred to as the power conversion 
+device. The Yotta DPI Microinverters convert the DC input power including Yotta 
+Energy’s  (YOTTA BLOCK) into AC power to be used by the user’s system loads. 
+b)​ The Yotta DPI Microinverters datasheet can be requested through Yotta Energy’s 
+website (www.yottaenergy.com) with highlights shown below: 
+i)​
+DPI (Dual Power Microinverter) designed to work with PV and Yotta’s  
+(YOTTA BLOCK) Energy Storage System. 
+ii)​
+Native 3-Phase output (208V & 480V). 
+iii)​
+Low voltage DC input (<60V). 
+iv)​
+4 Solar module input channels, 2 MPPT’s . 
+v)​
+Continuous rated AC output power 1728VA at 208V and 1800VA at 480V. 
+vi)​
+Engineered for high-capacity PV modules. 
+vii)​
+Maximum input current 20A. 
+viii)​
+Integrated safety protection relay. 
+ix)​
+Rapid Shutdown Complaint. 
+x)​
+Adjustable Power Factor. 
+ 
+4)​ YOTTA BLOCK modular energy storage module.  
+ 
+a)​ The YOTTA BLOCK Energy Storage System is Lithium Iron Phosphate (LiFePO4) 
+chemistry. It has a nominal energy storage of 1kWh. The modular design means 
+just adding ESS units to meet desired capacity (retrofittable system). For 
+example, 100 kWh needs 100 YOTTA BLOCK batteries. The unit can be cycled 
+daily. After 10 years of daily cycling the Yotta will meet; provide no less than 
+70% of 1kWh per module.  
+b)​ Yotta Energy warrants the YOTTA BLOCK capacity and provides remedy if there 
+should be a shortfall before unlimited daily cycles for 10 years.  
+c)​ The Yotta Energy BESS is a safe electrical low voltage (SELV) grouping as 
+defined by UL60950; below 60Vdc. 
+d)​ Each YOTTA BLOCK battery has SoC (State of Charge) balancing and thermal 
+management technology. 
+e)​ Thermal separation between individual cells in the YOTTA BLOCK is designed to 
+avoid thermal coupling between cells. 
+f)​ The YOTTA BLOCK is self-contained and does not require external cooling. Its 
+patented thermal management system manages individual cells and internal 
+electronics.   
+g)​ The operating temperature range is: -20 to 60ºC (-4 to 120ºF) Max continuous.  
+ 
+ 
+ 
+
+
+--- Page 5 ---
+ 
+ 
+5)​ System Specification 
+ 
+a)​ The Yotta Energy System – including Yotta DPI Microinverters and the YOTTA 
+BLOCK Energy Storage System is very safe since it is not housed in a common 
+cabinet which concentrates the battery cells in a big box. Each Yotta product is 
+self-contained with metal enclosures protecting the site from all 9450A tested 
+failures (Distributed system). 
+ 
+6)​ The YOTTA BLOCK datasheet can be requested through the Yotta Energy website with 
+highlights shown below.  
+ 
+a)​ Best-in-class fire safety. 
+b)​ Plug-and-play for simplified deployment. 
+c)​ Low Voltage DC architecture (<60V). 
+d)​ Single-phase or 3-phase (208V or 480V) options -Engineered for high-capacity 
+PV modules -Light-weight design for ease of handling during installation. 
+e)​ High-efficiency DC-coupled architecture delivers more savings. 
+f)​ Modular design that can expand to meet the changing needs of buildings. 
+g)​ Compliance; see Yotta Energy’s YOTTA BLOCK data sheet. 
+h)​ Auxiliary Power – The  ESS does not require auxiliary power, although, power for 
+the gateway (SL-GW) is required (110-120V) 
+i)​
+The BESS does not need regular maintenance. 
+j)​
+The BESS does not need a fire suppression system. 
+k)​ The SL-GW (gateway) can provide a single communication interface via CAT6 
+cable; local WiFI network keeps the system synced. Cellular network upon 
+request available.  
+ 
+7)​ Basic Control 
+ 
+a)​ The BESS shall be installed in the default operation mode to allow charging only 
+from an on-site photovoltaic system when the photovoltaic system production 
+is greater than the on-site electrical load. The BESS shall discharge only when 
+the photovoltaic (PV) system production is less than the on-site electrical load. 
+ 
+8)​ Time of Use (TOU) Control 
+ 
+a)​ The battery storage system shall be installed in the default operation mode to 
+allow charging from an on-site photovoltaic system. The BESS shall begin 
+discharging during the highest-priced TOU hours of the day. The operation 
+schedule shall be pre-programmed from the factory, updated remotely, or 
+programmed during the installation/commissioning of the system. 
+ 
+Execution 
+ 
+1)​ Installation Requirements 
+ 
+ 
+ 
+
+
+--- Page 6 ---
+ 
+ 
+a)​ Installation Procedures and Verification 
+i)​
+The successful bidder shall review all required installation and 
+pre-startup procedures with the manufacturer’s representative through 
+pre-construction meetings. 
+ii)​
+The successful bidder shall install and connect the BESS according to 
+the manufacturer’s installation instructions, wiring diagrams, the project 
+submittals and plans specifications while complying to all applicable 
+local codes.  
+b)​ Coordination with owner’s IT Network Infrastructure 
+i)​
+The successful bidder is required to coordinate with the owner’s 
+representative to secure all required BESS data connections to the 
+owner’s IT network infrastructure. 
+c)​ Documentation and Deliverables 
+i)​
+The installing contractor shall be responsible for documenting the 
+installed location of the BESS system and all electrical components 
+feeding the BESS.  
+ 
+2)​ System Startup 
+ 
+a)​ Upon completion of installation by the installer, including completion of all 
+required verification and documentation required by the manufacturer, the 
+system shall be started up and programmed by the installer and/or Yotta 
+Energy. 
+ 
+3)​ Project Turnover 
+ 
+a)​ System Documentation 
+i)​
+The installer shall submit a software database file with desired device 
+labels and notes completed. 
+ii)​
+Installing contractor to grant access to the owner for the programming 
+setup. 
+b)​ Owner Training and Responsibilities 
+i)​
+Options for onsite training for owner and designated attendees to be 
+included in the submittal package. 
+ii)​
+The installer and end customer will come to a continued monitoring 
+agreement post-installation. Yotta will support installer/direct purchaser 
+inquiries only. 
+ 
+ 
+ 
+ 
+ 
+ 

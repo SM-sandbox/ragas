@@ -1,0 +1,89 @@
+--- Page 1 ---
+ 
+ALSOENERGY INC -  5400 AIRPORT BLVD STE 100 - BOULDER, CO  80301 -  WWW.ALSOENERGY.COM  -  866-303-5668 -   v1 
+ 1 
+[DiGi WR21/31 Modem Basics] 
+Sample TextHeadline 
+ 
+DiGi WR21/31 Modem Basics 
+ 
+ 
+06/03/2022 
+
+
+--- Page 2 ---
+ 
+ALSOENERGY INC -  5400 AIRPORT BLVD STE 100 - BOULDER, CO  80301 -  WWW.ALSOENERGY.COM  -  866-303-5668 -   v1 
+ 2 
+[DiGi WR21/31 Modem Basics] 
+Table of Contents 
+Table of Contents ....................................................................................................................... 2 
+Outline ....................................................................................................................................... 3 
+Lan Settings ............................................................................................................................... 3 
+How to arp -a (AKA LAN IP/MAC Table) .................................................................................... 4 
+How to Ping ............................................................................................................................... 4 
+How to Create Port Forwards ..................................................................................................... 5 
+Signal Strength/Quality .............................................................................................................. 5 
+ICCID/IMEI ................................................................................................................................. 6 
+APN Settings ............................................................................................................................. 7 
+ 
+ 
+
+
+--- Page 3 ---
+ 
+ALSOENERGY INC -  5400 AIRPORT BLVD STE 100 - BOULDER, CO  80301 -  WWW.ALSOENERGY.COM  -  866-303-5668 -   v1 
+ 3 
+[DiGi WR21/31 Modem Basics] 
+Outline 
+In this document you will find screenshots outlining how to find common settings and other 
+information in a DiGi WR21/31 modem. 
+Lan Settings 
+ 
+ 
+
+
+--- Page 4 ---
+ 
+ALSOENERGY INC -  5400 AIRPORT BLVD STE 100 - BOULDER, CO  80301 -  WWW.ALSOENERGY.COM  -  866-303-5668 -   v1 
+ 4 
+[DiGi WR21/31 Modem Basics] 
+How to arp -a (AKA LAN IP/MAC Table) 
+ 
+How to Ping 
+ 
+
+
+--- Page 5 ---
+ 
+ALSOENERGY INC -  5400 AIRPORT BLVD STE 100 - BOULDER, CO  80301 -  WWW.ALSOENERGY.COM  -  866-303-5668 -   v1 
+ 5 
+[DiGi WR21/31 Modem Basics] 
+How to Create Port Forwards 
+ 
+ 
+Signal Strength/Quality 
+ 
+
+
+--- Page 6 ---
+ 
+ALSOENERGY INC -  5400 AIRPORT BLVD STE 100 - BOULDER, CO  80301 -  WWW.ALSOENERGY.COM  -  866-303-5668 -   v1 
+ 6 
+[DiGi WR21/31 Modem Basics] 
+ICCID/IMEI 
+ 
+ 
+ 
+
+
+--- Page 7 ---
+ 
+ALSOENERGY INC -  5400 AIRPORT BLVD STE 100 - BOULDER, CO  80301 -  WWW.ALSOENERGY.COM  -  866-303-5668 -   v1 
+ 7 
+[DiGi WR21/31 Modem Basics] 
+APN Settings 
+ 
+ 
+ 
+ 

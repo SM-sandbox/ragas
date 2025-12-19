@@ -1,0 +1,52 @@
+2025-12-16 13:23:16,977 - INFO - ======================================================================
+2025-12-16 13:23:16,977 - INFO - DOCUMENT METADATA EXTRACTION PIPELINE
+2025-12-16 13:23:16,977 - INFO - ======================================================================
+2025-12-16 13:23:16,977 - INFO - Model: gemini-2.5-flash
+2025-12-16 13:23:16,977 - INFO - Thinking Budget: 24576 tokens (HIGH)
+2025-12-16 13:23:16,977 - INFO - Max Output Tokens: 65536
+2025-12-16 13:23:16,977 - INFO - Dry Run: True
+2025-12-16 13:23:17,163 - INFO - Initialized MetadataExtractor with gemini-2.5-flash
+2025-12-16 13:23:17,164 - INFO - 
+Found 65 PDFs to process
+2025-12-16 13:23:17,164 - INFO - DRY RUN MODE - processing only 2 documents
+2025-12-16 13:23:17,164 - INFO - 
+[1/2] 
+2025-12-16 13:23:17,164 - INFO - 
+Processing: 1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC.pdf
+2025-12-16 13:23:17,164 - INFO -   doc_id: 1-so50016-boyne-mountain-resort_sld_0_12c_add-on_s_0f1b33
+2025-12-16 13:23:17,164 - INFO -   Extracting text...
+2025-12-16 13:23:17,216 - INFO -   Extracted 16253 chars from pages 1-10
+2025-12-16 13:23:17,216 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:23:43,813 - INFO -   Validating schema...
+2025-12-16 13:23:43,844 - INFO -   ✓ Success - confidence: high, models: 24, standards: 2
+2025-12-16 13:23:44,349 - INFO - 
+[2/2] 
+2025-12-16 13:23:44,349 - INFO - 
+Processing: 3 Phase 2000kVa Transformer Manual.pdf
+2025-12-16 13:23:44,349 - INFO -   doc_id: 3_phase_2000kva_transformer_manual_8ab9e4
+2025-12-16 13:23:44,350 - INFO -   Extracting text...
+2025-12-16 13:23:44,396 - INFO -   Extracted 27146 chars from pages 1-10
+2025-12-16 13:23:44,397 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:24:00,984 - INFO -   Validating schema...
+2025-12-16 13:24:00,995 - ERROR -   Validation failed: ["Schema validation error: ['Pad-Mounted Transformers', 'Three-Phase Transformers', 'Liquid-filled Transformers', 'Insulating Fluids', 'Mineral Oil', 'Silicone Fluid', 'FR3 Fluid', 'Dielectric Fluid', 'NEC Guidelines', 'NFPA', 'UL Classification', 'Overcurrent Protection', 'Bay-O-Net Fuse', 'Current-Limiting Fuse', 'Expulsion Fuse', 'Transformer Ratings', 'KVA Rating', 'Voltage Ratings', 'Impedance', 'Cooling Classes', 'Temperature Rise', 'Flash Point', 'Fire Point', 'BIL (Basic Insulation Level)', 'Pressure Relief Device', 'Primary Switching', 'Surge Arresters', 'Dead-front design', 'Live-front design', 'Radial feed', 'Loop feed', 'Inrush currents', 'Fault current', 'Interrupting Rating', 'I2t characteristics', 'Transformer modification', 'Retrofitting', 'Retrofilling', 'Hot stick operation', 'Environmental conditions', 'Dielectric Breakdown', 'Viscosity', 'Biodegradability'] is too long"]
+2025-12-16 13:24:00,998 - INFO - 
+Manifest saved to: doc_metadata/manifests/manifest_20251216_132400.jsonl
+2025-12-16 13:24:00,998 - INFO - Manifest CSV saved to: doc_metadata/manifests/manifest_20251216_132400.csv
+2025-12-16 13:24:00,998 - INFO - 
+======================================================================
+2025-12-16 13:24:00,998 - INFO - EXTRACTION COMPLETE
+2025-12-16 13:24:00,998 - INFO - ======================================================================
+2025-12-16 13:24:00,998 - INFO - Total PDFs:     2
+2025-12-16 13:24:00,998 - INFO - Succeeded:      1
+2025-12-16 13:24:00,998 - INFO - Failed:         1
+2025-12-16 13:24:00,998 - INFO - Skipped:        0
+2025-12-16 13:24:00,998 - INFO - Success Rate:   50.0%
+2025-12-16 13:24:00,998 - INFO - 
+Failure Reasons:
+2025-12-16 13:24:00,998 - INFO -   [1] Schema validation error: ['Pad-Mounted Transformers', 'Three-Phase Transformers', 'Liquid-filled Tra
+2025-12-16 13:24:00,998 - INFO - 
+Confidence Distribution:
+2025-12-16 13:24:00,998 - INFO -   high: 1
+2025-12-16 13:24:00,998 - INFO -   medium: 0
+2025-12-16 13:24:00,998 - INFO -   low: 0
+2025-12-16 13:24:00,998 - INFO - ======================================================================

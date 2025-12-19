@@ -39,7 +39,7 @@ from langchain_google_vertexai import ChatVertexAI
 
 # Configuration
 JOB_ID = "bfai__eval66a_g1_1536_tt"  # gemini-1536-RETRIEVAL_QUERY (best performer)
-CORPUS_FILE = "clients/BFAI/qa/QA_BFAI_gold_v1-0__q458.json"  # Full 458 gold questions
+CORPUS_FILE = "clients_qa_gold/BFAI/qa/QA_BFAI_gold_v1-0__q458.json"  # Full 458 gold questions
 K_VALUES = [5, 10, 15, 20, 25, 50, 100]
 NUM_RUNS = 1  # Single run for gold standard eval
 PRECISION_K = 25  # Can be changed to 12 for comparison

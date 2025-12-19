@@ -1,0 +1,429 @@
+2025-12-16 15:04:21,956 - INFO - ======================================================================
+2025-12-16 15:04:21,956 - INFO - DOCUMENT METADATA EXTRACTION PIPELINE
+2025-12-16 15:04:21,956 - INFO - ======================================================================
+2025-12-16 15:04:21,956 - INFO - Model: gemini-2.5-flash
+2025-12-16 15:04:21,956 - INFO - Thinking Budget: 24576 tokens (HIGH)
+2025-12-16 15:04:21,956 - INFO - Max Output Tokens: 65536
+2025-12-16 15:04:21,956 - INFO - Dry Run: False
+2025-12-16 15:04:21,999 - INFO - Initialized MetadataExtractor with gemini-2.5-flash
+2025-12-16 15:04:21,999 - INFO - 
+Found 65 PDFs to process
+2025-12-16 15:04:21,999 - INFO - 
+[1/65] 
+2025-12-16 15:04:22,000 - INFO - 
+Processing: 1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC.pdf
+2025-12-16 15:04:22,000 - INFO -   doc_id: 1-so50016-boyne-mountain-resort_sld_0_12c_add-on_s_0f1b33
+2025-12-16 15:04:22,008 - INFO -   Skipping 1-so50016-boyne-mountain-resort_sld_0_12c_add-on_s_0f1b33 - valid metadata exists
+2025-12-16 15:04:22,510 - INFO - 
+[2/65] 
+2025-12-16 15:04:22,511 - INFO - 
+Processing: 3 Phase 2000kVa Transformer Manual.pdf
+2025-12-16 15:04:22,511 - INFO -   doc_id: 3_phase_2000kva_transformer_manual_8ab9e4
+2025-12-16 15:04:22,518 - INFO -   Skipping 3_phase_2000kva_transformer_manual_8ab9e4 - valid metadata exists
+2025-12-16 15:04:23,023 - INFO - 
+[3/65] 
+2025-12-16 15:04:23,023 - INFO - 
+Processing: 3 Phase Pad Mount Transformer Spec Sheet.pdf
+2025-12-16 15:04:23,023 - INFO -   doc_id: 3_phase_pad_mount_transformer_spec_sheet_0c89eb
+2025-12-16 15:04:23,031 - INFO -   Skipping 3_phase_pad_mount_transformer_spec_sheet_0c89eb - valid metadata exists
+2025-12-16 15:04:23,534 - INFO - 
+[4/65] 
+2025-12-16 15:04:23,534 - INFO - 
+Processing: 800VAC BoS_Comprehensive_4.2MVA Skid Sales Flyer V2.24.pdf
+2025-12-16 15:04:23,534 - INFO -   doc_id: 800vac_bos_comprehensive_4_2mva_skid_sales_flyer_v_85a711
+2025-12-16 15:04:23,542 - INFO -   Skipping 800vac_bos_comprehensive_4_2mva_skid_sales_flyer_v_85a711 - valid metadata exists
+2025-12-16 15:04:24,044 - INFO - 
+[5/65] 
+2025-12-16 15:04:24,044 - INFO - 
+Processing: AcquiSuite-Basics---External.pdf
+2025-12-16 15:04:24,044 - INFO -   doc_id: acquisuite-basics---external_a8f6d0
+2025-12-16 15:04:24,052 - INFO -   Skipping acquisuite-basics---external_a8f6d0 - valid metadata exists
+2025-12-16 15:04:24,556 - INFO - 
+[6/65] 
+2025-12-16 15:04:24,556 - INFO - 
+Processing: Acquisuite Backup and Restore.pdf
+2025-12-16 15:04:24,556 - INFO -   doc_id: acquisuite_backup_and_restore_88522f
+2025-12-16 15:04:24,563 - INFO -   Skipping acquisuite_backup_and_restore_88522f - valid metadata exists
+2025-12-16 15:04:25,068 - INFO - 
+[7/65] 
+2025-12-16 15:04:25,069 - INFO - 
+Processing: Arc Flash Safety Guide for Field Technicians and Engineers.pdf
+2025-12-16 15:04:25,069 - INFO -   doc_id: arc_flash_safety_guide_for_field_technicians_and_e_ce30f7
+2025-12-16 15:04:25,077 - INFO -   Skipping arc_flash_safety_guide_for_field_technicians_and_e_ce30f7 - valid metadata exists
+2025-12-16 15:04:25,580 - INFO - 
+[8/65] 
+2025-12-16 15:04:25,580 - INFO - 
+Processing: CPS 125kW Manual.pdf
+2025-12-16 15:04:25,580 - INFO -   doc_id: cps_125kw_manual_4138a9
+2025-12-16 15:04:25,588 - INFO -   Skipping cps_125kw_manual_4138a9 - valid metadata exists
+2025-12-16 15:04:26,093 - INFO - 
+[9/65] 
+2025-12-16 15:04:26,093 - INFO - 
+Processing: CPS 125kW Standard & Centralized Datasheet.pdf
+2025-12-16 15:04:26,093 - INFO -   doc_id: cps_125kw_standard_centralized_datasheet_723ecc
+2025-12-16 15:04:26,101 - INFO -   Skipping cps_125kw_standard_centralized_datasheet_723ecc - valid metadata exists
+2025-12-16 15:04:26,606 - INFO - 
+[10/65] 
+2025-12-16 15:04:26,606 - INFO - 
+Processing: Careful Field Service Safety Observations 2024 2025.pdf
+2025-12-16 15:04:26,606 - INFO -   doc_id: careful_field_service_safety_observations_2024_202_933d0a
+2025-12-16 15:04:26,614 - INFO -   Skipping careful_field_service_safety_observations_2024_202_933d0a - valid metadata exists
+2025-12-16 15:04:27,116 - INFO - 
+[11/65] 
+2025-12-16 15:04:27,116 - INFO - 
+Processing: DiGiWR21WR31ModemBasicsv1.pdf
+2025-12-16 15:04:27,117 - INFO -   doc_id: digiwr21wr31modembasicsv1_574b9f
+2025-12-16 15:04:27,125 - INFO -   Skipping digiwr21wr31modembasicsv1_574b9f - valid metadata exists
+2025-12-16 15:04:27,630 - INFO - 
+[12/65] 
+2025-12-16 15:04:27,630 - INFO - 
+Processing: E145701_Shark_100_100T_User_Manual_V.1.13_11-7-2008.pdf
+2025-12-16 15:04:27,630 - INFO -   doc_id: e145701_shark_100_100t_user_manual_v_1_13_11-7-200_3402d2
+2025-12-16 15:04:27,638 - INFO -   Skipping e145701_shark_100_100t_user_manual_v_1_13_11-7-200_3402d2 - valid metadata exists
+2025-12-16 15:04:28,142 - INFO - 
+[13/65] 
+2025-12-16 15:04:28,142 - INFO - 
+Processing: EPEC_1200-6000A UL 891 SWBD (Crit Power) Flyer .pdf
+2025-12-16 15:04:28,142 - INFO -   doc_id: epec_1200-6000a_ul_891_swbd_crit_power_flyer_7b01cb
+2025-12-16 15:04:28,151 - INFO -   Skipping epec_1200-6000a_ul_891_swbd_crit_power_flyer_7b01cb - valid metadata exists
+2025-12-16 15:04:28,656 - INFO - 
+[14/65] 
+2025-12-16 15:04:28,656 - INFO - 
+Processing: EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer.pdf
+2025-12-16 15:04:28,656 - INFO -   doc_id: epec_1200-6000a_ul_891_swbd_industrial_flyer_dd8947
+2025-12-16 15:04:28,665 - INFO -   Skipping epec_1200-6000a_ul_891_swbd_industrial_flyer_dd8947 - valid metadata exists
+2025-12-16 15:04:29,171 - INFO - 
+[15/65] 
+2025-12-16 15:04:29,171 - INFO - 
+Processing: EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24.pdf
+2025-12-16 15:04:29,171 - INFO -   doc_id: epec_1200-6000a_ul_891_swbd_for_critical_power_v10_804cea
+2025-12-16 15:04:29,179 - INFO -   Skipping epec_1200-6000a_ul_891_swbd_for_critical_power_v10_804cea - valid metadata exists
+2025-12-16 15:04:29,684 - INFO - 
+[16/65] 
+2025-12-16 15:04:29,684 - INFO - 
+Processing: EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23.pdf
+2025-12-16 15:04:29,684 - INFO -   doc_id: epec_1200-6000a_ul_891_swbd_for_solar_bess_flyer_v_71ac89
+2025-12-16 15:04:29,693 - INFO -   Skipping epec_1200-6000a_ul_891_swbd_for_solar_bess_flyer_v_71ac89 - valid metadata exists
+2025-12-16 15:04:30,194 - INFO - 
+[17/65] 
+2025-12-16 15:04:30,194 - INFO - 
+Processing: Green-Earth-Energy-EPC-Contract-Template Sample.pdf
+2025-12-16 15:04:30,194 - INFO -   doc_id: green-earth-energy-epc-contract-template_sample_13ee73
+2025-12-16 15:04:30,204 - INFO -   Skipping green-earth-energy-epc-contract-template_sample_13ee73 - valid metadata exists
+2025-12-16 15:04:30,711 - INFO - 
+[18/65] 
+2025-12-16 15:04:30,711 - INFO - 
+Processing: Intersect Power Easley Project POD (MAIN) Rev 2024-7-30 508.pdf
+2025-12-16 15:04:30,711 - INFO -   doc_id: intersect_power_easley_project_pod_main_rev_2024-7_e5dc69
+2025-12-16 15:04:30,720 - INFO -   Skipping intersect_power_easley_project_pod_main_rev_2024-7_e5dc69 - valid metadata exists
+2025-12-16 15:04:31,225 - INFO - 
+[19/65] 
+2025-12-16 15:04:31,226 - INFO - 
+Processing: MPS Switchboard Manual - V5.pdf
+2025-12-16 15:04:31,226 - INFO -   doc_id: mps_switchboard_manual_-_v5_f39db1
+2025-12-16 15:04:31,234 - INFO -   Skipping mps_switchboard_manual_-_v5_f39db1 - valid metadata exists
+2025-12-16 15:04:31,740 - INFO - 
+[20/65] 
+2025-12-16 15:04:31,740 - INFO - 
+Processing: Manual-PVI-Central-250-300.pdf
+2025-12-16 15:04:31,740 - INFO -   doc_id: manual-pvi-central-250-300_dc3888
+2025-12-16 15:04:31,748 - INFO -   Skipping manual-pvi-central-250-300_dc3888 - valid metadata exists
+2025-12-16 15:04:32,252 - INFO - 
+[21/65] 
+2025-12-16 15:04:32,252 - INFO - 
+Processing: NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed.pdf
+2025-12-16 15:04:32,252 - INFO -   doc_id: nep_microinverter_bdm-1200-lv-250723_july_23_2025__8b9497
+2025-12-16 15:04:32,259 - INFO -   Skipping nep_microinverter_bdm-1200-lv-250723_july_23_2025__8b9497 - valid metadata exists
+2025-12-16 15:04:32,764 - INFO - 
+[22/65] 
+2025-12-16 15:04:32,765 - INFO - 
+Processing: NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf
+2025-12-16 15:04:32,765 - INFO -   doc_id: nep_microinverter_bdm-2000-t-datasheet-20241216_990939
+2025-12-16 15:04:32,773 - INFO -   Skipping nep_microinverter_bdm-2000-t-datasheet-20241216_990939 - valid metadata exists
+2025-12-16 15:04:33,279 - INFO - 
+[23/65] 
+2025-12-16 15:04:33,279 - INFO - 
+Processing: NEP Microinverter BDM-550, BDM-650 Whitepaper AA, EH.pdf
+2025-12-16 15:04:33,279 - INFO -   doc_id: nep_microinverter_bdm-550_bdm-650_whitepaper_aa_eh_dad885
+2025-12-16 15:04:33,288 - INFO -   Skipping nep_microinverter_bdm-550_bdm-650_whitepaper_aa_eh_dad885 - valid metadata exists
+2025-12-16 15:04:33,792 - INFO - 
+[24/65] 
+2025-12-16 15:04:33,792 - INFO - 
+Processing: NOARK - Power Circuit Breakers and Non-Automatic Switches - A32 ASD32 - Datasheet.pdf
+2025-12-16 15:04:33,792 - INFO -   doc_id: noark_-_power_circuit_breakers_and_non-automatic_s_cb1019
+2025-12-16 15:04:33,806 - INFO -   Skipping noark_-_power_circuit_breakers_and_non-automatic_s_cb1019 - valid metadata exists
+2025-12-16 15:04:34,308 - INFO - 
+[25/65] 
+2025-12-16 15:04:34,308 - INFO - 
+Processing: National Electrical Code 2023 Chapter 2.pdf
+2025-12-16 15:04:34,308 - INFO -   doc_id: national_electrical_code_2023_chapter_2_8daa8f
+2025-12-16 15:04:34,316 - INFO -   Skipping national_electrical_code_2023_chapter_2_8daa8f - valid metadata exists
+2025-12-16 15:04:34,817 - INFO - 
+[26/65] 
+2025-12-16 15:04:34,818 - INFO - 
+Processing: National Electrical Code 2023 Chapter 4.pdf
+2025-12-16 15:04:34,818 - INFO -   doc_id: national_electrical_code_2023_chapter_4_1c41a1
+2025-12-16 15:04:34,829 - INFO -   Skipping national_electrical_code_2023_chapter_4_1c41a1 - valid metadata exists
+2025-12-16 15:04:35,331 - INFO - 
+[27/65] 
+2025-12-16 15:04:35,331 - INFO - 
+Processing: National Electrical Code 2023 Chapter 6.pdf
+2025-12-16 15:04:35,331 - INFO -   doc_id: national_electrical_code_2023_chapter_6_5be35c
+2025-12-16 15:04:35,341 - INFO -   Skipping national_electrical_code_2023_chapter_6_5be35c - valid metadata exists
+2025-12-16 15:04:35,842 - INFO - 
+[28/65] 
+2025-12-16 15:04:35,842 - INFO - 
+Processing: Non-Covered_Service_Request_Form_v3.pdf
+2025-12-16 15:04:35,842 - INFO -   doc_id: non-covered_service_request_form_v3_8a7fc3
+2025-12-16 15:04:35,851 - INFO -   Skipping non-covered_service_request_form_v3_8a7fc3 - valid metadata exists
+2025-12-16 15:04:36,357 - INFO - 
+[29/65] 
+2025-12-16 15:04:36,358 - INFO - 
+Processing: OSHA Electric Gen CFR-2024-title29-vol5-sec1910-269.pdf
+2025-12-16 15:04:36,358 - INFO -   doc_id: osha_electric_gen_cfr-2024-title29-vol5-sec1910-26_1288a3
+2025-12-16 15:04:36,367 - INFO -   Skipping osha_electric_gen_cfr-2024-title29-vol5-sec1910-26_1288a3 - valid metadata exists
+2025-12-16 15:04:36,872 - INFO - 
+[30/65] 
+2025-12-16 15:04:36,873 - INFO - 
+Processing: OSHA Electrical CFR-2024-title29-vol5-part1910-subpartS.pdf
+2025-12-16 15:04:36,873 - INFO -   doc_id: osha_electrical_cfr-2024-title29-vol5-part1910-sub_9b78ad
+2025-12-16 15:04:36,880 - INFO -   Skipping osha_electrical_cfr-2024-title29-vol5-part1910-sub_9b78ad - valid metadata exists
+2025-12-16 15:04:37,386 - INFO - 
+[31/65] 
+2025-12-16 15:04:37,386 - INFO - 
+Processing: OSHA LOTO CFR-2024-title29-vol5-sec1910-147.pdf
+2025-12-16 15:04:37,386 - INFO -   doc_id: osha_loto_cfr-2024-title29-vol5-sec1910-147_90b667
+2025-12-16 15:04:37,394 - INFO -   Skipping osha_loto_cfr-2024-title29-vol5-sec1910-147_90b667 - valid metadata exists
+2025-12-16 15:04:37,900 - INFO - 
+[32/65] 
+2025-12-16 15:04:37,900 - INFO - 
+Processing: OSHA PPE CFR-2024-title29-vol5-part1910-subpartI.pdf
+2025-12-16 15:04:37,900 - INFO -   doc_id: osha_ppe_cfr-2024-title29-vol5-part1910-subparti_db50fa
+2025-12-16 15:04:37,911 - INFO -   Skipping osha_ppe_cfr-2024-title29-vol5-part1910-subparti_db50fa - valid metadata exists
+2025-12-16 15:04:38,412 - INFO - 
+[33/65] 
+2025-12-16 15:04:38,412 - INFO - 
+Processing: PFMG - OM Agreement (WSD)_Executed.pdf
+2025-12-16 15:04:38,412 - INFO -   doc_id: pfmg_-_om_agreement_wsd_executed_fde9f3
+2025-12-16 15:04:38,421 - INFO -   Skipping pfmg_-_om_agreement_wsd_executed_fde9f3 - valid metadata exists
+2025-12-16 15:04:38,923 - INFO - 
+[34/65] 
+2025-12-16 15:04:38,923 - INFO - 
+Processing: PVI-5000-EN-Rev E FIMER ABB.pdf
+2025-12-16 15:04:38,923 - INFO -   doc_id: pvi-5000-en-rev_e_fimer_abb_4e75ad
+2025-12-16 15:04:38,933 - INFO -   Skipping pvi-5000-en-rev_e_fimer_abb_4e75ad - valid metadata exists
+2025-12-16 15:04:39,439 - INFO - 
+[35/65] 
+2025-12-16 15:04:39,439 - INFO - 
+Processing: PVI-6000-OUTD-US Service Manual.pdf
+2025-12-16 15:04:39,439 - INFO -   doc_id: pvi-6000-outd-us_service_manual_b17b5f
+2025-12-16 15:04:39,449 - INFO -   Skipping pvi-6000-outd-us_service_manual_b17b5f - valid metadata exists
+2025-12-16 15:04:39,954 - INFO - 
+[36/65] 
+2025-12-16 15:04:39,954 - INFO - 
+Processing: PowerLogic ION 8600 Verifying ION8600 Accuracy 032008.pdf
+2025-12-16 15:04:39,955 - INFO -   doc_id: powerlogic_ion_8600_verifying_ion8600_accuracy_032_008492
+2025-12-16 15:04:39,964 - INFO -   Skipping powerlogic_ion_8600_verifying_ion8600_accuracy_032_008492 - valid metadata exists
+2025-12-16 15:04:40,464 - INFO - 
+[37/65] 
+2025-12-16 15:04:40,465 - INFO - 
+Processing: SMA Sunny Central-US-DS-en-27.pdf
+2025-12-16 15:04:40,465 - INFO -   doc_id: sma_sunny_central-us-ds-en-27_10576f
+2025-12-16 15:04:40,472 - INFO -   Skipping sma_sunny_central-us-ds-en-27_10576f - valid metadata exists
+2025-12-16 15:04:40,973 - INFO - 
+[38/65] 
+2025-12-16 15:04:40,973 - INFO - 
+Processing: SOUTHWIRE_SPEC45051.pdf
+2025-12-16 15:04:40,973 - INFO -   doc_id: southwire_spec45051_2e9726
+2025-12-16 15:04:40,981 - INFO -   Skipping southwire_spec45051_2e9726 - valid metadata exists
+2025-12-16 15:04:41,486 - INFO - 
+[39/65] 
+2025-12-16 15:04:41,487 - INFO - 
+Processing: SOUTHWIRE_SPEC45252.pdf
+2025-12-16 15:04:41,487 - INFO -   doc_id: southwire_spec45252_8c8088
+2025-12-16 15:04:41,495 - INFO -   Skipping southwire_spec45252_8c8088 - valid metadata exists
+2025-12-16 15:04:41,997 - INFO - 
+[40/65] 
+2025-12-16 15:04:41,998 - INFO - 
+Processing: SWE-Transformer-Flyer-2020.pdf
+2025-12-16 15:04:41,998 - INFO -   doc_id: swe-transformer-flyer-2020_7ae76c
+2025-12-16 15:04:42,005 - INFO -   Skipping swe-transformer-flyer-2020_7ae76c - valid metadata exists
+2025-12-16 15:04:42,510 - INFO - 
+[41/65] 
+2025-12-16 15:04:42,510 - INFO - 
+Processing: Shoals 1500V-Standard-combiner-NEC-2023_Data-Sheet_I.pdf
+2025-12-16 15:04:42,510 - INFO -   doc_id: shoals_1500v-standard-combiner-nec-2023_data-sheet_eb4d29
+2025-12-16 15:04:42,518 - INFO -   Skipping shoals_1500v-standard-combiner-nec-2023_data-sheet_eb4d29 - valid metadata exists
+2025-12-16 15:04:43,022 - INFO - 
+[42/65] 
+2025-12-16 15:04:43,023 - INFO - 
+Processing: Shoals 4000A_Recombiner_datasheet_-Feb28-2025.pdf
+2025-12-16 15:04:43,023 - INFO -   doc_id: shoals_4000a_recombiner_datasheet_-feb28-2025_51cb97
+2025-12-16 15:04:43,030 - INFO -   Skipping shoals_4000a_recombiner_datasheet_-feb28-2025_51cb97 - valid metadata exists
+2025-12-16 15:04:43,534 - INFO - 
+[43/65] 
+2025-12-16 15:04:43,534 - INFO - 
+Processing: Siemens MCCB-17-Sect-07-ALL-web.pdf
+2025-12-16 15:04:43,534 - INFO -   doc_id: siemens_mccb-17-sect-07-all-web_33210d
+2025-12-16 15:04:43,543 - INFO -   Skipping siemens_mccb-17-sect-07-all-web_33210d - valid metadata exists
+2025-12-16 15:04:44,049 - INFO - 
+[44/65] 
+2025-12-16 15:04:44,049 - INFO - 
+Processing: Siemens Reference Guide_3VA_EnclosedCirBreaker.pdf
+2025-12-16 15:04:44,049 - INFO -   doc_id: siemens_reference_guide_3va_enclosedcirbreaker_aae051
+2025-12-16 15:04:44,057 - INFO -   Skipping siemens_reference_guide_3va_enclosedcirbreaker_aae051 - valid metadata exists
+2025-12-16 15:04:44,560 - INFO - 
+[45/65] 
+2025-12-16 15:04:44,560 - INFO - 
+Processing: Southern States EV-2-15.5kV-362kV-Catalog-Flyer-Spanish.pdf
+2025-12-16 15:04:44,560 - INFO -   doc_id: southern_states_ev-2-15_5kv-362kv-catalog-flyer-sp_122cb2
+2025-12-16 15:04:44,572 - INFO -   Skipping southern_states_ev-2-15_5kv-362kv-catalog-flyer-sp_122cb2 - valid metadata exists
+2025-12-16 15:04:45,073 - INFO - 
+[46/65] 
+2025-12-16 15:04:45,073 - INFO - 
+Processing: Southern States EV-2-15.5kV-362kV-Catalog-Flyer.pdf
+2025-12-16 15:04:45,073 - INFO -   doc_id: southern_states_ev-2-15_5kv-362kv-catalog-flyer_1220e8
+2025-12-16 15:04:45,083 - INFO -   Skipping southern_states_ev-2-15_5kv-362kv-catalog-flyer_1220e8 - valid metadata exists
+2025-12-16 15:04:45,587 - INFO - 
+[47/65] 
+2025-12-16 15:04:45,588 - INFO - 
+Processing: Southern States EV-2H-550kV-800kV-Catalog-Flyer-R0.pdf
+2025-12-16 15:04:45,588 - INFO -   doc_id: southern_states_ev-2h-550kv-800kv-catalog-flyer-r0_db32c8
+2025-12-16 15:04:45,596 - INFO -   Skipping southern_states_ev-2h-550kv-800kv-catalog-flyer-r0_db32c8 - valid metadata exists
+2025-12-16 15:04:46,102 - INFO - 
+[48/65] 
+2025-12-16 15:04:46,102 - INFO - 
+Processing: Southern States Group Operated Switch Application Guide.pdf
+2025-12-16 15:04:46,102 - INFO -   doc_id: southern_states_group_operated_switch_application__1edb26
+2025-12-16 15:04:46,114 - INFO -   Skipping southern_states_group_operated_switch_application__1edb26 - valid metadata exists
+2025-12-16 15:04:46,617 - INFO - 
+[49/65] 
+2025-12-16 15:04:46,618 - INFO - 
+Processing: Southern States Switch-Accessories-Bulletin-1400-A.pdf
+2025-12-16 15:04:46,618 - INFO -   doc_id: southern_states_switch-accessories-bulletin-1400-a_4dcd07
+2025-12-16 15:04:46,630 - INFO -   Skipping southern_states_switch-accessories-bulletin-1400-a_4dcd07 - valid metadata exists
+2025-12-16 15:04:47,131 - INFO - 
+[50/65] 
+2025-12-16 15:04:47,131 - INFO - 
+Processing: Southern States Switch-Op-Mech-Application-Guide.pdf
+2025-12-16 15:04:47,131 - INFO -   doc_id: southern_states_switch-op-mech-application-guide_6e5834
+2025-12-16 15:04:47,141 - INFO -   Skipping southern_states_switch-op-mech-application-guide_6e5834 - valid metadata exists
+2025-12-16 15:04:47,647 - INFO - 
+[51/65] 
+2025-12-16 15:04:47,647 - INFO - 
+Processing: Southwire High-Voltage-115kV-Power-Cable.pdf
+2025-12-16 15:04:47,648 - INFO -   doc_id: southwire_high-voltage-115kv-power-cable_fedbb3
+2025-12-16 15:04:47,658 - INFO -   Skipping southwire_high-voltage-115kv-power-cable_fedbb3 - valid metadata exists
+2025-12-16 15:04:48,164 - INFO - 
+[52/65] 
+2025-12-16 15:04:48,164 - INFO - 
+Processing: Southwire High-Voltage-345-400kV-XLPE-Power-Cable.pdf
+2025-12-16 15:04:48,164 - INFO -   doc_id: southwire_high-voltage-345-400kv-xlpe-power-cable_ad38d6
+2025-12-16 15:04:48,172 - INFO -   Skipping southwire_high-voltage-345-400kv-xlpe-power-cable_ad38d6 - valid metadata exists
+2025-12-16 15:04:48,677 - INFO - 
+[53/65] 
+2025-12-16 15:04:48,677 - INFO - 
+Processing: Southwire High-Voltage-Bonding-Cable.pdf
+2025-12-16 15:04:48,677 - INFO -   doc_id: southwire_high-voltage-bonding-cable_1da067
+2025-12-16 15:04:48,678 - INFO -   Extracting text...
+2025-12-16 15:04:48,695 - WARNING -   Text too short (0 chars), trying fallback...
+2025-12-16 15:04:48,941 - INFO -   Extracted 0 chars from pages 1-1
+2025-12-16 15:04:48,942 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 15:04:58,803 - INFO -   Validating schema...
+2025-12-16 15:04:58,811 - INFO -   ✓ Success - confidence: low, models: 0, standards: 0
+2025-12-16 15:04:59,316 - INFO - 
+[54/65] 
+2025-12-16 15:04:59,317 - INFO - 
+Processing: Southwire Substation SPEC85010.pdf
+2025-12-16 15:04:59,317 - INFO -   doc_id: southwire_substation_spec85010_da2f05
+2025-12-16 15:04:59,325 - INFO -   Skipping southwire_substation_spec85010_da2f05 - valid metadata exists
+2025-12-16 15:04:59,827 - INFO - 
+[55/65] 
+2025-12-16 15:04:59,827 - INFO - 
+Processing: Southwire Substation SPEC85045.pdf
+2025-12-16 15:04:59,827 - INFO -   doc_id: southwire_substation_spec85045_e93c50
+2025-12-16 15:04:59,835 - INFO -   Skipping southwire_substation_spec85045_e93c50 - valid metadata exists
+2025-12-16 15:05:00,337 - INFO - 
+[56/65] 
+2025-12-16 15:05:00,338 - INFO - 
+Processing: Spare_Part_Request_Form.pdf
+2025-12-16 15:05:00,338 - INFO -   doc_id: spare_part_request_form_337e14
+2025-12-16 15:05:00,346 - INFO -   Skipping spare_part_request_form_337e14 - valid metadata exists
+2025-12-16 15:05:00,849 - INFO - 
+[57/65] 
+2025-12-16 15:05:00,849 - INFO - 
+Processing: Switchgear Part Descriptions.pdf
+2025-12-16 15:05:00,849 - INFO -   doc_id: switchgear_part_descriptions_47ff21
+2025-12-16 15:05:00,849 - INFO -   Extracting text...
+2025-12-16 15:05:00,879 - WARNING -   Text too short (314 chars), trying fallback...
+2025-12-16 15:05:00,898 - INFO -   pdfplumber extracted more text (1224 chars)
+2025-12-16 15:05:00,899 - INFO -   Extracted 1224 chars from pages 1-2
+2025-12-16 15:05:00,907 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 15:05:14,748 - INFO -   Validating schema...
+2025-12-16 15:05:14,758 - INFO -   ✓ Success - confidence: low, models: 0, standards: 0
+2025-12-16 15:05:15,261 - INFO - 
+[58/65] 
+2025-12-16 15:05:15,261 - INFO - 
+Processing: Transformer Specifications.pdf
+2025-12-16 15:05:15,261 - INFO -   doc_id: transformer_specifications_03d165
+2025-12-16 15:05:15,270 - INFO -   Skipping transformer_specifications_03d165 - valid metadata exists
+2025-12-16 15:05:15,773 - INFO - 
+[59/65] 
+2025-12-16 15:05:15,773 - INFO - 
+Processing: UL_s0489_13.pdf
+2025-12-16 15:05:15,773 - INFO -   doc_id: ul_s0489_13_f97166
+2025-12-16 15:05:15,781 - INFO -   Skipping ul_s0489_13_f97166 - valid metadata exists
+2025-12-16 15:05:16,282 - INFO - 
+[60/65] 
+2025-12-16 15:05:16,283 - INFO - 
+Processing: UL_s0891_12.pdf
+2025-12-16 15:05:16,283 - INFO -   doc_id: ul_s0891_12_9d20e2
+2025-12-16 15:05:16,292 - INFO -   Skipping ul_s0891_12_9d20e2 - valid metadata exists
+2025-12-16 15:05:16,794 - INFO - 
+[61/65] 
+2025-12-16 15:05:16,794 - INFO - 
+Processing: YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf
+2025-12-16 15:05:16,794 - INFO -   doc_id: yotta_ess_yotta_block_dpi_design_specification_she_bc943d
+2025-12-16 15:05:16,802 - INFO -   Skipping yotta_ess_yotta_block_dpi_design_specification_she_bc943d - valid metadata exists
+2025-12-16 15:05:17,305 - INFO - 
+[62/65] 
+2025-12-16 15:05:17,305 - INFO - 
+Processing: Yotta Block-1_1.5.pdf
+2025-12-16 15:05:17,305 - INFO -   doc_id: yotta_block-1_1_5_6735ae
+2025-12-16 15:05:17,315 - INFO -   Skipping yotta_block-1_1_5_6735ae - valid metadata exists
+2025-12-16 15:05:17,821 - INFO - 
+[63/65] 
+2025-12-16 15:05:17,821 - INFO - 
+Processing: Yotta DPI-208-480_9.0+(2).pdf
+2025-12-16 15:05:17,821 - INFO -   doc_id: yotta_dpi-208-480_9_0_2_c27296
+2025-12-16 15:05:17,829 - INFO -   Skipping yotta_dpi-208-480_9_0_2_c27296 - valid metadata exists
+2025-12-16 15:05:18,335 - INFO - 
+[64/65] 
+2025-12-16 15:05:18,335 - INFO - 
+Processing: pvi-central-250300-datasheet.pdf
+2025-12-16 15:05:18,335 - INFO -   doc_id: pvi-central-250300-datasheet_f6e719
+2025-12-16 15:05:18,344 - INFO -   Skipping pvi-central-250300-datasheet_f6e719 - valid metadata exists
+2025-12-16 15:05:18,846 - INFO - 
+[65/65] 
+2025-12-16 15:05:18,846 - INFO - 
+Processing: solarpvforbuildersoct2009.pdf
+2025-12-16 15:05:18,846 - INFO -   doc_id: solarpvforbuildersoct2009_8f50b7
+2025-12-16 15:05:18,853 - INFO -   Skipping solarpvforbuildersoct2009_8f50b7 - valid metadata exists
+2025-12-16 15:05:18,855 - INFO - 
+Manifest saved to: doc_metadata/manifests/manifest_20251216_150518.jsonl
+2025-12-16 15:05:18,855 - INFO - Manifest CSV saved to: doc_metadata/manifests/manifest_20251216_150518.csv
+2025-12-16 15:05:18,855 - INFO - 
+======================================================================
+2025-12-16 15:05:18,855 - INFO - EXTRACTION COMPLETE
+2025-12-16 15:05:18,855 - INFO - ======================================================================
+2025-12-16 15:05:18,855 - INFO - Total PDFs:     65
+2025-12-16 15:05:18,855 - INFO - Succeeded:      2
+2025-12-16 15:05:18,855 - INFO - Failed:         0
+2025-12-16 15:05:18,855 - INFO - Skipped:        63
+2025-12-16 15:05:18,855 - INFO - Success Rate:   3.1%
+2025-12-16 15:05:18,855 - INFO - 
+Confidence Distribution:
+2025-12-16 15:05:18,855 - INFO -   high: 0
+2025-12-16 15:05:18,855 - INFO -   medium: 0
+2025-12-16 15:05:18,856 - INFO -   low: 2
+2025-12-16 15:05:18,856 - INFO - ======================================================================

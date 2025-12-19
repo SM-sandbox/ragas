@@ -9,10 +9,10 @@ import shutil
 from pathlib import Path
 import sys
 
-# Add scripts/eval to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "scripts" / "eval"))
+# Add lib to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from baseline_manager import (
+from lib.core.baseline_manager import (
     parse_baseline_filename,
     list_baselines,
     get_latest_baseline,
@@ -244,7 +244,7 @@ class TestGetBaselinePath:
     def test_generates_correct_path(self):
         """Should generate correct filename."""
         path = get_baseline_path("BFAI", "1", "2025-12-17", 458)
-        assert path.name == "baseline_BFAI_v1__2025-12-17__q458.json"
+        assert path.name == "baseline_gold__BFAI__v1__2025-12-17__q458.json"
     
     def test_path_is_in_baselines_dir(self):
         """Path should be in baselines directory."""
@@ -282,7 +282,7 @@ class TestSaveBaseline:
     @pytest.fixture
     def temp_baselines_dir(self, tmp_path, monkeypatch):
         """Use temp directory for baselines."""
-        import baseline_manager
+        from lib.core import baseline_manager
         monkeypatch.setattr(baseline_manager, "BASELINES_DIR", tmp_path)
         return tmp_path
     

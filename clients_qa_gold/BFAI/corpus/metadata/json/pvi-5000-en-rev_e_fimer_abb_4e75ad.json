@@ -1,0 +1,144 @@
+{
+  "doc_id": "pvi-5000-en-rev_e_fimer_abb_4e75ad",
+  "doc_type": "datasheet",
+  "doc_title": "Solar inverters ABB string inverters PVI-5000/6000-TL-OUTD",
+  "subtitle": "5kW to 6kW",
+  "publisher_or_manufacturer": "ABB",
+  "canonical_anchor_phrase": "ABB PVI-5000/6000-TL-OUTD Datasheet, REV E (2015)",
+  "publication": {
+    "revision": "REV E",
+    "edition_year": 2015,
+    "publication_date_text": "09.11.2015"
+  },
+  "standards": {
+    "standard_body": [
+      "UL",
+      "IEEE",
+      "CSA",
+      "FCC",
+      "NEMA",
+      "NEC"
+    ],
+    "standard_ids": [
+      "UL 1741",
+      "UL1741SA (draft)",
+      "IEEE1547",
+      "IEEE1547.1",
+      "CSA-C22.2 N. 107.1-01",
+      "UL1998",
+      "UL 1699B",
+      "FCC Part 15 Class B",
+      "NEMA 4X",
+      "NEC 690.11",
+      "NEC 690.12",
+      "Rule 21",
+      "HECO"
+    ],
+    "jurisdiction_or_region": [
+      "US"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Solar inverters",
+      "String inverters"
+    ],
+    "models": [
+      "PVI-5000-TL-OUTD",
+      "PVI-6000-TL-OUTD",
+      "PVI-5000-OUTD-US",
+      "PVI-6000-OUTD-US",
+      "PVI-5000-OUTD-US-A",
+      "PVI-6000-OUTD-US-A"
+    ],
+    "product_names": []
+  },
+  "topics": {
+    "major_topics": [
+      "Solar Inverters",
+      "String Inverters",
+      "Technical Specifications",
+      "Electrical Characteristics",
+      "Mechanical Specifications",
+      "Safety and Compliance",
+      "Monitoring Capabilities",
+      "Efficiency Performance",
+      "MPPT Technology",
+      "Grid Connection",
+      "Environmental Ratings",
+      "Arc Fault Detection",
+      "Rapid Shutdown",
+      "Residential PV Systems",
+      "Commercial PV Systems"
+    ],
+    "safety_topics": [
+      "Reverse polarity protection",
+      "Over-voltage protection",
+      "PV array ground fault detection",
+      "Anti-islanding protection",
+      "DC Arc Fault Circuit Interruptor (AFCI)",
+      "Rapid Shutdown",
+      "Safety and EMC standard",
+      "Safety approval"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Monitoring",
+      "Troubleshooting",
+      "Maintenance"
+    ],
+    "keywords": [
+      "Solar",
+      "Inverter",
+      "String Inverter",
+      "PVI-5000",
+      "PVI-6000",
+      "TL-OUTD",
+      "MPPT",
+      "Efficiency",
+      "Outdoor",
+      "NEMA 4X",
+      "DC disconnect switch",
+      "Grid connection",
+      "Input voltage range",
+      "Output power",
+      "Remote monitoring",
+      "RS-485",
+      "Wifi Logger Card",
+      "NEC 690.11",
+      "NEC 690.12",
+      "UL 1741",
+      "IEEE 1547",
+      "CSA-C22.2",
+      "FCC Part 15",
+      "Safety",
+      "Compliance",
+      "Transformerless",
+      "Ground fault detection",
+      "Anti-islanding",
+      "Arc fault circuit interrupter",
+      "Rapid Shutdown device",
+      "Residential",
+      "Commercial",
+      "PV installations",
+      "Technical data",
+      "Mechanical specifications",
+      "Environmental conditions",
+      "Cooling",
+      "Weight",
+      "Dimensions",
+      "Wiring"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "PVI-5000-EN-Rev E FIMER ABB.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/PVI-5000-EN-Rev E FIMER ABB.pdf",
+    "page_range_used": "1-4"
+  }
+}

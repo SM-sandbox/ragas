@@ -1,0 +1,136 @@
+2025-12-16 13:25:00,619 - INFO - ======================================================================
+2025-12-16 13:25:00,619 - INFO - DOCUMENT METADATA EXTRACTION PIPELINE
+2025-12-16 13:25:00,619 - INFO - ======================================================================
+2025-12-16 13:25:00,619 - INFO - Model: gemini-2.5-flash
+2025-12-16 13:25:00,619 - INFO - Thinking Budget: 24576 tokens (HIGH)
+2025-12-16 13:25:00,619 - INFO - Max Output Tokens: 65536
+2025-12-16 13:25:00,619 - INFO - Dry Run: False
+2025-12-16 13:25:00,667 - INFO - Initialized MetadataExtractor with gemini-2.5-flash
+2025-12-16 13:25:00,668 - INFO - 
+Found 65 PDFs to process
+2025-12-16 13:25:00,668 - INFO - 
+[1/65] 
+2025-12-16 13:25:00,668 - INFO - 
+Processing: 1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC.pdf
+2025-12-16 13:25:00,669 - INFO -   doc_id: 1-so50016-boyne-mountain-resort_sld_0_12c_add-on_s_0f1b33
+2025-12-16 13:25:00,677 - INFO -   Skipping 1-so50016-boyne-mountain-resort_sld_0_12c_add-on_s_0f1b33 - valid metadata exists
+2025-12-16 13:25:01,182 - INFO - 
+[2/65] 
+2025-12-16 13:25:01,182 - INFO - 
+Processing: 3 Phase 2000kVa Transformer Manual.pdf
+2025-12-16 13:25:01,182 - INFO -   doc_id: 3_phase_2000kva_transformer_manual_8ab9e4
+2025-12-16 13:25:01,191 - INFO -   Skipping 3_phase_2000kva_transformer_manual_8ab9e4 - valid metadata exists
+2025-12-16 13:25:01,692 - INFO - 
+[3/65] 
+2025-12-16 13:25:01,692 - INFO - 
+Processing: 3 Phase Pad Mount Transformer Spec Sheet.pdf
+2025-12-16 13:25:01,692 - INFO -   doc_id: 3_phase_pad_mount_transformer_spec_sheet_0c89eb
+2025-12-16 13:25:01,692 - INFO -   Extracting text...
+2025-12-16 13:25:01,716 - INFO -   Extracted 4509 chars from pages 1-3
+2025-12-16 13:25:01,717 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:25:21,274 - INFO -   Validating schema...
+2025-12-16 13:25:21,283 - INFO -   ✓ Success - confidence: high, models: 0, standards: 4
+2025-12-16 13:25:21,784 - INFO - 
+[4/65] 
+2025-12-16 13:25:21,784 - INFO - 
+Processing: 800VAC BoS_Comprehensive_4.2MVA Skid Sales Flyer V2.24.pdf
+2025-12-16 13:25:21,784 - INFO -   doc_id: 800vac_bos_comprehensive_4_2mva_skid_sales_flyer_v_85a711
+2025-12-16 13:25:21,785 - INFO -   Extracting text...
+2025-12-16 13:25:21,815 - INFO -   Extracted 4845 chars from pages 1-2
+2025-12-16 13:25:21,815 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:25:42,889 - INFO -   Validating schema...
+2025-12-16 13:25:42,909 - INFO -   ✓ Success - confidence: high, models: 1, standards: 4
+2025-12-16 13:25:43,416 - INFO - 
+[5/65] 
+2025-12-16 13:25:43,417 - INFO - 
+Processing: AcquiSuite-Basics---External.pdf
+2025-12-16 13:25:43,417 - INFO -   doc_id: acquisuite-basics---external_a8f6d0
+2025-12-16 13:25:43,418 - INFO -   Extracting text...
+2025-12-16 13:25:43,437 - INFO -   Extracted 2967 chars from pages 1-3
+2025-12-16 13:25:43,437 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:25:53,221 - INFO -   Validating schema...
+2025-12-16 13:25:53,243 - INFO -   ✓ Success - confidence: high, models: 1, standards: 0
+2025-12-16 13:25:53,747 - INFO - 
+[6/65] 
+2025-12-16 13:25:53,747 - INFO - 
+Processing: Acquisuite Backup and Restore.pdf
+2025-12-16 13:25:53,747 - INFO -   doc_id: acquisuite_backup_and_restore_88522f
+2025-12-16 13:25:53,747 - INFO -   Extracting text...
+2025-12-16 13:25:53,786 - INFO -   Extracted 1666 chars from pages 1-2
+2025-12-16 13:25:53,787 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:26:02,750 - INFO -   Validating schema...
+2025-12-16 13:26:02,768 - INFO -   ✓ Success - confidence: medium, models: 0, standards: 0
+2025-12-16 13:26:03,280 - INFO - 
+[7/65] 
+2025-12-16 13:26:03,280 - INFO - 
+Processing: Arc Flash Safety Guide for Field Technicians and Engineers.pdf
+2025-12-16 13:26:03,280 - INFO -   doc_id: arc_flash_safety_guide_for_field_technicians_and_e_ce30f7
+2025-12-16 13:26:03,281 - INFO -   Extracting text...
+2025-12-16 13:26:03,305 - INFO -   Extracted 5872 chars from pages 1-5
+2025-12-16 13:26:03,306 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:26:20,903 - INFO -   Validating schema...
+2025-12-16 13:26:20,917 - ERROR -   Validation failed: ["Schema validation error: None is not of type 'string'"]
+2025-12-16 13:26:21,423 - INFO - 
+[8/65] 
+2025-12-16 13:26:21,424 - INFO - 
+Processing: CPS 125kW Manual.pdf
+2025-12-16 13:26:21,424 - INFO -   doc_id: cps_125kw_manual_4138a9
+2025-12-16 13:26:21,424 - INFO -   Extracting text...
+2025-12-16 13:26:21,503 - INFO -   Extracted 12407 chars from pages 1-10
+2025-12-16 13:26:21,504 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:26:40,036 - INFO -   Validating schema...
+2025-12-16 13:26:40,045 - INFO -   ✓ Success - confidence: high, models: 2, standards: 4
+2025-12-16 13:26:40,550 - INFO - 
+[9/65] 
+2025-12-16 13:26:40,550 - INFO - 
+Processing: CPS 125kW Standard & Centralized Datasheet.pdf
+2025-12-16 13:26:40,550 - INFO -   doc_id: cps_125kw_standard_centralized_datasheet_723ecc
+2025-12-16 13:26:40,550 - INFO -   Extracting text...
+2025-12-16 13:26:40,598 - INFO -   Extracted 5713 chars from pages 1-2
+2025-12-16 13:26:40,598 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:27:11,151 - INFO -   Validating schema...
+2025-12-16 13:27:11,164 - INFO -   ✓ Success - confidence: high, models: 3, standards: 8
+2025-12-16 13:27:11,667 - INFO - 
+[10/65] 
+2025-12-16 13:27:11,668 - INFO - 
+Processing: Careful Field Service Safety Observations 2024 2025.pdf
+2025-12-16 13:27:11,668 - INFO -   doc_id: careful_field_service_safety_observations_2024_202_933d0a
+2025-12-16 13:27:11,668 - INFO -   Extracting text...
+2025-12-16 13:27:11,712 - INFO -   Extracted 22028 chars from pages 1-10
+2025-12-16 13:27:11,712 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:29:08,357 - INFO -   Validating schema...
+2025-12-16 13:29:08,366 - ERROR -   Validation failed: ["Schema validation error: ['Safety observations', 'Field technicians', 'Vehicle safety', 'Electrical hazards', 'Fall protection', 'PPE', 'Hazard identification', 'Manual handling', 'Distracted driving', 'Lockout/Tagout', 'Trip hazards', 'Site access', 'Equipment maintenance', 'Fire safety', 'Confined space', 'Tool safety', 'Fatigue management', 'Housekeeping', 'Grounding', 'Emergency preparedness', 'Work at height', 'Substation safety', 'Solar site safety', 'Wind site safety', 'Battery storage safety', 'EV charging safety', 'Communication protocols', 'Risk assessment', 'Incident prevention', 'Workplace safety', 'Safety culture', 'Pre-job briefing', 'Site rules', 'Environmental protection', 'Material handling', 'Forklift safety', 'Overhead lifting', 'Chemical safety', 'Weather safety', 'Wildlife hazards', 'Safety inspections', 'Safety reporting', 'Corrective actions', 'Safety training'] is too long"]
+2025-12-16 13:29:08,872 - INFO - 
+[11/65] 
+2025-12-16 13:29:08,872 - INFO - 
+Processing: DiGiWR21WR31ModemBasicsv1.pdf
+2025-12-16 13:29:08,872 - INFO -   doc_id: digiwr21wr31modembasicsv1_574b9f
+2025-12-16 13:29:08,873 - INFO -   Extracting text...
+2025-12-16 13:29:08,909 - INFO -   Extracted 2804 chars from pages 1-7
+2025-12-16 13:29:08,910 - INFO -   Calling Gemini 2.5 Flash (HIGH thinking)...
+2025-12-16 13:33:12,468 - ERROR -   ✗ Failed: 'NoneType' object has no attribute 'strip'
+2025-12-16 13:33:12,470 - ERROR - 
+!!! ABORTING: Failure rate 3/11 exceeds 25.0%
+2025-12-16 13:33:12,471 - INFO - 
+Manifest saved to: doc_metadata/manifests/manifest_20251216_133312.jsonl
+2025-12-16 13:33:12,471 - INFO - Manifest CSV saved to: doc_metadata/manifests/manifest_20251216_133312.csv
+2025-12-16 13:33:12,471 - INFO - 
+======================================================================
+2025-12-16 13:33:12,471 - INFO - EXTRACTION COMPLETE
+2025-12-16 13:33:12,471 - INFO - ======================================================================
+2025-12-16 13:33:12,471 - INFO - Total PDFs:     11
+2025-12-16 13:33:12,471 - INFO - Succeeded:      6
+2025-12-16 13:33:12,471 - INFO - Failed:         3
+2025-12-16 13:33:12,471 - INFO - Skipped:        2
+2025-12-16 13:33:12,471 - INFO - Success Rate:   54.5%
+2025-12-16 13:33:12,471 - INFO - 
+Failure Reasons:
+2025-12-16 13:33:12,471 - INFO -   [1] Schema validation error: None is not of type 'string'
+2025-12-16 13:33:12,471 - INFO -   [1] Schema validation error: ['Safety observations', 'Field technicians', 'Vehicle safety', 'Electrical 
+2025-12-16 13:33:12,471 - INFO -   [1] 'NoneType' object has no attribute 'strip'
+2025-12-16 13:33:12,471 - INFO - 
+Confidence Distribution:
+2025-12-16 13:33:12,471 - INFO -   high: 5
+2025-12-16 13:33:12,471 - INFO -   medium: 1
+2025-12-16 13:33:12,471 - INFO -   low: 0
+2025-12-16 13:33:12,471 - INFO - ======================================================================

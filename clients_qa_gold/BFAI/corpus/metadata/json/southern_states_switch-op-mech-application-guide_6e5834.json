@@ -1,0 +1,97 @@
+{
+  "doc_id": "southern_states_switch-op-mech-application-guide_6e5834",
+  "doc_type": "installation_guide",
+  "doc_title": "APPLICATION GUIDE",
+  "subtitle": "Disconnect Switch Shipment Overview",
+  "publisher_or_manufacturer": "Southern States, LLC",
+  "canonical_anchor_phrase": "Southern States Disconnect Switch Operating Mechanism Application Guide, R1 (2021)",
+  "publication": {
+    "revision": "R1",
+    "edition_year": 2021,
+    "publication_date_text": "February 2021"
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Disconnect Switches",
+      "Group Operated Switches"
+    ],
+    "models": [
+      "SEGO Manual Gear Operator",
+      "HOGO Manual Gear Operator",
+      "AVS-1"
+    ],
+    "product_names": [
+      "Operating Mechanism",
+      "Disconnect Switch"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Disconnect Switch Shipment",
+      "Group Operated Switches",
+      "Operating Mechanism Parts",
+      "Component Identification",
+      "Packaging and Labeling",
+      "Assembly Documentation",
+      "Switch Accessories",
+      "Loose Steel Components",
+      "Manual Gear Operators",
+      "Bearing Assemblies"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [
+      "Identification",
+      "Packaging",
+      "Assembly"
+    ],
+    "keywords": [
+      "Disconnect Switches",
+      "Group Operated Switches",
+      "Operating Mechanism",
+      "Shipment Overview",
+      "Parts Identification",
+      "Nomenclature",
+      "Packaging",
+      "Labeling",
+      "Job Number",
+      "Item Number",
+      "Operating Pipe",
+      "Loose Steel",
+      "Switch Accessories",
+      "Arcing Horns",
+      "Corona Rings",
+      "Vertical Bearing",
+      "Position Indicator",
+      "Manual Gear Operator",
+      "Control Coupling",
+      "Mounting Hardware",
+      "Clevises",
+      "Auxiliary Switch",
+      "Crank Arm",
+      "Mechanical Interlock",
+      "Pipe Coupling"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "standards.standard_body",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "topics.safety_topics",
+      "topics.toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Southern States Switch-Op-Mech-Application-Guide.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Southern States Switch-Op-Mech-Application-Guide.pdf",
+    "page_range_used": "1-4"
+  }
+}

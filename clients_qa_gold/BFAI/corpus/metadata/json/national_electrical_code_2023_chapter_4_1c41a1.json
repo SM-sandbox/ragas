@@ -1,0 +1,113 @@
+{
+  "doc_id": "national_electrical_code_2023_chapter_4_1c41a1",
+  "doc_type": "electrical_code",
+  "doc_title": "National Electrical Code Chapter 4",
+  "subtitle": null,
+  "publisher_or_manufacturer": "National Fire Protection Association",
+  "canonical_anchor_phrase": "NFPA 70 2023 (United States)",
+  "publication": {
+    "revision": null,
+    "edition_year": 2023,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [
+      "National Fire Protection Association"
+    ],
+    "standard_ids": [
+      "National Electrical Code",
+      "NEC",
+      "NFPA 70"
+    ],
+    "jurisdiction_or_region": [
+      "United States"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [],
+    "models": [],
+    "product_names": []
+  },
+  "topics": {
+    "major_topics": [
+      "General-Use Equipment",
+      "Flexible Cords and Cables",
+      "Fixture Wires",
+      "Switches",
+      "Receptacles",
+      "Appliances",
+      "Luminaires",
+      "Motors",
+      "Generators",
+      "Transformers",
+      "Capacitors",
+      "Storage Batteries",
+      "Overcurrent Protection",
+      "Wiring Methods",
+      "Electrical Safety"
+    ],
+    "safety_topics": [
+      "Electrical Safety",
+      "Overcurrent Protection",
+      "Grounding",
+      "Bonding",
+      "Shock Hazard",
+      "Fire Hazard"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Wiring",
+      "Protection"
+    ],
+    "keywords": [
+      "National Electrical Code",
+      "NEC",
+      "NFPA 70",
+      "Electrical Code",
+      "Electrical Safety",
+      "Wiring",
+      "Installation",
+      "Equipment",
+      "Flexible Cords",
+      "Fixture Wires",
+      "Switches",
+      "Receptacles",
+      "Appliances",
+      "Luminaires",
+      "Motors",
+      "Generators",
+      "Transformers",
+      "Capacitors",
+      "Storage Batteries",
+      "Overcurrent Protection",
+      "Grounding",
+      "Bonding",
+      "Electrical Systems",
+      "Safety Standards",
+      "Conductors",
+      "Circuits",
+      "Branch Circuits",
+      "Raceways",
+      "Conduit",
+      "Hazardous Locations"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "low",
+    "missing_fields": [
+      "subtitle",
+      "publication.revision",
+      "publication.publication_date_text",
+      "topics.toc_outline"
+    ],
+    "ambiguities": [
+      "Heavy redaction prevented direct extraction of many fields, especially detailed topics and keywords. Values for these fields are inferred based on general knowledge of NEC Chapter 4 content."
+    ]
+  },
+  "source": {
+    "filename": "National Electrical Code 2023 Chapter 4.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/National Electrical Code 2023 Chapter 4.pdf",
+    "page_range_used": "1-10"
+  }
+}

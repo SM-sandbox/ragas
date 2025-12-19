@@ -40,7 +40,7 @@ from lib.clients.gemini_client import generate_for_judge, get_model_info
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
-CORPUS_PATH = Path(__file__).parent.parent.parent / "clients" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
+CORPUS_PATH = Path(__file__).parent.parent.parent / "clients_qa_gold" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "core_eval"
 CHECKPOINT_INTERVAL = 10
 DEFAULT_WORKERS = 5  # Safe for 60 RPM quota, increase to 15-25 with 1500 RPM

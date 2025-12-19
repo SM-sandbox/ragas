@@ -1,0 +1,112 @@
+{
+  "doc_id": "transformer_specifications_03d165",
+  "doc_type": "datasheet",
+  "doc_title": "PAD-MOUNTED TRANSFORMERS",
+  "subtitle": null,
+  "publisher_or_manufacturer": "null",
+  "canonical_anchor_phrase": "PAD-MOUNTED TRANSFORMERS datasheet",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": "Apr 30, 2024"
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Transformer",
+      "Pad-Mounted Transformer"
+    ],
+    "models": [],
+    "product_names": []
+  },
+  "topics": {
+    "major_topics": [
+      "Transformer Specifications",
+      "Electrical Ratings",
+      "Winding Configuration",
+      "Insulation Characteristics",
+      "Cooling Systems",
+      "Protection Features",
+      "Transformer Accessories",
+      "Termination Details",
+      "Physical Characteristics",
+      "Impedance and Efficiency",
+      "Grounding",
+      "Seismic Anchoring",
+      "Fluid Management",
+      "Current Ratings",
+      "Voltage Ratings"
+    ],
+    "safety_topics": [
+      "Overcurrent Protection",
+      "Pressure Relief Valve",
+      "Pressure Relief Device",
+      "Surge Arresters"
+    ],
+    "procedural_domains": [],
+    "keywords": [
+      "Pad-Mounted Transformers",
+      "KVA Rating",
+      "KNAN Cooling",
+      "FR3 Insulating Fluid",
+      "Aluminum Windings",
+      "GrdWye-GrdWye",
+      "YNyn0 Vector Group",
+      "Step-Up Function",
+      "Dead Front Termination",
+      "Live Front Termination",
+      "Loop Feed",
+      "Munsell Green",
+      "Bayonet Fuse",
+      "CLF",
+      "Nominal Impedance",
+      "Dial-type thermometer",
+      "Pressure Relief Valve",
+      "Liquid level gauge",
+      "Pressure/Vacuum Gauge",
+      "HV Bushing",
+      "Drain Valve",
+      "Load-break inserts",
+      "Electrostatic shield",
+      "Cooling Radiators",
+      "Nitrogen blanket",
+      "Surge Arresters",
+      "Seismic Anchoring Provision",
+      "H0 porcelain bushing",
+      "Ground pads",
+      "Schrader Valve",
+      "Fully insulated LV neutral",
+      "Switchboard connection",
+      "LV compartment wiring",
+      "Winding Temp. Rise",
+      "BIL"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "publisher_or_manufacturer",
+      "subtitle",
+      "publication.revision",
+      "publication.edition_year",
+      "standards.standard_body",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "equipment.models",
+      "equipment.product_names",
+      "topics.procedural_domains",
+      "topics.toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Transformer Specifications.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Transformer Specifications.pdf",
+    "page_range_used": "1-2"
+  }
+}

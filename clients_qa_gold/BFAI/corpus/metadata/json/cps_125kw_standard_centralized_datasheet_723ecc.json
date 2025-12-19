@@ -1,0 +1,137 @@
+{
+  "doc_id": "cps_125kw_standard_centralized_datasheet_723ecc",
+  "doc_type": "datasheet",
+  "doc_title": "100/125kW, 1500Vdc String Inverters for North America Datasheet",
+  "subtitle": null,
+  "publisher_or_manufacturer": "CHINT POWER SYSTEMS AMERICA",
+  "canonical_anchor_phrase": "CHINT POWER SYSTEMS AMERICA CPS SCH100/125KTL-DO/US-600 Datasheet, 2020/01-MKT NA (2020)",
+  "publication": {
+    "revision": "2020/01-MKT NA",
+    "edition_year": 2020,
+    "publication_date_text": "2020/01-MKT NA"
+  },
+  "standards": {
+    "standard_body": [
+      "NFPA",
+      "IEEE",
+      "UL",
+      "CSA",
+      "FCC",
+      "California",
+      "ISO-NE"
+    ],
+    "standard_ids": [
+      "NFPA 70",
+      "NEC 2014",
+      "NEC 2017",
+      "CA Rule 21",
+      "IEEE 1547a-2014",
+      "UL1741-SA-2016",
+      "CSA-C22.2 NO.107.1-01",
+      "FCC PART15"
+    ],
+    "jurisdiction_or_region": [
+      "North America",
+      "CA",
+      "ISO-NE"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "String Inverters",
+      "Inverters"
+    ],
+    "models": [
+      "CPS SCH100/125KTL-DO/US-600",
+      "CPS SCH100KTL-DO/US-600",
+      "CPS SCH125KTL-DO/US-600"
+    ],
+    "product_names": [
+      "100/125kW, 1500Vdc String Inverters",
+      "CPS Flex Gateway",
+      "Standard Wire-box",
+      "Centralized Wire-box"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Inverter Specifications",
+      "Electrical Characteristics",
+      "Mechanical and Environmental Data",
+      "Safety and Compliance",
+      "Communication and Monitoring",
+      "Wire-box Configurations",
+      "Smart-Grid Features",
+      "Warranty Information",
+      "Performance Data",
+      "DC Input Parameters",
+      "AC Output Parameters"
+    ],
+    "safety_topics": [
+      "Touch safe DC Fuse holders",
+      "Integrated AC & DC disconnect switches",
+      "NEMA Type 4X outdoor rated",
+      "Safety and EMC Standard"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Service",
+      "Remote FW upgrades"
+    ],
+    "keywords": [
+      "100kW",
+      "125kW",
+      "1500Vdc",
+      "String Inverter",
+      "North America",
+      "NEMA Type 4X",
+      "Standard Wire-box",
+      "Centralized Wire-box",
+      "AC Disconnect",
+      "DC Disconnect",
+      "CPS Flex Gateway",
+      "Remote FW Upgrades",
+      "NFPA 70",
+      "NEC 2014",
+      "NEC 2017",
+      "MPPT",
+      "Smart-Grid Features",
+      "CA Rule 21",
+      "Warranty",
+      "Max. PV Power",
+      "Max. DC Input Voltage",
+      "Rated AC Output Power",
+      "Power Factor",
+      "Efficiency",
+      "Operating Temperature",
+      "Modbus RS485",
+      "UL1741-SA-2016",
+      "IEEE1547a-2014",
+      "Volt-RideThru",
+      "Freq-RideThru",
+      "Volt-VAr",
+      "Transformerless",
+      "Surge Protection",
+      "Fused String Inputs",
+      "WiFi",
+      "SunSpec",
+      "ISO-NE",
+      "5 Year Warranty",
+      "20 Year Warranty"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "CPS 125kW Standard & Centralized Datasheet.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/CPS 125kW Standard & Centralized Datasheet.pdf",
+    "page_range_used": "1-2"
+  }
+}

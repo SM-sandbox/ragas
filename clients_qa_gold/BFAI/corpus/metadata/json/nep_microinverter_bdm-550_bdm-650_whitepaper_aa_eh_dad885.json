@@ -1,0 +1,135 @@
+{
+  "doc_id": "nep_microinverter_bdm-550_bdm-650_whitepaper_aa_eh_dad885",
+  "doc_type": "other",
+  "doc_title": "NEP\u2019s BDM-550 & BDM-650 Microinverters",
+  "subtitle": "to enable more power while avoiding sub-panel upgrade thresholds",
+  "publisher_or_manufacturer": "NEP",
+  "canonical_anchor_phrase": "NEP BDM-550 & BDM-650 Microinverters White Paper (2025)",
+  "publication": {
+    "revision": null,
+    "edition_year": 2025,
+    "publication_date_text": "August, 2025"
+  },
+  "standards": {
+    "standard_body": [
+      "UL",
+      "IEEE",
+      "NEC",
+      "CSA",
+      "IEC",
+      "VDE",
+      "AS",
+      "CEI"
+    ],
+    "standard_ids": [
+      "UL 1741-SA/SB",
+      "IEEE 1547",
+      "NEC 690.12",
+      "CSA C22.2",
+      "IEC/EN 62109-1/2",
+      "Rule 21",
+      "VDE-AR-N 4105",
+      "G83/2",
+      "AS 4777.2/.3",
+      "EN50438",
+      "CEI 21",
+      "NEC 2020",
+      "NEC 690.11",
+      "NEC 705.12"
+    ],
+    "jurisdiction_or_region": [
+      "US",
+      "Canada",
+      "Europe",
+      "Australia"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Microinverters"
+    ],
+    "models": [
+      "BDM-550",
+      "BDM-650"
+    ],
+    "product_names": [
+      "Microinverters"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Microinverter Technology",
+      "Residential Solar Solutions",
+      "Main Panel Upgrade Avoidance",
+      "NEC Compliance",
+      "High-Wattage Module Compatibility",
+      "System Design Optimization",
+      "Product Features",
+      "Technical Specifications",
+      "Safety and Protection",
+      "Performance Monitoring"
+    ],
+    "safety_topics": [
+      "Rapid Shutdown",
+      "DC Arc-Fault Protection",
+      "AC Arc-Fault Protection",
+      "Over/Under Voltage Protection",
+      "Over/Under Frequency Protection",
+      "Anti-Islanding Protection",
+      "Over Current Protection",
+      "Reverse DC Polarity Protection",
+      "Overload Protection"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "System Expansion",
+      "Monitoring"
+    ],
+    "keywords": [
+      "BDM-550",
+      "BDM-650",
+      "Microinverter",
+      "Solar PV",
+      "100A Panel",
+      "Main Panel Upgrade",
+      "NEC 120% Rule",
+      "Back-feed",
+      "High-Wattage Modules",
+      "Dual MPPT",
+      "UL 1741",
+      "IEEE 1547",
+      "Rapid Shutdown",
+      "Grid Interactivity",
+      "IP67",
+      "Performance Monitoring",
+      "Technical Specifications",
+      "AC Output",
+      "DC Input",
+      "Branch Circuit",
+      "Arc-Fault Protection",
+      "Anti-Islanding",
+      "Overload Protection",
+      "System Sizing",
+      "Cost-Effective",
+      "Flexible System Design",
+      "CEC Efficiency",
+      "Gateway",
+      "Residential Solar",
+      "Compliance"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "revision",
+      "toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "NEP Microinverter BDM-550, BDM-650 Whitepaper AA, EH.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/NEP Microinverter BDM-550, BDM-650 Whitepaper AA, EH.pdf",
+    "page_range_used": "1-4"
+  }
+}

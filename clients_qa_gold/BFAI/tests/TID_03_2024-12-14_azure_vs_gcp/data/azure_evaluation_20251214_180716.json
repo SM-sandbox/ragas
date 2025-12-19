@@ -1,0 +1,101 @@
+{
+  "timestamp": "20251214_180716",
+  "config": {
+    "search_index": "gptkbindex",
+    "llm_model": "gpt-4.1-mini",
+    "embedding_model": "eastus-text-embedding-3-large",
+    "top_k": 12,
+    "workers": 1
+  },
+  "metrics": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0,
+    "overall_score": 3.0,
+    "pass_rate": 0.33,
+    "correctness": 2.33,
+    "completeness": 2.33,
+    "faithfulness": 5.0,
+    "relevance": 2.67,
+    "clarity": 5.0,
+    "avg_time_per_query": 3.33,
+    "avg_answer_chars": 173.0
+  },
+  "results": [
+    {
+      "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+      "ground_truth": "The peak efficiency is 99.1%.",
+      "timing": {
+        "retrieval_seconds": 1.7083070278167725,
+        "generation_seconds": 1.6566498279571533,
+        "judge_seconds": 1.162259817123413,
+        "total_seconds": 4.52723503112793
+      },
+      "chunks_retrieved": 12,
+      "context_length": 10909,
+      "answer": "The provided context does not contain information about the peak efficiency of the CPS 100/125kW string inverters.",
+      "answer_length": 114,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass",
+        "explanation": "The RAG system correctly states that the retrieved context does not contain information about the peak efficiency of the CPS 100/125kW string inverters, which matches the ground truth factually and is faithful to the provided context. The answer is clear, relevant, and complete given the lack of information in the context."
+      },
+      "success": true
+    },
+    {
+      "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+      "ground_truth": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+      "timing": {
+        "retrieval_seconds": 0.6380360126495361,
+        "generation_seconds": 0.8967418670654297,
+        "judge_seconds": 1.6293680667877197,
+        "total_seconds": 3.1641600131988525
+      },
+      "chunks_retrieved": 12,
+      "context_length": 9094,
+      "answer": "The provided context does not contain information about the specific National Electrical Code (NEC) versions that the CPS 100/125kW string inverters are compliant with.",
+      "answer_length": 168,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 2,
+        "clarity": 5,
+        "overall_score": 2,
+        "verdict": "fail",
+        "explanation": "The RAG answer correctly states that the retrieved context does not contain the NEC compliance information, so it is faithful and clear. However, it fails to provide the correct NEC versions as per the ground truth, making it incorrect, incomplete, and only marginally relevant."
+      },
+      "success": true
+    },
+    {
+      "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+      "ground_truth": "The sign must be marked that the illumination system has been replaced, include the kit providers and installer's name, logo, or unique identifier, and if equipped with tubular light-emitting diode lamps powered by existing sign sockets, include a label alerting service personnel that the sign has been modified, including a warning not to install fluorescent lamps.",
+      "timing": {
+        "retrieval_seconds": 0.3197920322418213,
+        "generation_seconds": 0.7197780609130859,
+        "judge_seconds": 1.248020887374878,
+        "total_seconds": 2.287601947784424
+      },
+      "chunks_retrieved": 12,
+      "context_length": 13994,
+      "answer": "The provided context does not contain information regarding Article 600 or the specific requirements for labeling a sign that has had its illumination system retrofitted. Therefore, I cannot provide an answer based on the given documents.",
+      "answer_length": 238,
+      "judgment": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 1,
+        "clarity": 5,
+        "overall_score": 2,
+        "verdict": "fail",
+        "explanation": "The RAG answer correctly states that the retrieved context does not contain relevant information about Article 600 or labeling requirements for retrofitted illumination systems, thus it is faithful and clear. However, it fails to provide any factual or complete answer to the question, resulting in low correctness, completeness, and relevance scores."
+      },
+      "success": true
+    }
+  ]
+}

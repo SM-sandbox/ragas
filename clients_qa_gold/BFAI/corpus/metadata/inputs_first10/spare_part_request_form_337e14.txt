@@ -1,0 +1,22 @@
+--- Page 1 ---
+Spare Part Request Form (Vendor-Facing)
+Information Needed
+Details (to be completed at time of request)
+Date of Request
+Requesting Party / Contact Info
+Project / Site Location
+Vendor / Supplier Contact Info
+Equipment Type
+Manufacturer / Model Number
+Serial Number (if applicable)
+Part Number / Description
+Quantity Required
+Part in Warranty (Yes/No)
+Reason for Replacement (e.g., failure, preventive stock)
+Urgency Level (Critical / Routine)
+Expected Delivery Date
+Quoted Cost per Part
+Shipping & Handling Estimate
+Total Estimated Cost
+Requested by (Name & Signature)
+Vendor Acknowledgement / Confirmation

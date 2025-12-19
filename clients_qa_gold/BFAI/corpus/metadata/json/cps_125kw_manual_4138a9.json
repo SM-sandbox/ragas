@@ -1,0 +1,148 @@
+{
+  "doc_id": "cps_125kw_manual_4138a9",
+  "doc_type": "manufacturer_manual",
+  "doc_title": "CPS SCA Series Grid-tied PV Inverter Installation and Operation Manual",
+  "subtitle": null,
+  "publisher_or_manufacturer": "CHINT POWER SYSTEMS AMERICA CO.",
+  "canonical_anchor_phrase": "CHINT POWER SYSTEMS AMERICA CO. SCH100KTL-DO/US-600 and SCH125KTL-DO/US-600 Installation and Operation Manual, Rev 1.5 (2020)",
+  "publication": {
+    "revision": "Rev 1.5",
+    "edition_year": 2020,
+    "publication_date_text": "REVISON 1.5 SEPTEMBER 2020"
+  },
+  "standards": {
+    "standard_body": [
+      "IEEE"
+    ],
+    "standard_ids": [
+      "IEEE 1547",
+      "Rule 21",
+      "ISO-NE",
+      "HECO"
+    ],
+    "jurisdiction_or_region": [
+      "North American",
+      "United States"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "SCA Series Grid-tied PV Inverter",
+      "Utility Grid-tied PV Inverters",
+      "3-Phase String Inverters"
+    ],
+    "models": [
+      "SCH100KTL-DO/US-600",
+      "SCH125KTL-DO/US-600"
+    ],
+    "product_names": [
+      "CPS SCA Series Grid-tied PV Inverter"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "IMPORTANT SAFETY INSTRUCTIONS",
+      "Inverter Overview",
+      "Product Features",
+      "Product Protection Functions",
+      "Installation Procedures",
+      "Mechanical Installation",
+      "Electrical Installation",
+      "Commissioning (Wireless)",
+      "APP Interface",
+      "Fault Shutdown",
+      "Troubleshooting",
+      "Product Maintenance",
+      "Technical Data",
+      "Limited Warranty",
+      "Grid-tied PV Systems",
+      "Anti-islanding Detection",
+      "DC Ground Fault Protection",
+      "Surge Suppression",
+      "System Design",
+      "Communication Protocols"
+    ],
+    "safety_topics": [
+      "IMPORTANT SAFETY INSTRUCTIONS",
+      "Warnings and symbols",
+      "Markings on the product",
+      "High Voltage",
+      "Hot Surface",
+      "Earth Ground",
+      "Risk of electric shock and fire",
+      "DC short circuit",
+      "Emergency mitigation plan"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Commissioning",
+      "Troubleshooting",
+      "Maintenance",
+      "Operation"
+    ],
+    "keywords": [
+      "Grid-tied PV Inverter",
+      "PV Inverter",
+      "Installation",
+      "Operation",
+      "Safety Instructions",
+      "Troubleshooting",
+      "Maintenance",
+      "Commissioning",
+      "Wireless Connection",
+      "APP Interface",
+      "Product Features",
+      "Protection Functions",
+      "Schematic Diagram",
+      "Anti-islanding",
+      "DC Ground Fault",
+      "Surge Suppression",
+      "Mechanical Installation",
+      "Electrical Installation",
+      "Fault Codes",
+      "Technical Specifications",
+      "Warranty",
+      "High Voltage",
+      "Electric Shock Hazard",
+      "AC Grid",
+      "DC Sources",
+      "PV Modules",
+      "NEMA 4X Enclosure",
+      "Modbus RS485",
+      "TCP/IP",
+      "IEEE 1547",
+      "Rule 21",
+      "String Inverters",
+      "DC Disconnect Switches",
+      "Fused String Inputs",
+      "Conversion Efficiency",
+      "Reactive Power",
+      "Remote Curtailment",
+      "DC Input Voltage",
+      "Capacitors",
+      "Qualified Personnel"
+    ],
+    "toc_outline": [
+      "Before You Start\u2026",
+      "Chapter 1 IMPORTANT SAFETY INSTRUCTIONS",
+      "Chapter 2 Overview",
+      "Chapter 3 Installation",
+      "Chapter 4 Commissioning (Via Wireless )",
+      "Chapter 5 APP Interface",
+      "Chapter 6 Fault Shutdown and Troubleshooting",
+      "Chapter 7 Product Maintenance",
+      "Chapter 8 Technical Data",
+      "Chapter 9 Limited Warranty"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "CPS 125kW Manual.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/CPS 125kW Manual.pdf",
+    "page_range_used": "1-10"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "config": {
+    "name": "gemini-no-tasktype",
+    "description": "gemini-embedding-001, 768 dim, NO task type",
+    "embedding_model": "gemini-embedding-001",
+    "task_type": "UNSPECIFIED",
+    "dimensions": 768,
+    "endpoint_id": "740301178981580800",
+    "deployed_index_id": "idx_bfai_eval66_g1_768"
+  },
+  "metrics": {
+    "error": "No valid results"
+  },
+  "results": [
+    {
+      "question": "Referring to the figures and maps provided in Appendix A, what type of solar tracker orientation is depicted in Figure 5?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what is the domestic content percentage if a skidded (MVT + SWBD) solution is used?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "According to the document table of contents, which appendix contains information regarding the management of vegetation resources for the Easley Renewable Energy Project?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "What is the maximum DC current that a BDM-1200-LV microinverter can handle from its PV inputs?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    },
+    {
+      "question": "What communication interfaces are available on the BDM-1200-LV and BDM-1600-LV microinverters?",
+      "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'UNSPECIFIED cannot be parsed as a valid embedding task type. Valid task types: [CLASSIFICATION, CLUSTERING, CODE_RETRIEVAL_QUERY, DEFAULT, FACT_VERIFICATION, QUESTION_ANSWERING, RETRIEVAL_DOCUMENT, RETRIEVAL_QUERY, SEMANTIC_SIMILARITY]', 'status': 'INVALID_ARGUMENT'}}",
+      "attempts": 3
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "doc_id": "osha_ppe_cfr-2024-title29-vol5-part1910-subparti_db50fa",
+  "doc_type": "regulatory_guidance",
+  "doc_title": "Subpart I\u2014Personal Protective Equipment",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Occu. Safety and Health Admin., Labor",
+  "canonical_anchor_phrase": "29 CFR part 1910, Subpart I 2024 (United States)",
+  "publication": {
+    "revision": null,
+    "edition_year": 2024,
+    "publication_date_text": "7\u20131\u201324 Edition"
+  },
+  "standards": {
+    "standard_body": [
+      "Occupational Safety and Health Administration (OSHA)",
+      "U.S. Department of Labor",
+      "Code of Federal Regulations (CFR)",
+      "American National Standards Institute (ANSI)",
+      "International Safety Equipment Association (ISEA)",
+      "National Institute for Occupational Safety and Health (NIOSH)"
+    ],
+    "standard_ids": [
+      "29 CFR part 1910, Subpart I",
+      "29 U.S.C. 653",
+      "29 U.S.C. 655",
+      "29 U.S.C. 657",
+      "29 CFR part 1911",
+      "29 CFR 1910.132",
+      "29 CFR 1910.133",
+      "29 CFR 1910.134",
+      "29 CFR 1910.135",
+      "29 CFR 1910.136",
+      "29 CFR 1910.138",
+      "29 CFR 1910.140",
+      "29 CFR 1910.266(d)(1)(v)",
+      "29 CFR 1910.155",
+      "29 CFR 1910 subpart Z",
+      "ANSI/ISEA Z87.1\u20132010",
+      "ANSI Z87.1\u20132003",
+      "ANSI Z87.1\u20131989 (R\u20131998)",
+      "NIOSH 42 CFR 84",
+      "30 CFR part 11"
+    ],
+    "jurisdiction_or_region": [
+      "United States"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Personal Protective Equipment (PPE)",
+      "Respiratory Protection",
+      "Eye and Face Protection"
+    ],
+    "models": [],
+    "product_names": [
+      "respirators",
+      "eye protection",
+      "face protection",
+      "protective footwear",
+      "metatarsal guards",
+      "logging boots",
+      "filter lenses",
+      "air-purifying respirator",
+      "atmosphere-supplying respirator",
+      "supplied-air respirator (SAR)",
+      "self-contained breathing apparatus (SCBA)",
+      "filtering facepiece (dust mask)",
+      "powered air-purifying respirator (PAPR)"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Personal Protective Equipment (PPE)",
+      "General Requirements for PPE",
+      "Eye and Face Protection",
+      "Respiratory Protection",
+      "Hazard Assessment and Equipment Selection",
+      "Training for PPE Use",
+      "Payment for Protective Equipment",
+      "Medical Evaluation for Respirator Use",
+      "Fit Testing for Respirators",
+      "Respiratory Protection Program",
+      "Radiant Energy Protection",
+      "Atmosphere-Supplying Respirators",
+      "Air-Purifying Respirators",
+      "IDLH Atmospheres",
+      "Oxygen Deficient Atmospheres"
+    ],
+    "safety_topics": [
+      "Hazard assessment",
+      "Radiological hazards",
+      "Chemical hazards",
+      "Mechanical irritants",
+      "Fire protection",
+      "Eye hazards",
+      "Face hazards",
+      "Light radiation hazards",
+      "Airborne contaminants",
+      "Oxygen deficient atmosphere",
+      "Immediately dangerous to life or health (IDLH)"
+    ],
+    "procedural_domains": [
+      "Workplace safety",
+      "Occupational health",
+      "Training",
+      "Maintenance",
+      "Hazard control",
+      "Medical surveillance",
+      "Fit testing"
+    ],
+    "keywords": [
+      "PPE",
+      "Personal Protective Equipment",
+      "Respiratory protection",
+      "Eye protection",
+      "Face protection",
+      "Hazard assessment",
+      "Training",
+      "Medical evaluation",
+      "Fit testing",
+      "Workplace safety",
+      "Occupational health",
+      "Employer responsibilities",
+      "Employee-owned equipment",
+      "Defective equipment",
+      "Payment for PPE",
+      "Filter lenses",
+      "Radiant energy",
+      "Welding",
+      "Cutting",
+      "Gases",
+      "Vapors",
+      "Particulates",
+      "Air-purifying respirator",
+      "Atmosphere-supplying respirator",
+      "SCBA",
+      "SAR",
+      "PAPR",
+      "IDLH",
+      "Oxygen deficient atmosphere",
+      "Respiratory protection program",
+      "Assigned protection factor (APF)",
+      "Maximum use concentration (MUC)",
+      "NIOSH",
+      "ANSI",
+      "CFR",
+      "Chemical hazards",
+      "Radiological hazards",
+      "Mechanical irritants",
+      "Fire protection",
+      "Protective clothing"
+    ],
+    "toc_outline": [
+      "\u00a7 1910.132 General requirements.",
+      "\u00a7 1910.133 Eye and face protection.",
+      "\u00a7 1910.134 Respiratory protection."
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "publication.revision"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "OSHA PPE CFR-2024-title29-vol5-part1910-subpartI.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/OSHA PPE CFR-2024-title29-vol5-part1910-subpartI.pdf",
+    "page_range_used": "1-10"
+  }
+}

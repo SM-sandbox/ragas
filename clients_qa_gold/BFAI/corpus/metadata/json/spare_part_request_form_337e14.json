@@ -1,0 +1,115 @@
+{
+  "doc_id": "spare_part_request_form_337e14",
+  "doc_type": "other",
+  "doc_title": "Spare Part Request Form",
+  "subtitle": "(Vendor-Facing)",
+  "publisher_or_manufacturer": "Unknown",
+  "canonical_anchor_phrase": "Spare Part Request Form (Vendor-Facing)",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Equipment"
+    ],
+    "models": [
+      "Model Number"
+    ],
+    "product_names": []
+  },
+  "topics": {
+    "major_topics": [
+      "Spare Part Request",
+      "Vendor Communication",
+      "Logistics & Delivery",
+      "Cost Estimation",
+      "Equipment Maintenance",
+      "Warranty Management",
+      "Procurement Process",
+      "Supply Chain",
+      "Inventory Control",
+      "Field Service Operations"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [
+      "Procurement",
+      "Maintenance",
+      "Inventory Management",
+      "Vendor Relations",
+      "Logistics"
+    ],
+    "keywords": [
+      "Spare Part",
+      "Request Form",
+      "Vendor",
+      "Supplier",
+      "Contact Information",
+      "Project Site",
+      "Equipment Type",
+      "Manufacturer",
+      "Model Number",
+      "Serial Number",
+      "Part Number",
+      "Description",
+      "Quantity",
+      "Warranty",
+      "Replacement Reason",
+      "Urgency Level",
+      "Delivery Date",
+      "Quoted Cost",
+      "Shipping",
+      "Handling",
+      "Total Cost",
+      "Acknowledgment"
+    ],
+    "toc_outline": [
+      "Information Needed",
+      "Details (to be completed at time of request)",
+      "Date of Request",
+      "Requesting Party / Contact Info",
+      "Project / Site Location",
+      "Vendor / Supplier Contact Info",
+      "Equipment Type",
+      "Manufacturer / Model Number",
+      "Serial Number (if applicable)",
+      "Part Number / Description",
+      "Quantity Required",
+      "Part in Warranty (Yes/No)",
+      "Reason for Replacement (e.g., failure, preventive stock)",
+      "Urgency Level (Critical / Routine)",
+      "Expected Delivery Date",
+      "Quoted Cost per Part",
+      "Shipping & Handling Estimate",
+      "Total Estimated Cost",
+      "Requested by (Name & Signature)",
+      "Vendor Acknowledgement / Confirmation"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "publisher_or_manufacturer",
+      "publication.revision",
+      "publication.edition_year",
+      "publication.publication_date_text",
+      "standards.standard_body",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "equipment.product_names",
+      "topics.safety_topics"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Spare_Part_Request_Form.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Spare_Part_Request_Form.pdf",
+    "page_range_used": "1-1"
+  }
+}

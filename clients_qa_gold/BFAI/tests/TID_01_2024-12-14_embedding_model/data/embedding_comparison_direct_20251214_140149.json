@@ -1,0 +1,637 @@
+{
+  "timestamp": "2025-12-14T14:01:49.440175",
+  "config": {
+    "max_questions": 10,
+    "parallel_workers": 8,
+    "top_k": 10
+  },
+  "comparison": {
+    "by_config": {
+      "text-embedding-005": {
+        "description": "text-embedding-005, no task type",
+        "embedding_model": "text-embedding-005",
+        "task_type": null,
+        "overall_score": 4.22,
+        "pass_rate": 0.8,
+        "correctness": 4.0,
+        "completeness": 3.5,
+        "faithfulness": 4.0,
+        "relevance": 4.7,
+        "clarity": 4.9,
+        "avg_time": 9.87
+      },
+      "gemini-no-tasktype": {
+        "description": "gemini-embedding-001, 768 dim, NO task type",
+        "embedding_model": "gemini-embedding-001",
+        "task_type": null,
+        "overall_score": 0,
+        "pass_rate": 0,
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "relevance": 0,
+        "clarity": 0,
+        "avg_time": 0
+      },
+      "gemini-with-tasktype": {
+        "description": "gemini-embedding-001, 768 dim, WITH RETRIEVAL_QUERY",
+        "embedding_model": "gemini-embedding-001",
+        "task_type": "RETRIEVAL_QUERY",
+        "overall_score": 4.52,
+        "pass_rate": 0.9,
+        "correctness": 4.8,
+        "completeness": 5.0,
+        "faithfulness": 3.9,
+        "relevance": 5.0,
+        "clarity": 5.0,
+        "avg_time": 9.53
+      }
+    },
+    "winner": {
+      "name": "gemini-with-tasktype",
+      "score": 4.52
+    }
+  },
+  "detailed_results": {
+    "text-embedding-005": {
+      "config": {
+        "name": "text-embedding-005",
+        "description": "text-embedding-005, no task type",
+        "embedding_model": "text-embedding-005",
+        "task_type": null,
+        "dimensions": 768,
+        "endpoint_id": "1807654290668388352",
+        "deployed_index_id": "idx_brightfoxai_evalv3_autoscale"
+      },
+      "metrics": {
+        "total": 10,
+        "successful": 10,
+        "failed": 0,
+        "overall_score": 4.22,
+        "pass_rate": 0.8,
+        "correctness": 4.0,
+        "completeness": 3.5,
+        "faithfulness": 4.0,
+        "relevance": 4.7,
+        "clarity": 4.9,
+        "avg_time": 9.87,
+        "total_time": 19.22
+      },
+      "results": [
+        {
+          "question": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what is the domestic content percentage if a skidded (MVT + SWBD) solution is used?",
+          "ground_truth": "If a skidded (MVT + SWBD) solution domestic content is 70%.",
+          "rag_answer": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, if a skidded (MVT + SWBD) solution is used, the domestic content percentage is 70%.",
+          "answer_length": 164,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is perfectly correct, complete, and directly extracted from the provided context. It accurately states the domestic content percentage for the specified configuration and solution type, matching the ground truth exactly."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.465,
+            "generation_seconds": 2.441,
+            "judge_seconds": 3.852,
+            "total_seconds": 6.758
+          }
+        },
+        {
+          "question": "According to the document table of contents, which appendix contains information regarding the management of vegetation resources for the Easley Renewable Energy Project?",
+          "ground_truth": "Appendix L contains the Vegetation Resources Management Plan.",
+          "rag_answer": "According to the document table of contents, Appendix L contains information regarding the Vegetation Resources Management Plan.",
+          "answer_length": 128,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is perfectly correct, complete, and faithful to the provided context. It directly answers the question by identifying Appendix L as containing the Vegetation Resources Management Plan, matching the ground truth exactly in substance."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.367,
+            "generation_seconds": 3.181,
+            "judge_seconds": 4.402,
+            "total_seconds": 7.951
+          }
+        },
+        {
+          "question": "Referring to the figures and maps provided in Appendix A, what type of solar tracker orientation is depicted in Figure 5?",
+          "ground_truth": "Figure 5 depicts a Typical Single Axis Tracker with Portrait Mode Orientation.",
+          "rag_answer": "The provided context does not contain Figure 5 or Appendix A, so it is not possible to determine the type of solar tracker orientation depicted.",
+          "answer_length": 144,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 1,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4.2,
+            "verdict": "pass",
+            "explanation": "The RAG system correctly identified that the necessary information (Figure 5 and Appendix A) was not present in the provided context. Therefore, its statement that it cannot determine the answer is factually correct and faithful to the retrieved context. While it doesn't provide the specific details of the ground truth answer, its response is appropriate given the lack of relevant context. It is clear and directly addresses the question by explaining its limitation."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.372,
+            "generation_seconds": 2.449,
+            "judge_seconds": 5.512,
+            "total_seconds": 8.334
+          }
+        },
+        {
+          "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+          "ground_truth": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+          "rag_answer": "The CPS 100/125kW string inverters are compliant with NEC 2014 and 2017.",
+          "answer_length": 72,
+          "judgment": {
+            "correctness": 4,
+            "completeness": 3,
+            "faithfulness": 4,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4.2,
+            "verdict": "pass",
+            "explanation": "The RAG answer correctly identifies the NEC versions (2014 and 2017) from the context and directly answers the question. It is clear and well-written. However, it omits 'NFPA 70' which was present in both the ground truth and the retrieved context, making it slightly less complete."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.371,
+            "generation_seconds": 3.534,
+            "judge_seconds": 4.564,
+            "total_seconds": 8.469
+          }
+        },
+        {
+          "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+          "ground_truth": "The peak efficiency is 99.1%.",
+          "rag_answer": "The peak efficiency of the CPS 100/125kW string inverters is 99.1%.",
+          "answer_length": 67,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is perfectly correct, complete, and directly answers the question. It accurately extracts the peak efficiency (99.1%) from the provided context [1] and presents it clearly."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.395,
+            "generation_seconds": 4.801,
+            "judge_seconds": 3.468,
+            "total_seconds": 8.663
+          }
+        },
+        {
+          "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+          "ground_truth": "Signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. The markings shall be permanently installed, in letters at least 6 mm (1/4 in.) high, and shall be located where visible during relamping.",
+          "rag_answer": "According to 600.4(C), signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. These markings must be permanently installed, in letters at least 6 mm (4 in.) high, and located where visible during relamping.",
+          "answer_length": 305,
+          "judgment": {
+            "correctness": 1,
+            "completeness": 2,
+            "faithfulness": 1,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 2.8,
+            "verdict": "partial",
+            "explanation": "The RAG answer attempts to directly answer the question and is clearly written. However, it contains a significant factual error, stating '4 in.' instead of '1/4 in.' for the letter height. More critically, the provided context does not contain section 600.4(C), which the RAG answer explicitly references, indicating a severe lack of faithfulness to the given context. The information must have come from an external source or was hallucinated, despite the question asking for information 'according to 600.4(C)' and the RAG answer claiming to provide it from that section."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.431,
+            "generation_seconds": 3.653,
+            "judge_seconds": 6.121,
+            "total_seconds": 10.205
+          }
+        },
+        {
+          "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+          "ground_truth": "The switchboard utilizes 800VAC rated air circuit breakers ACB (800A \u2013 1200A).",
+          "rag_answer": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, the air circuit breakers (ACB) used in the switchboard have a frame rating of 3200A (AF-3200A) and a trip rating of 3000A (AT-3000A).",
+          "answer_length": 211,
+          "judgment": {
+            "correctness": 1,
+            "completeness": 1,
+            "faithfulness": 1,
+            "relevance": 2,
+            "clarity": 4,
+            "overall_score": 1.8,
+            "verdict": "fail",
+            "explanation": "The RAG answer provides completely different current ratings (frame and trip ratings of 3200A/3000A) compared to the ground truth (800A-1200A). It also does not mention the voltage. The information provided in the RAG answer is not present in the retrieved context, which appears to be about MCCBs and interrupting ratings, not ACBs or their current ratings. This indicates a severe lack of faithfulness and factual incorrectness."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.427,
+            "generation_seconds": 5.576,
+            "judge_seconds": 6.146,
+            "total_seconds": 12.15
+          }
+        },
+        {
+          "question": "What communication interfaces are available on the BDM-1200-LV and BDM-1600-LV microinverters?",
+          "ground_truth": "Both the BDM-1200-LV and BDM-1600-LV microinverters offer WI-FI and Bluetooth communication interfaces.",
+          "rag_answer": "The BDM-1200-LV and BDM-1600-LV microinverters have WI-FI and Bluetooth communication interfaces.",
+          "answer_length": 97,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is perfectly correct, complete, and directly matches the ground truth. It accurately extracts the communication interfaces (WI-FI and Bluetooth) for both specified microinverter models from the provided context. The answer is clear and directly relevant to the question."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.189,
+            "generation_seconds": 3.4,
+            "judge_seconds": 4.195,
+            "total_seconds": 7.784
+          }
+        },
+        {
+          "question": "What is the maximum DC current that a BDM-1200-LV microinverter can handle from its PV inputs?",
+          "ground_truth": "The BDM-1200-LV microinverter can handle a maximum PV current of 25A per input, with 3 inputs totaling 25A\u00d73.",
+          "rag_answer": "A BDM-1200-LV microinverter can handle a maximum PV current of 25A per input, and it has 3 PV inputs.",
+          "answer_length": 101,
+          "judgment": {
+            "correctness": 4,
+            "completeness": 3,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4.4,
+            "verdict": "pass",
+            "explanation": "The RAG answer correctly states the maximum PV current per input (25A) and the number of PV inputs (3), which is directly supported by the context and answers the question. It is slightly less complete than the ground truth by not explicitly calculating the total (25A x 3), but the essential information is present and accurate."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.204,
+            "generation_seconds": 4.486,
+            "judge_seconds": 4.462,
+            "total_seconds": 9.152
+          }
+        },
+        {
+          "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+          "ground_truth": "The sign must be marked that the illumination system has been replaced, include the kit providers and installer's name, logo, or unique identifier, and if equipped with tubular light-emitting diode lamps powered by existing sign sockets, include a label alerting service personnel that the sign has been modified, including a warning not to install fluorescent lamps.",
+          "rag_answer": "According to Article 600, specifically section 600.4(B), a sign with a retrofitted illumination system must contain the following on its label:\n\n1.  A marking indicating that the illumination system has been replaced.\n2.  The kit provider's and installer's name, logo, or unique identifier.\n3.  For signs equipped with tubular light-emitting diode lamps powered by the existing sign sockets, a label alerting service personnel that the sign has been modified. This label must meet the requirements of 110.21(B), include a warning not to install fluorescent lamps, and be visible during relamping.",
+          "answer_length": 596,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 4,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4.8,
+            "verdict": "pass",
+            "explanation": "The RAG answer is highly correct and complete, accurately reflecting all points from the ground truth and providing additional relevant details (e.g., 110.21(B) and visibility during relamping) that are likely from the full source text. It is well-structured, clear, and directly answers the question. Faithfulness is rated 4 because while the core information is grounded in the provided context, the context snippet was truncated, preventing full verification of the additional details in point 3 from the *provided* reference."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 0.43,
+            "generation_seconds": 4.61,
+            "judge_seconds": 14.176,
+            "total_seconds": 19.217
+          }
+        }
+      ]
+    },
+    "gemini-no-tasktype": {
+      "config": {
+        "name": "gemini-no-tasktype",
+        "description": "gemini-embedding-001, 768 dim, NO task type",
+        "embedding_model": "gemini-embedding-001",
+        "task_type": null,
+        "dimensions": 768,
+        "endpoint_id": "740301178981580800",
+        "deployed_index_id": "idx_bfai_eval66_g1_768"
+      },
+      "metrics": {
+        "error": "No valid results"
+      },
+      "results": [
+        {
+          "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "According to the document table of contents, which appendix contains information regarding the management of vegetation resources for the Easley Renewable Energy Project?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "Referring to the figures and maps provided in Appendix A, what type of solar tracker orientation is depicted in Figure 5?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what is the domestic content percentage if a skidded (MVT + SWBD) solution is used?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "What is the maximum DC current that a BDM-1200-LV microinverter can handle from its PV inputs?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        },
+        {
+          "question": "What communication interfaces are available on the BDM-1200-LV and BDM-1600-LV microinverters?",
+          "error": "Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.",
+          "attempts": 3
+        }
+      ]
+    },
+    "gemini-with-tasktype": {
+      "config": {
+        "name": "gemini-with-tasktype",
+        "description": "gemini-embedding-001, 768 dim, WITH RETRIEVAL_QUERY",
+        "embedding_model": "gemini-embedding-001",
+        "task_type": "RETRIEVAL_QUERY",
+        "dimensions": 768,
+        "endpoint_id": "4639292556377587712",
+        "deployed_index_id": "idx_bfai_eval66_g1_768_tt"
+      },
+      "metrics": {
+        "total": 10,
+        "successful": 10,
+        "failed": 0,
+        "overall_score": 4.52,
+        "pass_rate": 0.9,
+        "correctness": 4.8,
+        "completeness": 5.0,
+        "faithfulness": 3.9,
+        "relevance": 5.0,
+        "clarity": 5.0,
+        "avg_time": 9.53,
+        "total_time": 15.12
+      },
+      "results": [
+        {
+          "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+          "ground_truth": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+          "rag_answer": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+          "answer_length": 81,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is identical to the ground truth answer, providing all the requested information directly and accurately from the retrieved context."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.449,
+            "generation_seconds": 1.545,
+            "judge_seconds": 3.061,
+            "total_seconds": 6.055
+          }
+        },
+        {
+          "question": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, what is the domestic content percentage if a skidded (MVT + SWBD) solution is used?",
+          "ground_truth": "If a skidded (MVT + SWBD) solution domestic content is 70%.",
+          "rag_answer": "In the 'Main Switchboard / Inverters in Array / Local Disconnect' configuration, if a skidded (MVT + SWBD) solution is used, the domestic content is 70%.",
+          "answer_length": 153,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is perfectly correct, complete, faithful to the context, relevant, and clear. It directly extracts the domestic content percentage for the specified configuration and skidded solution from the provided text, matching the ground truth exactly."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.439,
+            "generation_seconds": 1.569,
+            "judge_seconds": 3.566,
+            "total_seconds": 6.574
+          }
+        },
+        {
+          "question": "According to the document table of contents, which appendix contains information regarding the management of vegetation resources for the Easley Renewable Energy Project?",
+          "ground_truth": "Appendix L contains the Vegetation Resources Management Plan.",
+          "rag_answer": "According to the document table of contents, Appendix L, titled \"Vegetation Resources Management Plan,\" contains information regarding the management of vegetation resources for the Easley Renewable Energy Project.",
+          "answer_length": 214,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is perfectly correct, complete, faithful to the context, relevant, and clear. It accurately identifies Appendix L and its title, directly matching the ground truth and information found in the retrieved context."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.425,
+            "generation_seconds": 2.488,
+            "judge_seconds": 4.424,
+            "total_seconds": 8.337
+          }
+        },
+        {
+          "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+          "ground_truth": "The peak efficiency is 99.1%.",
+          "rag_answer": "The peak efficiency of the CPS 100/125kW string inverters is 99.1%.",
+          "answer_length": 67,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is perfectly correct, complete, and directly matches the ground truth. It accurately extracts the 'Max. Efficiency' value of 99.1% from the provided context, directly answering the question clearly and concisely."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.434,
+            "generation_seconds": 3.094,
+            "judge_seconds": 4.433,
+            "total_seconds": 8.961
+          }
+        },
+        {
+          "question": "Referring to the figures and maps provided in Appendix A, what type of solar tracker orientation is depicted in Figure 5?",
+          "ground_truth": "Figure 5 depicts a Typical Single Axis Tracker with Portrait Mode Orientation.",
+          "rag_answer": "The provided context does not contain enough information to answer the question, as Figure 5 is not described or included.",
+          "answer_length": 122,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG system correctly identifies that the provided *textual* context does not contain Figure 5 or any description of it. The question explicitly asks to refer to 'figures and maps provided in Appendix A', which are not present in the `Retrieved Context`. Therefore, the RAG system's response is accurate and appropriate given the limitations of its input. It correctly states it cannot answer due to missing information."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.418,
+            "generation_seconds": 2.813,
+            "judge_seconds": 5.146,
+            "total_seconds": 9.377
+          }
+        },
+        {
+          "question": "What markings are required for signs and outline lighting systems that contain lampholders for incandescent lamps, according to 600.4(C)?",
+          "ground_truth": "Signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. The markings shall be permanently installed, in letters at least 6 mm (1/4 in.) high, and shall be located where visible during relamping.",
+          "rag_answer": "According to 600.4(C), signs and outline lighting systems with lampholders for incandescent lamps shall be marked to indicate the maximum allowable lamp wattage per lampholder. These markings must be permanently installed, in letters at least 6 mm (1/4 in.) high, and located where visible during relamping.",
+          "answer_length": 307,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 1,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4.2,
+            "verdict": "pass",
+            "explanation": "The RAG answer is perfectly correct, complete, relevant, and clear, matching the ground truth answer verbatim. However, it scores low on faithfulness because the specific information from 600.4(C) that the answer is based on is not present in the provided 'Retrieved Context'. The context provided contains other sections of 600.4 but not the one relevant to the answer."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.436,
+            "generation_seconds": 2.384,
+            "judge_seconds": 6.77,
+            "total_seconds": 10.589
+          }
+        },
+        {
+          "question": "What communication interfaces are available on the BDM-1200-LV and BDM-1600-LV microinverters?",
+          "ground_truth": "Both the BDM-1200-LV and BDM-1600-LV microinverters offer WI-FI and Bluetooth communication interfaces.",
+          "rag_answer": "The BDM-1200-LV and BDM-1600-LV microinverters have WI-FI and Bluetooth communication interfaces.",
+          "answer_length": 97,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is identical to the ground truth, accurately stating that both microinverter models have WI-FI and Bluetooth communication interfaces, which is directly supported by the provided context."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.038,
+            "generation_seconds": 1.768,
+            "judge_seconds": 3.953,
+            "total_seconds": 6.759
+          }
+        },
+        {
+          "question": "What is the maximum DC current that a BDM-1200-LV microinverter can handle from its PV inputs?",
+          "ground_truth": "The BDM-1200-LV microinverter can handle a maximum PV current of 25A per input, with 3 inputs totaling 25A\u00d73.",
+          "rag_answer": "The BDM-1200-LV microinverter can handle a maximum PV current of 25A per input, with 3 PV inputs in total (25A\u00d73).",
+          "answer_length": 114,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 5,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 5,
+            "verdict": "pass",
+            "explanation": "The RAG answer is identical to the ground truth answer, providing all the requested information accurately and clearly. It is fully supported by the retrieved context."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.068,
+            "generation_seconds": 3.858,
+            "judge_seconds": 3.582,
+            "total_seconds": 8.508
+          }
+        },
+        {
+          "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+          "ground_truth": "The sign must be marked that the illumination system has been replaced, include the kit providers and installer's name, logo, or unique identifier, and if equipped with tubular light-emitting diode lamps powered by existing sign sockets, include a label alerting service personnel that the sign has been modified, including a warning not to install fluorescent lamps.",
+          "rag_answer": "According to Article 600, for signs with a retrofitted illumination system, the following information must be included on the label:\n\n1.  A marking indicating that the illumination system has been replaced.\n2.  The kit provider's and installer's name, logo, or unique identifier.\n3.  If the sign is equipped with tubular light-emitting diode lamps powered by existing sign sockets, a label must be included that:\n    *   Alerts service personnel that the sign has been modified.\n    *   Meets the requirements of 110.21(B).\n    *   Includes a warning not to install fluorescent lamps.\n    *   Is visible during relamping.",
+          "answer_length": 621,
+          "judgment": {
+            "correctness": 3,
+            "completeness": 5,
+            "faithfulness": 2,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 4,
+            "verdict": "pass",
+            "explanation": "The RAG answer correctly identifies all the information required by the Ground Truth and is very clear and relevant. It covers all key points from the Ground Truth. However, it includes additional details (\"Meets the requirements of 110.21(B)\" and \"Is visible during relamping\") that are not present in the provided Ground Truth or the truncated retrieved context. This impacts its correctness relative to the GT and significantly reduces its faithfulness to the provided context."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.435,
+            "generation_seconds": 2.813,
+            "judge_seconds": 10.738,
+            "total_seconds": 14.986
+          }
+        },
+        {
+          "question": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, what is the current rating range of the air circuit breakers (ACB) used in the switchboard?",
+          "ground_truth": "The switchboard utilizes 800VAC rated air circuit breakers ACB (800A \u2013 1200A).",
+          "rag_answer": "For the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration, the air circuit breakers (ACB) used in the switchboard have a current rating range of 800A \u2013 1200A.",
+          "answer_length": 177,
+          "judgment": {
+            "correctness": 5,
+            "completeness": 5,
+            "faithfulness": 1,
+            "relevance": 5,
+            "clarity": 5,
+            "overall_score": 2,
+            "verdict": "fail",
+            "explanation": "The RAG answer is factually correct and complete according to the ground truth, and it is clear and relevant. However, the specific current rating range of '800A \u2013 1200A' for the ACBs in the 'Main Switchboard (AC Recombiner) / Field AC Combiner' configuration is not explicitly found in the provided retrieved context snippets. While context [2] identifies the switchboard type and mentions '800VAC rated air circuit breake' (cut off), the crucial current range is absent. Context [1] provides broader or different ranges. This indicates a significant faithfulness issue, as the answer is not demonstrably grounded in the provided context, which is a core failure for a RAG system, even if the answer is coincidentally correct."
+          },
+          "attempts": 1,
+          "timing": {
+            "retrieval_seconds": 1.432,
+            "generation_seconds": 1.724,
+            "judge_seconds": 11.962,
+            "total_seconds": 15.118
+          }
+        }
+      ]
+    }
+  }
+}

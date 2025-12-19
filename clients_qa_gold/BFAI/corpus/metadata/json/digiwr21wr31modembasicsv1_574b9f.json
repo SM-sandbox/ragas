@@ -1,0 +1,103 @@
+{
+  "doc_id": "digiwr21wr31modembasicsv1_574b9f",
+  "doc_type": "training_material",
+  "doc_title": "DiGi WR21/31 Modem Basics",
+  "subtitle": null,
+  "publisher_or_manufacturer": "ALSOENERGY INC",
+  "canonical_anchor_phrase": "ALSOENERGY INC DiGi WR21/31 Modem Basics, v1 (2022)",
+  "publication": {
+    "revision": "v1",
+    "edition_year": 2022,
+    "publication_date_text": "06/03/2022"
+  },
+  "standards": {
+    "standard_body": [],
+    "standard_ids": [],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Modem"
+    ],
+    "models": [
+      "WR21",
+      "WR31"
+    ],
+    "product_names": [
+      "DiGi WR21/31 Modem"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Lan Settings",
+      "ARP",
+      "Ping",
+      "Port Forwards",
+      "Signal Strength",
+      "ICCID",
+      "IMEI",
+      "APN Settings",
+      "Modem Configuration",
+      "Network Diagnostics",
+      "Wireless Modems",
+      "Device Information",
+      "Connectivity Management"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [
+      "Configuration",
+      "Diagnostics",
+      "Networking",
+      "Device Management"
+    ],
+    "keywords": [
+      "DiGi WR21",
+      "DiGi WR31",
+      "Modem",
+      "Lan Settings",
+      "arp -a",
+      "LAN IP/MAC Table",
+      "Ping",
+      "Port Forwards",
+      "Signal Strength",
+      "Signal Quality",
+      "ICCID",
+      "IMEI",
+      "APN Settings",
+      "Network Configuration",
+      "Wireless Communication",
+      "Device Settings",
+      "Connectivity",
+      "Troubleshooting",
+      "Basic Operations",
+      "Modem Management"
+    ],
+    "toc_outline": [
+      "Table of Contents",
+      "Outline",
+      "Lan Settings",
+      "How to arp -a (AKA LAN IP/MAC Table)",
+      "How to Ping",
+      "How to Create Port Forwards",
+      "Signal Strength/Quality",
+      "ICCID/IMEI",
+      "APN Settings"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "standards.standard_body",
+      "standards.standard_ids",
+      "standards.jurisdiction_or_region",
+      "topics.safety_topics"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "DiGiWR21WR31ModemBasicsv1.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/DiGiWR21WR31ModemBasicsv1.pdf",
+    "page_range_used": "1-7"
+  }
+}

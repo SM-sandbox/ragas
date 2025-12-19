@@ -1,0 +1,147 @@
+{
+  "doc_id": "nep_microinverter_bdm-1200-lv-250723_july_23_2025__8b9497",
+  "doc_type": "datasheet",
+  "doc_title": "BDM-1200-LV / BDM-1600-LV Micro Inverter",
+  "subtitle": null,
+  "publisher_or_manufacturer": "NEP",
+  "canonical_anchor_phrase": "NEP BDM-1200-LV / BDM-1600-LV Micro Inverter Datasheet",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [
+      "UL",
+      "IEEE",
+      "CSA",
+      "HECO"
+    ],
+    "standard_ids": [
+      "UL STD.1741",
+      "UL1741. SB",
+      "UL1741SA",
+      "UL1741SB",
+      "IEEE STD.1547",
+      "IEEE 1547",
+      "IEEE 1547.1",
+      "IEEE 1547a",
+      "HECO SRD-IEEE-1547.1:2020 Ed.2.0",
+      "CSA STD.C22.2 No.107.1",
+      "CSA STD.C22.2 No.330",
+      "IEEE 2030.5",
+      "E5000",
+      "SA17-18",
+      "PCS CRD:2019"
+    ],
+    "jurisdiction_or_region": [
+      "US",
+      "Hawaii"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Micro Inverter",
+      "Solar Panel"
+    ],
+    "models": [
+      "BDM-1200-LV",
+      "BDM-1600-LV"
+    ],
+    "product_names": [
+      "Micro Inverter"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Microinverter Technology",
+      "Solar Power Systems",
+      "Grid-Tie Inverters",
+      "Energy Harvest Optimization",
+      "Wireless Communication",
+      "Safety Standards Compliance",
+      "Electrical Specifications",
+      "Performance Monitoring",
+      "DIY Installation",
+      "Photovoltaic (PV) Systems",
+      "Power Conversion",
+      "System Protection",
+      "Environmental Ratings",
+      "Smart Inverters",
+      "Distributed Generation"
+    ],
+    "safety_topics": [
+      "Anti-islanding Protection",
+      "Over Current/Voltage Protection",
+      "PV Reverse Polarity Protection",
+      "AC Short-circuit Protection",
+      "Leakage Current Protecion",
+      "Ground fault monitoring",
+      "AC/DC Surge Protection Type II"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Monitoring",
+      "Troubleshooting",
+      "Firmware updates"
+    ],
+    "keywords": [
+      "BDM-1200-LV",
+      "BDM-1600-LV",
+      "Micro Inverter",
+      "Plug-and-Play",
+      "DIY Installation",
+      "UL1741",
+      "IEEE 1547",
+      "Solar Panels",
+      "MPPT",
+      "WiFi",
+      "Mobile App",
+      "Real-time performance",
+      "Firmware updates",
+      "Rooftop Solution",
+      "AC Output Power",
+      "DC Input Voltage",
+      "Efficiency",
+      "Anti-islanding",
+      "Ground fault monitoring",
+      "Surge Protection",
+      "Ingress Protection",
+      "Operating Temperature",
+      "Grid Safety",
+      "Interoperability",
+      "Scalable",
+      "High Efficiency",
+      "PV Current",
+      "Rated AC Voltage",
+      "Rated AC Frequency",
+      "Dimensions",
+      "Weight",
+      "Bluetooth",
+      "LED LIGHT",
+      "Altitude",
+      "CSA C22.2",
+      "HECO SRD",
+      "E5000",
+      "SA17-18",
+      "PCS CRD"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "publication.revision",
+      "publication.edition_year",
+      "publication.publication_date_text",
+      "topics.toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/NEP Microinverter BDM-1200-LV-250723 July 23 2025 UL-Certs-Completed.pdf",
+    "page_range_used": "1-1"
+  }
+}

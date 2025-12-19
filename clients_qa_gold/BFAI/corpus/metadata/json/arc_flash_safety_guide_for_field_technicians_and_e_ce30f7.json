@@ -1,0 +1,163 @@
+{
+  "doc_id": "arc_flash_safety_guide_for_field_technicians_and_e_ce30f7",
+  "doc_type": "training_material",
+  "doc_title": "Arc Flash Safety Guide for Field Technicians and Engineers",
+  "subtitle": "(Medium & High Voltage Systems)",
+  "publisher_or_manufacturer": "Unknown",
+  "canonical_anchor_phrase": "Arc Flash Safety Guide for Field Technicians and Engineers, Training Material",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [
+      "NFPA"
+    ],
+    "standard_ids": [
+      "NFPA 70E"
+    ],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Switchgear",
+      "Switchboards",
+      "Motor Control Centers (MCCs)",
+      "Panelboards",
+      "Transformers",
+      "Busbars",
+      "Circuit Breakers",
+      "Contactors",
+      "Disconnects",
+      "Electrical Systems"
+    ],
+    "models": [],
+    "product_names": []
+  },
+  "topics": {
+    "major_topics": [
+      "Arc Flash Safety",
+      "Electrical Hazards",
+      "Arc Flash Awareness",
+      "Work Planning",
+      "Personal Protective Equipment (PPE)",
+      "Arc Flash Boundaries",
+      "Safe Work Practices",
+      "Lockout/Tagout (LOTO)",
+      "Energized Work",
+      "Preventive Maintenance",
+      "Engineering Controls",
+      "Emergency Response",
+      "Medium Voltage Systems",
+      "High Voltage Systems",
+      "Incident Energy",
+      "Risk Assessment",
+      "Electrical Equipment",
+      "Safety Procedures",
+      "Electrical Testing",
+      "First Aid",
+      "Electrical Accidents",
+      "Hazard Analysis",
+      "Safety Culture",
+      "Field Technicians",
+      "Engineers"
+    ],
+    "safety_topics": [
+      "Arc Flash Safety",
+      "Electrical Safety",
+      "Lockout/Tagout",
+      "Personal Protective Equipment",
+      "Emergency Response",
+      "First Aid",
+      "Hazard Analysis",
+      "Risk Assessment"
+    ],
+    "procedural_domains": [
+      "Work Planning",
+      "Maintenance",
+      "Emergency Procedures",
+      "Testing",
+      "Safety Protocols",
+      "Risk Management"
+    ],
+    "keywords": [
+      "Arc flash",
+      "Electrical safety",
+      "PPE",
+      "Lockout/Tagout (LOTO)",
+      "Incident energy",
+      "Medium voltage",
+      "High voltage",
+      "Hazard analysis",
+      "Energized work",
+      "Safety boundaries",
+      "Preventive maintenance",
+      "Emergency response",
+      "Electrical hazards",
+      "Switchgear",
+      "Circuit breakers",
+      "Voltage detectors",
+      "Insulated tools",
+      "Arc-rated clothing",
+      "IR thermography",
+      "Protective relays",
+      "Remote racking",
+      "First aid",
+      "Burns",
+      "Electrical current",
+      "Shrapnel",
+      "Pressure waves",
+      "Work permits",
+      "Housekeeping",
+      "Engineering controls",
+      "NFPA 70E",
+      "Qualified workers",
+      "Risk reduction",
+      "Safety guide",
+      "Electrical equipment",
+      "Field technicians",
+      "Engineers",
+      "Electrical testing",
+      "Grounding",
+      "De-energizing",
+      "Tailboard briefings"
+    ],
+    "toc_outline": [
+      "1. Introduction: Why Arc Flash Safety Matters",
+      "2. Arc Flash Awareness",
+      "3. Preparedness: Planning Before the Job",
+      "3.1 Documentation & Work Planning",
+      "3.2 Job Briefings",
+      "3.3 Tools & Test Equipment",
+      "4. PPE and Arc Flash Boundaries",
+      "4.1 Arc Flash PPE",
+      "4.2 Approach Boundaries (per NFPA 70E)",
+      "5. Safe Work Practices",
+      "5.1 Verification and Lockout/Tagout",
+      "5.2 Energized Work",
+      "5.3 Housekeeping",
+      "6. Prevention and Maintenance",
+      "6.1 Preventive Maintenance",
+      "6.2 Engineering Controls",
+      "7. Emergency Response",
+      "8. Key Takeaways"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "publisher_or_manufacturer",
+      "publication.revision",
+      "publication.edition_year",
+      "publication.publication_date_text",
+      "standards.jurisdiction_or_region"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Arc Flash Safety Guide for Field Technicians and Engineers.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Arc Flash Safety Guide for Field Technicians and Engineers.pdf",
+    "page_range_used": "1-5"
+  }
+}

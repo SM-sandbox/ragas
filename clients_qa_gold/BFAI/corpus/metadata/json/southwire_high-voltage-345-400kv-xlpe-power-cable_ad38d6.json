@@ -1,0 +1,118 @@
+{
+  "doc_id": "southwire_high-voltage-345-400kv-xlpe-power-cable_ad38d6",
+  "doc_type": "datasheet",
+  "doc_title": "345/400 kV XLPE Power Cable",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Southwire",
+  "canonical_anchor_phrase": "Southwire 345/400 kV XLPE Power Cable Datasheet",
+  "publication": {
+    "revision": null,
+    "edition_year": null,
+    "publication_date_text": null
+  },
+  "standards": {
+    "standard_body": [
+      "AEIC",
+      "IEC"
+    ],
+    "standard_ids": [
+      "AEIC",
+      "IEC"
+    ],
+    "jurisdiction_or_region": []
+  },
+  "equipment": {
+    "equipment_family": [
+      "Power Cable",
+      "XLPE Cable"
+    ],
+    "models": [],
+    "product_names": [
+      "345/400 kV XLPE Power Cable",
+      "SW STANDARD WALL XLPE CORRUGATED SHEATH",
+      "SW STANDARD WALL XLPE LAMINATE SHEATH"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "XLPE Power Cable",
+      "Voltage Characteristics",
+      "Temperature Ratings",
+      "Cable Construction",
+      "Design Standards",
+      "Electrical Properties",
+      "Conductor Specifications",
+      "Cable Dimensions",
+      "Ampacity Ratings",
+      "Power Ratings",
+      "Sheath Types",
+      "Short Circuit Current",
+      "Bending Radius",
+      "Capacitance and Charging Current"
+    ],
+    "safety_topics": [],
+    "procedural_domains": [],
+    "keywords": [
+      "345 kV",
+      "400 kV",
+      "XLPE",
+      "Power Cable",
+      "SW STANDARD WALL",
+      "Corrugated Sheath",
+      "Laminate Sheath",
+      "Copper Conductor",
+      "Aluminum Conductor",
+      "Conductor Shield",
+      "XLPE Insulation",
+      "Insulation Shield",
+      "Moisture Impervious Sheath",
+      "Polyethylene Jacket",
+      "Semi-Conductive Outer Layer",
+      "Max Voltage Rating",
+      "BIL Rating",
+      "Nominal Conductor Temperature",
+      "Emergency Conductor Temperature",
+      "Short Circuit Conductor Temperature",
+      "Minimum Installation Temperature",
+      "AEIC",
+      "IEC",
+      "Factory Test Voltages",
+      "Loss Factor",
+      "Relative Permittivity",
+      "kcmil",
+      "Conductor Diameter",
+      "Insulation Thickness",
+      "Jacket Diameter",
+      "Bending Radius",
+      "Capacitance Charging Current",
+      "Cable Weight",
+      "Short Circuit",
+      "Ampacity",
+      "MVA",
+      "Single Circuit",
+      "Double Circuit",
+      "Milliken conductors",
+      "Fault current"
+    ],
+    "toc_outline": null
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle",
+      "publication.revision",
+      "publication.edition_year",
+      "publication.publication_date_text",
+      "standards.jurisdiction_or_region",
+      "topics.safety_topics",
+      "topics.procedural_domains",
+      "topics.toc_outline"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "Southwire High-Voltage-345-400kV-XLPE-Power-Cable.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/Southwire High-Voltage-345-400kV-XLPE-Power-Cable.pdf",
+    "page_range_used": "1-4"
+  }
+}

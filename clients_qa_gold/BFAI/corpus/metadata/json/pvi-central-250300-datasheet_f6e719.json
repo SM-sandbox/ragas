@@ -1,0 +1,133 @@
+{
+  "doc_id": "pvi-central-250300-datasheet_f6e719",
+  "doc_type": "datasheet",
+  "doc_title": "PVI-CENTRAL-250 and PVI-CENTRAL-300 Datasheet",
+  "subtitle": null,
+  "publisher_or_manufacturer": "Power-One",
+  "canonical_anchor_phrase": "Power-One PVI-CENTRAL-250, PVI-CENTRAL-300 Datasheet, Ver. 2013-04.2-NA (2013)",
+  "publication": {
+    "revision": "Ver. 2013-04.2-NA",
+    "edition_year": 2013,
+    "publication_date_text": "2013-04.2-NA"
+  },
+  "standards": {
+    "standard_body": [
+      "UL",
+      "CSA",
+      "IEEE"
+    ],
+    "standard_ids": [
+      "UL1741",
+      "CSA - C22.2 N. 107.1-01",
+      "IEEE 1547",
+      "UL 1449"
+    ],
+    "jurisdiction_or_region": [
+      "North America"
+    ]
+  },
+  "equipment": {
+    "equipment_family": [
+      "Central Inverters",
+      "Solar Inverters"
+    ],
+    "models": [
+      "PVI-CENTRAL-250",
+      "PVI-CENTRAL-300",
+      "PVI-CENTRAL-250-US",
+      "PVI-CENTRAL-300-US",
+      "PVI-CENTRAL-250-CAN",
+      "PVI-CENTRAL-300-CAN"
+    ],
+    "product_names": [
+      "AURORA PLUS"
+    ]
+  },
+  "topics": {
+    "major_topics": [
+      "Features",
+      "General Specifications",
+      "Block Diagram",
+      "Efficiency Curves",
+      "Technical Data",
+      "Input Side (DC)",
+      "Output Side (AC)",
+      "Protection Devices",
+      "Operating Performance",
+      "Environmental Specifications",
+      "Communication",
+      "Mechanical Specifications",
+      "Safety Standards",
+      "Warranty"
+    ],
+    "safety_topics": [
+      "Reverse Polarity Protection",
+      "Over Voltage Protection",
+      "Ground-Fault Detection and Interruption (GFDI)",
+      "Anti-Islanding Protection",
+      "Safety and EMC Standard"
+    ],
+    "procedural_domains": [
+      "Installation",
+      "Maintenance",
+      "Monitoring"
+    ],
+    "keywords": [
+      "Inverter",
+      "Solar",
+      "PV plants",
+      "Central inverter",
+      "Efficiency",
+      "MPPT (Maximum Power Point Tracking)",
+      "DC distribution",
+      "AC distribution",
+      "Protection devices",
+      "Communication interfaces",
+      "Isolation transformer",
+      "DC disconnect switch",
+      "Ground-fault detection (GFDI)",
+      "Technical specifications",
+      "Nominal output power",
+      "Input voltage",
+      "Output current",
+      "Grid frequency",
+      "Power factor",
+      "Total Harmonic Distortion (THD)",
+      "Overvoltage protection",
+      "Anti-islanding protection",
+      "Operating temperature",
+      "Noise emission",
+      "NEMA 3R",
+      "Forced air cooling",
+      "UL 1741",
+      "CSA C22.2 N. 107.1-01",
+      "IEEE 1547",
+      "Power-One",
+      "Aurora",
+      "Commercial-grade",
+      "Modular inverter systems",
+      "Energy harvesting",
+      "Fault tolerance",
+      "Scalability",
+      "Installation",
+      "Maintenance"
+    ],
+    "toc_outline": [
+      "Features",
+      "Block Diagram and Efficiency Curves",
+      "Technical Data"
+    ]
+  },
+  "extraction_notes": {
+    "confidence": "high",
+    "missing_fields": [
+      "subtitle"
+    ],
+    "ambiguities": []
+  },
+  "source": {
+    "filename": "pvi-central-250300-datasheet.pdf",
+    "uri": "gs://brightfoxai-documents/BRIGHTFOXAI/EVALV3/pvi-central-250300-datasheet.pdf",
+    "page_range_used": "1-4"
+  }
+}

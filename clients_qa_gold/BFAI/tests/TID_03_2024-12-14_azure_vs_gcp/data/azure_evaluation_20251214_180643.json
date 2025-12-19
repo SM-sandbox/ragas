@@ -1,0 +1,53 @@
+{
+  "timestamp": "20251214_180643",
+  "config": {
+    "search_index": "gptkbindex",
+    "llm_model": "gpt-4.1-mini",
+    "embedding_model": "text-embedding-3-large",
+    "top_k": 12,
+    "workers": 1
+  },
+  "metrics": {
+    "total": 3,
+    "successful": 0,
+    "failed": 3,
+    "overall_score": 0,
+    "pass_rate": 0,
+    "correctness": 0,
+    "completeness": 0,
+    "faithfulness": 0,
+    "relevance": 0,
+    "clarity": 0,
+    "avg_time_per_query": 0,
+    "avg_answer_chars": 0
+  },
+  "results": [
+    {
+      "question": "What is the peak efficiency of the CPS 100/125kW string inverters?",
+      "ground_truth": "The peak efficiency is 99.1%.",
+      "timing": {
+        "total_seconds": 1.1168708801269531
+      },
+      "error": "Error code: 403 - {'error': {'code': 'AuthenticationTypeDisabled', 'message': 'Key based authentication is disabled for this resource.'}}",
+      "success": false
+    },
+    {
+      "question": "What National Electrical Code (NEC) versions are the CPS 100/125kW string inverters compliant with?",
+      "ground_truth": "The CPS 100/125kW string inverters are compliant with NFPA 70, NEC 2014 and 2017.",
+      "timing": {
+        "total_seconds": 0.02902674674987793
+      },
+      "error": "Error code: 403 - {'error': {'code': 'AuthenticationTypeDisabled', 'message': 'Key based authentication is disabled for this resource.'}}",
+      "success": false
+    },
+    {
+      "question": "According to Article 600, what information must be included on the label of a sign that has had its illumination system retrofitted?",
+      "ground_truth": "The sign must be marked that the illumination system has been replaced, include the kit providers and installer's name, logo, or unique identifier, and if equipped with tubular light-emitting diode lamps powered by existing sign sockets, include a label alerting service personnel that the sign has been modified, including a warning not to install fluorescent lamps.",
+      "timing": {
+        "total_seconds": 0.027281999588012695
+      },
+      "error": "Error code: 403 - {'error': {'code': 'AuthenticationTypeDisabled', 'message': 'Key based authentication is disabled for this resource.'}}",
+      "success": false
+    }
+  ]
+}

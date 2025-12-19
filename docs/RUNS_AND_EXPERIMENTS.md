@@ -71,36 +71,43 @@ E001__2025-12-17__L__quick30-debug/  # Experiment: local, 30 questions
 
 ```text
 ragas/
-├── eval_runners/                 # Entry point scripts
+├── clients_qa_gold/              # Gold standard data (per client)
+│   └── BFAI/
+│       ├── corpus/               # Document corpus for indexing
+│       ├── qa/                   # Gold QA pairs
+│       │   └── QA_BFAI_gold_v1-0__q458.json
+│       ├── baselines/            # Gold baseline snapshots
+│       │   ├── baseline_gold__BFAI__v1__2025-12-17__q458.json
+│       │   ├── REGISTRY.md
+│       │   └── registry.json
+│       └── tests/                # Client-specific test data
+│
+├── clients_eval_data/            # Evaluation outputs (per client)
+│   └── BFAI/
+│       ├── checkpoints/          # CICD/daily health checks (C###)
+│       │   ├── C001__2025-12-19__C__p25-flash/
+│       │   │   ├── checkpoint.json
+│       │   │   └── results.json
+│       │   ├── REGISTRY.md
+│       │   └── registry.json
+│       │
+│       ├── runs/                 # Full evaluation runs (R###)
+│       │   ├── R001__2025-12-18__L__p25-flash-2.5/
+│       │   │   ├── results.jsonl
+│       │   │   ├── run_summary.json
+│       │   │   └── comparison.md
+│       │   ├── REGISTRY.md
+│       │   └── registry.json
+│       │
+│       └── experiments/          # Quick experiments (E###)
+│           ├── E001__2025-12-17__L__gemini3-eval/
+│           ├── REGISTRY.md
+│           └── registry.json
+│
+├── eval_runners/                 # Entry point scripts (shared)
 │   ├── adhoc/                    # Ad-hoc evaluation runner
 │   ├── baseline/                 # Baseline evaluation runner
 │   └── cicd/                     # CICD evaluation runner
-│
-├── eval_data/                    # All evaluation outputs
-│   ├── gold/                     # Gold standard baseline snapshots
-│   │   ├── baseline_gold__BFAI__v1__2025-12-17__q458.json
-│   │   ├── REGISTRY.md
-│   │   └── registry.json
-│   │
-│   ├── checkpoints/              # CICD/daily health checks (C###)
-│   │   ├── C001__2025-12-19__C__p25-flash/
-│   │   │   ├── checkpoint.json
-│   │   │   └── results.json
-│   │   ├── REGISTRY.md
-│   │   └── registry.json
-│   │
-│   ├── runs/                     # Full evaluation runs (R###)
-│   │   ├── R001__2025-12-18__L__p25-flash-2.5/
-│   │   │   ├── results.jsonl
-│   │   │   ├── run_summary.json
-│   │   │   └── comparison.md
-│   │   ├── REGISTRY.md
-│   │   └── registry.json
-│   │
-│   └── experiments/              # Quick experiments (E###)
-│       ├── E001__2025-12-17__L__gemini3-eval/
-│       ├── REGISTRY.md
-│       └── registry.json
 ```
 
 ## Registry Files
