@@ -310,6 +310,7 @@ def generate_for_judge(
     temperature: float = None,
     reasoning_effort: str = None,
     seed: int = None,
+    return_metadata: bool = False,
     **kwargs
 ) -> dict:
     """Generate with judge-specific config (JSON output, lower tokens).
@@ -320,10 +321,11 @@ def generate_for_judge(
         temperature: Temperature (default: 0.0)
         reasoning_effort: "low" or "high" (default: "low")
         seed: Random seed for reproducibility
+        return_metadata: If True, return {"judgment": ..., "tokens": ..., "metadata": ...}
         **kwargs: Additional parameters
     
     Returns:
-        Parsed JSON response from judge
+        Parsed JSON response from judge, or dict with judgment + metadata if return_metadata=True
     """
     config = {**JUDGE_CONFIG, **kwargs}
     
@@ -345,7 +347,10 @@ def generate_for_judge(
     # Parse JSON, handling list responses
     text = result["text"]
     if text is None:
-        return {"error": "No response text", "verdict": "error"}
+        error_result = {"error": "No response text", "verdict": "error"}
+        if return_metadata:
+            return {"judgment": error_result, "tokens": {}, "metadata": {}}
+        return error_result
     
     try:
         parsed = json.loads(text)
@@ -353,10 +358,36 @@ def generate_for_judge(
         if isinstance(parsed, list) and len(parsed) > 0:
             parsed = parsed[0]
         if not isinstance(parsed, dict):
-            return {"error": f"Unexpected type: {type(parsed)}", "verdict": "error"}
+            error_result = {"error": f"Unexpected type: {type(parsed)}", "verdict": "error"}
+            if return_metadata:
+                return {"judgment": error_result, "tokens": {}, "metadata": {}}
+            return error_result
+        
+        if return_metadata:
+            # Extract tokens from llm_metadata
+            llm_meta = result.get("llm_metadata", {})
+            return {
+                "judgment": parsed,
+                "tokens": {
+                    "prompt": llm_meta.get("prompt_tokens", 0),
+                    "completion": llm_meta.get("completion_tokens", 0),
+                    "thinking": llm_meta.get("thinking_tokens", 0),
+                    "total": llm_meta.get("total_tokens", 0),
+                    "cached": llm_meta.get("cached_content_tokens", 0),
+                },
+                "metadata": {
+                    "model": result.get("model_used"),
+                    "model_version": llm_meta.get("model_version"),
+                    "finish_reason": llm_meta.get("finish_reason"),
+                    "response_id": llm_meta.get("response_id"),
+                },
+            }
         return parsed
     except json.JSONDecodeError as e:
-        return {"error": f"JSON parse error: {e}", "verdict": "error"}
+        error_result = {"error": f"JSON parse error: {e}", "verdict": "error"}
+        if return_metadata:
+            return {"judgment": error_result, "tokens": {}, "metadata": {}}
+        return error_result
 
 
 def generate_for_rag(

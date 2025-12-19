@@ -39,6 +39,7 @@ from services.api.core.config import QueryConfig
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from lib.clients.gemini_client import generate_for_judge, get_model_info
 from lib.core.config_loader import load_config, get_generator_config, get_judge_config
+from lib.core.pricing import get_model_pricing, calculate_token_cost
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
@@ -49,6 +50,10 @@ DEFAULT_WORKERS = 5  # Safe for 60 RPM quota, increase to 15-25 with 1500 RPM
 
 # Cloud Run config
 CLOUD_RUN_URL = "https://bfai-api-ppfq5ahfsq-ue.a.run.app"
+CLOUD_PROJECT_ID = "bfai-prod"
+CLOUD_SERVICE = "bfai-api"
+CLOUD_REGION = "us-east1"
+CLOUD_ENVIRONMENT = "production"
 SA_KEY_PATH = Path(__file__).parent.parent.parent / "config" / "ragas-cloud-run-invoker.json"
 
 # Retry config - no fallback, just retry
@@ -135,6 +140,10 @@ class GoldEvaluator:
         self.judge_reasoning = self.judge_config.get("reasoning_effort", "low")
         self.judge_seed = self.judge_config.get("seed", 42)
         
+        # Load pricing once at init (not per-question)
+        self.generator_pricing = get_model_pricing(self.model)
+        self.judge_pricing = get_model_pricing(self.judge_model_name)
+        
         self.lock = Lock()  # Thread-safe checkpoint access
         self.run_start_time = None
         
@@ -153,6 +162,13 @@ class GoldEvaluator:
             )
             self._refresh_cloud_token()
             self.index_metadata = {"job_id": JOB_ID, "mode": "cloud", "endpoint": CLOUD_RUN_URL}
+            self.orchestrator = {
+                "endpoint": CLOUD_RUN_URL,
+                "service": CLOUD_SERVICE,
+                "project_id": CLOUD_PROJECT_ID,
+                "environment": CLOUD_ENVIRONMENT,
+                "region": CLOUD_REGION,
+            }
             self.retriever = None
             self.ranker = None
             self.generator = None
@@ -178,6 +194,7 @@ class GoldEvaluator:
             self.retriever = VectorSearchRetriever(job_config)
             self.ranker = GoogleRanker(project_id=PROJECT_ID)
             self.generator = GeminiAnswerGenerator()
+            self.orchestrator = None  # Local mode has no orchestrator
         
         # Log model info
         model_info = get_model_info()
@@ -236,12 +253,14 @@ class GoldEvaluator:
         next_id = max(existing_ids, default=0) + 1
         
         # Build directory name
+        # Format: {TYPE}{ID}__{DATE}__{local|cloud}__p{K}-{model}-{reasoning}__q{N}
         date_str = datetime.now().strftime("%Y-%m-%d")
-        mode_str = "C" if self.cloud_mode else "L"
+        mode_str = "cloud" if self.cloud_mode else "local"
         
-        # Model short name (e.g., "flash-3" from "gemini-3-flash-preview")
+        # Model short name (e.g., "3-flash" from "gemini-3-flash-preview")
         model_short = self.model.replace("gemini-", "").replace("-preview", "")
-        config_str = f"p{self.precision_k}-{model_short}"
+        reasoning_short = self.generator_reasoning.lower()
+        config_str = f"p{self.precision_k}-{model_short}-{reasoning_short}"
         
         dir_name = f"{type_prefix}{next_id:03d}__{date_str}__{mode_str}__{config_str}__q{num_questions}"
         
@@ -304,7 +323,13 @@ class GoldEvaluator:
         return response.json().get("chunks", [])
     
     def _judge_answer(self, question: str, ground_truth: str, answer: str, context: str) -> dict:
-        """Judge answer quality using Gemini 3 Flash with structured JSON output."""
+        """Judge answer quality using Gemini 3 Flash with structured JSON output.
+        
+        Returns dict with:
+            - judgment: the scores and verdict
+            - tokens: token usage for the judge call
+            - metadata: model info
+        """
         prompt = f"""You are an expert evaluator for a RAG system.
 Evaluate the RAG answer against the ground truth.
 
@@ -326,17 +351,23 @@ Score 1-5 for each (5=best):
 Respond with JSON containing: correctness, completeness, faithfulness, relevance, clarity, overall_score (all 1-5), and verdict (pass|partial|fail)."""
         
         try:
-            # Use gemini_client with config from loaded config file
-            return generate_for_judge(
+            # Use gemini_client with config from loaded config file, return metadata for token tracking
+            result = generate_for_judge(
                 prompt,
                 model=self.judge_model_name,
                 temperature=self.judge_temperature,
                 reasoning_effort=self.judge_reasoning,
                 seed=self.judge_seed,
+                return_metadata=True,
             )
+            return result
         except Exception as e:
             # Return partial scores on failure
-            return {"correctness": 3, "completeness": 3, "faithfulness": 3, "relevance": 3, "clarity": 3, "overall_score": 3, "verdict": "partial", "parse_error": str(e)}
+            return {
+                "judgment": {"correctness": 3, "completeness": 3, "faithfulness": 3, "relevance": 3, "clarity": 3, "overall_score": 3, "verdict": "partial", "parse_error": str(e)},
+                "tokens": {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0},
+                "metadata": {},
+            }
     
     def run_single_attempt(self, q: dict) -> dict:
         """Run single question through pipeline (one attempt, no retry)."""
@@ -373,20 +404,37 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             sources = cloud_result.get("sources", [])
             context = "\n\n".join([f"[{i+1}] {s.get('snippet', '')}" for i, s in enumerate(sources)])
             
-            # Judge
+            # Judge (returns judgment, tokens, and metadata)
             judge_start = time.time()
-            judgment = self._judge_answer(question, ground_truth, answer, context)
+            judge_result = self._judge_answer(question, ground_truth, answer, context)
             judge_time = time.time() - judge_start
             
             total_time = time.time() - start
+            
+            # Cloud mode: generator tokens not available, only judge tokens
+            generator_tokens = {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0}
+            judge_tokens = judge_result.get("tokens", {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0})
+            
+            # Calculate cost estimate
+            gen_cost = calculate_token_cost(generator_tokens, self.generator_pricing)
+            judge_cost = calculate_token_cost(judge_tokens, self.judge_pricing)
+            cost_estimate = {
+                "generator": gen_cost,
+                "judge": judge_cost,
+                "total": round(gen_cost + judge_cost, 8),
+            }
             
             return {
                 "question_id": q.get("question_id", ""),
                 "question_type": q.get("question_type", ""),
                 "difficulty": q.get("difficulty", ""),
+                "question_text": question,
+                "expected_answer": ground_truth,
+                "source_documents": source_filenames,
+                "generated_answer": answer,
                 "recall_hit": recall_hit,
                 "mrr": mrr,
-                "judgment": judgment,
+                "judgment": judge_result.get("judgment", judge_result),
                 "time": total_time,
                 "timing": {
                     "cloud_retrieve": retrieve_time,
@@ -394,8 +442,11 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                     "judge": judge_time,
                     "total": total_time,
                 },
-                "tokens": {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0},
+                "generator_tokens": generator_tokens,
+                "judge_tokens": judge_tokens,
+                "cost_estimate_usd": cost_estimate,
                 "llm_metadata": {"model": "cloud", "mode": "cloud"},
+                "orchestrator": self.orchestrator,
                 "answer_length": len(answer),
                 "retrieval_candidates": len(raw_chunks),
             }
@@ -446,12 +497,33 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         answer = gen_result.answer_text
         gen_time = time.time() - gen_start
         
-        # Judge
+        # Judge (returns judgment, tokens, and metadata)
         judge_start = time.time()
-        judgment = self._judge_answer(question, ground_truth, answer, context)
+        judge_result = self._judge_answer(question, ground_truth, answer, context)
         judge_time = time.time() - judge_start
         
         total_time = time.time() - start
+        
+        # Extract generator tokens
+        generator_tokens = {
+            "prompt": gen_result.prompt_tokens,
+            "completion": gen_result.completion_tokens,
+            "thinking": gen_result.thinking_tokens,
+            "total": gen_result.total_tokens,
+            "cached": gen_result.cached_content_tokens,
+        }
+        
+        # Extract judge tokens from result
+        judge_tokens = judge_result.get("tokens", {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0})
+        
+        # Calculate cost estimate using pre-loaded pricing (no per-question lookup)
+        gen_cost = calculate_token_cost(generator_tokens, self.generator_pricing)
+        judge_cost = calculate_token_cost(judge_tokens, self.judge_pricing)
+        cost_estimate = {
+            "generator": gen_cost,
+            "judge": judge_cost,
+            "total": round(gen_cost + judge_cost, 8),
+        }
         
         # Build comprehensive per-question result with all metadata
         return {
@@ -473,7 +545,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             # Evaluation
             "recall_hit": recall_hit,
             "mrr": mrr,
-            "judgment": judgment,
+            "judgment": judge_result.get("judgment", judge_result),  # Handle both old and new format
             
             # Performance
             "time": total_time,
@@ -484,13 +556,13 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 "judge": judge_time,
                 "total": total_time,
             },
-            "tokens": {
-                "prompt": gen_result.prompt_tokens,
-                "completion": gen_result.completion_tokens,
-                "thinking": gen_result.thinking_tokens,
-                "total": gen_result.total_tokens,
-                "cached": gen_result.cached_content_tokens,
-            },
+            
+            # Token usage (separate for generator and judge)
+            "generator_tokens": generator_tokens,
+            "judge_tokens": judge_tokens,
+            
+            # Cost estimate (USD)
+            "cost_estimate_usd": cost_estimate,
             
             # Generator LLM metadata
             "llm_metadata": {
@@ -803,6 +875,29 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                     "pass_rate": diff_pass / len(diff_results) if diff_results else 0,
                 }
         
+        # 6-bucket breakdown: type x difficulty with full metrics
+        quality_by_bucket = {}
+        for qtype in ["single_hop", "multi_hop"]:
+            quality_by_bucket[qtype] = {}
+            for diff in ["easy", "medium", "hard"]:
+                bucket_results = [r for r in valid if r.get("question_type") == qtype and r.get("difficulty") == diff]
+                if bucket_results:
+                    bucket_pass = sum(1 for r in bucket_results if r.get("judgment", {}).get("verdict") == "pass")
+                    bucket_partial = sum(1 for r in bucket_results if r.get("judgment", {}).get("verdict") == "partial")
+                    bucket_fail = sum(1 for r in bucket_results if r.get("judgment", {}).get("verdict") == "fail")
+                    bucket_recall = sum(1 for r in bucket_results if r.get("recall_hit")) / len(bucket_results)
+                    bucket_mrr = sum(r.get("mrr", 0) for r in bucket_results) / len(bucket_results)
+                    bucket_scores = [r.get("judgment", {}).get("overall_score", 0) for r in bucket_results]
+                    quality_by_bucket[qtype][diff] = {
+                        "count": len(bucket_results),
+                        "pass_rate": bucket_pass / len(bucket_results),
+                        "partial_rate": bucket_partial / len(bucket_results),
+                        "fail_rate": bucket_fail / len(bucket_results),
+                        "recall_at_100": bucket_recall,
+                        "mrr": bucket_mrr,
+                        "overall_score_avg": sum(bucket_scores) / len(bucket_scores) if bucket_scores else 0,
+                    }
+        
         # Build comprehensive output
         output = {
             "schema_version": "1.1",
@@ -839,6 +934,14 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             "skipped": skipped,
             "breakdown_by_type": breakdown_by_type,
             "breakdown_by_difficulty": breakdown_by_difficulty,
+            "quality_by_bucket": quality_by_bucket,
+            "orchestrator": self.orchestrator,
+            "cost_summary_usd": {
+                "generator_total": sum(r.get("cost_estimate_usd", {}).get("generator", 0) for r in valid),
+                "judge_total": sum(r.get("cost_estimate_usd", {}).get("judge", 0) for r in valid),
+                "total": sum(r.get("cost_estimate_usd", {}).get("total", 0) for r in valid),
+                "avg_per_question": sum(r.get("cost_estimate_usd", {}).get("total", 0) for r in valid) / len(valid) if valid else 0,
+            },
             "results": results,
         }
         
