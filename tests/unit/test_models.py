@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 sys.path.insert(0, "/Users/scottmacon/Documents/GitHub/sm-dev-01")
 
 import pytest
-from core.models import (
+from lib.utils.models import (
     get_model,
     get_approved_models,
     get_models_with_thinking,

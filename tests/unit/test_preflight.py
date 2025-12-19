@@ -10,16 +10,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 sys.path.insert(0, "/Users/scottmacon/Documents/GitHub/sm-dev-01")
 
 import pytest
-from core.preflight import (
+from lib.utils.preflight import (
     PreflightCheck,
     PreflightResult,
-    PreflightConfig,
-    CheckStatus,
-    check_gcp_auth,
-    check_orchestrator_import,
-    check_model_registry,
-    check_corpus_file,
-    check_model_valid,
     run_preflight_checks,
 )
 

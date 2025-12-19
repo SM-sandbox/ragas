@@ -9,13 +9,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 import pytest
-from core.metrics import (
+from lib.utils.metrics import (
     normalize_doc_name,
     is_relevant_doc,
     compute_retrieval_metrics,
-    validate_metrics_data,
     RetrievalMetricsResult,
-    MetricsValidationResult,
 )
 
 
@@ -197,109 +195,6 @@ class TestComputeRetrievalMetrics:
         
         assert metrics.total_questions == 2
         assert metrics.questions_with_relevant_docs == 1
-
-
-class TestValidateMetricsData:
-    """Tests for validate_metrics_data function."""
-    
-    def test_valid_corpus(self):
-        """Valid corpus should pass validation."""
-        corpus = [
-            {
-                "question": "What is X?",
-                "answer": "X is Y",
-                "source_document": "Doc A",
-            }
-        ]
-        
-        result = validate_metrics_data(corpus)
-        
-        assert result.valid is True
-        assert len(result.errors) == 0
-    
-    def test_missing_question_field(self):
-        """Missing question field should fail."""
-        corpus = [
-            {
-                "answer": "X is Y",
-                "source_document": "Doc A",
-            }
-        ]
-        
-        result = validate_metrics_data(corpus)
-        
-        assert result.valid is False
-        assert any("question" in e for e in result.errors)
-    
-    def test_missing_source_document(self):
-        """Missing source_document should fail."""
-        corpus = [
-            {
-                "question": "What is X?",
-                "answer": "X is Y",
-            }
-        ]
-        
-        result = validate_metrics_data(corpus)
-        
-        assert result.valid is False
-        assert any("source_document" in e for e in result.errors)
-    
-    def test_partial_coverage_fails(self):
-        """Partial field coverage should fail."""
-        corpus = [
-            {"question": "Q1", "answer": "A1", "source_document": "D1"},
-            {"question": "Q2", "answer": "A2"},  # Missing source_document
-        ]
-        
-        result = validate_metrics_data(corpus)
-        
-        assert result.valid is False
-    
-    def test_cache_validation(self):
-        """Should validate retrieval cache if provided."""
-        corpus = [
-            {"question": "Q1", "answer": "A1", "source_document": "D1"},
-        ]
-        cache = {
-            "q1": {
-                "expected_source": "D1",
-                "reranked_docs": [{"doc_name": "D1.pdf"}]
-            }
-        }
-        
-        result = validate_metrics_data(corpus, cache)
-        
-        assert result.valid is True
-        assert "expected_source" in result.cache_fields_present
-    
-    def test_cache_missing_expected_source(self):
-        """Cache missing expected_source should fail."""
-        corpus = [
-            {"question": "Q1", "answer": "A1", "source_document": "D1"},
-        ]
-        cache = {
-            "q1": {
-                "reranked_docs": [{"doc_name": "D1.pdf"}]
-            }
-        }
-        
-        result = validate_metrics_data(corpus, cache)
-        
-        assert result.valid is False
-        assert any("expected_source" in e for e in result.errors)
-    
-    def test_reports_field_coverage(self):
-        """Should report field coverage percentages."""
-        corpus = [
-            {"question": "Q1", "answer": "A1", "source_document": "D1", "difficulty": "easy"},
-            {"question": "Q2", "answer": "A2", "source_document": "D2"},
-        ]
-        
-        result = validate_metrics_data(corpus)
-        
-        assert result.corpus_fields_present["question"] == 1.0
-        assert result.corpus_fields_present["difficulty"] == 0.5
 
 
 if __name__ == "__main__":
