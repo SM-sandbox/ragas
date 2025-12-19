@@ -185,7 +185,7 @@ class GoldEvaluator:
         # Use different checkpoint/results files for cloud mode
         # Use different checkpoint/results files for cloud mode and non-default models
         suffix = "_cloud" if cloud_mode else ""
-        model_suffix = "" if model == "gemini-3-flash-preview" else f"_{model.replace('-', '_')}"
+        model_suffix = "" if self.model == "gemini-3-flash-preview" else f"_{self.model.replace('-', '_')}"
         self.checkpoint_file = OUTPUT_DIR / f"checkpoint_p{precision_k}{suffix}{model_suffix}.json"
         self.results_file = OUTPUT_DIR / f"results_p{precision_k}{suffix}{model_suffix}.json"
     

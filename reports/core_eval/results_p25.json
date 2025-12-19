@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "timestamp": "2025-12-19T00:57:39.451579",
+  "timestamp": "2025-12-19T10:30:15.629340",
   "client": "BFAI",
   "index": {
     "job_id": "bfai__eval66a_g1_1536_tt",
@@ -17,7 +17,7 @@
     "judge_model": "gemini-3-flash-preview",
     "precision_k": 25,
     "recall_k": 100,
-    "workers": 5,
+    "workers": 10,
     "temperature": 0.0
   },
   "metrics": {
@@ -68,9 +68,9 @@
     "fallback_rate": 0.0
   },
   "execution": {
-    "run_duration_seconds": 0.017078161239624023,
-    "questions_per_second": 26817.875389147157,
-    "workers": 5
+    "run_duration_seconds": 0.020745038986206055,
+    "questions_per_second": 22077.567571916195,
+    "workers": 10
   },
   "retry_stats": {
     "total_questions": 30,
