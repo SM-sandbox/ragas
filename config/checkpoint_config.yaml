@@ -28,11 +28,13 @@ generator:
   model: "gemini-2.5-flash"
   reasoning_effort: "low"
   temperature: 0.0  # MUST be 0.0 for reproducibility
+  seed: 42  # Fixed seed for reproducibility
 
 # Judge model (fixed)
 judge:
   model: "gemini-2.0-flash"
   temperature: 0.0
+  seed: 42  # Fixed seed for reproducibility
 
 # Retrieval settings (fixed)
 retrieval:

@@ -25,12 +25,14 @@ generator:
   model: "gemini-2.5-flash"
   reasoning_effort: "low"  # low | medium | high
   temperature: 0.0
+  seed: 42  # Default seed (can be overridden for experiments)
   max_output_tokens: 8192
 
 # Judge model
 judge:
   model: "gemini-2.0-flash"
   temperature: 0.0
+  seed: 42  # Default seed (can be overridden for experiments)
 
 # Retrieval settings (experiment with different K values)
 retrieval:
