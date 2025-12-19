@@ -1,0 +1,142 @@
+{
+  "report_type": "checkpoint_comparison",
+  "generated_at": "2025-12-19T13:36:31.865208",
+  "baseline": {
+    "id": "C006",
+    "mode": "local",
+    "path": "clients_eval_data/BFAI/checkpoints/C006__2025-12-19__L__p25-3-flash__q458/results.json",
+    "timestamp": "2025-12-19T11:56:49.049991"
+  },
+  "checkpoint": {
+    "id": "C007",
+    "mode": "cloud",
+    "path": "clients_eval_data/BFAI/checkpoints/C007__2025-12-19__cloud__p25-3-flash-low__q458/results.json",
+    "timestamp": "2025-12-19T13:36:08.522662",
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    }
+  },
+  "metrics_comparison": {
+    "pass_rate": {
+      "baseline": 0.9126637554585153,
+      "checkpoint": 0.9235807860262009,
+      "delta": 0.01091703056768556,
+      "delta_pct": 1.091703056768556
+    },
+    "partial_rate": {
+      "baseline": 0.07205240174672489,
+      "checkpoint": 0.05895196506550218,
+      "delta": -0.01310043668122271
+    },
+    "fail_rate": {
+      "baseline": 0.015283842794759825,
+      "checkpoint": 0.017467248908296942,
+      "delta": 0.002183406113537118
+    },
+    "recall_at_100": {
+      "baseline": 0.9912663755458515,
+      "checkpoint": 0.9912663755458515,
+      "delta": 0.0
+    },
+    "mrr": {
+      "baseline": 0.7367268015373777,
+      "checkpoint": 0.7396877792149498,
+      "delta": 0.0029609776775720853
+    },
+    "overall_score_avg": {
+      "baseline": 4.80589519650655,
+      "checkpoint": 4.814847161572053,
+      "delta": 0.008951965065502776
+    }
+  },
+  "latency_comparison": {
+    "avg_s": {
+      "baseline": 9.883187903587475,
+      "checkpoint": 12.10675849924962,
+      "delta": 2.223570595662146
+    }
+  },
+  "cost_comparison": {
+    "baseline": {},
+    "checkpoint": {
+      "generator_total": 0.0,
+      "judge_total": 0.06891759999999998,
+      "total": 0.06891759999999998,
+      "avg_per_question": 0.00015047510917030565
+    }
+  },
+  "quality_by_bucket": {
+    "single_hop": {
+      "easy": {
+        "count": 88,
+        "pass_rate": 0.9545454545454546,
+        "partial_rate": 0.0,
+        "fail_rate": 0.045454545454545456,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 4.819318181818182
+      },
+      "medium": {
+        "count": 78,
+        "pass_rate": 0.9358974358974359,
+        "partial_rate": 0.05128205128205128,
+        "fail_rate": 0.01282051282051282,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 4.887179487179487
+      },
+      "hard": {
+        "count": 56,
+        "pass_rate": 0.9642857142857143,
+        "partial_rate": 0.03571428571428571,
+        "fail_rate": 0.0,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 4.919642857142857
+      }
+    },
+    "multi_hop": {
+      "easy": {
+        "count": 73,
+        "pass_rate": 0.8493150684931506,
+        "partial_rate": 0.1232876712328767,
+        "fail_rate": 0.0273972602739726,
+        "recall_at_100": 1.0,
+        "mrr": 0.45899467664968735,
+        "overall_score_avg": 4.668493150684932
+      },
+      "medium": {
+        "count": 83,
+        "pass_rate": 0.9518072289156626,
+        "partial_rate": 0.04819277108433735,
+        "fail_rate": 0.0,
+        "recall_at_100": 0.9759036144578314,
+        "mrr": 0.5798099323701734,
+        "overall_score_avg": 4.865060240963856
+      },
+      "hard": {
+        "count": 80,
+        "pass_rate": 0.8875,
+        "partial_rate": 0.1,
+        "fail_rate": 0.0125,
+        "recall_at_100": 0.975,
+        "mrr": 0.43932708872869475,
+        "overall_score_avg": 4.7475000000000005
+      }
+    }
+  },
+  "thresholds": {
+    "min_pass_rate": 0.85,
+    "max_fail_rate": 0.08
+  },
+  "verdict": {
+    "pass_rate_ok": true,
+    "fail_rate_ok": true,
+    "within_tolerance": true,
+    "overall": "PASS"
+  }
+}
