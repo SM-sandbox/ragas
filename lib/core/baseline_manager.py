@@ -4,8 +4,8 @@ Baseline Manager for Core Eval
 Handles loading, saving, and comparing baselines for RAG evaluation.
 Baselines are versioned JSON files stored in the baselines/ directory.
 
-Naming convention: baseline_{CLIENT}_v{VERSION}__{DATE}__q{COUNT}.json
-Example: baseline_BFAI_v1__2025-12-17__q458.json
+Naming convention: baseline_gold__{CLIENT}__{VERSION}__{DATE}__q{COUNT}.json
+Example: baseline_gold__BFAI__v1__2025-12-17__q458.json
 """
 
 import json
@@ -20,7 +20,7 @@ BASELINES_DIR = Path(__file__).parent.parent.parent / "baselines"
 
 def get_baseline_path(client: str, version: str, date: str, question_count: int) -> Path:
     """Generate baseline file path."""
-    filename = f"baseline_{client}_v{version}__{date}__q{question_count}.json"
+    filename = f"baseline_gold__{client}__v{version}__{date}__q{question_count}.json"
     return BASELINES_DIR / filename
 
 
@@ -31,7 +31,8 @@ def parse_baseline_filename(filename: str) -> Optional[Dict[str, str]]:
     Returns:
         Dict with client, version, date, question_count or None if invalid
     """
-    pattern = r"baseline_(\w+)_v(\d+)__(\d{4}-\d{2}-\d{2})__q(\d+)\.json"
+    # Support both old and new naming conventions
+    pattern = r"baseline_(?:gold__)?([\w]+)__?v?(\d+)__(\d{4}-\d{2}-\d{2})__q(\d+)\.json"
     match = re.match(pattern, filename)
     if match:
         return {

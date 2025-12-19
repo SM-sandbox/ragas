@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "type": "runs",
+  "description": "Full evaluation runs with variations against the gold standard corpus",
+  "entries": [
+    {
+      "id": "R001",
+      "date": "2025-12-18",
+      "mode": "local",
+      "config_summary": "p25-flash-2.5",
+      "model": "gemini-2.5-flash",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.856,
+      "fail_rate": 0.039,
+      "folder": "R001__2025-12-18__L__p25-flash-2.5",
+      "notes": "Gemini 2.5 Flash baseline"
+    },
+    {
+      "id": "R002",
+      "date": "2025-12-18",
+      "mode": "local",
+      "config_summary": "p25-flash-2.5",
+      "model": "gemini-2.5-flash",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.856,
+      "fail_rate": 0.039,
+      "folder": "R002__2025-12-18__L__p25-flash-2.5",
+      "notes": "Gemini 2.5 Flash run 2"
+    },
+    {
+      "id": "R003",
+      "date": "2025-12-18",
+      "mode": "local",
+      "config_summary": "p25-flash-2.5",
+      "model": "gemini-2.5-flash",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.856,
+      "fail_rate": 0.039,
+      "folder": "R003__2025-12-18__L__p25-flash-2.5",
+      "notes": "Gemini 2.5 Flash run 3"
+    },
+    {
+      "id": "R004",
+      "date": "2025-12-18",
+      "mode": "cloud",
+      "config_summary": "p25-flash-3",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.926,
+      "fail_rate": 0.009,
+      "folder": "R004__2025-12-18__C__p25-flash-3",
+      "notes": "Gemini 3 Flash Preview cloud"
+    },
+    {
+      "id": "R005",
+      "date": "2025-12-19",
+      "mode": "local",
+      "config_summary": "p25-flash-3",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.924,
+      "fail_rate": 0.011,
+      "folder": "R005__2025-12-19__L__p25-flash-3",
+      "notes": "Gemini 3 Flash Preview local"
+    }
+  ]
+}

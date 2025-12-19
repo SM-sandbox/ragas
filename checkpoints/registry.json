@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "type": "checkpoints",
+  "description": "CICD and daily health check runs against the gold standard baseline",
+  "entries": [
+    {
+      "id": "C001",
+      "date": "2025-12-19",
+      "mode": "cloud",
+      "config_summary": "p25-flash",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.926,
+      "fail_rate": 0.009,
+      "acceptable_rate": 0.991,
+      "folder": "C001__2025-12-19__C__p25-flash",
+      "notes": "Cloud baseline p25"
+    },
+    {
+      "id": "C002",
+      "date": "2025-12-18",
+      "mode": "cloud",
+      "config_summary": "p12-flash",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 12,
+      "questions": 458,
+      "pass_rate": 0.862,
+      "fail_rate": 0.035,
+      "acceptable_rate": 0.965,
+      "folder": "C002__2025-12-18__C__p12-flash",
+      "notes": "Cloud p12 comparison"
+    },
+    {
+      "id": "C003",
+      "date": "2025-12-19",
+      "mode": "local",
+      "config_summary": "p25-flash",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.924,
+      "fail_rate": 0.011,
+      "acceptable_rate": 0.989,
+      "folder": "C003__2025-12-19__L__p25-flash",
+      "notes": "Local baseline p25"
+    },
+    {
+      "id": "C004",
+      "date": "2025-12-19",
+      "mode": "cloud",
+      "config_summary": "p25-pro",
+      "model": "gemini-3-pro-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.921,
+      "fail_rate": 0.011,
+      "acceptable_rate": 0.989,
+      "folder": "C004__2025-12-19__C__p25-pro",
+      "notes": "Gemini 3 Pro test"
+    }
+  ]
+}

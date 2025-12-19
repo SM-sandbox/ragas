@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "type": "baselines",
+  "description": "Gold standard baseline snapshots for RAG evaluation comparison",
+  "entries": [
+    {
+      "version": "v1",
+      "client": "BFAI",
+      "date": "2025-12-17",
+      "questions": 458,
+      "pass_rate": 0.856,
+      "fail_rate": 0.039,
+      "acceptable_rate": 0.961,
+      "model": "gemini-2.5-flash",
+      "precision_k": 25,
+      "file": "baseline_gold__BFAI__v1__2025-12-17__q458.json",
+      "notes": "Initial baseline"
+    },
+    {
+      "version": "v2",
+      "client": "BFAI",
+      "date": "2025-12-18",
+      "questions": 458,
+      "pass_rate": 0.924,
+      "fail_rate": 0.011,
+      "acceptable_rate": 0.989,
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "file": "baseline_gold__BFAI__v2__2025-12-18__q458.json",
+      "notes": "Major improvement over v1: pass rate 92.4% (was 85.6%), fail rate 1.1% (was 3.9%)"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "type": "experiments",
+  "description": "Quick exploratory tests and hypothesis validation",
+  "entries": [
+    {
+      "id": "E001",
+      "date": "2025-12-17",
+      "mode": "local",
+      "description": "gemini3-eval",
+      "questions": 30,
+      "folder": "E001__2025-12-17__L__gemini3-eval",
+      "notes": "Gemini 3 Flash initial evaluation"
+    },
+    {
+      "id": "E002",
+      "date": "2025-12-17",
+      "mode": "local",
+      "description": "gemini3-test",
+      "questions": 30,
+      "folder": "E002__2025-12-17__L__gemini3-test",
+      "notes": "Gemini 3 Flash test runs"
+    },
+    {
+      "id": "E003",
+      "date": "2025-12-18",
+      "mode": "local",
+      "description": "gemini3-comparison",
+      "questions": 100,
+      "folder": "E003__2025-12-18__L__gemini3-comparison",
+      "notes": "Model comparison tests"
+    },
+    {
+      "id": "E004",
+      "date": "2025-12-18",
+      "mode": "local",
+      "description": "orchestrator-eval",
+      "questions": 50,
+      "folder": "E004__2025-12-18__L__orchestrator-eval",
+      "notes": "Orchestrator endpoint testing"
+    }
+  ],
+  "reference_docs": [
+    "Context_Size_Sweep.md",
+    "Model_Comparison_Flash_vs_Pro.md",
+    "Temperature_Sweep.md",
+    "foundational/"
+  ]
+}
