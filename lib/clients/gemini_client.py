@@ -156,6 +156,7 @@ def generate(
     system_instruction: str = None,
     response_mime_type: str = None,
     response_schema: Any = None,
+    seed: int = None,
     **kwargs,
 ) -> dict:
     """
@@ -191,6 +192,8 @@ def generate(
         config_params["response_mime_type"] = response_mime_type
     if response_schema:
         config_params["response_schema"] = response_schema
+    if seed is not None:
+        config_params["seed"] = seed
     
     # Add thinking config if specified
     if thinking_level:
@@ -336,6 +339,7 @@ def generate_for_judge(
         max_output_tokens=config.get("max_output_tokens"),
         temperature=target_temp,
         thinking_level=target_reasoning,
+        seed=seed,
     )
     
     # Parse JSON, handling list responses
@@ -392,6 +396,7 @@ def generate_for_rag(
         max_output_tokens=target_max_tokens,
         temperature=target_temp,
         thinking_level=target_reasoning,
+        seed=seed,
     )
     return result
 
