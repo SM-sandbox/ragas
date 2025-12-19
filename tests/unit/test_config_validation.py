@@ -459,5 +459,62 @@ class TestRequiredFieldsSchema:
             assert field in checkpoint["execution"], f"Execution missing required field: {field}"
 
 
+# =============================================================================
+# SEED PASSTHROUGH TESTS
+# =============================================================================
+
+class TestSeedPassthrough:
+    """Tests to verify seed=42 is passed through the code to Gemini API."""
+    
+    def test_gemini_client_generate_accepts_seed(self):
+        """generate() function must accept seed parameter."""
+        from lib.clients.gemini_client import generate
+        import inspect
+        sig = inspect.signature(generate)
+        assert "seed" in sig.parameters, "generate() must accept seed parameter"
+    
+    def test_gemini_client_generate_for_judge_accepts_seed(self):
+        """generate_for_judge() must accept seed parameter."""
+        from lib.clients.gemini_client import generate_for_judge
+        import inspect
+        sig = inspect.signature(generate_for_judge)
+        assert "seed" in sig.parameters, "generate_for_judge() must accept seed parameter"
+    
+    def test_gemini_client_generate_for_rag_accepts_seed(self):
+        """generate_for_rag() must accept seed parameter."""
+        from lib.clients.gemini_client import generate_for_rag
+        import inspect
+        sig = inspect.signature(generate_for_rag)
+        assert "seed" in sig.parameters, "generate_for_rag() must accept seed parameter"
+    
+    def test_config_loader_returns_judge_seed(self):
+        """Config loader must return judge seed = 42."""
+        from lib.core.config_loader import load_config, get_judge_config
+        config = load_config(config_type="checkpoint")
+        judge_config = get_judge_config(config)
+        assert "seed" in judge_config, "Judge config must have seed"
+        assert judge_config["seed"] == 42, "Judge seed must be 42"
+    
+    def test_config_loader_returns_generator_seed(self):
+        """Config loader must return generator seed = 42."""
+        from lib.core.config_loader import load_config, get_generator_config
+        config = load_config(config_type="checkpoint")
+        gen_config = get_generator_config(config)
+        assert "seed" in gen_config, "Generator config must have seed"
+        assert gen_config["seed"] == 42, "Generator seed must be 42"
+    
+    def test_all_configs_have_seed_42(self):
+        """All config files must have seed=42 for both generator and judge."""
+        configs = [
+            ("checkpoint", CHECKPOINT_CONFIG),
+            ("run", RUN_CONFIG),
+            ("experiment", EXPERIMENT_CONFIG),
+        ]
+        for name, path in configs:
+            config = load_config(path)
+            assert config["generator"]["seed"] == 42, f"{name} generator seed must be 42"
+            assert config["judge"]["seed"] == 42, f"{name} judge seed must be 42"
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
