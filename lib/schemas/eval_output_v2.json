@@ -1,0 +1,390 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ragas.dev/schemas/eval_output_v2.json",
+  "title": "Evaluation Output Schema v2.0",
+  "description": "Comprehensive schema for RAG evaluation outputs with full metadata for reproducibility and troubleshooting.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "run_type",
+    "client",
+    "timestamp",
+    "environment",
+    "generator_config",
+    "judge_config",
+    "retrieval_config",
+    "corpus",
+    "execution",
+    "metrics",
+    "latency",
+    "tokens",
+    "answer_stats",
+    "quality",
+    "retry_stats",
+    "errors",
+    "skipped",
+    "breakdown_by_type",
+    "breakdown_by_difficulty",
+    "results"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^2\\.[0-9]+$",
+      "description": "Schema version (must be 2.x)"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Unique identifier for this run"
+    },
+    "run_type": {
+      "type": "string",
+      "enum": ["checkpoint", "run", "experiment"],
+      "description": "Type of evaluation run"
+    },
+    "client": {
+      "type": "string",
+      "description": "Client identifier (e.g., BFAI)"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of run completion"
+    },
+    "environment": {
+      "$ref": "#/definitions/EnvironmentInfo"
+    },
+    "generator_config": {
+      "$ref": "#/definitions/GeneratorConfig"
+    },
+    "judge_config": {
+      "$ref": "#/definitions/JudgeConfig"
+    },
+    "retrieval_config": {
+      "$ref": "#/definitions/RetrievalConfig"
+    },
+    "corpus": {
+      "$ref": "#/definitions/CorpusInfo"
+    },
+    "execution": {
+      "$ref": "#/definitions/ExecutionInfo"
+    },
+    "metrics": {
+      "$ref": "#/definitions/MetricsAggregate"
+    },
+    "latency": {
+      "$ref": "#/definitions/LatencyAggregate"
+    },
+    "tokens": {
+      "$ref": "#/definitions/TokenAggregate"
+    },
+    "answer_stats": {
+      "$ref": "#/definitions/AnswerStats"
+    },
+    "quality": {
+      "$ref": "#/definitions/QualityInfo"
+    },
+    "retry_stats": {
+      "$ref": "#/definitions/RetryStats"
+    },
+    "errors": {
+      "$ref": "#/definitions/ErrorStats"
+    },
+    "skipped": {
+      "$ref": "#/definitions/SkippedStats"
+    },
+    "breakdown_by_type": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/BreakdownStats"
+      }
+    },
+    "breakdown_by_difficulty": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/BreakdownStats"
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/QuestionResult"
+      }
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "Optional notes about this run"
+    }
+  },
+  "definitions": {
+    "EnvironmentInfo": {
+      "type": "object",
+      "required": ["git_commit", "git_branch", "config_file", "config_hash", "hostname", "start_time_utc"],
+      "properties": {
+        "git_commit": {"type": "string", "description": "Git commit hash (short)"},
+        "git_branch": {"type": "string", "description": "Git branch name"},
+        "git_dirty": {"type": "boolean", "description": "True if uncommitted changes"},
+        "config_file": {"type": "string", "description": "Config file used"},
+        "config_hash": {"type": "string", "description": "SHA256 hash of config file"},
+        "hostname": {"type": "string", "description": "Machine hostname"},
+        "user": {"type": "string", "description": "Username who ran evaluation"},
+        "os_name": {"type": "string", "description": "Operating system name"},
+        "os_version": {"type": "string", "description": "OS version"},
+        "python_version": {"type": "string", "description": "Python version"},
+        "timezone": {"type": "string", "description": "Timezone of execution"},
+        "start_time_utc": {"type": "string", "format": "date-time", "description": "Run start time (UTC)"},
+        "end_time_utc": {"type": ["string", "null"], "format": "date-time", "description": "Run end time (UTC)"},
+        "ragas_version": {"type": "string", "description": "RAGAS framework version"}
+      }
+    },
+    "GeneratorConfig": {
+      "type": "object",
+      "required": ["model", "temperature"],
+      "properties": {
+        "model": {"type": "string", "description": "Generator model name"},
+        "model_version": {"type": ["string", "null"], "description": "Specific model version"},
+        "api_endpoint": {"type": ["string", "null"], "description": "API endpoint used"},
+        "temperature": {"type": "number", "minimum": 0, "maximum": 2, "description": "Sampling temperature"},
+        "seed": {"type": ["integer", "null"], "description": "Random seed for reproducibility"},
+        "top_p": {"type": ["number", "null"], "description": "Top-p sampling parameter"},
+        "top_k": {"type": ["integer", "null"], "description": "Top-k sampling parameter"},
+        "max_output_tokens": {"type": "integer", "description": "Maximum output tokens"},
+        "reasoning_effort": {"type": "string", "enum": ["low", "medium", "high"], "description": "Reasoning effort level"},
+        "safety_settings": {"type": "string", "description": "Safety settings applied"},
+        "system_instruction": {"type": ["string", "null"], "description": "System instruction if any"}
+      }
+    },
+    "JudgeConfig": {
+      "type": "object",
+      "required": ["model"],
+      "properties": {
+        "model": {"type": "string", "description": "Judge model name"},
+        "model_version": {"type": ["string", "null"], "description": "Specific model version"},
+        "temperature": {"type": "number", "description": "Judge temperature (should be 0)"},
+        "seed": {"type": ["integer", "null"], "description": "Random seed"},
+        "prompt_template_version": {"type": "string", "description": "Version of judge prompt template"},
+        "prompt_template_hash": {"type": ["string", "null"], "description": "Hash of prompt template"}
+      }
+    },
+    "RetrievalConfig": {
+      "type": "object",
+      "required": ["index_job_id", "embedding_model", "embedding_dimension", "recall_k", "precision_k"],
+      "properties": {
+        "index_job_id": {"type": "string", "description": "Vector index job ID"},
+        "embedding_model": {"type": "string", "description": "Embedding model name"},
+        "embedding_dimension": {"type": "integer", "description": "Embedding vector dimension"},
+        "embedding_model_version": {"type": ["string", "null"], "description": "Embedding model version"},
+        "recall_k": {"type": "integer", "description": "Number of candidates to retrieve"},
+        "precision_k": {"type": "integer", "description": "Number of candidates after reranking"},
+        "hybrid_enabled": {"type": "boolean", "description": "Whether hybrid search is enabled"},
+        "hybrid_alpha": {"type": "number", "description": "RRF alpha for hybrid search"},
+        "reranking_enabled": {"type": "boolean", "description": "Whether reranking is enabled"},
+        "reranking_model": {"type": "string", "description": "Reranking model name"},
+        "reranking_top_k": {"type": ["integer", "null"], "description": "Top-k for reranking"}
+      }
+    },
+    "CorpusInfo": {
+      "type": "object",
+      "required": ["file_path", "file_hash", "question_count"],
+      "properties": {
+        "file_path": {"type": "string", "description": "Path to corpus file"},
+        "file_hash": {"type": "string", "description": "SHA256 hash of corpus file"},
+        "question_count": {"type": "integer", "description": "Total questions in corpus"},
+        "sample_size": {"type": ["integer", "null"], "description": "Number of questions sampled"},
+        "distribution": {
+          "type": ["object", "null"],
+          "description": "Question distribution by type/difficulty"
+        }
+      }
+    },
+    "ExecutionInfo": {
+      "type": "object",
+      "required": ["mode", "run_type", "workers"],
+      "properties": {
+        "mode": {"type": "string", "enum": ["local", "cloud"], "description": "Execution mode"},
+        "run_type": {"type": "string", "enum": ["checkpoint", "run", "experiment"]},
+        "workers": {"type": "integer", "description": "Number of parallel workers"},
+        "timeout_per_question_s": {"type": "integer", "description": "Timeout per question in seconds"},
+        "max_retries": {"type": "integer", "description": "Maximum retry attempts"},
+        "checkpoint_interval": {"type": "integer", "description": "Checkpoint save interval"},
+        "cloud_endpoint": {"type": ["string", "null"], "description": "Cloud Run endpoint URL"},
+        "cloud_revision": {"type": ["string", "null"], "description": "Cloud Run revision"},
+        "cloud_region": {"type": ["string", "null"], "description": "Cloud region"}
+      }
+    },
+    "MetricsAggregate": {
+      "type": "object",
+      "required": ["precision_k", "total", "completed", "recall_at_100", "mrr", "pass_rate", "partial_rate", "fail_rate"],
+      "properties": {
+        "precision_k": {"type": "integer"},
+        "total": {"type": "integer"},
+        "completed": {"type": "integer"},
+        "recall_at_100": {"type": "number"},
+        "mrr": {"type": "number"},
+        "pass_rate": {"type": "number"},
+        "partial_rate": {"type": "number"},
+        "fail_rate": {"type": "number"},
+        "acceptable_rate": {"type": "number"},
+        "correctness_avg": {"type": "number"},
+        "completeness_avg": {"type": "number"},
+        "faithfulness_avg": {"type": "number"},
+        "relevance_avg": {"type": "number"},
+        "clarity_avg": {"type": "number"},
+        "overall_score_avg": {"type": "number"}
+      }
+    },
+    "LatencyAggregate": {
+      "type": "object",
+      "required": ["total_avg_s", "total_min_s", "total_max_s"],
+      "properties": {
+        "total_avg_s": {"type": "number"},
+        "total_min_s": {"type": "number"},
+        "total_max_s": {"type": "number"},
+        "by_phase": {"type": "object", "additionalProperties": {"type": "number"}}
+      }
+    },
+    "TokenAggregate": {
+      "type": "object",
+      "required": ["prompt_total", "completion_total", "total"],
+      "properties": {
+        "prompt_total": {"type": "integer"},
+        "completion_total": {"type": "integer"},
+        "thinking_total": {"type": "integer"},
+        "cached_total": {"type": "integer"},
+        "total": {"type": "integer"}
+      }
+    },
+    "AnswerStats": {
+      "type": "object",
+      "properties": {
+        "avg_length_chars": {"type": "number"},
+        "min_length_chars": {"type": "integer"},
+        "max_length_chars": {"type": "integer"}
+      }
+    },
+    "QualityInfo": {
+      "type": "object",
+      "properties": {
+        "finish_reason_distribution": {"type": "object", "additionalProperties": {"type": "integer"}},
+        "fallback_rate": {"type": "number"}
+      }
+    },
+    "RetryStats": {
+      "type": "object",
+      "properties": {
+        "total_questions": {"type": "integer"},
+        "succeeded_first_try": {"type": "integer"},
+        "succeeded_after_retry": {"type": "integer"},
+        "failed_all_retries": {"type": "integer"},
+        "total_retry_attempts": {"type": "integer"},
+        "avg_attempts": {"type": "number"}
+      }
+    },
+    "ErrorStats": {
+      "type": "object",
+      "properties": {
+        "total_errors": {"type": "integer"},
+        "by_phase": {"type": "object", "additionalProperties": {"type": "integer"}},
+        "error_messages": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "SkippedStats": {
+      "type": "object",
+      "properties": {
+        "count": {"type": "integer"},
+        "reasons": {"type": "object", "additionalProperties": {"type": "integer"}},
+        "question_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "BreakdownStats": {
+      "type": "object",
+      "properties": {
+        "total": {"type": "integer"},
+        "pass_count": {"type": "integer"},
+        "partial": {"type": "integer"},
+        "fail": {"type": "integer"},
+        "pass_rate": {"type": "number"}
+      }
+    },
+    "QuestionResult": {
+      "type": "object",
+      "required": ["question_id", "question_type", "difficulty"],
+      "properties": {
+        "question_id": {"type": "string"},
+        "question_type": {"type": "string", "enum": ["single_hop", "multi_hop"]},
+        "difficulty": {"type": "string", "enum": ["easy", "medium", "hard"]},
+        "question_text": {"type": "string", "description": "The actual question"},
+        "expected_answer": {"type": "string", "description": "Ground truth answer"},
+        "source_documents": {"type": "array", "items": {"type": "string"}},
+        "generated_answer": {"type": "string", "description": "RAG-generated answer"},
+        "retrieved_doc_names": {"type": "array", "items": {"type": "string"}},
+        "context_char_count": {"type": "integer"},
+        "recall_hit": {"type": "boolean"},
+        "mrr": {"type": "number"},
+        "judgment": {
+          "type": "object",
+          "properties": {
+            "correctness": {"type": "integer", "minimum": 1, "maximum": 5},
+            "completeness": {"type": "integer", "minimum": 1, "maximum": 5},
+            "faithfulness": {"type": "integer", "minimum": 1, "maximum": 5},
+            "relevance": {"type": "integer", "minimum": 1, "maximum": 5},
+            "clarity": {"type": "integer", "minimum": 1, "maximum": 5},
+            "overall_score": {"type": "integer", "minimum": 1, "maximum": 5},
+            "verdict": {"type": "string", "enum": ["pass", "partial", "fail", "unknown"]},
+            "parse_error": {"type": ["string", "null"]}
+          }
+        },
+        "timing": {
+          "type": "object",
+          "properties": {
+            "retrieval_s": {"type": "number"},
+            "rerank_s": {"type": "number"},
+            "generation_s": {"type": "number"},
+            "judge_s": {"type": "number"},
+            "total_s": {"type": "number"},
+            "cloud_retrieve_s": {"type": ["number", "null"]},
+            "cloud_query_s": {"type": ["number", "null"]}
+          }
+        },
+        "tokens": {
+          "type": "object",
+          "properties": {
+            "prompt": {"type": "integer"},
+            "completion": {"type": "integer"},
+            "thinking": {"type": "integer"},
+            "cached": {"type": "integer"},
+            "total": {"type": "integer"}
+          }
+        },
+        "llm_metadata": {
+          "type": "object",
+          "properties": {
+            "model": {"type": "string"},
+            "model_version": {"type": ["string", "null"]},
+            "finish_reason": {"type": ["string", "null"]},
+            "reasoning_effort": {"type": ["string", "null"]},
+            "used_fallback": {"type": "boolean"},
+            "avg_logprobs": {"type": ["number", "null"]},
+            "response_id": {"type": ["string", "null"]},
+            "temperature": {"type": "number"},
+            "has_citations": {"type": "boolean"}
+          }
+        },
+        "request_timestamp_utc": {"type": "string", "format": "date-time"},
+        "answer_length": {"type": "integer"},
+        "retrieval_candidates": {"type": "integer"},
+        "retry_info": {
+          "type": "object",
+          "properties": {
+            "attempts": {"type": "integer"},
+            "recovered": {"type": "boolean"},
+            "error": {"type": ["string", "null"]}
+          }
+        },
+        "error": {"type": ["string", "null"]},
+        "error_phase": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
