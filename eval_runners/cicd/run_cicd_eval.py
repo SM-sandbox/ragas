@@ -34,7 +34,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 # To update: 1) Modify checkpoint_config.yaml  2) Run: shasum -a 256 config/checkpoint_config.yaml
 #            3) Update the hash below  4) Commit both changes together
 
-CHECKPOINT_CONFIG_HASH = "32f4519f554daf51b0adb07e10725b87bbc34fe31051382507a55267734983bf"
+CHECKPOINT_CONFIG_HASH = "d9a5f36b9ab1e21191973e9b02256505aa8088f696012b436bb6eb2c2cdcf790"
 CHECKPOINT_CONFIG_PATH = PROJECT_ROOT / "config" / "checkpoint_config.yaml"
 
 

@@ -150,7 +150,7 @@
         "top_p": {"type": ["number", "null"], "description": "Top-p sampling parameter"},
         "top_k": {"type": ["integer", "null"], "description": "Top-k sampling parameter"},
         "max_output_tokens": {"type": "integer", "description": "Maximum output tokens"},
-        "reasoning_effort": {"type": "string", "enum": ["low", "medium", "high"], "description": "Reasoning effort level"},
+        "reasoning_effort": {"type": "string", "enum": ["low", "high"], "description": "Reasoning effort level (no medium in Gemini 3)"},
         "safety_settings": {"type": "string", "description": "Safety settings applied"},
         "system_instruction": {"type": ["string", "null"], "description": "System instruction if any"}
       }

@@ -52,7 +52,7 @@ class GeneratorConfig:
     top_p: Optional[float] = None
     top_k: Optional[int] = None
     max_output_tokens: int = 8192
-    reasoning_effort: str = "low"
+    reasoning_effort: str = "low"  # low | high (no medium in Gemini 3)
     safety_settings: str = "default"
     system_instruction: Optional[str] = None
 

@@ -301,19 +301,41 @@ def generate_json(prompt: str, schema: Any = None, **kwargs) -> dict:
     return json.loads(result["text"])
 
 
-def generate_for_judge(prompt: str, **kwargs) -> dict:
+def generate_for_judge(
+    prompt: str,
+    model: str = None,
+    temperature: float = None,
+    reasoning_effort: str = None,
+    seed: int = None,
+    **kwargs
+) -> dict:
     """Generate with judge-specific config (JSON output, lower tokens).
     
-    Judge is HARDCODED to gemini-3-flash-preview with LOW reasoning.
-    This ensures consistent evaluation across all runs.
+    Args:
+        prompt: The judge prompt
+        model: Model to use (default: from config or DEFAULT_MODEL)
+        temperature: Temperature (default: 0.0)
+        reasoning_effort: "low" or "high" (default: "low")
+        seed: Random seed for reproducibility
+        **kwargs: Additional parameters
+    
+    Returns:
+        Parsed JSON response from judge
     """
     config = {**JUDGE_CONFIG, **kwargs}
+    
+    # Use provided values or defaults
+    target_model = model or DEFAULT_MODEL
+    target_temp = temperature if temperature is not None else config.get("temperature", 0.0)
+    target_reasoning = (reasoning_effort or "low").upper()
+    
     result = generate(
         prompt,
+        model=target_model,
         response_mime_type=config.get("response_mime_type"),
         max_output_tokens=config.get("max_output_tokens"),
-        temperature=config.get("temperature"),
-        thinking_level="LOW",  # HARDCODED - judge always uses LOW reasoning
+        temperature=target_temp,
+        thinking_level=target_reasoning,
     )
     
     # Parse JSON, handling list responses
@@ -333,16 +355,45 @@ def generate_for_judge(prompt: str, **kwargs) -> dict:
         return {"error": f"JSON parse error: {e}", "verdict": "error"}
 
 
-def generate_for_rag(prompt: str, **kwargs) -> str:
-    """Generate with RAG-specific config (natural language output)."""
+def generate_for_rag(
+    prompt: str,
+    model: str = None,
+    temperature: float = None,
+    reasoning_effort: str = None,
+    max_output_tokens: int = None,
+    seed: int = None,
+    **kwargs
+) -> dict:
+    """Generate with RAG-specific config (natural language output).
+    
+    Args:
+        prompt: The RAG prompt
+        model: Model to use (default: from config or DEFAULT_MODEL)
+        temperature: Temperature (default: 0.0)
+        reasoning_effort: "low" or "high" (default: "low")
+        max_output_tokens: Max tokens (default: 8192)
+        seed: Random seed for reproducibility
+        **kwargs: Additional parameters
+    
+    Returns:
+        Full result dict with text, llm_metadata, usage, etc.
+    """
     config = {**GENERATOR_CONFIG, **kwargs}
+    
+    # Use provided values or defaults
+    target_model = model or DEFAULT_MODEL
+    target_temp = temperature if temperature is not None else config.get("temperature", 0.0)
+    target_reasoning = (reasoning_effort or "low").upper()
+    target_max_tokens = max_output_tokens or config.get("max_output_tokens", 8192)
+    
     result = generate(
         prompt,
-        max_output_tokens=config.get("max_output_tokens"),
-        temperature=config.get("temperature"),
-        thinking_level="LOW",  # Fast for generation
+        model=target_model,
+        max_output_tokens=target_max_tokens,
+        temperature=target_temp,
+        thinking_level=target_reasoning,
     )
-    return result["text"]
+    return result
 
 
 # =============================================================================

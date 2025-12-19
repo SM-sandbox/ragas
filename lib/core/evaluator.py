@@ -34,9 +34,10 @@ from services.api.retrieval.vector_search import VectorSearchRetriever
 from services.api.ranking.google_ranker import GoogleRanker
 from services.api.generation.gemini import GeminiAnswerGenerator
 from services.api.core.config import QueryConfig
-# Import gemini_client from lib
+# Import gemini_client and config loader from lib
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from lib.clients.gemini_client import generate_for_judge, get_model_info
+from lib.core.config_loader import load_config, get_generator_config, get_judge_config
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
@@ -100,15 +101,44 @@ def extract_json(text: str) -> dict:
 
 
 class GoldEvaluator:
-    def __init__(self, precision_k: int = 25, workers: int = DEFAULT_WORKERS, generator_reasoning: str = "low", cloud_mode: bool = False, model: str = "gemini-3-flash-preview"):
-        self.precision_k = precision_k
-        self.workers = workers
-        self.generator_reasoning = generator_reasoning  # low/high - passed to gRAG_v3 pipeline
+    def __init__(
+        self,
+        precision_k: int = 25,
+        workers: int = None,
+        generator_reasoning: str = None,
+        cloud_mode: bool = False,
+        model: str = None,
+        config_type: str = "run",
+        config_path: Path = None,
+    ):
+        # Load config
+        self.config = load_config(config_type=config_type, config_path=config_path)
+        
+        # Extract generator and judge configs
+        self.generator_config = get_generator_config(self.config)
+        self.judge_config = get_judge_config(self.config)
+        
+        # Use provided values or fall back to config
+        self.precision_k = precision_k if precision_k != 25 else self.config.get("retrieval", {}).get("precision_k", 25)
+        self.workers = workers if workers is not None else self.config.get("execution", {}).get("workers", DEFAULT_WORKERS)
+        self.generator_reasoning = generator_reasoning if generator_reasoning is not None else self.generator_config.get("reasoning_effort", "low")
         self.cloud_mode = cloud_mode
-        self.model = model
+        self.model = model if model is not None else self.generator_config.get("model", "gemini-3-flash-preview")
+        
+        # Store judge config for use in _judge_answer
+        self.judge_model_name = self.judge_config.get("model", "gemini-3-flash-preview")
+        self.judge_temperature = self.judge_config.get("temperature", 0.0)
+        self.judge_reasoning = self.judge_config.get("reasoning_effort", "low")
+        self.judge_seed = self.judge_config.get("seed", 42)
+        
         self.lock = Lock()  # Thread-safe checkpoint access
         self.run_start_time = None
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        
+        # Log config being used
+        print(f"Config: {config_type}")
+        print(f"Generator: {self.model}, reasoning={self.generator_reasoning}, temp={self.generator_config.get('temperature', 0.0)}")
+        print(f"Judge: {self.judge_model_name}, reasoning={self.judge_reasoning}, temp={self.judge_temperature}")
         
         # Cloud mode setup
         if cloud_mode:
@@ -234,8 +264,14 @@ Score 1-5 for each (5=best):
 Respond with JSON containing: correctness, completeness, faithfulness, relevance, clarity, overall_score (all 1-5), and verdict (pass|partial|fail)."""
         
         try:
-            # Use gemini_client with built-in retry and JSON output
-            return generate_for_judge(prompt)
+            # Use gemini_client with config from loaded config file
+            return generate_for_judge(
+                prompt,
+                model=self.judge_model_name,
+                temperature=self.judge_temperature,
+                reasoning_effort=self.judge_reasoning,
+                seed=self.judge_seed,
+            )
         except Exception as e:
             # Return partial scores on failure
             return {"correctness": 3, "completeness": 3, "faithfulness": 3, "relevance": 3, "clarity": 3, "overall_score": 3, "verdict": "partial", "parse_error": str(e)}

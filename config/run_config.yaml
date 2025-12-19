@@ -21,15 +21,16 @@ index:
 
 # Generator model
 generator:
-  model: "gemini-2.5-flash"
-  reasoning_effort: "low"
+  model: "gemini-3-flash-preview"
+  reasoning_effort: "low"  # low | high (no medium in Gemini 3)
   temperature: 0.0
   seed: 42  # Fixed seed for reproducibility
   max_output_tokens: 8192
 
 # Judge model
 judge:
-  model: "gemini-2.0-flash"
+  model: "gemini-3-flash-preview"
+  reasoning_effort: "low"  # low | high (no medium in Gemini 3)
   temperature: 0.0
   seed: 42  # Fixed seed for reproducibility
 
@@ -43,7 +44,7 @@ retrieval:
 
 # Execution
 execution:
-  workers: 5
+  workers: 10
   timeout_per_question_s: 120
   checkpoint_interval: 10
   max_retries: 5
