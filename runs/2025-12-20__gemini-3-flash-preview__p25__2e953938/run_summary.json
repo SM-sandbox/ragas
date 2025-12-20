@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.1",
+  "timestamp": "2025-12-20T10:29:54.803690",
+  "client": "BFAI",
+  "index": {
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+    "last_build": "",
+    "chunks_indexed": 0,
+    "document_count": 64,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimension": 1536,
+    "mode": "local"
+  },
+  "config": {
+    "generator_model": "gemini-3-flash-preview",
+    "generator_reasoning_effort": "low",
+    "generator_seed": 42,
+    "judge_model": "gemini-3-flash-preview",
+    "judge_reasoning_effort": "low",
+    "judge_seed": 42,
+    "precision_k": 25,
+    "recall_k": 100,
+    "workers": 100,
+    "temperature": 0.0
+  },
+  "metrics": {
+    "precision_k": 25,
+    "total": 458,
+    "completed": 458,
+    "recall_at_100": 0.9912663755458515,
+    "mrr": 0.7379747834897079,
+    "pass_rate": 0.9192139737991266,
+    "partial_rate": 0.06550218340611354,
+    "fail_rate": 0.015283842794759825,
+    "acceptable_rate": 0.9847161572052402,
+    "correctness_avg": 4.762008733624454,
+    "completeness_avg": 4.864628820960698,
+    "faithfulness_avg": 4.949781659388647,
+    "relevance_avg": 4.956331877729258,
+    "clarity_avg": 4.9825327510917035,
+    "overall_score_avg": 4.818777292576418
+  },
+  "latency": {
+    "total_avg_s": 79.51499653487227,
+    "total_min_s": 13.621414184570312,
+    "total_max_s": 151.72446179389954,
+    "by_phase": {
+      "retrieval_avg_s": 0.5105231505814598,
+      "rerank_avg_s": 3.1295713717239915,
+      "generation_avg_s": 74.77865505114393,
+      "judge_avg_s": 1.096194834688345
+    }
+  },
+  "tokens": {
+    "prompt_total": 0,
+    "completion_total": 0,
+    "thinking_total": 0,
+    "cached_total": 0,
+    "total": 0
+  },
+  "answer_stats": {
+    "avg_length_chars": 1591.1026200873362,
+    "min_length_chars": 71,
+    "max_length_chars": 16057
+  },
+  "quality": {
+    "finish_reason_distribution": {
+      "STOP": 457,
+      "MAX_TOKENS": 1
+    },
+    "fallback_rate": 0.0
+  },
+  "execution": {
+    "run_duration_seconds": 501.07244968414307,
+    "questions_per_second": 1.0789647615785323,
+    "workers": 100,
+    "rate_limiter": {
+      "current_rpm": 48,
+      "current_tpm": 48000,
+      "rpm_limit": 20000,
+      "tpm_limit": 20000000,
+      "max_concurrent": 30,
+      "in_flight": 0,
+      "rpm_utilization": 0.0024,
+      "tpm_utilization": 0.0024,
+      "total_requests": 458,
+      "total_tokens": 458000,
+      "total_waits": 0,
+      "avg_wait_time": 0
+    },
+    "hostname": "Scott-MacBook-Pro-M3.local",
+    "python_version": "3.11.14"
+  },
+  "retry_stats": {
+    "total_questions": 458,
+    "succeeded_first_try": 458,
+    "succeeded_after_retry": 0,
+    "failed_all_retries": 0,
+    "total_retry_attempts": 458,
+    "avg_attempts": 1.0
+  },
+  "errors": {
+    "total_errors": 0,
+    "by_phase": {
+      "retrieval": 0,
+      "rerank": 0,
+      "generation": 0,
+      "judge": 0
+    },
+    "error_messages": []
+  },
+  "skipped": {
+    "count": 0,
+    "reasons": {
+      "missing_ground_truth": 0,
+      "invalid_question": 0,
+      "timeout": 0
+    },
+    "question_ids": []
+  },
+  "breakdown_by_type": {
+    "single_hop": {
+      "total": 222,
+      "pass": 209,
+      "partial": 8,
+      "fail": 5,
+      "pass_rate": 0.9414414414414415
+    },
+    "multi_hop": {
+      "total": 236,
+      "pass": 212,
+      "partial": 22,
+      "fail": 2,
+      "pass_rate": 0.8983050847457628
+    }
+  },
+  "breakdown_by_difficulty": {
+    "easy": {
+      "total": 161,
+      "pass": 146,
+      "partial": 10,
+      "fail": 5,
+      "pass_rate": 0.906832298136646
+    },
+    "medium": {
+      "total": 161,
+      "pass": 153,
+      "partial": 8,
+      "fail": 0,
+      "pass_rate": 0.9503105590062112
+    },
+    "hard": {
+      "total": 136,
+      "pass": 122,
+      "partial": 12,
+      "fail": 2,
+      "pass_rate": 0.8970588235294118
+    }
+  },
+  "quality_by_bucket": {
+    "single_hop": {
+      "easy": {
+        "count": 88,
+        "pass_rate": 0.9431818181818182,
+        "partial_rate": 0.011363636363636364,
+        "fail_rate": 0.045454545454545456,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 4.8306818181818185
+      },
+      "medium": {
+        "count": 78,
+        "pass_rate": 0.9487179487179487,
+        "partial_rate": 0.05128205128205128,
+        "fail_rate": 0.0,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 4.884615384615385
+      },
+      "hard": {
+        "count": 56,
+        "pass_rate": 0.9285714285714286,
+        "partial_rate": 0.05357142857142857,
+        "fail_rate": 0.017857142857142856,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 4.821428571428571
+      }
+    },
+    "multi_hop": {
+      "easy": {
+        "count": 73,
+        "pass_rate": 0.863013698630137,
+        "partial_rate": 0.1232876712328767,
+        "fail_rate": 0.0136986301369863,
+        "recall_at_100": 1.0,
+        "mrr": 0.4520252761871363,
+        "overall_score_avg": 4.72054794520548
+      },
+      "medium": {
+        "count": 83,
+        "pass_rate": 0.9518072289156626,
+        "partial_rate": 0.04819277108433735,
+        "fail_rate": 0.0,
+        "recall_at_100": 0.9759036144578314,
+        "mrr": 0.5757700574554948,
+        "overall_score_avg": 4.879518072289157
+      },
+      "hard": {
+        "count": 80,
+        "pass_rate": 0.875,
+        "partial_rate": 0.1125,
+        "fail_rate": 0.0125,
+        "recall_at_100": 0.975,
+        "mrr": 0.44007113634774225,
+        "overall_score_avg": 4.76625
+      }
+    }
+  },
+  "orchestrator": null,
+  "cost_summary_usd": {
+    "generator_total": 0.7658818999999997,
+    "judge_total": 0.07667040000000007,
+    "total": 0.8425523000000009,
+    "avg_per_question": 0.0018396338427947617
+  },
+  "run_id": "run_20251220_102133_2e953938",
+  "cost": {
+    "input_cost": 0.0,
+    "output_cost": 0.0,
+    "thinking_cost": 0.0,
+    "cached_cost": 0.0,
+    "total_cost": 0.0,
+    "cost_per_question": 0.0,
+    "question_count": 458
+  }
+}

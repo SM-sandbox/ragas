@@ -1,7 +1,15 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "type": "checkpoints",
   "description": "CICD and daily health check runs against the gold standard baseline",
+  "gold_baseline": {
+    "id": "C012",
+    "folder": "C012__2025-12-19__cloud__p25-3-flash-low__q458",
+    "locked_date": "2025-12-20",
+    "acceptable_rate": 0.985,
+    "pass_rate": 0.928,
+    "notes": "Gold baseline for CI/CD comparison. All future test runs compare against this."
+  },
   "entries": [
     {
       "id": "C001",
@@ -58,6 +66,20 @@
       "acceptable_rate": 0.989,
       "folder": "C004__2025-12-19__C__p25-pro",
       "notes": "Gemini 3 Pro test"
+    },
+    {
+      "id": "C013",
+      "date": "2025-12-20",
+      "mode": "local",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.919,
+      "fail_rate": 0.015,
+      "acceptable_rate": 0.985,
+      "folder": "C013__2025-12-20__local__p25-3-flash-low__q458",
+      "notes": "Smart Throttler integration test"
     }
   ]
 }
