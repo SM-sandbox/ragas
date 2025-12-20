@@ -373,14 +373,16 @@ def get_limiter_for_model(model: str) -> SmartRateLimiter:
     Returns:
         Configured SmartRateLimiter instance
     """
-    # Model-specific limits based on bfai-prod quotas
+    # Model-specific limits based on bfai-prod Paid Tier 3 quotas
+    # Run `python scripts/check_gemini_quotas.py` to verify current quotas
     MODEL_LIMITS = {
-        "gemini-3-flash": {"rpm": 20000, "tpm": 1000000},
-        "gemini-3-flash-preview": {"rpm": 20000, "tpm": 1000000},
-        "gemini-2.5-flash": {"rpm": 20000, "tpm": 1000000},
-        "gemini-3-pro": {"rpm": 2000, "tpm": 1000000},
-        "gemini-3-pro-preview": {"rpm": 2000, "tpm": 1000000},
-        "gemini-2.5-pro": {"rpm": 2000, "tpm": 2000000},
+        "gemini-3-flash": {"rpm": 20000, "tpm": 20000000},
+        "gemini-3-flash-preview": {"rpm": 20000, "tpm": 20000000},
+        "gemini-2.5-flash": {"rpm": 20000, "tpm": 20000000},
+        "gemini-2.0-flash": {"rpm": 30000, "tpm": 30000000},
+        "gemini-3-pro": {"rpm": 2000, "tpm": 8000000},
+        "gemini-3-pro-preview": {"rpm": 2000, "tpm": 8000000},
+        "gemini-2.5-pro": {"rpm": 2000, "tpm": 8000000},
     }
     
     # Find matching model config
@@ -392,5 +394,5 @@ def get_limiter_for_model(model: str) -> SmartRateLimiter:
                 headroom=0.90,
             )
     
-    # Default to flash limits
-    return SmartRateLimiter(rpm_limit=20000, tpm_limit=1000000, headroom=0.90)
+    # Default to flash limits (Tier 3)
+    return SmartRateLimiter(rpm_limit=20000, tpm_limit=20000000, headroom=0.90)
