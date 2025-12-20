@@ -207,6 +207,7 @@ class TestAcquireSync:
         """acquire_sync returns time spent waiting."""
         limiter = SmartRateLimiter(rpm_limit=1000, tpm_limit=100000)
         wait_time = limiter.acquire_sync(1000)
+        limiter.release()
         assert isinstance(wait_time, float)
         assert wait_time >= 0
     
@@ -214,6 +215,7 @@ class TestAcquireSync:
         """acquire_sync records the request."""
         limiter = SmartRateLimiter(rpm_limit=1000, tpm_limit=100000)
         limiter.acquire_sync(5000)
+        limiter.release()
         assert limiter.get_current_rpm() == 1
         assert limiter.get_current_tpm() == 5000
     
@@ -221,8 +223,11 @@ class TestAcquireSync:
         """Multiple acquire_sync calls accumulate."""
         limiter = SmartRateLimiter(rpm_limit=1000, tpm_limit=100000)
         limiter.acquire_sync(1000)
+        limiter.release()
         limiter.acquire_sync(2000)
+        limiter.release()
         limiter.acquire_sync(3000)
+        limiter.release()
         assert limiter.get_current_rpm() == 3
         assert limiter.get_current_tpm() == 6000
 
@@ -270,16 +275,19 @@ class TestThrottling:
             headroom=1.0,
             window_seconds=2,
             stagger_ms=10,
+            max_concurrent=100,  # High limit so semaphore doesn't interfere
         )
         limiter = SmartRateLimiter(config=config)
         
         # Fill to limit
         for _ in range(5):
             limiter.acquire_sync(100)
+            limiter.release()
         
         # Next acquire should wait
         start = time.time()
         limiter.acquire_sync(100)
+        limiter.release()
         elapsed = time.time() - start
         
         # Should have waited some time (at least stagger)
@@ -295,11 +303,12 @@ class TestThreadSafety:
     
     def test_concurrent_acquires_thread_safe(self):
         """Concurrent acquires from multiple threads are safe."""
-        limiter = SmartRateLimiter(rpm_limit=1000, tpm_limit=1000000)
+        limiter = SmartRateLimiter(rpm_limit=1000, tpm_limit=1000000, max_concurrent=100)
         num_threads = 50
         
         def do_acquire():
             limiter.acquire_sync(1000)
+            limiter.release()
         
         with ThreadPoolExecutor(max_workers=num_threads) as executor:
             futures = [executor.submit(do_acquire) for _ in range(num_threads)]
@@ -343,6 +352,7 @@ class TestEdgeCases:
         """Zero tokens is valid."""
         limiter = SmartRateLimiter()
         limiter.acquire_sync(0)
+        limiter.release()
         assert limiter.get_current_rpm() == 1
         assert limiter.get_current_tpm() == 0
     
@@ -350,13 +360,16 @@ class TestEdgeCases:
         """Large token counts work."""
         limiter = SmartRateLimiter(tpm_limit=10000000)
         limiter.acquire_sync(5000000)
+        limiter.release()
         assert limiter.get_current_tpm() == 5000000
     
     def test_reset_clears_all(self):
         """reset() clears all tracking data."""
         limiter = SmartRateLimiter()
         limiter.acquire_sync(1000)
+        limiter.release()
         limiter.acquire_sync(2000)
+        limiter.release()
         
         limiter.reset()
         
@@ -371,6 +384,7 @@ class TestEdgeCases:
         limiter = SmartRateLimiter(config=config)
         
         limiter.acquire_sync(1000)
+        limiter.release()
         assert limiter.get_current_rpm() == 1
         
         time.sleep(1.1)
@@ -430,8 +444,11 @@ class TestStatsTracking:
         """Total requests are tracked."""
         limiter = SmartRateLimiter()
         limiter.acquire_sync(1000)
+        limiter.release()
         limiter.acquire_sync(2000)
+        limiter.release()
         limiter.acquire_sync(3000)
+        limiter.release()
         
         usage = limiter.get_usage()
         assert usage["total_requests"] == 3
@@ -440,7 +457,9 @@ class TestStatsTracking:
         """Total tokens are tracked."""
         limiter = SmartRateLimiter()
         limiter.acquire_sync(1000)
+        limiter.release()
         limiter.acquire_sync(2000)
+        limiter.release()
         
         usage = limiter.get_usage()
         assert usage["total_tokens"] == 3000
@@ -459,16 +478,163 @@ class TestStaggering:
             rpm_limit=1000,
             tpm_limit=1000000,
             stagger_ms=50,
+            max_concurrent=100,  # High limit so semaphore doesn't interfere
         )
         limiter = SmartRateLimiter(config=config)
         
         start = time.time()
         for _ in range(5):
             limiter.acquire_sync(100)
+            limiter.release()
         elapsed = time.time() - start
         
         # Should take at least 4 * 50ms = 200ms due to staggering
         assert elapsed >= 0.15  # Allow some tolerance
+
+
+# =============================================================================
+# SEMAPHORE TESTS
+# =============================================================================
+
+class TestSemaphore:
+    """Test semaphore functionality for capping concurrent requests."""
+    
+    def test_max_concurrent_config(self):
+        """max_concurrent is configurable."""
+        limiter = SmartRateLimiter(max_concurrent=20)
+        assert limiter.config.max_concurrent == 20
+    
+    def test_default_max_concurrent_is_30(self):
+        """Default max_concurrent is 30."""
+        limiter = SmartRateLimiter()
+        assert limiter.config.max_concurrent == 30
+    
+    def test_in_flight_starts_at_zero(self):
+        """in_flight counter starts at 0."""
+        limiter = SmartRateLimiter()
+        assert limiter.get_in_flight() == 0
+    
+    def test_acquire_increments_in_flight(self):
+        """acquire_sync increments in_flight counter."""
+        limiter = SmartRateLimiter(max_concurrent=10)
+        limiter.acquire_sync(100)
+        # Note: in_flight is incremented but we need to check before release
+        # Since acquire_sync doesn't auto-release, in_flight should be 1
+        assert limiter.get_in_flight() == 1
+        limiter.release()
+        assert limiter.get_in_flight() == 0
+    
+    def test_release_decrements_in_flight(self):
+        """release decrements in_flight counter."""
+        limiter = SmartRateLimiter(max_concurrent=10)
+        limiter.acquire_sync(100)
+        limiter.acquire_sync(200)
+        assert limiter.get_in_flight() == 2
+        limiter.release()
+        assert limiter.get_in_flight() == 1
+        limiter.release()
+        assert limiter.get_in_flight() == 0
+    
+    def test_release_doesnt_go_negative(self):
+        """release doesn't let in_flight go negative."""
+        limiter = SmartRateLimiter(max_concurrent=10)
+        limiter.release()  # Release without acquire
+        assert limiter.get_in_flight() == 0
+    
+    def test_get_usage_includes_max_concurrent(self):
+        """get_usage includes max_concurrent."""
+        limiter = SmartRateLimiter(max_concurrent=25)
+        usage = limiter.get_usage()
+        assert "max_concurrent" in usage
+        assert usage["max_concurrent"] == 25
+    
+    def test_get_usage_includes_in_flight(self):
+        """get_usage includes in_flight."""
+        limiter = SmartRateLimiter(max_concurrent=10)
+        limiter.acquire_sync(100)
+        usage = limiter.get_usage()
+        assert "in_flight" in usage
+        assert usage["in_flight"] == 1
+        limiter.release()
+    
+    def test_semaphore_blocks_at_max(self):
+        """Semaphore blocks when max_concurrent is reached."""
+        import threading
+        
+        limiter = SmartRateLimiter(max_concurrent=2)
+        results = []
+        
+        def worker(worker_id):
+            limiter.acquire_sync(100)
+            results.append(f"acquired_{worker_id}")
+            time.sleep(0.1)  # Hold the semaphore
+            limiter.release()
+            results.append(f"released_{worker_id}")
+        
+        threads = [threading.Thread(target=worker, args=(i,)) for i in range(3)]
+        start = time.time()
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+        elapsed = time.time() - start
+        
+        # With max_concurrent=2, 3 workers should take at least 0.2s
+        # (2 run in parallel, 1 waits)
+        assert elapsed >= 0.15
+        assert len(results) == 6  # 3 acquires + 3 releases
+
+
+class TestSemaphoreIntegration:
+    """Test semaphore integration with rate limiting."""
+    
+    def test_semaphore_and_rpm_work_together(self):
+        """Semaphore and RPM limits work together."""
+        limiter = SmartRateLimiter(
+            rpm_limit=1000,
+            tpm_limit=1000000,
+            max_concurrent=5,
+        )
+        
+        # Acquire 5 (max concurrent)
+        for _ in range(5):
+            limiter.acquire_sync(100)
+        
+        assert limiter.get_in_flight() == 5
+        usage = limiter.get_usage()
+        assert usage["total_requests"] == 5
+        
+        # Release all
+        for _ in range(5):
+            limiter.release()
+        
+        assert limiter.get_in_flight() == 0
+    
+    def test_concurrent_workers_respect_semaphore(self):
+        """Multiple concurrent workers respect semaphore limit."""
+        import threading
+        
+        limiter = SmartRateLimiter(max_concurrent=3)
+        max_observed = 0
+        lock = threading.Lock()
+        
+        def worker():
+            nonlocal max_observed
+            limiter.acquire_sync(100)
+            with lock:
+                current = limiter.get_in_flight()
+                max_observed = max(max_observed, current)
+            time.sleep(0.05)
+            limiter.release()
+        
+        threads = [threading.Thread(target=worker) for _ in range(10)]
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+        
+        # Max observed should never exceed max_concurrent
+        assert max_observed <= 3
 
 
 if __name__ == "__main__":

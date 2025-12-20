@@ -36,6 +36,7 @@ class RateLimiterConfig:
     min_wait_ms: int = 10  # Minimum wait between checks
     max_wait_ms: int = 5000  # Maximum wait before retry
     stagger_ms: int = 5  # Stagger between concurrent releases (was 50, reduced for high RPM limits)
+    max_concurrent: int = 30  # Maximum concurrent API calls (semaphore)
 
 
 class SmartRateLimiter:
@@ -53,6 +54,7 @@ class SmartRateLimiter:
         rpm_limit: int = 20000,
         tpm_limit: int = 1000000,
         headroom: float = 0.90,
+        max_concurrent: int = 30,
         config: Optional[RateLimiterConfig] = None,
     ):
         """
@@ -62,6 +64,7 @@ class SmartRateLimiter:
             rpm_limit: Maximum requests per minute
             tpm_limit: Maximum tokens per minute
             headroom: Fraction of limit to use (0.90 = throttle at 90%)
+            max_concurrent: Maximum concurrent API calls (semaphore)
             config: Optional full config object
         """
         if config:
@@ -71,6 +74,7 @@ class SmartRateLimiter:
                 rpm_limit=rpm_limit,
                 tpm_limit=tpm_limit,
                 headroom=headroom,
+                max_concurrent=max_concurrent,
             )
         
         # Sliding windows: (timestamp, value)
@@ -80,6 +84,11 @@ class SmartRateLimiter:
         # Thread safety
         self._lock = threading.Lock()
         self._async_lock = asyncio.Lock()
+        
+        # Semaphore to cap concurrent API calls
+        self._semaphore = threading.Semaphore(self.config.max_concurrent)
+        self._async_semaphore = asyncio.Semaphore(self.config.max_concurrent)
+        self._in_flight = 0  # Track current in-flight requests
         
         # Stats
         self._total_requests = 0
@@ -145,6 +154,8 @@ class SmartRateLimiter:
                 "current_tpm": current_tpm,
                 "rpm_limit": self.config.rpm_limit,
                 "tpm_limit": self.config.tpm_limit,
+                "max_concurrent": self.config.max_concurrent,
+                "in_flight": self._in_flight,
                 "rpm_utilization": current_rpm / self.config.rpm_limit if self.config.rpm_limit > 0 else 0,
                 "tpm_utilization": current_tpm / self.config.tpm_limit if self.config.tpm_limit > 0 else 0,
                 "total_requests": self._total_requests,
@@ -251,6 +262,9 @@ class SmartRateLimiter:
         """
         Synchronous version of acquire for non-async code.
         
+        Acquires the semaphore first (blocking if max_concurrent reached),
+        then checks RPM/TPM limits.
+        
         Args:
             estimated_tokens: Estimated tokens for this request
             
@@ -258,40 +272,65 @@ class SmartRateLimiter:
             Time spent waiting (seconds)
         """
         total_wait = 0.0
+        wait_start = time.time()
         
-        while True:
-            with self._lock:
-                now = time.time()
-                self._cleanup_old_entries(now)
-                current_rpm = len(self._request_times)
-                current_tpm = sum(tokens for _, tokens in self._token_records)
-                
-                # Check if we have capacity
-                if current_rpm < self.effective_rpm and current_tpm + estimated_tokens < self.effective_tpm:
-                    # Stagger releases - wait only the remaining stagger time
-                    stagger_wait = max(0, self._last_acquire_time + (self.config.stagger_ms / 1000.0) - now)
-                    if stagger_wait > 0:
-                        # Release lock, wait for stagger, then re-acquire
-                        pass  # Will wait below
+        # First, acquire semaphore (blocks if too many concurrent requests)
+        self._semaphore.acquire()
+        with self._lock:
+            self._in_flight += 1
+        
+        try:
+            while True:
+                with self._lock:
+                    now = time.time()
+                    self._cleanup_old_entries(now)
+                    current_rpm = len(self._request_times)
+                    current_tpm = sum(tokens for _, tokens in self._token_records)
+                    
+                    # Check if we have capacity
+                    if current_rpm < self.effective_rpm and current_tpm + estimated_tokens < self.effective_tpm:
+                        # Stagger releases - wait only the remaining stagger time
+                        stagger_wait = max(0, self._last_acquire_time + (self.config.stagger_ms / 1000.0) - now)
+                        if stagger_wait > 0:
+                            # Release lock, wait for stagger, then re-acquire
+                            pass  # Will wait below
+                        else:
+                            self._record_request(estimated_tokens)
+                            self._last_acquire_time = time.time()
+                            total_wait = time.time() - wait_start
+                            if total_wait > 0.01:  # Only count significant waits
+                                self._total_waits += 1
+                                self._total_wait_time += total_wait
+                            return total_wait
+                        wait_time = stagger_wait
                     else:
-                        self._record_request(estimated_tokens)
-                        self._last_acquire_time = time.time()
-                        if total_wait > 0:
-                            self._total_waits += 1
-                            self._total_wait_time += total_wait
-                        return total_wait
-                    wait_time = stagger_wait
+                        wait_time = self._calculate_wait_time(current_rpm, current_tpm, estimated_tokens)
+                
+                # Wait outside the lock - only wait the calculated time, not a fixed stagger
+                if wait_time > 0:
+                    time.sleep(wait_time)
                 else:
-                    wait_time = self._calculate_wait_time(current_rpm, current_tpm, estimated_tokens)
-            
-            # Wait outside the lock - only wait the calculated time, not a fixed stagger
-            if wait_time > 0:
-                time.sleep(wait_time)
-                total_wait += wait_time
-            else:
-                # Minimal sleep to prevent busy-wait, but very short
-                time.sleep(0.001)  # 1ms, not 50ms
-                total_wait += 0.001
+                    # Minimal sleep to prevent busy-wait, but very short
+                    time.sleep(0.001)  # 1ms
+        except Exception:
+            # On error, release semaphore and re-raise
+            self.release()
+            raise
+    
+    def release(self) -> None:
+        """
+        Release the semaphore after an API call completes.
+        
+        Must be called after acquire_sync() when the API call is done.
+        """
+        with self._lock:
+            self._in_flight = max(0, self._in_flight - 1)
+        self._semaphore.release()
+    
+    def get_in_flight(self) -> int:
+        """Get the current number of in-flight requests."""
+        with self._lock:
+            return self._in_flight
     
     def record_completion(self, actual_tokens: int) -> None:
         """

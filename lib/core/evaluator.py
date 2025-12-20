@@ -457,16 +457,20 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             # Estimate ~1000 tokens per judge call (prompt + response)
             self.rate_limiter.acquire_sync(estimated_tokens=1000)
             
-            # Use gemini_client with config from loaded config file, return metadata for token tracking
-            result = generate_for_judge(
-                prompt,
-                model=self.judge_model_name,
-                temperature=self.judge_temperature,
-                reasoning_effort=self.judge_reasoning,
-                seed=self.judge_seed,
-                return_metadata=True,
-            )
-            return result
+            try:
+                # Use gemini_client with config from loaded config file, return metadata for token tracking
+                result = generate_for_judge(
+                    prompt,
+                    model=self.judge_model_name,
+                    temperature=self.judge_temperature,
+                    reasoning_effort=self.judge_reasoning,
+                    seed=self.judge_seed,
+                    return_metadata=True,
+                )
+                return result
+            finally:
+                # Always release the semaphore after the API call
+                self.rate_limiter.release()
         except Exception as e:
             # Return partial scores on failure
             return {
