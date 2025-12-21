@@ -267,6 +267,35 @@ class GoldEvaluator:
         except Exception as e:
             print(f"  Warning: Failed to update registry: {e}")
     
+    def _generate_report(self, output: dict) -> None:
+        """Auto-generate a markdown report after each run."""
+        try:
+            # Import the report generator
+            import sys
+            sys.path.insert(0, str(Path(__file__).parent.parent.parent / "scripts"))
+            from generate_checkpoint_report import generate_report, CHECKPOINTS_DIR
+            
+            # Load baseline data
+            registry_path = self.run_dir.parent / "registry.json"
+            baseline_data = None
+            if registry_path.exists():
+                with open(registry_path) as f:
+                    registry = json.load(f)
+                gold_baseline = registry.get("gold_baseline")
+                if gold_baseline:
+                    baseline_folder = CHECKPOINTS_DIR / gold_baseline.get("folder", "")
+                    baseline_results = baseline_folder / "results.json"
+                    if baseline_results.exists():
+                        with open(baseline_results) as f:
+                            baseline_data = json.load(f)
+            
+            # Generate report
+            report_path = generate_report(self.results_file, None, baseline_data)
+            print(f"  Report generated: {report_path}")
+            
+        except Exception as e:
+            print(f"  Warning: Failed to generate report: {e}")
+    
     def _create_run_directory(self, num_questions: int) -> Path:
         """
         Create a unique run directory for this evaluation.
@@ -1213,6 +1242,9 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         
         # Auto-update registry
         self._update_registry(output)
+        
+        # Auto-generate report
+        self._generate_report(output)
         
         # Print summary
         print(f"\n{'='*60}")

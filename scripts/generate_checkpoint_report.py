@@ -156,8 +156,15 @@ def get_failures(results: list) -> list:
     return failures
 
 
-def generate_report(results_path: Path, output_path: Path = None, gold_baseline: dict = None):
-    """Generate a markdown report from results JSON."""
+def generate_report(results_path: Path, output_path: Path = None, baseline_data: dict = None):
+    """
+    Generate a markdown report from results JSON.
+    
+    Args:
+        results_path: Path to results.json
+        output_path: Optional output path (default: REPORT.md alongside results)
+        baseline_data: Optional baseline results dict for comparison
+    """
     
     # Load results
     data = json.load(open(results_path))
@@ -205,25 +212,136 @@ def generate_report(results_path: Path, output_path: Path = None, gold_baseline:
     lines.append("")
     
     # Comparison to Gold Baseline
-    if gold_baseline:
-        lines.append("### Comparison to Gold Baseline (C012)")
+    if baseline_data:
+        baseline_metrics = baseline_data.get("metrics", {})
+        baseline_latency = baseline_data.get("latency", {})
+        baseline_cost = baseline_data.get("cost_summary_usd", {})
+        baseline_config = baseline_data.get("config", {})
+        
+        lines.append("## Comparison to Gold Baseline")
         lines.append("")
-        lines.append("| Metric | Gold Baseline | This Run | Delta |")
-        lines.append("|--------|---------------|----------|-------|")
+        lines.append("### Quality Metrics")
+        lines.append("")
+        lines.append("| Metric | Baseline | This Run | Delta | Status |")
+        lines.append("|--------|----------|----------|-------|--------|")
         
-        gold_pass = gold_baseline.get("pass_rate", 0)
-        gold_accept = gold_baseline.get("acceptable_rate", 0)
-        this_pass = metrics.get("pass_rate", 0)
-        this_accept = metrics.get("acceptable_rate", 0)
+        # Pass rate
+        b_pass = baseline_metrics.get("pass_rate", 0)
+        t_pass = metrics.get("pass_rate", 0)
+        d_pass = t_pass - b_pass
+        s_pass = "✅" if d_pass >= -0.02 else "⚠️" if d_pass >= -0.05 else "❌"
+        lines.append(f"| **Pass Rate** | {b_pass:.1%} | {t_pass:.1%} | {d_pass:+.1%} | {s_pass} |")
         
-        delta_pass = this_pass - gold_pass
-        delta_accept = this_accept - gold_accept
+        # Acceptable rate
+        b_accept = baseline_metrics.get("acceptable_rate", 0)
+        t_accept = metrics.get("acceptable_rate", 0)
+        d_accept = t_accept - b_accept
+        s_accept = "✅" if d_accept >= -0.01 else "⚠️" if d_accept >= -0.02 else "❌"
+        lines.append(f"| **Acceptable Rate** | {b_accept:.1%} | {t_accept:.1%} | {d_accept:+.1%} | {s_accept} |")
         
-        status_pass = "✓" if delta_pass >= -0.02 else "⚠️"
-        status_accept = "✓" if delta_accept >= -0.01 else "⚠️"
+        # Fail rate (lower is better)
+        b_fail = baseline_metrics.get("fail_rate", 0)
+        t_fail = metrics.get("fail_rate", 0)
+        d_fail = t_fail - b_fail
+        s_fail = "✅" if d_fail <= 0.01 else "⚠️" if d_fail <= 0.02 else "❌"
+        lines.append(f"| **Fail Rate** | {b_fail:.1%} | {t_fail:.1%} | {d_fail:+.1%} | {s_fail} |")
         
-        lines.append(f"| **Pass Rate** | {gold_pass:.1%} | {this_pass:.1%} | {delta_pass:+.1%} {status_pass} |")
-        lines.append(f"| **Acceptable Rate** | {gold_accept:.1%} | {this_accept:.1%} | {delta_accept:+.1%} {status_accept} |")
+        # MRR
+        b_mrr = baseline_metrics.get("mrr", 0)
+        t_mrr = metrics.get("mrr", 0)
+        d_mrr = t_mrr - b_mrr
+        s_mrr = "✅" if d_mrr >= -0.02 else "⚠️"
+        lines.append(f"| **MRR** | {b_mrr:.3f} | {t_mrr:.3f} | {d_mrr:+.3f} | {s_mrr} |")
+        
+        # Recall
+        b_recall = baseline_metrics.get("recall_at_100", 0)
+        t_recall = metrics.get("recall_at_100", 0)
+        d_recall = t_recall - b_recall
+        s_recall = "✅" if d_recall >= -0.01 else "⚠️"
+        lines.append(f"| **Recall@100** | {b_recall:.1%} | {t_recall:.1%} | {d_recall:+.1%} | {s_recall} |")
+        
+        # Overall score
+        b_score = baseline_metrics.get("overall_score_avg", 0)
+        t_score = metrics.get("overall_score_avg", 0)
+        d_score = t_score - b_score
+        s_score = "✅" if d_score >= -0.1 else "⚠️"
+        lines.append(f"| **Overall Score** | {b_score:.2f}/5 | {t_score:.2f}/5 | {d_score:+.2f} | {s_score} |")
+        lines.append("")
+        
+        # Latency comparison
+        lines.append("### Latency")
+        lines.append("")
+        lines.append("| Metric | Baseline | This Run | Delta | Speedup |")
+        lines.append("|--------|----------|----------|-------|---------|")
+        
+        b_lat = baseline_latency.get("total_avg_s", 0)
+        t_lat = latency.get("total_avg_s", 0)
+        d_lat = t_lat - b_lat
+        speedup = b_lat / t_lat if t_lat > 0 else 0
+        s_lat = "✅" if speedup >= 0.9 else "⚠️" if speedup >= 0.5 else "❌"
+        lines.append(f"| **Avg Latency** | {b_lat:.1f}s | {t_lat:.1f}s | {d_lat:+.1f}s | {speedup:.2f}x {s_lat} |")
+        lines.append("")
+        
+        # Cost comparison
+        lines.append("### Cost")
+        lines.append("")
+        lines.append("| Metric | Baseline | This Run | Delta |")
+        lines.append("|--------|----------|----------|-------|")
+        
+        b_cost = baseline_cost.get("total", 0)
+        t_cost = data.get("cost_summary_usd", {}).get("total", 0)
+        d_cost = t_cost - b_cost
+        lines.append(f"| **Total Cost** | ${b_cost:.4f} | ${t_cost:.4f} | ${d_cost:+.4f} |")
+        
+        b_per_q = baseline_cost.get("avg_per_question", 0)
+        t_per_q = data.get("cost_summary_usd", {}).get("avg_per_question", 0)
+        d_per_q = t_per_q - b_per_q
+        lines.append(f"| **Per Question** | ${b_per_q:.6f} | ${t_per_q:.6f} | ${d_per_q:+.6f} |")
+        lines.append("")
+        
+        # Breakdown comparison
+        baseline_by_type = baseline_data.get("breakdown_by_type", {})
+        baseline_by_diff = baseline_data.get("breakdown_by_difficulty", {})
+        this_by_type = data.get("breakdown_by_type", {})
+        this_by_diff = data.get("breakdown_by_difficulty", {})
+        
+        lines.append("### By Question Type")
+        lines.append("")
+        lines.append("| Type | Baseline | This Run | Delta |")
+        lines.append("|------|----------|----------|-------|")
+        for qtype in ["single_hop", "multi_hop"]:
+            b_rate = baseline_by_type.get(qtype, {}).get("pass_rate", 0)
+            t_rate = this_by_type.get(qtype, {}).get("pass_rate", 0)
+            d_rate = t_rate - b_rate
+            lines.append(f"| **{qtype.replace('_', '-').title()}** | {b_rate:.1%} | {t_rate:.1%} | {d_rate:+.1%} |")
+        lines.append("")
+        
+        lines.append("### By Difficulty")
+        lines.append("")
+        lines.append("| Difficulty | Baseline | This Run | Delta |")
+        lines.append("|------------|----------|----------|-------|")
+        for diff in ["easy", "medium", "hard"]:
+            b_rate = baseline_by_diff.get(diff, {}).get("pass_rate", 0)
+            t_rate = this_by_diff.get(diff, {}).get("pass_rate", 0)
+            d_rate = t_rate - b_rate
+            lines.append(f"| **{diff.title()}** | {b_rate:.1%} | {t_rate:.1%} | {d_rate:+.1%} |")
+        lines.append("")
+        
+        # Key finding (auto-generated)
+        lines.append("### Key Finding")
+        lines.append("")
+        issues = []
+        if d_pass < -0.02:
+            issues.append(f"pass rate dropped {abs(d_pass):.1%}")
+        if d_accept < -0.01:
+            issues.append(f"acceptable rate dropped {abs(d_accept):.1%}")
+        if speedup < 0.9:
+            issues.append(f"latency increased {abs(d_lat):.1f}s")
+        
+        if not issues:
+            lines.append("✅ **All metrics within acceptable range of baseline.**")
+        else:
+            lines.append(f"⚠️ **Regressions detected:** {', '.join(issues)}")
         lines.append("")
     
     # Configuration
@@ -413,16 +531,23 @@ def main():
         print(f"Error: Results file not found: {results_path}")
         sys.exit(1)
     
-    # Load gold baseline for comparison
+    # Load gold baseline data for comparison
     registry = load_registry()
+    baseline_data = None
     gold_baseline = registry.get("gold_baseline")
+    if gold_baseline:
+        baseline_folder = CHECKPOINTS_DIR / gold_baseline.get("folder", "")
+        baseline_results = baseline_folder / "results.json"
+        if baseline_results.exists():
+            baseline_data = json.load(open(baseline_results))
+            print(f"Comparing against baseline: {gold_baseline.get('id')} ({gold_baseline.get('folder')})")
     
     # Determine output path
     output_path = Path(args.output) if args.output else None
     
     # Generate report
     print(f"Generating report from: {results_path}")
-    report_path = generate_report(results_path, output_path, gold_baseline)
+    report_path = generate_report(results_path, output_path, baseline_data)
     print(f"Report saved to: {report_path}")
 
 

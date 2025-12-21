@@ -8,7 +8,10 @@
     "locked_date": "2025-12-20",
     "acceptable_rate": 0.985,
     "pass_rate": 0.928,
-    "notes": "Gold baseline for CI/CD comparison. All future test runs compare against this."
+    "notes": "Gold baseline for CI/CD comparison. All future test runs compare against this.",
+    "mrr": 0.737,
+    "recall_at_100": 0.991,
+    "overall_score_avg": 4.83
   },
   "entries": [
     {
@@ -23,7 +26,13 @@
       "fail_rate": 0.009,
       "acceptable_rate": 0.991,
       "folder": "C001__2025-12-19__C__p25-flash",
-      "notes": "Cloud baseline p25"
+      "notes": "Cloud baseline p25",
+      "mrr": 0.741,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.82,
+      "run_duration_seconds": 0.0,
+      "total_cost_usd": 0,
+      "latency_avg_s": 9.4
     },
     {
       "id": "C002",
@@ -37,7 +46,13 @@
       "fail_rate": 0.035,
       "acceptable_rate": 0.965,
       "folder": "C002__2025-12-18__C__p12-flash",
-      "notes": "Cloud p12 comparison"
+      "notes": "Cloud p12 comparison",
+      "mrr": 0.741,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.66,
+      "run_duration_seconds": 685.6,
+      "total_cost_usd": 0,
+      "latency_avg_s": 7.4
     },
     {
       "id": "C003",
@@ -51,7 +66,13 @@
       "fail_rate": 0.011,
       "acceptable_rate": 0.989,
       "folder": "C003__2025-12-19__L__p25-flash",
-      "notes": "Local baseline p25"
+      "notes": "Local baseline p25",
+      "mrr": 0.737,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.72,
+      "run_duration_seconds": 0.0,
+      "total_cost_usd": 0,
+      "latency_avg_s": 24.3
     },
     {
       "id": "C004",
@@ -65,7 +86,13 @@
       "fail_rate": 0.011,
       "acceptable_rate": 0.989,
       "folder": "C004__2025-12-19__C__p25-pro",
-      "notes": "Gemini 3 Pro test"
+      "notes": "Gemini 3 Pro test",
+      "mrr": 0.738,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.8,
+      "run_duration_seconds": 3341.9,
+      "total_cost_usd": 0,
+      "latency_avg_s": 35.0
     },
     {
       "id": "C005",
@@ -79,7 +106,13 @@
       "fail_rate": 0.015,
       "acceptable_rate": 0.985,
       "folder": "C005__2025-12-19__L__p25-3-flash__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.74,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.81,
+      "run_duration_seconds": 510.3,
+      "total_cost_usd": 0,
+      "latency_avg_s": 10.3
     },
     {
       "id": "C006",
@@ -93,7 +126,13 @@
       "fail_rate": 0.015,
       "acceptable_rate": 0.985,
       "folder": "C006__2025-12-19__L__p25-3-flash__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.737,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.81,
+      "run_duration_seconds": 477.7,
+      "total_cost_usd": 0,
+      "latency_avg_s": 9.9
     },
     {
       "id": "C007",
@@ -107,7 +146,13 @@
       "fail_rate": 0.017,
       "acceptable_rate": 0.983,
       "folder": "C007__2025-12-19__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.74,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.81,
+      "run_duration_seconds": 569.4,
+      "total_cost_usd": 0.0689,
+      "latency_avg_s": 12.1
     },
     {
       "id": "C008",
@@ -121,7 +166,13 @@
       "fail_rate": 0.011,
       "acceptable_rate": 0.989,
       "folder": "C008__2025-12-19__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.738,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.83,
+      "run_duration_seconds": 484.4,
+      "total_cost_usd": 0.8174,
+      "latency_avg_s": 10.4
     },
     {
       "id": "C009",
@@ -135,7 +186,13 @@
       "fail_rate": 0.009,
       "acceptable_rate": 0.991,
       "folder": "C009__2025-12-19__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.739,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.84,
+      "run_duration_seconds": 495.5,
+      "total_cost_usd": 0.8201,
+      "latency_avg_s": 79.1
     },
     {
       "id": "C010",
@@ -149,7 +206,13 @@
       "fail_rate": 0.011,
       "acceptable_rate": 0.989,
       "folder": "C010__2025-12-19__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.74,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.83,
+      "run_duration_seconds": 535.6,
+      "total_cost_usd": 0.8216,
+      "latency_avg_s": 73.6
     },
     {
       "id": "C011",
@@ -163,7 +226,13 @@
       "fail_rate": 0.007,
       "acceptable_rate": 0.993,
       "folder": "C011__2025-12-19__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.739,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.22,
+      "run_duration_seconds": 658.0,
+      "total_cost_usd": 0.7999,
+      "latency_avg_s": 27.9
     },
     {
       "id": "C012",
@@ -177,7 +246,13 @@
       "fail_rate": 0.015,
       "acceptable_rate": 0.985,
       "folder": "C012__2025-12-19__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.737,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.83,
+      "run_duration_seconds": 254.0,
+      "total_cost_usd": 0.8434,
+      "latency_avg_s": 42.7
     },
     {
       "id": "C013",
@@ -191,7 +266,13 @@
       "fail_rate": 0.015,
       "acceptable_rate": 0.985,
       "folder": "C013__2025-12-20__local__p25-3-flash-low__q458",
-      "notes": "Smart Throttler integration test"
+      "notes": "Smart Throttler integration test",
+      "mrr": 0.738,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.82,
+      "run_duration_seconds": 424.5,
+      "total_cost_usd": 0.8426,
+      "latency_avg_s": 79.5
     },
     {
       "id": "C014",
@@ -205,7 +286,13 @@
       "fail_rate": 0.013,
       "acceptable_rate": 0.987,
       "folder": "C014__2025-12-20__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.739,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.83,
+      "run_duration_seconds": 589.0,
+      "total_cost_usd": 0.86,
+      "latency_avg_s": 78.9
     },
     {
       "id": "C015",
@@ -219,7 +306,13 @@
       "fail_rate": 0.011,
       "acceptable_rate": 0.989,
       "folder": "C015__2025-12-20__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered from results.json"
+      "notes": "Auto-registered from results.json",
+      "mrr": 0.738,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.82,
+      "run_duration_seconds": 535.1,
+      "total_cost_usd": 0.8577,
+      "latency_avg_s": 77.2
     },
     {
       "id": "C016",
