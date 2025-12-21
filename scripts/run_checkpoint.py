@@ -12,6 +12,11 @@ Usage:
   python scripts/run_checkpoint.py --dry-run    # Show config without running
 """
 
+# Suppress verbose gRPC/absl logs BEFORE importing google libraries
+import os
+os.environ.setdefault("GRPC_VERBOSITY", "ERROR")
+os.environ.setdefault("GLOG_minloglevel", "2")  # 0=INFO, 1=WARNING, 2=ERROR
+
 import sys
 import argparse
 from pathlib import Path

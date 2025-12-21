@@ -1,7 +1,7 @@
 """
 Unit tests for config file validation.
 
-Ensures all config files (checkpoint, run, experiment) have required fields
+Ensures all config files (checkpoint, experiment) have required fields
 with correct values for reproducibility and consistency.
 """
 
@@ -16,7 +16,6 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 CONFIG_DIR = PROJECT_ROOT / "config"
 CHECKPOINT_CONFIG = CONFIG_DIR / "checkpoint_config.yaml"
-RUN_CONFIG = CONFIG_DIR / "run_config.yaml"
 EXPERIMENT_CONFIG = CONFIG_DIR / "experiment_config.yaml"
 
 
@@ -156,97 +155,9 @@ class TestCheckpointConfig:
         assert "execution" in config
     
     def test_execution_has_workers(self, config):
-        """Execution must have workers = 10."""
+        """Execution must have workers = 100 (smart throttler handles concurrency)."""
         assert "workers" in config["execution"]
-        assert config["execution"]["workers"] == 10
-
-
-# =============================================================================
-# RUN CONFIG TESTS
-# =============================================================================
-
-class TestRunConfig:
-    """Tests for run_config.yaml - the default run configuration."""
-    
-    @pytest.fixture
-    def config(self):
-        """Load run config."""
-        return load_config(RUN_CONFIG)
-    
-    def test_config_exists(self):
-        """Run config file must exist."""
-        assert RUN_CONFIG.exists(), f"Missing: {RUN_CONFIG}"
-    
-    def test_has_config_type(self, config):
-        """Must have config_type = run."""
-        assert config.get("config_type") == "run"
-    
-    # -------------------------------------------------------------------------
-    # GENERATOR CONFIG
-    # -------------------------------------------------------------------------
-    
-    def test_has_generator_section(self, config):
-        """Must have generator section."""
-        assert "generator" in config
-    
-    def test_generator_has_model(self, config):
-        """Generator must have model."""
-        assert "model" in config["generator"]
-    
-    def test_generator_has_temperature(self, config):
-        """Generator must have temperature."""
-        assert "temperature" in config["generator"]
-        assert config["generator"]["temperature"] == 0.0
-    
-    def test_generator_has_seed(self, config):
-        """Generator must have seed."""
-        assert "seed" in config["generator"]
-        assert config["generator"]["seed"] == 42
-    
-    def test_generator_has_reasoning_effort(self, config):
-        """Generator must have reasoning_effort."""
-        assert "reasoning_effort" in config["generator"]
-        assert config["generator"]["reasoning_effort"] in ["low", "high"]
-    
-    def test_generator_has_max_output_tokens(self, config):
-        """Generator must have max_output_tokens."""
-        assert "max_output_tokens" in config["generator"]
-    
-    # -------------------------------------------------------------------------
-    # JUDGE CONFIG
-    # -------------------------------------------------------------------------
-    
-    def test_has_judge_section(self, config):
-        """Must have judge section."""
-        assert "judge" in config
-    
-    def test_judge_has_model(self, config):
-        """Judge must have model."""
-        assert "model" in config["judge"]
-    
-    def test_judge_has_temperature(self, config):
-        """Judge must have temperature."""
-        assert "temperature" in config["judge"]
-        assert config["judge"]["temperature"] == 0.0
-    
-    def test_judge_has_seed(self, config):
-        """Judge must have seed."""
-        assert "seed" in config["judge"]
-        assert config["judge"]["seed"] == 42
-    
-    def test_judge_has_reasoning_effort(self, config):
-        """Judge must have reasoning_effort."""
-        assert "reasoning_effort" in config["judge"]
-        assert config["judge"]["reasoning_effort"] in ["low", "high"]
-    
-    # -------------------------------------------------------------------------
-    # EXECUTION CONFIG
-    # -------------------------------------------------------------------------
-    
-    def test_execution_has_workers(self, config):
-        """Execution must have workers = 10."""
-        assert "workers" in config["execution"]
-        assert config["execution"]["workers"] == 10
+        assert config["execution"]["workers"] == 100
 
 
 # =============================================================================
@@ -328,9 +239,9 @@ class TestExperimentConfig:
     # -------------------------------------------------------------------------
     
     def test_execution_has_workers(self, config):
-        """Execution must have workers = 10."""
+        """Execution must have workers = 100 (smart throttler handles concurrency)."""
         assert "workers" in config["execution"]
-        assert config["execution"]["workers"] == 10
+        assert config["execution"]["workers"] == 100
 
 
 # =============================================================================
@@ -345,7 +256,6 @@ class TestConfigConsistency:
         """Load all configs."""
         return {
             "checkpoint": load_config(CHECKPOINT_CONFIG),
-            "run": load_config(RUN_CONFIG),
             "experiment": load_config(EXPERIMENT_CONFIG),
         }
     
@@ -391,10 +301,10 @@ class TestConfigConsistency:
             assert config["generator"]["reasoning_effort"] == "low", f"{name} generator reasoning != low"
             assert config["judge"]["reasoning_effort"] == "low", f"{name} judge reasoning != low"
     
-    def test_all_have_workers_10(self, all_configs):
-        """All configs must have workers = 10."""
+    def test_all_have_workers_100(self, all_configs):
+        """All configs must have workers = 100 (smart throttler handles concurrency)."""
         for name, config in all_configs.items():
-            assert config["execution"]["workers"] == 10, f"{name} workers != 10"
+            assert config["execution"]["workers"] == 100, f"{name} workers != 100"
     
     def test_checkpoint_matches_gold_standard(self, all_configs):
         """Checkpoint config must use gold standard models."""
@@ -507,7 +417,6 @@ class TestSeedPassthrough:
         """All config files must have seed=42 for both generator and judge."""
         configs = [
             ("checkpoint", CHECKPOINT_CONFIG),
-            ("run", RUN_CONFIG),
             ("experiment", EXPERIMENT_CONFIG),
         ]
         for name, path in configs:

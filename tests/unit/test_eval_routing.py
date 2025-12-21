@@ -37,19 +37,16 @@ class TestRunDirectoryRouting:
             # Test the directory determination logic
             type_prefix = {
                 "checkpoint": "C",
-                "run": "R",
                 "experiment": "E",
-            }.get(evaluator.config_type, "R")
+            }.get(evaluator.config_type, "E")
             
             assert type_prefix == "C"
             
             # Verify subdirectory logic
             if evaluator.config_type == "checkpoint":
                 subdir = "checkpoints"
-            elif evaluator.config_type == "experiment":
-                subdir = "experiments"
             else:
-                subdir = "runs"
+                subdir = "experiments"
             
             assert subdir == "checkpoints"
     
@@ -64,46 +61,40 @@ class TestRunDirectoryRouting:
             
             type_prefix = {
                 "checkpoint": "C",
-                "run": "R",
                 "experiment": "E",
-            }.get(evaluator.config_type, "R")
+            }.get(evaluator.config_type, "E")
             
             assert type_prefix == "E"
             
             if evaluator.config_type == "checkpoint":
                 subdir = "checkpoints"
-            elif evaluator.config_type == "experiment":
-                subdir = "experiments"
             else:
-                subdir = "runs"
+                subdir = "experiments"
             
             assert subdir == "experiments"
     
-    def test_run_routes_to_runs_dir(self):
-        """Run config_type should route to runs/ directory."""
+    def test_unknown_type_defaults_to_experiment(self):
+        """Unknown config_type should default to experiment routing."""
         from lib.core.evaluator import GoldEvaluator
         
         with patch.object(GoldEvaluator, '__init__', lambda self, **kwargs: None):
             evaluator = GoldEvaluator()
-            evaluator.config_type = "run"
+            evaluator.config_type = "unknown"
             evaluator.config = {"client": "BFAI"}
             
             type_prefix = {
                 "checkpoint": "C",
-                "run": "R",
                 "experiment": "E",
-            }.get(evaluator.config_type, "R")
+            }.get(evaluator.config_type, "E")
             
-            assert type_prefix == "R"
+            assert type_prefix == "E"  # Defaults to E
             
             if evaluator.config_type == "checkpoint":
                 subdir = "checkpoints"
-            elif evaluator.config_type == "experiment":
-                subdir = "experiments"
             else:
-                subdir = "runs"
+                subdir = "experiments"
             
-            assert subdir == "runs"
+            assert subdir == "experiments"  # Defaults to experiments
 
 
 class TestNamingConventions:

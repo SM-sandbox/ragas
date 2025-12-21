@@ -1,0 +1,203 @@
+[
+  {
+    "question_id": "sh_easy_002",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+    "expected_answer": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+    "source_documents": [],
+    "generated_answer": "According to the general notes, the maximum specified length for an RS-485 bus cable is 4000FT (1220M) [2]. The cable used for this bus must meet or exceed Belden 3106A specifications [2].\n\nOther source documents provided specify similar or related maximum lengths for RS-485 connections:\n*   For Shark 100 meters, the maximum length for cable connecting all devices is 4000 feet (1219.20 meters) if an RS485 repeater is not being used [1][3].\n*   For AURORA inverters connected in a daisy chain, the recommended maximum length is 1200 metres [4].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 48.54190278053284,
+    "timing": {
+      "cloud_retrieve": 0.38220787048339844,
+      "cloud_query": 8.368366241455078,
+      "judge": 39.7913019657135,
+      "total": 48.54190278053284
+    },
+    "generator_tokens": {
+      "prompt": 18930,
+      "completion": 166,
+      "thinking": 610,
+      "total": 19706,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0023864,
+      "judge": 0.0,
+      "total": 0.0023864
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 547,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_003",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the DC system size specified for the BOYNE MOUNTAIN RESORT project?",
+    "expected_answer": "The DC system size is 1,770 KW DC.",
+    "source_documents": [],
+    "generated_answer": "The DC system size specified for the BOYNE MOUNTAIN RESORT project is 1,770 KW DC [1]. This specification is listed on the project's cover sheet under the project description section [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 55.345633029937744,
+    "timing": {
+      "cloud_retrieve": 0.3862948417663574,
+      "cloud_query": 6.724313020706177,
+      "judge": 48.2349910736084,
+      "total": 55.345633029937744
+    },
+    "generator_tokens": {
+      "prompt": 37318,
+      "completion": 48,
+      "thinking": 832,
+      "total": 38198,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0043334,
+      "judge": 0.0,
+      "total": 0.0043334
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 187,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_001",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+    "expected_answer": "failure, preventive stock",
+    "source_documents": [],
+    "generated_answer": "Based on the provided Spare Part Request Form, the two examples provided for the \"Reason for Replacement\" are:\n\n1.  **Failure** [1]\n2.  **Preventive stock** [1]\nThese examples are listed in the \"Details\" column of the form to guide the requesting party when completing the request [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 59.007073163986206,
+    "timing": {
+      "cloud_retrieve": 0.31533312797546387,
+      "cloud_query": 1.566742181777954,
+      "judge": 57.12492084503174,
+      "total": 59.007073163986206
+    },
+    "generator_tokens": {
+      "prompt": 5934,
+      "completion": 70,
+      "thinking": 0,
+      "total": 6004,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0006214,
+      "judge": 0.0,
+      "total": 0.0006214
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 285,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  }
+]

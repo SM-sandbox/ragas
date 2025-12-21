@@ -327,6 +327,20 @@
       "acceptable_rate": 0.987,
       "folder": "C016__2025-12-21__local__p25-3-flash-low__q458",
       "notes": "Auto-registered from results.json"
+    },
+    {
+      "id": "C019",
+      "date": "2025-12-21",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 10,
+      "pass_rate": 0.0,
+      "fail_rate": 0.0,
+      "acceptable_rate": 1.0,
+      "folder": "C019__2025-12-21__cloud__p25-3-flash-low__q10",
+      "notes": "Auto-registered"
     }
   ]
 }

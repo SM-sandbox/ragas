@@ -1,7 +1,7 @@
 """
 Config Loader for RAG Evaluation Suite
 
-Loads and validates configuration files for checkpoint, run, and experiment evaluations.
+Loads and validates configuration files for checkpoint and experiment evaluations.
 This is the single source of truth for config loading across all runners.
 """
 
@@ -15,7 +15,6 @@ CONFIG_DIR = PROJECT_ROOT / "config"
 
 # Config file paths
 CHECKPOINT_CONFIG_PATH = CONFIG_DIR / "checkpoint_config.yaml"
-RUN_CONFIG_PATH = CONFIG_DIR / "run_config.yaml"
 EXPERIMENT_CONFIG_PATH = CONFIG_DIR / "experiment_config.yaml"
 
 
@@ -97,17 +96,6 @@ def load_checkpoint_config() -> Dict[str, Any]:
     return config
 
 
-def load_run_config() -> Dict[str, Any]:
-    """
-    Load the run configuration.
-    
-    This is the default config for full evaluation runs.
-    """
-    config = load_yaml(RUN_CONFIG_PATH)
-    validate_config(config, "run")
-    return config
-
-
 def load_experiment_config() -> Dict[str, Any]:
     """
     Load the experiment configuration.
@@ -119,12 +107,12 @@ def load_experiment_config() -> Dict[str, Any]:
     return config
 
 
-def load_config(config_type: str = "run", config_path: Optional[Path] = None) -> Dict[str, Any]:
+def load_config(config_type: str = "experiment", config_path: Optional[Path] = None) -> Dict[str, Any]:
     """
     Load configuration by type or from a custom path.
     
     Args:
-        config_type: "checkpoint", "run", or "experiment"
+        config_type: "checkpoint" or "experiment"
         config_path: Optional custom config file path
         
     Returns:
@@ -137,12 +125,10 @@ def load_config(config_type: str = "run", config_path: Optional[Path] = None) ->
     
     if config_type == "checkpoint":
         return load_checkpoint_config()
-    elif config_type == "run":
-        return load_run_config()
     elif config_type == "experiment":
         return load_experiment_config()
     else:
-        raise ValueError(f"Unknown config_type: {config_type}. Must be checkpoint|run|experiment")
+        raise ValueError(f"Unknown config_type: {config_type}. Must be checkpoint|experiment")
 
 
 def get_generator_config(config: Dict[str, Any]) -> Dict[str, Any]:

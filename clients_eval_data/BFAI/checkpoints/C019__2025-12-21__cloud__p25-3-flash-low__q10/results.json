@@ -1,0 +1,976 @@
+{
+  "schema_version": "1.1",
+  "timestamp": "2025-12-21T15:28:23.585153",
+  "client": "BFAI",
+  "index": {
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "mode": "cloud",
+    "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app"
+  },
+  "config": {
+    "generator_model": "gemini-3-flash-preview",
+    "generator_reasoning_effort": "low",
+    "generator_seed": 42,
+    "judge_model": "gemini-3-flash-preview",
+    "judge_reasoning_effort": "low",
+    "judge_seed": 42,
+    "precision_k": 25,
+    "recall_k": 100,
+    "workers": 100,
+    "temperature": 0.0
+  },
+  "metrics": {
+    "precision_k": 25,
+    "total": 10,
+    "completed": 10,
+    "recall_at_100": 1.0,
+    "mrr": 1.0,
+    "pass_rate": 0.0,
+    "partial_rate": 1.0,
+    "fail_rate": 0.0,
+    "acceptable_rate": 1.0,
+    "correctness_avg": 3.0,
+    "completeness_avg": 3.0,
+    "faithfulness_avg": 3.0,
+    "relevance_avg": 3.0,
+    "clarity_avg": 3.0,
+    "overall_score_avg": 3.0
+  },
+  "latency": {
+    "total_avg_s": 53.51707887649536,
+    "total_min_s": 38.102784872055054,
+    "total_max_s": 66.81059098243713,
+    "by_phase": {
+      "retrieval_avg_s": 0.0,
+      "rerank_avg_s": 0.0,
+      "generation_avg_s": 0.0,
+      "judge_avg_s": 48.19594686031341
+    }
+  },
+  "tokens": {
+    "prompt_total": 0,
+    "completion_total": 0,
+    "thinking_total": 0,
+    "cached_total": 0,
+    "total": 0
+  },
+  "answer_stats": {
+    "avg_length_chars": 520.2,
+    "min_length_chars": 72,
+    "max_length_chars": 1044
+  },
+  "quality": {
+    "finish_reason_distribution": {
+      "UNKNOWN": 10
+    },
+    "fallback_rate": 0.0
+  },
+  "execution": {
+    "run_duration_seconds": 82.44425201416016,
+    "questions_per_second": 0.12129408364675874,
+    "workers": 100,
+    "rate_limiter": {
+      "current_rpm": 4,
+      "current_tpm": 4000,
+      "rpm_limit": 20000,
+      "tpm_limit": 20000000,
+      "max_concurrent": 50,
+      "rpm_utilization": 0.0002,
+      "tpm_utilization": 0.0002,
+      "total_requests": 10,
+      "total_tokens": 10000,
+      "total_throttles": 0,
+      "model_rotations": 0,
+      "active_model": "gemini-3-flash-preview",
+      "models_on_cooldown": []
+    }
+  },
+  "retry_stats": {
+    "total_questions": 10,
+    "succeeded_first_try": 10,
+    "succeeded_after_retry": 0,
+    "failed_all_retries": 0,
+    "total_retry_attempts": 10,
+    "avg_attempts": 1.0
+  },
+  "errors": {
+    "total_errors": 0,
+    "by_phase": {
+      "retrieval": 0,
+      "rerank": 0,
+      "generation": 0,
+      "judge": 0
+    },
+    "error_messages": []
+  },
+  "skipped": {
+    "count": 0,
+    "reasons": {
+      "missing_ground_truth": 0,
+      "invalid_question": 0,
+      "timeout": 0
+    },
+    "question_ids": []
+  },
+  "breakdown_by_type": {
+    "single_hop": {
+      "total": 10,
+      "pass": 0,
+      "partial": 10,
+      "fail": 0,
+      "pass_rate": 0.0
+    }
+  },
+  "breakdown_by_difficulty": {
+    "easy": {
+      "total": 10,
+      "pass": 0,
+      "partial": 10,
+      "fail": 0,
+      "pass_rate": 0.0
+    }
+  },
+  "quality_by_bucket": {
+    "single_hop": {
+      "easy": {
+        "count": 10,
+        "pass_rate": 0.0,
+        "partial_rate": 1.0,
+        "fail_rate": 0.0,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 3.0,
+        "correctness_avg": 3.0,
+        "completeness_avg": 3.0,
+        "faithfulness_avg": 3.0,
+        "relevance_avg": 3.0,
+        "clarity_avg": 3.0
+      }
+    },
+    "multi_hop": {}
+  },
+  "orchestrator": {
+    "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+    "service": "bfai-api",
+    "project_id": "bfai-prod",
+    "environment": "production",
+    "region": "us-east1"
+  },
+  "warmup": {
+    "phase": "warmup",
+    "pings": [
+      {
+        "status": "ok",
+        "time": 0.13381600379943848
+      },
+      {
+        "status": "ok",
+        "time": 0.13354086875915527
+      },
+      {
+        "status": "ok",
+        "time": 0.1400892734527588
+      }
+    ],
+    "parallel_warmup": [
+      {
+        "idx": 6,
+        "status": "ok",
+        "time": 0.4040677547454834
+      },
+      {
+        "idx": 1,
+        "status": "ok",
+        "time": 0.41132473945617676
+      },
+      {
+        "idx": 15,
+        "status": "ok",
+        "time": 0.40570688247680664
+      },
+      {
+        "idx": 10,
+        "status": "ok",
+        "time": 0.4088718891143799
+      },
+      {
+        "idx": 11,
+        "status": "ok",
+        "time": 0.4183008670806885
+      },
+      {
+        "idx": 5,
+        "status": "ok",
+        "time": 0.4279811382293701
+      },
+      {
+        "idx": 0,
+        "status": "ok",
+        "time": 0.4339332580566406
+      },
+      {
+        "idx": 8,
+        "status": "ok",
+        "time": 0.4531700611114502
+      },
+      {
+        "idx": 19,
+        "status": "ok",
+        "time": 0.5100018978118896
+      },
+      {
+        "idx": 7,
+        "status": "ok",
+        "time": 0.5285971164703369
+      },
+      {
+        "idx": 9,
+        "status": "ok",
+        "time": 0.5483458042144775
+      },
+      {
+        "idx": 2,
+        "status": "ok",
+        "time": 0.555232048034668
+      },
+      {
+        "idx": 14,
+        "status": "ok",
+        "time": 0.5625500679016113
+      },
+      {
+        "idx": 4,
+        "status": "ok",
+        "time": 0.5874049663543701
+      },
+      {
+        "idx": 16,
+        "status": "ok",
+        "time": 0.5840408802032471
+      },
+      {
+        "idx": 3,
+        "status": "ok",
+        "time": 0.6016569137573242
+      },
+      {
+        "idx": 13,
+        "status": "ok",
+        "time": 0.6140570640563965
+      },
+      {
+        "idx": 17,
+        "status": "ok",
+        "time": 0.6340928077697754
+      },
+      {
+        "idx": 12,
+        "status": "ok",
+        "time": 0.6872310638427734
+      },
+      {
+        "idx": 18,
+        "status": "ok",
+        "time": 0.6924679279327393
+      }
+    ],
+    "ramp_up": [
+      {
+        "workers": 10,
+        "ok_count": 10,
+        "time": 0.4223940372467041
+      },
+      {
+        "workers": 25,
+        "ok_count": 25,
+        "time": 0.6451172828674316
+      },
+      {
+        "workers": 50,
+        "ok_count": 50,
+        "time": 1.3848819732666016
+      }
+    ],
+    "total_warmup_time": 15.59842586517334,
+    "orchestrator_ready": true,
+    "target_workers": 100
+  },
+  "cost_summary_usd": {
+    "generator_total": 0.0171671,
+    "judge_total": 0.0,
+    "total": 0.0171671,
+    "avg_per_question": 0.0017167100000000002
+  },
+  "results": [
+    {
+      "question_id": "sh_easy_003",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the DC system size specified for the BOYNE MOUNTAIN RESORT project?",
+      "expected_answer": "The DC system size is 1,770 KW DC.",
+      "source_documents": [],
+      "generated_answer": "The DC system size specified for the BOYNE MOUNTAIN RESORT project is 1,770 KW DC [1]. This specification is listed on the project's cover sheet under the project description section [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 38.102784872055054,
+      "timing": {
+        "cloud_retrieve": 0.5441210269927979,
+        "cloud_query": 6.92190408706665,
+        "judge": 30.63674283027649,
+        "total": 38.102784872055054
+      },
+      "generator_tokens": {
+        "prompt": 37318,
+        "completion": 48,
+        "thinking": 832,
+        "total": 38198,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0043334,
+        "judge": 0.0,
+        "total": 0.0043334
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 187,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_004",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum RMS line voltage that can be present on the input terminals of the device?",
+      "expected_answer": "Line voltages up to 600 VRMS can be present on the input terminals of the device.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided source documents, the maximum RMS line voltage that can be present on the input terminals of the device is **600 VRMS** [1].\n\nAccording to the warnings provided in the documentation:\n*   Line voltages up to **600 VRMS** are present on the input terminals of the device and throughout the connected line circuits during normal operation [1].\n*   These voltages may cause severe injury or death [1].\n*   Installation and servicing should be performed only by qualified, properly trained personnel [1].\n*   The device is classified as a **CLASS III** measurement device [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 45.80972409248352,
+      "timing": {
+        "cloud_retrieve": 0.58355712890625,
+        "cloud_query": 3.389542818069458,
+        "judge": 41.83658027648926,
+        "total": 45.80972409248352
+      },
+      "generator_tokens": {
+        "prompt": 10197,
+        "completion": 130,
+        "thinking": 0,
+        "total": 10327,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0010717,
+        "judge": 0.0,
+        "total": 0.0010717
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 593,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_005",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the rated AC voltage for the NEP BDM-1200-LV Micro Inverter?",
+      "expected_answer": "120V",
+      "source_documents": [],
+      "generated_answer": "The rated AC voltage for the NEP BDM-1200-LV Micro Inverter is 120V [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 46.984890937805176,
+      "timing": {
+        "cloud_retrieve": 0.42598485946655273,
+        "cloud_query": 1.7479219436645508,
+        "judge": 44.81095790863037,
+        "total": 46.984890937805176
+      },
+      "generator_tokens": {
+        "prompt": 5916,
+        "completion": 31,
+        "thinking": 0,
+        "total": 5947,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.000604,
+        "judge": 0.0,
+        "total": 0.000604
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 72,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_006",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What communication interfaces are used by the BDM-1200-LV/BDM-1600-LV Micro Inverters?",
+      "expected_answer": "WI-FI, Bluetooth",
+      "source_documents": [],
+      "generated_answer": "The BDM-1200-LV and BDM-1600-LV microinverters utilize **WI-FI** and **Bluetooth** as their communication interfaces [1].\n\nThese interfaces support the following features:\n*   **Monitoring and Diagnostics:** Users can monitor real-time performance, troubleshoot issues, and receive alerts via a smartphone app (available for iOS/Android) [1].\n*   **Firmware Updates:** The microinverters support over-the-air firmware updates to ensure future-proofing [1].\n*   **Display:** The devices also feature an LED LIGHT for visual status display [1].\n\nAdditionally, while the specific BDM-1200-LV/BDM-1600-LV datasheet focuses on Wi-Fi and Bluetooth, general NEP microinverter documentation indicates that firmware can also be upgradable via **PLC** (Powerline Communications) and that these units can integrate with NEP's **BDG-256** gateway [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 49.618000984191895,
+      "timing": {
+        "cloud_retrieve": 0.5857689380645752,
+        "cloud_query": 3.5462467670440674,
+        "judge": 45.48596787452698,
+        "total": 49.618000984191895
+      },
+      "generator_tokens": {
+        "prompt": 7413,
+        "completion": 215,
+        "thinking": 0,
+        "total": 7628,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0008273,
+        "judge": 0.0,
+        "total": 0.0008273
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 839,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_002",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+      "expected_answer": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+      "source_documents": [],
+      "generated_answer": "According to the general notes, the maximum specified length for an RS-485 bus cable is 4000FT (1220M) [2]. The cable used for this bus must meet or exceed Belden 3106A specifications [2].\n\nOther source documents provided specify similar or related maximum lengths for RS-485 connections:\n*   For Shark 100 meters, the maximum length for cable connecting all devices is 4000 feet (1219.20 meters) if an RS485 repeater is not being used [1][3].\n*   For AURORA inverters connected in a daisy chain, the recommended maximum length is 1200 metres [4].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 51.10080409049988,
+      "timing": {
+        "cloud_retrieve": 0.44538402557373047,
+        "cloud_query": 7.306116819381714,
+        "judge": 43.34927701950073,
+        "total": 51.10080409049988
+      },
+      "generator_tokens": {
+        "prompt": 18930,
+        "completion": 166,
+        "thinking": 610,
+        "total": 19706,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0023864,
+        "judge": 0.0,
+        "total": 0.0023864
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 547,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_001",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+      "expected_answer": "failure, preventive stock",
+      "source_documents": [],
+      "generated_answer": "Based on the provided Spare Part Request Form, the two examples provided for the \"Reason for Replacement\" are:\n\n1.  **Failure** [1]\n2.  **Preventive stock** [1]\nThese examples are listed in the \"Details\" column of the form to guide the requesting party when completing the request [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 56.27532482147217,
+      "timing": {
+        "cloud_retrieve": 0.4639401435852051,
+        "cloud_query": 1.7150628566741943,
+        "judge": 54.09629821777344,
+        "total": 56.27532482147217
+      },
+      "generator_tokens": {
+        "prompt": 5934,
+        "completion": 70,
+        "thinking": 0,
+        "total": 6004,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0006214,
+        "judge": 0.0,
+        "total": 0.0006214
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 285,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_010",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "Which specific 3VA circuit breaker models are shipped as standard with aluminum load side lugs already installed?",
+      "expected_answer": "3VA41 panelboard mounted circuit breakers",
+      "source_documents": [],
+      "generated_answer": "Based on the provided documents, the specific 3VA circuit breaker models shipped as standard with aluminum load side lugs already installed are the **3VA41** panelboard mounted circuit breakers [1].\n\nThe documentation further clarifies the standard shipping configurations for other models:\n*   **3VA41** models are the only ones listed in the connection technology structure as having load side lugs [9].\n*   **3VA51 through 3VA55** thermal-magnetic trip breakers are shipped as standard without lugs installed [1].\n*   **3VA61 through 3VA66** electronic trip breakers are also shipped as standard without lugs installed [1].\n*   For the **3VA51 through 3VA55** and **3VA61 through 3VA64** models, factory-installed standard line and load lugs can be ordered by changing the 12th digit of the catalog number to \"6\" [1][2][4][5][6].\n*   For the **3VA65** and **3VA66** models, if the 12th digit is changed to \"6\", the standard line and load lugs are shipped with the breaker for field installation rather than being factory-installed [3][7][8].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 58.46202301979065,
+      "timing": {
+        "cloud_retrieve": 0.5256228446960449,
+        "cloud_query": 6.90582275390625,
+        "judge": 51.030539989471436,
+        "total": 58.46202301979065
+      },
+      "generator_tokens": {
+        "prompt": 22269,
+        "completion": 284,
+        "thinking": 504,
+        "total": 23057,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0026933,
+        "judge": 0.0,
+        "total": 0.0026933
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 1044,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_008",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers?",
+      "expected_answer": "June 2015",
+      "source_documents": [],
+      "generated_answer": "The effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers is June 2015 [1].\n\nThe Dual Function Circuit Breaker combines GFCI and AFCI protection, which protects against both Ground Faults and Arc Faults [1]. This device includes the Self-Test & Lockout feature as required by UL 943 [1]. According to the referenced standards, UL 943 is the Standard for Ground-Fault Circuit-Interrupters [2][3].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 60.72862792015076,
+      "timing": {
+        "cloud_retrieve": 0.35457682609558105,
+        "cloud_query": 5.595474004745483,
+        "judge": 54.778533697128296,
+        "total": 60.72862792015076
+      },
+      "generator_tokens": {
+        "prompt": 8936,
+        "completion": 116,
+        "thinking": 472,
+        "total": 9524,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0012704,
+        "judge": 0.0,
+        "total": 0.0012704
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 459,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_007",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum efficiency of the BDM-1200-LV/BDM-1600-LV Micro Inverter?",
+      "expected_answer": "99.9%",
+      "source_documents": [],
+      "generated_answer": "Based on the provided source documents, the maximum efficiency for the BDM-1200-LV and BDM-1600-LV microinverters is as follows:\n\n*   **Max. Efficiency:** 97.5% [1]\n*   **Max. MPPT Efficiency:** 99.9% [1]\n*   **CEC Efficiency:** 96.5% [1]\nThese specifications are listed for both the BDM-1200-LV and BDM-1600-LV models within the same technical data table [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 61.27801704406738,
+      "timing": {
+        "cloud_retrieve": 0.5332820415496826,
+        "cloud_query": 1.954807996749878,
+        "judge": 58.78990697860718,
+        "total": 61.27801704406738
+      },
+      "generator_tokens": {
+        "prompt": 6920,
+        "completion": 127,
+        "thinking": 0,
+        "total": 7047,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0007428,
+        "judge": 0.0,
+        "total": 0.0007428
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 360,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_009",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC?",
+      "expected_answer": "65KA",
+      "source_documents": [],
+      "generated_answer": "The maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC is 65KA [3].\n\nAccording to the technical specifications and selection tables for the 3VA41:\n\n*   The 3VA41 circuit breaker is available with AC interrupting ratings up to 65KA @ 480VAC [3].\n*   This maximum rating of 65 is associated with the H-Interrupting Class (HEAB) for 2- and 3-pole breaker types at 480 Volts AC (50/60 Hz) [1][2].\n*   In the product catalog's summary table, this value is listed as 65,000 for the HEAB class at 480V [4].\n*   Other interrupting classes for the 3VA41 at 480V include:\n    *   **S-Interrupting Class (SEAB):** 25 [1][2] or 25,000 [4].\n    *   **M-Interrupting Class (MEAB):** 35 [1][2] or 35,000 [4].\n*   The 3VA41 is available in 1, 1 in 2-pole, 2 or 3-pole versions on 1 inch pole centers [3].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 3,
+        "relevance": 3,
+        "clarity": 3,
+        "overall_score": 3,
+        "verdict": "partial",
+        "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+      },
+      "time": 66.81059098243713,
+      "timing": {
+        "cloud_retrieve": 0.3071320056915283,
+        "cloud_query": 9.358745813369751,
+        "judge": 57.14466381072998,
+        "total": 66.81059098243713
+      },
+      "generator_tokens": {
+        "prompt": 19235,
+        "completion": 306,
+        "thinking": 815,
+        "total": 20356,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 0,
+        "completion": 0,
+        "thinking": 0,
+        "total": 0,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0026164,
+        "judge": 0.0,
+        "total": 0.0026164
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 816,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    }
+  ]
+}

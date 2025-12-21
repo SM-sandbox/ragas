@@ -13,6 +13,12 @@ Usage:
   python scripts/eval/run_gold_eval.py --workers 5      # Parallel with 5 workers
 """
 
+# Suppress verbose gRPC/absl logs BEFORE importing google libraries
+import os
+os.environ.setdefault("GRPC_VERBOSITY", "ERROR")
+os.environ.setdefault("GLOG_minloglevel", "2")  # 0=INFO, 1=WARNING, 2=ERROR
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Suppress TensorFlow logs if present
+
 import sys
 import json
 import time
@@ -119,7 +125,7 @@ class GoldEvaluator:
         generator_reasoning: str = None,
         cloud_mode: bool = False,
         model: str = None,
-        config_type: str = "run",
+        config_type: str = "experiment",
         config_path: Path = None,
         num_questions: int = None,  # For run directory naming
     ):
@@ -312,9 +318,8 @@ class GoldEvaluator:
         # Determine run type prefix based on config_type
         type_prefix = {
             "checkpoint": "C",
-            "run": "R",
             "experiment": "E",
-        }.get(self.config_type, "R")
+        }.get(self.config_type, "E")
         
         # Get base output directory from config
         client = self.config.get("client", "BFAI")
@@ -323,10 +328,8 @@ class GoldEvaluator:
         # Determine subdirectory based on config type
         if self.config_type == "checkpoint":
             runs_dir = base_dir / "checkpoints"
-        elif self.config_type == "experiment":
-            runs_dir = base_dir / "experiments"
         else:
-            runs_dir = base_dir / "runs"
+            runs_dir = base_dir / "experiments"
         
         runs_dir.mkdir(parents=True, exist_ok=True)
         

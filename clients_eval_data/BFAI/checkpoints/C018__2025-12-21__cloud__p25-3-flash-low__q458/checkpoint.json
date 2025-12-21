@@ -1,0 +1,2012 @@
+[
+  {
+    "question_id": "sh_easy_018",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch?",
+    "expected_answer": "The continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch is 2000 A / 3000 A / 4000 A.",
+    "source_documents": [],
+    "generated_answer": "The continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch is 2000 A / 3000 A / 4000 A [1][2]. This rating applies to both the 550 kV and 800 kV maximum voltage models [1].\n\nAccording to the application guide for group operated switches, the EV-2H is a recommended configuration for the following continuous current requirements:\n*   2000A [3][4]\n*   3000A [3][4]\n*   4000A [3][4]",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 31.025929927825928,
+    "timing": {
+      "cloud_retrieve": 0.6690547466278076,
+      "cloud_query": 11.550863027572632,
+      "judge": 18.805994033813477,
+      "total": 31.025929927825928
+    },
+    "generator_tokens": {
+      "prompt": 11504,
+      "completion": 156,
+      "thinking": 631,
+      "total": 12291,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0016545,
+      "judge": 0.0,
+      "total": 0.0016545
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 401,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_024",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What specific personal protective equipment (PPE) was found to be cracked during checks, compromising arc-flash protection?",
+    "expected_answer": "A face shield.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided safety observation reports, the following specific personal protective equipment (PPE) was found to be cracked, compromising arc-flash protection:\n\n*   **Face Shields:** During PPE checks, a technician was found with a cracked face shield that would not have provided proper arc-flash protection during switching [1]. Additionally, a worker was stopped from beginning a task because they were using a cracked face shield during arc flash preparation [6].\n*   **Balaclavas:** While inspecting arc flash PPE, balaclavas were found stored folded with visible cracks and were subsequently replaced [2].\n*   **Hoods and Hood Visors:** \n    *   An inspection of arc flash suits revealed a hood that had been stored folded and was cracked at the face shield [4]. \n    *   Another inspection of arc flash hoods identified one with a cracked visor, which was replaced [5].\n    *   A separate check of arc flash PPE found a hood lens that was cracked and would not have provided adequate protection [3].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 41.43862771987915,
+    "timing": {
+      "cloud_retrieve": 0.700476884841919,
+      "cloud_query": 7.154063940048218,
+      "judge": 33.584070920944214,
+      "total": 41.43862771987915
+    },
+    "generator_tokens": {
+      "prompt": 11408,
+      "completion": 382,
+      "thinking": 0,
+      "total": 11790,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0012936,
+      "judge": 0.0,
+      "total": 0.0012936
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 1015,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_001",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+    "expected_answer": "failure, preventive stock",
+    "source_documents": [],
+    "generated_answer": "Based on the provided Spare Part Request Form, the two examples provided for the \"Reason for Replacement\" are:\n\n1.  **Failure** [1]\n2.  **Preventive stock** [1]\nThese examples are listed in the \"Details\" column of the form to guide the requesting party when completing the request [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 44.11495780944824,
+    "timing": {
+      "cloud_retrieve": 0.7099847793579102,
+      "cloud_query": 6.487426996231079,
+      "judge": 36.917529821395874,
+      "total": 44.11495780944824
+    },
+    "generator_tokens": {
+      "prompt": 5934,
+      "completion": 70,
+      "thinking": 0,
+      "total": 6004,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0006214,
+      "judge": 0.0,
+      "total": 0.0006214
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 285,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_017",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch?",
+    "expected_answer": "The maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch is 550 kV \u2013 800 kV.",
+    "source_documents": [],
+    "generated_answer": "The maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch is 550 kV - 800 kV [1][2]. Specifically, the switch is available in two maximum voltage ratings: 550 kV and 800 kV [1].\n\nAdditional electrical ratings associated with these maximum voltage levels include:\n*   **BIL (kV):** 1800 kV for the 550 kV rating and 2050 kV for the 800 kV rating [1].\n*   **Continuous Current Rating:** 2000 A / 3000 A / 4000 A [2][1].\n*   **Short Time Withstand (3 sec):** 63 kA / 75 kA / 80 kA [1].\n*   **Peak Withstand:** 164 kA / 195 kA / 208 kA [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 46.52985119819641,
+    "timing": {
+      "cloud_retrieve": 0.6989219188690186,
+      "cloud_query": 6.276081323623657,
+      "judge": 39.55483317375183,
+      "total": 46.52985119819641
+    },
+    "generator_tokens": {
+      "prompt": 12692,
+      "completion": 216,
+      "thinking": 0,
+      "total": 12908,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0013556,
+      "judge": 0.0,
+      "total": 0.0013556
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 555,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_016",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "Which design standards are listed for the Southwire 345/400 kV XLPE Power Cable?",
+    "expected_answer": "The design standards listed for the Southwire 345/400 kV XLPE Power Cable are AEIC and IEC.",
+    "source_documents": [],
+    "generated_answer": "The design standards listed for the Southwire 345/400 kV XLPE Power Cable are AEIC and IEC [1][2].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 47.552040815353394,
+    "timing": {
+      "cloud_retrieve": 0.8190357685089111,
+      "cloud_query": 7.4864890575408936,
+      "judge": 39.246495962142944,
+      "total": 47.552040815353394
+    },
+    "generator_tokens": {
+      "prompt": 9099,
+      "completion": 32,
+      "thinking": 0,
+      "total": 9131,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0009227,
+      "judge": 0.0,
+      "total": 0.0009227
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 98,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_065",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum input voltage for the YOTTA Energy DPI-208/480 microinverters?",
+    "expected_answer": "The maximum input voltage for the DPI-208/480 microinverters is 60V.",
+    "source_documents": [],
+    "generated_answer": "The maximum input voltage for the Yotta Energy DPI-208/480 microinverters is 60V [1][2][3].\n\nAdditional input specifications for these models include:\n*   **Peak Power Tracking Voltage:** 32V-45V [1].\n*   **Operating Voltage Range:** 26V-60V [1].\n*   **Maximum Input Current:** 20A x 4 [1] or 20A [2][3].\n*   **Maximum Input Short Circuit Current:** 25A per input [1].\n*   **Low Voltage DC input:** <60V [2][3].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 49.915290117263794,
+    "timing": {
+      "cloud_retrieve": 1.8334031105041504,
+      "cloud_query": 18.885019063949585,
+      "judge": 29.196754932403564,
+      "total": 49.915290117263794
+    },
+    "generator_tokens": {
+      "prompt": 7309,
+      "completion": 150,
+      "thinking": 0,
+      "total": 7459,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0007909,
+      "judge": 0.0,
+      "total": 0.0007909
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 411,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_008",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers?",
+    "expected_answer": "June 2015",
+    "source_documents": [],
+    "generated_answer": "The effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers is June 2015 [1].\n\nThe Dual Function Circuit Breaker combines GFCI and AFCI protection, which protects against both Ground Faults and Arc Faults [1]. This device includes the Self-Test & Lockout feature as required by UL 943 [1]. According to the referenced standards, UL 943 is the Standard for Ground-Fault Circuit-Interrupters [2][3].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 52.36529207229614,
+    "timing": {
+      "cloud_retrieve": 1.069715976715088,
+      "cloud_query": 16.22295308113098,
+      "judge": 35.07259702682495,
+      "total": 52.36529207229614
+    },
+    "generator_tokens": {
+      "prompt": 8936,
+      "completion": 116,
+      "thinking": 472,
+      "total": 9524,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0012704,
+      "judge": 0.0,
+      "total": 0.0012704
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 459,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_013",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the common IP Address setting for an AcquiSuite using a cellular modem?",
+    "expected_answer": "192.168.2.50",
+    "source_documents": [],
+    "generated_answer": "The common IP Address setting for an AcquiSuite using a cellular modem (such as the Digi or Multitech) is 192.168.2.50 [1].\n\nIn this configuration, the other common network settings include:\n*   **DHCP+UPnP:** disabled [1]\n*   **Netmask:** 255.255.255.0 [1]\n*   **Gateway:** 192.168.2.1 [2]\n*   **DNS Server #1:** 8.8.4.4 [2]\n*   **DNS Server #2:** 8.8.8.8 [2]\nWhile these settings are common, some sites, particularly retrofits, may utilize different network configurations [2]. It is advised not to change differing settings unless they are confirmed to be incorrect by checking site drawings or consulting with Application Engineers (AEs) [2].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 53.310616970062256,
+    "timing": {
+      "cloud_retrieve": 1.058750867843628,
+      "cloud_query": 13.193151950836182,
+      "judge": 39.05869007110596,
+      "total": 53.310616970062256
+    },
+    "generator_tokens": {
+      "prompt": 15675,
+      "completion": 204,
+      "thinking": 487,
+      "total": 16366,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.00199,
+      "judge": 0.0,
+      "total": 0.00199
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 646,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_051",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the momentary current rating for the LH-6 ground switch model?",
+    "expected_answer": "61 kA",
+    "source_documents": [],
+    "generated_answer": "The LH-6 ground switch model has a momentary current rating of 61 kA [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 53.45803785324097,
+    "timing": {
+      "cloud_retrieve": 0.6850121021270752,
+      "cloud_query": 7.911273956298828,
+      "judge": 44.86173701286316,
+      "total": 53.45803785324097
+    },
+    "generator_tokens": {
+      "prompt": 6310,
+      "completion": 21,
+      "thinking": 374,
+      "total": 6705,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0009012,
+      "judge": 0.0,
+      "total": 0.0009012
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 73,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_011",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the model number of the AcquiSuite datalogger discussed in the document?",
+    "expected_answer": "AcquiSuite EMB A8810",
+    "source_documents": [],
+    "generated_answer": "The model number of the AcquiSuite datalogger discussed in the provided documents is the **EMB A8810** [1].\n\nThe documents provide the following details regarding this device:\n*   **Description:** It is a datalogger used on most commercial sites to detect and collect data from various external devices [1].\n*   **Physical Components:** The unit features a green LCD screen, multiple communication ports (including RS485 and Ethernet), a USB port, and buttons for Menu and Setup [1].\n*   **Power Requirements:** The device is labeled for 24VAC/DC @ 300mA [1].\n*   **Network Configuration:** When using a cellular modem, common settings for the device include an IP Address of 192.168.2.50 and a Netmask of 255.255.255.0 [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 54.72467017173767,
+    "timing": {
+      "cloud_retrieve": 0.7023470401763916,
+      "cloud_query": 6.115178108215332,
+      "judge": 47.90713095664978,
+      "total": 54.72467017173767
+    },
+    "generator_tokens": {
+      "prompt": 4434,
+      "completion": 198,
+      "thinking": 0,
+      "total": 4632,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0005226,
+      "judge": 0.0,
+      "total": 0.0005226
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 724,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_006",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What communication interfaces are used by the BDM-1200-LV/BDM-1600-LV Micro Inverters?",
+    "expected_answer": "WI-FI, Bluetooth",
+    "source_documents": [],
+    "generated_answer": "The BDM-1200-LV and BDM-1600-LV Micro Inverters utilize the following communication interfaces:\n\n*   **WI-FI:** These models feature built-in WiFi [1].\n*   **Bluetooth:** The units are equipped with a Bluetooth interface [1].\n*   **Mobile App:** They support an intuitive mobile app for iOS and Android, allowing users to monitor real-time performance, troubleshoot issues, and receive alerts [1].\n*   **Over-the-Air Updates:** The communication system supports over-the-air firmware updates [1].\n\nAdditionally, while the specific BDM-1200-LV/BDM-1600-LV datasheet lists WiFi and Bluetooth [1] general NEP microinverter documentation indicates that firmware can also be upgradable via Powerline Communications (PLC) when integrated with NEP's gateway (BDG-256) [2].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 56.32223701477051,
+    "timing": {
+      "cloud_retrieve": 1.0695998668670654,
+      "cloud_query": 12.530994176864624,
+      "judge": 42.72162199020386,
+      "total": 56.32223701477051
+    },
+    "generator_tokens": {
+      "prompt": 7450,
+      "completion": 207,
+      "thinking": 0,
+      "total": 7657,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0008278,
+      "judge": 0.0,
+      "total": 0.0008278
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 765,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_005",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the rated AC voltage for the NEP BDM-1200-LV Micro Inverter?",
+    "expected_answer": "120V",
+    "source_documents": [],
+    "generated_answer": "The rated AC voltage for the NEP BDM-1200-LV Micro Inverter is 120V [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 56.78518605232239,
+    "timing": {
+      "cloud_retrieve": 1.3934967517852783,
+      "cloud_query": 17.25698208808899,
+      "judge": 38.13468623161316,
+      "total": 56.78518605232239
+    },
+    "generator_tokens": {
+      "prompt": 5916,
+      "completion": 31,
+      "thinking": 0,
+      "total": 5947,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.000604,
+      "judge": 0.0,
+      "total": 0.000604
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 72,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_064",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the interrupt rating for the EPEC AC LV SWBD at 600VAC?",
+    "expected_answer": "The interrupt rating for the EPEC AC LV SWBD at 600VAC is 65kAIC.",
+    "source_documents": [],
+    "generated_answer": "The interrupt rating for the EPEC AC LV SWBD at 600VAC is 65kAIC [1][2][3][4].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 57.32383394241333,
+    "timing": {
+      "cloud_retrieve": 1.3929798603057861,
+      "cloud_query": 21.555527925491333,
+      "judge": 34.375306844711304,
+      "total": 57.32383394241333
+    },
+    "generator_tokens": {
+      "prompt": 10166,
+      "completion": 35,
+      "thinking": 309,
+      "total": 10510,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0012469,
+      "judge": 0.0,
+      "total": 0.0012469
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 78,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_030",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the rated voltage for the Southwire Type TC-ER Control Cable?",
+    "expected_answer": "The rated voltage for the Southwire Type TC-ER Control Cable is 600 Volt.",
+    "source_documents": [],
+    "generated_answer": "The Southwire Type TC-ER Control Cable is rated for 600 Volt [1]. Specific details regarding this voltage rating across different specifications include:\n\n*   **SPEC 45051:** This Type TC-ER Control Cable is identified as a 600 Volt Copper Conductors cable [1]. The sample print legend for this specific cable also lists \"600 VOLTS\" [2].\n*   **SPEC 85010:** This multi-conductor control cable is rated for 600 V [3]. It is described as a Control Cable 600 Volt Copper Conductors [3]. The sample print legend for both UL Listed and Non UL Listed versions of this cable specifies \"600V\" [4].\n*   **SPEC 85045:** This multi-conductor shielded control cable is also rated for 600 V [5]. It is described as a Control Cable 600 Volt Copper Conductors [5].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 58.62141418457031,
+    "timing": {
+      "cloud_retrieve": 1.0570480823516846,
+      "cloud_query": 16.5596661567688,
+      "judge": 41.00467014312744,
+      "total": 58.62141418457031
+    },
+    "generator_tokens": {
+      "prompt": 9728,
+      "completion": 213,
+      "thinking": 854,
+      "total": 10795,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0016558,
+      "judge": 0.0,
+      "total": 0.0016558
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 749,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_003",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "For what specific application is the Mechanical Interlock designed, as listed under the 'COMMON OPERATING MECHANISM PARTS'?",
+    "expected_answer": "The Mechanical Interlock is designed for use with main/ground applications.",
+    "source_documents": [],
+    "generated_answer": "Under the \"COMMON OPERATING MECHANISM PARTS\" section, the Mechanical Interlock is specifically designed for use with **main/ground** [4].\n\nAdditional details regarding mechanical interlocks from the provided documents include:\n*   **Function:** A heavy-duty version is described as a safety device that prevents a line switch and its grounding switch from being closed at the same time [5]. It utilizes a simple cam mechanism shielded from ice formation to ensure operation regardless of environmental conditions [5].\n*   **Installation:** It is designed for easy installation after the vertical operating pipe is in place, which facilitates later equipment upgrades [5].\n*   **Regulatory Requirements:** According to the National Electrical Code (NEC) 2023, mechanical interlocks must be provided in the housing to prevent the complete withdrawal of a circuit breaker from the housing when the stored energy mechanism is fully charged, unless a device is provided to block the closing function before withdrawal [3].\n*   **Other Applications:**\n    *   **NOARK A32 Series:** Uses a cable-connected mechanism to prevent two interlocked breakers from closing at the same time [1].\n    *   **Siemens:** Offers mechanical interlocks for various breaker types, including a sliding bar for 2 circuit breakers [7] and specific brackets for Type QP, BL, and BQ breakers [2].\n    *   **UL Standards:** Mechanical interlocks must have the necessary mechanical strength for reliable performance and must be mounted so that removing a door or barrier does not defeat the mechanism [6].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 59.18528985977173,
+    "timing": {
+      "cloud_retrieve": 1.349303960800171,
+      "cloud_query": 17.001559019088745,
+      "judge": 40.83440589904785,
+      "total": 59.18528985977173
+    },
+    "generator_tokens": {
+      "prompt": 8860,
+      "completion": 320,
+      "thinking": 0,
+      "total": 9180,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.001014,
+      "judge": 0.0,
+      "total": 0.001014
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 1574,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_041",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "According to Table 1, what is the approximate outer diameter (OD) for the Type TC-ER Power Cable with Stock Number 555196?",
+    "expected_answer": "0.627 inch",
+    "source_documents": [],
+    "generated_answer": "According to Table 1 in the provided documentation, the approximate outer diameter (OD) for the Type TC-ER Power Cable with Stock Number 555196 is 0.627 inch [1].\n\nThis specific cable (Stock Number 555196\u25ca) has the following specifications as listed in the \"Weights and Measurements\" table:\n*   **Cond. Size:** 8 AWG/Kcmil [1]\n*   **Cond. Number:** 3 [1]\n*   **Strand Count:** 7 No. of Strands [1]\n*   **Diameter Over Conductor:** 0.141 inch [1]\n*   **Insul. Thickness:** 45 mil [1]\n*   **Jacket Thickness:** 60 mil [1]\n*   **Approx. OD:** 0.627 inch [1]\nThe cable is described as a 600 or 1000 Volt Three Conductor Copper, Cross Linked Polyethylene (XLPE) insulation XHHW-2, Polyvinyl Chloride (PVC) Jacket power cable [2].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "504 Deadline Exceeded"
+    },
+    "time": 121.88013792037964,
+    "timing": {
+      "cloud_retrieve": 2.624659776687622,
+      "cloud_query": 35.92745018005371,
+      "judge": 83.32800936698914,
+      "total": 121.88013792037964
+    },
+    "generator_tokens": {
+      "prompt": 30402,
+      "completion": 266,
+      "thinking": 571,
+      "total": 31239,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0035463,
+      "judge": 0.0,
+      "total": 0.0035463
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 724,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_019",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch?",
+    "expected_answer": "The Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch is 60 Hz.",
+    "source_documents": [],
+    "generated_answer": "The Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch is 60 Hz [1]. This specification is provided for both the 550 kV and 800 kV maximum voltage ratings of the switch [1]. The EV-2H is a heavy duty vertical break disconnect switch designed for high voltage applications ranging from 550 kV \u2013 800 kV [2].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.94046974182129,
+    "timing": {
+      "cloud_retrieve": 2.602156639099121,
+      "cloud_query": 34.74697279930115,
+      "judge": 84.59131097793579,
+      "total": 121.94046974182129
+    },
+    "generator_tokens": {
+      "prompt": 11665,
+      "completion": 85,
+      "thinking": 593,
+      "total": 12343,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0016156,
+      "judge": 0.0,
+      "total": 0.0016156
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 327,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_052",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "According to the overview, what is the maximum voltage rating for the LLS\u00ae-I switch?",
+    "expected_answer": "38 kV - 72.5 kV",
+    "source_documents": [],
+    "generated_answer": "According to the overview provided in the source documents, the maximum voltage rating for the LLS\u00ae-I switch is categorized into two ranges:\n\n*   **38 kV - 72.5 kV** [1]\n*   **123 - 245 kV** [1]\nAdditionally, the documentation notes that the LLS\u00ae-I can be utilized for loop splitting applications up to **245 kV**, provided the transient recovery voltage does not exceed **30 kV** [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.94252419471741,
+    "timing": {
+      "cloud_retrieve": 2.075343132019043,
+      "cloud_query": 24.119502067565918,
+      "judge": 95.7476601600647,
+      "total": 121.94252419471741
+    },
+    "generator_tokens": {
+      "prompt": 4137,
+      "completion": 113,
+      "thinking": 0,
+      "total": 4250,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0004589,
+      "judge": 0.0,
+      "total": 0.0004589
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 385,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_038",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum Short-Circuit Current Rating (kAIC) at 800VAC for EPEC's equipment in a 4.2MVA power block skid?",
+    "expected_answer": "Up to 50kAIC at 800VAC.",
+    "source_documents": [],
+    "generated_answer": "The maximum Short-Circuit Current Rating (kAIC) for EPEC's equipment in a 4.2MVA power block skid at 800VAC is **50kAIC** [1][2].\n\nAccording to the source documents:\n*   EPEC offers power block sizes up to 4.2MVA with ratings up to **50kAIC @ 800VAC** on their equipment [1].\n*   The EPEC UL 891 switchboard, which is a component of the 4.2MVA integrated power block skid, is specifically rated for **50kAIC @ 800VAC** [2].\n*   This switchboard features an industry-first 800VAC rated UL listed main breaker [1].\n*   The 4.2MVA power block skids are assembled and integrated in EPEC's North Carolina facilities and utilize switchboards, domestically sourced MV transformers, and LV auxiliary power centers [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.950523853302,
+    "timing": {
+      "cloud_retrieve": 1.3868069648742676,
+      "cloud_query": 18.251152753829956,
+      "judge": 102.31254887580872,
+      "total": 121.950523853302
+    },
+    "generator_tokens": {
+      "prompt": 7642,
+      "completion": 217,
+      "thinking": 0,
+      "total": 7859,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.000851,
+      "judge": 0.0,
+      "total": 0.000851
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 710,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_048",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum Base KVA Rating specified for the Three-Phase Pad-Mount Transformers?",
+    "expected_answer": "The maximum Base KVA Rating is 10,000 KVA.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the maximum Base KVA Rating specified for Three-Phase Pad-Mount Transformers varies depending on the specific document:\n\n*   According to the **3 Phase Pad Mount Transformer Spec Sheet** and the **3 Phase 2000kVa Transformer Manual**, the Base KVA Rating is listed as 45 kVA through 10,000 KVA [1][2].\n*   The **3 Phase 2000kVa Transformer Manual** also specifies in its Product Scope section that Three-Phase Pad-Mount Transformers are available with a rating between 45 to 12,000 kVA [3].\n*   The **3 Phase Pad Mount Transformer Spec Sheet** further lists standard KVA Ratings as 45, 75, 112.5, 150, 225, 300, 500, 750, 1000, 1500, 2000, 2500, 3000, 3750, 5000 [4].\n*   The **3 Phase 2000kVa Transformer Manual** includes a Percentage Impedance table that lists ratings up to 5000-10,000 [2].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.94835019111633,
+    "timing": {
+      "cloud_retrieve": 2.1981072425842285,
+      "cloud_query": 26.124385118484497,
+      "judge": 93.625803232193,
+      "total": 121.94835019111633
+    },
+    "generator_tokens": {
+      "prompt": 8917,
+      "completion": 294,
+      "thinking": 0,
+      "total": 9211,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0010093,
+      "judge": 0.0,
+      "total": 0.0010093
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 834,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_049",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "According to the document, what materials are used for the windings in the Three-Phase Pad-Mount Transformers?",
+    "expected_answer": "The windings are made of Copper and Aluminum.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided documents, the materials used for the windings in Three-Phase Pad-Mount Transformers are as follows:\n\n*   **Copper and Aluminum:** The general specifications for Three-Phase Pad-Mount Transformers list both Copper and Aluminum as materials used for windings [1]. \n*   **Rectangular Wound Design:** The construction of these transformers features rectangular wound windings made of either Copper or Aluminum [1].\n*   **Specific Unit Material:** For the specific 2000kVA technical specifications provided, the winding material is listed as Aluminum [2][3].\n*   **Insulation Materials:** The windings also utilize an advanced high-temperature insulation system consisting of thermally improved kraft paper [4]. This kraft paper is protected from heat degradation by a hydrophobic barrier created by soybean oil-based fluid [5].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.94831085205078,
+    "timing": {
+      "cloud_retrieve": 2.740001916885376,
+      "cloud_query": 35.22971320152283,
+      "judge": 83.97856879234314,
+      "total": 121.94831085205078
+    },
+    "generator_tokens": {
+      "prompt": 9729,
+      "completion": 171,
+      "thinking": 396,
+      "total": 10296,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0013185,
+      "judge": 0.0,
+      "total": 0.0013185
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 846,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_011",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "When selecting standard lugs for a 3VA 400A TMTU circuit breaker, what is the specified cable size range and how many cables per phase are accommodated?",
+    "expected_answer": "For a 3VA 400A TMTU circuit breaker, the standard lug accommodates a cable size range of 2/0 - 600KCMIL and allows for 2 cables per phase.",
+    "source_documents": [],
+    "generated_answer": "For a 3VA 400A TMTU circuit breaker, the specified standard lugs accommodate a cable size range of 2/0 - 600KCMIL [1]. These lugs are designed to accommodate 2 cables per phase [1].\n\nThe specific details for these lugs are as follows:\n*   **Part Number:** 3VA9473-0JJ23 [1][2].\n*   **Minimum Cable Size:** 2/0 [1][2].\n*   **Maximum Cable Size:** 600KCMIL [1] (also written as 600 kcmil [2]).\n*   **Cables Per Phase:** 2 [1].\n*   **Type:** Aluminum body lug, 2 Cables (Cu/Al cable) [2].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.93616485595703,
+    "timing": {
+      "cloud_retrieve": 2.070279836654663,
+      "cloud_query": 28.568716049194336,
+      "judge": 91.29714894294739,
+      "total": 121.93616485595703
+    },
+    "generator_tokens": {
+      "prompt": 17136,
+      "completion": 177,
+      "thinking": 423,
+      "total": 17736,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0020805,
+      "judge": 0.0,
+      "total": 0.0020805
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 485,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_009",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC?",
+    "expected_answer": "65KA",
+    "source_documents": [],
+    "generated_answer": "The maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC is 65KA [3].\n\nAccording to the technical specifications and selection tables for the 3VA41:\n\n*   The 3VA41 circuit breaker is available with AC interrupting ratings up to 65KA @ 480VAC [3].\n*   This maximum rating of 65 is associated with the H-Interrupting Class (HEAB) for 2- and 3-pole breaker types at 480 Volts AC (50/60 Hz) [1][2].\n*   In the product catalog's summary table, this value is listed as 65,000 for the HEAB class at 480V [4].\n*   Other interrupting classes for the 3VA41 at 480V include:\n    *   **S-Interrupting Class (SEAB):** 25 [1][2] or 25,000 [4].\n    *   **M-Interrupting Class (MEAB):** 35 [1][2] or 35,000 [4].\n*   The 3VA41 is available in 1, 1 in 2-pole, 2 or 3-pole versions on 1 inch pole centers [3].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.96452188491821,
+    "timing": {
+      "cloud_retrieve": 0.6999619007110596,
+      "cloud_query": 13.288753032684326,
+      "judge": 107.97578191757202,
+      "total": 121.96452188491821
+    },
+    "generator_tokens": {
+      "prompt": 19235,
+      "completion": 306,
+      "thinking": 815,
+      "total": 20356,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0026164,
+      "judge": 0.0,
+      "total": 0.0026164
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 816,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_028",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the environmental protection rating for the PVI-CENTRAL-250 and PVI-CENTRAL-300 inverters?",
+    "expected_answer": "The environmental protection rating is NEMA 3R.",
+    "source_documents": [],
+    "generated_answer": "The environmental protection rating for the PVI-CENTRAL-250 and PVI-CENTRAL-300 inverters is as follows:\n\n*   **PVI-CENTRAL-250-US and PVI-CENTRAL-300-US:** These models have an Environmental Protection Degree of **Nema3R** [2][3]. Other technical data sheets list the Environmental Protection Rating as **neMa 3r** [5].\n*   **PVI-CENTRAL-250.0-CAN-600 and PVI-CENTRAL-300.0-CAN-600:** These models have an Environmental Protection Degree of **Nema3R** [1][4]. Technical data sheets also list the Environmental Protection Rating for these Canadian models as **neMa 3r** [5].\n\nAdditionally, the user manual notes that these are considered **AURORA OUTDOOR PHOTOVOLTAIC INVERTERS** [7]. The inverters are delivered in **rugged enclosures** [6] and are suitable for installation in locations where they must be protected from direct exposure to the rays of the sun [8].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.95941972732544,
+    "timing": {
+      "cloud_retrieve": 2.0812149047851562,
+      "cloud_query": 30.38494896888733,
+      "judge": 89.49322700500488,
+      "total": 121.95941972732544
+    },
+    "generator_tokens": {
+      "prompt": 13279,
+      "completion": 257,
+      "thinking": 835,
+      "total": 14371,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0020152,
+      "judge": 0.0,
+      "total": 0.0020152
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 866,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_013",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "What communication protocols are available for retrieving diagnostic and metering information from the EPEC AC LV SWBD, and which specific Siemens circuit breaker model is used for molded case applications within the system?",
+    "expected_answer": "Diagnostic and metering information is available via Modbus TCP or other Ethernet/PLC protocols. The Siemens 3VA6 circuit breaker model is used for molded case applications.",
+    "source_documents": [],
+    "generated_answer": "The EPEC AC LV SWBD (1200 to 6000A, 480 / 600VAC) provides diagnostic and metering information through the following communication protocols:\n\n*   **Modbus TCP\u2122 / Modbus TCP:** This is the primary protocol mentioned for making information from advanced trip units available [1][2][3][4].\n*   **Ethernet / PLC protocol:** Information can be provided via other ethernet or PLC protocols [1][2][3][4].\n*   **Optional Expansion Protocols:** Through the use of Siemens expansion modules (such as the COM800/COM100 breaker data server), the system can support **PROFIBUS DP**, **PROFINET**, and **RS485 (Modbus RTU)** [5][6].\n\nThe specific Siemens circuit breaker model used for molded case applications within the system is the **3VA6** [1][2][3][4]. These breakers are utilized for their state-of-the-art power management and are available with advanced trip units for full metering and diagnostics [1][4].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.93936324119568,
+    "timing": {
+      "cloud_retrieve": 2.6388070583343506,
+      "cloud_query": 32.278711795806885,
+      "judge": 87.02182102203369,
+      "total": 121.93936324119568
+    },
+    "generator_tokens": {
+      "prompt": 5414,
+      "completion": 247,
+      "thinking": 0,
+      "total": 5661,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0006402,
+      "judge": 0.0,
+      "total": 0.0006402
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 902,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_035",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum rated current for the NOARK A32 Series Power Circuit Breakers?",
+    "expected_answer": "The maximum rated current for the NOARK A32 Series Power Circuit Breakers is 3200A.",
+    "source_documents": [],
+    "generated_answer": "The maximum rated current for the NOARK A32 Series Power Circuit Breakers is 3200 amps [1]. According to the product selection guide and ratings tables, the available rated currents for these breakers are 800A, 1600A, 2000A, 2500A, and 3200A [2][3]. The A32 family of products specifically offers ratings from 800A through 3200A [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.95961689949036,
+    "timing": {
+      "cloud_retrieve": 1.9424710273742676,
+      "cloud_query": 25.197386980056763,
+      "judge": 94.81972122192383,
+      "total": 121.95961689949036
+    },
+    "generator_tokens": {
+      "prompt": 10418,
+      "completion": 113,
+      "thinking": 559,
+      "total": 11090,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0014783,
+      "judge": 0.0,
+      "total": 0.0014783
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 333,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_044",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum DC Open Circuit Voltage for the BDM-650 microinverter?",
+    "expected_answer": "The maximum DC Open Circuit Voltage for the BDM-650 microinverter is 60 Vdc.",
+    "source_documents": [],
+    "generated_answer": "The maximum DC Open Circuit Voltage for the BDM-650 microinverter is 60 Vdc [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.95715713500977,
+    "timing": {
+      "cloud_retrieve": 1.9261760711669922,
+      "cloud_query": 18.75575017929077,
+      "judge": 101.27521300315857,
+      "total": 121.95715713500977
+    },
+    "generator_tokens": {
+      "prompt": 6333,
+      "completion": 26,
+      "thinking": 0,
+      "total": 6359,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0006437,
+      "judge": 0.0,
+      "total": 0.0006437
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 80,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_016",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "According to Table 1, what is the approximate outer diameter (OD) in inches for a 12 AWG Type TC-ER control cable with 7 conductors?",
+    "expected_answer": "The approximate outer diameter (OD) for a 12 AWG Type TC-ER control cable with 7 conductors (Stock Number 408641\u25ca) is 0.477 inch.",
+    "source_documents": [],
+    "generated_answer": "According to the provided source documents for SPEC 45051, which covers Type TC-ER Control Cable [2] the approximate outer diameter (OD) for a 12 AWG control cable with 7 conductors is as follows:\n\n*   For Stock Number 408641\u25ca, a 12 AWG cable with 7 conductors has an approximate OD of 0.477 inch [1].\n\nAdditionally, another document (SPEC 85010) lists a 12 AWG multi-conductor control cable with 7 conductors (Stock Number 619937) as having an approximate OD of 0.532 inch [3]. However, SPEC 45051 is specifically identified as the specification for Type TC-ER Control Cable [2].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.94172406196594,
+    "timing": {
+      "cloud_retrieve": 1.9214918613433838,
+      "cloud_query": 27.306039094924927,
+      "judge": 92.71417593955994,
+      "total": 121.94172406196594
+    },
+    "generator_tokens": {
+      "prompt": 22140,
+      "completion": 174,
+      "thinking": 970,
+      "total": 23284,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0029626,
+      "judge": 0.0,
+      "total": 0.0029626
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 580,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_029",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the absolute maximum DC input voltage for the PVI-CENTRAL-US models?",
+    "expected_answer": "The absolute maximum DC input voltage is 600 Vdc.",
+    "source_documents": [],
+    "generated_answer": "The absolute maximum DC input voltage for the PVI-CENTRAL-US models is 600 Vdc [1][2][3].\n\nSpecifically, this value applies to both the PVI-CENTRAL-250-US and the PVI-CENTRAL-300-US models [1][2][3]. This specification is listed as \"Absolute maximum input voltage (Vdc)\" [1] \"Maximum input voltage (Vdc)\" [2] and \"Absolute Maximum Voltage Vdc\" [3] across the provided technical documentation.",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.96380186080933,
+    "timing": {
+      "cloud_retrieve": 2.2273778915405273,
+      "cloud_query": 27.806391954421997,
+      "judge": 91.93000793457031,
+      "total": 121.96380186080933
+    },
+    "generator_tokens": {
+      "prompt": 11299,
+      "completion": 120,
+      "thinking": 0,
+      "total": 11419,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0011779,
+      "judge": 0.0,
+      "total": 0.0011779
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 392,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_047",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "Which three types of transformer fluid are used in pad-mount distribution transformers, as listed in the Meta-Power Solutions manual?",
+    "expected_answer": "The three types of transformer fluid used are mineral oil, silicone liquid, and Envirotemp FR3 insulating oil.",
+    "source_documents": [],
+    "generated_answer": "Based on the Meta-Power Solutions manual, the three types of transformer fluid used in pad-mount distribution transformers are:\n\n*   **Mineral oil:** This fluid is described as having a low flash point of approximately 155\u00b0C [1]. It is noted for having low purchase and maintenance costs and being readily available [1].\n*   **Silicone liquid (or Silicone oil):** This fluid is ideal for transformer applications due to its heat stability, material compatibility, low flammability, and low toxicity [2]. It has a high fire point of 340\u00b0C (also listed as 330\u00b0C in property tables) and is UL Listed and factory mutual approved for both indoor and outdoor applications [2][1].\n*   **Envirotemp FR3 insulating oil (or FR3 fluid):** This is a natural ester, soybean oil-based dielectric fluid that is fully biodegradable and environmentally friendly [2][3]. It has a high flash point of 330\u00b0C (also listed as 343\u00b0C in property tables) and a fire point of 360\u00b0C [1].\n\nSources: [1][2][3]",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 121.95892524719238,
+    "timing": {
+      "cloud_retrieve": 2.2763330936431885,
+      "cloud_query": 28.58781099319458,
+      "judge": 91.0947573184967,
+      "total": 121.95892524719238
+    },
+    "generator_tokens": {
+      "prompt": 7541,
+      "completion": 265,
+      "thinking": 0,
+      "total": 7806,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0008601,
+      "judge": 0.0,
+      "total": 0.0008601
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 980,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  }
+]

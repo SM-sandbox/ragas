@@ -1,0 +1,136 @@
+[
+  {
+    "question_id": "sh_easy_001",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+    "expected_answer": "failure, preventive stock",
+    "source_documents": [],
+    "generated_answer": "Based on the provided Spare Part Request Form, the two examples provided for the \"Reason for Replacement\" are:\n\n1.  **Failure** [1]\n2.  **Preventive stock** [1]\nThese examples are listed in the \"Details\" column of the form to guide the requesting party when completing the request [1].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 20.45558500289917,
+    "timing": {
+      "cloud_retrieve": 0.3163261413574219,
+      "cloud_query": 1.581615924835205,
+      "judge": 18.557610034942627,
+      "total": 20.45558500289917
+    },
+    "generator_tokens": {
+      "prompt": 5934,
+      "completion": 70,
+      "thinking": 0,
+      "total": 6004,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0006214,
+      "judge": 0.0,
+      "total": 0.0006214
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 285,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_002",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+    "expected_answer": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+    "source_documents": [],
+    "generated_answer": "According to the general notes, the maximum specified length for an RS-485 bus cable is 4000FT (1220M) [2]. The cable used for this bus must meet or exceed Belden 3106A specifications [2].\n\nOther source documents provided specify similar or related maximum lengths for RS-485 connections:\n*   For Shark 100 meters, the maximum length for cable connecting all devices is 4000 feet (1219.20 meters) if an RS485 repeater is not being used [1][3].\n*   For AURORA inverters connected in a daisy chain, the recommended maximum length is 1200 metres [4].",
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "relevance": 3,
+      "clarity": 3,
+      "overall_score": 3,
+      "verdict": "partial",
+      "parse_error": "Timeout of 60.0s exceeded, last exception: 503 Getting metadata from plugin failed with error: Reauthentication is needed. Please run `gcloud auth application-default login` to reauthenticate."
+    },
+    "time": 40.07916593551636,
+    "timing": {
+      "cloud_retrieve": 0.35120511054992676,
+      "cloud_query": 7.144046068191528,
+      "judge": 32.583885192871094,
+      "total": 40.07916593551636
+    },
+    "generator_tokens": {
+      "prompt": 18930,
+      "completion": 166,
+      "thinking": 610,
+      "total": 19706,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "thinking": 0,
+      "total": 0,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0023864,
+      "judge": 0.0,
+      "total": 0.0023864
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "mode": "cloud",
+      "has_citations": true,
+      "reasoning_effort": "low"
+    },
+    "orchestrator": {
+      "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+      "service": "bfai-api",
+      "project_id": "bfai-prod",
+      "environment": "production",
+      "region": "us-east1"
+    },
+    "answer_length": 547,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  }
+]
