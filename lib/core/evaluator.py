@@ -40,7 +40,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from lib.clients.gemini_client import generate_for_judge, get_model_info
 from lib.core.config_loader import load_config, get_generator_config, get_judge_config
 from lib.core.pricing import get_model_pricing, calculate_token_cost
-from lib.core.rate_limiter import SmartRateLimiter, get_limiter_for_model
+# Old rate limiter (kept for reference, not deleted)
+# from lib.core.rate_limiter import SmartRateLimiter, get_limiter_for_model
+# New Smart Throttler from stem-pipeline integration
+from lib.core.smart_throttler.rate_limiter import SmartRateLimiter, get_limiter_for_model
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
@@ -296,20 +299,27 @@ class GoldEvaluator:
             dict with warmup stats (times, status, etc.)
         """
         import time as time_module
+        from concurrent.futures import ThreadPoolExecutor, as_completed
         
         print("\n" + "="*60)
         print("CLOUD ORCHESTRATOR WARMUP")
         print("="*60)
         
         warmup_stats = {
+            "phase": "warmup",
             "pings": [],
+            "parallel_warmup": [],
+            "ramp_up": [],
             "total_warmup_time": 0,
             "orchestrator_ready": False,
+            "target_workers": self.workers,
         }
         
         warmup_start = time_module.time()
         
-        # Send health check pings
+        # Phase 1: Sequential pings to wake up first instance
+        print("\n  Phase 1: Sequential pings (wake up first instance)")
+        print("  " + "-"*50)
         for i in range(num_pings):
             ping_num = i + 1
             print(f"  [{ping_num}/{num_pings}] Pinging orchestrator...", end=" ", flush=True)
@@ -362,18 +372,87 @@ class GoldEvaluator:
         successful_pings = [p for p in warmup_stats["pings"] if p["status"] == "ok"]
         warmup_stats["orchestrator_ready"] = len(successful_pings) > 0
         
-        if warmup_stats["orchestrator_ready"]:
-            avg_ping = sum(p["time"] for p in successful_pings) / len(successful_pings)
-            print(f"\n  ✓ Orchestrator READY (avg ping: {avg_ping:.2f}s)")
-            
-            # Wait a bit more to ensure instance is fully warm
-            print(f"  Waiting {wait_after}s for full warmup...")
-            time_module.sleep(wait_after)
-        else:
+        if not warmup_stats["orchestrator_ready"]:
             print(f"\n  ⚠ Orchestrator may not be ready - proceeding anyway")
+            warmup_stats["total_warmup_time"] = time_module.time() - warmup_start
+            return warmup_stats
+        
+        avg_ping = sum(p["time"] for p in successful_pings) / len(successful_pings)
+        print(f"\n  ✓ First instance READY (avg ping: {avg_ping:.2f}s)")
+        
+        # Phase 2: Parallel warmup to spin up multiple instances
+        if self.workers > 10:
+            print("\n  Phase 2: Parallel warmup (spin up multiple instances)")
+            print("  " + "-"*50)
+            
+            # Send parallel requests to force Cloud Run to scale up
+            parallel_count = min(self.workers // 2, 20)  # Half of workers, max 20
+            print(f"  Sending {parallel_count} parallel warmup requests...")
+            
+            def warmup_request(idx):
+                try:
+                    start = time_module.time()
+                    response = requests.post(
+                        f"{CLOUD_RUN_URL}/retrieve",
+                        headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
+                        json={"query": f"warmup parallel {idx}", "job_id": JOB_ID, "recall_top_k": 1},
+                        timeout=60,
+                    )
+                    elapsed = time_module.time() - start
+                    return {"idx": idx, "status": "ok" if response.status_code == 200 else f"http_{response.status_code}", "time": elapsed}
+                except Exception as e:
+                    return {"idx": idx, "status": "error", "time": 0, "error": str(e)}
+            
+            parallel_start = time_module.time()
+            with ThreadPoolExecutor(max_workers=parallel_count) as executor:
+                futures = [executor.submit(warmup_request, i) for i in range(parallel_count)]
+                for future in as_completed(futures):
+                    result = future.result()
+                    warmup_stats["parallel_warmup"].append(result)
+            
+            parallel_time = time_module.time() - parallel_start
+            parallel_ok = sum(1 for r in warmup_stats["parallel_warmup"] if r["status"] == "ok")
+            print(f"  ✓ Parallel warmup complete: {parallel_ok}/{parallel_count} OK in {parallel_time:.1f}s")
+        
+        # Phase 3: Ramp-up with increasing concurrency
+        if self.workers > 20:
+            print("\n  Phase 3: Ramp-up (gradually increase concurrency)")
+            print("  " + "-"*50)
+            
+            # Ramp up in stages: 10 -> 25 -> 50 -> target
+            ramp_stages = [10, 25, 50]
+            ramp_stages = [s for s in ramp_stages if s < self.workers]
+            
+            for stage_workers in ramp_stages:
+                print(f"  Ramp stage: {stage_workers} concurrent requests...", end=" ", flush=True)
+                
+                stage_start = time_module.time()
+                stage_results = []
+                
+                with ThreadPoolExecutor(max_workers=stage_workers) as executor:
+                    futures = [executor.submit(warmup_request, i) for i in range(stage_workers)]
+                    for future in as_completed(futures):
+                        stage_results.append(future.result())
+                
+                stage_time = time_module.time() - stage_start
+                stage_ok = sum(1 for r in stage_results if r["status"] == "ok")
+                print(f"{stage_ok}/{stage_workers} OK in {stage_time:.1f}s")
+                
+                warmup_stats["ramp_up"].append({
+                    "workers": stage_workers,
+                    "ok_count": stage_ok,
+                    "time": stage_time,
+                })
+                
+                # Brief pause between stages
+                time_module.sleep(1.0)
+        
+        # Final wait
+        print(f"\n  Waiting {wait_after}s for full warmup...")
+        time_module.sleep(wait_after)
         
         warmup_stats["total_warmup_time"] = time_module.time() - warmup_start
-        print(f"  Total warmup time: {warmup_stats['total_warmup_time']:.1f}s")
+        print(f"\n  ✓ Total warmup time: {warmup_stats['total_warmup_time']:.1f}s")
         print("="*60 + "\n")
         
         return warmup_stats
@@ -1066,6 +1145,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             "breakdown_by_difficulty": breakdown_by_difficulty,
             "quality_by_bucket": quality_by_bucket,
             "orchestrator": self.orchestrator,
+            "warmup": warmup_stats,
             "cost_summary_usd": {
                 "generator_total": sum(r.get("cost_estimate_usd", {}).get("generator", 0) for r in valid),
                 "judge_total": sum(r.get("cost_estimate_usd", {}).get("judge", 0) for r in valid),

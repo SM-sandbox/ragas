@@ -390,6 +390,33 @@ class SmartRateLimiter:
         """Release the semaphore after a request completes."""
         self._semaphore.release()
     
+    def release(self) -> None:
+        """Alias for release_sync() for compatibility with old rate limiter API."""
+        self.release_sync()
+    
+    def get_usage(self) -> dict:
+        """
+        Get current usage statistics.
+        
+        Returns dict compatible with old SmartRateLimiter API for evaluator integration.
+        """
+        stats = self.get_stats()
+        return {
+            "current_rpm": stats.current_rpm,
+            "current_tpm": stats.current_tpm,
+            "rpm_limit": self.config.rpm_limit,
+            "tpm_limit": self.config.tpm_limit,
+            "max_concurrent": self.config.max_concurrent_requests,
+            "rpm_utilization": stats.rpm_utilization,
+            "tpm_utilization": stats.tpm_utilization,
+            "total_requests": self._total_requests,
+            "total_tokens": self._total_tokens,
+            "total_throttles": self._throttle_count,
+            "model_rotations": self._model_rotations,
+            "active_model": stats.active_model,
+            "models_on_cooldown": stats.models_on_cooldown,
+        }
+    
     def record_usage(self, actual_tokens: int, model: Optional[str] = None) -> None:
         """
         Record actual token usage after a request completes.
@@ -489,3 +516,47 @@ def configure_rate_limiter(
     )
     
     return get_rate_limiter(config)
+
+
+def get_limiter_for_model(model: str) -> SmartRateLimiter:
+    """
+    Get a rate limiter configured for a specific model.
+    
+    Compatible with old rate_limiter.py API for evaluator integration.
+    
+    Args:
+        model: Model name (e.g., 'gemini-3-flash-preview')
+        
+    Returns:
+        Configured SmartRateLimiter instance
+    """
+    # Model-specific limits based on bfai-prod Paid Tier 3 quotas
+    MODEL_LIMITS = {
+        "gemini-3-flash": {"rpm": 20000, "tpm": 20000000},
+        "gemini-3-flash-preview": {"rpm": 20000, "tpm": 20000000},
+        "gemini-2.5-flash": {"rpm": 20000, "tpm": 20000000},
+        "gemini-2.0-flash": {"rpm": 30000, "tpm": 30000000},
+        "gemini-3-pro": {"rpm": 2000, "tpm": 8000000},
+        "gemini-3-pro-preview": {"rpm": 2000, "tpm": 8000000},
+        "gemini-2.5-pro": {"rpm": 2000, "tpm": 8000000},
+    }
+    
+    # Find matching model config
+    for model_key, limits in MODEL_LIMITS.items():
+        if model_key in model.lower():
+            config = RateLimitConfig(
+                rpm_limit=limits["rpm"],
+                tpm_limit=limits["tpm"],
+                threshold=0.90,
+                max_concurrent_requests=50,  # Higher concurrency for eval runs
+            )
+            return SmartRateLimiter(config)
+    
+    # Default to flash limits (Tier 3)
+    config = RateLimitConfig(
+        rpm_limit=20000,
+        tpm_limit=20000000,
+        threshold=0.90,
+        max_concurrent_requests=50,
+    )
+    return SmartRateLimiter(config)
