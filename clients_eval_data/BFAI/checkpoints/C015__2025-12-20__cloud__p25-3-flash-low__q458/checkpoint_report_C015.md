@@ -1,6 +1,6 @@
 # Checkpoint Report: C015
 
-**Generated:** 2025-12-21 12:05:02
+**Generated:** 2025-12-21 12:14:32
 **Results File:** `results.json`
 
 ## Executive Summary
@@ -127,22 +127,22 @@
 
 |Dimension         |   Total|    Easy|  Medium|    Hard|
 |------------------|-------:|-------:|-------:|-------:|
-|**Correctness**   |  4.78/5|       -|       -|       -|
-|**Completeness**  |  4.87/5|       -|       -|       -|
-|**Faithfulness**  |  4.90/5|       -|       -|       -|
-|**Relevance**     |  4.98/5|       -|       -|       -|
-|**Clarity**       |  4.99/5|       -|       -|       -|
+|**Correctness**   |  4.78/5|  0.00/5|  0.00/5|  0.00/5|
+|**Completeness**  |  4.87/5|  0.00/5|  0.00/5|  0.00/5|
+|**Faithfulness**  |  4.90/5|  0.00/5|  0.00/5|  0.00/5|
+|**Relevance**     |  4.98/5|  0.00/5|  0.00/5|  0.00/5|
+|**Clarity**       |  4.99/5|  0.00/5|  0.00/5|  0.00/5|
 |**Overall**       |  4.82/5|  4.80/5|  4.84/5|  4.83/5|
 
 #### By Question Type
 
 |Dimension         |   Total|  Single-Hop|  Multi-Hop|
 |------------------|-------:|-----------:|----------:|
-|**Correctness**   |  4.78/5|           -|          -|
-|**Completeness**  |  4.87/5|           -|          -|
-|**Faithfulness**  |  4.90/5|           -|          -|
-|**Relevance**     |  4.98/5|           -|          -|
-|**Clarity**       |  4.99/5|           -|          -|
+|**Correctness**   |  4.78/5|      0.00/5|     0.00/5|
+|**Completeness**  |  4.87/5|      0.00/5|     0.00/5|
+|**Faithfulness**  |  4.90/5|      0.00/5|     0.00/5|
+|**Relevance**     |  4.98/5|      0.00/5|     0.00/5|
+|**Clarity**       |  4.99/5|      0.00/5|     0.00/5|
 |**Overall**       |  4.82/5|      4.86/5|     4.79/5|
 
 ## Latency Analysis
@@ -234,6 +234,6 @@
 
 ---
 
-*Report generated: 2025-12-21 12:05:02*
+*Report generated: 2025-12-21 12:14:32*
 *Checkpoint: C015*
 *Judge Model: gemini-3-flash-preview*

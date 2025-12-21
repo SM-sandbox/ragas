@@ -1165,7 +1165,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                     "pass_rate": diff_pass / len(diff_results) if diff_results else 0,
                 }
         
-        # 6-bucket breakdown: type x difficulty with full metrics
+        # 6-bucket breakdown: type x difficulty with full metrics including all dimensions
         quality_by_bucket = {}
         for qtype in ["single_hop", "multi_hop"]:
             quality_by_bucket[qtype] = {}
@@ -1177,15 +1177,29 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                     bucket_fail = sum(1 for r in bucket_results if r.get("judgment", {}).get("verdict") == "fail")
                     bucket_recall = sum(1 for r in bucket_results if r.get("recall_hit")) / len(bucket_results)
                     bucket_mrr = sum(r.get("mrr", 0) for r in bucket_results) / len(bucket_results)
-                    bucket_scores = [r.get("judgment", {}).get("overall_score", 0) for r in bucket_results]
+                    
+                    # Calculate all dimension score averages
+                    bucket_overall = [r.get("judgment", {}).get("overall_score", 0) for r in bucket_results]
+                    bucket_correctness = [r.get("judgment", {}).get("correctness", 0) for r in bucket_results]
+                    bucket_completeness = [r.get("judgment", {}).get("completeness", 0) for r in bucket_results]
+                    bucket_faithfulness = [r.get("judgment", {}).get("faithfulness", 0) for r in bucket_results]
+                    bucket_relevance = [r.get("judgment", {}).get("relevance", 0) for r in bucket_results]
+                    bucket_clarity = [r.get("judgment", {}).get("clarity", 0) for r in bucket_results]
+                    
+                    n = len(bucket_results)
                     quality_by_bucket[qtype][diff] = {
-                        "count": len(bucket_results),
-                        "pass_rate": bucket_pass / len(bucket_results),
-                        "partial_rate": bucket_partial / len(bucket_results),
-                        "fail_rate": bucket_fail / len(bucket_results),
+                        "count": n,
+                        "pass_rate": bucket_pass / n,
+                        "partial_rate": bucket_partial / n,
+                        "fail_rate": bucket_fail / n,
                         "recall_at_100": bucket_recall,
                         "mrr": bucket_mrr,
-                        "overall_score_avg": sum(bucket_scores) / len(bucket_scores) if bucket_scores else 0,
+                        "overall_score_avg": sum(bucket_overall) / n if bucket_overall else 0,
+                        "correctness_avg": sum(bucket_correctness) / n if bucket_correctness else 0,
+                        "completeness_avg": sum(bucket_completeness) / n if bucket_completeness else 0,
+                        "faithfulness_avg": sum(bucket_faithfulness) / n if bucket_faithfulness else 0,
+                        "relevance_avg": sum(bucket_relevance) / n if bucket_relevance else 0,
+                        "clarity_avg": sum(bucket_clarity) / n if bucket_clarity else 0,
                     }
         
         # Build comprehensive output

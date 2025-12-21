@@ -556,7 +556,54 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     ))
     lines.append("")
     
-    # Score Dimensions with all breakdowns
+    # Score Dimensions with all breakdowns - calculate dimension averages by type and difficulty
+    # By type: weighted average across all difficulty buckets for each type
+    def calc_type_dim_avg(buckets: dict, dim: str) -> float:
+        total_count = sum(b.get("count", 0) for b in buckets.values())
+        if total_count == 0:
+            return 0
+        return sum(b.get(dim, 0) * b.get("count", 0) for b in buckets.values()) / total_count
+    
+    sh_correctness = calc_type_dim_avg(sh_buckets, "correctness_avg")
+    sh_completeness = calc_type_dim_avg(sh_buckets, "completeness_avg")
+    sh_faithfulness = calc_type_dim_avg(sh_buckets, "faithfulness_avg")
+    sh_relevance = calc_type_dim_avg(sh_buckets, "relevance_avg")
+    sh_clarity = calc_type_dim_avg(sh_buckets, "clarity_avg")
+    
+    mh_correctness = calc_type_dim_avg(mh_buckets, "correctness_avg")
+    mh_completeness = calc_type_dim_avg(mh_buckets, "completeness_avg")
+    mh_faithfulness = calc_type_dim_avg(mh_buckets, "faithfulness_avg")
+    mh_relevance = calc_type_dim_avg(mh_buckets, "relevance_avg")
+    mh_clarity = calc_type_dim_avg(mh_buckets, "clarity_avg")
+    
+    # By difficulty: weighted average across both types for each difficulty
+    def calc_diff_dim_avg(diff: str, dim: str) -> float:
+        sh_bucket = sh_buckets.get(diff, {})
+        mh_bucket = mh_buckets.get(diff, {})
+        total_count = sh_bucket.get("count", 0) + mh_bucket.get("count", 0)
+        if total_count == 0:
+            return 0
+        return (sh_bucket.get(dim, 0) * sh_bucket.get("count", 0) + 
+                mh_bucket.get(dim, 0) * mh_bucket.get("count", 0)) / total_count
+    
+    easy_correctness = calc_diff_dim_avg("easy", "correctness_avg")
+    easy_completeness = calc_diff_dim_avg("easy", "completeness_avg")
+    easy_faithfulness = calc_diff_dim_avg("easy", "faithfulness_avg")
+    easy_relevance = calc_diff_dim_avg("easy", "relevance_avg")
+    easy_clarity = calc_diff_dim_avg("easy", "clarity_avg")
+    
+    med_correctness = calc_diff_dim_avg("medium", "correctness_avg")
+    med_completeness = calc_diff_dim_avg("medium", "completeness_avg")
+    med_faithfulness = calc_diff_dim_avg("medium", "faithfulness_avg")
+    med_relevance = calc_diff_dim_avg("medium", "relevance_avg")
+    med_clarity = calc_diff_dim_avg("medium", "clarity_avg")
+    
+    hard_correctness = calc_diff_dim_avg("hard", "correctness_avg")
+    hard_completeness = calc_diff_dim_avg("hard", "completeness_avg")
+    hard_faithfulness = calc_diff_dim_avg("hard", "faithfulness_avg")
+    hard_relevance = calc_diff_dim_avg("hard", "relevance_avg")
+    hard_clarity = calc_diff_dim_avg("hard", "clarity_avg")
+    
     lines.append("### Score Dimensions")
     lines.append("")
     lines.append("#### By Difficulty")
@@ -564,11 +611,11 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     lines.extend(make_table(
         ["Dimension", "Total", "Easy", "Medium", "Hard"],
         [
-            ["**Correctness**", f"{metrics.get('correctness_avg', 0):.2f}/5", "-", "-", "-"],
-            ["**Completeness**", f"{metrics.get('completeness_avg', 0):.2f}/5", "-", "-", "-"],
-            ["**Faithfulness**", f"{metrics.get('faithfulness_avg', 0):.2f}/5", "-", "-", "-"],
-            ["**Relevance**", f"{metrics.get('relevance_avg', 0):.2f}/5", "-", "-", "-"],
-            ["**Clarity**", f"{metrics.get('clarity_avg', 0):.2f}/5", "-", "-", "-"],
+            ["**Correctness**", f"{metrics.get('correctness_avg', 0):.2f}/5", f"{easy_correctness:.2f}/5", f"{med_correctness:.2f}/5", f"{hard_correctness:.2f}/5"],
+            ["**Completeness**", f"{metrics.get('completeness_avg', 0):.2f}/5", f"{easy_completeness:.2f}/5", f"{med_completeness:.2f}/5", f"{hard_completeness:.2f}/5"],
+            ["**Faithfulness**", f"{metrics.get('faithfulness_avg', 0):.2f}/5", f"{easy_faithfulness:.2f}/5", f"{med_faithfulness:.2f}/5", f"{hard_faithfulness:.2f}/5"],
+            ["**Relevance**", f"{metrics.get('relevance_avg', 0):.2f}/5", f"{easy_relevance:.2f}/5", f"{med_relevance:.2f}/5", f"{hard_relevance:.2f}/5"],
+            ["**Clarity**", f"{metrics.get('clarity_avg', 0):.2f}/5", f"{easy_clarity:.2f}/5", f"{med_clarity:.2f}/5", f"{hard_clarity:.2f}/5"],
             ["**Overall**", f"{metrics.get('overall_score_avg', 0):.2f}/5", f"{diff_metrics['easy']['score']:.2f}/5", f"{diff_metrics['medium']['score']:.2f}/5", f"{diff_metrics['hard']['score']:.2f}/5"],
         ]
     ))
@@ -579,11 +626,11 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     lines.extend(make_table(
         ["Dimension", "Total", "Single-Hop", "Multi-Hop"],
         [
-            ["**Correctness**", f"{metrics.get('correctness_avg', 0):.2f}/5", "-", "-"],
-            ["**Completeness**", f"{metrics.get('completeness_avg', 0):.2f}/5", "-", "-"],
-            ["**Faithfulness**", f"{metrics.get('faithfulness_avg', 0):.2f}/5", "-", "-"],
-            ["**Relevance**", f"{metrics.get('relevance_avg', 0):.2f}/5", "-", "-"],
-            ["**Clarity**", f"{metrics.get('clarity_avg', 0):.2f}/5", "-", "-"],
+            ["**Correctness**", f"{metrics.get('correctness_avg', 0):.2f}/5", f"{sh_correctness:.2f}/5", f"{mh_correctness:.2f}/5"],
+            ["**Completeness**", f"{metrics.get('completeness_avg', 0):.2f}/5", f"{sh_completeness:.2f}/5", f"{mh_completeness:.2f}/5"],
+            ["**Faithfulness**", f"{metrics.get('faithfulness_avg', 0):.2f}/5", f"{sh_faithfulness:.2f}/5", f"{mh_faithfulness:.2f}/5"],
+            ["**Relevance**", f"{metrics.get('relevance_avg', 0):.2f}/5", f"{sh_relevance:.2f}/5", f"{mh_relevance:.2f}/5"],
+            ["**Clarity**", f"{metrics.get('clarity_avg', 0):.2f}/5", f"{sh_clarity:.2f}/5", f"{mh_clarity:.2f}/5"],
             ["**Overall**", f"{metrics.get('overall_score_avg', 0):.2f}/5", f"{sh_score:.2f}/5", f"{mh_score:.2f}/5"],
         ]
     ))
