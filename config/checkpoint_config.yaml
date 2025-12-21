@@ -43,11 +43,13 @@ retrieval:
   recall_k: 100
   precision_k: 25
   enable_hybrid: true
+  rrf_alpha: 0.5  # 50/50 hybrid weighting (keyword + semantic)
   enable_reranking: true
+  ranking_model: "semantic-ranker-512@latest"
 
 # Execution (fixed)
 execution:
-  workers: 10
+  workers: 100  # Smart throttler limits to 20 concurrent via semaphore
   timeout_per_question_s: 120
 
 # Thresholds for pass/fail

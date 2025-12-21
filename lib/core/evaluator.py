@@ -114,6 +114,7 @@ class GoldEvaluator:
     def __init__(
         self,
         precision_k: int = 25,
+        recall_k: int = None,  # New: configurable recall@K
         workers: int = None,
         generator_reasoning: str = None,
         cloud_mode: bool = False,
@@ -132,6 +133,7 @@ class GoldEvaluator:
         
         # Use provided values or fall back to config
         self.precision_k = precision_k if precision_k != 25 else self.config.get("retrieval", {}).get("precision_k", 25)
+        self.recall_k = recall_k if recall_k is not None else self.config.get("retrieval", {}).get("recall_k", 100)
         self.workers = workers if workers is not None else self.config.get("execution", {}).get("workers", DEFAULT_WORKERS)
         self.generator_reasoning = generator_reasoning if generator_reasoning is not None else self.generator_config.get("reasoning_effort", "low")
         self.cloud_mode = cloud_mode
@@ -737,7 +739,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         # Local mode: use gRAG_v3 pipeline directly
         # Store retrieval config for output
         retrieval_config = {
-            "recall_top_k": 100,
+            "recall_top_k": self.recall_k,
             "precision_top_n": self.precision_k,
             "enable_hybrid": True,
             "enable_reranking": True,
@@ -1216,7 +1218,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 "judge_reasoning_effort": self.judge_reasoning,
                 "judge_seed": self.judge_seed,
                 "precision_k": self.precision_k,
-                "recall_k": 100,
+                "recall_k": self.recall_k,
                 "workers": self.workers,
                 "temperature": self.generator_config.get("temperature", 0.0),
             },

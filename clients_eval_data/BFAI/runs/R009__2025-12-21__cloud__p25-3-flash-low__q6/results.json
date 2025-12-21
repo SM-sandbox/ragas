@@ -1,0 +1,585 @@
+{
+  "schema_version": "1.1",
+  "timestamp": "2025-12-21T12:20:20.841626",
+  "client": "BFAI",
+  "index": {
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "mode": "cloud",
+    "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app"
+  },
+  "config": {
+    "generator_model": "gemini-3-flash-preview",
+    "generator_reasoning_effort": "low",
+    "generator_seed": 42,
+    "judge_model": "gemini-3-flash-preview",
+    "judge_reasoning_effort": "low",
+    "judge_seed": 42,
+    "precision_k": 25,
+    "recall_k": 100,
+    "workers": 3,
+    "temperature": 0.0
+  },
+  "metrics": {
+    "precision_k": 25,
+    "total": 6,
+    "completed": 6,
+    "recall_at_100": 1.0,
+    "mrr": 1.0,
+    "pass_rate": 1.0,
+    "partial_rate": 0.0,
+    "fail_rate": 0.0,
+    "acceptable_rate": 1.0,
+    "correctness_avg": 5.0,
+    "completeness_avg": 5.0,
+    "faithfulness_avg": 5.0,
+    "relevance_avg": 5.0,
+    "clarity_avg": 5.0,
+    "overall_score_avg": 5.0
+  },
+  "latency": {
+    "total_avg_s": 9.914391994476318,
+    "total_min_s": 3.146354913711548,
+    "total_max_s": 19.42070770263672,
+    "by_phase": {
+      "retrieval_avg_s": 0.0,
+      "rerank_avg_s": 0.0,
+      "generation_avg_s": 0.0,
+      "judge_avg_s": 1.7963496446609497
+    }
+  },
+  "tokens": {
+    "prompt_total": 0,
+    "completion_total": 0,
+    "thinking_total": 0,
+    "cached_total": 0,
+    "total": 0
+  },
+  "answer_stats": {
+    "avg_length_chars": 463.1666666666667,
+    "min_length_chars": 187,
+    "max_length_chars": 765
+  },
+  "quality": {
+    "finish_reason_distribution": {
+      "UNKNOWN": 6
+    },
+    "fallback_rate": 0.0
+  },
+  "execution": {
+    "run_duration_seconds": 52.33652305603027,
+    "questions_per_second": 0.11464269404325042,
+    "workers": 3,
+    "rate_limiter": {
+      "current_rpm": 6,
+      "current_tpm": 6000,
+      "rpm_limit": 20000,
+      "tpm_limit": 20000000,
+      "max_concurrent": 50,
+      "rpm_utilization": 0.0003,
+      "tpm_utilization": 0.0003,
+      "total_requests": 6,
+      "total_tokens": 6000,
+      "total_throttles": 0,
+      "model_rotations": 0,
+      "active_model": "gemini-3-flash-preview",
+      "models_on_cooldown": []
+    }
+  },
+  "retry_stats": {
+    "total_questions": 6,
+    "succeeded_first_try": 6,
+    "succeeded_after_retry": 0,
+    "failed_all_retries": 0,
+    "total_retry_attempts": 6,
+    "avg_attempts": 1.0
+  },
+  "errors": {
+    "total_errors": 0,
+    "by_phase": {
+      "retrieval": 0,
+      "rerank": 0,
+      "generation": 0,
+      "judge": 0
+    },
+    "error_messages": []
+  },
+  "skipped": {
+    "count": 0,
+    "reasons": {
+      "missing_ground_truth": 0,
+      "invalid_question": 0,
+      "timeout": 0
+    },
+    "question_ids": []
+  },
+  "breakdown_by_type": {
+    "single_hop": {
+      "total": 6,
+      "pass": 6,
+      "partial": 0,
+      "fail": 0,
+      "pass_rate": 1.0
+    }
+  },
+  "breakdown_by_difficulty": {
+    "easy": {
+      "total": 6,
+      "pass": 6,
+      "partial": 0,
+      "fail": 0,
+      "pass_rate": 1.0
+    }
+  },
+  "quality_by_bucket": {
+    "single_hop": {
+      "easy": {
+        "count": 6,
+        "pass_rate": 1.0,
+        "partial_rate": 0.0,
+        "fail_rate": 0.0,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 5.0,
+        "correctness_avg": 5.0,
+        "completeness_avg": 5.0,
+        "faithfulness_avg": 5.0,
+        "relevance_avg": 5.0,
+        "clarity_avg": 5.0
+      }
+    },
+    "multi_hop": {}
+  },
+  "orchestrator": {
+    "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+    "service": "bfai-api",
+    "project_id": "bfai-prod",
+    "environment": "production",
+    "region": "us-east1"
+  },
+  "warmup": {
+    "phase": "warmup",
+    "pings": [
+      {
+        "status": "ok",
+        "time": 22.59053897857666
+      },
+      {
+        "status": "ok",
+        "time": 0.13129878044128418
+      },
+      {
+        "status": "ok",
+        "time": 0.14050889015197754
+      }
+    ],
+    "parallel_warmup": [],
+    "ramp_up": [],
+    "total_warmup_time": 31.869821310043335,
+    "orchestrator_ready": true,
+    "target_workers": 3
+  },
+  "cost_summary_usd": {
+    "generator_total": 0.0098519,
+    "judge_total": 0.0008903000000000001,
+    "total": 0.010742200000000002,
+    "avg_per_question": 0.001790366666666667
+  },
+  "results": [
+    {
+      "question_id": "sh_easy_001",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+      "expected_answer": "failure, preventive stock",
+      "source_documents": [],
+      "generated_answer": "Based on the provided Spare Part Request Form, the two examples provided for the \"Reason for Replacement\" are:\n\n1.  **Failure** [1]\n2.  **Preventive stock** [1]\nThese examples are listed in the \"Details\" column of the form to guide the requesting party when completing the request [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 12.226648092269897,
+      "timing": {
+        "cloud_retrieve": 6.239566802978516,
+        "cloud_query": 3.5637269020080566,
+        "judge": 2.423337936401367,
+        "total": 12.226648092269897
+      },
+      "generator_tokens": {
+        "prompt": 5934,
+        "completion": 70,
+        "thinking": 0,
+        "total": 6004,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 310,
+        "completion": 67,
+        "thinking": null,
+        "total": 377,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0006214,
+        "judge": 5.78e-05,
+        "total": 0.0006792
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 285,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_002",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+      "expected_answer": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+      "source_documents": [],
+      "generated_answer": "According to the general notes, the maximum specified length for an RS-485 bus cable is 4000FT (1220M) [2]. The cable used for this bus must meet or exceed Belden 3106A specifications [2].\n\nOther source documents provided specify similar or related maximum lengths for RS-485 connections:\n*   For Shark 100 meters, the maximum length for cable connecting all devices is 4000 feet (1219.20 meters) if an RS485 repeater is not being used [1][3].\n*   For AURORA inverters connected in a daisy chain, the recommended maximum length is 1200 metres [4].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 16.459654092788696,
+      "timing": {
+        "cloud_retrieve": 6.231128931045532,
+        "cloud_query": 9.100576162338257,
+        "judge": 1.1279098987579346,
+        "total": 16.459654092788696
+      },
+      "generator_tokens": {
+        "prompt": 18930,
+        "completion": 166,
+        "thinking": 610,
+        "total": 19706,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 818,
+        "completion": 67,
+        "thinking": null,
+        "total": 885,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0023864,
+        "judge": 0.0001086,
+        "total": 0.002495
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 547,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_004",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum RMS line voltage that can be present on the input terminals of the device?",
+      "expected_answer": "Line voltages up to 600 VRMS can be present on the input terminals of the device.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided source documents, the maximum RMS line voltage that can be present on the input terminals of the device is **600 VRMS** [1].\n\nAccording to the warnings provided in the documentation:\n*   Line voltages up to **600 VRMS** are present on the input terminals of the device and throughout the connected line circuits during normal operation [1].\n*   These voltages may cause severe injury or death [1].\n*   Installation and servicing should be performed only by qualified, properly trained personnel [1].\n*   The device is classified as a **CLASS III** measurement device [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 4.641282081604004,
+      "timing": {
+        "cloud_retrieve": 0.34505391120910645,
+        "cloud_query": 1.9705657958984375,
+        "judge": 2.3256258964538574,
+        "total": 4.641282081604004
+      },
+      "generator_tokens": {
+        "prompt": 10197,
+        "completion": 130,
+        "thinking": 0,
+        "total": 10327,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 434,
+        "completion": 67,
+        "thinking": 264,
+        "total": 765,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0010717,
+        "judge": 0.000255,
+        "total": 0.0013267
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 593,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_003",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the DC system size specified for the BOYNE MOUNTAIN RESORT project?",
+      "expected_answer": "The DC system size is 1,770 KW DC.",
+      "source_documents": [],
+      "generated_answer": "The DC system size specified for the BOYNE MOUNTAIN RESORT project is 1,770 KW DC [1]. This specification is listed on the project's cover sheet under the project description section [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "time": 19.42070770263672,
+      "timing": {
+        "cloud_retrieve": 6.239542007446289,
+        "cloud_query": 10.178931951522827,
+        "judge": 3.0022189617156982,
+        "total": 19.42070770263672
+      },
+      "generator_tokens": {
+        "prompt": 37318,
+        "completion": 48,
+        "thinking": 832,
+        "total": 38198,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 406,
+        "completion": 69,
+        "thinking": 347,
+        "total": 822,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0043334,
+        "judge": 0.0003111,
+        "total": 0.0046445
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 187,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_005",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the rated AC voltage for the NEP BDM-1200-LV Micro Inverter?",
+      "expected_answer": "120V",
+      "source_documents": [],
+      "generated_answer": "The rated AC voltage for the NEP BDM-1200-LV Micro Inverter is 120V [1].\n\nAdditional technical details regarding the AC output for this model include:\n*   **Rated AC Output Current:** 10A / 13.3A [1].\n*   **Rated AC Frequency:** 50Hz/60Hz [1].\n*   **Rated AC Output Power:** 1200W [1].\n*   **Installation:** It is designed for DIY installation by plugging directly into a standard 120V wall outlet [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 3.146354913711548,
+      "timing": {
+        "cloud_retrieve": 0.31104493141174316,
+        "cloud_query": 1.9035239219665527,
+        "judge": 0.9317638874053955,
+        "total": 3.146354913711548
+      },
+      "generator_tokens": {
+        "prompt": 5584,
+        "completion": 132,
+        "thinking": 0,
+        "total": 5716,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 446,
+        "completion": 67,
+        "thinking": null,
+        "total": 513,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0006112,
+        "judge": 7.14e-05,
+        "total": 0.0006826
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 402,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_006",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What communication interfaces are used by the BDM-1200-LV/BDM-1600-LV Micro Inverters?",
+      "expected_answer": "WI-FI, Bluetooth",
+      "source_documents": [],
+      "generated_answer": "The BDM-1200-LV and BDM-1600-LV Micro Inverters utilize the following communication interfaces:\n\n*   **WI-FI:** These models feature built-in WiFi [1].\n*   **Bluetooth:** The units are equipped with a Bluetooth interface [1].\n*   **Mobile App:** They support an intuitive mobile app for iOS and Android, allowing users to monitor real-time performance, troubleshoot issues, and receive alerts [1].\n*   **Over-the-Air Updates:** The communication system supports over-the-air firmware updates [1].\n\nAdditionally, while the specific BDM-1200-LV/BDM-1600-LV datasheet lists WiFi and Bluetooth [1] general NEP microinverter documentation indicates that firmware can also be upgradable via Powerline Communications (PLC) when integrated with NEP's gateway (BDG-256) [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 3.591705083847046,
+      "timing": {
+        "cloud_retrieve": 0.3390960693359375,
+        "cloud_query": 2.2853200435638428,
+        "judge": 0.9672412872314453,
+        "total": 3.591705083847046
+      },
+      "generator_tokens": {
+        "prompt": 7450,
+        "completion": 207,
+        "thinking": 0,
+        "total": 7657,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 596,
+        "completion": 67,
+        "thinking": null,
+        "total": 663,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0008278,
+        "judge": 8.64e-05,
+        "total": 0.0009142
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-api-ppfq5ahfsq-ue.a.run.app",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 765,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    }
+  ]
+}

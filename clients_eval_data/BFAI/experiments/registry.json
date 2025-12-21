@@ -38,6 +38,20 @@
       "questions": 50,
       "folder": "E004__2025-12-18__L__orchestrator-eval",
       "notes": "Orchestrator endpoint testing"
+    },
+    {
+      "id": "E005",
+      "date": "2025-12-21",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.926,
+      "fail_rate": 0.013,
+      "acceptable_rate": 0.987,
+      "folder": "E005__2025-12-21__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
     }
   ],
   "reference_docs": [
