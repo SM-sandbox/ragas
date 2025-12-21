@@ -170,8 +170,9 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     data = json.load(open(results_path))
     
     # Determine output path (same directory as results)
+    checkpoint_id = results_path.parent.name.split("__")[0]
     if output_path is None:
-        output_path = results_path.parent / "REPORT.md"
+        output_path = results_path.parent / f"checkpoint_report_{checkpoint_id}.md"
     
     # Extract data
     config = data.get("config", {})
@@ -187,11 +188,18 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     by_diff = get_breakdown_by_difficulty(results)
     failures = get_failures(results)
     
+    # Extract additional data
+    execution = data.get("execution", {})
+    rate_limiter = execution.get("rate_limiter", {})
+    orchestrator = data.get("orchestrator", {})
+    breakdown_by_type = data.get("breakdown_by_type", {})
+    breakdown_by_difficulty = data.get("breakdown_by_difficulty", {})
+    quality_by_bucket = data.get("quality_by_bucket", {})
+    
     # Build report
     lines = []
     
     # Header
-    checkpoint_id = results_path.parent.name.split("__")[0]
     lines.append(f"# Checkpoint Report: {checkpoint_id}")
     lines.append("")
     lines.append(f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -347,15 +355,35 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     # Configuration
     lines.append("## Configuration")
     lines.append("")
+    lines.append("### Run Settings")
+    lines.append("")
     lines.append("| Parameter | Value |")
     lines.append("|-----------|-------|")
-    lines.append(f"| **Generator Model** | {config.get('generator_model', 'unknown')} |")
-    lines.append(f"| **Reasoning Effort** | {config.get('generator_reasoning_effort', 'unknown')} |")
-    lines.append(f"| **Temperature** | {config.get('temperature', 0)} |")
+    lines.append(f"| **Mode** | {index_info.get('mode', 'unknown')} |")
+    lines.append(f"| **Endpoint** | {index_info.get('endpoint', 'N/A')} |")
     lines.append(f"| **Precision@K** | {config.get('precision_k', 25)} |")
     lines.append(f"| **Recall@K** | {config.get('recall_k', 100)} |")
-    lines.append(f"| **Workers** | {config.get('workers', 1)} |")
-    lines.append(f"| **Judge Model** | {config.get('judge_model', 'unknown')} |")
+    lines.append(f"| **Max Workers** | {config.get('workers', 1)} |")
+    lines.append(f"| **Effective Workers** | {rate_limiter.get('max_concurrent', config.get('workers', 1))} |")
+    lines.append("")
+    
+    lines.append("### Generator Model")
+    lines.append("")
+    lines.append("| Parameter | Value |")
+    lines.append("|-----------|-------|")
+    lines.append(f"| **Model** | {config.get('generator_model', 'unknown')} |")
+    lines.append(f"| **Reasoning Effort** | {config.get('generator_reasoning_effort', 'unknown')} |")
+    lines.append(f"| **Temperature** | {config.get('temperature', 0)} |")
+    lines.append(f"| **Seed** | {config.get('generator_seed', 'N/A')} |")
+    lines.append("")
+    
+    lines.append("### Judge Model")
+    lines.append("")
+    lines.append("| Parameter | Value |")
+    lines.append("|-----------|-------|")
+    lines.append(f"| **Model** | {config.get('judge_model', 'unknown')} |")
+    lines.append(f"| **Reasoning Effort** | {config.get('judge_reasoning_effort', 'unknown')} |")
+    lines.append(f"| **Seed** | {config.get('judge_seed', 'N/A')} |")
     lines.append("")
     
     # Retrieval Metrics
@@ -435,26 +463,41 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     lines.append(f"| **Per 1,000 Questions** | ${cost['total_cost']/total_q*1000:.2f} |")
     lines.append("")
     
-    # Breakdown by Type
+    # Breakdown by Type (from JSON breakdown_by_type)
     lines.append("## Breakdown by Question Type")
     lines.append("")
     lines.append("| Type | Total | Pass | Partial | Fail | Pass Rate |")
     lines.append("|------|-------|------|---------|------|-----------|")
-    for qtype, counts in sorted(by_type.items()):
-        rate = counts["pass"] / counts["total"] * 100 if counts["total"] > 0 else 0
-        lines.append(f"| **{qtype.title()}** | {counts['total']} | {counts['pass']} | {counts['partial']} | {counts['fail']} | {rate:.1f}% |")
+    for qtype in ["single_hop", "multi_hop"]:
+        if qtype in breakdown_by_type:
+            counts = breakdown_by_type[qtype]
+            rate = counts.get("pass_rate", 0) * 100
+            lines.append(f"| **{qtype.replace('_', '-').title()}** | {counts.get('total', 0)} | {counts.get('pass', 0)} | {counts.get('partial', 0)} | {counts.get('fail', 0)} | {rate:.1f}% |")
     lines.append("")
     
-    # Breakdown by Difficulty
+    # Breakdown by Difficulty (from JSON breakdown_by_difficulty)
     lines.append("## Breakdown by Difficulty")
     lines.append("")
     lines.append("| Difficulty | Total | Pass | Partial | Fail | Pass Rate |")
     lines.append("|------------|-------|------|---------|------|-----------|")
     for diff in ["easy", "medium", "hard"]:
-        if diff in by_diff:
-            counts = by_diff[diff]
-            rate = counts["pass"] / counts["total"] * 100 if counts["total"] > 0 else 0
-            lines.append(f"| **{diff.title()}** | {counts['total']} | {counts['pass']} | {counts['partial']} | {counts['fail']} | {rate:.1f}% |")
+        if diff in breakdown_by_difficulty:
+            counts = breakdown_by_difficulty[diff]
+            rate = counts.get("pass_rate", 0) * 100
+            lines.append(f"| **{diff.title()}** | {counts.get('total', 0)} | {counts.get('pass', 0)} | {counts.get('partial', 0)} | {counts.get('fail', 0)} | {rate:.1f}% |")
+    lines.append("")
+    
+    # Cross-breakdown: Type x Difficulty (quality_by_bucket)
+    lines.append("## Breakdown by Type × Difficulty")
+    lines.append("")
+    lines.append("| Type | Difficulty | Count | Pass Rate | MRR | Overall Score |")
+    lines.append("|------|------------|-------|-----------|-----|---------------|")
+    for qtype in ["single_hop", "multi_hop"]:
+        if qtype in quality_by_bucket:
+            for diff in ["easy", "medium", "hard"]:
+                if diff in quality_by_bucket[qtype]:
+                    bucket = quality_by_bucket[qtype][diff]
+                    lines.append(f"| **{qtype.replace('_', '-').title()}** | {diff.title()} | {bucket.get('count', 0)} | {bucket.get('pass_rate', 0):.1%} | {bucket.get('mrr', 0):.3f} | {bucket.get('overall_score_avg', 0):.2f}/5 |")
     lines.append("")
     
     # Failures
@@ -471,16 +514,34 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
             lines.append(f"| ... | ... | ... | ({len(failures) - 20} more) |")
         lines.append("")
     
-    # Index Info
-    lines.append("## Index Information")
+    # Execution & Throttling
+    lines.append("## Execution & Throttling")
+    lines.append("")
+    lines.append("| Metric | Value |")
+    lines.append("|--------|-------|")
+    lines.append(f"| **Run Duration** | {execution.get('run_duration_seconds', 0):.1f}s |")
+    lines.append(f"| **Questions/Second** | {execution.get('questions_per_second', 0):.2f} |")
+    lines.append(f"| **Max Workers** | {config.get('workers', 1)} |")
+    lines.append(f"| **Effective Workers** | {rate_limiter.get('max_concurrent', 'N/A')} |")
+    lines.append(f"| **Total Requests** | {rate_limiter.get('total_requests', 0)} |")
+    lines.append(f"| **Total Throttles** | {rate_limiter.get('total_throttles', 0)} |")
+    lines.append(f"| **RPM Utilization** | {rate_limiter.get('rpm_utilization', 0):.2%} |")
+    lines.append(f"| **TPM Utilization** | {rate_limiter.get('tpm_utilization', 0):.2%} |")
+    lines.append("")
+    
+    # Index & Orchestrator Info
+    lines.append("## Index & Orchestrator")
     lines.append("")
     lines.append("| Field | Value |")
     lines.append("|-------|-------|")
-    lines.append(f"| **Job ID** | {index_info.get('job_id', 'unknown')} |")
+    lines.append(f"| **Index/Job ID** | {index_info.get('job_id', 'unknown')} |")
     lines.append(f"| **Mode** | {index_info.get('mode', 'unknown')} |")
-    lines.append(f"| **Documents** | {index_info.get('document_count', 0)} |")
-    lines.append(f"| **Embedding Model** | {index_info.get('embedding_model', 'unknown')} |")
-    lines.append(f"| **Embedding Dimension** | {index_info.get('embedding_dimension', 0)} |")
+    lines.append(f"| **Endpoint** | {index_info.get('endpoint', 'N/A')} |")
+    if orchestrator:
+        lines.append(f"| **Service** | {orchestrator.get('service', 'unknown')} |")
+        lines.append(f"| **Project ID** | {orchestrator.get('project_id', 'unknown')} |")
+        lines.append(f"| **Environment** | {orchestrator.get('environment', 'unknown')} |")
+        lines.append(f"| **Region** | {orchestrator.get('region', 'unknown')} |")
     lines.append("")
     
     # Footer

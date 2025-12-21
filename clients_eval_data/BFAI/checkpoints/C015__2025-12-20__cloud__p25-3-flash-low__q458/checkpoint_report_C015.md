@@ -1,6 +1,6 @@
 # Checkpoint Report: C015
 
-**Generated:** 2025-12-21 11:06:08
+**Generated:** 2025-12-21 11:41:19
 **Results File:** `results.json`
 
 ## Executive Summary
@@ -61,15 +61,33 @@
 
 ## Configuration
 
+### Run Settings
+
 | Parameter | Value |
 |-----------|-------|
-| **Generator Model** | gemini-3-flash-preview |
-| **Reasoning Effort** | low |
-| **Temperature** | 0.0 |
+| **Mode** | cloud |
+| **Endpoint** | https://bfai-api-ppfq5ahfsq-ue.a.run.app |
 | **Precision@K** | 25 |
 | **Recall@K** | 100 |
-| **Workers** | 100 |
-| **Judge Model** | gemini-3-flash-preview |
+| **Max Workers** | 100 |
+| **Effective Workers** | 50 |
+
+### Generator Model
+
+| Parameter | Value |
+|-----------|-------|
+| **Model** | gemini-3-flash-preview |
+| **Reasoning Effort** | low |
+| **Temperature** | 0.0 |
+| **Seed** | 42 |
+
+### Judge Model
+
+| Parameter | Value |
+|-----------|-------|
+| **Model** | gemini-3-flash-preview |
+| **Reasoning Effort** | low |
+| **Seed** | 42 |
 
 ## Retrieval Metrics
 
@@ -130,28 +148,55 @@
 
 | Type | Total | Pass | Partial | Fail | Pass Rate |
 |------|-------|------|---------|------|-----------|
-| **Multi-Hop** | 458 | 0 | 0 | 0 | 0.0% |
+| **Single-Hop** | 222 | 208 | 12 | 2 | 93.7% |
+| **Multi-Hop** | 236 | 217 | 16 | 3 | 91.9% |
 
 ## Breakdown by Difficulty
 
 | Difficulty | Total | Pass | Partial | Fail | Pass Rate |
 |------------|-------|------|---------|------|-----------|
-| **Easy** | 161 | 0 | 0 | 0 | 0.0% |
-| **Medium** | 161 | 0 | 0 | 0 | 0.0% |
-| **Hard** | 136 | 0 | 0 | 0 | 0.0% |
+| **Easy** | 161 | 148 | 9 | 4 | 91.9% |
+| **Medium** | 161 | 150 | 11 | 0 | 93.2% |
+| **Hard** | 136 | 127 | 8 | 1 | 93.4% |
 
-## Index Information
+## Breakdown by Type × Difficulty
+
+| Type | Difficulty | Count | Pass Rate | MRR | Overall Score |
+|------|------------|-------|-----------|-----|---------------|
+| **Single-Hop** | Easy | 88 | 95.5% | 1.000 | 4.87/5 |
+| **Single-Hop** | Medium | 78 | 91.0% | 1.000 | 4.81/5 |
+| **Single-Hop** | Hard | 56 | 94.6% | 1.000 | 4.90/5 |
+| **Multi-Hop** | Easy | 73 | 87.7% | 0.452 | 4.71/5 |
+| **Multi-Hop** | Medium | 83 | 95.2% | 0.580 | 4.86/5 |
+| **Multi-Hop** | Hard | 80 | 92.5% | 0.437 | 4.79/5 |
+
+## Execution & Throttling
+
+| Metric | Value |
+|--------|-------|
+| **Run Duration** | 535.1s |
+| **Questions/Second** | 0.86 |
+| **Max Workers** | 100 |
+| **Effective Workers** | 50 |
+| **Total Requests** | 458 |
+| **Total Throttles** | 0 |
+| **RPM Utilization** | 0.04% |
+| **TPM Utilization** | 0.04% |
+
+## Index & Orchestrator
 
 | Field | Value |
 |-------|-------|
-| **Job ID** | bfai__eval66a_g1_1536_tt |
+| **Index/Job ID** | bfai__eval66a_g1_1536_tt |
 | **Mode** | cloud |
-| **Documents** | 0 |
-| **Embedding Model** | unknown |
-| **Embedding Dimension** | 0 |
+| **Endpoint** | https://bfai-api-ppfq5ahfsq-ue.a.run.app |
+| **Service** | bfai-api |
+| **Project ID** | bfai-prod |
+| **Environment** | production |
+| **Region** | us-east1 |
 
 ---
 
-*Report generated: 2025-12-21 11:06:08*
+*Report generated: 2025-12-21 11:41:19*
 *Checkpoint: C015*
 *Judge Model: gemini-3-flash-preview*
