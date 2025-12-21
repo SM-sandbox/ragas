@@ -1,6 +1,6 @@
 # Checkpoint Report: C015
 
-**Generated:** 2025-12-21 11:53:41
+**Generated:** 2025-12-21 12:05:02
 **Results File:** `results.json`
 
 ## Executive Summary
@@ -93,134 +93,147 @@
 
 ### By Question Type
 
-| Metric | Total | Single-Hop | Multi-Hop |
-|--------|-------|------------|-----------|
-| **Recall@100** | 99.1% | 100.0% | 98.3% |
-| **MRR** | 0.738 | 1.000 | 0.492 |
+|Metric          |  Total|  Single-Hop|  Multi-Hop|
+|----------------|------:|-----------:|----------:|
+|**Recall@100**  |  99.1%|      100.0%|      98.3%|
+|**MRR**         |  0.738|       1.000|      0.492|
 
 ### By Difficulty
 
-| Metric | Easy | Medium | Hard |
-|--------|------|--------|------|
-| **Recall@100** | 100.0% | 98.8% | 98.5% |
-| **MRR** | 0.752 | 0.783 | 0.669 |
+|Metric          |    Easy|  Medium|   Hard|
+|----------------|-------:|-------:|------:|
+|**Recall@100**  |  100.0%|   98.8%|  98.5%|
+|**MRR**         |   0.752|   0.783|  0.669|
 
 ## Quality Scores
 
 ### By Question Type
 
-| Metric | Total | Single-Hop | Multi-Hop |
-|--------|-------|------------|-----------|
-| **Overall Score** | 4.82/5 | 4.86/5 | 4.79/5 |
-| **Pass Rate** | 92.8% | 93.7% | 91.9% |
+|Metric             |   Total|  Single-Hop|  Multi-Hop|
+|-------------------|-------:|-----------:|----------:|
+|**Overall Score**  |  4.82/5|      4.86/5|     4.79/5|
+|**Pass Rate**      |   92.8%|       93.7%|      91.9%|
 
 ### By Difficulty
 
-| Metric | Easy | Medium | Hard |
-|--------|------|--------|------|
-| **Overall Score** | 4.80/5 | 4.84/5 | 4.83/5 |
-| **Pass Rate** | 91.9% | 93.2% | 93.4% |
+|Metric             |    Easy|  Medium|    Hard|
+|-------------------|-------:|-------:|-------:|
+|**Overall Score**  |  4.80/5|  4.84/5|  4.83/5|
+|**Pass Rate**      |   91.9%|   93.2%|   93.4%|
 
-### Score Dimensions (Total)
+### Score Dimensions
 
-| Dimension | Average |
-|-----------|---------|
-| **Correctness** | 4.78/5 |
-| **Completeness** | 4.87/5 |
-| **Faithfulness** | 4.90/5 |
-| **Relevance** | 4.98/5 |
-| **Clarity** | 4.99/5 |
+#### By Difficulty
+
+|Dimension         |   Total|    Easy|  Medium|    Hard|
+|------------------|-------:|-------:|-------:|-------:|
+|**Correctness**   |  4.78/5|       -|       -|       -|
+|**Completeness**  |  4.87/5|       -|       -|       -|
+|**Faithfulness**  |  4.90/5|       -|       -|       -|
+|**Relevance**     |  4.98/5|       -|       -|       -|
+|**Clarity**       |  4.99/5|       -|       -|       -|
+|**Overall**       |  4.82/5|  4.80/5|  4.84/5|  4.83/5|
+
+#### By Question Type
+
+|Dimension         |   Total|  Single-Hop|  Multi-Hop|
+|------------------|-------:|-----------:|----------:|
+|**Correctness**   |  4.78/5|           -|          -|
+|**Completeness**  |  4.87/5|           -|          -|
+|**Faithfulness**  |  4.90/5|           -|          -|
+|**Relevance**     |  4.98/5|           -|          -|
+|**Clarity**       |  4.99/5|           -|          -|
+|**Overall**       |  4.82/5|      4.86/5|     4.79/5|
 
 ## Latency Analysis
 
-| Phase | Avg Time | % of Total |
-|-------|----------|------------|
-| **Retrieval** | 0.00s | 0.0% |
-| **Reranking** | 0.00s | 0.0% |
-| **Generation** | 0.00s | 0.0% |
-| **Judge** | 1.26s | 1.6% |
-| **Total** | 77.20s | 100% |
+|Phase           |  Avg Time|  % of Total|
+|----------------|---------:|-----------:|
+|**Retrieval**   |     0.00s|        0.0%|
+|**Reranking**   |     0.00s|        0.0%|
+|**Generation**  |     0.00s|        0.0%|
+|**Judge**       |     1.26s|        1.6%|
+|**Total**       |    77.20s|        100%|
 
-**Min Latency:** 8.07s
-**Max Latency:** 134.54s
+**Min Latency:** 8.07s  |  **Max Latency:** 134.54s
 
 ## Token & Cost Analysis
 
 ### Token Breakdown
 
-| Token Type | Total | Per Question |
-|------------|-------|--------------|
-| **Prompt (Input)** | 0 | 0 |
-| **Completion (Output)** | 0 | 0 |
-| **Thinking** | 0 | 0 |
-| **Cached** | 0 | 0 |
-| **Total** | 0 | 0 |
+|Token Type               |  Total|  Per Question|
+|-------------------------|------:|-------------:|
+|**Prompt (Input)**       |      0|             0|
+|**Completion (Output)**  |      0|             0|
+|**Thinking**             |      0|             0|
+|**Cached**               |      0|             0|
+|**Total**                |      0|             0|
 
 ### Cost Estimate (Gemini 3 Flash)
 
-| Component | Cost |
-|-----------|------|
-| **Input** | $0.0000 |
-| **Output** | $0.0000 |
-| **Thinking** | $0.0000 |
-| **Cached Savings** | -$0.0000 |
-| **Total** | **$0.0000** |
-| **Per Question** | $0.000000 |
-| **Per 1,000 Questions** | $0.00 |
+|Component                |         Cost|
+|-------------------------|------------:|
+|**Input**                |      $0.0000|
+|**Output**               |      $0.0000|
+|**Thinking**             |      $0.0000|
+|**Cached Savings**       |     -$0.0000|
+|**Total**                |  **$0.0000**|
+|**Per Question**         |    $0.000000|
+|**Per 1,000 Questions**  |        $0.00|
 
 ## Breakdown by Question Type
 
-| Type | Total | Pass | Partial | Fail | Pass Rate |
-|------|-------|------|---------|------|-----------|
-| **Single-Hop** | 222 | 208 | 12 | 2 | 93.7% |
-| **Multi-Hop** | 236 | 217 | 16 | 3 | 91.9% |
+|Type            |  Total|  Pass|  Partial|  Fail|  Pass Rate|
+|----------------|------:|-----:|--------:|-----:|----------:|
+|**Single-Hop**  |    222|   208|       12|     2|      93.7%|
+|**Multi-Hop**   |    236|   217|       16|     3|      91.9%|
 
 ## Breakdown by Difficulty
 
-| Difficulty | Total | Pass | Partial | Fail | Pass Rate |
-|------------|-------|------|---------|------|-----------|
-| **Easy** | 161 | 148 | 9 | 4 | 91.9% |
-| **Medium** | 161 | 150 | 11 | 0 | 93.2% |
-| **Hard** | 136 | 127 | 8 | 1 | 93.4% |
+|Difficulty  |  Total|  Pass|  Partial|  Fail|  Pass Rate|
+|------------|------:|-----:|--------:|-----:|----------:|
+|**Easy**    |    161|   148|        9|     4|      91.9%|
+|**Medium**  |    161|   150|       11|     0|      93.2%|
+|**Hard**    |    136|   127|        8|     1|      93.4%|
 
 ## Breakdown by Type × Difficulty
 
-| Type | Difficulty | Count | Pass Rate | MRR | Overall Score |
-|------|------------|-------|-----------|-----|---------------|
-| **Single-Hop** | Easy | 88 | 95.5% | 1.000 | 4.87/5 |
-| **Single-Hop** | Medium | 78 | 91.0% | 1.000 | 4.81/5 |
-| **Single-Hop** | Hard | 56 | 94.6% | 1.000 | 4.90/5 |
-| **Multi-Hop** | Easy | 73 | 87.7% | 0.452 | 4.71/5 |
-| **Multi-Hop** | Medium | 83 | 95.2% | 0.580 | 4.86/5 |
-| **Multi-Hop** | Hard | 80 | 92.5% | 0.437 | 4.79/5 |
+|Type            |  Difficulty|  Count|  Pass Rate|    MRR|  Overall Score|
+|----------------|-----------:|------:|----------:|------:|--------------:|
+|**Single-Hop**  |        Easy|     88|      95.5%|  1.000|         4.87/5|
+|**Single-Hop**  |      Medium|     78|      91.0%|  1.000|         4.81/5|
+|**Single-Hop**  |        Hard|     56|      94.6%|  1.000|         4.90/5|
+|**Multi-Hop**   |        Easy|     73|      87.7%|  0.452|         4.71/5|
+|**Multi-Hop**   |      Medium|     83|      95.2%|  0.580|         4.86/5|
+|**Multi-Hop**   |        Hard|     80|      92.5%|  0.437|         4.79/5|
 
 ## Execution & Throttling
 
-| Metric | Value |
-|--------|-------|
-| **Run Duration** | 535.1s |
-| **Questions/Second** | 0.86 |
-| **Max Workers** | 100 |
-| **Effective Workers** | 50 |
-| **Total Requests** | 458 |
-| **Total Throttles** | 0 |
-| **RPM Utilization** | 0.04% |
-| **TPM Utilization** | 0.04% |
+|Metric                 |   Value|
+|-----------------------|-------:|
+|**Run Duration**       |  535.1s|
+|**Questions/Second**   |    0.86|
+|**Max Workers**        |     100|
+|**Effective Workers**  |      50|
+|**Total Requests**     |     458|
+|**Total Throttles**    |       0|
+|**RPM Utilization**    |   0.04%|
+|**TPM Utilization**    |   0.04%|
 
 ## Index & Orchestrator
 
-| Field | Value |
-|-------|-------|
-| **Index/Job ID** | bfai__eval66a_g1_1536_tt |
-| **Mode** | cloud |
-| **Endpoint** | https://bfai-api-ppfq5ahfsq-ue.a.run.app |
-| **Service** | bfai-api |
-| **Project ID** | bfai-prod |
-| **Environment** | production |
-| **Region** | us-east1 |
+|Field             |                                     Value|
+|------------------|-----------------------------------------:|
+|**Index/Job ID**  |                  bfai__eval66a_g1_1536_tt|
+|**Mode**          |                                     cloud|
+|**Endpoint**      |  https://bfai-api-ppfq5ahfsq-ue.a.run.app|
+|**Service**       |                                  bfai-api|
+|**Project ID**    |                                 bfai-prod|
+|**Environment**   |                                production|
+|**Region**        |                                  us-east1|
 
 ---
 
-*Report generated: 2025-12-21 11:53:41*
+*Report generated: 2025-12-21 12:05:02*
 *Checkpoint: C015*
 *Judge Model: gemini-3-flash-preview*

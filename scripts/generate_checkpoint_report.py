@@ -33,6 +33,76 @@ PRICING = {
 }
 
 
+def make_table(headers: list, rows: list, align: list = None) -> list:
+    """
+    Create a markdown table with dynamically aligned columns.
+    
+    Args:
+        headers: List of header strings
+        rows: List of row lists (each row is a list of cell values)
+        align: List of alignments ('l', 'r', 'c') for each column. Default is left for first col, right for rest.
+    
+    Returns:
+        List of markdown lines for the table
+    """
+    if not rows:
+        return []
+    
+    # Default alignment: left for first column, right for numeric columns
+    if align is None:
+        align = ['l'] + ['r'] * (len(headers) - 1)
+    
+    # Calculate max width for each column (including headers)
+    num_cols = len(headers)
+    widths = [len(str(h)) for h in headers]
+    for row in rows:
+        for i, cell in enumerate(row):
+            if i < num_cols:
+                widths[i] = max(widths[i], len(str(cell)))
+    
+    # Add padding
+    widths = [w + 2 for w in widths]
+    
+    # Build header row
+    header_cells = []
+    for i, h in enumerate(headers):
+        if align[i] == 'r':
+            header_cells.append(str(h).rjust(widths[i]))
+        elif align[i] == 'c':
+            header_cells.append(str(h).center(widths[i]))
+        else:
+            header_cells.append(str(h).ljust(widths[i]))
+    
+    # Build separator row
+    sep_cells = []
+    for i, w in enumerate(widths):
+        if align[i] == 'r':
+            sep_cells.append('-' * (w - 1) + ':')
+        elif align[i] == 'c':
+            sep_cells.append(':' + '-' * (w - 2) + ':')
+        else:
+            sep_cells.append('-' * w)
+    
+    # Build data rows
+    data_lines = []
+    for row in rows:
+        row_cells = []
+        for i, cell in enumerate(row):
+            if i < num_cols:
+                if align[i] == 'r':
+                    row_cells.append(str(cell).rjust(widths[i]))
+                elif align[i] == 'c':
+                    row_cells.append(str(cell).center(widths[i]))
+                else:
+                    row_cells.append(str(cell).ljust(widths[i]))
+        data_lines.append('|' + '|'.join(row_cells) + '|')
+    
+    return [
+        '|' + '|'.join(header_cells) + '|',
+        '|' + '|'.join(sep_cells) + '|',
+    ] + data_lines
+
+
 def load_registry():
     """Load the checkpoint registry."""
     if REGISTRY_PATH.exists():
@@ -404,41 +474,40 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     mh_recall = sum(b.get("recall_at_100", 0) * b.get("count", 0) for b in mh_buckets.values()) / mh_total if mh_total > 0 else 0
     mh_mrr = sum(b.get("mrr", 0) * b.get("count", 0) for b in mh_buckets.values()) / mh_total if mh_total > 0 else 0
     
-    lines.append("### By Question Type")
-    lines.append("")
-    lines.append("| Metric | Total | Single-Hop | Multi-Hop |")
-    lines.append("|--------|-------|------------|-----------|")
-    lines.append(f"| **Recall@100** | {metrics.get('recall_at_100', 0):.1%} | {sh_recall:.1%} | {mh_recall:.1%} |")
-    lines.append(f"| **MRR** | {metrics.get('mrr', 0):.3f} | {sh_mrr:.3f} | {mh_mrr:.3f} |")
-    lines.append("")
-    
-    # By difficulty
-    lines.append("### By Difficulty")
-    lines.append("")
-    lines.append("| Metric | Easy | Medium | Hard |")
-    lines.append("|--------|------|--------|------|")
-    
     # Calculate difficulty aggregates across both types
+    diff_metrics = {}
     for diff in ["easy", "medium", "hard"]:
         diff_count = (sh_buckets.get(diff, {}).get("count", 0) + mh_buckets.get(diff, {}).get("count", 0))
-        if diff == "easy":
-            easy_recall = (sh_buckets.get(diff, {}).get("recall_at_100", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                          mh_buckets.get(diff, {}).get("recall_at_100", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
-            easy_mrr = (sh_buckets.get(diff, {}).get("mrr", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                       mh_buckets.get(diff, {}).get("mrr", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
-        elif diff == "medium":
-            med_recall = (sh_buckets.get(diff, {}).get("recall_at_100", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                         mh_buckets.get(diff, {}).get("recall_at_100", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
-            med_mrr = (sh_buckets.get(diff, {}).get("mrr", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                      mh_buckets.get(diff, {}).get("mrr", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+        if diff_count > 0:
+            diff_metrics[diff] = {
+                "recall": (sh_buckets.get(diff, {}).get("recall_at_100", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                          mh_buckets.get(diff, {}).get("recall_at_100", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count,
+                "mrr": (sh_buckets.get(diff, {}).get("mrr", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                       mh_buckets.get(diff, {}).get("mrr", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count,
+            }
         else:
-            hard_recall = (sh_buckets.get(diff, {}).get("recall_at_100", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                          mh_buckets.get(diff, {}).get("recall_at_100", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
-            hard_mrr = (sh_buckets.get(diff, {}).get("mrr", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                       mh_buckets.get(diff, {}).get("mrr", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+            diff_metrics[diff] = {"recall": 0, "mrr": 0}
     
-    lines.append(f"| **Recall@100** | {easy_recall:.1%} | {med_recall:.1%} | {hard_recall:.1%} |")
-    lines.append(f"| **MRR** | {easy_mrr:.3f} | {med_mrr:.3f} | {hard_mrr:.3f} |")
+    lines.append("### By Question Type")
+    lines.append("")
+    lines.extend(make_table(
+        ["Metric", "Total", "Single-Hop", "Multi-Hop"],
+        [
+            ["**Recall@100**", f"{metrics.get('recall_at_100', 0):.1%}", f"{sh_recall:.1%}", f"{mh_recall:.1%}"],
+            ["**MRR**", f"{metrics.get('mrr', 0):.3f}", f"{sh_mrr:.3f}", f"{mh_mrr:.3f}"],
+        ]
+    ))
+    lines.append("")
+    
+    lines.append("### By Difficulty")
+    lines.append("")
+    lines.extend(make_table(
+        ["Metric", "Easy", "Medium", "Hard"],
+        [
+            ["**Recall@100**", f"{diff_metrics['easy']['recall']:.1%}", f"{diff_metrics['medium']['recall']:.1%}", f"{diff_metrics['hard']['recall']:.1%}"],
+            ["**MRR**", f"{diff_metrics['easy']['mrr']:.3f}", f"{diff_metrics['medium']['mrr']:.3f}", f"{diff_metrics['hard']['mrr']:.3f}"],
+        ]
+    ))
     lines.append("")
     
     # Quality Scores - with type and difficulty breakdowns
@@ -449,56 +518,75 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     sh_score = sum(b.get("overall_score_avg", 0) * b.get("count", 0) for b in sh_buckets.values()) / sh_total if sh_total > 0 else 0
     mh_score = sum(b.get("overall_score_avg", 0) * b.get("count", 0) for b in mh_buckets.values()) / mh_total if mh_total > 0 else 0
     
-    lines.append("### By Question Type")
-    lines.append("")
-    lines.append("| Metric | Total | Single-Hop | Multi-Hop |")
-    lines.append("|--------|-------|------------|-----------|")
-    lines.append(f"| **Overall Score** | {metrics.get('overall_score_avg', 0):.2f}/5 | {sh_score:.2f}/5 | {mh_score:.2f}/5 |")
-    
-    # Pass rates by type
-    sh_pass = breakdown_by_type.get("single_hop", {}).get("pass_rate", 0)
-    mh_pass = breakdown_by_type.get("multi_hop", {}).get("pass_rate", 0)
-    lines.append(f"| **Pass Rate** | {metrics.get('pass_rate', 0):.1%} | {sh_pass:.1%} | {mh_pass:.1%} |")
-    lines.append("")
-    
-    # By difficulty
-    lines.append("### By Difficulty")
-    lines.append("")
-    lines.append("| Metric | Easy | Medium | Hard |")
-    lines.append("|--------|------|--------|------|")
-    
     # Calculate difficulty aggregates for overall score
     for diff in ["easy", "medium", "hard"]:
         diff_count = (sh_buckets.get(diff, {}).get("count", 0) + mh_buckets.get(diff, {}).get("count", 0))
-        if diff == "easy":
-            easy_score = (sh_buckets.get(diff, {}).get("overall_score_avg", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                         mh_buckets.get(diff, {}).get("overall_score_avg", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
-        elif diff == "medium":
-            med_score = (sh_buckets.get(diff, {}).get("overall_score_avg", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                        mh_buckets.get(diff, {}).get("overall_score_avg", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+        if diff_count > 0:
+            diff_metrics[diff]["score"] = (sh_buckets.get(diff, {}).get("overall_score_avg", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                                           mh_buckets.get(diff, {}).get("overall_score_avg", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count
         else:
-            hard_score = (sh_buckets.get(diff, {}).get("overall_score_avg", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
-                         mh_buckets.get(diff, {}).get("overall_score_avg", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+            diff_metrics[diff]["score"] = 0
     
-    lines.append(f"| **Overall Score** | {easy_score:.2f}/5 | {med_score:.2f}/5 | {hard_score:.2f}/5 |")
-    
-    # Pass rates by difficulty
+    # Pass rates
+    sh_pass = breakdown_by_type.get("single_hop", {}).get("pass_rate", 0)
+    mh_pass = breakdown_by_type.get("multi_hop", {}).get("pass_rate", 0)
     easy_pass = breakdown_by_difficulty.get("easy", {}).get("pass_rate", 0)
     med_pass = breakdown_by_difficulty.get("medium", {}).get("pass_rate", 0)
     hard_pass = breakdown_by_difficulty.get("hard", {}).get("pass_rate", 0)
-    lines.append(f"| **Pass Rate** | {easy_pass:.1%} | {med_pass:.1%} | {hard_pass:.1%} |")
+    
+    lines.append("### By Question Type")
+    lines.append("")
+    lines.extend(make_table(
+        ["Metric", "Total", "Single-Hop", "Multi-Hop"],
+        [
+            ["**Overall Score**", f"{metrics.get('overall_score_avg', 0):.2f}/5", f"{sh_score:.2f}/5", f"{mh_score:.2f}/5"],
+            ["**Pass Rate**", f"{metrics.get('pass_rate', 0):.1%}", f"{sh_pass:.1%}", f"{mh_pass:.1%}"],
+        ]
+    ))
     lines.append("")
     
-    # Detailed dimension scores (total only)
-    lines.append("### Score Dimensions (Total)")
+    lines.append("### By Difficulty")
     lines.append("")
-    lines.append("| Dimension | Average |")
-    lines.append("|-----------|---------|")
-    lines.append(f"| **Correctness** | {metrics.get('correctness_avg', 0):.2f}/5 |")
-    lines.append(f"| **Completeness** | {metrics.get('completeness_avg', 0):.2f}/5 |")
-    lines.append(f"| **Faithfulness** | {metrics.get('faithfulness_avg', 0):.2f}/5 |")
-    lines.append(f"| **Relevance** | {metrics.get('relevance_avg', 0):.2f}/5 |")
-    lines.append(f"| **Clarity** | {metrics.get('clarity_avg', 0):.2f}/5 |")
+    lines.extend(make_table(
+        ["Metric", "Easy", "Medium", "Hard"],
+        [
+            ["**Overall Score**", f"{diff_metrics['easy']['score']:.2f}/5", f"{diff_metrics['medium']['score']:.2f}/5", f"{diff_metrics['hard']['score']:.2f}/5"],
+            ["**Pass Rate**", f"{easy_pass:.1%}", f"{med_pass:.1%}", f"{hard_pass:.1%}"],
+        ]
+    ))
+    lines.append("")
+    
+    # Score Dimensions with all breakdowns
+    lines.append("### Score Dimensions")
+    lines.append("")
+    lines.append("#### By Difficulty")
+    lines.append("")
+    lines.extend(make_table(
+        ["Dimension", "Total", "Easy", "Medium", "Hard"],
+        [
+            ["**Correctness**", f"{metrics.get('correctness_avg', 0):.2f}/5", "-", "-", "-"],
+            ["**Completeness**", f"{metrics.get('completeness_avg', 0):.2f}/5", "-", "-", "-"],
+            ["**Faithfulness**", f"{metrics.get('faithfulness_avg', 0):.2f}/5", "-", "-", "-"],
+            ["**Relevance**", f"{metrics.get('relevance_avg', 0):.2f}/5", "-", "-", "-"],
+            ["**Clarity**", f"{metrics.get('clarity_avg', 0):.2f}/5", "-", "-", "-"],
+            ["**Overall**", f"{metrics.get('overall_score_avg', 0):.2f}/5", f"{diff_metrics['easy']['score']:.2f}/5", f"{diff_metrics['medium']['score']:.2f}/5", f"{diff_metrics['hard']['score']:.2f}/5"],
+        ]
+    ))
+    lines.append("")
+    
+    lines.append("#### By Question Type")
+    lines.append("")
+    lines.extend(make_table(
+        ["Dimension", "Total", "Single-Hop", "Multi-Hop"],
+        [
+            ["**Correctness**", f"{metrics.get('correctness_avg', 0):.2f}/5", "-", "-"],
+            ["**Completeness**", f"{metrics.get('completeness_avg', 0):.2f}/5", "-", "-"],
+            ["**Faithfulness**", f"{metrics.get('faithfulness_avg', 0):.2f}/5", "-", "-"],
+            ["**Relevance**", f"{metrics.get('relevance_avg', 0):.2f}/5", "-", "-"],
+            ["**Clarity**", f"{metrics.get('clarity_avg', 0):.2f}/5", "-", "-"],
+            ["**Overall**", f"{metrics.get('overall_score_avg', 0):.2f}/5", f"{sh_score:.2f}/5", f"{mh_score:.2f}/5"],
+        ]
+    ))
     lines.append("")
     
     # Latency Analysis
@@ -507,24 +595,23 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     by_phase = latency.get("by_phase", {})
     total_avg = latency.get("total_avg_s", 0)
     
-    lines.append("| Phase | Avg Time | % of Total |")
-    lines.append("|-------|----------|------------|")
-    
     retrieval = by_phase.get("retrieval_avg_s", 0)
     rerank = by_phase.get("rerank_avg_s", 0)
     generation = by_phase.get("generation_avg_s", 0)
     judge = by_phase.get("judge_avg_s", 0)
     
     if total_avg > 0:
-        lines.append(f"| **Retrieval** | {retrieval:.2f}s | {retrieval/total_avg*100:.1f}% |")
-        lines.append(f"| **Reranking** | {rerank:.2f}s | {rerank/total_avg*100:.1f}% |")
-        lines.append(f"| **Generation** | {generation:.2f}s | {generation/total_avg*100:.1f}% |")
-        lines.append(f"| **Judge** | {judge:.2f}s | {judge/total_avg*100:.1f}% |")
-        lines.append(f"| **Total** | {total_avg:.2f}s | 100% |")
+        latency_rows = [
+            ["**Retrieval**", f"{retrieval:.2f}s", f"{retrieval/total_avg*100:.1f}%"],
+            ["**Reranking**", f"{rerank:.2f}s", f"{rerank/total_avg*100:.1f}%"],
+            ["**Generation**", f"{generation:.2f}s", f"{generation/total_avg*100:.1f}%"],
+            ["**Judge**", f"{judge:.2f}s", f"{judge/total_avg*100:.1f}%"],
+            ["**Total**", f"{total_avg:.2f}s", "100%"],
+        ]
+        lines.extend(make_table(["Phase", "Avg Time", "% of Total"], latency_rows))
     lines.append("")
     
-    lines.append(f"**Min Latency:** {latency.get('total_min_s', 0):.2f}s")
-    lines.append(f"**Max Latency:** {latency.get('total_max_s', 0):.2f}s")
+    lines.append(f"**Min Latency:** {latency.get('total_min_s', 0):.2f}s  |  **Max Latency:** {latency.get('total_max_s', 0):.2f}s")
     lines.append("")
     
     # Token & Cost Analysis
@@ -534,63 +621,69 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     
     lines.append("### Token Breakdown")
     lines.append("")
-    lines.append("| Token Type | Total | Per Question |")
-    lines.append("|------------|-------|--------------|")
-    lines.append(f"| **Prompt (Input)** | {tokens.get('prompt_total', 0):,} | {tokens.get('prompt_total', 0)/total_q:,.0f} |")
-    lines.append(f"| **Completion (Output)** | {tokens.get('completion_total', 0):,} | {tokens.get('completion_total', 0)/total_q:,.0f} |")
-    lines.append(f"| **Thinking** | {tokens.get('thinking_total', 0):,} | {tokens.get('thinking_total', 0)/total_q:,.0f} |")
-    lines.append(f"| **Cached** | {tokens.get('cached_total', 0):,} | {tokens.get('cached_total', 0)/total_q:,.0f} |")
-    lines.append(f"| **Total** | {tokens.get('total', 0):,} | {tokens.get('total', 0)/total_q:,.0f} |")
+    lines.extend(make_table(
+        ["Token Type", "Total", "Per Question"],
+        [
+            ["**Prompt (Input)**", f"{tokens.get('prompt_total', 0):,}", f"{tokens.get('prompt_total', 0)/total_q:,.0f}"],
+            ["**Completion (Output)**", f"{tokens.get('completion_total', 0):,}", f"{tokens.get('completion_total', 0)/total_q:,.0f}"],
+            ["**Thinking**", f"{tokens.get('thinking_total', 0):,}", f"{tokens.get('thinking_total', 0)/total_q:,.0f}"],
+            ["**Cached**", f"{tokens.get('cached_total', 0):,}", f"{tokens.get('cached_total', 0)/total_q:,.0f}"],
+            ["**Total**", f"{tokens.get('total', 0):,}", f"{tokens.get('total', 0)/total_q:,.0f}"],
+        ]
+    ))
     lines.append("")
     
     lines.append("### Cost Estimate (Gemini 3 Flash)")
     lines.append("")
-    lines.append("| Component | Cost |")
-    lines.append("|-----------|------|")
-    lines.append(f"| **Input** | ${cost['input_cost']:.4f} |")
-    lines.append(f"| **Output** | ${cost['output_cost']:.4f} |")
-    lines.append(f"| **Thinking** | ${cost['thinking_cost']:.4f} |")
-    lines.append(f"| **Cached Savings** | -${cost['cached_savings']:.4f} |")
-    lines.append(f"| **Total** | **${cost['total_cost']:.4f}** |")
-    lines.append(f"| **Per Question** | ${cost['total_cost']/total_q:.6f} |")
-    lines.append(f"| **Per 1,000 Questions** | ${cost['total_cost']/total_q*1000:.2f} |")
+    lines.extend(make_table(
+        ["Component", "Cost"],
+        [
+            ["**Input**", f"${cost['input_cost']:.4f}"],
+            ["**Output**", f"${cost['output_cost']:.4f}"],
+            ["**Thinking**", f"${cost['thinking_cost']:.4f}"],
+            ["**Cached Savings**", f"-${cost['cached_savings']:.4f}"],
+            ["**Total**", f"**${cost['total_cost']:.4f}**"],
+            ["**Per Question**", f"${cost['total_cost']/total_q:.6f}"],
+            ["**Per 1,000 Questions**", f"${cost['total_cost']/total_q*1000:.2f}"],
+        ]
+    ))
     lines.append("")
     
     # Breakdown by Type (from JSON breakdown_by_type)
     lines.append("## Breakdown by Question Type")
     lines.append("")
-    lines.append("| Type | Total | Pass | Partial | Fail | Pass Rate |")
-    lines.append("|------|-------|------|---------|------|-----------|")
+    type_rows = []
     for qtype in ["single_hop", "multi_hop"]:
         if qtype in breakdown_by_type:
             counts = breakdown_by_type[qtype]
             rate = counts.get("pass_rate", 0) * 100
-            lines.append(f"| **{qtype.replace('_', '-').title()}** | {counts.get('total', 0)} | {counts.get('pass', 0)} | {counts.get('partial', 0)} | {counts.get('fail', 0)} | {rate:.1f}% |")
+            type_rows.append([f"**{qtype.replace('_', '-').title()}**", str(counts.get('total', 0)), str(counts.get('pass', 0)), str(counts.get('partial', 0)), str(counts.get('fail', 0)), f"{rate:.1f}%"])
+    lines.extend(make_table(["Type", "Total", "Pass", "Partial", "Fail", "Pass Rate"], type_rows))
     lines.append("")
     
     # Breakdown by Difficulty (from JSON breakdown_by_difficulty)
     lines.append("## Breakdown by Difficulty")
     lines.append("")
-    lines.append("| Difficulty | Total | Pass | Partial | Fail | Pass Rate |")
-    lines.append("|------------|-------|------|---------|------|-----------|")
+    diff_rows = []
     for diff in ["easy", "medium", "hard"]:
         if diff in breakdown_by_difficulty:
             counts = breakdown_by_difficulty[diff]
             rate = counts.get("pass_rate", 0) * 100
-            lines.append(f"| **{diff.title()}** | {counts.get('total', 0)} | {counts.get('pass', 0)} | {counts.get('partial', 0)} | {counts.get('fail', 0)} | {rate:.1f}% |")
+            diff_rows.append([f"**{diff.title()}**", str(counts.get('total', 0)), str(counts.get('pass', 0)), str(counts.get('partial', 0)), str(counts.get('fail', 0)), f"{rate:.1f}%"])
+    lines.extend(make_table(["Difficulty", "Total", "Pass", "Partial", "Fail", "Pass Rate"], diff_rows))
     lines.append("")
     
     # Cross-breakdown: Type x Difficulty (quality_by_bucket)
     lines.append("## Breakdown by Type × Difficulty")
     lines.append("")
-    lines.append("| Type | Difficulty | Count | Pass Rate | MRR | Overall Score |")
-    lines.append("|------|------------|-------|-----------|-----|---------------|")
+    cross_rows = []
     for qtype in ["single_hop", "multi_hop"]:
         if qtype in quality_by_bucket:
             for diff in ["easy", "medium", "hard"]:
                 if diff in quality_by_bucket[qtype]:
                     bucket = quality_by_bucket[qtype][diff]
-                    lines.append(f"| **{qtype.replace('_', '-').title()}** | {diff.title()} | {bucket.get('count', 0)} | {bucket.get('pass_rate', 0):.1%} | {bucket.get('mrr', 0):.3f} | {bucket.get('overall_score_avg', 0):.2f}/5 |")
+                    cross_rows.append([f"**{qtype.replace('_', '-').title()}**", diff.title(), str(bucket.get('count', 0)), f"{bucket.get('pass_rate', 0):.1%}", f"{bucket.get('mrr', 0):.3f}", f"{bucket.get('overall_score_avg', 0):.2f}/5"])
+    lines.extend(make_table(["Type", "Difficulty", "Count", "Pass Rate", "MRR", "Overall Score"], cross_rows))
     lines.append("")
     
     # Failures
@@ -599,42 +692,48 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
         lines.append("")
         lines.append(f"**Total Failures:** {len(failures)}")
         lines.append("")
-        lines.append("| Question ID | Type | Difficulty | Overall Score |")
-        lines.append("|-------------|------|------------|---------------|")
-        for f in failures[:20]:  # Limit to 20
-            lines.append(f"| {f['id']} | {f['type']} | {f['difficulty']} | {f['overall_score']}/5 |")
+        failure_rows = []
+        for f in failures[:20]:
+            failure_rows.append([f['id'], f['type'], f['difficulty'], f"{f['overall_score']}/5"])
         if len(failures) > 20:
-            lines.append(f"| ... | ... | ... | ({len(failures) - 20} more) |")
+            failure_rows.append(["...", "...", "...", f"({len(failures) - 20} more)"])
+        lines.extend(make_table(["Question ID", "Type", "Difficulty", "Overall Score"], failure_rows))
         lines.append("")
     
     # Execution & Throttling
     lines.append("## Execution & Throttling")
     lines.append("")
-    lines.append("| Metric | Value |")
-    lines.append("|--------|-------|")
-    lines.append(f"| **Run Duration** | {execution.get('run_duration_seconds', 0):.1f}s |")
-    lines.append(f"| **Questions/Second** | {execution.get('questions_per_second', 0):.2f} |")
-    lines.append(f"| **Max Workers** | {config.get('workers', 1)} |")
-    lines.append(f"| **Effective Workers** | {rate_limiter.get('max_concurrent', 'N/A')} |")
-    lines.append(f"| **Total Requests** | {rate_limiter.get('total_requests', 0)} |")
-    lines.append(f"| **Total Throttles** | {rate_limiter.get('total_throttles', 0)} |")
-    lines.append(f"| **RPM Utilization** | {rate_limiter.get('rpm_utilization', 0):.2%} |")
-    lines.append(f"| **TPM Utilization** | {rate_limiter.get('tpm_utilization', 0):.2%} |")
+    lines.extend(make_table(
+        ["Metric", "Value"],
+        [
+            ["**Run Duration**", f"{execution.get('run_duration_seconds', 0):.1f}s"],
+            ["**Questions/Second**", f"{execution.get('questions_per_second', 0):.2f}"],
+            ["**Max Workers**", str(config.get('workers', 1))],
+            ["**Effective Workers**", str(rate_limiter.get('max_concurrent', 'N/A'))],
+            ["**Total Requests**", str(rate_limiter.get('total_requests', 0))],
+            ["**Total Throttles**", str(rate_limiter.get('total_throttles', 0))],
+            ["**RPM Utilization**", f"{rate_limiter.get('rpm_utilization', 0):.2%}"],
+            ["**TPM Utilization**", f"{rate_limiter.get('tpm_utilization', 0):.2%}"],
+        ]
+    ))
     lines.append("")
     
     # Index & Orchestrator Info
     lines.append("## Index & Orchestrator")
     lines.append("")
-    lines.append("| Field | Value |")
-    lines.append("|-------|-------|")
-    lines.append(f"| **Index/Job ID** | {index_info.get('job_id', 'unknown')} |")
-    lines.append(f"| **Mode** | {index_info.get('mode', 'unknown')} |")
-    lines.append(f"| **Endpoint** | {index_info.get('endpoint', 'N/A')} |")
+    orch_rows = [
+        ["**Index/Job ID**", index_info.get('job_id', 'unknown')],
+        ["**Mode**", index_info.get('mode', 'unknown')],
+        ["**Endpoint**", index_info.get('endpoint', 'N/A')],
+    ]
     if orchestrator:
-        lines.append(f"| **Service** | {orchestrator.get('service', 'unknown')} |")
-        lines.append(f"| **Project ID** | {orchestrator.get('project_id', 'unknown')} |")
-        lines.append(f"| **Environment** | {orchestrator.get('environment', 'unknown')} |")
-        lines.append(f"| **Region** | {orchestrator.get('region', 'unknown')} |")
+        orch_rows.extend([
+            ["**Service**", orchestrator.get('service', 'unknown')],
+            ["**Project ID**", orchestrator.get('project_id', 'unknown')],
+            ["**Environment**", orchestrator.get('environment', 'unknown')],
+            ["**Region**", orchestrator.get('region', 'unknown')],
+        ])
+    lines.extend(make_table(["Field", "Value"], orch_rows))
     lines.append("")
     
     # Footer
