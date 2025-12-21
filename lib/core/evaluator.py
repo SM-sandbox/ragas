@@ -214,6 +214,59 @@ class GoldEvaluator:
         self.checkpoint_file = None
         self.results_file = None
     
+    def _update_registry(self, output: dict) -> None:
+        """Auto-update the checkpoint registry after each run."""
+        try:
+            registry_path = self.run_dir.parent / "registry.json"
+            if not registry_path.exists():
+                print(f"  Registry not found at {registry_path}, skipping auto-update")
+                return
+            
+            with open(registry_path) as f:
+                registry = json.load(f)
+            
+            # Extract run ID from folder name
+            run_id = self.run_dir.name.split("__")[0]
+            
+            # Check if already in registry
+            existing_ids = {e["id"] for e in registry["entries"]}
+            if run_id in existing_ids:
+                print(f"  {run_id} already in registry, skipping")
+                return
+            
+            # Build registry entry from output
+            metrics = output.get("metrics", {})
+            config = output.get("config", {})
+            index = output.get("index", {})
+            timestamp = output.get("timestamp", "")
+            
+            entry = {
+                "id": run_id,
+                "date": timestamp.split("T")[0] if timestamp else "unknown",
+                "mode": index.get("mode", "unknown"),
+                "config_summary": f"p{config.get('precision_k', 25)}-3-flash-{config.get('generator_reasoning_effort', 'low')}",
+                "model": config.get("generator_model", "unknown"),
+                "precision_k": config.get("precision_k", 25),
+                "questions": metrics.get("total", 0),
+                "pass_rate": round(metrics.get("pass_rate", 0), 3),
+                "fail_rate": round(metrics.get("fail_rate", 0), 3),
+                "acceptable_rate": round(metrics.get("acceptable_rate", 0), 3),
+                "folder": self.run_dir.name,
+                "notes": "Auto-registered"
+            }
+            
+            # Add and sort
+            registry["entries"].append(entry)
+            registry["entries"].sort(key=lambda x: int(x["id"][1:]))
+            
+            with open(registry_path, "w") as f:
+                json.dump(registry, f, indent=2)
+            
+            print(f"  Registry updated: {run_id} added")
+            
+        except Exception as e:
+            print(f"  Warning: Failed to update registry: {e}")
+    
     def _create_run_directory(self, num_questions: int) -> Path:
         """
         Create a unique run directory for this evaluation.
@@ -1157,6 +1210,9 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
         
         with open(self.results_file, 'w') as f:
             json.dump(output, f, indent=2)
+        
+        # Auto-update registry
+        self._update_registry(output)
         
         # Print summary
         print(f"\n{'='*60}")
