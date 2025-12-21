@@ -386,17 +386,111 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     lines.append(f"| **Seed** | {config.get('judge_seed', 'N/A')} |")
     lines.append("")
     
-    # Retrieval Metrics
+    # Retrieval Metrics - with type and difficulty breakdowns
     lines.append("## Retrieval Metrics")
     lines.append("")
-    lines.append("| Metric | Value |")
-    lines.append("|--------|-------|")
-    lines.append(f"| **Recall@100** | {metrics.get('recall_at_100', 0):.1%} |")
-    lines.append(f"| **MRR** | {metrics.get('mrr', 0):.3f} |")
+    
+    # Calculate aggregates by type
+    sh_buckets = quality_by_bucket.get("single_hop", {})
+    mh_buckets = quality_by_bucket.get("multi_hop", {})
+    
+    # Single-hop aggregates (weighted by count)
+    sh_total = sum(b.get("count", 0) for b in sh_buckets.values())
+    sh_recall = sum(b.get("recall_at_100", 0) * b.get("count", 0) for b in sh_buckets.values()) / sh_total if sh_total > 0 else 0
+    sh_mrr = sum(b.get("mrr", 0) * b.get("count", 0) for b in sh_buckets.values()) / sh_total if sh_total > 0 else 0
+    
+    # Multi-hop aggregates
+    mh_total = sum(b.get("count", 0) for b in mh_buckets.values())
+    mh_recall = sum(b.get("recall_at_100", 0) * b.get("count", 0) for b in mh_buckets.values()) / mh_total if mh_total > 0 else 0
+    mh_mrr = sum(b.get("mrr", 0) * b.get("count", 0) for b in mh_buckets.values()) / mh_total if mh_total > 0 else 0
+    
+    lines.append("### By Question Type")
+    lines.append("")
+    lines.append("| Metric | Total | Single-Hop | Multi-Hop |")
+    lines.append("|--------|-------|------------|-----------|")
+    lines.append(f"| **Recall@100** | {metrics.get('recall_at_100', 0):.1%} | {sh_recall:.1%} | {mh_recall:.1%} |")
+    lines.append(f"| **MRR** | {metrics.get('mrr', 0):.3f} | {sh_mrr:.3f} | {mh_mrr:.3f} |")
     lines.append("")
     
-    # Quality Scores
+    # By difficulty
+    lines.append("### By Difficulty")
+    lines.append("")
+    lines.append("| Metric | Easy | Medium | Hard |")
+    lines.append("|--------|------|--------|------|")
+    
+    # Calculate difficulty aggregates across both types
+    for diff in ["easy", "medium", "hard"]:
+        diff_count = (sh_buckets.get(diff, {}).get("count", 0) + mh_buckets.get(diff, {}).get("count", 0))
+        if diff == "easy":
+            easy_recall = (sh_buckets.get(diff, {}).get("recall_at_100", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                          mh_buckets.get(diff, {}).get("recall_at_100", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+            easy_mrr = (sh_buckets.get(diff, {}).get("mrr", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                       mh_buckets.get(diff, {}).get("mrr", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+        elif diff == "medium":
+            med_recall = (sh_buckets.get(diff, {}).get("recall_at_100", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                         mh_buckets.get(diff, {}).get("recall_at_100", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+            med_mrr = (sh_buckets.get(diff, {}).get("mrr", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                      mh_buckets.get(diff, {}).get("mrr", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+        else:
+            hard_recall = (sh_buckets.get(diff, {}).get("recall_at_100", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                          mh_buckets.get(diff, {}).get("recall_at_100", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+            hard_mrr = (sh_buckets.get(diff, {}).get("mrr", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                       mh_buckets.get(diff, {}).get("mrr", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+    
+    lines.append(f"| **Recall@100** | {easy_recall:.1%} | {med_recall:.1%} | {hard_recall:.1%} |")
+    lines.append(f"| **MRR** | {easy_mrr:.3f} | {med_mrr:.3f} | {hard_mrr:.3f} |")
+    lines.append("")
+    
+    # Quality Scores - with type and difficulty breakdowns
     lines.append("## Quality Scores")
+    lines.append("")
+    
+    # Calculate overall score aggregates by type
+    sh_score = sum(b.get("overall_score_avg", 0) * b.get("count", 0) for b in sh_buckets.values()) / sh_total if sh_total > 0 else 0
+    mh_score = sum(b.get("overall_score_avg", 0) * b.get("count", 0) for b in mh_buckets.values()) / mh_total if mh_total > 0 else 0
+    
+    lines.append("### By Question Type")
+    lines.append("")
+    lines.append("| Metric | Total | Single-Hop | Multi-Hop |")
+    lines.append("|--------|-------|------------|-----------|")
+    lines.append(f"| **Overall Score** | {metrics.get('overall_score_avg', 0):.2f}/5 | {sh_score:.2f}/5 | {mh_score:.2f}/5 |")
+    
+    # Pass rates by type
+    sh_pass = breakdown_by_type.get("single_hop", {}).get("pass_rate", 0)
+    mh_pass = breakdown_by_type.get("multi_hop", {}).get("pass_rate", 0)
+    lines.append(f"| **Pass Rate** | {metrics.get('pass_rate', 0):.1%} | {sh_pass:.1%} | {mh_pass:.1%} |")
+    lines.append("")
+    
+    # By difficulty
+    lines.append("### By Difficulty")
+    lines.append("")
+    lines.append("| Metric | Easy | Medium | Hard |")
+    lines.append("|--------|------|--------|------|")
+    
+    # Calculate difficulty aggregates for overall score
+    for diff in ["easy", "medium", "hard"]:
+        diff_count = (sh_buckets.get(diff, {}).get("count", 0) + mh_buckets.get(diff, {}).get("count", 0))
+        if diff == "easy":
+            easy_score = (sh_buckets.get(diff, {}).get("overall_score_avg", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                         mh_buckets.get(diff, {}).get("overall_score_avg", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+        elif diff == "medium":
+            med_score = (sh_buckets.get(diff, {}).get("overall_score_avg", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                        mh_buckets.get(diff, {}).get("overall_score_avg", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+        else:
+            hard_score = (sh_buckets.get(diff, {}).get("overall_score_avg", 0) * sh_buckets.get(diff, {}).get("count", 0) + 
+                         mh_buckets.get(diff, {}).get("overall_score_avg", 0) * mh_buckets.get(diff, {}).get("count", 0)) / diff_count if diff_count > 0 else 0
+    
+    lines.append(f"| **Overall Score** | {easy_score:.2f}/5 | {med_score:.2f}/5 | {hard_score:.2f}/5 |")
+    
+    # Pass rates by difficulty
+    easy_pass = breakdown_by_difficulty.get("easy", {}).get("pass_rate", 0)
+    med_pass = breakdown_by_difficulty.get("medium", {}).get("pass_rate", 0)
+    hard_pass = breakdown_by_difficulty.get("hard", {}).get("pass_rate", 0)
+    lines.append(f"| **Pass Rate** | {easy_pass:.1%} | {med_pass:.1%} | {hard_pass:.1%} |")
+    lines.append("")
+    
+    # Detailed dimension scores (total only)
+    lines.append("### Score Dimensions (Total)")
     lines.append("")
     lines.append("| Dimension | Average |")
     lines.append("|-----------|---------|")
@@ -405,7 +499,6 @@ def generate_report(results_path: Path, output_path: Path = None, baseline_data:
     lines.append(f"| **Faithfulness** | {metrics.get('faithfulness_avg', 0):.2f}/5 |")
     lines.append(f"| **Relevance** | {metrics.get('relevance_avg', 0):.2f}/5 |")
     lines.append(f"| **Clarity** | {metrics.get('clarity_avg', 0):.2f}/5 |")
-    lines.append(f"| **Overall** | {metrics.get('overall_score_avg', 0):.2f}/5 |")
     lines.append("")
     
     # Latency Analysis

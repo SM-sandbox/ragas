@@ -1,6 +1,6 @@
 # Checkpoint Report: C015
 
-**Generated:** 2025-12-21 11:41:19
+**Generated:** 2025-12-21 11:53:41
 **Results File:** `results.json`
 
 ## Executive Summary
@@ -91,12 +91,37 @@
 
 ## Retrieval Metrics
 
-| Metric | Value |
-|--------|-------|
-| **Recall@100** | 99.1% |
-| **MRR** | 0.738 |
+### By Question Type
+
+| Metric | Total | Single-Hop | Multi-Hop |
+|--------|-------|------------|-----------|
+| **Recall@100** | 99.1% | 100.0% | 98.3% |
+| **MRR** | 0.738 | 1.000 | 0.492 |
+
+### By Difficulty
+
+| Metric | Easy | Medium | Hard |
+|--------|------|--------|------|
+| **Recall@100** | 100.0% | 98.8% | 98.5% |
+| **MRR** | 0.752 | 0.783 | 0.669 |
 
 ## Quality Scores
+
+### By Question Type
+
+| Metric | Total | Single-Hop | Multi-Hop |
+|--------|-------|------------|-----------|
+| **Overall Score** | 4.82/5 | 4.86/5 | 4.79/5 |
+| **Pass Rate** | 92.8% | 93.7% | 91.9% |
+
+### By Difficulty
+
+| Metric | Easy | Medium | Hard |
+|--------|------|--------|------|
+| **Overall Score** | 4.80/5 | 4.84/5 | 4.83/5 |
+| **Pass Rate** | 91.9% | 93.2% | 93.4% |
+
+### Score Dimensions (Total)
 
 | Dimension | Average |
 |-----------|---------|
@@ -105,7 +130,6 @@
 | **Faithfulness** | 4.90/5 |
 | **Relevance** | 4.98/5 |
 | **Clarity** | 4.99/5 |
-| **Overall** | 4.82/5 |
 
 ## Latency Analysis
 
@@ -197,6 +221,6 @@
 
 ---
 
-*Report generated: 2025-12-21 11:41:19*
+*Report generated: 2025-12-21 11:53:41*
 *Checkpoint: C015*
 *Judge Model: gemini-3-flash-preview*
