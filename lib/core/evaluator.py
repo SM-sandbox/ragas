@@ -50,6 +50,10 @@ from lib.core.pricing import get_model_pricing, calculate_token_cost
 # from lib.core.rate_limiter import SmartRateLimiter, get_limiter_for_model
 # New Smart Throttler from stem-pipeline integration
 from lib.core.smart_throttler.rate_limiter import SmartRateLimiter, get_limiter_for_model
+from lib.core.auth_manager import (
+    get_auth_manager, refresh_adc_credentials, check_auth_valid,
+    should_refresh_token, is_auth_error, AuthError
+)
 
 # Config
 JOB_ID = "bfai__eval66a_g1_1536_tt"
@@ -161,6 +165,12 @@ class GoldEvaluator:
         
         self.lock = Lock()  # Thread-safe checkpoint access
         self.run_start_time = None
+        
+        # Auth management for long-running jobs
+        self._auth_manager = get_auth_manager()
+        self._last_token_refresh = 0
+        self._fallback_count = 0
+        self._fallback_threshold = 0.05  # Abort if >5% questions use fallback
         
         # Log config being used
         print(f"Config: {config_type}")
@@ -638,11 +648,18 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                 # Always release the semaphore after the API call
                 self.rate_limiter.release()
         except Exception as e:
-            # Return partial scores on failure
+            # Check if this is an auth error - raise instead of fallback
+            if is_auth_error(e):
+                raise AuthError(f"Authentication failed during judge call: {e}")
+            
+            # For non-auth errors, track fallback and return partial scores
+            with self.lock:
+                self._fallback_count += 1
+            
             return {
                 "judgment": {"correctness": 3, "completeness": 3, "faithfulness": 3, "relevance": 3, "clarity": 3, "overall_score": 3, "verdict": "partial", "parse_error": str(e)},
                 "tokens": {"prompt": 0, "completion": 0, "thinking": 0, "total": 0, "cached": 0},
-                "metadata": {},
+                "metadata": {"fallback": True},
             }
     
     def run_single_attempt(self, q: dict) -> dict:
@@ -950,10 +967,49 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             return "judge"
         return "unknown"
     
+    def _check_fallback_threshold(self, total_processed: int) -> None:
+        """Check if fallback rate exceeds threshold and abort if so."""
+        if total_processed < 10:
+            return  # Don't check until we have enough samples
+        
+        fallback_rate = self._fallback_count / total_processed
+        if fallback_rate > self._fallback_threshold:
+            raise AuthError(
+                f"Aborting: Fallback rate ({fallback_rate:.1%}) exceeds threshold ({self._fallback_threshold:.1%}). "
+                f"{self._fallback_count} of {total_processed} questions used fallback scores. "
+                "This indicates systematic failures - check auth and API status."
+            )
+    
+    def _maybe_refresh_token(self) -> None:
+        """Refresh ADC token if needed (every 45 minutes)."""
+        if should_refresh_token():
+            try:
+                refresh_adc_credentials()
+                self._last_token_refresh = time.time()
+                print("  >> ADC token refreshed")
+            except Exception as e:
+                print(f"  >> WARNING: Token refresh failed: {e}")
+    
     def run(self, questions: list):
         """Run evaluation with checkpointing and optional parallelism."""
         self.run_start_time = time.time()
         num_questions = len(questions)
+        
+        # PRE-FLIGHT: Validate auth before starting
+        print("\n" + "="*60)
+        print("PRE-FLIGHT AUTH CHECK")
+        print("="*60)
+        try:
+            check_auth_valid()
+            self._last_token_refresh = time.time()
+            print("✓ ADC credentials validated and refreshed")
+        except AuthError as e:
+            print(f"✗ Auth check failed: {e}")
+            print("\nRun: gcloud auth application-default login")
+            raise
+        
+        # Reset fallback counter
+        self._fallback_count = 0
         
         # Create unique run directory for this evaluation
         self.run_dir = self._create_run_directory(num_questions)
@@ -993,16 +1049,29 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             for i, q in enumerate(pending):
                 qid = q.get("question_id", f"q_{processed + i}")
                 try:
+                    # Mid-run token refresh check
+                    self._maybe_refresh_token()
+                    
                     result = self.run_single(q)
                     results.append(result)
                     completed[qid] = result
                     verdict = result.get("judgment", {}).get("verdict", "?")
                     print(f"[{processed + i + 1}/{len(questions)}] {qid}: {verdict} ({result['time']:.1f}s)")
                     
+                    # Check fallback threshold
+                    self._check_fallback_threshold(processed + i + 1)
+                    
                     if (processed + i + 1) % CHECKPOINT_INTERVAL == 0:
                         with open(self.checkpoint_file, 'w') as f:
                             json.dump(list(completed.values()), f, indent=2)
                         print(f"  >> Checkpoint saved ({len(completed)} questions)")
+                except AuthError as e:
+                    # Auth errors are fatal - abort the run
+                    print(f"\n{'='*60}")
+                    print(f"FATAL: Authentication error - aborting run")
+                    print(f"Error: {e}")
+                    print(f"{'='*60}\n")
+                    raise
                 except Exception as e:
                     print(f"[{processed + i + 1}/{len(questions)}] {qid}: ERROR - {e}")
                     results.append({"question_id": qid, "error": str(e)})
@@ -1024,10 +1093,26 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                             verdict = result.get("judgment", {}).get("verdict", "?")
                             print(f"[{processed}/{len(questions)}] {qid}: {verdict} ({result['time']:.1f}s)")
                             
+                            # Mid-run token refresh (thread-safe via auth_manager)
+                            self._maybe_refresh_token()
+                            
+                            # Check fallback threshold
+                            self._check_fallback_threshold(processed)
+                            
                             if processed % CHECKPOINT_INTERVAL == 0:
                                 with open(self.checkpoint_file, 'w') as f:
                                     json.dump(list(completed.values()), f, indent=2)
                                 print(f"  >> Checkpoint saved ({len(completed)} questions)")
+                    except AuthError as e:
+                        # Auth errors are fatal - abort the run
+                        print(f"\n{'='*60}")
+                        print(f"FATAL: Authentication error - aborting run")
+                        print(f"Error: {e}")
+                        print(f"{'='*60}\n")
+                        # Cancel remaining futures
+                        for f in futures:
+                            f.cancel()
+                        raise
                     except Exception as e:
                         print(f"[?/{len(questions)}] {qid}: ERROR - {e}")
                         with self.lock:
