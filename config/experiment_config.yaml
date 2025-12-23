@@ -21,17 +21,19 @@ index:
   job_id: "bfai__eval66a_g1_1536_tt"
 
 # Generator model (experiment with different models)
+# Note: gemini-3-flash-preview is available on Vertex AI global endpoint + AI Studio
 generator:
   model: "gemini-3-flash-preview"
-  reasoning_effort: "low"  # low | high (no medium in Gemini 3)
+  reasoning_effort: "low"  # low | high
   temperature: 0.0
   seed: 42  # Default seed (can be overridden for experiments)
   max_output_tokens: 8192
 
 # Judge model
+# Note: gemini-3-flash-preview is available on Vertex AI global endpoint + AI Studio
 judge:
   model: "gemini-3-flash-preview"
-  reasoning_effort: "low"  # low | high (no medium in Gemini 3)
+  reasoning_effort: "low"  # low | high
   temperature: 0.0
   seed: 42  # Default seed (can be overridden for experiments)
 

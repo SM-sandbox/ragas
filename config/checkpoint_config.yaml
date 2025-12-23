@@ -21,20 +21,22 @@ corpus:
 
 # Index (fixed)
 index:
-  job_id: "bfai__eval66a_g1_1536_tt"
+  job_id: "bfai__eval66b_g1536tt"
 
 # Generator model (fixed)
+# Note: gemini-3-flash-preview is available on Vertex AI global endpoint + AI Studio
 generator:
   model: "gemini-3-flash-preview"
-  reasoning_effort: "low"  # low | high (no medium in Gemini 3)
+  reasoning_effort: "low"  # low | high
   temperature: 0.0  # MUST be 0.0 for reproducibility
   seed: 42  # Fixed seed for reproducibility
   max_output_tokens: 8192
 
 # Judge model (fixed)
+# Note: gemini-3-flash-preview is available on Vertex AI global endpoint + AI Studio
 judge:
   model: "gemini-3-flash-preview"
-  reasoning_effort: "low"  # low | high (no medium in Gemini 3)
+  reasoning_effort: "low"  # low | high
   temperature: 0.0
   seed: 42  # Fixed seed for reproducibility
 

@@ -55,8 +55,9 @@ from lib.core.auth_manager import (
     should_refresh_token, is_auth_error, AuthError
 )
 
-# Config
-JOB_ID = "bfai__eval66a_g1_1536_tt"
+# Config - JOB_ID is now loaded from checkpoint/experiment config, not hardcoded
+# Default fallback only used if config doesn't specify an index
+DEFAULT_JOB_ID = "bfai__eval66a_g1_1536_tt"
 CORPUS_PATH = Path(__file__).parent.parent.parent / "clients_qa_gold" / "BFAI" / "qa" / "QA_BFAI_gold_v1-0__q458.json"
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "core_eval"
 CHECKPOINT_INTERVAL = 10
@@ -150,6 +151,10 @@ class GoldEvaluator:
         self.model = model if model is not None else self.generator_config.get("model", "gemini-3-flash-preview")
         self.num_questions = num_questions  # Will be set when run() is called if not provided
         
+        # Get job_id from config (index section) - this is the key fix for using config-specified indexes
+        self.job_id = self.config.get("index", {}).get("job_id", DEFAULT_JOB_ID)
+        print(f"Index: {self.job_id}")
+        
         # Store judge config for use in _judge_answer
         self.judge_model_name = self.judge_config.get("model", "gemini-3-flash-preview")
         self.judge_temperature = self.judge_config.get("temperature", 0.0)
@@ -186,7 +191,7 @@ class GoldEvaluator:
                 str(SA_KEY_PATH), target_audience=CLOUD_RUN_URL
             )
             self._refresh_cloud_token()
-            self.index_metadata = {"job_id": JOB_ID, "mode": "cloud", "endpoint": CLOUD_RUN_URL}
+            self.index_metadata = {"job_id": self.job_id, "mode": "cloud", "endpoint": CLOUD_RUN_URL}
             self.orchestrator = {
                 "endpoint": CLOUD_RUN_URL,
                 "service": CLOUD_SERVICE,
@@ -201,12 +206,12 @@ class GoldEvaluator:
             # Initialize local components
             print("LOCAL MODE: Initializing components...")
             jobs = get_jobs_config()
-            job_config = jobs.get(JOB_ID, {})
-            job_config["job_id"] = JOB_ID
+            job_config = jobs.get(self.job_id, {})
+            job_config["job_id"] = self.job_id
             
             # Store index metadata for output
             self.index_metadata = {
-                "job_id": JOB_ID,
+                "job_id": self.job_id,
                 "deployed_index_id": job_config.get("deployed_index_id", ""),
                 "last_build": job_config.get("last_build", ""),
                 "chunks_indexed": job_config.get("chunks_indexed", 0),
@@ -225,7 +230,7 @@ class GoldEvaluator:
         model_info = get_model_info()
         self.judge_model = model_info['model_id']
         print(f"Judge model: {model_info['model_id']} ({model_info['status']})")
-        print(f"Index: {JOB_ID}")
+        print(f"Index: {self.job_id}")
         
         # Run directory will be created when run() is called
         self.run_dir = None
@@ -441,7 +446,7 @@ class GoldEvaluator:
                     response = requests.post(
                         f"{CLOUD_RUN_URL}/retrieve",
                         headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
-                        json={"query": "warmup ping", "job_id": JOB_ID, "recall_top_k": 1},
+                        json={"query": "warmup ping", "job_id": self.job_id, "recall_top_k": 1},
                         timeout=60,
                     )
                     ping_time = time_module.time() - ping_start
@@ -492,7 +497,7 @@ class GoldEvaluator:
                     response = requests.post(
                         f"{CLOUD_RUN_URL}/retrieve",
                         headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
-                        json={"query": f"warmup parallel {idx}", "job_id": JOB_ID, "recall_top_k": 1},
+                        json={"query": f"warmup parallel {idx}", "job_id": self.job_id, "recall_top_k": 1},
                         timeout=60,
                     )
                     elapsed = time_module.time() - start
@@ -558,7 +563,7 @@ class GoldEvaluator:
         """Query the Cloud Run endpoint."""
         payload = {
             "query": question,
-            "job_id": JOB_ID,
+            "job_id": self.job_id,
             "top_k": self.precision_k,
             "model": self.model,  # Configurable model
             "reasoning_effort": self.generator_reasoning,  # Match local reasoning
@@ -586,7 +591,7 @@ class GoldEvaluator:
         response = requests.post(
             f"{CLOUD_RUN_URL}/retrieve",
             headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
-            json={"query": question, "job_id": JOB_ID, "recall_top_k": 100},
+            json={"query": question, "job_id": self.job_id, "recall_top_k": 100},
             timeout=60,
         )
         if response.status_code == 401:
@@ -594,7 +599,7 @@ class GoldEvaluator:
             response = requests.post(
                 f"{CLOUD_RUN_URL}/retrieve",
                 headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
-                json={"query": question, "job_id": JOB_ID, "recall_top_k": 100},
+                json={"query": question, "job_id": self.job_id, "recall_top_k": 100},
                 timeout=60,
             )
         response.raise_for_status()
@@ -771,7 +776,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             precision_top_n=retrieval_config["precision_top_n"],
             enable_hybrid=retrieval_config["enable_hybrid"],
             enable_reranking=retrieval_config["enable_reranking"],
-            job_id=JOB_ID,
+            job_id=self.job_id,
             reasoning_effort=self.generator_reasoning,
         )
         retrieval_start = time.time()
@@ -884,7 +889,7 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             
             # Index metadata
             "index": {
-                "job_id": JOB_ID,
+                "job_id": self.job_id,
                 "deployed_index_id": self.index_metadata.get("deployed_index_id", ""),
                 "embedding_model": self.index_metadata.get("embedding_model", ""),
                 "embedding_dimension": self.index_metadata.get("embedding_dimension", 0),
@@ -1147,9 +1152,9 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
             "acceptable_rate": (pass_count + partial_count) / len(valid) if valid else 0,
         }
         
-        # Dimension averages
+        # Dimension averages (filter out non-numeric scores from errors)
         for dim in ["correctness", "completeness", "faithfulness", "relevance", "clarity", "overall_score"]:
-            scores = [r.get("judgment", {}).get(dim, 0) for r in valid if r.get("judgment", {}).get(dim)]
+            scores = [r.get("judgment", {}).get(dim) for r in valid if isinstance(r.get("judgment", {}).get(dim), (int, float))]
             metrics[f"{dim}_avg"] = sum(scores) / len(scores) if scores else 0
         
         # Aggregate tokens
