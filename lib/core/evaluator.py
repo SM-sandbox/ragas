@@ -1056,7 +1056,8 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                     results.append(result)
                     completed[qid] = result
                     verdict = result.get("judgment", {}).get("verdict", "?")
-                    print(f"[{processed + i + 1}/{len(questions)}] {qid}: {verdict} ({result['time']:.1f}s)")
+                    result_time = result.get("time", 0)
+                    print(f"[{processed + i + 1}/{len(questions)}] {qid}: {verdict} ({result_time:.1f}s)")
                     
                     # Check fallback threshold
                     self._check_fallback_threshold(processed + i + 1)
@@ -1091,7 +1092,8 @@ Respond with JSON containing: correctness, completeness, faithfulness, relevance
                             completed[qid] = result
                             processed += 1
                             verdict = result.get("judgment", {}).get("verdict", "?")
-                            print(f"[{processed}/{len(questions)}] {qid}: {verdict} ({result['time']:.1f}s)")
+                            result_time = result.get("time", 0)
+                            print(f"[{processed}/{len(questions)}] {qid}: {verdict} ({result_time:.1f}s)")
                             
                             # Mid-run token refresh (thread-safe via auth_manager)
                             self._maybe_refresh_token()
