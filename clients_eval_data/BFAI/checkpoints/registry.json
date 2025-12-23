@@ -3,15 +3,15 @@
   "type": "checkpoints",
   "description": "CICD and daily health check runs against the gold standard baseline",
   "gold_baseline": {
-    "id": "C012",
-    "folder": "C012__2025-12-19__cloud__p25-3-flash-low__q458",
-    "locked_date": "2025-12-20",
-    "acceptable_rate": 0.985,
-    "pass_rate": 0.928,
-    "notes": "Gold baseline for CI/CD comparison. All future test runs compare against this.",
-    "mrr": 0.737,
+    "id": "C034",
+    "folder": "C034__2025-12-23__cloud__p25-3-flash-low__q458",
+    "locked_date": "2025-12-23",
+    "acceptable_rate": 0.976,
+    "pass_rate": 0.932,
+    "notes": "Gold baseline upgraded from C012. Uses gemini-3-flash-preview on Cloud Run with model fix. Index: bfai__eval66a_g1_1536_tt.",
+    "mrr": 0.74,
     "recall_at_100": 0.991,
-    "overall_score_avg": 4.83
+    "overall_score_avg": 4.81
   },
   "entries": [
     {
@@ -523,6 +523,62 @@
       "folder": "C031__2025-12-23__local__p25-3-flash-low__q458",
       "notes": "Auto-registered",
       "index": "bfai__eval66b_g1536tt"
+    },
+    {
+      "id": "C032",
+      "date": "2025-12-23",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-2.5-flash",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.878,
+      "fail_rate": 0.033,
+      "acceptable_rate": 0.967,
+      "folder": "C032__2025-12-23__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
+    },
+    {
+      "id": "C033",
+      "date": "2025-12-23",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "status": "failed",
+      "failure_reason": "DNS resolution failed for bfai__eval66b_g1536tt Vector Search endpoint. GCP infrastructure issue - endpoint 602941586.us-east1-689311309499.vdb.vertexai.goog returned NXDOMAIN.",
+      "folder": null,
+      "notes": "Aborted - switched to eval66a index for subsequent runs"
+    },
+    {
+      "id": "C034",
+      "date": "2025-12-23",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.932,
+      "fail_rate": 0.024,
+      "acceptable_rate": 0.976,
+      "folder": "C034__2025-12-23__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered",
+      "index": "bfai__eval66a_g1_1536_tt"
+    },
+    {
+      "id": "C035",
+      "date": "2025-12-23",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.932,
+      "fail_rate": 0.022,
+      "acceptable_rate": 0.978,
+      "folder": "C035__2025-12-23__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
     }
   ]
 }

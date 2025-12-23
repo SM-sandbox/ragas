@@ -21,7 +21,7 @@ corpus:
 
 # Index (fixed)
 index:
-  job_id: "bfai__eval66b_g1536tt"
+  job_id: "bfai__eval66a_g1_1536_tt"
 
 # Generator model (fixed)
 # Note: gemini-3-flash-preview is available on Vertex AI global endpoint + AI Studio
