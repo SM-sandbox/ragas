@@ -132,7 +132,8 @@
       "overall_score_avg": 4.81,
       "run_duration_seconds": 477.7,
       "total_cost_usd": 0,
-      "latency_avg_s": 9.9
+      "latency_avg_s": 9.9,
+      "index": "bfai__eval66a_g1_1536_tt"
     },
     {
       "id": "C007",
@@ -272,7 +273,8 @@
       "overall_score_avg": 4.82,
       "run_duration_seconds": 424.5,
       "total_cost_usd": 0.8426,
-      "latency_avg_s": 79.5
+      "latency_avg_s": 79.5,
+      "index": "bfai__eval66a_g1_1536_tt"
     },
     {
       "id": "C014",
@@ -350,11 +352,52 @@
       "model": "gemini-3-flash-preview",
       "precision_k": 25,
       "questions": 458,
-      "pass_rate": 0.0,
-      "fail_rate": 0.0,
-      "acceptable_rate": 1.0,
+      "pass_rate": 0.921,
+      "fail_rate": 0.011,
+      "acceptable_rate": 0.989,
       "folder": "C020__2025-12-21__cloud__p25-3-flash-low__q458",
-      "notes": "Auto-registered"
+      "notes": "Auto-registered",
+      "index": "bfai__eval66a_g1_1536_tt",
+      "partial_rate": 0.068,
+      "mrr": 0.739,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.83
+    },
+    {
+      "id": "C021",
+      "date": "2025-12-22",
+      "mode": "local",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 270,
+      "pass_rate": 0.893,
+      "partial_rate": 0.07,
+      "fail_rate": 0.037,
+      "acceptable_rate": 0.963,
+      "folder": "C021__2025-12-22__local__p25-3-flash-low__q458",
+      "mrr": 0.861,
+      "recall_at_100": 1.0,
+      "overall_score_avg": 4.77,
+      "index": "bfai__eval66a_g1_1536_tt"
+    },
+    {
+      "id": "C022",
+      "date": "2025-12-22",
+      "mode": "local",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 230,
+      "pass_rate": 0.917,
+      "partial_rate": 0.035,
+      "fail_rate": 0.048,
+      "acceptable_rate": 0.952,
+      "folder": "C022__2025-12-22__local__p25-3-flash-low__q458",
+      "mrr": 0.925,
+      "recall_at_100": 1.0,
+      "overall_score_avg": 4.79,
+      "index": "bfai__eval66a_g1_1536_tt"
     },
     {
       "id": "C024",
@@ -368,7 +411,26 @@
       "fail_rate": 0.081,
       "acceptable_rate": 0.913,
       "folder": "C024__2025-12-22__local__p25-2.5-flash-low__q458",
-      "notes": "Auto-registered"
+      "notes": "Auto-registered",
+      "index": "bfai__eval66a_g1_1536_tt"
+    },
+    {
+      "id": "C025",
+      "date": "2025-12-22",
+      "mode": "cloud",
+      "config_summary": "p25-2.5-flash-low__q458",
+      "model": "gemini-2.5-flash",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.404,
+      "partial_rate": 0.469,
+      "fail_rate": 0.107,
+      "acceptable_rate": 0.873,
+      "folder": "C025__2025-12-22__cloud__p25-2.5-flash-low__q458",
+      "mrr": 0.737,
+      "recall_at_100": 0.991,
+      "overall_score_avg": 4.09,
+      "index": "unknown"
     },
     {
       "id": "C026",
@@ -396,7 +458,26 @@
       "fail_rate": 0.035,
       "acceptable_rate": 0.965,
       "folder": "C027__2025-12-22__local__p25-3-flash-low__q458",
-      "notes": "Auto-registered"
+      "notes": "Auto-registered",
+      "index": "bfai__eval66a_g1_1536_tt"
+    },
+    {
+      "id": "C028",
+      "date": "2025-12-22",
+      "mode": "local",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 120,
+      "pass_rate": 0.967,
+      "partial_rate": 0.025,
+      "fail_rate": 0.008,
+      "acceptable_rate": 0.992,
+      "folder": "C028__2025-12-22__local__p25-3-flash-low__q458",
+      "mrr": 1.0,
+      "recall_at_100": 1.0,
+      "overall_score_avg": 4.93,
+      "index": "bfai__eval66a_g1_1536_tt"
     },
     {
       "id": "C029",
@@ -410,7 +491,8 @@
       "fail_rate": 0.015,
       "acceptable_rate": 0.985,
       "folder": "C029__2025-12-23__local__p25-3-flash-low__q458",
-      "notes": "Auto-registered"
+      "notes": "Auto-registered",
+      "index": "bfai__eval66a_g1_1536_tt"
     },
     {
       "id": "C030",
@@ -424,7 +506,8 @@
       "fail_rate": 0.022,
       "acceptable_rate": 0.978,
       "folder": "C030__2025-12-23__local__p25-3-flash-low__q458",
-      "notes": "Auto-registered"
+      "notes": "Auto-registered",
+      "index": "bfai__eval66b_g1536tt"
     },
     {
       "id": "C031",
@@ -438,7 +521,8 @@
       "fail_rate": 0.022,
       "acceptable_rate": 0.978,
       "folder": "C031__2025-12-23__local__p25-3-flash-low__q458",
-      "notes": "Auto-registered"
+      "notes": "Auto-registered",
+      "index": "bfai__eval66b_g1536tt"
     }
   ]
 }
