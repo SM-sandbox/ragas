@@ -1,0 +1,394 @@
+{
+  "HALLUCINATION": [
+    {
+      "question_id": "sh_easy_026",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Implement stronger prompt engineering directives to enforce grounding (e.g., 'Answer *only* from the provided context. If the information is not present, state that you cannot answer based on the context.') and consider using a more context-aware LLM or fine-tuning for faithfulness."
+    },
+    {
+      "question_id": "sh_easy_079",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 1,
+        "verdict": "fail"
+      },
+      "recommendation": "Implement stronger prompt engineering to enforce grounding of the LLM's response to the provided context. Consider fine-tuning the LLM for improved faithfulness and explore adding post-generation fact-checking or confidence scoring mechanisms to detect unsupported claims."
+    }
+  ],
+  "INCOMPLETE_CONTEXT": [
+    {
+      "question_id": "sh_hard_020",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 2,
+        "verdict": "fail"
+      },
+      "recommendation": "Review the chunking strategy for documents related to this question type. Consider increasing chunk size or implementing overlapping chunks to ensure that complete pieces of information are captured within single retrieval units. If the full answer inherently spans multiple distinct pieces of information, explore multi-hop retrieval strategies."
+    },
+    {
+      "question_id": "sh_med_027",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 4,
+        "relevance": 5,
+        "clarity": 4,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Review and adjust the chunking strategy to ensure that essential information is not split across multiple chunks. Consider increasing chunk size, implementing overlapping chunks, or using context expansion techniques (e.g., retrieving surrounding chunks) to provide a more comprehensive context to the LLM."
+    },
+    {
+      "question_id": "sh_med_044",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 3,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "1. **Address Data Logging:** Investigate and fix the 'Source Files: []' issue to ensure proper traceability of retrieved documents. 2. **Context Analysis:** Manually review the actual question, the RAG answer, and the retrieved context for 'sh_med_044' to pinpoint the exact missing information. 3. **Chunking Strategy Review:** Based on the context analysis, evaluate if the current chunking strategy (size, overlap, metadata inclusion) is effectively capturing complete units of information relevant to typical questions. Consider increasing chunk size or implementing more sophisticated chunking methods (e.g., semantic chunking). 4. **Retrieval Enhancement:** If the relevant information is spread across multiple documents or parts of a document, explore multi-hop retrieval, re-ranking, or query expansion techniques to gather a more comprehensive context."
+    },
+    {
+      "question_id": "sh_easy_048",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Review the content of the source documents and the chunking strategy for this topic. Ensure that complete and sufficient information units are captured within chunks to allow for correct answer generation. Consider techniques like larger chunk sizes, semantic chunking, or multi-chunk retrieval to provide more comprehensive context."
+    },
+    {
+      "question_id": "sh_hard_046",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Review the source document(s) related to the question's topic to identify the missing information. Adjust the chunking strategy to ensure all critical details for a given concept or answer are contained within a single chunk. If the information is not present in the source documents, update the knowledge base."
+    },
+    {
+      "question_id": "sh_med_073",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Analyze the content of the retrieved chunk(s) for this specific question. Adjust chunking strategy (e.g., increase chunk size, improve semantic chunking) for the source document to ensure that complete, self-contained answers to potential questions are present within individual or closely related chunks. Consider a re-ranking step to ensure all necessary sub-parts of a complete answer are prioritized."
+    },
+    {
+      "question_id": "mh_easy_025",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Implement strategies to improve the completeness of retrieved context for multi-hop questions. This could involve increasing the number of retrieved chunks, using a larger context window for the LLM, or refining the chunking strategy to ensure key facts and their relationships are not fragmented across too many small chunks."
+    },
+    {
+      "question_id": "mh_easy_042",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Focus on improving the ranking algorithm to ensure that the most relevant and critical chunks are consistently surfaced at the top (higher MRR). This could involve implementing a re-ranking step, fine-tuning the retriever, or exploring more advanced query understanding techniques for multi-hop questions."
+    },
+    {
+      "question_id": "mh_easy_041",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Implement or improve a reranking step to ensure the most relevant chunks are presented at the top of the context window. Evaluate the embedding model's performance and consider fine-tuning or using a more robust model for better semantic similarity, especially for multi-hop questions."
+    },
+    {
+      "question_id": "mh_med_013",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "1. Enhance chunking strategy for multi-hop questions: Ensure chunks are semantically rich and large enough to contain complete logical units or multiple steps of a multi-hop path. Consider increasing chunk overlap. 2. Improve retrieval depth for complex queries: Increase the number of retrieved chunks (k) or implement a more sophisticated re-ranking mechanism to ensure all necessary pieces of information for multi-hop reasoning are gathered."
+    },
+    {
+      "question_id": "mh_med_044",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Improve retrieval ranking to ensure the most critical information for multi-hop questions is prioritized and presented at the top of the context. Additionally, analyze the content of the retrieved chunks against the ground truth to identify specific missing information and evaluate if the current chunking strategy adequately preserves multi-hop relationships or if query expansion/multi-stage retrieval is needed."
+    },
+    {
+      "question_id": "sh_easy_069",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 1,
+        "clarity": 5,
+        "overall_score": 1,
+        "verdict": "fail"
+      },
+      "recommendation": "Debug the RAG pipeline stage responsible for assembling and passing retrieved chunks to the LLM. Verify that the content from the top-ranked document is correctly extracted and provided as context. Ensure `Source Files` logging accurately reflects the context provided to the LLM."
+    }
+  ],
+  "WRONG_DOCUMENT": [
+    {
+      "question_id": "mh_easy_012",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 5,
+        "faithfulness": 3,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Improve the ranking algorithm (e.g., implement a re-ranking step, fine-tune the embedding model, or explore hybrid search) to ensure the most relevant chunks are consistently ranked higher and presented at the top of the context window for the LLM."
+    },
+    {
+      "question_id": "mh_easy_038",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 3,
+        "relevance": 2,
+        "clarity": 4,
+        "overall_score": 2,
+        "verdict": "fail"
+      },
+      "recommendation": "1. Improve retrieval ranking: Implement or fine-tune re-ranking models (e.g., cross-encoders) to ensure the most relevant documents are consistently prioritized, aiming for a higher MRR. 2. Enhance source attribution: Fix the 'Source Files: []' issue to ensure all retrieved chunks are properly linked to their original documents for better traceability and debugging. 3. Evaluate context window utilization: Investigate how the LLM utilizes the provided context, especially when the top-ranked documents are not the most relevant."
+    },
+    {
+      "question_id": "mh_easy_034",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Improve retrieval ranking to ensure the most critical chunks for multi-hop questions are consistently at the top. Implement re-ranking models or fine-tune the retriever to prioritize highly relevant and crucial information more effectively."
+    },
+    {
+      "question_id": "mh_easy_059",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Improve the ranking algorithm to ensure that the most relevant chunks are prioritized and presented at the top of the retrieved context. This could involve implementing a re-ranking step, fine-tuning the embedding model, or enhancing query understanding for better retrieval."
+    },
+    {
+      "question_id": "mh_easy_043",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 2,
+        "faithfulness": 4,
+        "relevance": 3,
+        "clarity": 4,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Implement a robust reranking mechanism to ensure highly relevant chunks are prioritized and presented at the top of the context provided to the LLM. Additionally, investigate the initial retriever's performance to improve the quality of the initial candidate set."
+    },
+    {
+      "question_id": "mh_hard_027",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 4,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Improve the ranking algorithm to ensure highly relevant documents are prioritized (aim for higher MRR), especially for multi-hop questions. Additionally, investigate and fix the issue causing `Source Files` to be empty in the evaluation logs, as this hinders debugging."
+    },
+    {
+      "question_id": "mh_hard_026",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 4,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Focus on improving the ranking component of the retrieval system. This could involve implementing a re-ranking step (e.g., using a cross-encoder), fine-tuning the embedding model, or exploring hybrid search strategies to ensure that the most relevant documents are consistently prioritized and appear at the top of the context provided to the LLM."
+    },
+    {
+      "question_id": "mh_hard_069",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 1,
+        "clarity": 1,
+        "overall_score": 1,
+        "verdict": "fail"
+      },
+      "recommendation": "1. Enhance Retriever Ranking: Focus on improving the ranking of relevant documents, potentially through re-ranking models or better embedding strategies, to ensure critical information is at the top of the retrieved results. 2. Debug Context Passage and Citation: Investigate why no source files were cited, which suggests either a failure in passing context to the LLM or a bug in the citation logging mechanism. Ensure the LLM is consistently provided with and instructed to use retrieved context."
+    }
+  ],
+  "COMPLEX_REASONING": [
+    {
+      "question_id": "mh_med_021",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "1. **LLM Improvement:** Implement advanced prompting techniques like Chain-of-Thought (CoT) or self-reflection to guide the LLM through multi-hop reasoning. Consider fine-tuning the LLM for complex synthesis tasks. 2. **Retrieval/Chunking Improvement:** Evaluate chunking strategy for multi-hop questions. Consider larger, more semantically coherent chunks or graph-based retrieval to ensure all interconnected facts are presented together to the LLM."
+    },
+    {
+      "question_id": "mh_hard_068",
+      "question": null,
+      "ground_truth": null,
+      "source_files": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 2,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "recommendation": "Improve retrieval ranking (e.g., re-ranking, better embedding models, hybrid search) to ensure all necessary information for multi-hop questions is at the top. Additionally, explore LLM fine-tuning or advanced prompt engineering strategies to enhance its multi-hop reasoning and synthesis capabilities."
+    }
+  ]
+}

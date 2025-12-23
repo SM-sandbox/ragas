@@ -1,0 +1,52 @@
+[
+  {
+    "question_id": "sh_hard_020",
+    "issue": "The chunk containing the most relevant information was too granular or did not encompass all the necessary details for a complete answer, leading to an incomplete context for the LLM.",
+    "source_files": []
+  },
+  {
+    "question_id": "sh_med_027",
+    "issue": "The retrieved chunks, despite being relevant, were too narrow or incomplete to contain all the necessary facts for a correct answer. This could be due to overly granular chunking, or the context window not capturing enough surrounding information.",
+    "source_files": []
+  },
+  {
+    "question_id": "sh_med_044",
+    "issue": "The specific chunk(s) retrieved, while deemed most relevant, did not contain all the necessary details to fully answer the question. This could be due to chunks being too small, or critical information being split across multiple chunks that were not all retrieved or properly synthesized. The 'Source Files: []' also indicates a potential logging or data integrity issue.",
+    "source_files": []
+  },
+  {
+    "question_id": "sh_easy_048",
+    "issue": "Potentially, the necessary information was present in the source document but was fragmented or incomplete within the specific chunk(s) provided to the LLM, or the source document itself was incomplete for the given question.",
+    "source_files": []
+  },
+  {
+    "question_id": "sh_hard_046",
+    "issue": "The chunk containing the relevant information was missing the specific detail required for a correct answer. This suggests the chunking strategy might have separated critical information, or the crucial detail was not present in the indexed document within a single retrievable unit.",
+    "source_files": []
+  },
+  {
+    "question_id": "sh_med_073",
+    "issue": "The relevant information might have been fragmented across multiple chunks, or the single retrieved chunk, despite being the most relevant, did not contain all necessary details for a complete and correct answer.",
+    "source_files": []
+  },
+  {
+    "question_id": "mh_easy_025",
+    "issue": "The necessary information for the multi-hop question might have been split across multiple chunks, and not all required chunks were retrieved, or individual chunks were too small to provide a complete piece of information for the multi-hop reasoning.",
+    "source_files": []
+  },
+  {
+    "question_id": "mh_med_013",
+    "issue": "The necessary information for the multi-hop question might have been fragmented across multiple chunks, or individual chunks were too small to capture the complete logical flow or required facts, leading to an incomplete context being presented to the LLM.",
+    "source_files": []
+  },
+  {
+    "question_id": "mh_med_021",
+    "issue": "The context, while relevant, might have been fragmented or not optimally structured (e.g., too small chunks, or key related facts separated) to facilitate the complex multi-hop reasoning required by the LLM.",
+    "source_files": []
+  },
+  {
+    "question_id": "sh_easy_069",
+    "issue": "Context assembly/passing failure. The issue is not with the chunking strategy itself, but with the mechanism that extracts and provides chunks from the retrieved documents to the LLM.",
+    "source_files": []
+  }
+]

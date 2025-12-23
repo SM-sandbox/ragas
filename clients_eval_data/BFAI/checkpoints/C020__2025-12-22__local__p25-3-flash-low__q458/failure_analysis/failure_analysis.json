@@ -1,0 +1,818 @@
+{
+  "metadata": {
+    "checkpoint": "C020",
+    "generated": "2025-12-22T17:28:20.352007",
+    "total_failures": 24
+  },
+  "summary": {
+    "total_failures": 24,
+    "archetype_distribution": {
+      "HALLUCINATION": 2,
+      "INCOMPLETE_CONTEXT": 12,
+      "WRONG_DOCUMENT": 8,
+      "COMPLEX_REASONING": 2
+    },
+    "by_difficulty": {
+      "easy": {
+        "HALLUCINATION": 2,
+        "INCOMPLETE_CONTEXT": 5,
+        "WRONG_DOCUMENT": 5
+      },
+      "hard": {
+        "INCOMPLETE_CONTEXT": 2,
+        "WRONG_DOCUMENT": 3,
+        "COMPLEX_REASONING": 1
+      },
+      "medium": {
+        "INCOMPLETE_CONTEXT": 5,
+        "COMPLEX_REASONING": 1
+      }
+    },
+    "by_type": {
+      "single_hop": {
+        "HALLUCINATION": 2,
+        "INCOMPLETE_CONTEXT": 7
+      },
+      "multi_hop": {
+        "WRONG_DOCUMENT": 8,
+        "INCOMPLETE_CONTEXT": 5,
+        "COMPLEX_REASONING": 2
+      }
+    },
+    "chunking_issues": [
+      {
+        "question_id": "sh_hard_020",
+        "issue": "The chunk containing the most relevant information was too granular or did not encompass all the necessary details for a complete answer, leading to an incomplete context for the LLM.",
+        "source_files": []
+      },
+      {
+        "question_id": "sh_med_027",
+        "issue": "The retrieved chunks, despite being relevant, were too narrow or incomplete to contain all the necessary facts for a correct answer. This could be due to overly granular chunking, or the context window not capturing enough surrounding information.",
+        "source_files": []
+      },
+      {
+        "question_id": "sh_med_044",
+        "issue": "The specific chunk(s) retrieved, while deemed most relevant, did not contain all the necessary details to fully answer the question. This could be due to chunks being too small, or critical information being split across multiple chunks that were not all retrieved or properly synthesized. The 'Source Files: []' also indicates a potential logging or data integrity issue.",
+        "source_files": []
+      },
+      {
+        "question_id": "sh_easy_048",
+        "issue": "Potentially, the necessary information was present in the source document but was fragmented or incomplete within the specific chunk(s) provided to the LLM, or the source document itself was incomplete for the given question.",
+        "source_files": []
+      },
+      {
+        "question_id": "sh_hard_046",
+        "issue": "The chunk containing the relevant information was missing the specific detail required for a correct answer. This suggests the chunking strategy might have separated critical information, or the crucial detail was not present in the indexed document within a single retrievable unit.",
+        "source_files": []
+      },
+      {
+        "question_id": "sh_med_073",
+        "issue": "The relevant information might have been fragmented across multiple chunks, or the single retrieved chunk, despite being the most relevant, did not contain all necessary details for a complete and correct answer.",
+        "source_files": []
+      },
+      {
+        "question_id": "mh_easy_025",
+        "issue": "The necessary information for the multi-hop question might have been split across multiple chunks, and not all required chunks were retrieved, or individual chunks were too small to provide a complete piece of information for the multi-hop reasoning.",
+        "source_files": []
+      },
+      {
+        "question_id": "mh_med_013",
+        "issue": "The necessary information for the multi-hop question might have been fragmented across multiple chunks, or individual chunks were too small to capture the complete logical flow or required facts, leading to an incomplete context being presented to the LLM.",
+        "source_files": []
+      },
+      {
+        "question_id": "mh_med_021",
+        "issue": "The context, while relevant, might have been fragmented or not optimally structured (e.g., too small chunks, or key related facts separated) to facilitate the complex multi-hop reasoning required by the LLM.",
+        "source_files": []
+      },
+      {
+        "question_id": "sh_easy_069",
+        "issue": "Context assembly/passing failure. The issue is not with the chunking strategy itself, but with the mechanism that extracts and provides chunks from the retrieved documents to the LLM.",
+        "source_files": []
+      }
+    ]
+  },
+  "failures": [
+    {
+      "question_id": "sh_easy_026",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "HALLUCINATION",
+        "secondary_archetypes": [],
+        "root_cause": "The LLM generated an answer that was factually correct and complete but was not supported by or derived from the provided context, indicating a failure to ground its response in the retrieved information despite relevant context being available.",
+        "chunking_issue": "N/A",
+        "recommendation": "Implement stronger prompt engineering directives to enforce grounding (e.g., 'Answer *only* from the provided context. If the information is not present, state that you cannot answer based on the context.') and consider using a more context-aware LLM or fine-tuning for faithfulness."
+      }
+    },
+    {
+      "question_id": "sh_hard_020",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "hard",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 2,
+        "verdict": "fail"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "The retrieved context, despite being highly relevant (Relevance 5/5) and correctly ranked (MRR 1.0), did not contain all the necessary information to provide a complete and correct answer. The LLM faithfully generated an answer based on this insufficient context (Faithfulness 5/5), leading to low correctness and completeness scores.",
+        "chunking_issue": "The chunk containing the most relevant information was too granular or did not encompass all the necessary details for a complete answer, leading to an incomplete context for the LLM.",
+        "recommendation": "Review the chunking strategy for documents related to this question type. Consider increasing chunk size or implementing overlapping chunks to ensure that complete pieces of information are captured within single retrieval units. If the full answer inherently spans multiple distinct pieces of information, explore multi-hop retrieval strategies."
+      }
+    },
+    {
+      "question_id": "sh_med_027",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "medium",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 4,
+        "relevance": 5,
+        "clarity": 4,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "The retrieved context, while highly relevant and correctly identified (MRR 1.0), did not contain all the necessary information to formulate a complete and correct answer. The LLM, being faithful to the provided context, could only produce a partial and ultimately incorrect response.",
+        "chunking_issue": "The retrieved chunks, despite being relevant, were too narrow or incomplete to contain all the necessary facts for a correct answer. This could be due to overly granular chunking, or the context window not capturing enough surrounding information.",
+        "recommendation": "Review and adjust the chunking strategy to ensure that essential information is not split across multiple chunks. Consider increasing chunk size, implementing overlapping chunks, or using context expansion techniques (e.g., retrieving surrounding chunks) to provide a more comprehensive context to the LLM."
+      }
+    },
+    {
+      "question_id": "sh_med_044",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "medium",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 3,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "The retrieval system successfully identified the most relevant chunk (MRR 1.0), but this chunk was only partially relevant (Relevance 3/5) and lacked key information required for a fully correct and complete answer. The LLM faithfully used the provided, albeit insufficient, context.",
+        "chunking_issue": "The specific chunk(s) retrieved, while deemed most relevant, did not contain all the necessary details to fully answer the question. This could be due to chunks being too small, or critical information being split across multiple chunks that were not all retrieved or properly synthesized. The 'Source Files: []' also indicates a potential logging or data integrity issue.",
+        "recommendation": "1. **Address Data Logging:** Investigate and fix the 'Source Files: []' issue to ensure proper traceability of retrieved documents. 2. **Context Analysis:** Manually review the actual question, the RAG answer, and the retrieved context for 'sh_med_044' to pinpoint the exact missing information. 3. **Chunking Strategy Review:** Based on the context analysis, evaluate if the current chunking strategy (size, overlap, metadata inclusion) is effectively capturing complete units of information relevant to typical questions. Consider increasing chunk size or implementing more sophisticated chunking methods (e.g., semantic chunking). 4. **Retrieval Enhancement:** If the relevant information is spread across multiple documents or parts of a document, explore multi-hop retrieval, re-ranking, or query expansion techniques to gather a more comprehensive context."
+      }
+    },
+    {
+      "question_id": "sh_easy_048",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "The LLM faithfully generated an answer based on the retrieved context (Faithfulness 5/5), but the context itself was missing critical information, leading to an incorrect answer (Correctness 2/5) despite high relevance and successful retrieval (MRR 1.0).",
+        "chunking_issue": "Potentially, the necessary information was present in the source document but was fragmented or incomplete within the specific chunk(s) provided to the LLM, or the source document itself was incomplete for the given question.",
+        "recommendation": "Review the content of the source documents and the chunking strategy for this topic. Ensure that complete and sufficient information units are captured within chunks to allow for correct answer generation. Consider techniques like larger chunk sizes, semantic chunking, or multi-chunk retrieval to provide more comprehensive context."
+      }
+    },
+    {
+      "question_id": "sh_hard_046",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "hard",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "The retrieved context, despite being highly relevant and perfectly ranked (MRR 1.0), was missing a critical piece of information necessary to fully and correctly answer the question. The LLM faithfully generated an answer based on the available, but incomplete, context, leading to low correctness despite high faithfulness.",
+        "chunking_issue": "The chunk containing the relevant information was missing the specific detail required for a correct answer. This suggests the chunking strategy might have separated critical information, or the crucial detail was not present in the indexed document within a single retrievable unit.",
+        "recommendation": "Review the source document(s) related to the question's topic to identify the missing information. Adjust the chunking strategy to ensure all critical details for a given concept or answer are contained within a single chunk. If the information is not present in the source documents, update the knowledge base."
+      }
+    },
+    {
+      "question_id": "mh_easy_012",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 5,
+        "faithfulness": 3,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.125
+      },
+      "analysis": {
+        "primary_archetype": "WRONG_DOCUMENT",
+        "secondary_archetypes": [
+          "INCOMPLETE_CONTEXT",
+          "HALLUCINATION"
+        ],
+        "root_cause": "The correct information was retrieved (Recall Hit: True) but ranked very poorly (MRR: 0.125), meaning the most relevant chunks were not presented at the top of the context to the LLM. This led the LLM to work with effectively incomplete or poorly prioritized context, resulting in an incorrect answer with some unfaithful elements.",
+        "chunking_issue": "N/A",
+        "recommendation": "Improve the ranking algorithm (e.g., implement a re-ranking step, fine-tune the embedding model, or explore hybrid search) to ensure the most relevant chunks are consistently ranked higher and presented at the top of the context window for the LLM."
+      }
+    },
+    {
+      "question_id": "sh_med_073",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "medium",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "The RAG system successfully retrieved the most relevant context (MRR 1.0, Recall Hit True), and the LLM faithfully used this context (Faithfulness 5/5). However, the retrieved context was missing critical information, leading to a partially complete (Completeness 4/5) and ultimately incorrect (Correctness 2/5) answer.",
+        "chunking_issue": "The relevant information might have been fragmented across multiple chunks, or the single retrieved chunk, despite being the most relevant, did not contain all necessary details for a complete and correct answer.",
+        "recommendation": "Analyze the content of the retrieved chunk(s) for this specific question. Adjust chunking strategy (e.g., increase chunk size, improve semantic chunking) for the source document to ensure that complete, self-contained answers to potential questions are present within individual or closely related chunks. Consider a re-ranking step to ensure all necessary sub-parts of a complete answer are prioritized."
+      }
+    },
+    {
+      "question_id": "mh_easy_025",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "The retrieved context, while relevant and highly ranked (MRR 1.0, Recall Hit True), did not contain all the necessary information or specific details required to fully answer the multi-hop question. The LLM faithfully used the available context (Faithfulness 5/5) but could not provide a complete answer due to these gaps, leading to partial correctness and completeness scores.",
+        "chunking_issue": "The necessary information for the multi-hop question might have been split across multiple chunks, and not all required chunks were retrieved, or individual chunks were too small to provide a complete piece of information for the multi-hop reasoning.",
+        "recommendation": "Implement strategies to improve the completeness of retrieved context for multi-hop questions. This could involve increasing the number of retrieved chunks, using a larger context window for the LLM, or refining the chunking strategy to ensure key facts and their relationships are not fragmented across too many small chunks."
+      }
+    },
+    {
+      "question_id": "mh_easy_038",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 3,
+        "relevance": 2,
+        "clarity": 4,
+        "overall_score": 2,
+        "verdict": "fail"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.5
+      },
+      "analysis": {
+        "primary_archetype": "WRONG_DOCUMENT",
+        "secondary_archetypes": [
+          "INCOMPLETE_CONTEXT"
+        ],
+        "root_cause": "The retrieval system failed to rank the most relevant document at the top (MRR 0.5), leading the LLM to process a sub-optimal or less relevant context. This resulted in a largely incorrect and incomplete answer, despite the relevant document being present in the retrieved set. The missing source files also hinder debugging.",
+        "chunking_issue": "N/A",
+        "recommendation": "1. Improve retrieval ranking: Implement or fine-tune re-ranking models (e.g., cross-encoders) to ensure the most relevant documents are consistently prioritized, aiming for a higher MRR. 2. Enhance source attribution: Fix the 'Source Files: []' issue to ensure all retrieved chunks are properly linked to their original documents for better traceability and debugging. 3. Evaluate context window utilization: Investigate how the LLM utilizes the provided context, especially when the top-ranked documents are not the most relevant."
+      }
+    },
+    {
+      "question_id": "mh_easy_042",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.125
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [
+          "WRONG_DOCUMENT"
+        ],
+        "root_cause": "Despite a relevant chunk being retrieved (Recall Hit: True), its very low MRR (0.125) indicates that the most critical information needed for a complete answer was not ranked highly enough, leading to the LLM receiving an effectively incomplete context. The LLM was faithful to the context it received, but that context was insufficient.",
+        "chunking_issue": "N/A",
+        "recommendation": "Focus on improving the ranking algorithm to ensure that the most relevant and critical chunks are consistently surfaced at the top (higher MRR). This could involve implementing a re-ranking step, fine-tuning the retriever, or exploring more advanced query understanding techniques for multi-hop questions."
+      }
+    },
+    {
+      "question_id": "mh_easy_041",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.14285714285714285
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [
+          "WRONG_DOCUMENT"
+        ],
+        "root_cause": "The necessary information to fully answer the question was present in the retrieved context (Recall Hit: True) but was ranked very poorly (MRR: 0.14). This poor ranking likely prevented the LLM from accessing or prioritizing the crucial details, leading to an incomplete answer.",
+        "chunking_issue": "N/A",
+        "recommendation": "Implement or improve a reranking step to ensure the most relevant chunks are presented at the top of the context window. Evaluate the embedding model's performance and consider fine-tuning or using a more robust model for better semantic similarity, especially for multi-hop questions."
+      }
+    },
+    {
+      "question_id": "mh_easy_034",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.5
+      },
+      "analysis": {
+        "primary_archetype": "WRONG_DOCUMENT",
+        "secondary_archetypes": [
+          "COMPLEX_REASONING"
+        ],
+        "root_cause": "The most critical information needed for the multi-hop question was retrieved but ranked poorly (MRR 0.5), causing the LLM to prioritize less accurate or incomplete context from higher-ranked chunks, leading to an incorrect answer despite being faithful to the context it processed.",
+        "chunking_issue": "N/A",
+        "recommendation": "Improve retrieval ranking to ensure the most critical chunks for multi-hop questions are consistently at the top. Implement re-ranking models or fine-tune the retriever to prioritize highly relevant and crucial information more effectively."
+      }
+    },
+    {
+      "question_id": "mh_easy_059",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.0625
+      },
+      "analysis": {
+        "primary_archetype": "WRONG_DOCUMENT",
+        "secondary_archetypes": [
+          "INCOMPLETE_CONTEXT"
+        ],
+        "root_cause": "The correct and necessary information was retrieved (Recall Hit: True) but was ranked very poorly (MRR: 0.0625). This poor ranking meant the LLM likely did not effectively utilize the critical information, leading to an incorrect and incomplete answer despite being faithful to the context it did prioritize.",
+        "chunking_issue": "N/A",
+        "recommendation": "Improve the ranking algorithm to ensure that the most relevant chunks are prioritized and presented at the top of the retrieved context. This could involve implementing a re-ranking step, fine-tuning the embedding model, or enhancing query understanding for better retrieval."
+      }
+    },
+    {
+      "question_id": "mh_easy_043",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 2,
+        "faithfulness": 4,
+        "relevance": 3,
+        "clarity": 4,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.05263157894736842
+      },
+      "analysis": {
+        "primary_archetype": "WRONG_DOCUMENT",
+        "secondary_archetypes": [
+          "INCOMPLETE_CONTEXT"
+        ],
+        "root_cause": "The retrieval system successfully identified the relevant information (Recall Hit: True) but failed to rank it highly (MRR: 0.0526). This resulted in the LLM receiving a context where the crucial details were buried or effectively missing, leading to an incomplete answer.",
+        "chunking_issue": "N/A",
+        "recommendation": "Implement a robust reranking mechanism to ensure highly relevant chunks are prioritized and presented at the top of the context provided to the LLM. Additionally, investigate the initial retriever's performance to improve the quality of the initial candidate set."
+      }
+    },
+    {
+      "question_id": "mh_hard_027",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "hard",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 4,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.25
+      },
+      "analysis": {
+        "primary_archetype": "WRONG_DOCUMENT",
+        "secondary_archetypes": [
+          "COMPLEX_REASONING"
+        ],
+        "root_cause": "The correct document containing the necessary information was retrieved but ranked poorly (MRR 0.25), making it difficult for the LLM to identify and synthesize the key facts for multi-hop reasoning, leading to a partially correct answer.",
+        "chunking_issue": "N/A",
+        "recommendation": "Improve the ranking algorithm to ensure highly relevant documents are prioritized (aim for higher MRR), especially for multi-hop questions. Additionally, investigate and fix the issue causing `Source Files` to be empty in the evaluation logs, as this hinders debugging."
+      }
+    },
+    {
+      "question_id": "mh_med_013",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "medium",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [
+          "COMPLEX_REASONING"
+        ],
+        "root_cause": "The retrieved context, despite being relevant and highly ranked (MRR 1.0), was missing crucial information or connections required to fully and correctly answer the multi-hop question. The LLM was faithful to the provided context but could not synthesize a complete and accurate response due to these gaps.",
+        "chunking_issue": "The necessary information for the multi-hop question might have been fragmented across multiple chunks, or individual chunks were too small to capture the complete logical flow or required facts, leading to an incomplete context being presented to the LLM.",
+        "recommendation": "1. Enhance chunking strategy for multi-hop questions: Ensure chunks are semantically rich and large enough to contain complete logical units or multiple steps of a multi-hop path. Consider increasing chunk overlap. 2. Improve retrieval depth for complex queries: Increase the number of retrieved chunks (k) or implement a more sophisticated re-ranking mechanism to ensure all necessary pieces of information for multi-hop reasoning are gathered."
+      }
+    },
+    {
+      "question_id": "mh_med_021",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "medium",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 4,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "COMPLEX_REASONING",
+        "secondary_archetypes": [],
+        "root_cause": "Despite retrieving relevant and highly ranked context (MRR 1.0, Recall Hit True, Relevance 5/5), the LLM failed to perform the necessary multi-hop reasoning or synthesis required to correctly answer the question. The LLM remained faithful to the context (Faithfulness 5/5), but its inability to connect the dots led to an incorrect (Correctness 2/5) and partially complete (Completeness 4/5) answer.",
+        "chunking_issue": "The context, while relevant, might have been fragmented or not optimally structured (e.g., too small chunks, or key related facts separated) to facilitate the complex multi-hop reasoning required by the LLM.",
+        "recommendation": "1. **LLM Improvement:** Implement advanced prompting techniques like Chain-of-Thought (CoT) or self-reflection to guide the LLM through multi-hop reasoning. Consider fine-tuning the LLM for complex synthesis tasks. 2. **Retrieval/Chunking Improvement:** Evaluate chunking strategy for multi-hop questions. Consider larger, more semantically coherent chunks or graph-based retrieval to ensure all interconnected facts are presented together to the LLM."
+      }
+    },
+    {
+      "question_id": "mh_hard_026",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "hard",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 4,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.2
+      },
+      "analysis": {
+        "primary_archetype": "WRONG_DOCUMENT",
+        "secondary_archetypes": [
+          "INCOMPLETE_CONTEXT"
+        ],
+        "root_cause": "The retrieval system successfully recalled the correct document (Recall Hit: True) but ranked it poorly (MRR: 0.2). This poor ranking likely prevented the LLM from effectively accessing the key information needed to form a complete and correct answer, leading to partial correctness and completeness.",
+        "chunking_issue": "N/A",
+        "recommendation": "Focus on improving the ranking component of the retrieval system. This could involve implementing a re-ranking step (e.g., using a cross-encoder), fine-tuning the embedding model, or exploring hybrid search strategies to ensure that the most relevant documents are consistently prioritized and appear at the top of the context provided to the LLM."
+      }
+    },
+    {
+      "question_id": "mh_hard_068",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "hard",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 2,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.3333333333333333
+      },
+      "analysis": {
+        "primary_archetype": "COMPLEX_REASONING",
+        "secondary_archetypes": [
+          "INCOMPLETE_CONTEXT"
+        ],
+        "root_cause": "The LLM failed to synthesize information from multiple retrieved chunks to answer a multi-hop question, likely because crucial information, though present (Recall Hit: True), was not highly ranked (MRR: 0.333), making the effective context for the LLM incomplete.",
+        "chunking_issue": "N/A",
+        "recommendation": "Improve retrieval ranking (e.g., re-ranking, better embedding models, hybrid search) to ensure all necessary information for multi-hop questions is at the top. Additionally, explore LLM fine-tuning or advanced prompt engineering strategies to enhance its multi-hop reasoning and synthesis capabilities."
+      }
+    },
+    {
+      "question_id": "mh_med_044",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "medium",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 2,
+        "completeness": 3,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "partial"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.5
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "The retrieved context, while relevant and containing the correct document (MRR 0.5), was ultimately insufficient to provide all the necessary information for a complete and correct answer to the multi-hop question. The LLM remained faithful to the provided context but could not generate a full or accurate response due to these contextual gaps.",
+        "chunking_issue": "N/A",
+        "recommendation": "Improve retrieval ranking to ensure the most critical information for multi-hop questions is prioritized and presented at the top of the context. Additionally, analyze the content of the retrieved chunks against the ground truth to identify specific missing information and evaluate if the current chunking strategy adequately preserves multi-hop relationships or if query expansion/multi-stage retrieval is needed."
+      }
+    },
+    {
+      "question_id": "sh_easy_079",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 1,
+        "verdict": "fail"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "HALLUCINATION",
+        "secondary_archetypes": [],
+        "root_cause": "Despite perfect retrieval of relevant context (MRR 1.0, Recall Hit True, Relevance 5/5), the LLM generated an answer that was incorrect, incomplete, and unfaithful to the source material, indicating it either ignored the context or misinterpreted it severely.",
+        "chunking_issue": "N/A",
+        "recommendation": "Implement stronger prompt engineering to enforce grounding of the LLM's response to the provided context. Consider fine-tuning the LLM for improved faithfulness and explore adding post-generation fact-checking or confidence scoring mechanisms to detect unsupported claims."
+      }
+    },
+    {
+      "question_id": "mh_hard_069",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "multi_hop",
+      "difficulty": "hard",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 1,
+        "relevance": 1,
+        "clarity": 1,
+        "overall_score": 1,
+        "verdict": "fail"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 0.25
+      },
+      "analysis": {
+        "primary_archetype": "WRONG_DOCUMENT",
+        "secondary_archetypes": [
+          "HALLUCINATION"
+        ],
+        "root_cause": "The relevant document was retrieved but ranked poorly (MRR 0.25), likely preventing the LLM from accessing the necessary information. This led the LLM to generate an ungrounded and incorrect answer, as evidenced by the complete lack of cited source files.",
+        "chunking_issue": "N/A",
+        "recommendation": "1. Enhance Retriever Ranking: Focus on improving the ranking of relevant documents, potentially through re-ranking models or better embedding strategies, to ensure critical information is at the top of the retrieved results. 2. Debug Context Passage and Citation: Investigate why no source files were cited, which suggests either a failure in passing context to the LLM or a bug in the citation logging mechanism. Ensure the LLM is consistently provided with and instructed to use retrieved context."
+      }
+    },
+    {
+      "question_id": "sh_easy_069",
+      "question": null,
+      "ground_truth": null,
+      "rag_answer": "",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "source_filenames": [],
+      "scores": {
+        "correctness": 1,
+        "completeness": 1,
+        "faithfulness": 5,
+        "relevance": 1,
+        "clarity": 5,
+        "overall_score": 1,
+        "verdict": "fail"
+      },
+      "retrieval": {
+        "recall_hit": true,
+        "mrr": 1.0
+      },
+      "analysis": {
+        "primary_archetype": "INCOMPLETE_CONTEXT",
+        "secondary_archetypes": [],
+        "root_cause": "Despite the retriever successfully identifying the correct document (Recall Hit: True, MRR: 1.0), no context was actually passed to the LLM for generation, as indicated by `Source Files: []`. This led to the LLM being unable to provide a correct or complete answer, while remaining faithful to the lack of information.",
+        "chunking_issue": "Context assembly/passing failure. The issue is not with the chunking strategy itself, but with the mechanism that extracts and provides chunks from the retrieved documents to the LLM.",
+        "recommendation": "Debug the RAG pipeline stage responsible for assembling and passing retrieved chunks to the LLM. Verify that the content from the top-ranked document is correctly extracted and provided as context. Ensure `Source Files` logging accurately reflects the context provided to the LLM."
+      }
+    }
+  ]
+}
