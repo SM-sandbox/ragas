@@ -40,3 +40,6 @@ Thumbs.db
 .ipynb_checkpoints/
 site/
 config/ragas-cloud-run-invoker.json
+
+# Working/scratch run outputs (canonical data is in clients_eval_data/)
+runs/
