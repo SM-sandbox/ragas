@@ -80,6 +80,34 @@
       "acceptable_rate": 1.0,
       "folder": "E007__2025-12-21__cloud__p25-3-flash-low__q2",
       "notes": "Auto-registered"
+    },
+    {
+      "id": "E008",
+      "date": "2025-12-23",
+      "mode": "local",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 30,
+      "pass_rate": 0.933,
+      "fail_rate": 0.0,
+      "acceptable_rate": 1.0,
+      "folder": "E008__2025-12-23__local__p25-3-flash-low__q30",
+      "notes": "Auto-registered"
+    },
+    {
+      "id": "E009",
+      "date": "2025-12-23",
+      "mode": "local",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.928,
+      "fail_rate": 0.015,
+      "acceptable_rate": 0.985,
+      "folder": "E009__2025-12-23__local__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
     }
   ],
   "reference_docs": [

@@ -1,0 +1,3572 @@
+[
+  {
+    "question_id": "sh_easy_019",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch?",
+    "expected_answer": "The Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch is 60 Hz.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch is **60 Hz** [1].\n\nThis specification is found in the ratings table for the EV-2H model, which covers maximum voltage ratings of 550 kV and 800 kV [1], [8]. Additional ratings for this specific model series also confirm a Rated Power Frequency of 60 Hz [6].",
+    "retrieved_doc_names": [
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states switch-accessories-bulletin-1400-a.pdf",
+      "powerlogic ion 8600 verifying ion8600 accuracy 032008.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "3 phase pad mount transformer spec sheet.pdf",
+      "southern states group operated switch application guide.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer-spanish.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer-spanish.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "pvi-5000-en-rev e fimer abb.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer-spanish.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "southern states group operated switch application guide.pdf"
+    ],
+    "context_char_count": 25238,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 10.44107174873352,
+    "timing": {
+      "retrieval": 1.7114977836608887,
+      "rerank": 4.314342975616455,
+      "generation": 2.3443281650543213,
+      "judge": 2.070840835571289,
+      "total": 10.44107174873352
+    },
+    "generator_tokens": {
+      "prompt": 10984,
+      "completion": 92,
+      "thinking": 0,
+      "total": 11076,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1006,
+      "completion": 67,
+      "thinking": null,
+      "total": 1073,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0011352,
+      "judge": 0.0001274,
+      "total": 0.0012626
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLaYGFM9Oulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 374,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_023",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the KAIC rating at 480V for a 250A, 3P TMTU circuit breaker listed under the NFG series (e.g., NFK3B100)?",
+    "expected_answer": "The KAIC rating at 480V for a 250A, 3P TMTU circuit breaker under the NFG series is 35KAIC.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the KAIC rating at 480V for a 250A, 3P TMTU circuit breaker listed under the NFG series (such as the NFK3B100) is **35KAIC** [1], [2].\n\nThe documentation provides the following details regarding this specification:\n*   The NFG series is categorized under the \"250A TMTU Circuit Breaker Selection\" [2].\n*   The specific rating for this series is listed as 250A, 3P 35KAIC @ 480V [1], [2].\n*   The NFK3B100 is the specific model for the 100 Amperage requirement within this 35KAIC @ 480V NFG series [1], [2].\n*   Other amperage models in this same 35KAIC @ 480V NFG series include NFK3B110, NFK3B125, NFK3B150, NFK3B175, NFK3B200, NFK3B225, and NFK3B250 [1], [2].",
+    "retrieved_doc_names": [
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "national electrical code 2023 chapter 2.pdf"
+    ],
+    "context_char_count": 14753,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 10.764940023422241,
+    "timing": {
+      "retrieval": 1.720015048980713,
+      "rerank": 4.434989929199219,
+      "generation": 3.188815116882324,
+      "judge": 1.4210829734802246,
+      "total": 10.764940023422241
+    },
+    "generator_tokens": {
+      "prompt": 8950,
+      "completion": 273,
+      "thinking": 0,
+      "total": 9223,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 2071,
+      "completion": 67,
+      "thinking": null,
+      "total": 2138,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0010042,
+      "judge": 0.0002339,
+      "total": 0.0012381
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLabT-MtOulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 701,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_005",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the rated AC voltage for the NEP BDM-1200-LV Micro Inverter?",
+    "expected_answer": "120V",
+    "source_documents": [],
+    "generated_answer": "The rated AC voltage for the NEP BDM-1200-LV Micro Inverter is 120V [1]. This model is designed for DIY installation by plugging directly into a standard wall outlet (120V) [5].",
+    "retrieved_doc_names": [
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf"
+    ],
+    "context_char_count": 11484,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 11.840861082077026,
+    "timing": {
+      "retrieval": 1.7536320686340332,
+      "rerank": 4.40814208984375,
+      "generation": 4.426951169967651,
+      "judge": 1.2520828247070312,
+      "total": 11.840861082077026
+    },
+    "generator_tokens": {
+      "prompt": 4852,
+      "completion": 52,
+      "thinking": 325,
+      "total": 5229,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1025,
+      "completion": 67,
+      "thinking": null,
+      "total": 1092,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0007335,
+      "judge": 0.0001293,
+      "total": 0.0008628
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLaYXyM7Smlu8P17HPuAM",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 177,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_008",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers?",
+    "expected_answer": "June 2015",
+    "source_documents": [],
+    "generated_answer": "The effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers is June 2015 [1].\n\nThis feature is a component of the Siemens Dual Function Circuit Breaker, which combines Ground Fault Circuit Interrupter (GFCI) and Arc Fault Circuit Interrupter (AFCI) protection [1]. UL 943 is the standard for Ground-Fault Circuit-Interrupters [2], [5]. The inclusion of the Self-Test & Lockout feature is intended to enhance electrical safety for homeowners [1].",
+    "retrieved_doc_names": [
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "ul_s0489_13.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "ul_s0489_13.pdf"
+    ],
+    "context_char_count": 26819,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 11.868449926376343,
+    "timing": {
+      "retrieval": 1.7389280796051025,
+      "rerank": 4.367764949798584,
+      "generation": 4.315262794494629,
+      "judge": 1.4464421272277832,
+      "total": 11.868449926376343
+    },
+    "generator_tokens": {
+      "prompt": 8275,
+      "completion": 123,
+      "thinking": 337,
+      "total": 8735,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 874,
+      "completion": 73,
+      "thinking": null,
+      "total": 947,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0011126,
+      "judge": 0.0001166,
+      "total": 0.0012292
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLadPEM4rEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 507,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_007",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum efficiency of the BDM-1200-LV/BDM-1600-LV Micro Inverter?",
+    "expected_answer": "99.9%",
+    "source_documents": [],
+    "generated_answer": "The maximum efficiency of the BDM-1200-LV and BDM-1600-LV micro inverters is 97.5% [1]. Additionally, these models feature a Max. MPPT Efficiency of 99.9% [1] and a CEC Efficiency of 96.5% [1].",
+    "retrieved_doc_names": [
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "yotta dpi-208-480_9.0+(2).pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-5000-en-rev e fimer abb.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "pvi-5000-en-rev e fimer abb.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-6000-outd-us service manual.pdf"
+    ],
+    "context_char_count": 16078,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 2,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 3,
+      "verdict": "partial"
+    },
+    "time": 12.929002046585083,
+    "timing": {
+      "retrieval": 1.7435791492462158,
+      "rerank": 4.355836868286133,
+      "generation": 5.581032991409302,
+      "judge": 1.2485110759735107,
+      "total": 12.929002046585083
+    },
+    "generator_tokens": {
+      "prompt": 6173,
+      "completion": 72,
+      "thinking": 597,
+      "total": 6842,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1043,
+      "completion": 67,
+      "thinking": null,
+      "total": 1110,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.001064,
+      "judge": 0.0001311,
+      "total": 0.0011951
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLaYKAM9Oulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 193,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_012",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What are the names of the two external buttons on the AcquiSuite unit?",
+    "expected_answer": "Menu and Select",
+    "source_documents": [],
+    "generated_answer": "The two external buttons on the AcquiSuite unit are named **Menu** and **Select** [1]. These buttons are located at the top right corner of the unit [1].\n\nThe functions of these buttons include:\n*   **Menu button:** Used to scroll through menu options [1]. In the TCP/IP Config menu, it is used to scroll through number/character options for the current cursor position [1]. When selecting DHCP+UPnP on/off, the Menu button is used to disable DHCP [1].\n*   **Select button:** Used to advance into the currently displayed menu option [1]. In the TCP/IP Config menu, it advances the cursor a single position [1]. To navigate back to the TCP/IP Config menu, the Select button is pressed until the cursor moves to the end of the IP address [10]. When selecting DHCP+UPnP on/off, the Select button is used to enable DHCP mode [1].",
+    "retrieved_doc_names": [
+      "acquisuite-basics---external.pdf",
+      "acquisuite-basics---external.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "cps 125kw manual.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "acquisuite backup and restore.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "cps 125kw manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "acquisuite-basics---external.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "cps 125kw manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf"
+    ],
+    "context_char_count": 15748,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 13.754029035568237,
+    "timing": {
+      "retrieval": 1.7261319160461426,
+      "rerank": 4.467313051223755,
+      "generation": 6.271162986755371,
+      "judge": 1.2893688678741455,
+      "total": 13.754029035568237
+    },
+    "generator_tokens": {
+      "prompt": 5103,
+      "completion": 198,
+      "thinking": 0,
+      "total": 5301,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 893,
+      "completion": 69,
+      "thinking": null,
+      "total": 962,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0005895,
+      "judge": 0.0001169,
+      "total": 0.0007064
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "pyVLad74HemN2_gP8Ja5mAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 825,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_009",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC?",
+    "expected_answer": "65KA",
+    "source_documents": [],
+    "generated_answer": "The maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC is 65KA [4]. This rating applies to the H-Interrupting Class (HEAB) for 2 and 3-pole versions of the breaker [2], [3].\n\nAdditional details regarding the 480V interrupting ratings for the 3VA41 include:\n*   The H-Interrupting Class (HEAB) is rated at 65,000 Symmetrical RMS Amperes at 480V [23].\n*   The M-Interrupting Class (MEAB) is rated at 35KA [2] or 35,000 Symmetrical RMS Amperes at 480V [23].\n*   The S-Interrupting Class (SEAB) is rated at 25KA [2] or 25,000 Symmetrical RMS Amperes at 480V [23].\n*   The 3VA41 is available in 1, 1 in 2-pole, 2 or 3-pole versions on 1 inch pole centers [4].",
+    "retrieved_doc_names": [
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 32322,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 14.180508136749268,
+    "timing": {
+      "retrieval": 1.6130659580230713,
+      "rerank": 4.472723960876465,
+      "generation": 6.870380640029907,
+      "judge": 1.2242631912231445,
+      "total": 14.180508136749268
+    },
+    "generator_tokens": {
+      "prompt": 18588,
+      "completion": 252,
+      "thinking": 721,
+      "total": 19561,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1689,
+      "completion": 67,
+      "thinking": null,
+      "total": 1756,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0024643,
+      "judge": 0.0001957,
+      "total": 0.00266
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLaePyMYSX2_gPs4rJ2Qg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 682,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_003",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the DC system size specified for the BOYNE MOUNTAIN RESORT project?",
+    "expected_answer": "The DC system size is 1,770 KW DC.",
+    "source_documents": [],
+    "generated_answer": "The DC system size specified for the BOYNE MOUNTAIN RESORT project is 1,770 KW DC [21]. This specification is listed on the project's cover sheet and sheet index documents [21].",
+    "retrieved_doc_names": [
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf"
+    ],
+    "context_char_count": 71567,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 14.378422021865845,
+    "timing": {
+      "retrieval": 1.6407248973846436,
+      "rerank": 4.539752960205078,
+      "generation": 6.904443979263306,
+      "judge": 1.2934107780456543,
+      "total": 14.378422021865845
+    },
+    "generator_tokens": {
+      "prompt": 36275,
+      "completion": 47,
+      "thinking": 354,
+      "total": 36676,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1389,
+      "completion": 67,
+      "thinking": null,
+      "total": 1456,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0038941,
+      "judge": 0.0001657,
+      "total": 0.0040598
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "piVLacCDGYrEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 177,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_028",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the environmental protection rating for the PVI-CENTRAL-250 and PVI-CENTRAL-300 inverters?",
+    "expected_answer": "The environmental protection rating is NEMA 3R.",
+    "source_documents": [],
+    "generated_answer": "The environmental protection rating for the PVI-CENTRAL-250 and PVI-CENTRAL-300 inverters is **Nema3R** [4], [5], [6], [7], [8], [9].\n\nSpecifically, the source documents provide the following details for these models:\n*   **PVI-CENTRAL-250-US and PVI-CENTRAL-300-US:** These models are rated as **Nema3R** [5], [6] or **neMa 3r** [8], [9].\n*   **PVI-CENTRAL-250.0-CAN-600 and PVI-CENTRAL-300.0-CAN-600:** These models are rated as **Nema3R** [4], [7] or **neMa 3r** [8], [9].\n\nAdditionally, the enclosures for these inverter systems are described as **rugged enclosures** [10] and are categorized for both **Indoor and outdoor** use [1]. They are also noted as being **Suitable** for **Wet Location** [1].",
+    "retrieved_doc_names": [
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "cps 125kw manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf"
+    ],
+    "context_char_count": 32720,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 14.699590921401978,
+    "timing": {
+      "retrieval": 1.6866669654846191,
+      "rerank": 4.384249925613403,
+      "generation": 7.270730018615723,
+      "judge": 1.3578870296478271,
+      "total": 14.699590921401978
+    },
+    "generator_tokens": {
+      "prompt": 12636,
+      "completion": 247,
+      "thinking": 788,
+      "total": 13671,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1183,
+      "completion": 69,
+      "thinking": null,
+      "total": 1252,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.001914,
+      "judge": 0.0001459,
+      "total": 0.0020599
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLaZ7DM4SX2_gPs4rJ2Qg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 705,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_004",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum RMS line voltage that can be present on the input terminals of the device?",
+    "expected_answer": "Line voltages up to 600 VRMS can be present on the input terminals of the device.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the maximum RMS line voltage that can be present on the input terminals of the device is 600 VRMS [5].\n\nAccording to the warnings provided in the documentation:\n*   Line voltages up to 600 VRMS are present on the input terminals of the device and throughout the connected line circuits during normal operation [5].\n*   These voltages may cause severe injury or death [5].\n*   Installation and servicing should be performed only by qualified, properly trained personnel [5].\n*   The device is classified as a Class III measurement device [5].\n\nAdditionally, for the Shark\u00ae 100 meter, the universal voltage inputs allow measurement to 416 Volts Line-to-Neutral and 721 Volts Line-to-Line [10].",
+    "retrieved_doc_names": [
+      "osha ppe cfr-2024-title29-vol5-part1910-subparti.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "osha ppe cfr-2024-title29-vol5-part1910-subparti.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "ul_s0489_13.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 22908,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 14.928582191467285,
+    "timing": {
+      "retrieval": 1.6506409645080566,
+      "rerank": 4.6128928661346436,
+      "generation": 7.346166133880615,
+      "judge": 1.3188459873199463,
+      "total": 14.928582191467285
+    },
+    "generator_tokens": {
+      "prompt": 9479,
+      "completion": 173,
+      "thinking": 0,
+      "total": 9652,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1164,
+      "completion": 67,
+      "thinking": null,
+      "total": 1231,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0010171,
+      "judge": 0.0001432,
+      "total": 0.0011603
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qCVLafz8K4rEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 731,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_010",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "Which specific 3VA circuit breaker models are shipped as standard with aluminum load side lugs already installed?",
+    "expected_answer": "3VA41 panelboard mounted circuit breakers",
+    "source_documents": [],
+    "generated_answer": "The specific 3VA circuit breaker models shipped as standard with aluminum load side lugs already installed are the **3VA41** panelboard mounted circuit breakers [1].\n\nAccording to the provided documentation:\n*   The 3VA41 panelboard mounted circuit breakers are shipped with aluminum load side lugs installed as standard [1].\n*   The 3VA MLFB (Machine-Readable Product Code) structure confirms that load side lugs are for \"3VA41 only\" [24].\n*   In contrast, 3VA51 through 3VA55 thermal-magnetic trip breakers and 3VA61 through 3VA66 electronic trip breakers are shipped as standard without lugs installed [1].\n*   Specifically, 3VA61, 3VA62, 3VA63, and 3VA64 electronic trip circuit breakers are shipped without lugs [11], [15], [17], [18].\n*   The 3VA65 and 3VA66 electronic trip circuit breakers are shipped with nutkeepers on both line and load ends [13], [19].\n*   For 3VA51 through 3VA55 and 3VA61 through 3VA66, factory-installed standard line and load lugs must be specifically ordered by changing the 12th digit of the catalog number to \"6\" [1], [11], [13], [15], [17], [18], [19].",
+    "retrieved_doc_names": [
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 46580,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 15.015763998031616,
+    "timing": {
+      "retrieval": 1.6650629043579102,
+      "rerank": 4.476667165756226,
+      "generation": 7.467764854431152,
+      "judge": 1.4061391353607178,
+      "total": 15.015763998031616
+    },
+    "generator_tokens": {
+      "prompt": 20609,
+      "completion": 324,
+      "thinking": 717,
+      "total": 21650,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1069,
+      "completion": 67,
+      "thinking": null,
+      "total": 1136,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0026924,
+      "judge": 0.0001337,
+      "total": 0.0028261
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLaY2KMorEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1089,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_030",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the rated voltage for the Southwire Type TC-ER Control Cable?",
+    "expected_answer": "The rated voltage for the Southwire Type TC-ER Control Cable is 600 Volt.",
+    "source_documents": [],
+    "generated_answer": "The Southwire Type TC-ER Control Cable has a rated voltage of 600 Volt [1]. According to the source documents, this rating applies to several specific constructions:\n\n*   **SPEC 45051 (PVC-Nylon Insulation):** This Type TC-ER Control Cable is specified as a 600 Volt cable [1]. The sample print legend for this cable includes the designation \"600 VOLTS\" [2].\n*   **SPEC 85010 (FR-XLPE Insulation, CPE Jacket):** This multi-conductor control cable is rated for 600 V [13]. The documentation states that \"Southwire\u2019s 600 Volt control cables are suited for use in wet and dry areas\" [13]. The sample print legend for both UL Listed and Non-UL Listed versions of this cable includes \"600V\" [20].\n*   **SPEC 85045 (FR-XLPE Insulation, LSZH Jacket):** This shielded multi-conductor control cable is also rated for 600 V [21]. Similar to other specifications, it is described as a \"600 Volt control cable\" [21].\n\nAdditionally, while the Type TC-ER **Power** Cable (SPEC 45252) is listed with a rating of 600 or 1000 Volt [5], the documents consistently list the **Control** Cable variants as 600 Volt [1], [13], [21].",
+    "retrieved_doc_names": [
+      "southwire_spec45051.pdf",
+      "southwire_spec45051.pdf",
+      "southwire_spec45252.pdf",
+      "southwire substation spec85010.pdf",
+      "southwire high-voltage-bonding-cable.pdf",
+      "southwire substation spec85045.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "mps switchboard manual - v5.pdf",
+      "southwire_spec45051.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "ul_s0489_13.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "ul_s0489_13.pdf",
+      "southwire substation spec85045.pdf",
+      "southwire substation spec85010.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southwire_spec45252.pdf",
+      "southwire_spec45252.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southwire_spec45252.pdf",
+      "national electrical code 2023 chapter 4.pdf"
+    ],
+    "context_char_count": 22188,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 15.659029006958008,
+    "timing": {
+      "retrieval": 1.7052333354949951,
+      "rerank": 4.401210784912109,
+      "generation": 8.313623189926147,
+      "judge": 1.2388818264007568,
+      "total": 15.659029006958008
+    },
+    "generator_tokens": {
+      "prompt": 9184,
+      "completion": 327,
+      "thinking": 858,
+      "total": 10369,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1095,
+      "completion": 73,
+      "thinking": null,
+      "total": 1168,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0016498,
+      "judge": 0.0001387,
+      "total": 0.0017885
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLac2rMorEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1110,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_027",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the nominal output power of the PVI-CENTRAL-250-US inverter?",
+    "expected_answer": "The nominal output power of the PVI-CENTRAL-250-US inverter is 250 kW.",
+    "source_documents": [],
+    "generated_answer": "The nominal output power of the PVI-CENTRAL-250-US inverter is 250 kW [2] [4]. According to the technical characteristics for this model, the Nominal AC Output Power (KWp) is 250 [1]. This commercial-grade inverter system is based on 50kW conversion modules [11].",
+    "retrieved_doc_names": [
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "yotta dpi-208-480_9.0+(2).pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "yotta dpi-208-480_9.0+(2).pdf",
+      "cps 125kw manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "powerlogic ion 8600 verifying ion8600 accuracy 032008.pdf",
+      "pvi-central-250300-datasheet.pdf"
+    ],
+    "context_char_count": 31377,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 15.664950847625732,
+    "timing": {
+      "retrieval": 1.6491351127624512,
+      "rerank": 4.515512704849243,
+      "generation": 8.162425994873047,
+      "judge": 1.3378360271453857,
+      "total": 15.664950847625732
+    },
+    "generator_tokens": {
+      "prompt": 12662,
+      "completion": 75,
+      "thinking": 759,
+      "total": 13496,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1086,
+      "completion": 67,
+      "thinking": null,
+      "total": 1153,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0018275,
+      "judge": 0.0001354,
+      "total": 0.0019629
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "pSVLaePtGbSmlu8P17HPuAM",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 263,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_001",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+    "expected_answer": "failure, preventive stock",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the two examples provided for the \"Reason for Replacement\" on the Spare Part Request Form are:\n\n1.  **failure** [1]\n2.  **preventive stock** [1]\n\nThese examples are listed in the \"Details (to be completed at time of request)\" column for the \"Reason for Replacement\" field on the form [1].",
+    "retrieved_doc_names": [
+      "spare_part_request_form.pdf",
+      "spare_part_request_form.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "non-covered_service_request_form_v3.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "non-covered_service_request_form_v3.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "ul_s0891_12.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pvi-6000-outd-us service manual.pdf"
+    ],
+    "context_char_count": 18506,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 16.015703678131104,
+    "timing": {
+      "retrieval": 1.6862668991088867,
+      "rerank": 4.583539962768555,
+      "generation": 8.384242296218872,
+      "judge": 1.3615717887878418,
+      "total": 16.015703678131104
+    },
+    "generator_tokens": {
+      "prompt": 5350,
+      "completion": 81,
+      "thinking": 0,
+      "total": 5431,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 728,
+      "completion": 69,
+      "thinking": null,
+      "total": 797,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0005674,
+      "judge": 0.0001004,
+      "total": 0.0006678
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qiVLaYKnF9Oulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 328,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_015",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the nominal conductor temperature for the Southwire 345/400 kV XLPE Power Cable?",
+    "expected_answer": "The nominal conductor temperature for the Southwire 345/400 kV XLPE Power Cable is 90 \u00b0C.",
+    "source_documents": [],
+    "generated_answer": "The nominal conductor temperature for the Southwire 345/400 kV XLPE Power Cable is 90 \u00b0C [1], [2].\n\nAdditional temperature ratings for this cable include:\n*   **Max. Emergency Conductor:** 105 \u00b0C [1], [2]\n*   **Short Circuit Conductor:** 250 \u00b0C [1], [2]\n*   **Minimum Installation:** -10 \u00b0C [1], [2]",
+    "retrieved_doc_names": [
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire_spec45252.pdf",
+      "southwire high-voltage-bonding-cable.pdf",
+      "southwire_spec45051.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire substation spec85010.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "ul_s0489_13.pdf"
+    ],
+    "context_char_count": 23095,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 16.437764883041382,
+    "timing": {
+      "retrieval": 1.7023608684539795,
+      "rerank": 4.4574830532073975,
+      "generation": 7.030948877334595,
+      "judge": 3.2469308376312256,
+      "total": 16.437764883041382
+    },
+    "generator_tokens": {
+      "prompt": 9648,
+      "completion": 103,
+      "thinking": 871,
+      "total": 10622,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 978,
+      "completion": 69,
+      "thinking": 305,
+      "total": 1352,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0016157,
+      "judge": 0.0003389,
+      "total": 0.0019546
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oyVLafP-MtOulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 299,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_018",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch?",
+    "expected_answer": "The continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch is 2000 A / 3000 A / 4000 A.",
+    "source_documents": [],
+    "generated_answer": "The continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch is **2000 A / 3000 A / 4000 A** [1], [7].\n\nAdditional details regarding the EV-2H ratings include:\n*   **Maximum Voltage Rating:** 550 kV \u2013 800 kV [7], [10].\n*   **BIL (kV):** 1800 for the 550 kV model and 2050 for the 800 kV model [1], [10].\n*   **Short Time Withstand (3 sec):** 63 kA / 75 kA / 80 kA [1].\n*   **Peak Withstand:** 164 kA / 195 kA / 208 kA [1].\n*   **Application Guide Recommendations:** For a 550 / 1800 (Max Voltage / BIL) rating, the EV-2H is recommended for continuous current levels of 1200A, 2000A, 3000A, and 4000A [14], [17]. For an 800 / 2050 rating, it is recommended for 1200A, 2000A, 3000A, and 4000A [14], [17], [24].",
+    "retrieved_doc_names": [
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "southern states group operated switch application guide.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states group operated switch application guide.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer-spanish.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer-spanish.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 25215,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 16.646239042282104,
+    "timing": {
+      "retrieval": 1.6550428867340088,
+      "rerank": 4.604265928268433,
+      "generation": 8.954941034317017,
+      "judge": 1.4319260120391846,
+      "total": 16.646239042282104
+    },
+    "generator_tokens": {
+      "prompt": 10851,
+      "completion": 322,
+      "thinking": 0,
+      "total": 11173,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1234,
+      "completion": 73,
+      "thinking": null,
+      "total": 1307,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0012139,
+      "judge": 0.0001526,
+      "total": 0.0013665
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qSVLaZaqH4SX2_gPs4rJ2Qg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 727,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_014",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum voltage rating for the Southwire 345/400 kV XLPE Power Cable?",
+    "expected_answer": "The maximum voltage rating for the Southwire 345/400 kV XLPE Power Cable is 420 kV.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the maximum voltage rating for the Southwire 345/400 kV XLPE Power Cable is 420 kV [3], [4].\n\nAdditional specifications for this cable include:\n*   **BIL Rating:** 1300/1425 kV [3], [4].\n*   **Factory Test Voltages (@400 kV):** 440 kV / 60 min. [3], [4].\n*   **Nominal Conductor Temperature:** 90 \u00b0C [3], [4].\n*   **Max. Emergency Conductor Temperature:** 105 \u00b0C [3], [4].\n*   **Short Circuit Conductor Temperature:** 250 \u00b0C [3], [4].\n*   **Minimum Installation Temperature:** -10 \u00b0C [3], [4].\n*   **XLPE Loss Factor:** 0.0005 [3], [4].\n*   **Relative Permittivity:** 2.3 [3], [4].\n*   **Design Standards:** AEIC, IEC [3], [4].\n\nThe cable is available in two construction types: a Corrugated Sheath version [1] and a Laminate Sheath version [2]. Both constructions feature a Concentric Stranded, Compact, or Segmental Copper or Alumimum Conductor, a Smooth Conductor Shield, Super Clean XLPE Insulation, and a Polyethylene Jacket with Extruded Semi-Conductive Outer Layer [1], [2].",
+    "retrieved_doc_names": [
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "southwire high-voltage-bonding-cable.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "southwire_spec45252.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "southwire_spec45051.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf"
+    ],
+    "context_char_count": 7088,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 16.72604012489319,
+    "timing": {
+      "retrieval": 1.6683909893035889,
+      "rerank": 4.5918309688568115,
+      "generation": 9.196700096130371,
+      "judge": 1.2690949440002441,
+      "total": 16.72604012489319
+    },
+    "generator_tokens": {
+      "prompt": 3049,
+      "completion": 331,
+      "thinking": 0,
+      "total": 3380,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1165,
+      "completion": 67,
+      "thinking": null,
+      "total": 1232,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0004373,
+      "judge": 0.0001433,
+      "total": 0.0005806
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qSVLafDRPLSmlu8P17HPuAM",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1021,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_029",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the absolute maximum DC input voltage for the PVI-CENTRAL-US models?",
+    "expected_answer": "The absolute maximum DC input voltage is 600 Vdc.",
+    "source_documents": [],
+    "generated_answer": "The absolute maximum DC input voltage for the PVI-CENTRAL-US models is 600 Vdc [1], [2], [6], [8].\n\nSpecifically, this value is listed for both the PVI-CENTRAL-250-US and PVI-CENTRAL-300-US models as follows:\n*   **Absolute maximum input voltage (Vdc):** 600 [1]\n*   **Maximum input voltage (Vdc):** 600 [2]\n*   **Input side (DC) Vdc:** 600 [6]\n*   **Absolute Maximum Voltage Vdc:** 600 [8]\n\nAdditionally, the installation manual specifies that any external DC switch selected for these models must have a rated voltage of 600 Vdc and earth insulation of 600 Vdc [10]. The manual also notes that the maximum input voltage of up to 600Vdc allows for high design flexibility and reduced DC distribution losses [9].",
+    "retrieved_doc_names": [
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "cps 125kw manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "yotta dpi-208-480_9.0+(2).pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "pvi-central-250300-datasheet.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "cps 125kw manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf"
+    ],
+    "context_char_count": 25396,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 17.68487811088562,
+    "timing": {
+      "retrieval": 1.6182279586791992,
+      "rerank": 4.643977165222168,
+      "generation": 10.235848903656006,
+      "judge": 1.1867961883544922,
+      "total": 17.68487811088562
+    },
+    "generator_tokens": {
+      "prompt": 10648,
+      "completion": 220,
+      "thinking": 0,
+      "total": 10868,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1218,
+      "completion": 67,
+      "thinking": null,
+      "total": 1285,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0011528,
+      "judge": 0.0001486,
+      "total": 0.0013014
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qyVLad_kHLSmlu8P17HPuAM",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 712,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_011",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the model number of the AcquiSuite datalogger discussed in the document?",
+    "expected_answer": "AcquiSuite EMB A8810",
+    "source_documents": [],
+    "generated_answer": "The model number of the AcquiSuite datalogger discussed in the documents is the EMB A8810 [1], [2]. It is described as a datalogger used on most commercial sites to detect and collect data from external devices [1]. Technical details for the device also identify it as the EMB AcquiSuite A8810 [2].",
+    "retrieved_doc_names": [
+      "acquisuite-basics---external.pdf",
+      "acquisuite backup and restore.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "acquisuite-basics---external.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "acquisuite-basics---external.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "acquisuite backup and restore.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "acquisuite-basics---external.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf"
+    ],
+    "context_char_count": 9412,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 18.129026174545288,
+    "timing": {
+      "retrieval": 1.6260240077972412,
+      "rerank": 4.636298894882202,
+      "generation": 10.401518106460571,
+      "judge": 1.4651610851287842,
+      "total": 18.129026174545288
+    },
+    "generator_tokens": {
+      "prompt": 3693,
+      "completion": 75,
+      "thinking": 275,
+      "total": 4043,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 875,
+      "completion": 67,
+      "thinking": null,
+      "total": 942,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0005918,
+      "judge": 0.0001143,
+      "total": 0.0007061
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qiVLafGbDoSX2_gPs4rJ2Qg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 298,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_021",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the Siemens product number for a 125A TMTU circuit breaker with an amperage of 125A and a 25KAIC @ 480V rating?",
+    "expected_answer": "The Siemens product number is 3VA5112-4EC31-0AA0.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the Siemens product number for a 125A TMTU circuit breaker with an amperage of 125A and a 25KAIC @ 480V rating is **3VA5112-4ED31-0AA0** [15].\n\nThe selection process for this product number is as follows:\n*   **Frame and Amperage:** The breaker is part of the 3VA51 125A Frame [15]. For a continuous ampere rating of 125, the base catalog number starts with 3VA5112 [15].\n*   **Interrupting Class:** A rating of 25KAIC @ 480V corresponds to the \"S-Interrupting Class (SEAS)\" for the 3VA51 series [11], [15].\n*   **Configuration:** For a 3-Pole Thermal-Magnetic Trip Unit (TM210 FTFM) without lugs, the catalog number is 3VA5112-4ED31-0AA0 [15].\n\nAdditional technical details for this series include:\n*   **Trip Unit Type:** It features a non-interchangeable thermal-magnetic trip unit [2], [15].\n*   **Standard Lugs:** Lugs are not included as standard with 3VA circuit breakers [2]. The standard lug option for a 125A TMTU is catalog number 3VA91330JB11, which accommodates 3-POLE #14-3/0 cables [9].\n*   **Dimensions:** A 3-pole 3VA41/3VA5 125A breaker has a width of 3 (76.2) in. (mm), a height of 5.1 (129.4) in. (mm), and a depth of 3.6 (92.2) in. (mm) [21].",
+    "retrieved_doc_names": [
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 27042,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 4,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 4.5,
+      "verdict": "pass"
+    },
+    "time": 18.212903022766113,
+    "timing": {
+      "retrieval": 1.6298649311065674,
+      "rerank": 4.6305320262908936,
+      "generation": 10.357645273208618,
+      "judge": 1.5948309898376465,
+      "total": 18.212903022766113
+    },
+    "generator_tokens": {
+      "prompt": 17263,
+      "completion": 435,
+      "thinking": 0,
+      "total": 17698,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1688,
+      "completion": 75,
+      "thinking": null,
+      "total": 1763,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0019003,
+      "judge": 0.0001988,
+      "total": 0.0020991
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qiVLaZnbB4SX2_gPs4rJ2Qg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1203,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_020",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the specific voltage mentioned for the Gen-tie Transmission Line within the Easley Renewable Energy Project?",
+    "expected_answer": "500 kV",
+    "source_documents": [],
+    "generated_answer": "The specific voltage mentioned for the Gen-tie Transmission Line within the Easley Renewable Energy Project is 500 kV [1], [2], [5], [8], [25].\n\nAdditional details regarding this 500 kV gen-tie line include:\n*   The project includes an approximate 6.7-mile 500 kV gen-tie line [2], [25].\n*   The line is described as a 3-phase 500-kV bundled set of conductors [7].\n*   The gen-tie line will be located within a 175-foot ROW [1], [20], [25].\n*   Upgrades to the Oberon Switchyard, including the installation of a 500 kV Circuit Breaker and two 500 kV Disconnect Switches, are required to accommodate the interconnection of the Easley 500 kV gen-tie line [1], [8].\n*   The line will transmit power from the project's onsite substation to the Oberon Switchyard, and then to the SCE Red Bluff Substation via the existing Oberon 500 kV gen-tie line [1], [2], [6].\n*   The 500 kV gen-tie line structures will be monopoles with an average height of 120 feet and a maximum height of up to 199 feet [1], [7].",
+    "retrieved_doc_names": [
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf"
+    ],
+    "context_char_count": 27525,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 19.35048818588257,
+    "timing": {
+      "retrieval": 1.7299211025238037,
+      "rerank": 4.514160871505737,
+      "generation": 9.916774034500122,
+      "judge": 3.1895930767059326,
+      "total": 19.35048818588257
+    },
+    "generator_tokens": {
+      "prompt": 7359,
+      "completion": 304,
+      "thinking": 585,
+      "total": 8248,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 954,
+      "completion": 69,
+      "thinking": 351,
+      "total": 1374,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.001267,
+      "judge": 0.0003687,
+      "total": 0.0016357
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "pyVLaeKcJ4SX2_gPs4rJ2Qg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 999,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_002",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+    "expected_answer": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+    "source_documents": [],
+    "generated_answer": "According to the general notes, the maximum specified length for an RS-485 bus cable is 4000FT (1220M) [2], [11].\n\nAdditional details regarding RS-485 cable length and configurations from the provided documents include:\n*   **Total Network Length:** If an RS485 repeater is not being used, the maximum length for cable connecting all devices is 4000 feet (1219.20 meters) [1].\n*   **Stub Length:** RS485 wiring must be in a daisy chain configuration, and stubs shall be less than 15m (49') [2], [11].\n*   **Single Bus Segment:** A single bus using RS485 may connect up to 31 meters [1].\n*   **Inverter-Specific Limits:** For certain inverter configurations (AURORA), the recommended maximum length of a daisy chain is 1200 metres [4].\n*   **General Connectivity:** All RS485 connections are viable for up to 4000 feet (1219.20 meters) [3].",
+    "retrieved_doc_names": [
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "cps 125kw manual.pdf",
+      "ul_s0489_13.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "ul_s0489_13.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "ul_s0489_13.pdf"
+    ],
+    "context_char_count": 56709,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 20.373769760131836,
+    "timing": {
+      "retrieval": 1.6992058753967285,
+      "rerank": 4.854501962661743,
+      "generation": 12.343276977539062,
+      "judge": 1.476747751235962,
+      "total": 20.373769760131836
+    },
+    "generator_tokens": {
+      "prompt": 18201,
+      "completion": 249,
+      "thinking": 0,
+      "total": 18450,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1049,
+      "completion": 69,
+      "thinking": null,
+      "total": 1118,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0019197,
+      "judge": 0.0001325,
+      "total": 0.0020522
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "rSVLaarFIsrXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 839,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_025",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What two pieces of information were noted as missing from a lockout/tagout tag?",
+    "expected_answer": "The technician\u2019s full name and date.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided documents, the two pieces of information noted as missing from a lockout/tagout tag were the technician\u2019s full name and the date [1].\n\nWhile conducting a lockout/tagout, it was observed that the tag lacked this information, which could lead to confusion during a shift handover [1]. Other reports also noted instances where a tag was applied without the worker\u2019s name [3] or where tags were written illegibly [2]. According to safety regulations, each lockout or tagout device must include provisions for the identification of the employee applying the device [5], [10], [16].",
+    "retrieved_doc_names": [
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 45551,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 20.643445014953613,
+    "timing": {
+      "retrieval": 1.7429921627044678,
+      "rerank": 4.519290924072266,
+      "generation": 13.064186096191406,
+      "judge": 1.3169379234313965,
+      "total": 20.643445014953613
+    },
+    "generator_tokens": {
+      "prompt": 11415,
+      "completion": 128,
+      "thinking": 559,
+      "total": 12102,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 756,
+      "completion": 67,
+      "thinking": null,
+      "total": 823,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.001584,
+      "judge": 0.0001024,
+      "total": 0.0016864
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qyVLacbaF-mN2_gP8Ja5mAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 598,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_024",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What specific personal protective equipment (PPE) was found to be cracked during checks, compromising arc-flash protection?",
+    "expected_answer": "A face shield.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the following specific items of personal protective equipment (PPE) were found to be cracked, compromising arc-flash protection:\n\n*   **Face Shields:** During PPE checks, a technician was found with a cracked face shield that would not have provided proper arc-flash protection during switching [1]. Another instance was recorded during arc flash preparation where a worker used a cracked face shield [9]. Additionally, an arc flash hood stored folded was found to be cracked at the face shield [4].\n*   **Balaclavas:** While inspecting arc flash PPE, balaclavas that had been stored folded were found to have visible cracks [2].\n*   **Hood Lenses and Visors:** One arc flash hood lens was found to be cracked, which would have prevented it from protecting the technician adequately [3]. Similarly, an inspection of arc flash hoods identified one with a cracked visor [8].\n\nOther items found to be cracked during general safety inspections included a hard hat with visible UV damage and cracks [10], a hard hat cracked at the brim [20], and an eyewash station activation paddle [6].",
+    "retrieved_doc_names": [
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "arc flash safety guide for field technicians and engineers.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "osha ppe cfr-2024-title29-vol5-part1910-subparti.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "osha ppe cfr-2024-title29-vol5-part1910-subparti.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "osha ppe cfr-2024-title29-vol5-part1910-subparti.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf"
+    ],
+    "context_char_count": 44472,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 22.39545702934265,
+    "timing": {
+      "retrieval": 1.6136012077331543,
+      "rerank": 4.648343086242676,
+      "generation": 14.701985120773315,
+      "judge": 1.431494951248169,
+      "total": 22.39545702934265
+    },
+    "generator_tokens": {
+      "prompt": 10807,
+      "completion": 233,
+      "thinking": 872,
+      "total": 11912,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 849,
+      "completion": 73,
+      "thinking": null,
+      "total": 922,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0017843,
+      "judge": 0.0001141,
+      "total": 0.0018984
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qiVLaY7-KcrXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1122,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_022",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "According to the 'Lug Selection' table, how many cables per phase are used with the 800/1000A TMTU/ETU lugs (part number 3VA9673-0JJ43)?",
+    "expected_answer": "There are 4 cables per phase used with the 800/1000A TMTU/ETU lugs.",
+    "source_documents": [],
+    "generated_answer": "According to the 'Lug Selection' table, the 800/1000A TMTU/ETU lugs with part number 3VA9673-0JJ43 are used with 4 cables per phase [2].\n\nThe 'Lug Selection' table also specifies the following for this part number:\n*   **Description:** 3-POLE 4/0 - 500KCMIL [2]\n*   **Circuit Breaker Ampere Rating:** 800/1000A TMTU/ETU [2]\n\nAdditionally, the '3VA \u201cStandard\u201d lugs' table lists the same part number (3VA9673-0JJ43) for 800/1000A TMTU/ETU with a checkmark (\u2713) in the Cables Per Phase column [1]. This table also confirms the description as 3-POLE 4/0 - 500KCMIL [1].",
+    "retrieved_doc_names": [
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 20491,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 22.53135633468628,
+    "timing": {
+      "retrieval": 1.6825122833251953,
+      "rerank": 4.608581781387329,
+      "generation": 14.979566097259521,
+      "judge": 1.2606620788574219,
+      "total": 22.53135633468628
+    },
+    "generator_tokens": {
+      "prompt": 10892,
+      "completion": 216,
+      "thinking": 796,
+      "total": 11904,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1603,
+      "completion": 67,
+      "thinking": null,
+      "total": 1670,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0017328,
+      "judge": 0.0001871,
+      "total": 0.0019199
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qyVLafTdOYSX2_gPs4rJ2Qg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 564,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_016",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "Which design standards are listed for the Southwire 345/400 kV XLPE Power Cable?",
+    "expected_answer": "The design standards listed for the Southwire 345/400 kV XLPE Power Cable are AEIC and IEC.",
+    "source_documents": [],
+    "generated_answer": "The design standards listed for the Southwire 345/400 kV XLPE Power Cable are AEIC and IEC [1], [2].\n\nThese standards are specified under the \"Design Characteristics\" section for cables with a Max Voltage Rating of 420 kV [1], [2]. This voltage class corresponds to the 345/400 kV XLPE Power Cable identified in the construction and data sections of the provided documentation [5], [6]. Additional specifications for this cable include:\n\n*   **Max Voltage Rating:** 420 kV [1], [2]\n*   **BIL Rating:** 1300/1425 kV [1], [2]\n*   **Factory Test Voltages (@400 kV):** 440 kV / 60 min. [1], [2]\n*   **XLPE Loss Factor:** 0.0005 [1], [2]\n*   **Relative Permittivity:** 2.3 [1], [2]",
+    "retrieved_doc_names": [
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire high-voltage-115kv-power-cable.pdf",
+      "southwire_spec45252.pdf",
+      "southwire high-voltage-bonding-cable.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "southwire_spec45051.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "southwire substation spec85010.pdf",
+      "southwire high-voltage-345-400kv-xlpe-power-cable.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "southwire_spec45051.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "southwire substation spec85045.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "southwire substation spec85045.pdf"
+    ],
+    "context_char_count": 22334,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 22.57016682624817,
+    "timing": {
+      "retrieval": 1.6976540088653564,
+      "rerank": 4.833274841308594,
+      "generation": 14.764590978622437,
+      "judge": 1.274616003036499,
+      "total": 22.57016682624817
+    },
+    "generator_tokens": {
+      "prompt": 8480,
+      "completion": 222,
+      "thinking": 693,
+      "total": 9395,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1094,
+      "completion": 67,
+      "thinking": null,
+      "total": 1161,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0014219,
+      "judge": 0.0001362,
+      "total": 0.0015581
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "rCVLaZ3iHumN2_gP8Ja5mAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 676,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_013",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the common IP Address setting for an AcquiSuite using a cellular modem?",
+    "expected_answer": "192.168.2.50",
+    "source_documents": [],
+    "generated_answer": "The common IP Address setting for an AcquiSuite using a cellular modem is 192.168.2.50 [1].\n\nIn addition to the IP Address, other common network settings for an AcquiSuite using a cellular modem include:\n*   **DHCP+UPnP:** disabled [1]\n*   **Netmask:** 255.255.255.0 [1]\n*   **Gateway:** 192.168.2.1 [2]\n*   **DNS Server #1:** 8.8.4.4 [2]\n*   **DNS Server #2:** 8.8.8.8 [2]\n\nWhile these settings are common, some sites, particularly retrofits, may utilize different network configurations [2]. These settings should not be changed unless they are confirmed to be incorrect by checking site drawings or consulting with Application Engineers (AEs) [2].",
+    "retrieved_doc_names": [
+      "acquisuite-basics---external.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "acquisuite-basics---external.pdf",
+      "acquisuite-basics---external.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "cps 125kw manual.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "cps 125kw manual.pdf",
+      "acquisuite-basics---external.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "acquisuite backup and restore.pdf"
+    ],
+    "context_char_count": 30502,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 23.217085123062134,
+    "timing": {
+      "retrieval": 1.6404337882995605,
+      "rerank": 4.891411304473877,
+      "generation": 15.459716081619263,
+      "judge": 1.2254929542541504,
+      "total": 23.217085123062134
+    },
+    "generator_tokens": {
+      "prompt": 14978,
+      "completion": 204,
+      "thinking": 637,
+      "total": 15819,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 954,
+      "completion": 67,
+      "thinking": null,
+      "total": 1021,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0020253,
+      "judge": 0.0001222,
+      "total": 0.0021475
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "rSVLaZqbDcrXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 650,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_026",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What component was found to be missing from a portable grounding set at the substation?",
+    "expected_answer": "A ground clamp.",
+    "source_documents": [],
+    "generated_answer": "At the substation, a **ground clamp** was found to be missing from a portable grounding set [5]. This missing component was identified as a safety risk that could compromise electrical safety, and the set was removed from service immediately [5].",
+    "retrieved_doc_names": [
+      "national electrical code 2023 chapter 2.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "ul_s0891_12.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "southern states group operated switch application guide.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf",
+      "careful field service safety observations 2024 2025.pdf"
+    ],
+    "context_char_count": 39336,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 4.2,
+      "verdict": "partial"
+    },
+    "time": 24.123625993728638,
+    "timing": {
+      "retrieval": 1.7522211074829102,
+      "rerank": 4.509066820144653,
+      "generation": 8.634002923965454,
+      "judge": 9.228295087814331,
+      "total": 24.123625993728638
+    },
+    "generator_tokens": {
+      "prompt": 9536,
+      "completion": 48,
+      "thinking": 0,
+      "total": 9584,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 681,
+      "completion": 69,
+      "thinking": 1201,
+      "total": 1951,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0009728,
+      "judge": 0.0009364,
+      "total": 0.0019092
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qiVLac3kKcrXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 246,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_017",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch?",
+    "expected_answer": "The maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch is 550 kV \u2013 800 kV.",
+    "source_documents": [],
+    "generated_answer": "The maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch is 550 kV - 800 kV [1], [2]. According to the product's ratings table, the specific maximum voltage ratings are 550 and 800 [3].\n\nThe application guide further specifies that the EV-2H is a recommended switch configuration for the following voltage and Basic Insulation Level (BIL) ratings:\n*   15.5 / 110 [14]\n*   27 / 150 [14]\n*   38 / 200 [14]\n*   48.3 / 250 [14]\n*   72.5 / 350 [14]\n*   123 / 550 [14]\n*   145 / 650 [14]\n*   170 / 750 [14]\n*   245 / 900 [14]\n*   362 / 1050 [14]\n*   550 / 1800 [14]\n*   800 / 2050 [14]",
+    "retrieved_doc_names": [
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states switch-accessories-bulletin-1400-a.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states group operated switch application guide.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states group operated switch application guide.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "ul_s0489_13.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf"
+    ],
+    "context_char_count": 27189,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 24.77102828025818,
+    "timing": {
+      "retrieval": 1.716231107711792,
+      "rerank": 4.814145088195801,
+      "generation": 16.763641834259033,
+      "judge": 1.4769783020019531,
+      "total": 24.77102828025818
+    },
+    "generator_tokens": {
+      "prompt": 12012,
+      "completion": 274,
+      "thinking": 1023,
+      "total": 13309,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 957,
+      "completion": 67,
+      "thinking": null,
+      "total": 1024,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0020269,
+      "judge": 0.0001225,
+      "total": 0.0021494
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "rCVLaZfKEMrXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 599,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_006",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What communication interfaces are used by the BDM-1200-LV/BDM-1600-LV Micro Inverters?",
+    "expected_answer": "WI-FI, Bluetooth",
+    "source_documents": [],
+    "generated_answer": "The BDM-1200-LV and BDM-1600-LV micro inverters utilize the following communication interfaces:\n\n*   **WI-FI and Bluetooth:** These models are explicitly listed as having WI-FI and Bluetooth as their communication interfaces [4], [6]. They feature built-in WiFi and an intuitive mobile app for real-time performance monitoring, troubleshooting, and receiving alerts [4].\n*   **Powerline Communications (PLC):** Firmware for the micro inverters is upgradable via PLC or Wi-Fi [18]. General protection function documentation also lists Powerline Communications and Wi-Fi as communication methods [1].\n*   **RS485:** The inverters support RS485 communication for networking multiple units [5], [11]. \n    *   **Capacity:** Up to 32 inverters can be connected together in an RS485 communication network [5].\n    *   **Topology:** A daisy-chain topology is recommended to minimize noise and bus reflections [5].\n    *   **Hardware:** The RS485 interface uses an 8 pin PCB connector plug [8] or an 8 pin connector [11]. It can also involve a 2+6pin connector where specific pins are designated for RS485_A, RS485_B, and RS485_GND [3].\n    *   **Configuration:** RS485 settings include choosing a unique Modbus Address for each inverter and a Baud Rate of 9600 [2].\n    *   **Termination:** The interface includes a selector switch (S201) to enable or disable a 120\u03a9 terminal resistor; this should be set to the \"ON\" position only for the last inverter in a daisy chain [5], [10].\n*   **RJ45 and RJ12:** Some documentation mentions an RJ45 port for \"Debug Only\" [3]. Other related inverter documentation mentions RJ12 connectors where pins 2 (+TR) and 4 (-TR) are required for RS485 communication [7], [23].",
+    "retrieved_doc_names": [
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf"
+    ],
+    "context_char_count": 19379,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 25.271064043045044,
+    "timing": {
+      "retrieval": 1.677746057510376,
+      "rerank": 4.595916748046875,
+      "generation": 17.667954921722412,
+      "judge": 1.3294110298156738,
+      "total": 25.271064043045044
+    },
+    "generator_tokens": {
+      "prompt": 6716,
+      "completion": 452,
+      "thinking": 955,
+      "total": 8123,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1332,
+      "completion": 67,
+      "thinking": null,
+      "total": 1399,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0015209,
+      "judge": 0.00016,
+      "total": 0.0016809
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "qyVLaYyCK8rXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1700,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  }
+]
