@@ -64,7 +64,7 @@ CHECKPOINT_INTERVAL = 10
 DEFAULT_WORKERS = 50  # Optimal for 1 Cloud Run instance (balances parallelism vs contention)
 
 # Cloud Run config
-CLOUD_RUN_URL = "https://bfai-api-ppfq5ahfsq-ue.a.run.app"
+CLOUD_RUN_URL = "https://bfai-app-ppfq5ahfsq-ue.a.run.app"  # PROD
 CLOUD_PROJECT_ID = "bfai-prod"
 CLOUD_SERVICE = "bfai-api"
 CLOUD_REGION = "us-east1"
@@ -133,6 +133,8 @@ class GoldEvaluator:
         config_type: str = "experiment",
         config_path: Path = None,
         num_questions: int = None,  # For run directory naming
+        cloud_url: str = None,  # Custom Cloud Run URL (overrides default)
+        endpoint_name: str = None,  # Friendly name for the endpoint (for reporting)
     ):
         # Load config
         self.config = load_config(config_type=config_type, config_path=config_path)
@@ -184,16 +186,22 @@ class GoldEvaluator:
         
         # Cloud mode setup
         if cloud_mode:
-            print(f"CLOUD MODE: Using Cloud Run endpoint {CLOUD_RUN_URL}")
+            # Use custom URL if provided, otherwise fall back to default
+            self._cloud_url = cloud_url if cloud_url else CLOUD_RUN_URL
+            self._endpoint_name = endpoint_name if endpoint_name else "default"
+            print(f"CLOUD MODE: Using Cloud Run endpoint {self._cloud_url}")
+            if endpoint_name:
+                print(f"  Endpoint name: {self._endpoint_name}")
             # Load SA credentials for Cloud Run auth (don't set globally - judge needs default creds)
             from google.oauth2 import service_account
             self._cloud_credentials = service_account.IDTokenCredentials.from_service_account_file(
-                str(SA_KEY_PATH), target_audience=CLOUD_RUN_URL
+                str(SA_KEY_PATH), target_audience=self._cloud_url
             )
             self._refresh_cloud_token()
-            self.index_metadata = {"job_id": self.job_id, "mode": "cloud", "endpoint": CLOUD_RUN_URL}
+            self.index_metadata = {"job_id": self.job_id, "mode": "cloud", "endpoint": self._cloud_url, "endpoint_name": self._endpoint_name}
             self.orchestrator = {
-                "endpoint": CLOUD_RUN_URL,
+                "endpoint": self._cloud_url,
+                "endpoint_name": self._endpoint_name,
                 "service": CLOUD_SERVICE,
                 "project_id": CLOUD_PROJECT_ID,
                 "environment": CLOUD_ENVIRONMENT,
@@ -569,7 +577,7 @@ class GoldEvaluator:
             "reasoning_effort": self.generator_reasoning,  # Match local reasoning
         }
         response = requests.post(
-            f"{CLOUD_RUN_URL}/query",
+            f"{self._cloud_url}/query",
             headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
             json=payload,
             timeout=120,
@@ -578,7 +586,7 @@ class GoldEvaluator:
             # Token expired, refresh and retry
             self._refresh_cloud_token()
             response = requests.post(
-                f"{CLOUD_RUN_URL}/query",
+                f"{self._cloud_url}/query",
                 headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
                 json=payload,
                 timeout=120,
@@ -589,7 +597,7 @@ class GoldEvaluator:
     def _cloud_retrieve(self, question: str) -> list:
         """Get raw recall candidates from Cloud Run /retrieve endpoint."""
         response = requests.post(
-            f"{CLOUD_RUN_URL}/retrieve",
+            f"{self._cloud_url}/retrieve",
             headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
             json={"query": question, "job_id": self.job_id, "recall_top_k": 100},
             timeout=60,
@@ -597,7 +605,7 @@ class GoldEvaluator:
         if response.status_code == 401:
             self._refresh_cloud_token()
             response = requests.post(
-                f"{CLOUD_RUN_URL}/retrieve",
+                f"{self._cloud_url}/retrieve",
                 headers={"Authorization": f"Bearer {self._cloud_token}", "Content-Type": "application/json"},
                 json={"query": question, "job_id": self.job_id, "recall_top_k": 100},
                 timeout=60,

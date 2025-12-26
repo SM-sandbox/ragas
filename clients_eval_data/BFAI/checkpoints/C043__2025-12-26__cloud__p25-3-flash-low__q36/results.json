@@ -1,0 +1,2720 @@
+{
+  "schema_version": "1.1",
+  "timestamp": "2025-12-26T07:13:46.680594",
+  "client": "BFAI",
+  "index": {
+    "job_id": "bfai__eval66a_g1_1536_tt",
+    "mode": "cloud",
+    "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+    "endpoint_name": "default"
+  },
+  "config": {
+    "generator_model": "gemini-3-flash-preview",
+    "generator_reasoning_effort": "low",
+    "generator_seed": 42,
+    "judge_model": "gemini-3-flash-preview",
+    "judge_reasoning_effort": "low",
+    "judge_seed": 42,
+    "precision_k": 25,
+    "recall_k": 100,
+    "workers": 100,
+    "temperature": 0.0
+  },
+  "metrics": {
+    "precision_k": 25,
+    "total": 36,
+    "completed": 36,
+    "recall_at_100": 1.0,
+    "mrr": 1.0,
+    "pass_rate": 0.9444444444444444,
+    "partial_rate": 0.027777777777777776,
+    "fail_rate": 0.027777777777777776,
+    "acceptable_rate": 0.9722222222222222,
+    "correctness_avg": 4.888888888888889,
+    "completeness_avg": 5.0,
+    "faithfulness_avg": 4.888888888888889,
+    "relevance_avg": 5.0,
+    "clarity_avg": 5.0,
+    "overall_score_avg": 4.916666666666667
+  },
+  "latency": {
+    "total_avg_s": 20.11735725402832,
+    "total_min_s": 8.118726253509521,
+    "total_max_s": 34.70384216308594,
+    "by_phase": {
+      "retrieval_avg_s": 0.0,
+      "rerank_avg_s": 0.0,
+      "generation_avg_s": 0.0,
+      "judge_avg_s": 2.401368565029568
+    }
+  },
+  "tokens": {
+    "prompt_total": 0,
+    "completion_total": 0,
+    "thinking_total": 0,
+    "cached_total": 0,
+    "total": 0
+  },
+  "answer_stats": {
+    "avg_length_chars": 558.9722222222222,
+    "min_length_chars": 72,
+    "max_length_chars": 1220
+  },
+  "quality": {
+    "finish_reason_distribution": {
+      "UNKNOWN": 36
+    },
+    "fallback_rate": 0.0
+  },
+  "execution": {
+    "run_duration_seconds": 76.97452187538147,
+    "questions_per_second": 0.4676872180938323,
+    "workers": 100,
+    "rate_limiter": {
+      "current_rpm": 36,
+      "current_tpm": 36000,
+      "rpm_limit": 20000,
+      "tpm_limit": 20000000,
+      "max_concurrent": 50,
+      "rpm_utilization": 0.0018,
+      "tpm_utilization": 0.0018,
+      "total_requests": 36,
+      "total_tokens": 36000,
+      "total_throttles": 0,
+      "model_rotations": 0,
+      "active_model": "gemini-3-flash-preview",
+      "models_on_cooldown": []
+    }
+  },
+  "retry_stats": {
+    "total_questions": 36,
+    "succeeded_first_try": 36,
+    "succeeded_after_retry": 0,
+    "failed_all_retries": 0,
+    "total_retry_attempts": 36,
+    "avg_attempts": 1.0
+  },
+  "errors": {
+    "total_errors": 0,
+    "by_phase": {
+      "retrieval": 0,
+      "rerank": 0,
+      "generation": 0,
+      "judge": 0
+    },
+    "error_messages": []
+  },
+  "skipped": {
+    "count": 0,
+    "reasons": {
+      "missing_ground_truth": 0,
+      "invalid_question": 0,
+      "timeout": 0
+    },
+    "question_ids": []
+  },
+  "breakdown_by_type": {
+    "single_hop": {
+      "total": 36,
+      "pass": 34,
+      "partial": 1,
+      "fail": 1,
+      "pass_rate": 0.9444444444444444
+    }
+  },
+  "breakdown_by_difficulty": {
+    "easy": {
+      "total": 36,
+      "pass": 34,
+      "partial": 1,
+      "fail": 1,
+      "pass_rate": 0.9444444444444444
+    }
+  },
+  "quality_by_bucket": {
+    "single_hop": {
+      "easy": {
+        "count": 36,
+        "pass_rate": 0.9444444444444444,
+        "partial_rate": 0.027777777777777776,
+        "fail_rate": 0.027777777777777776,
+        "recall_at_100": 1.0,
+        "mrr": 1.0,
+        "overall_score_avg": 4.916666666666667,
+        "correctness_avg": 4.888888888888889,
+        "completeness_avg": 5.0,
+        "faithfulness_avg": 4.888888888888889,
+        "relevance_avg": 5.0,
+        "clarity_avg": 5.0
+      }
+    },
+    "multi_hop": {}
+  },
+  "orchestrator": {
+    "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+    "endpoint_name": "default",
+    "service": "bfai-api",
+    "project_id": "bfai-prod",
+    "environment": "production",
+    "region": "us-east1"
+  },
+  "warmup": {
+    "phase": "warmup",
+    "pings": [
+      {
+        "status": "ok",
+        "time": 19.8824942111969
+      },
+      {
+        "status": "ok",
+        "time": 0.1337571144104004
+      },
+      {
+        "status": "ok",
+        "time": 0.14177322387695312
+      }
+    ],
+    "parallel_warmup": [
+      {
+        "idx": 5,
+        "status": "ok",
+        "time": 6.554429054260254
+      },
+      {
+        "idx": 9,
+        "status": "ok",
+        "time": 6.553865194320679
+      },
+      {
+        "idx": 10,
+        "status": "ok",
+        "time": 6.554610967636108
+      },
+      {
+        "idx": 14,
+        "status": "ok",
+        "time": 6.558364152908325
+      },
+      {
+        "idx": 6,
+        "status": "ok",
+        "time": 6.566340923309326
+      },
+      {
+        "idx": 11,
+        "status": "ok",
+        "time": 6.563621759414673
+      },
+      {
+        "idx": 3,
+        "status": "ok",
+        "time": 6.571278810501099
+      },
+      {
+        "idx": 17,
+        "status": "ok",
+        "time": 6.563959121704102
+      },
+      {
+        "idx": 12,
+        "status": "ok",
+        "time": 6.667317867279053
+      },
+      {
+        "idx": 0,
+        "status": "ok",
+        "time": 6.689917087554932
+      },
+      {
+        "idx": 13,
+        "status": "ok",
+        "time": 6.697999000549316
+      },
+      {
+        "idx": 18,
+        "status": "ok",
+        "time": 6.728179216384888
+      },
+      {
+        "idx": 2,
+        "status": "ok",
+        "time": 6.743613958358765
+      },
+      {
+        "idx": 1,
+        "status": "ok",
+        "time": 6.745744943618774
+      },
+      {
+        "idx": 4,
+        "status": "ok",
+        "time": 6.7460408210754395
+      },
+      {
+        "idx": 15,
+        "status": "ok",
+        "time": 6.744527101516724
+      },
+      {
+        "idx": 8,
+        "status": "ok",
+        "time": 6.80820894241333
+      },
+      {
+        "idx": 7,
+        "status": "ok",
+        "time": 6.818649053573608
+      },
+      {
+        "idx": 19,
+        "status": "ok",
+        "time": 6.81458306312561
+      },
+      {
+        "idx": 16,
+        "status": "ok",
+        "time": 6.873399972915649
+      }
+    ],
+    "ramp_up": [
+      {
+        "workers": 10,
+        "ok_count": 10,
+        "time": 0.4064610004425049
+      },
+      {
+        "workers": 25,
+        "ok_count": 25,
+        "time": 0.6293761730194092
+      },
+      {
+        "workers": 50,
+        "ok_count": 50,
+        "time": 1.1584892272949219
+      }
+    ],
+    "total_warmup_time": 41.26165199279785,
+    "orchestrator_ready": true,
+    "target_workers": 100
+  },
+  "cost_summary_usd": {
+    "generator_total": 0.05531380000000001,
+    "judge_total": 0.007310099999999999,
+    "total": 0.0626239,
+    "avg_per_question": 0.0017395527777777776
+  },
+  "results": [
+    {
+      "question_id": "sh_easy_004",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum RMS line voltage that can be present on the input terminals of the device?",
+      "expected_answer": "Line voltages up to 600 VRMS can be present on the input terminals of the device.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided source documents, the maximum RMS line voltage that can be present on the input terminals of the device is **600 VRMS** [1].\n\nAccording to the warnings provided in the documentation:\n*   Line voltages up to **600 VRMS** are present on the input terminals of the device and throughout the connected line circuits during normal operation [1].\n*   These voltages may cause severe injury or death [1].\n*   Installation and servicing should be performed only by qualified, properly trained personnel [1].\n*   The device is classified as a **CLASS III** measurement device [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 8.118726253509521,
+      "timing": {
+        "cloud_retrieve": 0.5327343940734863,
+        "cloud_query": 5.3411760330200195,
+        "judge": 2.24477481842041,
+        "total": 8.118726253509521
+      },
+      "generator_tokens": {
+        "prompt": 10197,
+        "completion": 130,
+        "thinking": 0,
+        "total": 10327,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 433,
+        "completion": 73,
+        "thinking": null,
+        "total": 506,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0010717,
+        "judge": 7.25e-05,
+        "total": 0.0011442
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 593,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_005",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the rated AC voltage for the NEP BDM-1200-LV Micro Inverter?",
+      "expected_answer": "120V",
+      "source_documents": [],
+      "generated_answer": "The rated AC voltage for the NEP BDM-1200-LV Micro Inverter is 120V [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 9.833171129226685,
+      "timing": {
+        "cloud_retrieve": 0.9890360832214355,
+        "cloud_query": 4.339583873748779,
+        "judge": 4.504530906677246,
+        "total": 9.833171129226685
+      },
+      "generator_tokens": {
+        "prompt": 5916,
+        "completion": 31,
+        "thinking": 0,
+        "total": 5947,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 344,
+        "completion": 73,
+        "thinking": 260,
+        "total": 677,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.000604,
+        "judge": 0.0002456,
+        "total": 0.0008496
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 72,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_025",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What two pieces of information were noted as missing from a lockout/tagout tag?",
+      "expected_answer": "The technician\u2019s full name and date.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided documents, the two pieces of information noted as missing from a lockout/tagout tag were the technician\u2019s **full name** and the **date** [1].\n\nThis observation was recorded during a lockout/tagout procedure where it was noted that incomplete information on the tag could cause confusion during a shift handover [1]. Other related safety observations regarding lockout/tagout tags included:\n*   Tags applied without the worker's name [3].\n*   Tags that were written illegibly [2].\n*   A tag attached with pencil markings that had already faded [4].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "time": 10.325984954833984,
+      "timing": {
+        "cloud_retrieve": 1.0108520984649658,
+        "cloud_query": 6.573635101318359,
+        "judge": 2.7414629459381104,
+        "total": 10.325984954833984
+      },
+      "generator_tokens": {
+        "prompt": 12150,
+        "completion": 124,
+        "thinking": 0,
+        "total": 12274,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 607,
+        "completion": 69,
+        "thinking": 204,
+        "total": 880,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0012646,
+        "judge": 0.0002311,
+        "total": 0.0014957
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 569,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_012",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What are the names of the two external buttons on the AcquiSuite unit?",
+      "expected_answer": "Menu and Select",
+      "source_documents": [],
+      "generated_answer": "The two external buttons on the AcquiSuite unit are named **Menu** and **Select** [1]. These buttons are located at the top right corner of the unit [1].\n\nThe functions of these buttons include:\n*   **Menu button:** Used to scroll through menu options [1]. When changing IP addresses in the TCP/IP Config menu, it scrolls through the number/character options for the current cursor position [1]. It is also used to disable DHCP after selecting the DHCP+UPnP on/off option [1].\n*   **Select button:** Used to advance into the currently displayed menu option [1]. When changing IP addresses, it advances the cursor a single position [1]. It is also used to enable DHCP mode after selecting the DHCP+UPnP on/off option [1]. To navigate back to the TCP/IP Config menu, the Select button is pressed until the cursor moves to the end of the IP address [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 10.522424221038818,
+      "timing": {
+        "cloud_retrieve": 1.0893750190734863,
+        "cloud_query": 6.662444829940796,
+        "judge": 2.770570993423462,
+        "total": 10.522424221038818
+      },
+      "generator_tokens": {
+        "prompt": 5844,
+        "completion": 197,
+        "thinking": 0,
+        "total": 6041,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 581,
+        "completion": 73,
+        "thinking": 238,
+        "total": 892,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0006632,
+        "judge": 0.0002539,
+        "total": 0.0009171
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 850,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_008",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers?",
+      "expected_answer": "June 2015",
+      "source_documents": [],
+      "generated_answer": "The effective date for the UL 943 requirement regarding the Self-Test & Lockout feature in Dual Function Circuit Breakers is June 2015 [1].\n\nThe Dual Function Circuit Breaker combines GFCI and AFCI protection, which protects against both Ground Faults and Arc Faults [1]. This device includes the Self-Test & Lockout feature as required by UL 943 [1]. According to the referenced standards, UL 943 is the Standard for Ground-Fault Circuit-Interrupters [2][3].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 10.851404905319214,
+      "timing": {
+        "cloud_retrieve": 0.983057975769043,
+        "cloud_query": 8.624262809753418,
+        "judge": 1.2440500259399414,
+        "total": 10.851404905319214
+      },
+      "generator_tokens": {
+        "prompt": 8936,
+        "completion": 116,
+        "thinking": 472,
+        "total": 9524,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 633,
+        "completion": 67,
+        "thinking": null,
+        "total": 700,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0012704,
+        "judge": 9.01e-05,
+        "total": 0.0013605
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 459,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_014",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum voltage rating for the Southwire 345/400 kV XLPE Power Cable?",
+      "expected_answer": "The maximum voltage rating for the Southwire 345/400 kV XLPE Power Cable is 420 kV.",
+      "source_documents": [],
+      "generated_answer": "The maximum voltage rating for the Southwire 345/400 kV XLPE Power Cable is 420 [1][2]. This rating applies to both the corrugated sheath construction [1] and the laminate sheath construction [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 10.96173906326294,
+      "timing": {
+        "cloud_retrieve": 0.4014010429382324,
+        "cloud_query": 4.917150974273682,
+        "judge": 5.64315128326416,
+        "total": 10.96173906326294
+      },
+      "generator_tokens": {
+        "prompt": 3776,
+        "completion": 58,
+        "thinking": 0,
+        "total": 3834,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 435,
+        "completion": 67,
+        "thinking": 410,
+        "total": 912,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0004008,
+        "judge": 0.0003573,
+        "total": 0.0007581
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 196,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_007",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum efficiency of the BDM-1200-LV/BDM-1600-LV Micro Inverter?",
+      "expected_answer": "99.9%",
+      "source_documents": [],
+      "generated_answer": "Based on the provided source documents, the maximum efficiency for the BDM-1200-LV and BDM-1600-LV microinverters is as follows:\n\n*   **Max. Efficiency:** 97.5% [1]\n*   **Max. MPPT Efficiency:** 99.9% [1]\n*   **CEC Efficiency:** 96.5% [1]\nThese specifications are listed for both the BDM-1200-LV and BDM-1600-LV models within the same technical data table [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 4,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 4.8,
+        "verdict": "pass"
+      },
+      "time": 11.479955911636353,
+      "timing": {
+        "cloud_retrieve": 0.9783749580383301,
+        "cloud_query": 4.757047176361084,
+        "judge": 5.744506120681763,
+        "total": 11.479955911636353
+      },
+      "generator_tokens": {
+        "prompt": 6920,
+        "completion": 127,
+        "thinking": 0,
+        "total": 7047,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 452,
+        "completion": 69,
+        "thinking": 541,
+        "total": 1062,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0007428,
+        "judge": 0.0004515,
+        "total": 0.0011943
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 360,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_018",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch?",
+      "expected_answer": "The continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch is 2000 A / 3000 A / 4000 A.",
+      "source_documents": [],
+      "generated_answer": "The continuous current rating for the EV-2H Aluminum Vertical Disconnect Switch is 2000 A / 3000 A / 4000 A [1][2]. This rating applies to both the 550 kV and 800 kV maximum voltage models [1].\n\nAccording to the application guide for group operated switches, the EV-2H is a recommended configuration for the following continuous current requirements:\n*   2000A [3][4]\n*   3000A [3][4]\n*   4000A [3][4]",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 12.265767812728882,
+      "timing": {
+        "cloud_retrieve": 0.9787728786468506,
+        "cloud_query": 10.114964008331299,
+        "judge": 1.1719999313354492,
+        "total": 12.265767812728882
+      },
+      "generator_tokens": {
+        "prompt": 11504,
+        "completion": 156,
+        "thinking": 631,
+        "total": 12291,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 795,
+        "completion": 67,
+        "thinking": null,
+        "total": 862,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0016545,
+        "judge": 0.0001063,
+        "total": 0.0017608
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 401,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_002",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+      "expected_answer": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+      "source_documents": [],
+      "generated_answer": "According to the general notes, the maximum specified length for an RS-485 bus cable is 4000FT (1220M) [2]. The cable used for this bus must meet or exceed Belden 3106A specifications [2].\n\nOther source documents provided specify similar or related maximum lengths for RS-485 connections:\n*   For Shark 100 meters, the maximum length for cable connecting all devices is 4000 feet (1219.20 meters) if an RS485 repeater is not being used [1][3].\n*   For AURORA inverters connected in a daisy chain, the recommended maximum length is 1200 metres [4].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 12.931699275970459,
+      "timing": {
+        "cloud_retrieve": 0.5058891773223877,
+        "cloud_query": 11.147241115570068,
+        "judge": 1.2785332202911377,
+        "total": 12.931699275970459
+      },
+      "generator_tokens": {
+        "prompt": 18930,
+        "completion": 166,
+        "thinking": 610,
+        "total": 19706,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 817,
+        "completion": 73,
+        "thinking": null,
+        "total": 890,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0023864,
+        "judge": 0.0001109,
+        "total": 0.0024973
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 547,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_010",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "Which specific 3VA circuit breaker models are shipped as standard with aluminum load side lugs already installed?",
+      "expected_answer": "3VA41 panelboard mounted circuit breakers",
+      "source_documents": [],
+      "generated_answer": "Based on the provided documents, the specific 3VA circuit breaker models shipped as standard with aluminum load side lugs already installed are the **3VA41** panelboard mounted circuit breakers [1][8].\n\nOther models in the 3VA series have different standard shipping configurations:\n*   **3VA51 through 3VA55** thermal-magnetic trip breakers and **3VA61 through 3VA66** electronic trip breakers are shipped as standard without lugs installed [1].\n*   Specifically, **3VA61**, **3VA62**, **3VA63**, and **3VA64** electronic trip circuit breakers are shipped as complete, non-interchangeable trip circuit breakers without lugs [2][4][6][5].\n*   The **3VA65** 800A and **3VA66** 1000A electronic trip circuit breakers are shipped with nutkeepers on both line and load ends [3][7].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 13.172741174697876,
+      "timing": {
+        "cloud_retrieve": 0.9847989082336426,
+        "cloud_query": 10.906553983688354,
+        "judge": 1.2813591957092285,
+        "total": 13.172741174697876
+      },
+      "generator_tokens": {
+        "prompt": 21245,
+        "completion": 221,
+        "thinking": 650,
+        "total": 22116,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 1035,
+        "completion": 67,
+        "thinking": null,
+        "total": 1102,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0026679,
+        "judge": 0.0001303,
+        "total": 0.0027982
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 777,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_011",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the model number of the AcquiSuite datalogger discussed in the document?",
+      "expected_answer": "AcquiSuite EMB A8810",
+      "source_documents": [],
+      "generated_answer": "The model number of the AcquiSuite datalogger discussed in the provided documents is the **EMB A8810** [1].\n\nThe documents provide the following details regarding this device:\n*   **Description:** It is a datalogger used on most commercial sites to detect and collect data from various external devices [1].\n*   **Physical Components:** The unit features a green LCD screen, multiple communication ports (including RS485 and Ethernet), a USB port, and buttons for Menu and Setup [1].\n*   **Power Requirements:** The device is labeled for 24VAC/DC @ 300mA [1].\n*   **Network Configuration:** When using a cellular modem, common settings for the device include an IP Address of 192.168.2.50 and a Netmask of 255.255.255.0 [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "time": 13.180356740951538,
+      "timing": {
+        "cloud_retrieve": 1.214451789855957,
+        "cloud_query": 10.650146961212158,
+        "judge": 1.3157329559326172,
+        "total": 13.180356740951538
+      },
+      "generator_tokens": {
+        "prompt": 4434,
+        "completion": 198,
+        "thinking": 0,
+        "total": 4632,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 476,
+        "completion": 69,
+        "thinking": null,
+        "total": 545,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0005226,
+        "judge": 7.52e-05,
+        "total": 0.0005978
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 724,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_016",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "Which design standards are listed for the Southwire 345/400 kV XLPE Power Cable?",
+      "expected_answer": "The design standards listed for the Southwire 345/400 kV XLPE Power Cable are AEIC and IEC.",
+      "source_documents": [],
+      "generated_answer": "The design standards listed for the Southwire 345/400 kV XLPE Power Cable are AEIC and IEC [1][2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 14.123619079589844,
+      "timing": {
+        "cloud_retrieve": 1.349653959274292,
+        "cloud_query": 11.579519987106323,
+        "judge": 1.1944200992584229,
+        "total": 14.123619079589844
+      },
+      "generator_tokens": {
+        "prompt": 9099,
+        "completion": 32,
+        "thinking": 0,
+        "total": 9131,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 434,
+        "completion": 67,
+        "thinking": null,
+        "total": 501,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0009227,
+        "judge": 7.02e-05,
+        "total": 0.0009929
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 98,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_023",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the KAIC rating at 480V for a 250A, 3P TMTU circuit breaker listed under the NFG series (e.g., NFK3B100)?",
+      "expected_answer": "The KAIC rating at 480V for a 250A, 3P TMTU circuit breaker under the NFG series is 35KAIC.",
+      "source_documents": [],
+      "generated_answer": "The KAIC rating at 480V for a 250A, 3P TMTU circuit breaker listed under the NFG series (such as the NFK3B100) is 35KAIC [1].\n\nAccording to the Siemens Reference Guide for 3VA Enclosed Circuit Breakers, the NFG series is categorized under the following specifications:\n*   **Amperage:** 250A [1]\n*   **Poles:** 3P [1]\n*   **Interrupting Rating:** 35KAIC @ 480V [1]\nThe specific model NFK3B100 is listed as a 100 Amperage breaker within this 35KAIC @ 480V NFG series [1]. Other breakers in this same NFG series, ranging from 100 to 250 Amperage (such as NFK3B110, NFK3B125, NFK3B150, NFK3B175, NFK3B200, NFK3B225, and NFK3B250), also carry the 35KAIC @ 480V rating [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 14.636927127838135,
+      "timing": {
+        "cloud_retrieve": 1.012970209121704,
+        "cloud_query": 12.047515869140625,
+        "judge": 1.5764219760894775,
+        "total": 14.636927127838135
+      },
+      "generator_tokens": {
+        "prompt": 9568,
+        "completion": 293,
+        "thinking": 492,
+        "total": 10353,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 742,
+        "completion": 67,
+        "thinking": null,
+        "total": 809,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0014184,
+        "judge": 0.000101,
+        "total": 0.0015194
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 668,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_020",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the specific voltage mentioned for the Gen-tie Transmission Line within the Easley Renewable Energy Project?",
+      "expected_answer": "500 kV",
+      "source_documents": [],
+      "generated_answer": "The specific voltage mentioned for the Gen-tie Transmission Line within the Easley Renewable Energy Project is 500 kV [1][2][4].\n\nThe project includes an approximate 6.7-mile 500 kV gen-tie line that starts at an onsite substation [2][5]. This line is designed to transmit solar power generated by the project from the Oberon Switchyard to the SCE Red Bluff Substation [1][2]. To accommodate this interconnection, upgrades to the Oberon Switchyard are required, including the installation of a 500 kV Circuit Breaker and two 500 kV Disconnect Switches [1][4].\n\nAdditional specifications regarding the 500 kV gen-tie line include:\n*   **Structure Type:** The line will be constructed with monopole steel structures [1][3].\n*   **Height:** The structures will be an average of 120 feet tall, with a maximum height of up to 199 feet [1][3].\n*   **Span Length:** Conductor span lengths generally range from a minimum of 400 feet to a maximum of 2,200 feet [1].\n*   **Right-of-Way (ROW):** The line will be located within a 175-foot ROW across BLM administered lands [1][2][5].\n*   **Components:** The line will feature a 3-phase 500-kV bundled set of conductors, a ground wire, and telecommunications fiber-optic cables [3].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 15.608927011489868,
+      "timing": {
+        "cloud_retrieve": 1.2603237628936768,
+        "cloud_query": 13.030330181121826,
+        "judge": 1.3182399272918701,
+        "total": 15.608927011489868
+      },
+      "generator_tokens": {
+        "prompt": 8245,
+        "completion": 335,
+        "thinking": 0,
+        "total": 8580,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 849,
+        "completion": 67,
+        "thinking": null,
+        "total": 916,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0009585,
+        "judge": 0.0001117,
+        "total": 0.0010702
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 1220,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_003",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the DC system size specified for the BOYNE MOUNTAIN RESORT project?",
+      "expected_answer": "The DC system size is 1,770 KW DC.",
+      "source_documents": [],
+      "generated_answer": "The DC system size specified for the BOYNE MOUNTAIN RESORT project is 1,770 KW DC [1]. This specification is listed on the project's cover sheet under the project description section [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "time": 18.0601589679718,
+      "timing": {
+        "cloud_retrieve": 0.9964559078216553,
+        "cloud_query": 11.794795989990234,
+        "judge": 5.268882989883423,
+        "total": 18.0601589679718
+      },
+      "generator_tokens": {
+        "prompt": 37318,
+        "completion": 48,
+        "thinking": 832,
+        "total": 38198,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 405,
+        "completion": 69,
+        "thinking": 641,
+        "total": 1115,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0043334,
+        "judge": 0.0005168,
+        "total": 0.0048502
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 187,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_036",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "According to the document, what are the three protection configurations available for A32 Trip Units?",
+      "expected_answer": "The three protection configurations available for A32 Trip Units are LI, LSI, and LSIG.",
+      "source_documents": [],
+      "generated_answer": "The A32 Trip Units are available in three protection configurations [1]:\n\n*   **LI:** This configuration provides Long Time-delay Overload and Instantaneous Short Circuit protection [1]. It is also referred to as Series 2.0 (LI) [2].\n*   **LSI:** This configuration provides Long Time-delay Overload, Short Time-delay Short Circuit, and Instantaneous Short Circuit protection [1]. It is also referred to as Series 3.0 (LSI) [2].\n*   **LSIG:** This configuration provides Long Time-delay Overload, Short Time-delay Short Circuit, Instantaneous Short Circuit, and Equipment Ground Fault protection [1]. It is also referred to as Series 4.0 (LSIG) [2].\n\nIn the product selection guide, these configurations are identified by the following codes: SU 20 for LI, 30 for LSI, and 40 for LSIG [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "time": 18.047302961349487,
+      "timing": {
+        "cloud_retrieve": 1.1891059875488281,
+        "cloud_query": 13.715543031692505,
+        "judge": 3.142629861831665,
+        "total": 18.047302961349487
+      },
+      "generator_tokens": {
+        "prompt": 13002,
+        "completion": 211,
+        "thinking": 491,
+        "total": 13704,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 564,
+        "completion": 69,
+        "thinking": 291,
+        "total": 924,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0017283,
+        "judge": 0.0002877,
+        "total": 0.002016
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 789,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_022",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "According to the 'Lug Selection' table, how many cables per phase are used with the 800/1000A TMTU/ETU lugs (part number 3VA9673-0JJ43)?",
+      "expected_answer": "There are 4 cables per phase used with the 800/1000A TMTU/ETU lugs.",
+      "source_documents": [],
+      "generated_answer": "According to the 'Lug Selection' table, the 800/1000A TMTU/ETU lugs with part number 3VA9673-0JJ43 are used with 4 cables per phase [1]. While another table in the reference guide lists this part number with a checkmark (\u2713) in the \"Cables Per Phase\" column [1] the specific \"Lug Selection\" table explicitly specifies the value as 4 [1]. These lugs are designed for 3-POLE applications with a wire range of 4/0 - 500KCMIL [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "time": 19.098111867904663,
+      "timing": {
+        "cloud_retrieve": 1.5117509365081787,
+        "cloud_query": 13.617436170578003,
+        "judge": 3.9688868522644043,
+        "total": 19.098111867904663
+      },
+      "generator_tokens": {
+        "prompt": 11540,
+        "completion": 134,
+        "thinking": 0,
+        "total": 11674,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 564,
+        "completion": 69,
+        "thinking": 446,
+        "total": 1079,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0012076,
+        "judge": 0.0003962,
+        "total": 0.0016038
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 425,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_013",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the common IP Address setting for an AcquiSuite using a cellular modem?",
+      "expected_answer": "192.168.2.50",
+      "source_documents": [],
+      "generated_answer": "The common IP Address setting for an AcquiSuite using a cellular modem (such as the Digi or Multitech) is 192.168.2.50 [1].\n\nIn this configuration, the other common network settings include:\n*   **DHCP+UPnP:** disabled [1]\n*   **Netmask:** 255.255.255.0 [1]\n*   **Gateway:** 192.168.2.1 [2]\n*   **DNS Server #1:** 8.8.4.4 [2]\n*   **DNS Server #2:** 8.8.8.8 [2]\nWhile these settings are common, some sites, particularly retrofits, may utilize different network configurations [2]. It is advised not to change differing settings unless they are confirmed to be incorrect by checking site drawings or consulting with Application Engineers (AEs) [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 21.284900903701782,
+      "timing": {
+        "cloud_retrieve": 1.512341022491455,
+        "cloud_query": 18.631025791168213,
+        "judge": 1.1414778232574463,
+        "total": 21.284900903701782
+      },
+      "generator_tokens": {
+        "prompt": 15675,
+        "completion": 204,
+        "thinking": 487,
+        "total": 16366,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 615,
+        "completion": 67,
+        "thinking": null,
+        "total": 682,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.00199,
+        "judge": 8.83e-05,
+        "total": 0.0020783
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 646,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_033",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What type of information is highlighted by the 'NOTE' symbol in this manual?",
+      "expected_answer": "The 'NOTE' symbol highlights paragraphs containing processes and instructions that must be rigorously understood and followed to avoid potential damage to the equipment and negative results.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided documents, the 'NOTE' symbol highlights paragraphs containing processes and instructions that must be rigorously understood and followed to avoid potential damage to the equipment and negative results [1]. This symbol is used to highlight important safety information and potential safety risks to ensure the equipment is safely installed and commissioned [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 22.22508692741394,
+      "timing": {
+        "cloud_retrieve": 1.3751869201660156,
+        "cloud_query": 17.036812782287598,
+        "judge": 3.8130650520324707,
+        "total": 22.22508692741394
+      },
+      "generator_tokens": {
+        "prompt": 18085,
+        "completion": 62,
+        "thinking": 552,
+        "total": 18699,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 333,
+        "completion": 73,
+        "thinking": 432,
+        "total": 838,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0022197,
+        "judge": 0.0003649,
+        "total": 0.0025846
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 382,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_009",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC?",
+      "expected_answer": "65KA",
+      "source_documents": [],
+      "generated_answer": "The maximum AC interrupting rating for the Siemens 3VA41 circuit breaker at 480VAC is 65KA [3].\n\nAccording to the technical specifications and selection tables for the 3VA41:\n\n*   The 3VA41 circuit breaker is available with AC interrupting ratings up to 65KA @ 480VAC [3].\n*   This maximum rating of 65 is associated with the H-Interrupting Class (HEAB) for 2- and 3-pole breaker types at 480 Volts AC (50/60 Hz) [1][2].\n*   In the product catalog's summary table, this value is listed as 65,000 for the HEAB class at 480V [4].\n*   Other interrupting classes for the 3VA41 at 480V include:\n    *   **S-Interrupting Class (SEAB):** 25 [1][2] or 25,000 [4].\n    *   **M-Interrupting Class (MEAB):** 35 [1][2] or 35,000 [4].\n*   The 3VA41 is available in 1, 1 in 2-pole, 2 or 3-pole versions on 1 inch pole centers [3].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 22.731491088867188,
+      "timing": {
+        "cloud_retrieve": 1.3959648609161377,
+        "cloud_query": 19.838573932647705,
+        "judge": 1.496922254562378,
+        "total": 22.731491088867188
+      },
+      "generator_tokens": {
+        "prompt": 19235,
+        "completion": 306,
+        "thinking": 815,
+        "total": 20356,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 933,
+        "completion": 67,
+        "thinking": null,
+        "total": 1000,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0026164,
+        "judge": 0.0001201,
+        "total": 0.0027365
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 816,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_019",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch?",
+      "expected_answer": "The Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch is 60 Hz.",
+      "source_documents": [],
+      "generated_answer": "The Power Frequency listed for the EV-2H Aluminum Vertical Disconnect Switch is 60 Hz [1]. This specification is provided for both the 550 kV and 800 kV maximum voltage ratings of the switch [1]. The EV-2H is a heavy duty vertical break disconnect switch designed for high voltage applications ranging from 550 kV \u2013 800 kV [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 22.929214000701904,
+      "timing": {
+        "cloud_retrieve": 1.5068178176879883,
+        "cloud_query": 18.47434115409851,
+        "judge": 2.9480152130126953,
+        "total": 22.929214000701904
+      },
+      "generator_tokens": {
+        "prompt": 11665,
+        "completion": 85,
+        "thinking": 593,
+        "total": 12343,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 489,
+        "completion": 67,
+        "thinking": 295,
+        "total": 851,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0016156,
+        "judge": 0.0002822,
+        "total": 0.0018978
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 327,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_021",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the Siemens product number for a 125A TMTU circuit breaker with an amperage of 125A and a 25KAIC @ 480V rating?",
+      "expected_answer": "The Siemens product number is 3VA5112-4EC31-0AA0.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided documents, the Siemens product number for a 125A TMTU circuit breaker with an amperage of 125A and a 25KAIC @ 480V rating is **3VA5112-4ED31-0AA0** [3].\n\nThe following details support this selection:\n*   **Circuit Breaker Type:** The 3VA51 series is a 125A frame thermal-magnetic trip unit (TMTU) circuit breaker [2][3].\n*   **Interrupting Rating:** The \"S-Interrupting Class\" (SEAB/SEAS) for 3-pole 3VA circuit breakers is rated for 25 kA at 480V [4]. This corresponds to the \"25KAIC @ 480V\" requirement [1].\n*   **Amperage:** For a continuous ampere rating of 125, the catalog number is found in the 125A row of the selection table [3].\n*   **Product Number Construction:** \n    *   The base catalog number for a 125A, 3-pole, S-Interrupting Class breaker is **3VA5112-4ED31-0AA0** [3].\n    *   The \"4\" in the 10th digit position (3VA5112-**4**...) signifies the S-Interrupting Class, which matches the 25KAIC @ 480V specification [1][3][4].\n    *   The \"ED31\" portion indicates a 3-pole breaker with a fixed thermal-magnetic trip unit (FTFM) and no lugs [3]. Note that lugs are not included as standard with 3VA circuit breakers [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 2,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 3,
+        "verdict": "fail"
+      },
+      "time": 23.384249925613403,
+      "timing": {
+        "cloud_retrieve": 1.0944797992706299,
+        "cloud_query": 21.11935806274414,
+        "judge": 1.1703851222991943,
+        "total": 23.384249925613403
+      },
+      "generator_tokens": {
+        "prompt": 17885,
+        "completion": 404,
+        "thinking": 1494,
+        "total": 19783,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 1065,
+        "completion": 67,
+        "thinking": null,
+        "total": 1132,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0029959,
+        "judge": 0.0001333,
+        "total": 0.0031292
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 1158,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_015",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the nominal conductor temperature for the Southwire 345/400 kV XLPE Power Cable?",
+      "expected_answer": "The nominal conductor temperature for the Southwire 345/400 kV XLPE Power Cable is 90 \u00b0C.",
+      "source_documents": [],
+      "generated_answer": "The nominal conductor temperature for the Southwire 345/400 kV XLPE Power Cable is 90 [1][2]. This value is specified in degrees Celsius (\u00b0C) [1][2]. This temperature rating applies to both the SW Standard Wall XLPE Corrugated Sheath construction [1] and the SW Standard Wall XLPE Laminate Sheath construction [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 23.750006914138794,
+      "timing": {
+        "cloud_retrieve": 1.523435115814209,
+        "cloud_query": 20.849947929382324,
+        "judge": 1.3765718936920166,
+        "total": 23.750006914138794
+      },
+      "generator_tokens": {
+        "prompt": 10215,
+        "completion": 88,
+        "thinking": 493,
+        "total": 10796,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 485,
+        "completion": 73,
+        "thinking": null,
+        "total": 558,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0014018,
+        "judge": 7.77e-05,
+        "total": 0.0014795
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 314,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_017",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch?",
+      "expected_answer": "The maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch is 550 kV \u2013 800 kV.",
+      "source_documents": [],
+      "generated_answer": "The maximum voltage rating for the EV-2H Aluminum Vertical Disconnect Switch is 550 kV - 800 kV [1][2]. Specifically, the switch is available in two maximum voltage ratings: 550 kV and 800 kV [1].\n\nAdditional electrical ratings associated with these maximum voltage levels include:\n*   **BIL (kV):** 1800 kV for the 550 kV rating and 2050 kV for the 800 kV rating [1].\n*   **Continuous Current Rating:** 2000 A / 3000 A / 4000 A [2][1].\n*   **Short Time Withstand (3 sec):** 63 kA / 75 kA / 80 kA [1].\n*   **Peak Withstand:** 164 kA / 195 kA / 208 kA [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 23.795877933502197,
+      "timing": {
+        "cloud_retrieve": 1.7065880298614502,
+        "cloud_query": 19.33060884475708,
+        "judge": 2.7586591243743896,
+        "total": 23.795877933502197
+      },
+      "generator_tokens": {
+        "prompt": 12692,
+        "completion": 216,
+        "thinking": 0,
+        "total": 12908,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 584,
+        "completion": 67,
+        "thinking": 275,
+        "total": 926,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0013556,
+        "judge": 0.0002777,
+        "total": 0.0016333
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 555,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_029",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the absolute maximum DC input voltage for the PVI-CENTRAL-US models?",
+      "expected_answer": "The absolute maximum DC input voltage is 600 Vdc.",
+      "source_documents": [],
+      "generated_answer": "The absolute maximum DC input voltage for the PVI-CENTRAL-US models is 600 Vdc [1][2][3].\n\nSpecifically, this value applies to both the PVI-CENTRAL-250-US and the PVI-CENTRAL-300-US models [1][2][3]. This specification is listed as \"Absolute maximum input voltage (Vdc)\" [1] \"Maximum input voltage (Vdc)\" [2] and \"Absolute Maximum Voltage Vdc\" [3] across the provided technical documentation.",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 24.357023000717163,
+      "timing": {
+        "cloud_retrieve": 1.9108519554138184,
+        "cloud_query": 21.081473112106323,
+        "judge": 1.3646540641784668,
+        "total": 24.357023000717163
+      },
+      "generator_tokens": {
+        "prompt": 11299,
+        "completion": 120,
+        "thinking": 0,
+        "total": 11419,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 705,
+        "completion": 67,
+        "thinking": null,
+        "total": 772,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0011779,
+        "judge": 9.73e-05,
+        "total": 0.0012752
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 392,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_024",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What specific personal protective equipment (PPE) was found to be cracked during checks, compromising arc-flash protection?",
+      "expected_answer": "A face shield.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided safety observation reports, the following specific personal protective equipment (PPE) was found to be cracked, compromising arc-flash protection:\n\n*   **Face Shields:** During PPE checks, a technician was found with a cracked face shield that would not have provided proper arc-flash protection during switching [1]. Additionally, a worker was stopped from beginning a task because they were using a cracked face shield during arc flash preparation [6].\n*   **Balaclavas:** While inspecting arc flash PPE, balaclavas were found stored folded with visible cracks and were subsequently replaced [2].\n*   **Hoods and Hood Visors:** \n    *   An inspection of arc flash suits revealed a hood that had been stored folded and was cracked at the face shield [4]. \n    *   Another inspection of arc flash hoods identified one with a cracked visor, which was replaced [5].\n    *   A separate check of arc flash PPE found a hood lens that was cracked and would not have provided adequate protection [3].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 24.873913764953613,
+      "timing": {
+        "cloud_retrieve": 1.8547158241271973,
+        "cloud_query": 21.56915831565857,
+        "judge": 1.4500072002410889,
+        "total": 24.873913764953613
+      },
+      "generator_tokens": {
+        "prompt": 11408,
+        "completion": 382,
+        "thinking": 0,
+        "total": 11790,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 843,
+        "completion": 73,
+        "thinking": null,
+        "total": 916,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0012936,
+        "judge": 0.0001135,
+        "total": 0.0014071
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 1015,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_006",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What communication interfaces are used by the BDM-1200-LV/BDM-1600-LV Micro Inverters?",
+      "expected_answer": "WI-FI, Bluetooth",
+      "source_documents": [],
+      "generated_answer": "The BDM-1200-LV and BDM-1600-LV Micro Inverters utilize the following communication interfaces:\n\n*   **WI-FI:** These models feature built-in WiFi [1].\n*   **Bluetooth:** The units are equipped with a Bluetooth interface [1].\n*   **Mobile App:** They support an intuitive mobile app for iOS and Android, allowing users to monitor real-time performance, troubleshoot issues, and receive alerts [1].\n*   **Over-the-Air Updates:** The communication system supports over-the-air firmware updates [1].\n\nAdditionally, while the specific BDM-1200-LV/BDM-1600-LV datasheet lists WiFi and Bluetooth [1] general NEP microinverter documentation indicates that firmware can also be upgradable via Powerline Communications (PLC) when integrated with NEP's gateway (BDG-256) [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 24.951738119125366,
+      "timing": {
+        "cloud_retrieve": 1.9271528720855713,
+        "cloud_query": 21.508429050445557,
+        "judge": 1.5161290168762207,
+        "total": 24.951738119125366
+      },
+      "generator_tokens": {
+        "prompt": 7450,
+        "completion": 207,
+        "thinking": 0,
+        "total": 7657,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 595,
+        "completion": 73,
+        "thinking": null,
+        "total": 668,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0008278,
+        "judge": 8.87e-05,
+        "total": 0.0009165
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 765,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_030",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the rated voltage for the Southwire Type TC-ER Control Cable?",
+      "expected_answer": "The rated voltage for the Southwire Type TC-ER Control Cable is 600 Volt.",
+      "source_documents": [],
+      "generated_answer": "The Southwire Type TC-ER Control Cable is rated for 600 Volt [1]. Specific details regarding this voltage rating across different specifications include:\n\n*   **SPEC 45051:** This Type TC-ER Control Cable is identified as a 600 Volt Copper Conductors cable [1]. The sample print legend for this specific cable also lists \"600 VOLTS\" [2].\n*   **SPEC 85010:** This multi-conductor control cable is rated for 600 V [3]. It is described as a Control Cable 600 Volt Copper Conductors [3]. The sample print legend for both UL Listed and Non UL Listed versions of this cable specifies \"600V\" [4].\n*   **SPEC 85045:** This multi-conductor shielded control cable is also rated for 600 V [5]. It is described as a Control Cable 600 Volt Copper Conductors [5].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 25.229219913482666,
+      "timing": {
+        "cloud_retrieve": 1.6955430507659912,
+        "cloud_query": 22.241181135177612,
+        "judge": 1.2924540042877197,
+        "total": 25.229219913482666
+      },
+      "generator_tokens": {
+        "prompt": 9728,
+        "completion": 213,
+        "thinking": 854,
+        "total": 10795,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 916,
+        "completion": 67,
+        "thinking": null,
+        "total": 983,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0016558,
+        "judge": 0.0001184,
+        "total": 0.0017742
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 749,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_032",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "Which ASTM standard listed in the 'SPECIFICATIONS' section covers Soft or Annealed Copper Wire for this product?",
+      "expected_answer": "ASTM B3 covers Soft or Annealed Copper Wire for this product.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided source documents, the ASTM standard that covers Soft or Annealed Copper Wire is **ASTM B3** [1][2][3][4].\n\nThis specification is listed in the 'SPECIFICATIONS' section of the following products:\n*   **SPEC 85010:** Multi-Conductor CU 600 V FR-XLPE CPE Jacket Control Cable [1].\n*   **SPEC 85045:** Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable [2].\n*   **SPEC 45051:** CU 600V PVC-Nylon Insulation PVC Jacket THHN/THWN-2 [3].\n*   **SPEC 45252:** CU 600/1000V XLPE Insulation PVC Jacket XHHW-2 [4].\n\nThe documents specifically define this standard as:\n*   **ASTM B3 Standard Specification for Soft or Annealed Copper Wire** [1][2].\n*   **ASTM B3 Soft or Annealed Copper Wire** [3][4].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 26.067333698272705,
+      "timing": {
+        "cloud_retrieve": 1.9661707878112793,
+        "cloud_query": 22.904794216156006,
+        "judge": 1.196342945098877,
+        "total": 26.067333698272705
+      },
+      "generator_tokens": {
+        "prompt": 15746,
+        "completion": 247,
+        "thinking": 0,
+        "total": 15993,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 800,
+        "completion": 73,
+        "thinking": null,
+        "total": 873,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0016734,
+        "judge": 0.0001092,
+        "total": 0.0017826
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 731,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_031",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "According to the 'CONSTRUCTION' section, what material is used for the overall jacket of the Type TC-ER Control Cable?",
+      "expected_answer": "The overall jacket of the Type TC-ER Control Cable is made of Polyvinyl Chloride (PVC) Jacket.",
+      "source_documents": [],
+      "generated_answer": "Based on the provided source documents, the material used for the overall jacket of Type TC-ER control cables depends on the specific specification:\n\n*   **SPEC 45051 (Type TC-ER Control Cable):** The overall jacket is a Polyvinyl Chloride (PVC) Jacket [1].\n*   **SPEC 85010 (Multi-Conductor CU 600 V FR-XLPE CPE Jacket Control Cable):** This cable, which is listed for exposed runs (TC-ER) for constructions with 3 or more conductors, uses a Chlorinated Polyethylene (CPE) Jacket [3].\n*   **SPEC 85045 (Multi-Conductor CU 600 V FR-XLPE LCT Shielded LSZH Jacket Control Cable):** This cable, also listed for exposed runs (TC-ER) for constructions with 3 or more conductors, uses a SOLONON\u00ae Low Smoke Zero Halogen (LSZH) Jacket [4].\n\nAdditionally, for **Type TC-ER Power Cable** (SPEC 45252), the overall jacket is a Polyvinyl Chloride (PVC) Jacket [2].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "time": 27.122352123260498,
+      "timing": {
+        "cloud_retrieve": 1.5814011096954346,
+        "cloud_query": 21.75582218170166,
+        "judge": 3.7850852012634277,
+        "total": 27.122352123260498
+      },
+      "generator_tokens": {
+        "prompt": 14932,
+        "completion": 245,
+        "thinking": 703,
+        "total": 15880,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 815,
+        "completion": 69,
+        "thinking": 448,
+        "total": 1332,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0020833,
+        "judge": 0.0004227,
+        "total": 0.002506
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 852,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_001",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+      "expected_answer": "failure, preventive stock",
+      "source_documents": [],
+      "generated_answer": "Based on the provided Spare Part Request Form, the two examples provided for the \"Reason for Replacement\" are:\n\n1.  **Failure** [1]\n2.  **Preventive stock** [1]\nThese examples are listed in the \"Details\" column of the form to guide the requesting party when completing the request [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5.0,
+        "verdict": "pass"
+      },
+      "time": 27.347114086151123,
+      "timing": {
+        "cloud_retrieve": 1.986800193786621,
+        "cloud_query": 22.546610832214355,
+        "judge": 2.813662052154541,
+        "total": 27.347114086151123
+      },
+      "generator_tokens": {
+        "prompt": 5934,
+        "completion": 70,
+        "thinking": 0,
+        "total": 6004,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 309,
+        "completion": 69,
+        "thinking": 258,
+        "total": 636,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0006214,
+        "judge": 0.0002391,
+        "total": 0.0008605
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 285,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_027",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the nominal output power of the PVI-CENTRAL-250-US inverter?",
+      "expected_answer": "The nominal output power of the PVI-CENTRAL-250-US inverter is 250 kW.",
+      "source_documents": [],
+      "generated_answer": "The nominal output power of the PVI-CENTRAL-250-US inverter is 250 kWp [1]. Other technical data tables specify this value as 250 kW [2]. Additionally, the inverter's maximum continuous power is rated at 250,00 kVA [3]. \n\nThe PVI-CENTRAL-250-US is a modular inverter system based on 50kW conversion modules [4]. In the 250kW version, the enumeration of these modules ranges from 1 to 5 [5].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 30.694026947021484,
+      "timing": {
+        "cloud_retrieve": 1.9188411235809326,
+        "cloud_query": 27.46016788482666,
+        "judge": 1.3149869441986084,
+        "total": 30.694026947021484
+      },
+      "generator_tokens": {
+        "prompt": 13296,
+        "completion": 131,
+        "thinking": 645,
+        "total": 14072,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 919,
+        "completion": 73,
+        "thinking": null,
+        "total": 992,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0018335,
+        "judge": 0.0001211,
+        "total": 0.0019546
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 390,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_035",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the maximum rated current for the NOARK A32 Series Power Circuit Breakers?",
+      "expected_answer": "The maximum rated current for the NOARK A32 Series Power Circuit Breakers is 3200A.",
+      "source_documents": [],
+      "generated_answer": "The maximum rated current for the NOARK A32 Series Power Circuit Breakers is 3200 amps [1]. According to the product selection guide and ratings tables, the available rated currents for these breakers are 800A, 1600A, 2000A, 2500A, and 3200A [2][3]. The A32 family of products specifically offers ratings from 800A through 3200A [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 31.648773908615112,
+      "timing": {
+        "cloud_retrieve": 1.997079849243164,
+        "cloud_query": 28.21993613243103,
+        "judge": 1.4317269325256348,
+        "total": 31.648773908615112
+      },
+      "generator_tokens": {
+        "prompt": 10418,
+        "completion": 113,
+        "thinking": 559,
+        "total": 11090,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 674,
+        "completion": 67,
+        "thinking": null,
+        "total": 741,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0014783,
+        "judge": 9.42e-05,
+        "total": 0.0015725
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 333,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_034",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What are the two available pole configurations for the NOARK A32 Series Power Circuit Breakers?",
+      "expected_answer": "The NOARK A32 Series Power Circuit Breakers are available in 3 Pole and 4 Pole designs.",
+      "source_documents": [],
+      "generated_answer": "The NOARK A32 Series Power Circuit Breakers are available in two pole configurations: 3 Pole and 4 Pole [1][3]. According to the product selection guide, these are designated as \"3: 3 Poles\" and \"4: 4 Poles\" [2]. These configurations are available for both the A32 Power Circuit Breakers and the ASD32 Non-Automatic Switches [1][3].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 31.871387243270874,
+      "timing": {
+        "cloud_retrieve": 1.9898030757904053,
+        "cloud_query": 26.975642919540405,
+        "judge": 2.9059031009674072,
+        "total": 31.871387243270874
+      },
+      "generator_tokens": {
+        "prompt": 8714,
+        "completion": 92,
+        "thinking": 457,
+        "total": 9263,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 595,
+        "completion": 73,
+        "thinking": 277,
+        "total": 945,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0012281,
+        "judge": 0.0002826,
+        "total": 0.0015107
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 332,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_028",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What is the environmental protection rating for the PVI-CENTRAL-250 and PVI-CENTRAL-300 inverters?",
+      "expected_answer": "The environmental protection rating is NEMA 3R.",
+      "source_documents": [],
+      "generated_answer": "The environmental protection rating for the PVI-CENTRAL-250 and PVI-CENTRAL-300 inverters is as follows:\n\n*   **PVI-CENTRAL-250-US and PVI-CENTRAL-300-US:** These models have an Environmental Protection Degree of **Nema3R** [2][3]. Other technical data sheets list the Environmental Protection Rating as **neMa 3r** [5].\n*   **PVI-CENTRAL-250.0-CAN-600 and PVI-CENTRAL-300.0-CAN-600:** These models have an Environmental Protection Degree of **Nema3R** [1][4]. Technical data sheets also list the Environmental Protection Rating for these Canadian models as **neMa 3r** [5].\n\nAdditionally, the user manual notes that these are considered **AURORA OUTDOOR PHOTOVOLTAIC INVERTERS** [7]. The inverters are delivered in **rugged enclosures** [6] and are suitable for installation in locations where they must be protected from direct exposure to the rays of the sun [8].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 5,
+        "verdict": "pass"
+      },
+      "time": 32.03829002380371,
+      "timing": {
+        "cloud_retrieve": 1.9126338958740234,
+        "cloud_query": 28.777520895004272,
+        "judge": 1.3481011390686035,
+        "total": 32.03829002380371
+      },
+      "generator_tokens": {
+        "prompt": 13279,
+        "completion": 257,
+        "thinking": 835,
+        "total": 14371,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 1263,
+        "completion": 67,
+        "thinking": null,
+        "total": 1330,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0020152,
+        "judge": 0.0001531,
+        "total": 0.0021683
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 866,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    },
+    {
+      "question_id": "sh_easy_026",
+      "question_type": "single_hop",
+      "difficulty": "easy",
+      "question_text": "What component was found to be missing from a portable grounding set at the substation?",
+      "expected_answer": "A ground clamp.",
+      "source_documents": [],
+      "generated_answer": "At the substation, a ground clamp was found to be missing from a portable grounding set [1]. This missing component was identified as a hazard that could compromise electrical safety [1]. As a result of this observation, the grounding set was removed from service immediately [1].",
+      "recall_hit": true,
+      "mrr": 1.0,
+      "judgment": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 1,
+        "relevance": 5,
+        "clarity": 5,
+        "overall_score": 4.2,
+        "verdict": "partial"
+      },
+      "time": 34.70384216308594,
+      "timing": {
+        "cloud_retrieve": 2.0083611011505127,
+        "cloud_query": 27.780492067337036,
+        "judge": 4.9149651527404785,
+        "total": 34.70384216308594
+      },
+      "generator_tokens": {
+        "prompt": 10138,
+        "completion": 54,
+        "thinking": 539,
+        "total": 10731,
+        "cached": 0
+      },
+      "judge_tokens": {
+        "prompt": 295,
+        "completion": 69,
+        "thinking": 658,
+        "total": 1022,
+        "cached": 0
+      },
+      "cost_estimate_usd": {
+        "generator": 0.0014127,
+        "judge": 0.0005177,
+        "total": 0.0019304
+      },
+      "llm_metadata": {
+        "model": "gemini-3-flash-preview",
+        "mode": "cloud",
+        "has_citations": true,
+        "reasoning_effort": "low"
+      },
+      "orchestrator": {
+        "endpoint": "https://bfai-app-ppfq5ahfsq-ue.a.run.app",
+        "endpoint_name": "default",
+        "service": "bfai-api",
+        "project_id": "bfai-prod",
+        "environment": "production",
+        "region": "us-east1"
+      },
+      "answer_length": 280,
+      "retrieval_candidates": 100,
+      "retry_info": {
+        "attempts": 1,
+        "recovered": false,
+        "error": null
+      }
+    }
+  ]
+}

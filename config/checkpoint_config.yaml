@@ -17,7 +17,7 @@ client: "BFAI"
 # Corpus (always use full gold standard)
 corpus:
   file: "clients_qa_gold/BFAI/qa/QA_BFAI_gold_v1-0__q458.json"
-  sample_size: 30  # Quick checkpoint uses 30 questions
+  sample_size: 458  # Full corpus
 
 # Index (fixed)
 index:

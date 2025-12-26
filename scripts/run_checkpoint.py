@@ -124,6 +124,10 @@ def run_checkpoint(mode: str, dry_run: bool = False):
     """Run a checkpoint evaluation."""
     config = get_checkpoint_config()
     
+    # Get sample_size from config (for quick checkpoint runs)
+    raw_config = load_config(config_type="checkpoint")
+    sample_size = raw_config.get("corpus", {}).get("sample_size")
+    
     print_header()
     print_config(config, mode)
     
@@ -132,7 +136,8 @@ def run_checkpoint(mode: str, dry_run: bool = False):
         return
     
     # Confirm before running
-    print("\n⚠️  This will run a FULL checkpoint evaluation (458 questions).")
+    num_questions = sample_size if sample_size else 458
+    print(f"\n⚠️  This will run a checkpoint evaluation ({num_questions} questions).")
     print("    Estimated time: 10-15 minutes (cloud), 20-30 minutes (local)")
     confirm = input("\n    Proceed? [Y/n]: ").strip().lower()
     if confirm in ("n", "no"):
@@ -142,8 +147,11 @@ def run_checkpoint(mode: str, dry_run: bool = False):
     print("\n🚀 Starting checkpoint evaluation...")
     print("=" * 70)
     
-    # Load corpus
+    # Load corpus and optionally sample
     questions = load_corpus(test_mode=False)
+    if sample_size and sample_size < len(questions):
+        questions = questions[:sample_size]
+        print(f"Using {sample_size} questions (from config sample_size)")
     
     # Create evaluator with checkpoint config
     evaluator = GoldEvaluator(
