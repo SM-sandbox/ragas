@@ -3,15 +3,17 @@
   "type": "checkpoints",
   "description": "CICD and daily health check runs against the gold standard baseline",
   "gold_baseline": {
-    "id": "C034",
-    "folder": "C034__2025-12-23__cloud__p25-3-flash-low__q458",
-    "locked_date": "2025-12-23",
-    "acceptable_rate": 0.976,
-    "pass_rate": 0.932,
-    "notes": "Gold baseline upgraded from C012. Uses gemini-3-flash-preview on Cloud Run with model fix. Index: bfai__eval66a_g1_1536_tt.",
-    "mrr": 0.74,
+    "id": "C063",
+    "folder": "C063__2025-12-26__cloud__p25-3-flash-low__q458",
+    "locked_date": "2025-12-26",
+    "acceptable_rate": 0.989,
+    "pass_rate": 0.921,
+    "notes": "Gold baseline with query rewriting enabled + truncation safety fix. Cloud run against bfai-prod. Index: bfai__eval66a_g1_1536_tt. Improved from C034 baseline (91.7% → 92.1% pass, 1.7% → 1.1% fail).",
+    "mrr": 0.740,
     "recall_at_100": 0.991,
-    "overall_score_avg": 4.81
+    "overall_score_avg": 4.82,
+    "partial_rate": 0.068,
+    "fail_rate": 0.011
   },
   "entries": [
     {
