@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-12-26T14:35:32.870824",
+  "baseline": {
+    "id": "C034",
+    "pass_rate": 0.932,
+    "acceptable_rate": 0.976,
+    "fail_rate": 0.024,
+    "mrr": 0.74,
+    "recall_at_100": 0.991,
+    "overall_score_avg": 4.81
+  },
+  "results": [
+    {
+      "endpoint": "stage",
+      "url": "https://bfai-app-xcshqh7sqq-ue.a.run.app",
+      "status": "success",
+      "pass_rate": 0.9213973799126638,
+      "acceptable_rate": 0.9847161572052402,
+      "fail_rate": 0.015283842794759825,
+      "partial_rate": 0.06331877729257641,
+      "mrr": 0.7391619512444867,
+      "recall_at_100": 0.9912663755458515,
+      "overall_score_avg": 4.810262008733624,
+      "total_questions": 458,
+      "run_duration_s": 0,
+      "total_cost_usd": 0,
+      "latency_avg_s": 58.93202274074721,
+      "results_file": "/Users/scottmacon/Documents/GitHub/ragas/clients_eval_data/BFAI/checkpoints/C066__2025-12-26__cloud__p25-3-flash-low__q458/results.json"
+    },
+    {
+      "endpoint": "dev",
+      "url": "https://bfai-app-eb2qyzdzvq-ue.a.run.app",
+      "status": "success",
+      "pass_rate": 0.9061135371179039,
+      "acceptable_rate": 0.980349344978166,
+      "fail_rate": 0.019650655021834062,
+      "partial_rate": 0.07423580786026202,
+      "mrr": 0.7387465533675178,
+      "recall_at_100": 0.9912663755458515,
+      "overall_score_avg": 4.792794759825327,
+      "total_questions": 458,
+      "run_duration_s": 0,
+      "total_cost_usd": 0,
+      "latency_avg_s": 61.20035627523364,
+      "results_file": "/Users/scottmacon/Documents/GitHub/ragas/clients_eval_data/BFAI/checkpoints/C067__2025-12-26__cloud__p25-3-flash-low__q458/results.json"
+    }
+  ]
+}

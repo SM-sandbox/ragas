@@ -226,7 +226,7 @@ def generate_report(results_path: Path, output_path: Path):
 **Date:** {datetime.now().strftime("%B %d, %Y")}  
 **Run ID:** {run.get("run_id", "N/A")}  
 **Corpus:** {total_q} Gold Standard Questions (Single-hop: {latency_by_type.get('single_hop', {}).get('count', 0)}, Multi-hop: {latency_by_type.get('multi_hop', {}).get('count', 0)})  
-**Models:** Generation: {run.get('config', {}).get('generator_model', 'gemini-2.5-flash')} | Judge: {run.get('config', {}).get('judge_model', 'gemini-3-flash-preview')}  
+**Models:** Generation: {run.get('config', {}).get('generator_model', 'gemini-3-flash-preview')} | Judge: {run.get('config', {}).get('judge_model', 'gemini-3-flash-preview')}  
 **Embedding:** gemini-embedding-001 (1536 dim)  
 **Index:** `{index_name}` | **Topic Type:** {'✅ Enabled' if topic_type_enabled else '❌ Disabled'}  
 **Configuration:** Precision@{run.get('config', {}).get('precision_k', 25)}, Recall@{run.get('config', {}).get('recall_k', 100)}, Hybrid Search, Reranking Enabled

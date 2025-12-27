@@ -575,6 +575,7 @@ class GoldEvaluator:
             "top_k": self.precision_k,
             "model": self.model,  # Configurable model
             "reasoning_effort": self.generator_reasoning,  # Match local reasoning
+            "disable_model_fallback": True,  # Eval runs should not fall back to alternate models
         }
         response = requests.post(
             f"{self._cloud_url}/query",
