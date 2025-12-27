@@ -108,6 +108,34 @@
       "acceptable_rate": 0.985,
       "folder": "E009__2025-12-23__local__p25-3-flash-low__q458",
       "notes": "Auto-registered"
+    },
+    {
+      "id": "E010",
+      "date": "2025-12-27",
+      "mode": "local",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 30,
+      "pass_rate": 1.0,
+      "fail_rate": 0.0,
+      "acceptable_rate": 1.0,
+      "folder": "E010__2025-12-27__local__p25-3-flash-low__q30",
+      "notes": "Auto-registered"
+    },
+    {
+      "id": "E011",
+      "date": "2025-12-27",
+      "mode": "local",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 30,
+      "pass_rate": 1.0,
+      "fail_rate": 0.0,
+      "acceptable_rate": 1.0,
+      "folder": "E011__2025-12-27__local__p25-3-flash-low__q30",
+      "notes": "Auto-registered"
     }
   ],
   "reference_docs": [

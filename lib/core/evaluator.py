@@ -54,6 +54,7 @@ from lib.core.auth_manager import (
     get_auth_manager, refresh_adc_credentials, check_auth_valid,
     should_refresh_token, is_auth_error, AuthError
 )
+from lib.core.prompt_manager import get_prompt_manager
 
 # Config - JOB_ID is now loaded from checkpoint/experiment config, not hardcoded
 # Default fallback only used if config doesn't specify an index
@@ -616,31 +617,20 @@ class GoldEvaluator:
     
     def _judge_answer(self, question: str, ground_truth: str, answer: str, context: str) -> dict:
         """Judge answer quality using Gemini 3 Flash with structured JSON output.
-        
+
         Returns dict with:
             - judgment: the scores and verdict
             - tokens: token usage for the judge call
             - metadata: model info
         """
-        prompt = f"""You are an expert evaluator for a RAG system.
-Evaluate the RAG answer against the ground truth.
-
-Question: {question}
-
-Ground Truth: {ground_truth}
-
-RAG Answer: {answer}
-
-Context (first 2000 chars): {context[:2000]}
-
-Score 1-5 for each (5=best):
-1. correctness - factually correct vs ground truth?
-2. completeness - covers key points?
-3. faithfulness - faithful to context, no hallucinations?
-4. relevance - relevant to question?
-5. clarity - clear and well-structured?
-
-Respond with JSON containing: correctness, completeness, faithfulness, relevance, clarity, overall_score (all 1-5), and verdict (pass|partial|fail)."""
+        pm = get_prompt_manager()
+        prompt = pm.render(
+            "judge/answer_evaluation.jinja2",
+            question=question,
+            ground_truth=ground_truth,
+            answer=answer,
+            context=context[:2000],
+        )
         
         try:
             # Acquire rate limiter capacity before making judge call

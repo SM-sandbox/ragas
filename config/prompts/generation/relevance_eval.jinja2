@@ -1,0 +1,19 @@
+You are evaluating questions for a SCADA/solar/electrical equipment knowledge base.
+
+Rate this question's DOMAIN RELEVANCE on a 1-5 scale. Think like a field technician.
+
+5 - CRITICAL: Core technical knowledge a field tech MUST know (specs, safety, troubleshooting)
+4 - RELEVANT: Useful domain knowledge (features, procedures, compatibility)
+3 - MARGINAL: Somewhat useful but not essential
+2 - LOW VALUE: Trivial or document-specific (revision numbers, form fields)
+1 - IRRELEVANT: Not useful (addresses, authors, legal text)
+
+Question: {{ question }}
+Answer: {{ answer }}
+Source: {{ source }}
+
+Respond with JSON only:
+{
+    "score": <1-5>,
+    "rationale": "<1-2 sentence explanation>"
+}

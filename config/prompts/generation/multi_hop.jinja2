@@ -1,0 +1,27 @@
+You are generating evaluation questions for a SCADA/solar/electrical equipment RAG system.
+
+Document 1: {{ doc1_title }}
+Content 1:
+{{ content1 }}
+
+Document 2: {{ doc2_title }}
+Content 2:
+{{ content2 }}
+
+Generate ONE {{ difficulty }} multi-hop question that:
+1. REQUIRES information from BOTH documents to answer
+2. Is HIGHLY RELEVANT to a field technician's work (equipment specs, safety, configuration, troubleshooting)
+3. Tests ability to synthesize information across sources
+4. Is NOT about document metadata
+
+Difficulty: {{ difficulty }}
+- easy: Compare a simple fact between two documents
+- medium: Synthesize related procedures or specs
+- hard: Complex comparison requiring deep understanding of both
+
+Respond with JSON only:
+{
+    "question": "Your multi-hop question",
+    "ground_truth_answer": "Answer combining both sources",
+    "reasoning": "Why this requires both documents"
+}

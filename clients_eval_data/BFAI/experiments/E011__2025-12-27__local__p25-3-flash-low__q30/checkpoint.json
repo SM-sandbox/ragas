@@ -1,0 +1,3617 @@
+[
+  {
+    "question_id": "sh_easy_002",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum specified length for an RS-485 bus cable according to the general notes?",
+    "expected_answer": "The maximum length for an RS-485 bus cable is 4000ft (1220M).",
+    "source_documents": [],
+    "generated_answer": "According to the general notes, the maximum specified length for an RS-485 bus cable is 4000 feet (1219.20 meters) [1], [2], [11].\n\nSpecific details regarding this maximum length include:\n*   The maximum length for cable connecting all devices is 4000 feet (1219.20 meters) if an RS485 repeater is not being used [1].\n*   All segments must be included when calculating the total cable length of a network [1].\n*   The RS-485 cable must meet or exceed Belden 3106A specifications [2], [11].\n*   The maximum length per bus is 4000FT (1220M) [2], [11]. (Note: Source [1] specifies 1219.20 meters, while Source [2] and [11] specify 1220M).\n*   All RS485 wiring must be in a daisy chain configuration, and stubs shall be less than 15m (49') [2], [11].",
+    "retrieved_doc_names": [
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens reference guide_3va_enclosedcirbreaker.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "ul_s0489_13.pdf",
+      "ul_s0489_13.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "cps 125kw manual.pdf",
+      "ul_s0489_13.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "ul_s0489_13.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "ul_s0489_13.pdf"
+    ],
+    "context_char_count": 56709,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 8.20839786529541,
+    "timing": {
+      "retrieval": 1.6413259506225586,
+      "rerank": 1.6024298667907715,
+      "generation": 3.2198679447174072,
+      "judge": 1.7447197437286377,
+      "total": 8.20839786529541
+    },
+    "generator_tokens": {
+      "prompt": 18201,
+      "completion": 251,
+      "thinking": 0,
+      "total": 18452,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1051,
+      "completion": 69,
+      "thinking": null,
+      "total": 1120,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0019205,
+      "judge": 0.0001327,
+      "total": 0.0020532
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "VEZQaYb0FIrEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 746,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_001",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What are the two examples provided for the 'Reason for Replacement' on the Spare Part Request Form?",
+    "expected_answer": "failure, preventive stock",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the Spare Part Request Form (Vendor-Facing) lists the following two examples for the \"Reason for Replacement\" field:\n\n1.  **Failure** [1], [6]\n2.  **Preventive stock** [1], [6]\n\nThese examples are located in the \"Details\" column of the form, specifically within the row labeled \"Reason for Replacement (e.g., failure, preventiv | e stock)\" [1].",
+    "retrieved_doc_names": [
+      "spare_part_request_form.pdf",
+      "spare_part_request_form.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "non-covered_service_request_form_v3.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "non-covered_service_request_form_v3.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "ul_s0891_12.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 18506,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 9.695765972137451,
+    "timing": {
+      "retrieval": 1.6341898441314697,
+      "rerank": 1.5586869716644287,
+      "generation": 2.865438938140869,
+      "judge": 3.6373040676116943,
+      "total": 9.695765972137451
+    },
+    "generator_tokens": {
+      "prompt": 5350,
+      "completion": 99,
+      "thinking": 0,
+      "total": 5449,
+      "cached": 4070
+    },
+    "judge_tokens": {
+      "prompt": 746,
+      "completion": 69,
+      "thinking": 240,
+      "total": 1055,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.00067635,
+      "judge": 0.0002702,
+      "total": 0.00094655
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "VEZQaZ3lFIrEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 384,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_003",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the DC system size specified for the BOYNE MOUNTAIN RESORT project?",
+    "expected_answer": "The DC system size is 1,770 KW DC.",
+    "source_documents": [],
+    "generated_answer": "The DC system size specified for the BOYNE MOUNTAIN RESORT project is 1,770 KW DC [21]. This information is documented in the project description section of the sheet index [21].",
+    "retrieved_doc_names": [
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf"
+    ],
+    "context_char_count": 71567,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 11.072527885437012,
+    "timing": {
+      "retrieval": 1.6225101947784424,
+      "rerank": 1.6237828731536865,
+      "generation": 6.42087197303772,
+      "judge": 1.4052770137786865,
+      "total": 11.072527885437012
+    },
+    "generator_tokens": {
+      "prompt": 36275,
+      "completion": 45,
+      "thinking": 731,
+      "total": 37051,
+      "cached": 32738
+    },
+    "judge_tokens": {
+      "prompt": 1387,
+      "completion": 67,
+      "thinking": null,
+      "total": 1454,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.00497565,
+      "judge": 0.0001655,
+      "total": 0.00514115
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "VEZQaenlFemN2_gP8Ja5mAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 178,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_004",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the maximum RMS line voltage that can be present on the input terminals of the device?",
+    "expected_answer": "Line voltages up to 600 VRMS can be present on the input terminals of the device.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the maximum RMS line voltage that can be present on the input terminals of the device during normal operation is 600 VRMS [5]. These voltages may also be present throughout the connected line circuits and can cause severe injury or death [5].\n\nAdditionally, for the Shark\u00ae 100 meter, the universal voltage inputs allow for measurements up to 416 Volts Line-to-Neutral and 721 Volts Line-to-Line [10].",
+    "retrieved_doc_names": [
+      "osha ppe cfr-2024-title29-vol5-part1910-subparti.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "osha ppe cfr-2024-title29-vol5-part1910-subparti.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "ul_s0489_13.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 22908,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 3.5121102333068848,
+    "timing": {
+      "retrieval": 0.6583218574523926,
+      "rerank": 0.14039015769958496,
+      "generation": 1.4521620273590088,
+      "judge": 1.2610619068145752,
+      "total": 3.5121102333068848
+    },
+    "generator_tokens": {
+      "prompt": 9479,
+      "completion": 106,
+      "thinking": 0,
+      "total": 9585,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1097,
+      "completion": 67,
+      "thinking": null,
+      "total": 1164,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0009903,
+      "judge": 0.0001365,
+      "total": 0.0011268
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "WUZQacyVE7Smlu8P17HPuAM",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 440,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_001",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "What specific documents and components are typically found inside the cardboard tube located within the operating mechanism box?",
+    "expected_answer": "The cardboard tube located within the operating mechanism box typically contains position indicators for the switch, operating mechanism (op-mech) drawings, and documentation needed to assemble the product.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided source documents, the cardboard tube located within the operating mechanism box typically contains the following specific documents and components:\n\n*   **Position indicators** for the switch [1].\n*   **Operating mechanism (op-mech) drawings** [1].\n*   **Documentation** needed to assemble the product [1].\n\nThe cardboard tube itself is housed inside the operating mechanism box, which is one of the standard items included in group operated disconnect switch shipments [1]. Each switch typically has one bundle of pipe associated with it, and the pipe is marked with the Southern States JO - Item # - Op-Mech # (for example: 606676-1-156169) [1].",
+    "retrieved_doc_names": [
+      "southern states switch-op-mech-application-guide.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "cps 125kw manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "cps 125kw standard & centralized datasheet.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "cps 125kw manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states group operated switch application guide.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf"
+    ],
+    "context_char_count": 18749,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 3.5684409141540527,
+    "timing": {
+      "retrieval": 0.4704298973083496,
+      "rerank": 0.13282108306884766,
+      "generation": 1.6510190963745117,
+      "judge": 1.3140068054199219,
+      "total": 3.5684409141540527
+    },
+    "generator_tokens": {
+      "prompt": 6633,
+      "completion": 152,
+      "thinking": 0,
+      "total": 6785,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 855,
+      "completion": 67,
+      "thinking": null,
+      "total": 922,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0007241,
+      "judge": 0.0001123,
+      "total": 0.0008364
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "W0ZQaZSZO-mN2_gP8Ja5mAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 669,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_easy_005",
+    "question_type": "single_hop",
+    "difficulty": "easy",
+    "question_text": "What is the rated AC voltage for the NEP BDM-1200-LV Micro Inverter?",
+    "expected_answer": "120V",
+    "source_documents": [],
+    "generated_answer": "The rated AC voltage for the NEP BDM-1200-LV Micro Inverter is 120V [1]. This model is designed for DIY installation by plugging directly into a standard wall outlet (120V) [5].",
+    "retrieved_doc_names": [
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "cps 125kw manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf"
+    ],
+    "context_char_count": 11484,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 5.190953016281128,
+    "timing": {
+      "retrieval": 0.29095888137817383,
+      "rerank": 0.14333510398864746,
+      "generation": 3.6236460208892822,
+      "judge": 1.1329782009124756,
+      "total": 5.190953016281128
+    },
+    "generator_tokens": {
+      "prompt": 4852,
+      "completion": 52,
+      "thinking": 325,
+      "total": 5229,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1025,
+      "completion": 67,
+      "thinking": null,
+      "total": 1092,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0007335,
+      "judge": 0.0001293,
+      "total": 0.0008628
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "WkZQaa7NGemN2_gP8Ja5mAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 177,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_002",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "According to the Southern States Disconnect Switch Shipment Overview, how are large pieces of loose steel identified when they are included with the pipe bundles?",
+    "expected_answer": "Large pieces of loose steel included with the pipe bundles are marked with a Part #, JO #, op-mech #, Description, and Sub-Item #.",
+    "source_documents": [],
+    "generated_answer": "According to the Southern States Disconnect Switch Shipment Overview, large pieces of loose steel included with pipe bundles are marked with the following identification information:\n\n*   **Part #** [1]\n*   **JO #** [1]\n*   **Op-mech #** [1]\n*   **Description** [1]\n*   **Sub-Item #** [1]\n\nThe documentation notes that the description and sub-item # will concur with the information shown on the op-mech drawing [1]. An example of this marking is provided as: \"15114684 JO#: 606676 156169 Miscellaneous Sub-Item: 28\" [1]. Additionally, each loose item in the shipment is marked with the Southern States JO # and JO item # [1].",
+    "retrieved_doc_names": [
+      "southern states switch-op-mech-application-guide.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer-spanish.pdf",
+      "southern states switch-accessories-bulletin-1400-a.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states switch-accessories-bulletin-1400-a.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer-spanish.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states switch-accessories-bulletin-1400-a.pdf",
+      "southern states switch-accessories-bulletin-1400-a.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "southern states switch-accessories-bulletin-1400-a.pdf",
+      "cps 125kw manual.pdf",
+      "swe-transformer-flyer-2020.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "southern states group operated switch application guide.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "pvi-5000-en-rev e fimer abb.pdf",
+      "southern states group operated switch application guide.pdf"
+    ],
+    "context_char_count": 26007,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 3.763151168823242,
+    "timing": {
+      "retrieval": 0.3312211036682129,
+      "rerank": 0.1456761360168457,
+      "generation": 1.783790111541748,
+      "judge": 1.502411127090454,
+      "total": 3.763151168823242
+    },
+    "generator_tokens": {
+      "prompt": 6759,
+      "completion": 177,
+      "thinking": 0,
+      "total": 6936,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 888,
+      "completion": 69,
+      "thinking": null,
+      "total": 957,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0007467,
+      "judge": 0.0001164,
+      "total": 0.0008631
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "XEZQaYXBH8rXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 626,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_003",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "For what specific application is the Mechanical Interlock designed, as listed under the 'COMMON OPERATING MECHANISM PARTS'?",
+    "expected_answer": "The Mechanical Interlock is designed for use with main/ground applications.",
+    "source_documents": [],
+    "generated_answer": "Under the heading 'COMMON OPERATING MECHANISM PARTS' for Group Operated Disconnect Switches, the Mechanical Interlock is specifically designed for use with main/ground [4].\n\nAdditional details regarding this type of mechanical interlock include:\n*   It is an easily installed safety device that prevents a line switch and its grounding switch from being closed at the same time [6].\n*   The mechanism uses a simple cam that is completely shielded from ice formation to ensure smooth, safe, and automatic operation regardless of environmental conditions [6].\n*   It can be installed after the vertical operating pipe is in place, which facilitates later equipment upgrades [6].\n*   Other related common operating mechanism parts for these switches include pipe coupling assemblies, adjustable threaded clevises, pipe guides, and operating arms for AVS-1 [4].",
+    "retrieved_doc_names": [
+      "southern states switch-op-mech-application-guide.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "southern states switch-op-mech-application-guide.pdf",
+      "ul_s0489_13.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "southern states switch-accessories-bulletin-1400-a.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "ul_s0489_13.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states group operated switch application guide.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "southern states switch-op-mech-application-guide.pdf"
+    ],
+    "context_char_count": 26526,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 9.338313817977905,
+    "timing": {
+      "retrieval": 0.485292911529541,
+      "rerank": 0.15954995155334473,
+      "generation": 5.7225072383880615,
+      "judge": 2.9707887172698975,
+      "total": 9.338313817977905
+    },
+    "generator_tokens": {
+      "prompt": 8217,
+      "completion": 168,
+      "thinking": 711,
+      "total": 9096,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 825,
+      "completion": 73,
+      "thinking": null,
+      "total": 898,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0013866,
+      "judge": 0.0001117,
+      "total": 0.0014983
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "X0ZQaavVJNOulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 857,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_005",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "For cord and plug connected electric equipment, under what specific circumstances is OSHA's Lockout/Tagout standard (29 CFR 1910.147) considered not to apply?",
+    "expected_answer": "The standard does not apply to work on cord and plug connected electric equipment if exposure to the hazards of unexpected energization or start up of the equipment is controlled by the unplugging of the equipment from the energy source and by the plug being under the exclusive control of the employee performing the servicing or maintenance.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided documents, the OSHA Lockout/Tagout standard (29 CFR 1910.147) does not apply to work on cord and plug connected electric equipment under the following specific circumstances:\n\n*   **Control by Unplugging:** The exposure to the hazards of unexpected energization or start up of the equipment must be controlled by unplugging the equipment from the energy source [1].\n*   **Exclusive Control:** The plug must remain under the exclusive control of the employee who is performing the servicing or maintenance [1].\n\nAdditionally, the standard generally does not cover the following categories which may involve such equipment:\n*   **Construction and agriculture** employment [1].\n*   **Employment covered by parts 1915, 1917, and 1918** of the title [1].\n*   **Electric utilities installations** under their exclusive control for the purposes of power generation, transmission, and distribution [1].\n*   **Electrical hazards** from work on, near, or with conductors or equipment in electric-utilization installations, which are covered by subpart S [1].\n*   **Oil and gas well** drilling and servicing [1].\n*   **Minor servicing activities:** Minor tool changes, adjustments, and other minor servicing activities that take place during normal production operations are not covered if they are routine, repetitive, and integral to the use of the equipment for production, provided that the work is performed using alternative measures which provide effective protection [7].",
+    "retrieved_doc_names": [
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf"
+    ],
+    "context_char_count": 54140,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 9.749962091445923,
+    "timing": {
+      "retrieval": 0.5081770420074463,
+      "rerank": 0.1828746795654297,
+      "generation": 7.8180670738220215,
+      "judge": 1.240746021270752,
+      "total": 9.749962091445923
+    },
+    "generator_tokens": {
+      "prompt": 13640,
+      "completion": 316,
+      "thinking": 652,
+      "total": 14608,
+      "cached": 12258
+    },
+    "judge_tokens": {
+      "prompt": 1025,
+      "completion": 67,
+      "thinking": null,
+      "total": 1092,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.00225325,
+      "judge": 0.0001293,
+      "total": 0.00238255
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "YEZQadOnHdOulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1490,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_med_004",
+    "question_type": "single_hop",
+    "difficulty": "medium",
+    "question_text": "Under what specific conditions does OSHA's Lockout/Tagout standard (29 CFR 1910.147) apply to servicing and/or maintenance activities that occur during normal production operations?",
+    "expected_answer": "The standard applies to servicing and/or maintenance during normal production operations only if an employee is required to remove or bypass a guard or other safety device, or if an employee is required to place any part of his or her body into an area on a machine or piece of equipment where work is actually performed upon the material being processed (point of operation) or where an associated danger zone exists during a machine operating cycle.",
+    "source_documents": [],
+    "generated_answer": "Under OSHA's Lockout/Tagout standard (29 CFR 1910.147), normal production operations\u2014defined as the utilization of a machine or equipment to perform its intended production function\u2014are generally not covered by the standard [2], [5], [8]. However, servicing and/or maintenance activities that take place during normal production operations are covered by the standard if either of the following specific conditions exists:\n\n*   **Removal or Bypassing of Guards:** An employee is required to remove or bypass a guard or other safety device [2].\n*   **Exposure to Danger Zones:** An employee is required to place any part of his or her body into an area on a machine or piece of equipment where work is actually performed upon the material being processed (known as the point of operation) or where an associated danger zone exists during a machine operating cycle [1], [2].\n\n**Exception for Minor Servicing**\nThe standard provides an exception for certain minor activities. Minor tool changes and adjustments, and other minor servicing activities that take place during normal production operations, are not covered by the standard if they meet all of the following criteria:\n1.  They are routine [1].\n2.  They are repetitive [1].\n3.  They are integral to the use of the equipment for production [1].\n4.  The work is performed using alternative measures which provide effective protection (as referenced in subpart O of the part) [1].",
+    "retrieved_doc_names": [
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha loto cfr-2024-title29-vol5-sec1910-147.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf",
+      "osha electric gen cfr-2024-title29-vol5-sec1910-269.pdf"
+    ],
+    "context_char_count": 50809,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 10.482987880706787,
+    "timing": {
+      "retrieval": 0.5533401966094971,
+      "rerank": 0.2687668800354004,
+      "generation": 8.288826942443848,
+      "judge": 1.371912956237793,
+      "total": 10.482987880706787
+    },
+    "generator_tokens": {
+      "prompt": 13082,
+      "completion": 306,
+      "thinking": 698,
+      "total": 14086,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1103,
+      "completion": 67,
+      "thinking": null,
+      "total": 1170,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0019192,
+      "judge": 0.0001371,
+      "total": 0.0020563
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "YEZQabxntKaW7w_Xsc-4Aw",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1433,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_001",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "question_text": "A field technician is performing an external check on an AcquiSuite EMB A8810 at a commercial site that utilizes its cellular modem for connectivity. The technician observes the device's DNS Server #1 is configured as 1.1.1.1. Site drawings are unavailable, and the Asset Engineers (AEs) cannot be immediately consulted. What is the recommended immediate action regarding this observed DNS server configuration for the AcquiSuite EMB A8810, and what specific guideline from the document supports this decision?",
+    "expected_answer": "The recommended immediate action is to *not* change the observed DNS Server #1 setting of 1.1.1.1. The document explicitly states: \"If there are differing settings, do not change them unless you have confirmed that they are incorrect.\" Since the technician cannot confirm if the setting is incorrect without site drawings or AE consultation, it should not be altered, even though it deviates from the common setting of 8.8.4.4.",
+    "source_documents": [],
+    "generated_answer": "Based on the provided documents, the recommended immediate action for the field technician is to **not change** the DNS Server #1 setting of 1.1.1.1 [1].\n\nThe specific guidelines supporting this decision are as follows:\n\n*   **Preservation of Existing Settings:** While the document lists common DNS settings (DNS Server #1 = 8.8.4.4 and DNS Server #2 = 8.8.8.8), it explicitly states that if there are differing settings, they should not be changed unless they are confirmed to be incorrect [1].\n*   **Requirement for Verification:** The technician must not modify the settings because they have not confirmed the current configuration is incorrect, and the document mandates checking site drawings or consulting with Asset Engineers (AEs) if the settings are in question [1].\n*   **Site-Specific Variations:** The documentation notes that while certain settings are common, some sites (particularly retrofits) use different network configurations [1].\n*   **Connectivity Context:** For an AcquiSuite using a cellular modem (such as the Digi or Multitech), the standard configuration typically includes DHCP+UPnP = disabled, IP Address = 192.168.2.50, and Netmask = 255.255.255.0 [2]. However, the instruction to leave differing settings alone unless confirmed incorrect remains the primary directive for external checks [1].\n\nSources:\n[1] 2/25/2019 AcquiSuite Basics - External (Settings Check/Note)\n[2] 2/25/2019 AcquiSuite Basics - External (Common Network Settings)",
+    "retrieved_doc_names": [
+      "acquisuite-basics---external.pdf",
+      "acquisuite-basics---external.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "acquisuite-basics---external.pdf",
+      "acquisuite-basics---external.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "cps 125kw manual.pdf",
+      "acquisuite-basics---external.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "cps 125kw manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf"
+    ],
+    "context_char_count": 24259,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5.0,
+      "verdict": "pass"
+    },
+    "time": 5.315352201461792,
+    "timing": {
+      "retrieval": 0.6103677749633789,
+      "rerank": 0.17282915115356445,
+      "generation": 3.10347318649292,
+      "judge": 1.4286057949066162,
+      "total": 5.315352201461792
+    },
+    "generator_tokens": {
+      "prompt": 11088,
+      "completion": 355,
+      "thinking": 0,
+      "total": 11443,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1243,
+      "completion": 69,
+      "thinking": null,
+      "total": 1312,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0012508,
+      "judge": 0.0001519,
+      "total": 0.0014027
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "aUZQaZHBA7Smlu8P17HPuAM",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1470,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_002",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "question_text": "A technician needs to change the third octet of the AcquiSuite EMB A8810's IP address from '2' to '3' within the TCP/IP Config menu. Assuming the technician is currently viewing the IP address and the cursor is positioned at the first digit of the third octet (e.g., '192.168.2.50' with the cursor on the '2'), describe the precise sequence of external button presses (Menu and Select) required to make this specific change and then advance the cursor to the first digit of the fourth octet.",
+    "expected_answer": "To change the third octet from '2' to '3' and advance to the next octet: \n1. Press the 'Menu' button once to scroll the current digit from '2' to '3'.\n2. Press the 'Select' button to advance the cursor past the third octet to the first digit of the fourth octet.",
+    "source_documents": [],
+    "generated_answer": "To change the third octet of the AcquiSuite EMB A8810's IP address from '2' to '3' and advance to the fourth octet, the technician must use the following sequence of button presses:\n\n1.  **Press the Menu button once:** In the TCP/IP Config menu, the Menu button is used to scroll through the number/character options for the current cursor position [1]. Pressing it once will change the digit from '2' to '3' [1], [8].\n2.  **Press the Select button once:** The Select button advances the cursor a single position [1]. Since the third octet in the example '192.168.2.50' consists of a single digit ('2'), pressing Select once will move the cursor past that digit and the subsequent period to the first digit of the fourth octet (the '5' in '.50') [1], [8].\n\n**Summary of Device Controls for this Process:**\n*   **AcquiSuite EMB A8810:** The specific data logger being configured [5], [8].\n*   **Menu Button:** Used to scroll through number options at the current cursor position [1].\n*   **Select Button:** Used to advance the cursor one position at a time [1].\n*   **Navigation Note:** To navigate back to the TCP/IP Config menu after completing edits, the technician would need to press Select until the cursor moves to the end of the IP address [2].",
+    "retrieved_doc_names": [
+      "acquisuite-basics---external.pdf",
+      "acquisuite-basics---external.pdf",
+      "acquisuite-basics---external.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "acquisuite-basics---external.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "acquisuite-basics---external.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "acquisuite backup and restore.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "manual-pvi-central-250-300.pdf"
+    ],
+    "context_char_count": 10548,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 4.646316051483154,
+    "timing": {
+      "retrieval": 0.566338062286377,
+      "rerank": 0.13209295272827148,
+      "generation": 2.6479218006134033,
+      "judge": 1.2998888492584229,
+      "total": 4.646316051483154
+    },
+    "generator_tokens": {
+      "prompt": 3142,
+      "completion": 321,
+      "thinking": 0,
+      "total": 3463,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1206,
+      "completion": 73,
+      "thinking": null,
+      "total": 1279,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0004426,
+      "judge": 0.0001498,
+      "total": 0.0005924
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "akZQafagDtOulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1251,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_003",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "question_text": "An AcquiSuite EMB A8810, intended for a commercial site utilizing its integrated cellular modem for data collection, is undergoing initial external configuration checks. The technician observes that the device's DHCP+UPnP setting is currently 'enabled'. How does this specific configuration deviate from the common setup for cellular modem connections, and what exact external button press is needed to immediately set the DHCP+UPnP mode to 'disabled' if the technician is currently at the DHCP+UPnP setting option on the screen?",
+    "expected_answer": "The 'enabled' DHCP+UPnP setting deviates from the common setup for AcquiSuite EMB A8810 using a cellular modem, which specifies \"DHCP+UPnP = disabled.\" To immediately set the DHCP+UPnP mode to 'disabled' from the current option, the technician needs to press the 'Menu' button.",
+    "source_documents": [],
+    "generated_answer": "For an AcquiSuite EMB A8810 used on a commercial site with a cellular modem connection, the current \"enabled\" status for DHCP+UPnP deviates from the standard configuration, which requires DHCP+UPnP to be **disabled** [2].\n\nTo immediately set the DHCP+UPnP mode to \"disabled\" while at that specific menu option on the screen, the technician must press the **Menu** button [1].\n\nAccording to the source documents:\n*   The AcquiSuite EMB A8810 is a datalogger used on most commercial sites to detect and collect data from external devices [2].\n*   Common network settings for an AcquiSuite using a cellular modem (such as the Digi or Multitech) specify that **DHCP+UPnP = disabled** [2].\n*   The device features two external buttons located at the top right corner: **Menu** and **Select** [1].\n*   In the menu navigation logic, after selecting the \"DHCP+UPnP on/off\" option, the **Menu** button is used to disable DHCP, while the **Select** button is used to enable it [1].\n\nSources:\n[1] 2/25/2019 https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftempl\u2026 (Menu Navigation section)\n[2] 2/25/2019 https://sites.google.com/a/locusenergy.com/wiki/cls-support/c-i-training/acquisuite-basics---external?tmpl=%2Fsystem%2Fapp%2Ftempl\u2026 (Settings Check section)",
+    "retrieved_doc_names": [
+      "acquisuite-basics---external.pdf",
+      "acquisuite-basics---external.pdf",
+      "acquisuite-basics---external.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "acquisuite-basics---external.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "cps 125kw manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "cps 125kw manual.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "cps 125kw manual.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "digiwr21wr31modembasicsv1.pdf",
+      "cps 125kw manual.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "digiwr21wr31modembasicsv1.pdf"
+    ],
+    "context_char_count": 22847,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 8.334707021713257,
+    "timing": {
+      "retrieval": 0.5602939128875732,
+      "rerank": 0.16280508041381836,
+      "generation": 6.178462028503418,
+      "judge": 1.4330720901489258,
+      "total": 8.334707021713257
+    },
+    "generator_tokens": {
+      "prompt": 10652,
+      "completion": 384,
+      "thinking": 529,
+      "total": 11565,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1244,
+      "completion": 67,
+      "thinking": null,
+      "total": 1311,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0015891,
+      "judge": 0.0001512,
+      "total": 0.0017403
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "akZQaYnZF7Smlu8P17HPuAM",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1324,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_005",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "question_text": "An industrial facility needs an A32 Power Circuit Breaker with LSIG protection, specifically requiring real-time power quality monitoring including total harmonic distortion analysis and waveform capture. If this breaker is rated at 2000A, what specific trip unit model name (e.g., Model M, A, or H) is necessary to provide these advanced monitoring capabilities, and if the trip unit's long delay pickup is set to its minimum value, what is this pickup current in Amperes?",
+    "expected_answer": "To provide total harmonic distortion analysis and waveform capture, the Model H trip unit is necessary. If the breaker is rated at 2000A and the long delay pickup is set to its minimum value (0.4 x In), the pickup current is 800A.",
+    "source_documents": [],
+    "generated_answer": "To provide the required advanced monitoring capabilities for an A32 Power Circuit Breaker, the necessary trip unit and the minimum long delay pickup current are as follows:\n\n### Required Trip Unit Model\nThe specific trip unit model necessary is **Model H** [17], [24]. According to the source documents, Model H features a color LCD display with multi-metering and is the only model that provides **total harmonic distortion waveform capture** [17]. Furthermore, the product selection and functional tables confirm that \"Total Harmonics Distortion\" measurement and \"Advanced Metering\" are exclusive to Model H [18], [24].\n\n### Minimum Long Delay Pickup Current\nIf the trip unit's long delay pickup is set to its minimum value, the pickup current is **800A**. This is determined by the following specifications:\n*   **Rated Current (In):** The breaker is rated at **2000A** [User Question]. The documents define \"In\" as the \"Rating plug value\" [19], [21].\n*   **Minimum Setting:** The setting range for the Long Delay (L) pickup is **0.4 to 1.0 x In** [1], [16]. The minimum dial setting (Ir) is explicitly listed as **0.40** [19] or **0.4** [21].\n*   **Calculation:** Multiplying the minimum setting by the rated current (**0.4 x 2000A**) results in a pickup current of **800A**.\n\nSources:\n[1] A32 Series Power Circuit Breakers Trip Unit Product Selection Guide\n[16] A32 Trip Unit Protection Features\n[17] A32 Series Power Circuit Breakers Trip Unit Overview\n[18] A32 Trip Unit Models Display Options\n[19] A32 Series Power Circuit Breakers Trip Unit Settings - Long Delay protection (L)\n[21] A32 Series Power Circuit Breakers Trip Unit Settings - Ground Fault protection (G)\n[24] Functions Table - Model M, Model A, Model H",
+    "retrieved_doc_names": [
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "ul_s0489_13.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf"
+    ],
+    "context_char_count": 19651,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 9.75757908821106,
+    "timing": {
+      "retrieval": 0.2759280204772949,
+      "rerank": 0.15824103355407715,
+      "generation": 8.097055912017822,
+      "judge": 1.2262473106384277,
+      "total": 9.75757908821106
+    },
+    "generator_tokens": {
+      "prompt": 8864,
+      "completion": 450,
+      "thinking": 694,
+      "total": 10008,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1501,
+      "completion": 73,
+      "thinking": null,
+      "total": 1574,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0015522,
+      "judge": 0.0001793,
+      "total": 0.0017315
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "bkZQadOPJYrEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1723,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "sh_hard_004",
+    "question_type": "single_hop",
+    "difficulty": "hard",
+    "question_text": "A client requires an A32 Power Circuit Breaker for a 3200A application with a 100kA interrupting rating at 635V. This breaker must be a fixed installation. What specific terminal connection type is mandated by the product selection guide for this current rating, and what is the maximum instantaneous short circuit pickup setting (in Amperes) if a Series 4.0 (LSIG) trip unit is installed and its 'In' value is equal to the breaker's rated current?",
+    "expected_answer": "The terminal connection type mandated for a 3200A A32 Power Circuit Breaker is Vertical (V). The maximum instantaneous short circuit pickup setting for a Series 4.0 (LSIG) trip unit, with 'In' equal to 3200A, is 48000A.",
+    "source_documents": [],
+    "generated_answer": "For an A32 Power Circuit Breaker with a 3200A current rating, the following specifications apply based on the provided documentation:\n\n### **Mandated Terminal Connection Type**\nFor a 3200A current rating, the product selection guide mandates the use of **vertical terminal connectors only** [1]. While other frame sizes may offer horizontal or vertical options, footnote 1 specifically states that \"3200A is available with vertical terminal connectors only\" [1].\n\n### **Maximum Instantaneous Short Circuit Pickup Setting**\nIf a Series 4.0 (LSIG) trip unit is installed and its 'In' value is equal to the breaker's rated current of 3200A, the maximum instantaneous short circuit pickup setting is **48,000A**. This is determined by the following data:\n*   **Rated Current (In):** 3200A [1], [5].\n*   **Setting Range:** The Instantaneous (I) pickup setting range for a Series 4.0 (LSIG) trip unit is \"2.0 to 15.0 x In\" [4], [18].\n*   **Maximum Multiplier:** The maximum dial setting for the instantaneous current pickup is \"15\" [24].\n*   **Calculation:** 15.0 (maximum multiplier) x 3200A (In) = 48,000A.\n\n### **Additional Specifications for the Requested Configuration**\n*   **Interrupting Rating:** The A32H model provides an interrupting rating of \"100 kA\" at \"635V\" [1], [6].\n*   **Mounting Type:** The configuration is for a \"Fixed\" mounting type [1], [3].\n*   **Operations:** The breaker is rated for \"10,000\" mechanical operations and \"6000\" electrical operations before maintenance is required [6], [17].\n*   **Operating Time:** The opening time is \"<70\" ms and the closing time is \"<40\" ms [6].",
+    "retrieved_doc_names": [
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf",
+      "ul_s0489_13.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "noark - power circuit breakers and non-automatic switches - a32 asd32 - datasheet.pdf"
+    ],
+    "context_char_count": 21193,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 10.862919092178345,
+    "timing": {
+      "retrieval": 0.36397504806518555,
+      "rerank": 0.15109610557556152,
+      "generation": 9.014864921569824,
+      "judge": 1.3328733444213867,
+      "total": 10.862919092178345
+    },
+    "generator_tokens": {
+      "prompt": 9652,
+      "completion": 453,
+      "thinking": 878,
+      "total": 10983,
+      "cached": 8164
+    },
+    "judge_tokens": {
+      "prompt": 1623,
+      "completion": 67,
+      "thinking": null,
+      "total": 1690,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0019651,
+      "judge": 0.0001891,
+      "total": 0.0021542
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "bkZQaaDKBsrXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1601,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_001",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "question_text": "What are the maximum Short-Circuit Current Ratings (kAIC) for EPEC Solutions' UL 891 certified switchboards at 800VAC, and how do they compare to the kAIC ratings at 480VAC for their other UL 891 switchboard models?",
+    "expected_answer": "EPEC Solutions' UL 891 switchboards designed for 660-800VAC applications have a maximum kAIC rating of 50kAIC at 800VAC (Document 1). In comparison, their UL 891 switchboards for 480/600VAC applications offer a maximum kAIC rating of 100kAIC at 480VAC (Document 2).",
+    "source_documents": [
+      "800VAC BoS_Comprehensive_4.2MVA Skid Sales Flyer V2.24.pdf",
+      "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23.pdf"
+    ],
+    "generated_answer": "EPEC Solutions' UL 891 certified switchboards have a maximum Short-Circuit Current Rating of up to 50kAIC @ 800VAC [2]. This equipment features an industry first 800VAC rated UL listed main breaker [2].\n\nIn comparison, EPEC Solutions' other UL 891 certified switchboard models, which are designed for 480 / 600VAC critical power applications, have a maximum interrupt rating of 100kAIC @ 480VAC [21]. These models also have an interrupt rating of 65kAIC @ 600VAC [21]. Additionally, the 800VAC rated standard switchboard is documented as having a rating of 50kAIC @ 800VAC [7].",
+    "retrieved_doc_names": [
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "southern states ev-2h-550kv-800kv-catalog-flyer-r0.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "ul_s0891_12.pdf",
+      "ul_s0891_12.pdf",
+      "ul_s0891_12.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "ul_s0891_12.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "ul_s0891_12.pdf",
+      "ul_s0891_12.pdf",
+      "ul_s0891_12.pdf",
+      "mps switchboard manual - v5.pdf",
+      "ul_s0891_12.pdf",
+      "ul_s0891_12.pdf"
+    ],
+    "context_char_count": 14616,
+    "recall_hit": true,
+    "mrr": 0.3333333333333333,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 7.781955718994141,
+    "timing": {
+      "retrieval": 0.266359806060791,
+      "rerank": 0.1489391326904297,
+      "generation": 6.138855934143066,
+      "judge": 1.2277028560638428,
+      "total": 7.781955718994141
+    },
+    "generator_tokens": {
+      "prompt": 6799,
+      "completion": 171,
+      "thinking": 829,
+      "total": 7799,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1171,
+      "completion": 67,
+      "thinking": null,
+      "total": 1238,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0013286,
+      "judge": 0.0001439,
+      "total": 0.0014725
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "ckZQae_xGOmN2_gP8Ja5mAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 577,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_004",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "question_text": "According to the Meta Power Solutions (MPS) Switchboard Manual, which key national electrical codes are their switchboards designed to comply with, and how does the UL 891 Standard for Safety relate to these codes?",
+    "expected_answer": "The Meta Power Solutions (MPS) Switchboard Manual indicates that their switchboards are designed to comply with the National Electrical Code (NEC) and NFPA 70. The UL 891 Standard for Safety explicitly states that it covers switchboards intended for use in accordance with both the National Electrical Code (NEC) and ANSI/NFPA 70.",
+    "source_documents": [
+      "MPS Switchboard Manual - V5.pdf",
+      "UL_s0891_12.pdf"
+    ],
+    "generated_answer": "According to the Meta Power Solutions (MPS) Switchboard Manual, MPS switchboards are designed and manufactured to meet the standard construction details and requirements of the following national electrical codes:\n\n*   **NFPA 70 (NEC):** National Electrical Code [4].\n*   **UL 891:** Standard for Safety for Switchboards [4].\n*   **NEMA PB2:** National Electrical Manufacturers Association standard for Deadfront Distribution Switchboards [4].\n\nThe **UL 891 Standard for Safety** relates to these codes by serving as a trinational standard nominally rated at 1000 V or less [3], [12]. It is specifically intended for use in accordance with the following national codes across North America:\n\n*   **United States:** The National Electrical Code (NEC), ANSI/NFPA 70 [3], [12].\n*   **Canada:** The Canadian Electrical Code, Part I (CE Code, Part I) [3], [12].\n*   **Mexico:** The Mexican Standard for Electrical Installations (Utility), NOM-001-SEDE [3], [12].\n\nThe UL 891 standard covers dead-front switchboards for use on circuits with available short-circuit currents of not more than 200 000 A [12]. It also provides a framework for component compliance, stating that components used within the switchboard must comply with the specific standards of the country or countries in which the product is intended to be used [12].",
+    "retrieved_doc_names": [
+      "ul_s0891_12.pdf",
+      "mps switchboard manual - v5.pdf",
+      "mps switchboard manual - v5.pdf",
+      "mps switchboard manual - v5.pdf",
+      "ul_s0891_12.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "mps switchboard manual - v5.pdf",
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "ul_s0891_12.pdf",
+      "mps switchboard manual - v5.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "mps switchboard manual - v5.pdf",
+      "ul_s0489_13.pdf",
+      "mps switchboard manual - v5.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "mps switchboard manual - v5.pdf",
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "mps switchboard manual - v5.pdf",
+      "national electrical code 2023 chapter 4.pdf"
+    ],
+    "context_char_count": 43336,
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 4.505295038223267,
+    "timing": {
+      "retrieval": 0.28372812271118164,
+      "rerank": 0.1423041820526123,
+      "generation": 2.7494008541107178,
+      "judge": 1.3296921253204346,
+      "total": 4.505295038223267
+    },
+    "generator_tokens": {
+      "prompt": 11938,
+      "completion": 321,
+      "thinking": 0,
+      "total": 12259,
+      "cached": 8169
+    },
+    "judge_tokens": {
+      "prompt": 1009,
+      "completion": 67,
+      "thinking": null,
+      "total": 1076,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.00152643,
+      "judge": 0.0001277,
+      "total": 0.00165413
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "ekZQadyEDcrXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1325,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_002",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "question_text": "What is the highest main breaker ampere rating available for EPEC Solutions' UL 891 switchboards operating at 480/600VAC, and what are the typical air circuit breaker (ACB) ampere ratings mentioned for their 660-800VAC modular switchboards used in 4.2MVA power blocks?",
+    "expected_answer": "EPEC Solutions' UL 891 switchboards for 480/600VAC applications offer main breaker ranges up to 5000A (or 6000A air cooled) (Document 2). For their 660-800VAC modular switchboards utilized in 4.2MVA power blocks, the typical air circuit breakers (ACB) are rated between 800A and 1200A (Document 1).",
+    "source_documents": [
+      "800VAC BoS_Comprehensive_4.2MVA Skid Sales Flyer V2.24.pdf",
+      "EPEC_1200-6000A UL 891 SWBD for Solar_BESS Flyer V12.23.pdf"
+    ],
+    "generated_answer": "For EPEC Solutions' UL 891 switchboards operating at 480/600VAC, the highest main breaker ampere rating available is 6000A air cooled [1], [2], [3], [6], [18]. The main breaker ranges are generally listed as 1200A \u2013 5000A, with the 6000A rating specifically designated as air cooled [1], [2], [3], [6].\n\nFor their 660-800VAC modular switchboards (AC Recombiners) used in 4.2MVA power blocks, the typical air circuit breaker (ACB) ampere ratings mentioned are 800A \u2013 1200A [24]. These units utilize 800VAC rated air circuit breakers to combine power from field-mounted AC combiners [24].",
+    "retrieved_doc_names": [
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "ul_s0489_13.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 25489,
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 7.989425182342529,
+    "timing": {
+      "retrieval": 0.615178108215332,
+      "rerank": 0.16337084770202637,
+      "generation": 5.982398986816406,
+      "judge": 1.2283918857574463,
+      "total": 7.989425182342529
+    },
+    "generator_tokens": {
+      "prompt": 8989,
+      "completion": 190,
+      "thinking": 738,
+      "total": 9917,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1109,
+      "completion": 67,
+      "thinking": null,
+      "total": 1176,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0014915,
+      "judge": 0.0001377,
+      "total": 0.0016292
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "eEZQaYmsK9Oulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 586,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_003",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "question_text": "The Boyne Mountain Resort project documentation lists \"Ethernet network cable\" specifications. Does the SMA Sunny Central 4000 UP-US inverter support Ethernet communication, and if so, what other communication interfaces are available for it according to its datasheet?",
+    "expected_answer": "Yes, the SMA Sunny Central 4000 UP-US inverter supports Ethernet communication. Additionally, it supports Modbus Master and Modbus Slave communication interfaces.",
+    "source_documents": [
+      "1-SO50016-BOYNE-MOUNTAIN-RESORT_SLD.0.12C.ADD-ON.SO87932.IFC.pdf",
+      "SMA Sunny Central-US-DS-en-27.pdf"
+    ],
+    "generated_answer": "Yes, the SMA Sunny Central 4000 UP-US inverter supports Ethernet communication [3]. According to its technical datasheet, the communication interfaces available for this device are:\n\n*   **Ethernet** [3]\n*   **Modbus Master** [3]\n*   **Modbus Slave** [3]\n\nAdditionally, the inverter supports communication with the SMA string monitor using **Modbus TCP / Ethernet (FO MM, Cat-5)** as the transmission medium [3]. \n\nThe project documentation for the Boyne Mountain Resort specifies that the Ethernet network cable (CAT5E or CAT6) used must meet or exceed **BELDEN 7919A SPECIFICATIONS** and maintains a maximum distance of **100m (328')** between each active device [17].",
+    "retrieved_doc_names": [
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "cps 125kw manual.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "cps 125kw manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "cps 125kw manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf",
+      "cps 125kw manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "manual-pvi-central-250-300.pdf"
+    ],
+    "context_char_count": 55506,
+    "recall_hit": true,
+    "mrr": 0.25,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 8.314554929733276,
+    "timing": {
+      "retrieval": 0.7162680625915527,
+      "rerank": 0.1911311149597168,
+      "generation": 6.050786256790161,
+      "judge": 1.3562889099121094,
+      "total": 8.314554929733276
+    },
+    "generator_tokens": {
+      "prompt": 27313,
+      "completion": 170,
+      "thinking": 712,
+      "total": 28195,
+      "cached": 24546
+    },
+    "judge_tokens": {
+      "prompt": 1404,
+      "completion": 73,
+      "thinking": null,
+      "total": 1477,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.00391135,
+      "judge": 0.0001696,
+      "total": 0.00408095
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "eUZQaZbjFumN2_gP8Ja5mAs",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 670,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_001",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "question_text": "When designing a PV system that utilizes a Shoals 4000A, 1500VDC Recombiner to feed a SMA Sunny Central 4000 UP-US inverter, what is the largest common PV input fuse rating (per input) available for both devices, and what is the maximum number of such fused circuits the recombiner can accommodate per cabinet without input-side disconnects or contactors?",
+    "expected_answer": "The largest common PV input fuse rating available for both the Shoals 4000A, 1500VDC Recombiner and the SMA Sunny Central 4000 UP-US inverter is 500A. The Shoals Recombiner can accommodate a maximum of 8 fuse pairs (circuits) per cabinet when configured without input-side disconnects or input-side contactors.",
+    "source_documents": [
+      "Shoals 4000A_Recombiner_datasheet_-Feb28-2025.pdf",
+      "SMA Sunny Central-US-DS-en-27.pdf"
+    ],
+    "generated_answer": "Based on the provided source documents, the largest common PV input fuse rating available for both devices and the maximum number of fused circuits for the recombiner are as follows:\n\n### Largest Common PV Input Fuse Rating\nThe largest common PV input fuse rating available for both the Shoals 4000A Recombiner and the SMA SC 4000 UP-US inverter is **500A** [3][5].\n\n*   **Shoals 4000A Recombiner:** The available options for the input fuse rating and design are \"80A-630A\" [3].\n*   **SMA SC 4000 UP-US Inverter:** The available PV fuse sizes (per input) are \"200 A, 250 A, 315 A, 350 A, 400 A, 450 A, 500 A\" [5].\n*   **Commonality:** While the recombiner can accommodate up to 630A [3], the inverter's maximum available PV fuse size is 500 A [5]. Therefore, 500A is the largest rating common to both specifications.\n\n### Maximum Number of Fused Circuits\nThe maximum number of such fused circuits the recombiner can accommodate per cabinet without input-side disconnects or contactors is **8** [1][2][3].\n\n*   **Cabinet Capacity:** The \"Maximum Number of Input-Side Dual-Fused Circuits (per cabinet)\" is \"8\" [1][2].\n*   **Configuration Limits:** According to the part number configuration key notes, \"Configurations with no Input-Side Disconnect or Input-Side Contactor are limited to 8 fuse pairs per cabinet\" [3].\n*   **Cabinet Requirements:** For configurations with 1-8 fuse pairs, the system requires \"2 cabinet\" [3]. (Note: While the total system uses two cabinets for 1-8 pairs, the limit *per cabinet* remains 8) [1][2][3].",
+    "retrieved_doc_names": [
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "cps 125kw manual.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "shoals 1500v-standard-combiner-nec-2023_data-sheet_i.pdf",
+      "cps 125kw manual.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "cps 125kw manual.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "cps 125kw standard & centralized datasheet.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "cps 125kw manual.pdf"
+    ],
+    "context_char_count": 32104,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 5.631773233413696,
+    "timing": {
+      "retrieval": 0.6147971153259277,
+      "rerank": 0.14810538291931152,
+      "generation": 3.482139825820923,
+      "judge": 1.3866171836853027,
+      "total": 5.631773233413696
+    },
+    "generator_tokens": {
+      "prompt": 11545,
+      "completion": 438,
+      "thinking": 0,
+      "total": 11983,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1423,
+      "completion": 73,
+      "thinking": null,
+      "total": 1496,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0013297,
+      "judge": 0.0001715,
+      "total": 0.0015012
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "gEZQafmsKtOulu8Pk7aYkQg",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1531,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_002",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "question_text": "Both the Shoals 4000A, 1500VDC Recombiner and the SMA Sunny Central 4000 UP-US inverter are suitable for outdoor use. What is their common NEMA enclosure rating, and what is the narrowest *overall* ambient temperature range for guaranteed operation when considering both devices' standard specifications?",
+    "expected_answer": "Both the Shoals 4000A, 1500VDC Recombiner and the SMA Sunny Central 4000 UP-US inverter share a NEMA 3R enclosure rating. The narrowest overall ambient temperature range for guaranteed combined operation, based on their standard specifications, is -25\u00b0C to +50\u00b0C.",
+    "source_documents": [
+      "Shoals 4000A_Recombiner_datasheet_-Feb28-2025.pdf",
+      "SMA Sunny Central-US-DS-en-27.pdf"
+    ],
+    "generated_answer": "Both the Shoals 4000A, 1500VDC Recombiner and the SMA Sunny Central 4000 UP-US inverter share a common enclosure rating of **NEMA 3R** [1], [13].\n\nThe narrowest overall ambient temperature range for guaranteed operation, considering the standard specifications of both devices, is **-25\u00b0C to 50\u00b0C** [1], [13].\n\n### Supporting Details\n\n*   **Enclosure Rating:**\n    *   The Shoals 4000A, 1500VDC Recombiner has an Enclosure Rating of NEMA 3R [1].\n    *   The SMA Sunny Central 4000 UP-US inverter has a Degree of protection of NEMA 3R [13].\n\n*   **Ambient Temperature Range:**\n    *   The Shoals 4000A, 1500VDC Recombiner specifies an Ambient Temperature Range of -40 to +50 \u00baC [1].\n    *   The SMA Sunny Central 4000 UP-US inverter specifies an Operating temperature range (optional)8) of (\u221237\u00b0C) \u221225\u00b0C to 60\u00b0C / (\u221237\u00b0C) \u221213\u00b0F to 140\u00b0F [13].\n    *   When comparing the two, the Shoals device is rated for colder temperatures (-40 \u00baC vs -25\u00b0C), but the SMA inverter is rated for higher temperatures (60\u00b0C vs 50 \u00baC) [1], [13]. Therefore, the narrowest range where both devices are guaranteed to operate according to their standard specifications is from the SMA's lower limit (-25\u00b0C) to the Shoals' upper limit (50 \u00baC) [1], [13].",
+    "retrieved_doc_names": [
+      "sma sunny central-us-ds-en-27.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "shoals 1500v-standard-combiner-nec-2023_data-sheet_i.pdf",
+      "shoals 4000a_recombiner_datasheet_-feb28-2025.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "pvi-5000-en-rev e fimer abb.pdf",
+      "cps 125kw standard & centralized datasheet.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "yotta dpi-208-480_9.0+(2).pdf",
+      "cps 125kw standard & centralized datasheet.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "1-so50016-boyne-mountain-resort_sld.0.12c.add-on.so87932.ifc.pdf"
+    ],
+    "context_char_count": 25325,
+    "recall_hit": true,
+    "mrr": 0.25,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 5.334076881408691,
+    "timing": {
+      "retrieval": 0.3813960552215576,
+      "rerank": 0.15080714225769043,
+      "generation": 3.4355170726776123,
+      "judge": 1.3662457466125488,
+      "total": 5.334076881408691
+    },
+    "generator_tokens": {
+      "prompt": 10224,
+      "completion": 406,
+      "thinking": 0,
+      "total": 10630,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1385,
+      "completion": 73,
+      "thinking": null,
+      "total": 1458,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0011848,
+      "judge": 0.0001677,
+      "total": 0.0013525
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "gUZQaaarErSmlu8P17HPuAM",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1227,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_easy_005",
+    "question_type": "multi_hop",
+    "difficulty": "easy",
+    "question_text": "What type of electrical equipment is the primary subject of the Meta Power Solutions (MPS) manual, and what is the maximum nominal voltage rating for this equipment as specified by the UL 891 Standard for Safety?",
+    "expected_answer": "The Meta Power Solutions (MPS) manual primarily details 'Switchboards.' The UL 891 Standard for Safety specifies that it covers switchboards nominally rated at 1000 V or less.",
+    "source_documents": [
+      "MPS Switchboard Manual - V5.pdf",
+      "UL_s0891_12.pdf"
+    ],
+    "generated_answer": "Based on the provided source documents, the primary subject of the Meta Power Solutions (MPS) manual is **Switchboards** [2], [5]. The manual is designed to guide competent technicians in the installation, operation, and maintenance of these switchboard assemblies [2], [10].\n\nAs specified by the **UL 891** Standard for Safety (and related NEMA PB2 standards referenced within the manual), the maximum nominal voltage rating for this equipment is as follows:\n\n*   The manual covers switchboard assemblies defined in **UL891**, **NFPA70 (NEC)**, and **NEMA PB2** [8].\n*   The manual references NEMA Standards Publication PB2.1, which applies to \"Dead Front Distribution Switchboards rated **600 volts or less**\" [10].\n*   Technical data for UL 891 Certified Switchboards lists specific voltage ratings of **480 / 600VAC** and **480VAC, 600VAC** [20].\n*   The equipment is designed to support MV Transformers at **480/600VAC** [20].",
+    "retrieved_doc_names": [
+      "mps switchboard manual - v5.pdf",
+      "mps switchboard manual - v5.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "mps switchboard manual - v5.pdf",
+      "ul_s0891_12.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "ul_s0489_13.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "mps switchboard manual - v5.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "ul_s0891_12.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "mps switchboard manual - v5.pdf",
+      "southern states ev-2-15.5kv-362kv-catalog-flyer.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf"
+    ],
+    "context_char_count": 26486,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 4,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 4.8,
+      "verdict": "pass"
+    },
+    "time": 11.46772813796997,
+    "timing": {
+      "retrieval": 0.5486719608306885,
+      "rerank": 0.13580322265625,
+      "generation": 9.369929313659668,
+      "judge": 1.4132342338562012,
+      "total": 11.46772813796997
+    },
+    "generator_tokens": {
+      "prompt": 6951,
+      "completion": 245,
+      "thinking": 1133,
+      "total": 8329,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 873,
+      "completion": 69,
+      "thinking": null,
+      "total": 942,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0015862,
+      "judge": 0.0001149,
+      "total": 0.0017011
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "fkZQaZyFO4rEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 931,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_003",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "question_text": "Considering the SMA Sunny Central inverter's listed protective devices and compliance with UL 1741, what specific actions or considerations should the Contractor, as per the Operations and Maintenance Agreement, undertake to ensure the continuous and optimal performance of a solar power system utilizing these inverters, especially concerning electrical safety and monitoring?",
+    "expected_answer": "As per the Operations and Maintenance Agreement, the Contractor is responsible for scheduled maintenance and repairs necessary to optimize system performance and ensure continuous operation, in accordance with Applicable Law (which includes electrical safety standards like those implied by UL 1741). For SMA Sunny Central inverters, which comply with UL 1741 and include protective devices such as a DC load break switch, AC circuit breaker, surge arresters, ground-fault monitoring, and insulation monitoring, the Contractor's actions should include regular inspection, testing, and maintenance of these specific protective features. This ensures their proper functioning to uphold the inverter's UL 1741 compliance, mitigate electrical hazards, and contribute to the overall optimal and continuous performance of the solar power system.",
+    "source_documents": [
+      "PFMG - OM Agreement (WSD)_Executed.pdf",
+      "SMA Sunny Central-US-DS-en-27.pdf"
+    ],
+    "generated_answer": "To ensure the continuous and optimal performance of a solar power system utilizing SMA Sunny Central inverters, the Contractor must adhere to the following actions and considerations regarding electrical safety, maintenance, and monitoring as outlined in the provided documents:\n\n### **Electrical Safety and Protective Device Management**\n*   **Safety Protocols:** Before opening equipment, the Contractor must disconnect the inverter from the AC grid and PV modules [1]. They must wait at least 5 minutes after disconnecting all DC and AC sources to allow hazardous high voltage and energy to discharge [1]. Even after disconnection, powered parts and electrical connections must not be touched as capacitors may remain charged [8].\n*   **Ground Fault and Surge Protection:** The inverters include DC ground fault detection required by UL1741; the system will trigger an alarm upon detecting leakage current and cease operation if that current exceeds 500mA [2]. The Contractor must also ensure the integrity of surge suppression, which includes \"Standard 1.2/50\u03bcs - 8/20\u03bcs Combination Wave\" and \"Standard 0.5\u03bcs - 100 kHz Ring Wave\" [2].\n*   **Anti-Islanding:** The inverters include Anti-Islanding detection (UL1741/IEEE1547) that uses bi-directional perturbations to the frequency of the output current [2]. If an islanded condition is detected, the inverter is triggered to cease operation and disconnect from the grid [2].\n*   **Annual Testing:** The Contractor is required to perform annual testing of all Overcurrent Protective Devices (OCPD\u2019s) and disconnects [7]. This includes a ground continuity test to validate the integrity of the equipment grounding system [7].\n\n### **Inverter Preventive Maintenance**\n*   **Routine Servicing:** On an annual basis, the Contractor must service all internal components according to manufacturer guidelines, replace air filters, clean air intake and vent ducts, and remove dust from inverter heat sinks [7].\n*   **Wiring and Connections:** The Contractor must check torque marks and re-tighten wiring connections to specifications annually [7]. They must also perform annual thermal image scans of all terminations and critical splice points [7].\n*   **Fault Monitoring:** The Contractor must record all internal fault codes and process them as necessary during annual maintenance [7].\n\n### **System Monitoring and Performance Analysis**\n*   **Data Collection:** The Contractor must collect energy production and meteorological data from onsite sensors at sample rates of 15-minutes or less [3]. This data must be reviewed weekly for accuracy and reliability [3].\n*   **Performance Reporting:** The Contractor must provide Monthly and Annual Performance Reports comparing \"Modeled Energy Production\" to \"Actual Energy Production\" and identifying the \"Performance Difference\" [22].\n*   **Alarm Response:** The Contractor must acknowledge monitoring portal alarms for emergency breakdowns or malfunctions within four (4) hours [22].\n*   **Verification:** During system monitoring tests, the Contractor must compare inverter display data to the data being transmitted to the monitoring service to ensure proper operation [4].\n\n### **Emergency Response and Repair**\n*   **Tier 1 Inverter Issues:** If more than 15% of the gross nameplate kW/DC for a site experiences downtime for more than 8 consecutive 15-minute periods, the Contractor must dispatch a technician and initiate repairs within six (6) hours of discovery [16].\n*   **Tier 2 Inverter Issues:** If downtime affects between 5% to 15% of the gross nameplate kW/DC for more than 8 consecutive 15-minute periods, repairs must be initiated no later than the close of the next Business Day [16].\n*   **Replacement Parts:** Any replacement parts used must be new and of a quality equal to or better than the original parts [13], [25]. The Contractor must maintain a dedicated set of spare parts, including items such as 10 amp fuses, 9 amp fuses, 15 amp fuses, and various GFDI fuses (e.g., 4 amp, 5 amp, and 3 amp) [9], [15], [25].",
+    "retrieved_doc_names": [
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "cps 125kw manual.pdf",
+      "cps 125kw manual.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "manual-pvi-central-250-300.pdf"
+    ],
+    "context_char_count": 40846,
+    "recall_hit": true,
+    "mrr": 0.3333333333333333,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 14.39336109161377,
+    "timing": {
+      "retrieval": 0.3281111717224121,
+      "rerank": 0.14564204216003418,
+      "generation": 12.388946056365967,
+      "judge": 1.5305390357971191,
+      "total": 14.39336109161377
+    },
+    "generator_tokens": {
+      "prompt": 9223,
+      "completion": 875,
+      "thinking": 1215,
+      "total": 11313,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1692,
+      "completion": 73,
+      "thinking": null,
+      "total": 1765,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0021228,
+      "judge": 0.0001984,
+      "total": 0.0023212
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hkZQae-yAsrXvPEPufXsiAo",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 4031,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_004",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "question_text": "Given the SMA Sunny Central inverter's specified operating temperature range of -25\u00b0C to 60\u00b0C and its full power output up to 35\u00b0C, what is the Contractor's obligation under the Operations and Maintenance Agreement if a solar power system using these inverters experiences frequent performance degradation due to ambient temperatures consistently exceeding 35\u00b0C, and how might this impact equipment warranties?",
+    "expected_answer": "Under the Operations and Maintenance Agreement, the Contractor is obligated to provide services to optimize system performance and ensure continuous operation at an optimal level. The SMA Sunny Central inverter delivers full power up to 35\u00b0C and operates up to 60\u00b0C, implying derating above 35\u00b0C. If frequent performance degradation occurs due to ambient temperatures consistently exceeding 35\u00b0C, the Contractor must first determine if this degradation is within the inverter's expected operational characteristics (i.e., normal thermal derating) or indicative of a fault. If the performance degradation is within the manufacturer's specified operating curve, the Contractor's role is to manage the system within these known limitations to achieve the best possible 'optimal level of performance' under the circumstances. If the degradation indicates a malfunction or performance below the manufacturer's specifications for the given temperature, the Contractor would then need to pursue the express manufacturer warranties, which are held by the Project Company, to address the fault and restore optimal performance.",
+    "source_documents": [
+      "PFMG - OM Agreement (WSD)_Executed.pdf",
+      "SMA Sunny Central-US-DS-en-27.pdf"
+    ],
+    "generated_answer": "Based on the provided documents, the Contractor's obligations and the potential impact on warranties regarding the SMA Sunny Central inverter's performance under high ambient temperatures are as follows:\n\n### **Contractor\u2019s Obligations**\n*   **Performance Maintenance and Modeling:** The Contractor is required to maintain the Systems so they meet or exceed 100% of the \"Modeled Energy Production\" [19]. This model specifically incorporates \"Actual Meteorological Conditions,\" which includes ambient air temperature (in \u00b0C) [19]. Therefore, the Contractor must account for these temperature-driven performance changes when calculating the Performance Difference [19].\n*   **Adherence to Manufacturer Standards:** The Contractor must operate, maintain, and repair the System in accordance and consistent with all manufacturer\u2019s warranties and maintenance and operating manuals [8]. This includes ensuring equipment is not operated in violation of manufacturer\u2019s guidelines or without regard to defined limitations such as operating voltage and current [13].\n*   **Prudent Solar Industry Practice:** The Contractor is obligated to perform repairs on a basis that ensures reliable, long-term, and safe operation [13]. Equipment and components must meet or exceed standard durability and function properly over the full range of ambient temperature and weather conditions reasonably expected to occur at the Project Site [13].\n*   **Repair Responsibilities:** \n    *   If a System issue is caused by the Contractor\u2019s or its Subcontractor\u2019s performance, the Contractor must make necessary repairs at its own cost [5]. \n    *   If the issue is caused by the EPC Contractor\u2019s breach of the Defect or Design Warranty (e.g., if the design did not account for the site's ambient temperatures), the Contractor may be required to make repairs on an agreed-upon time and materials basis [5].\n*   **Emergency Response for Inverters:** If the temperature-related degradation leads to \"Inverter Downtime\" (specifically if more than 15% of the gross nameplate kW/DC for a site is affected for more than 8 consecutive 15-minute periods), it is classified as a Tier 1 Inverter Issue [25]. The Contractor must dispatch a technician and initiate repairs within six (6) hours of discovery [25].\n\n### **Impact on Equipment Warranties**\n*   **Preservation of Warranties:** The Contractor is strictly prohibited from performing any Services which could result in the voidance of any Warranties [22]. They must act in a manner that preserves all rights to warranties and indemnities [8].\n*   **Unauthorized Repairs:** Warranties may not apply to damage resulting from attempts by personnel other than the EPC Contractor\u2019s representatives or Subcontractors to repair or service the covered materials and equipment [2].\n*   **Improper Use:** Any warranty under the Agreement shall not apply to any defect, failure, or damage caused by improper use or care by the Client [2].\n*   **Warranty Management:** The Contractor is responsible for pursuing and managing all warranty claims on behalf of the Project Company at the Contractor\u2019s sole cost and expense [10]. This includes coordinating with manufacturers to the extent that any manufacturer warranty applies to the claims [2].\n*   **Alterations:** The Contractor is prohibited from making any alterations that invalidate any warranties applicable to the Systems [9]. Any replacement parts used must not result in a limitation of any warranties [8].\n*   **Inverter Specific Risks:** Inverters are noted to be susceptible to overheating and damage from power spikes, which can reduce their life [23]. While the SMA Sunny Central inverter is designed with an \"OptiCool\" intelligent air cooling system to ensure smooth operation in extreme ambient temperatures, it is only specified for \"Full power at ambient temperatures of up to 35\u00b0C\" [20]. Operating outside these parameters without proper maintenance could jeopardize the expected 25-year service life or the manufacturer's warranty [20], [23].",
+    "retrieved_doc_names": [
+      "pvi-6000-outd-us service manual.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "cps 125kw manual.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "sma sunny central-us-ds-en-27.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "pvi-6000-outd-us service manual.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "cps 125kw manual.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "manual-pvi-central-250-300.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf"
+    ],
+    "context_char_count": 47837,
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 15.143426179885864,
+    "timing": {
+      "retrieval": 0.26013779640197754,
+      "rerank": 0.14437294006347656,
+      "generation": 13.246997356414795,
+      "judge": 1.4918270111083984,
+      "total": 15.143426179885864
+    },
+    "generator_tokens": {
+      "prompt": 10478,
+      "completion": 824,
+      "thinking": 1144,
+      "total": 12446,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1644,
+      "completion": 67,
+      "thinking": null,
+      "total": 1711,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0021782,
+      "judge": 0.0001912,
+      "total": 0.0023694
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "hkZQafO-H4rEvPEP29Ll4Q8",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 4019,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_med_005",
+    "question_type": "multi_hop",
+    "difficulty": "medium",
+    "question_text": "A solar installer is planning a residential PV system for a home with a 100A main service panel, needing to stay within the NEC 120% rule for back-feed. They also prioritize compliance with the latest available NEC arc-fault protection standards. Considering NEP's BDM-650 and BDM-2000 microinverters, which model is more suitable for avoiding a main panel upgrade due to its current draw and branch circuit capacity, and what specific NEC version for arc-fault protection (both DC and AC) does each of these microinverter models comply with?",
+    "expected_answer": "The NEP BDM-650 microinverter is more suitable for avoiding a main panel upgrade for a 100A service panel. It is designed to optimize AC output current to stay within the NEC 120% rule, allowing 6 units per 20A branch circuit with a rated output current of ~2.7A (1\u03c6). The BDM-2000, with a rated output current of 8.0A (1\u03c6) and designed for 3 units per 30A branch, would be less effective in avoiding a 100A panel upgrade. Regarding arc-fault protection compliance: the BDM-650 complies with NEC 2020 sections 690.11 (DC Arc-Fault Protection) and 705.12 (AC Arc-Fault Protection). The BDM-2000 complies with NEC 2023 sections 690.11 (DC Arc-Fault Circuit Protection) and 705.12 (Point of Connection, which includes AC Arc-Fault Protection).",
+    "source_documents": [
+      "NEP Microinverter BDM-550, BDM-650 Whitepaper AA, EH.pdf",
+      "NEP Microinverter BDM-2000-T-Datasheet-20241216.pdf"
+    ],
+    "generated_answer": "Based on the provided documents, the **BDM-650** is the more suitable model for avoiding a main panel upgrade on a home with a 100A service panel, while the **BDM-2000** complies with a more recent version of the NEC arc-fault protection standards.\n\n### **Suitability for 100A Main Panel**\nThe **BDM-650** is specifically optimized for homes with 100A panels to deliver high-efficiency solar without triggering costly electrical upgrades [9]. \n*   **Back-feed Limits:** Under the NEC 120% rule, a 100A panel is limited to only 20A of allowable back-feed [10]. \n*   **Current Draw:** The BDM-650 has a rated output current of 2.7 A [4], [8] (also listed as ~2.7A [3], [9]). This lower current draw per unit reduces back-feed stress on limited panel capacity [3], [9]. \n*   **Branch Capacity:** The BDM-650 allows for 6 units per 20A branch circuit [3], [4], [8]. \n*   **Strategic Advantage:** The BDM-650 avoids panel upgrades by optimizing AC output current for precise divisibility into the maximum back-feed capacity of 100A panels [10]. \n\nIn contrast, the **BDM-2000** has a much higher rated output current of 8.0A [2], [6] and is limited to 3 units per 30A branch [2], [6].\n\n### **NEC Arc-Fault Protection Compliance**\nThe two models comply with different versions of the National Electrical Code (NEC) regarding arc-fault protection:\n\n**BDM-650**\n*   **DC Arc-Fault Protection:** Complies with **NEC 2020** Section 690.11 [1].\n*   **AC Arc-Fault Protection:** Complies with **NEC 2020** Section 705.12 [1].\n*   **Note:** It also meets NEC 690.12 requirements for rapid shutdown [3], [9].\n\n**BDM-2000**\n*   **DC Arc-Fault Protection:** Complies with **NEC 2023** Section 690.11 [2].\n*   **AC Arc-Fault Protection:** Complies with **NEC 2023** Section 705.12 [2].\n*   **Note:** It also complies with NEC 2023 Section 690.12 for rapid shutdown [2].",
+    "retrieved_doc_names": [
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-2000-t-datasheet-20241216.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "nep microinverter bdm-550, bdm-650 whitepaper aa, eh.pdf",
+      "nep microinverter bdm-1200-lv-250723 july 23 2025 ul-certs-completed.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "solarpvforbuildersoct2009.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "national electrical code 2023 chapter 6.pdf",
+      "national electrical code 2023 chapter 2.pdf"
+    ],
+    "context_char_count": 25492,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 14.266051054000854,
+    "timing": {
+      "retrieval": 0.3441941738128662,
+      "rerank": 0.13600897789001465,
+      "generation": 12.307607889175415,
+      "judge": 1.47812819480896,
+      "total": 14.266051054000854
+    },
+    "generator_tokens": {
+      "prompt": 9211,
+      "completion": 597,
+      "thinking": 1615,
+      "total": 11423,
+      "cached": 8162
+    },
+    "judge_tokens": {
+      "prompt": 1806,
+      "completion": 67,
+      "thinking": null,
+      "total": 1873,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.00249445,
+      "judge": 0.0002074,
+      "total": 0.00270185
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "ikZQaejHE-65gLUP76qHqAI",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1851,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_003",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "question_text": "Given the 2000kVA step-up transformer specified in the datasheet, its nominal impedance is listed as 5.75% with a \u00b17.5% tolerance. How does this specific impedance value, considering its tolerance, compare to the typical impedance range provided for a 2000kVA unit in the manufacturer's general instruction manual, and what IEEE standard governs the design percentage impedances for such distribution transformers?",
+    "expected_answer": "According to the datasheet (Document 2), the 2000kVA step-up transformer has a nominal impedance of 5.75% with a \u00b17.5% tolerance. This means its impedance could range from approximately 5.32% (5.75% * 0.925) to 6.18% (5.75% * 1.075).\n\nIn contrast, the instruction manual (Document 1) states that the impedance for a 2000kVA transformer is 6% in its specific table, and generally, percentage impedance usually ranges between 2-6% for distribution transformers. The datasheet's nominal impedance of 5.75% falls within the manual's general 2-6% range. When considering the \u00b17.5% tolerance, the maximum possible impedance (6.18%) slightly exceeds the 6% listed in the manual's table for a 2000kVA unit, while the minimum (5.32%) is below it. This indicates the specific unit's impedance is consistent with the general specifications, allowing for manufacturing tolerances.\n\nThe IEEE standard governing the design percentage impedances for such distribution transformers is primarily IEEE C57.12.00, which covers general requirements for liquid-immersed distribution, power, and regulating transformers, and IEEE C57.12.70, which addresses terminal markings and connections.",
+    "source_documents": [
+      "3 Phase 2000kVa Transformer Manual.pdf",
+      "Transformer Specifications.pdf"
+    ],
+    "generated_answer": "The 2000kVA step-up transformer specified in the technical datasheets has a nominal impedance of 5.75% with a \u00b17.5% tolerance [2], [3], [9]. This nominal value of 5.75% is identical to the typical percentage impedance (%Z) listed for a 2000 KVA transformer in the manufacturer's general rating tables [1], [7]. While the general tables provide a single value of 5.75 for this rating, the specific unit's datasheet clarifies that this value is subject to a \u00b17.5% tolerance [1], [2], [7].\n\nAccording to the manufacturer's documentation, liquid-filled Three-Phase Pad-Mounted distribution transformers are built and tested to comply with several ANSI/IEEE standards [7]. The specific IEEE standards governing these transformers include:\n*   IEEE C57.12.00 [7]\n*   IEEE C57.12.28 [7]\n*   IEEE C57.12.34 [7]\n*   IEEE C57.12.70 [7]\n*   IEEE C57.12.90 [7]\n*   IEEE C57.91 [7]\n*   IEEE C57.12.80 [7]\n\nAdditionally, the Peak-Demand Transformers are designed and tested according to the procedures and conditions in IEEE Std C57.154-2012 [17]. General transformer load capacity and life expectancy are also referenced against IEEE Std C57.91-2011 [5], [17].",
+    "retrieved_doc_names": [
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "transformer specifications.pdf",
+      "transformer specifications.pdf",
+      "transformer specifications.pdf",
+      "transformer specifications.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "swe-transformer-flyer-2020.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "e145701_shark_100_100t_user_manual_v.1.13_11-7-2008.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "osha electrical cfr-2024-title29-vol5-part1910-subparts.pdf",
+      "3 phase 2000kva transformer manual.pdf"
+    ],
+    "context_char_count": 18786,
+    "recall_hit": true,
+    "mrr": 1.0,
+    "judgment": {
+      "correctness": 4,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 4.5,
+      "verdict": "pass"
+    },
+    "time": 8.995000123977661,
+    "timing": {
+      "retrieval": 0.5895452499389648,
+      "rerank": 0.1401991844177246,
+      "generation": 6.8737897872924805,
+      "judge": 1.391390323638916,
+      "total": 8.995000123977661
+    },
+    "generator_tokens": {
+      "prompt": 6844,
+      "completion": 359,
+      "thinking": 812,
+      "total": 8015,
+      "cached": 4076
+    },
+    "judge_tokens": {
+      "prompt": 1684,
+      "completion": 69,
+      "thinking": null,
+      "total": 1753,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0014983,
+      "judge": 0.000196,
+      "total": 0.0016943
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "mEZQaZWSL9bygLUP28aGuAI",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1147,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_001",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "question_text": "Given that the Operations and Maintenance Agreement (Doc 1) delegates responsibility for system maintenance and emergency response to the Contractor, and considering the YOTTA BLOCK's UL 9540A certification which states it is \"self-contained, fireproof and does not need a fire protection system\" (Doc 2), what specific implications does this have for the O&M Contractor's fire safety-related maintenance and emergency response planning for a solar power system incorporating Yotta BLOCK BESS units?",
+    "expected_answer": "The O&M Contractor, while generally responsible for emergency response and maintaining the solar power system as per the O&M Agreement (Doc 1), would not be required to maintain a dedicated fire protection system specifically for the Yotta BLOCK BESS units. The UL 9540A certification of the YOTTA BLOCK (Doc 2) indicates it is self-contained and fireproof, eliminating the need for such a system. However, the O&M Contractor would still need to incorporate general site fire safety protocols and emergency response plans as part of their broader responsibilities under the Agreement (Doc 1), ensuring overall site safety, but without the burden of BESS-specific fire suppression system maintenance.",
+    "source_documents": [
+      "PFMG - OM Agreement (WSD)_Executed.pdf",
+      "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf"
+    ],
+    "generated_answer": "For an O&M Contractor managing a solar power system with YOTTA BLOCK BESS units, the UL 9540A certification and self-contained design have the following specific implications for maintenance and emergency response planning:\n\n**Maintenance Implications**\n*   **Reduced Routine Maintenance:** The YOTTA BLOCK features a solid-state design, which means it requires no annual maintenance [6]. It is specifically documented that the BESS does not need regular maintenance [9].\n*   **No External Cooling Maintenance:** Because the unit is self-contained and utilizes proprietary passive thermal regulation technology, it does not require external cooling systems that would otherwise require upkeep [6][25].\n*   **General Preventive Requirements:** Despite the battery's self-contained nature, the Contractor is still responsible for general preventive maintenance to reduce arc flash risk, such as tightening terminations to torque specs, performing IR scans, and cleaning conductive dust or debris [3].\n*   **Monitoring:** The Contractor must utilize the YOTTA VISION EMA Platform for remote monitoring, real-time temperature management, and remote diagnosis [6][11].\n\n**Fire Safety and Suppression Implications**\n*   **Elimination of Specialized Suppression Systems:** Because the YOTTA BLOCK is certified as fireproof and does not need a fire protection system, the Contractor is not required to maintain a chemical agent suppressant-based system (such as FM-200 or NOVEC 1230) for these specific units [5][9][13].\n*   **Self-Extinguishment:** The UL 9540A test method confirms that the system will self-extinguish without active fire-fighting measures [5]. The design ensures that any internal fire is contained within the enclosure and will not spread to other parts of the facility [5].\n*   **Standard Equipment Maintenance:** While the BESS units themselves are fireproof, the Contractor must still maintain portable fire extinguishers in accordance with local and federal OSHA requirements in other areas, such as office spaces, hot work areas, and mobile equipment [1].\n\n**Emergency Response Planning**\n*   **Plan Development:** The Contractor must prepare a Fire Management and Prevention Plan in coordination with the County, BLM Fire, or other emergency response organizations [5]. \n*   **Informing First Responders:** The results of the UL 9540A testing must be used to inform facility safety system design and emergency response plans, which are shared with first responders [5].\n*   **Training and Coordination:** The Contractor should reach out to the local fire department to offer system training, including a site tour and providing PDF files highlighting the locations of all disconnects [22].\n*   **Response Timelines:** In the event of an emergency or system malfunction, the Contractor must address pre-set alarm notification parameters within 4 hours [14]. A certified technician must be dispatched to arrive onsite within 24 hours of the initial call to assess and diagnose the root cause [14].\n*   **Hazard Mitigation:** In a hazard situation, the Contractor has the capability to rotate all trackers simultaneously [5]. If an arc flash occurs, the emergency procedure is to shut off power if possible and not rush in [3].\n*   **Water Requirements:** For emergency planning purposes, a 10,000-gallon water tank is anticipated for each BESS unit/area [5].",
+    "retrieved_doc_names": [
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "yotta block-1_1.5.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "yotta block-1_1.5.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf"
+    ],
+    "context_char_count": 41797,
+    "recall_hit": true,
+    "mrr": 0.2,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 13.402630090713501,
+    "timing": {
+      "retrieval": 0.806286096572876,
+      "rerank": 0.1537160873413086,
+      "generation": 11.093935251235962,
+      "judge": 1.3485798835754395,
+      "total": 13.402630090713501
+    },
+    "generator_tokens": {
+      "prompt": 9902,
+      "completion": 705,
+      "thinking": 1121,
+      "total": 11728,
+      "cached": 8164
+    },
+    "judge_tokens": {
+      "prompt": 1514,
+      "completion": 67,
+      "thinking": null,
+      "total": 1581,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.002261,
+      "judge": 0.0001782,
+      "total": 0.0024392
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "lEZQae6BO-65gLUP76qHqAI",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 3375,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_002",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "question_text": "If the solar power system described in the Operations and Maintenance Agreement (Doc 1) integrates Yotta BLOCK BESS units and DPI Microinverters, explain the procedural steps and responsible parties for preventative maintenance and warranty claims, considering that the O&M Agreement designates a Contractor for operations and maintenance, while the Yotta Design Specification Sheet (Doc 2) states that \"All work to be done by the BESS manufacturer\" for service contracts and specifies \"preventative maintenance schedule by authorized technicians.\"",
+    "expected_answer": "According to the Yotta Design Specification Sheet (Doc 2), preventative maintenance on Yotta BLOCK BESS units and DPI Microinverters must follow a schedule performed by \"authorized technicians,\" and any work under a service contract should be done by the \"BESS manufacturer.\" This implies that while the O&M Contractor (True South Renewables) from the O&M Agreement (Doc 1) is generally responsible for system maintenance, for Yotta-specific equipment, they would likely need to coordinate with or escalate to Yotta Energy (the BESS manufacturer) or their authorized service providers to ensure compliance with warranty terms and proper maintenance procedures. The Project Company (WSD Solar Holdings, LLC) holds the equipment manufacturer warranties (Doc 1), so they would need to ensure that the Contractor's actions or inactions do not void these warranties by using unauthorized personnel or deviating from manufacturer-specified service requirements.",
+    "source_documents": [
+      "PFMG - OM Agreement (WSD)_Executed.pdf",
+      "YOTTA+ESS+(YOTTA+BLOCK+DPI)+Design+Specification+Sheet-3.pdf"
+    ],
+    "generated_answer": "Based on the provided documents, the procedural steps and responsible parties for preventative maintenance and warranty claims for a system integrating Yotta BLOCK BESS units and DPI Microinverters are as follows:\n\n### Preventative Maintenance\n*   **Responsible Parties:** \n    *   The **Contractor** designated in the O&M Agreement is responsible for performing routine and non-routine maintenance [10]. This includes providing trained, licensed, and experienced personnel to ensure reliable, long-term operation [10], [16].\n    *   The **BESS Manufacturer (Yotta Energy)** is specified as the party to perform all work under a service contract [2]. Maintenance must be performed by \"authorized technicians\" according to a specific schedule [18].\n*   **Procedural Steps:**\n    1.  **Schedule Development:** Long-term maintenance schedules must be developed to arrange periodic maintenance and equipment replacement in accordance with manufacturer recommendations [1].\n    2.  **Quarterly Reviews:** The Contractor and the Designated Agent conduct a quarterly review of system performance and maintenance activities completed in the prior three months and planned for the upcoming three months [17].\n    3.  **Annual Inspections:** During annual maintenance visits, the Contractor must inspect for and remove vegetation or grass that may impact safety or operation [8].\n    4.  **BESS-Specific Maintenance:** The YOTTA BLOCK features a solid-state design, which means it requires \"no annual maintenance\" [4] and \"does not need regular maintenance\" [9].\n    5.  **General Upkeep:** Maintenance includes tightening terminations to torque specs, performing IR scans, cleaning dust/debris, and testing protective relays and breakers [7].\n    6.  **Documentation:** The Contractor must maintain an O&M Manual containing maintenance procedures, schedules, and manufacturer standards [20].\n\n### Warranty Claims\n*   **Responsible Parties:**\n    *   The **Contractor** is primarily responsible for evaluating, submitting, processing, pursuing, and perfecting warranty claims [8], [17].\n    *   The **EPC Contractor** is responsible for responding to warranty claims and coordinating with the manufacturer during the six (6) year period following the Final Completion Date [13].\n    *   **Yotta Energy (Manufacturer)** provides a ten-year (10) warranty for the YOTTA BLOCK, beginning on the date of commissioning [2]. They warrant the capacity to be no less than 70% of 1kWh per module after 10 years of daily cycling [19].\n*   **Procedural Steps:**\n    1.  **Detection and Notification:** System issues are identified via monitoring portal alarms, which the Contractor must acknowledge within four (4) hours [8].\n    2.  **Initial Analysis:** The Contractor\u2019s Asset Management team analyzes the alert and triggers a notification [23].\n    3.  **Case Creation and Dispatch:** A case is created in the web portal, and the Contractor dispatches a technician [23].\n    4.  **Verification and Claim Initiation:** The dispatched technician verifies the issue and contacts the Warranty Provider (manufacturer) [23].\n    5.  **Repair/Replacement:** \n        *   If the issue is caused by the Contractor\u2019s performance, the Contractor must make the repair at its own cost [3].\n        *   If the issue is a manufacturer defect, the hardware warranty covers the repair or replacement (RMA) of defective products [2].\n        *   The repair service is initiated and completed by the Warranty Provider [23].\n    6.  **Labor Back-charging:** The Contractor shall make reasonable efforts to back charge its labor for related warranty repairs to the manufacturer [3].\n    7.  **Enforcement:** If the Contractor fails to commence warranty repairs within five (5) days of written notice, the Designated Agent may intervene [16].",
+    "retrieved_doc_names": [
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "yotta+ess+(yotta+block+dpi)+design+specification+sheet-3.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "yotta block-1_1.5.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "yotta dpi-208-480_9.0+(2).pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "intersect power easley project pod (main) rev 2024-7-30 508.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "green-earth-energy-epc-contract-template sample.pdf",
+      "yotta block-1_1.5.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf",
+      "pfmg - om agreement (wsd)_executed.pdf"
+    ],
+    "context_char_count": 43822,
+    "recall_hit": true,
+    "mrr": 0.14285714285714285,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 13.508400201797485,
+    "timing": {
+      "retrieval": 0.5154531002044678,
+      "rerank": 0.15139102935791016,
+      "generation": 11.349583864212036,
+      "judge": 1.4918549060821533,
+      "total": 13.508400201797485
+    },
+    "generator_tokens": {
+      "prompt": 10131,
+      "completion": 818,
+      "thinking": 1106,
+      "total": 12055,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1700,
+      "completion": 67,
+      "thinking": null,
+      "total": 1767,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0021145,
+      "judge": 0.0001968,
+      "total": 0.0023113
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "lUZQafukPNOigLUP1oaZsQQ",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 3801,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_004",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "question_text": "A 2000kVA step-up transformer, as detailed in the datasheet, utilizes a Bayonet fuse in series with a partial Current-Limiting Fuse (CLF) for overcurrent protection. Considering its high LV L-L current of 1924.56A and its specified function as a step-up transformer for solar applications, what specific application limitations outlined in the instruction manual might necessitate careful consideration for its protection coordination, particularly regarding potential abnormal impact loading or harmonic distortion, and which IEEE standard governs the general requirements for such liquid-immersed transformers?",
+    "expected_answer": "From the datasheet (Document 2), the 2000kVA step-up transformer employs a Bayonet fuse in series with a partial Current-Limiting Fuse (CLF) for overcurrent protection, and it has a high LV L-L current of 1924.56A for solar applications.\n\nBased on the instruction manual (Document 1), the specific application limitations that might necessitate careful consideration for protection coordination, especially given its role in a solar power facility, include:\n1.  **Abnormal impact loading:** This is mentioned as occurring 'when feeding welding equipment, electric furnaces or motors with cyclical loads.' While not directly welding or furnaces, the dynamic nature of solar inverters and grid interactions can introduce transient conditions or impact loading that must be accounted for in protection schemes.\n2.  **Loads with abnormal harmonics:** The manual explicitly states this 'can occur when solid-state or similar power-electronics devices control the load currents.' Since solar power facilities heavily rely on inverters (which are solid-state power-electronics devices), abnormal harmonics are a significant concern that can affect transformer performance and protection coordination.\n\nThe general IEEE standard governing requirements for such liquid-immersed distribution transformers is IEEE C57.12.00.",
+    "source_documents": [
+      "3 Phase 2000kVa Transformer Manual.pdf",
+      "Transformer Specifications.pdf"
+    ],
+    "generated_answer": "Based on the provided documents, the 2000kVA step-up transformer has the following specifications and considerations:\n\n**Application Limitations and Protection Coordination**\nFor transformers used in applications involving inverters (such as solar applications), several specific limitations and considerations are outlined:\n*   **Voltage Regeneration:** The presence of a Grounding Transformer or YG : d configuration causes voltage regeneration [13]. The \"Loss of Single Phase\" must be mitigated externally to the inverter because of the regenerated voltage present at the inverter AC terminals [13].\n*   **Configuration Restrictions:** While 3W Wye and 4W Grounded Wye configurations are recommended, and Floating 3W Wye 3W Delta configurations are acceptable (though they require an external GFCI), \"Open and Grounded Delta configurations are not acceptable\" [13].\n*   **Harmonic Distortion and Nonlinear Loads:** For transformers used with nonlinear loads that have nonsinusoidal currents\u2014which can result in additional losses and transformer heating\u2014IEEE C57.110-2018 is the recommended practice for establishing capability [22].\n*   **Fuse Coordination:** The transformer utilizes a Bayonet fuse in series with a partial CLF (Current-Limiting Fuse) [1], [2]. The minimum interrupting rating of the fuse is specifically set to avoid \"undesirable low current operations,\" meaning protection for such instances must be provided through additional low current interrupters [14].\n\n**Technical Specifications**\n*   **Rating and Current:** The transformer is rated at 2000kVA with an LV L-L Current (A) of 1924.56 [1], [2].\n*   **Impedance:** The Nominal Impedance (%) is 5.75 \u00b17.5% Tolerance [1], [2].\n*   **Efficiency:** The unit has an Efficiency (%) of 99% [1], [2].\n*   **Cooling and Fluid:** It uses Cooling Class KNAN with FR3 insulating fluid and has a Winding Temp. Rise of 65\u00b0C [1], [2].\n\n**Governing IEEE Standard**\nThe general requirements for liquid-immersed distribution, power, and regulating transformers are governed by **IEEE C57.12.00** [15], [22]. Specifically, document [22] references **IEEE C57.12.00-2015** for these general requirements [22].",
+    "retrieved_doc_names": [
+      "transformer specifications.pdf",
+      "transformer specifications.pdf",
+      "transformer specifications.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "transformer specifications.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "ul_s0891_12.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "swe-transformer-flyer-2020.pdf",
+      "3 phase pad mount transformer spec sheet.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "national electrical code 2023 chapter 4.pdf",
+      "national electrical code 2023 chapter 2.pdf",
+      "3 phase 2000kva transformer manual.pdf",
+      "swe-transformer-flyer-2020.pdf"
+    ],
+    "context_char_count": 29084,
+    "recall_hit": true,
+    "mrr": 0.25,
+    "judgment": {
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 5,
+      "verdict": "pass"
+    },
+    "time": 12.152600765228271,
+    "timing": {
+      "retrieval": 0.5593671798706055,
+      "rerank": 0.1455831527709961,
+      "generation": 10.128777980804443,
+      "judge": 1.318711757659912,
+      "total": 12.152600765228271
+    },
+    "generator_tokens": {
+      "prompt": 8944,
+      "completion": 528,
+      "thinking": 1001,
+      "total": 10473,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1689,
+      "completion": 73,
+      "thinking": null,
+      "total": 1762,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0018063,
+      "judge": 0.0001981,
+      "total": 0.0020044
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "oUZQafrLLNOigLUP1oaZsQQ",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 2167,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  },
+  {
+    "question_id": "mh_hard_005",
+    "question_type": "multi_hop",
+    "difficulty": "hard",
+    "question_text": "An EPEC AC LV SWBD is being specified for a critical power application that requires a NEMA 3R enclosure, a double-ended configuration, and the maximum available MCCB feeder amperage frame. Considering typical configurations for critical power applications and industrial applications, what is the highest MCCB feeder amperage frame listed across both product datasheets, and what would be the main breaker amperage for *each* end if the switchboard was similar to the double-ended configuration depicted for *critical power applications*?",
+    "expected_answer": "The highest MCCB feeder amperage frame listed across both datasheets is 1200AF (from 'epec_1200-6000a_ul_891_swbd_for_critical_power_v10_804cea'). If the switchboard was similar to the double-ended configuration depicted for critical power applications (also from 'epec_1200-6000a_ul_891_swbd_for_critical_power_v10_804cea'), the main breaker amperages for each end would be 4000A and 1600A.",
+    "source_documents": [
+      "EPEC_1200-6000A UL 891 SWBD for Critical Power V10.24.pdf",
+      "EPEC_1200-6000A UL 891 SWBD (Industrial) Flyer.pdf"
+    ],
+    "generated_answer": "Based on the provided source documents, the specifications for the EPEC AC LV SWBD are as follows:\n\n**Highest MCCB Feeder Amperage Frame**\nThe highest MCCB feeder amperage frame listed across the product datasheets is **1200AF** [2]. While several documents for industrial, critical power, and solar applications list the MCCB feeder range up to 1000AF [1], [3], [10], the datasheet specifically for \"Critical Power Applications\" in document [2] lists the range as 150AF, 250AF, 400AF, 600AF, 800AF, **1200AF** [2].\n\n**Main Breaker Amperage for Double-Ended Configuration**\nFor a double-ended configuration similar to the one depicted for **critical power applications**, the main breaker amperages for each end are as follows:\n\n*   **5000A main** and a **2nd 5000A main**: Document [7], which is titled for \"Critical Power Applications,\" depicts a \"6000A SWBD, double ended\" featuring a \"5000A main\" and a \"2nd 5000A main\" [7].\n*   Alternatively, document [5], also for \"Critical Power Applications,\" depicts a \"4000A SWBD, double ended\" with a \"**4000A main**\" and a \"**2nd 1600A main**\" [5].\n\nHowever, in the context of the **6000A SWBD** platform often highlighted for critical power requirements [2], [3], the depicted configuration for a 6000A double-ended unit utilizes a **5000A main** and a **2nd 5000A main** [7].",
+    "retrieved_doc_names": [
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd for critical power v10.24.pdf",
+      "epec_1200-6000a ul 891 swbd (crit power) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd (industrial) flyer.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "epec_1200-6000a ul 891 swbd for solar_bess flyer v12.23.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "800vac bos_comprehensive_4.2mva skid sales flyer v2.24.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf",
+      "siemens mccb-17-sect-07-all-web.pdf"
+    ],
+    "context_char_count": 24756,
+    "recall_hit": true,
+    "mrr": 0.5,
+    "judgment": {
+      "correctness": 4,
+      "completeness": 5,
+      "faithfulness": 5,
+      "relevance": 5,
+      "clarity": 5,
+      "overall_score": 4.5,
+      "verdict": "pass"
+    },
+    "time": 12.81689977645874,
+    "timing": {
+      "retrieval": 0.5891828536987305,
+      "rerank": 0.14053893089294434,
+      "generation": 10.768723964691162,
+      "judge": 1.31831693649292,
+      "total": 12.81689977645874
+    },
+    "generator_tokens": {
+      "prompt": 10240,
+      "completion": 402,
+      "thinking": 1357,
+      "total": 11999,
+      "cached": 0
+    },
+    "judge_tokens": {
+      "prompt": 1425,
+      "completion": 75,
+      "thinking": null,
+      "total": 1500,
+      "cached": 0
+    },
+    "cost_estimate_usd": {
+      "generator": 0.0021347,
+      "judge": 0.0001725,
+      "total": 0.0023072
+    },
+    "llm_metadata": {
+      "model": "gemini-3-flash-preview",
+      "model_version": "gemini-3-flash-preview",
+      "finish_reason": "STOP",
+      "reasoning_effort": "low",
+      "used_fallback": false,
+      "avg_logprobs": null,
+      "response_id": "okZQaf7yBqyygLUPtNGRoQY",
+      "temperature": 0.0,
+      "has_citations": true
+    },
+    "index": {
+      "job_id": "bfai__eval66a_g1_1536_tt",
+      "deployed_index_id": "idx_bfai_eval66a_g1_1536_tt",
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimension": 1536
+    },
+    "retrieval_config": {
+      "recall_top_k": 100,
+      "precision_top_n": 25,
+      "enable_hybrid": true,
+      "enable_reranking": true,
+      "rrf_alpha": 0.5,
+      "ranking_model": "semantic-ranker-512@latest"
+    },
+    "generator_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "max_output_tokens": 8192
+    },
+    "judge_config": {
+      "model": "gemini-3-flash-preview",
+      "reasoning_effort": "low",
+      "temperature": 0.0,
+      "seed": 42
+    },
+    "answer_length": 1323,
+    "retrieval_candidates": 100,
+    "retry_info": {
+      "attempts": 1,
+      "recovered": false,
+      "error": null
+    }
+  }
+]

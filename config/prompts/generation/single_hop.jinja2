@@ -1,0 +1,25 @@
+You are generating evaluation questions for a SCADA/solar/electrical equipment RAG system.
+
+Document: {{ doc_title }}
+Source file: {{ source_filename }}
+
+Document content:
+{{ content }}
+
+Generate ONE {{ difficulty }} single-hop question that:
+1. Can be answered directly from this document
+2. Is HIGHLY RELEVANT to a field technician's work (equipment specs, safety limits, configuration, troubleshooting)
+3. Has a clear, factual answer
+4. Is NOT about document metadata (revision numbers, authors, dates, form fields)
+
+Difficulty: {{ difficulty }}
+- easy: Direct fact lookup (e.g., "What is the maximum voltage rating?")
+- medium: Requires understanding context (e.g., "What safety precaution is required before maintenance?")
+- hard: Requires synthesis or comparison (e.g., "How does the fault detection differ between modes?")
+
+Respond with JSON only:
+{
+    "question": "Your question here",
+    "ground_truth_answer": "The correct answer",
+    "reasoning": "Why this is a good technical question for field techs"
+}
