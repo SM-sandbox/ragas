@@ -1057,6 +1057,48 @@
       "acceptable_rate": 0.985,
       "folder": "C075__2025-12-26__cloud__p25-3-flash-low__q458",
       "notes": "Auto-registered"
+    },
+    {
+      "id": "C076",
+      "date": "2025-12-26",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.93,
+      "fail_rate": 0.013,
+      "acceptable_rate": 0.987,
+      "folder": "C076__2025-12-26__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
+    },
+    {
+      "id": "C077",
+      "date": "2025-12-26",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.928,
+      "fail_rate": 0.015,
+      "acceptable_rate": 0.985,
+      "folder": "C077__2025-12-26__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
+    },
+    {
+      "id": "C079",
+      "date": "2025-12-26",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.928,
+      "fail_rate": 0.015,
+      "acceptable_rate": 0.985,
+      "folder": "C079__2025-12-26__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
     }
   ]
 }
