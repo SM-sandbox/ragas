@@ -1029,6 +1029,34 @@
       "acceptable_rate": 0.965,
       "folder": "C072__2025-12-26__cloud__p25-3-flash-low__q458",
       "notes": "Auto-registered"
+    },
+    {
+      "id": "C074",
+      "date": "2025-12-26",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "unknown",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0,
+      "fail_rate": 0,
+      "acceptable_rate": 0,
+      "folder": "C074__2025-12-26__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
+    },
+    {
+      "id": "C075",
+      "date": "2025-12-26",
+      "mode": "cloud",
+      "config_summary": "p25-3-flash-low",
+      "model": "gemini-3-flash-preview",
+      "precision_k": 25,
+      "questions": 458,
+      "pass_rate": 0.93,
+      "fail_rate": 0.015,
+      "acceptable_rate": 0.985,
+      "folder": "C075__2025-12-26__cloud__p25-3-flash-low__q458",
+      "notes": "Auto-registered"
     }
   ]
 }
